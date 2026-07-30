@@ -4,33 +4,37 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
 <title>EXTRA INNINGS TAKE 2</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Noto+Sans+KR:wght@400;500;700;900&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/style.css">
+<style>
+html,body{height:100%;margin:0;font-family:system-ui,-apple-system,"Noto Sans KR",sans-serif;background:linear-gradient(180deg,#0f6fd8,#37a9ff);color:#fff}body{display:flex;align-items:center;justify-content:center}.loader{text-align:center;padding:28px}.ball{font-size:56px;animation:bounce .8s ease-in-out infinite alternate}.title{font-size:28px;font-weight:900;margin-top:14px}.sub{font-size:14px;opacity:.88;margin-top:8px}.bar{width:min(280px,74vw);height:8px;border-radius:999px;background:rgba(255,255,255,.25);overflow:hidden;margin:22px auto}.fill{height:100%;width:40%;border-radius:999px;background:#fff;animation:load 1.2s ease-in-out infinite}.error{display:none;background:rgba(0,0,0,.22);padding:14px;border-radius:14px;margin-top:16px;line-height:1.5}@keyframes bounce{to{transform:translateY(-14px) rotate(12deg)}}@keyframes load{0%{transform:translateX(-110%)}100%{transform:translateX(350%)}}
+</style>
 </head>
 <body>
-<div id="app"></div>
-<script src="js/data/constants.js"></script>
-<script src="js/data/characters.js"></script>
-<script src="js/data/events_general.js"></script>
-<script src="js/data/events_romance.js"></script>
-<script src="js/data/endings.js"></script>
-<script src="js/data/training_data.js"></script>
-<script src="js/systems/state.js"></script>
-<script src="js/systems/save.js"></script>
-<script src="js/systems/eventEngine.js"></script>
-<script src="js/systems/training.js"></script>
-<script src="js/systems/timeSystem.js"></script>
-<script src="js/systems/gameSim.js"></script>
-<script src="js/systems/careerEngine.js"></script>
-<script src="js/systems/seasonEngine.js"></script>
-<script src="js/systems/endingEngine.js"></script>
-<script src="js/ui/render.js"></script>
-<script src="js/ui/screens_title.js"></script>
-<script src="js/ui/screens_hub.js"></script>
-<script src="js/ui/screens_event.js"></script>
-<script src="js/ui/screens_game.js"></script>
-<script src="js/ui/screens_ending.js"></script>
-<script src="js/main.js"></script>
+<div class="loader" id="loading">
+  <div class="ball">⚾</div>
+  <div class="title">EXTRA INNINGS TAKE 2</div>
+  <div class="sub">게임 데이터를 불러오는 중입니다.</div>
+  <div class="bar"><div class="fill"></div></div>
+  <div class="error" id="error"></div>
+</div>
+<script>
+(async()=>{
+  const errorBox=document.getElementById('error');
+  try{
+    if(!('DecompressionStream' in window)) throw new Error('이 브라우저는 압축 해제를 지원하지 않습니다. 최신 Chrome 또는 Samsung Internet으로 열어주세요.');
+    const encoded=(await fetch('./payload/part01.txt?v=0200',{cache:'no-store'}).then(r=>{if(!r.ok)throw new Error('게임 데이터 다운로드 실패');return r.text();})).trim();
+    const binary=atob(encoded);
+    const bytes=new Uint8Array(binary.length);
+    for(let i=0;i<binary.length;i++)bytes[i]=binary.charCodeAt(i);
+    const stream=new Blob([bytes]).stream().pipeThrough(new DecompressionStream('gzip'));
+    const html=await new Response(stream).text();
+    document.open();
+    document.write(html);
+    document.close();
+  }catch(err){
+    errorBox.style.display='block';
+    errorBox.textContent='게임을 불러오지 못했습니다. '+(err&&err.message?err.message:String(err));
+  }
+})();
+</script>
 </body>
 </html>
