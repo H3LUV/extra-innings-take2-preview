@@ -14,7 +14,7 @@ html,body{height:100%;margin:0;font-family:system-ui,-apple-system,"Noto Sans KR
   <div class="title">EXTRA INNINGS TAKE 2</div>
   <div class="sub" id="status">게임 데이터를 불러오는 중입니다.</div>
   <div class="bar"><div class="fill" id="fill"></div></div>
-  <div class="progress" id="progress">0 / 12</div>
+  <div class="progress" id="progress">0%</div>
   <div class="error" id="error"></div>
 </div>
 <script>
@@ -25,16 +25,21 @@ html,body{height:100%;margin:0;font-family:system-ui,-apple-system,"Noto Sans KR
   const progress=document.getElementById('progress');
   try{
     if(!('DecompressionStream' in window)) throw new Error('이 브라우저는 압축 해제를 지원하지 않습니다. 최신 Chrome 또는 Samsung Internet으로 열어주세요.');
-    const urls=Array.from({length:12},(_,i)=>`./payload/part${String(i+1).padStart(2,'0')}.txt?v=0201`);
+    const names=[
+      'part01','part02','part03','part04','part05',
+      'part06a','part06b','part06c','part06d','part06e','part06f',
+      'part06g01','part06g02','part06g03','part06g04','part06g05','part06g06','part06g07','part06g08','part06g09','part06g10',
+      'part07','part08','part09','part10','part11','part12'
+    ];
     const texts=[];
-    for(let i=0;i<urls.length;i++){
-      status.textContent=`게임 데이터 ${i+1} / ${urls.length} 불러오는 중`;
-      const response=await fetch(urls[i],{cache:'no-store'});
-      if(!response.ok) throw new Error(`게임 데이터 다운로드 실패 (${response.status}, ${i+1}번 파일)`);
+    for(let i=0;i<names.length;i++){
+      const percent=Math.round((i+1)/names.length*88);
+      status.textContent=`게임 데이터 불러오는 중 · ${percent}%`;
+      const response=await fetch(`./payload/${names[i]}.txt?v=0202`,{cache:'no-store'});
+      if(!response.ok) throw new Error(`게임 데이터 다운로드 실패 (${response.status}, ${names[i]})`);
       texts.push(await response.text());
-      const done=i+1;
-      fill.style.width=`${Math.round(done/urls.length*88)}%`;
-      progress.textContent=`${done} / ${urls.length}`;
+      fill.style.width=`${percent}%`;
+      progress.textContent=`${percent}%`;
     }
     status.textContent='게임 데이터를 해제하는 중입니다.';
     let encoded=texts.join('').replace(/[^A-Za-z0-9+/=]/g,'');
@@ -46,7 +51,7 @@ html,body{height:100%;margin:0;font-family:system-ui,-apple-system,"Noto Sans KR
     const html=await new Response(stream).text();
     if(!html.includes('<!DOCTYPE html>')&&!html.includes('<html')) throw new Error('게임 데이터의 형식이 올바르지 않습니다.');
     fill.style.width='100%';
-    progress.textContent='완료';
+    progress.textContent='100%';
     document.open();
     document.write(html);
     document.close();
