@@ -5,33 +5,54 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
 <title>EXTRA INNINGS TAKE 2</title>
 <style>
-html,body{height:100%;margin:0;font-family:system-ui,-apple-system,"Noto Sans KR",sans-serif;background:linear-gradient(180deg,#0f6fd8,#37a9ff);color:#fff}body{display:flex;align-items:center;justify-content:center}.loader{text-align:center;padding:28px}.ball{font-size:56px;animation:bounce .8s ease-in-out infinite alternate}.title{font-size:28px;font-weight:900;margin-top:14px}.sub{font-size:14px;opacity:.88;margin-top:8px}.bar{width:min(280px,74vw);height:8px;border-radius:999px;background:rgba(255,255,255,.25);overflow:hidden;margin:22px auto}.fill{height:100%;width:40%;border-radius:999px;background:#fff;animation:load 1.2s ease-in-out infinite}.error{display:none;background:rgba(0,0,0,.22);padding:14px;border-radius:14px;margin-top:16px;line-height:1.5}@keyframes bounce{to{transform:translateY(-14px) rotate(12deg)}}@keyframes load{0%{transform:translateX(-110%)}100%{transform:translateX(350%)}}
+html,body{height:100%;margin:0;font-family:system-ui,-apple-system,"Noto Sans KR",sans-serif;background:linear-gradient(180deg,#0f6fd8,#37a9ff);color:#fff}body{display:flex;align-items:center;justify-content:center}.loader{text-align:center;padding:28px;max-width:360px}.ball{font-size:56px;animation:bounce .8s ease-in-out infinite alternate}.title{font-size:28px;font-weight:900;margin-top:14px}.sub{font-size:14px;opacity:.88;margin-top:8px}.bar{width:min(280px,74vw);height:8px;border-radius:999px;background:rgba(255,255,255,.25);overflow:hidden;margin:22px auto}.fill{height:100%;width:0;border-radius:999px;background:#fff;transition:width .18s ease}.progress{font-size:12px;opacity:.8;margin-top:-12px}.error{display:none;background:rgba(0,0,0,.22);padding:14px;border-radius:14px;margin-top:16px;line-height:1.5;word-break:keep-all}@keyframes bounce{to{transform:translateY(-14px) rotate(12deg)}}
 </style>
 </head>
 <body>
 <div class="loader" id="loading">
   <div class="ball">⚾</div>
   <div class="title">EXTRA INNINGS TAKE 2</div>
-  <div class="sub">게임 데이터를 불러오는 중입니다.</div>
-  <div class="bar"><div class="fill"></div></div>
+  <div class="sub" id="status">게임 데이터를 불러오는 중입니다.</div>
+  <div class="bar"><div class="fill" id="fill"></div></div>
+  <div class="progress" id="progress">0 / 12</div>
   <div class="error" id="error"></div>
 </div>
 <script>
 (async()=>{
   const errorBox=document.getElementById('error');
+  const status=document.getElementById('status');
+  const fill=document.getElementById('fill');
+  const progress=document.getElementById('progress');
   try{
     if(!('DecompressionStream' in window)) throw new Error('이 브라우저는 압축 해제를 지원하지 않습니다. 최신 Chrome 또는 Samsung Internet으로 열어주세요.');
-    const encoded=(await fetch('./payload/part01.txt?v=0200',{cache:'no-store'}).then(r=>{if(!r.ok)throw new Error('게임 데이터 다운로드 실패');return r.text();})).trim();
+    const urls=Array.from({length:12},(_,i)=>`./payload/part${String(i+1).padStart(2,'0')}.txt?v=0201`);
+    const texts=[];
+    for(let i=0;i<urls.length;i++){
+      status.textContent=`게임 데이터 ${i+1} / ${urls.length} 불러오는 중`;
+      const response=await fetch(urls[i],{cache:'no-store'});
+      if(!response.ok) throw new Error(`게임 데이터 다운로드 실패 (${response.status}, ${i+1}번 파일)`);
+      texts.push(await response.text());
+      const done=i+1;
+      fill.style.width=`${Math.round(done/urls.length*88)}%`;
+      progress.textContent=`${done} / ${urls.length}`;
+    }
+    status.textContent='게임 데이터를 해제하는 중입니다.';
+    let encoded=texts.join('').replace(/[^A-Za-z0-9+/=]/g,'');
+    while(encoded.length%4) encoded+='=';
     const binary=atob(encoded);
     const bytes=new Uint8Array(binary.length);
-    for(let i=0;i<binary.length;i++)bytes[i]=binary.charCodeAt(i);
+    for(let i=0;i<binary.length;i++) bytes[i]=binary.charCodeAt(i);
     const stream=new Blob([bytes]).stream().pipeThrough(new DecompressionStream('gzip'));
     const html=await new Response(stream).text();
+    if(!html.includes('<!DOCTYPE html>')&&!html.includes('<html')) throw new Error('게임 데이터의 형식이 올바르지 않습니다.');
+    fill.style.width='100%';
+    progress.textContent='완료';
     document.open();
     document.write(html);
     document.close();
   }catch(err){
     errorBox.style.display='block';
+    status.textContent='불러오기에 실패했습니다.';
     errorBox.textContent='게임을 불러오지 못했습니다. '+(err&&err.message?err.message:String(err));
   }
 })();
