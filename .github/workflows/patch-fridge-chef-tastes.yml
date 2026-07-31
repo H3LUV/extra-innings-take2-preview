@@ -1,0 +1,61 @@
+name: Patch Fridge Chef Taste Preferences
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - '.github/workflows/patch-fridge-chef-tastes.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  patch-tastes:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Add salty and sweet preferences to recipe API
+        shell: bash
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+
+          path = Path('fridge-chef/api/generate-recipe.js')
+          text = path.read_text(encoding='utf-8')
+
+          replacements = [
+              (
+                  "const ALLOWED_SPICY = new Set(['상관없음', '안 매운맛', '살짝 매콤', '화끈하게']);\nconst RETRYABLE_STATUS",
+                  "const ALLOWED_SPICY = new Set(['상관없음', '안 매운맛', '살짝 매콤', '화끈하게']);\nconst ALLOWED_SALTY = new Set(['상관없음', '싱겁게', '보통', '짭짤하게']);\nconst ALLOWED_SWEET = new Set(['상관없음', '단맛 없이', '은은하게', '달콤하게']);\nconst RETRYABLE_STATUS"
+              ),
+              (
+                  "    spicy: ALLOWED_SPICY.has(body?.spicy) ? body.spicy : '상관없음',\n    servings:",
+                  "    spicy: ALLOWED_SPICY.has(body?.spicy) ? body.spicy : '상관없음',\n    salty: ALLOWED_SALTY.has(body?.salty) ? body.salty : '상관없음',\n    sweet: ALLOWED_SWEET.has(body?.sweet) ? body.sweet : '상관없음',\n    servings:"
+              ),
+              (
+                  "6. 요리 스타일, 난이도, 목적, 매운맛 조건을 반영하세요.",
+                  "6. 요리 스타일, 난이도, 목적과 매운맛·짠맛·단맛 조건을 모두 반영하세요.\\n   - 짠맛이 '싱겁게'면 소금·간장·된장·굴소스 등 염분 재료를 줄이고 마지막에 추가 간이 가능하도록 안내하세요.\\n   - 짠맛이 '짭짤하게'여도 과도한 나트륨이 되지 않도록 향신 재료와 감칠맛 재료를 함께 활용하세요.\\n   - 단맛이 '단맛 없이'면 설탕·물엿·올리고당과 불필요한 단맛을 피하세요.\\n   - 단맛이 '은은하게' 또는 '달콤하게'면 정확한 당류 분량을 제시하고 전체 맛의 균형을 유지하세요."
+              )
+          ]
+
+          for old, new in replacements:
+              if old not in text:
+                  raise SystemExit(f'Expected source text not found: {old[:80]}')
+              text = text.replace(old, new, 1)
+
+          path.write_text(text, encoding='utf-8')
+          PY
+
+      - name: Verify JavaScript syntax
+        run: node --check fridge-chef/api/generate-recipe.js
+
+      - name: Commit API taste support
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add fridge-chef/api/generate-recipe.js
+          git commit -m 'Apply salty and sweet recipe preferences [skip ci]'
+          git push
