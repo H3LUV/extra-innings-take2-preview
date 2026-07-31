@@ -101,9 +101,8 @@ public class MainActivity extends Activity {
     private void applyStableSystemBarPadding(FrameLayout root) {
         if (Build.VERSION.SDK_INT < 35) return;
 
-        int topInset = getAndroidDimension("status_bar_height");
         int bottomInset = getAndroidDimension("navigation_bar_height");
-        root.setPadding(0, topInset, 0, bottomInset);
+        root.setPadding(0, 0, 0, bottomInset);
     }
 
     private int getAndroidDimension(String name) {
@@ -164,7 +163,7 @@ public class MainActivity extends Activity {
         settings.setBuiltInZoomControls(false);
         settings.setDisplayZoomControls(false);
         settings.setMixedContentMode(WebSettings.MIXED_CONTENT_NEVER_ALLOW);
-        settings.setUserAgentString(settings.getUserAgentString() + " FridgeChefAndroid/1.0.2");
+        settings.setUserAgentString(settings.getUserAgentString() + " FridgeChefAndroid/1.0.3");
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
             settings.setSafeBrowsingEnabled(true);
         }
