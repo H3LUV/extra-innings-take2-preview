@@ -1,0 +1,48 @@
+.header-home-button {
+  min-height: 40px;
+  padding: 0 13px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: rgba(255,255,255,.48);
+  color: var(--green);
+  cursor: pointer;
+  font-weight: 800;
+}
+
+.header-home-button span { font-size: 18px; line-height: 1; }
+.header-home-button b { font-size: 12px; }
+.header-home-button:hover { background: #fff; }
+
+.extra-taste-field { margin-top: -4px; }
+.extra-taste-field .pill-options { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); }
+.extra-taste-field .pill-choice { padding-inline: 7px; }
+
+.wizard-results-toolbar {
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.wizard-results-ingredients {
+  border-color: rgba(237, 91, 53, .28);
+  color: var(--orange);
+}
+
+@media (max-width: 680px) {
+  .header-home-button {
+    width: 38px;
+    min-height: 38px;
+    padding: 0;
+    justify-content: center;
+  }
+  .header-home-button b { display: none; }
+  .extra-taste-field .pill-options { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .wizard-results-toolbar .wizard-results-back {
+    flex: 1 1 calc(50% - 4px);
+    padding-inline: 10px;
+    font-size: 11px;
+  }
+}
