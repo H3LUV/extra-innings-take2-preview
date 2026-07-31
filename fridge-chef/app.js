@@ -1,5 +1,5 @@
 (() => {
-  const version = '20260731-layout-fix-v2';
+  const version = '20260801-final-polish-v2';
   const files = [
     './app-core.js',
     './app-render.js',
@@ -10,7 +10,8 @@
     './app-init.js',
     './app-upgrades.js',
     './app-cute-upgrades.js',
-    './app-layout-fixes.js'
+    './app-layout-fixes.js',
+    './app-final-polish.js'
   ];
 
   const loadNext = (index) => {
