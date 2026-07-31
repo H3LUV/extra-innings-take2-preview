@@ -1,3 +1,4 @@
 @import url('./styles-base.css');
 @import url('./styles-components.css');
 @import url('./styles-wizard.css');
+@import url('./styles-recipe-card-fix.css?v=20260731-card-width-v1');
