@@ -1,5 +1,5 @@
 (() => {
-  const version = '20260801-final-polish-v2';
+  const version = '20260801-hero-image-fix-v1';
   const files = [
     './app-core.js',
     './app-render.js',
