@@ -4,6 +4,8 @@ const ALLOWED_CUISINES = new Set(['상관없음', '한식', '일식', '중식', 
 const ALLOWED_DIFFICULTIES = new Set(['상관없음', '쉬움', '보통', '어려움']);
 const ALLOWED_PURPOSES = new Set(['일상 한 끼', '냉장고 털이', '아이와 함께', '술안주', '다이어트']);
 const ALLOWED_SPICY = new Set(['상관없음', '안 매운맛', '살짝 매콤', '화끈하게']);
+const ALLOWED_SALTY = new Set(['상관없음', '싱겁게', '보통', '짭짤하게']);
+const ALLOWED_SWEET = new Set(['상관없음', '단맛 없이', '은은하게', '달콤하게']);
 const RETRYABLE_STATUS = new Set([429, 500, 503, 504]);
 
 const recipeSchema = {
@@ -107,6 +109,8 @@ function validateInput(body) {
     difficulty: ALLOWED_DIFFICULTIES.has(body?.difficulty) ? body.difficulty : '상관없음',
     purpose: ALLOWED_PURPOSES.has(body?.purpose) ? body.purpose : '일상 한 끼',
     spicy: ALLOWED_SPICY.has(body?.spicy) ? body.spicy : '상관없음',
+    salty: ALLOWED_SALTY.has(body?.salty) ? body.salty : '상관없음',
+    sweet: ALLOWED_SWEET.has(body?.sweet) ? body.sweet : '상관없음',
     servings: clampInteger(body?.servings, 1, 8, 2),
     maxTime: clampInteger(body?.maxTime, 10, 180, 40)
   };
@@ -132,7 +136,7 @@ ${JSON.stringify(input, null, 2)}
 3. 추가 재료는 한국 일반 마트에서 구하기 쉬운 기본 재료로 최소화하세요.
 4. 모든 분량은 ${input.servings}인분 기준으로 g, ml, 개, 큰술, 작은술 등 구체적인 단위로 작성하세요. '적당량'은 소금·후추처럼 마지막 간을 조절하는 재료에만 제한적으로 사용하세요.
 5. 각 요리의 총 조리시간은 반드시 ${input.maxTime}분 이내여야 합니다.
-6. 요리 스타일, 난이도, 목적, 매운맛 조건을 반영하세요.
+6. 요리 스타일, 난이도, 목적과 매운맛·짠맛·단맛 조건을 모두 반영하세요.\n   - 짠맛이 '싱겁게'면 소금·간장·된장·굴소스 등 염분 재료를 줄이고 마지막에 추가 간이 가능하도록 안내하세요.\n   - 짠맛이 '짭짤하게'여도 과도한 나트륨이 되지 않도록 향신 재료와 감칠맛 재료를 함께 활용하세요.\n   - 단맛이 '단맛 없이'면 설탕·물엿·올리고당과 불필요한 단맛을 피하세요.\n   - 단맛이 '은은하게' 또는 '달콤하게'면 정확한 당류 분량을 제시하고 전체 맛의 균형을 유지하세요.
 7. 조리 순서는 준비·손질·예열·조리·마무리가 구분되도록 5~8단계로 작성하세요.
 8. 각 단계의 description에는 어떤 재료를 어느 분량 사용하는지, 손질 크기나 모양, 조리도구, 재료를 넣는 순서와 섞거나 뒤집는 방법을 가능한 한 구체적으로 작성하세요.
 9. 각 단계의 heat에는 '불 사용 안 함', '약불', '중약불', '중불', '중강불', '강불' 중 가장 적절한 표현 하나를 쓰세요.
