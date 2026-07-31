@@ -46,7 +46,32 @@ jobs:
 
       - name: Build installable debug APK
         working-directory: fridge-chef-android
-        run: gradle --no-daemon clean assembleDebug
+        shell: bash
+        run: |
+          set -o pipefail
+          gradle --no-daemon --stacktrace --warning-mode all clean assembleDebug 2>&1 | tee android-build.log
+
+      - name: Add failure details to summary
+        if: failure()
+        shell: bash
+        run: |
+          echo '## Android build failure details' >> "$GITHUB_STEP_SUMMARY"
+          echo '```text' >> "$GITHUB_STEP_SUMMARY"
+          if [ -f fridge-chef-android/android-build.log ]; then
+            tail -n 160 fridge-chef-android/android-build.log >> "$GITHUB_STEP_SUMMARY"
+          else
+            echo 'The Gradle build log was not created. Check the failed setup step above.' >> "$GITHUB_STEP_SUMMARY"
+          fi
+          echo '```' >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Upload build log
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: fridge-chef-android-build-log
+          path: fridge-chef-android/android-build.log
+          if-no-files-found: ignore
+          retention-days: 30
 
       - name: Prepare APK artifact
         run: |
