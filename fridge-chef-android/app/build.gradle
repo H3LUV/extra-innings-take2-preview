@@ -2,6 +2,17 @@ plugins {
     id 'com.android.application'
 }
 
+def releaseStoreFile = System.getenv('FRIDGE_CHEF_UPLOAD_KEYSTORE')
+def releaseStorePassword = System.getenv('FRIDGE_CHEF_UPLOAD_STORE_PASSWORD')
+def releaseKeyAlias = System.getenv('FRIDGE_CHEF_UPLOAD_KEY_ALIAS')
+def releaseKeyPassword = System.getenv('FRIDGE_CHEF_UPLOAD_KEY_PASSWORD')
+def hasReleaseSigning = [
+    releaseStoreFile,
+    releaseStorePassword,
+    releaseKeyAlias,
+    releaseKeyPassword
+].every { value -> value != null && !value.trim().isEmpty() }
+
 android {
     namespace 'com.h3luv.fridgechef'
     compileSdk 36
@@ -14,12 +25,26 @@ android {
         versionName '1.0.0'
     }
 
+    signingConfigs {
+        release {
+            if (hasReleaseSigning) {
+                storeFile file(releaseStoreFile)
+                storePassword releaseStorePassword
+                keyAlias releaseKeyAlias
+                keyPassword releaseKeyPassword
+            }
+        }
+    }
+
     buildTypes {
         debug {
             applicationIdSuffix '.debug'
             versionNameSuffix '-debug'
         }
         release {
+            if (hasReleaseSigning) {
+                signingConfig signingConfigs.release
+            }
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
