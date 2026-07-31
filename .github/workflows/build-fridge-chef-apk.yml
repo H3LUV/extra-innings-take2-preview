@@ -77,9 +77,9 @@ jobs:
         run: |
           mkdir -p fridge-chef-android/dist
           cp fridge-chef-android/app/build/outputs/apk/debug/app-debug.apk \
-             fridge-chef-android/dist/fridge-chef-v1.0.0-debug.apk
+             fridge-chef-android/dist/fridge-chef-v1.0.1-debug.apk
           cd fridge-chef-android/dist
-          sha256sum fridge-chef-v1.0.0-debug.apk > fridge-chef-v1.0.0-debug.sha256
+          sha256sum fridge-chef-v1.0.1-debug.apk > fridge-chef-v1.0.1-debug.sha256
 
       - name: Upload APK artifact
         uses: actions/upload-artifact@v4
@@ -92,8 +92,9 @@ jobs:
       - name: Publish latest APK to repository
         run: |
           mkdir -p apk-builds
-          cp fridge-chef-android/dist/fridge-chef-v1.0.0-debug.apk apk-builds/
-          cp fridge-chef-android/dist/fridge-chef-v1.0.0-debug.sha256 apk-builds/
+          rm -f apk-builds/fridge-chef-v*-debug.apk apk-builds/fridge-chef-v*-debug.sha256
+          cp fridge-chef-android/dist/fridge-chef-v1.0.1-debug.apk apk-builds/
+          cp fridge-chef-android/dist/fridge-chef-v1.0.1-debug.sha256 apk-builds/
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
           git add apk-builds
@@ -101,5 +102,5 @@ jobs:
             echo 'APK is unchanged.'
             exit 0
           fi
-          git commit -m 'Publish Fridge Chef test APK [skip ci]'
+          git commit -m 'Publish Fridge Chef test APK 1.0.1 [skip ci]'
           git push
