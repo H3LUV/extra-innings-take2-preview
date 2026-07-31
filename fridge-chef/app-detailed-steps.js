@@ -35,8 +35,87 @@
     .step-row > div > p:not(.step-checkpoint) {
       line-height: 1.78;
     }
+    .modal-actions [data-share] {
+      background: #255b43;
+      border-color: #255b43;
+      color: #fff;
+    }
   `;
   document.head.appendChild(style);
+
+  function buildRecipeShareText(recipe) {
+    const ingredients = Array.isArray(recipe.ingredients)
+      ? recipe.ingredients.map((item) => `- ${item.name}: ${item.amount}`).join('\n')
+      : '';
+
+    const steps = Array.isArray(recipe.steps)
+      ? recipe.steps.map((step, index) => {
+          const meta = [step.heat, step.duration].filter(Boolean).join(' · ');
+          return `${index + 1}. ${step.title}${meta ? ` (${meta})` : ''}\n${step.description}`;
+        }).join('\n\n')
+      : '';
+
+    return [
+      `[냉털셰프] ${recipe.title}`,
+      recipe.subtitle || '',
+      `${recipe.timeMinutes}분 · ${recipe.difficulty} · ${recipe.servings}인분`,
+      '',
+      '준비 재료',
+      ingredients,
+      '',
+      '조리 순서',
+      steps,
+      '',
+      recipe.tip ? `셰프의 한 수: ${recipe.tip}` : ''
+    ].filter((line, index, lines) => line || (index > 0 && lines[index - 1])).join('\n').trim();
+  }
+
+  function copyTextFallback(text) {
+    const textarea = document.createElement('textarea');
+    textarea.value = text;
+    textarea.setAttribute('readonly', '');
+    textarea.style.position = 'fixed';
+    textarea.style.opacity = '0';
+    document.body.appendChild(textarea);
+    textarea.select();
+    const copied = document.execCommand('copy');
+    textarea.remove();
+    return copied;
+  }
+
+  shareRecipe = async function shareDetailedRecipe(recipe) {
+    if (!recipe) return;
+
+    const siteUrl = `${location.origin}${location.pathname}`;
+    const text = buildRecipeShareText(recipe);
+    const shareData = {
+      title: `${recipe.title} | 냉털셰프`,
+      text,
+      url: siteUrl
+    };
+
+    if (typeof navigator.share === 'function') {
+      try {
+        await navigator.share(shareData);
+        showToast('레시피를 공유했습니다.');
+        return;
+      } catch (error) {
+        if (error?.name === 'AbortError') return;
+      }
+    }
+
+    const clipboardText = `${text}\n\n${siteUrl}`;
+    try {
+      if (navigator.clipboard?.writeText) {
+        await navigator.clipboard.writeText(clipboardText);
+      } else if (!copyTextFallback(clipboardText)) {
+        throw new Error('copy failed');
+      }
+      showToast('레시피 내용을 복사했습니다.');
+    } catch {
+      showToast('공유 기능을 사용할 수 없습니다.');
+    }
+  };
 
   openRecipe = function openDetailedRecipe(id) {
     const recipe = findRecipe(id);
@@ -88,6 +167,7 @@
         </section>
       </div>
       <div class="modal-actions">
+        <button type="button" data-share="${recipe.id}">레시피 공유하기</button>
         <button type="button" data-modal-favorite="${recipe.id}" class="primary">${isFavorite(recipe) ? '저장 취소' : '내 레시피에 저장'}</button>
         <button type="button" data-copy="${recipe.id}">장보기 목록 복사</button>
       </div>`;
