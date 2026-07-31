@@ -1,5 +1,5 @@
 (() => {
-  const version = '20260731-cute-ui-v1';
+  const version = '20260731-cute-ui-v2';
   const files = [
     './app-core.js',
     './app-render.js',
