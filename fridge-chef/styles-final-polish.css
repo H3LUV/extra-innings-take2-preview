@@ -1,0 +1,292 @@
+/* Final home treatment: one integrated surface instead of a framed picture pasted above the UI. */
+body.wizard-ready .hero.home-final-screen.wizard-screen.is-active {
+  display: block !important;
+  width: min(1120px, calc(100% - 28px));
+  padding: 22px 0 44px !important;
+  background: transparent !important;
+}
+
+.home-final-shell {
+  position: relative;
+  min-height: calc(100% - 4px);
+  display: grid;
+  grid-template-columns: minmax(410px, 1.08fr) minmax(360px, .92fr);
+  overflow: hidden;
+  border: 1px solid rgba(63, 105, 68, .12);
+  border-radius: 36px;
+  background:
+    radial-gradient(circle at 18% 12%, rgba(255, 188, 77, .18), transparent 29%),
+    radial-gradient(circle at 92% 90%, rgba(115, 161, 98, .13), transparent 31%),
+    linear-gradient(145deg, #fff7e9 0%, #fffaf1 46%, #f2f7e8 100%);
+  box-shadow: 0 26px 70px rgba(91, 73, 44, .14);
+  isolation: isolate;
+}
+
+.home-final-shell::before,
+.home-final-shell::after {
+  content: '';
+  position: absolute;
+  z-index: 0;
+  border-radius: 50%;
+  pointer-events: none;
+}
+.home-final-shell::before {
+  width: 280px;
+  height: 280px;
+  left: -95px;
+  bottom: -135px;
+  border: 1px solid rgba(255, 127, 58, .13);
+}
+.home-final-shell::after {
+  width: 210px;
+  height: 210px;
+  right: -85px;
+  top: -90px;
+  border: 1px solid rgba(80, 130, 78, .13);
+}
+
+.home-final-art {
+  position: relative;
+  z-index: 1;
+  min-height: 590px;
+  display: grid;
+  place-items: end center;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 52% 45%, rgba(255,255,255,.88), rgba(255,255,255,.25) 43%, transparent 68%),
+    linear-gradient(180deg, rgba(255,244,225,.58), rgba(246,247,229,.18));
+}
+
+.home-final-image {
+  position: relative;
+  z-index: 2;
+  width: min(104%, 640px);
+  height: auto;
+  display: block;
+  margin: 0 -2% -8px;
+  object-fit: contain;
+  filter: drop-shadow(0 24px 28px rgba(94, 73, 44, .13));
+  -webkit-mask-image: linear-gradient(to bottom, #000 0%, #000 91%, transparent 100%);
+  mask-image: linear-gradient(to bottom, #000 0%, #000 91%, transparent 100%);
+}
+
+.home-final-glow {
+  position: absolute;
+  z-index: 0;
+  border-radius: 50%;
+  filter: blur(2px);
+}
+.home-final-glow.glow-one {
+  width: 330px;
+  height: 330px;
+  left: 6%;
+  top: 11%;
+  background: rgba(255, 203, 103, .15);
+}
+.home-final-glow.glow-two {
+  width: 250px;
+  height: 250px;
+  right: 2%;
+  bottom: 7%;
+  background: rgba(117, 163, 99, .13);
+}
+
+.home-final-note {
+  position: absolute;
+  z-index: 3;
+  left: 30px;
+  top: 28px;
+  padding: 11px 16px;
+  border: 1.5px solid rgba(42, 61, 48, .58);
+  border-radius: 999px;
+  background: rgba(255, 253, 247, .9);
+  color: #344238;
+  box-shadow: 0 8px 18px rgba(72, 70, 52, .08);
+  font-size: 12px;
+  font-weight: 900;
+}
+
+.home-final-copy {
+  position: relative;
+  z-index: 2;
+  padding: 52px 42px 40px 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.home-final-kicker {
+  margin: 0 0 14px;
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  color: var(--green);
+  font-size: 13px;
+  font-weight: 900;
+}
+.home-final-kicker i {
+  width: 26px;
+  height: 2px;
+  display: block;
+  background: var(--orange);
+}
+
+.home-final-copy h1 {
+  margin: 0;
+  color: #263128;
+  font-family: 'Noto Sans KR', sans-serif;
+  font-size: clamp(43px, 5.3vw, 70px);
+  line-height: 1.08;
+  letter-spacing: -.065em;
+  font-weight: 900;
+}
+.home-final-copy h1 em {
+  color: var(--orange);
+  font-style: normal;
+}
+
+.home-final-description {
+  margin: 20px 0 24px;
+  color: #686f67;
+  font-size: 14px;
+  line-height: 1.78;
+  word-break: keep-all;
+}
+
+.home-final-features {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 9px;
+}
+.home-final-features > div {
+  min-width: 0;
+  padding: 14px 7px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3px;
+  border: 1px solid rgba(55,114,74,.12);
+  border-radius: 17px;
+  background: rgba(255,255,255,.72);
+  text-align: center;
+  box-shadow: 0 7px 17px rgba(72,76,57,.05);
+}
+.home-final-features span { font-size: 24px; }
+.home-final-features strong { color: #425045; font-size: 12px; }
+.home-final-features small { color: #92958d; font-size: 9px; }
+
+.home-final-start {
+  width: 100%;
+  min-height: 64px;
+  margin-top: 20px;
+  padding: 0 22px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 0;
+  border-radius: 19px;
+  background: linear-gradient(135deg, #ff7136, #ff5726);
+  color: #fff;
+  box-shadow: 0 16px 32px rgba(255,100,44,.23);
+  cursor: pointer;
+  font-size: 17px;
+  font-weight: 900;
+}
+.home-final-start b { font-size: 22px; }
+
+.home-final-tip {
+  margin-top: 15px;
+  padding: 12px 14px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border-radius: 15px;
+  background: rgba(235, 244, 224, .84);
+  color: #677064;
+}
+.home-final-tip > span { font-size: 20px; }
+.home-final-tip p { margin: 0; font-size: 10px; line-height: 1.5; }
+.home-final-tip strong { display: block; color: var(--green); font-size: 11px; }
+
+/* Make the real dish name easier to scan in cards and details. */
+.recipe-card .recipe-body h3,
+.modal-title-wrap h2 {
+  word-break: keep-all;
+  text-wrap: balance;
+}
+.recipe-card .recipe-body h3 { line-height: 1.28; }
+
+@media (max-width: 760px) {
+  body.wizard-ready .hero.home-final-screen.wizard-screen.is-active {
+    width: calc(100% - 20px);
+    padding: 14px 0 34px !important;
+  }
+
+  .home-final-shell {
+    min-height: auto;
+    display: flex;
+    flex-direction: column;
+    border-radius: 28px;
+  }
+
+  .home-final-art {
+    min-height: 0;
+    aspect-ratio: 1 / .78;
+    place-items: end center;
+    background:
+      radial-gradient(circle at 50% 48%, rgba(255,255,255,.9), rgba(255,255,255,.22) 48%, transparent 72%),
+      linear-gradient(180deg, rgba(255,239,211,.68), rgba(244,246,226,.18));
+  }
+
+  .home-final-image {
+    width: 108%;
+    max-width: none;
+    margin: 0 -4% -6px;
+  }
+
+  .home-final-note {
+    top: 15px;
+    left: 15px;
+    padding: 8px 11px;
+    font-size: 10px;
+  }
+
+  .home-final-copy {
+    margin-top: -18px;
+    padding: 18px 20px 22px;
+    border-radius: 24px 24px 0 0;
+    background: linear-gradient(180deg, rgba(255,250,241,.18), rgba(255,250,241,.94) 18%, rgba(255,250,241,.98));
+  }
+
+  .home-final-kicker {
+    margin-bottom: 10px;
+    justify-content: center;
+    font-size: 11px;
+  }
+
+  .home-final-copy h1 {
+    font-size: clamp(36px, 11vw, 50px);
+    text-align: center;
+  }
+
+  .home-final-description {
+    margin: 15px 0 18px;
+    font-size: 12px;
+    line-height: 1.7;
+    text-align: center;
+  }
+
+  .home-final-features { gap: 7px; }
+  .home-final-features > div { padding: 11px 4px; }
+  .home-final-features span { font-size: 21px; }
+  .home-final-features strong { font-size: 10px; }
+  .home-final-features small { font-size: 8px; }
+
+  .home-final-start {
+    min-height: 58px;
+    margin-top: 15px;
+    font-size: 15px;
+  }
+
+  .home-final-tip { margin-top: 11px; }
+}
