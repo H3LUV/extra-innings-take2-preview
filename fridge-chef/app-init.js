@@ -42,12 +42,14 @@ function bindEvents() {
     if (event.target === elements.recipeModal) closeModal(elements.recipeModal);
     const favoriteButton = event.target.closest('[data-modal-favorite]');
     const copyButton = event.target.closest('[data-copy]');
+    const shareButton = event.target.closest('[data-share]');
     if (favoriteButton) {
       const recipe = findRecipe(favoriteButton.dataset.modalFavorite);
       toggleFavorite(recipe);
       openRecipe(recipe.id);
     }
     if (copyButton) copyShoppingList(findRecipe(copyButton.dataset.copy));
+    if (shareButton) shareRecipe(findRecipe(shareButton.dataset.share));
   });
   elements.favoritesButton.addEventListener('click', () => {
     renderFavorites();
