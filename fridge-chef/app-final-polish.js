@@ -112,12 +112,15 @@
   }
 
   function replaceMascotAssets() {
-    document.querySelectorAll(`img[src*="chef-fridge"]`).forEach((image) => {
-      image.src = heroAsset;
+    document.querySelectorAll('img[src*="chef-fridge"]').forEach((image) => {
+      if (!image.src.includes('/api/hero-image')) image.src = heroAsset;
     });
 
     const mark = document.querySelector('.site-header .brand-mark');
-    if (mark) mark.innerHTML = `<img src="${heroAsset}" alt="" />`;
+    const currentMark = mark?.querySelector('img');
+    if (mark && (!currentMark || !currentMark.src.includes('/api/hero-image'))) {
+      mark.innerHTML = `<img src="${heroAsset}" alt="" />`;
+    }
   }
 
   rebuildIntegratedHome();
