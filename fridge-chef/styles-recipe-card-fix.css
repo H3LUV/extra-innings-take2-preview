@@ -1,0 +1,12 @@
+@media (max-width: 980px) {
+  body.wizard-ready .results-section .recipe-grid {
+    grid-template-columns: 1fr;
+  }
+
+  body.wizard-ready .results-section .recipe-card,
+  body.wizard-ready .results-section .recipe-card:last-child {
+    grid-column: auto;
+    width: 100%;
+    margin-inline: 0;
+  }
+}
