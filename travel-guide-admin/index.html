@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#00a489">
+  <title>MODETOUR 여행 준비 안내 생성기</title>
+  <style>
+    :root{--brand:#00a489;--brand-dark:#008873;--brand-soft:#eaf8f5;--ink:#202626;--muted:#6b7474;--line:#e3e9e8;--bg:#f5f7f7;--white:#fff;--danger:#e5484d;--shadow:0 12px 30px rgba(21,61,53,.08)}
+    *{box-sizing:border-box}html{font-family:Pretendard,"Noto Sans KR",system-ui,-apple-system,sans-serif;color:var(--ink);background:var(--bg)}body{margin:0}button,input,textarea,select{font:inherit}button{cursor:pointer}
+    .top{background:#fff;border-bottom:1px solid var(--line);position:sticky;top:0;z-index:20}.topin{max-width:980px;margin:auto;height:72px;padding:0 24px;display:flex;align-items:center;justify-content:space-between}.logo img{width:174px;display:block}.top small{color:var(--muted);font-weight:700}
+    main{max-width:980px;margin:0 auto;padding:38px 24px 80px}.intro{display:flex;justify-content:space-between;gap:24px;align-items:end;margin-bottom:24px}.intro span{color:var(--brand);font-size:12px;font-weight:900;letter-spacing:.12em}.intro h1{font-size:32px;letter-spacing:-.04em;margin:7px 0}.intro p{color:var(--muted);margin:0;line-height:1.6}.sample{border:1px solid var(--brand);background:#fff;color:var(--brand);border-radius:10px;padding:11px 15px;font-weight:800;white-space:nowrap}
+    .panel{background:#fff;border:1px solid var(--line);border-radius:18px;box-shadow:var(--shadow);padding:24px;margin-top:18px}.panelhead{display:flex;align-items:center;gap:10px;margin-bottom:18px}.num{display:grid;place-items:center;width:28px;height:28px;border-radius:50%;background:var(--brand);color:#fff;font-weight:900;font-size:13px}.panel h2{font-size:18px;margin:0;letter-spacing:-.02em}.req{color:var(--brand);font-size:12px;margin-left:auto;font-weight:800}
+    label{display:block;font-weight:800;font-size:14px;margin-bottom:8px}.help{display:block;color:var(--muted);font-size:12px;font-weight:500;margin-top:5px}.field,.textarea,.select{width:100%;border:1px solid var(--line);background:#fff;border-radius:11px;padding:13px 14px;outline:none;transition:.18s}.field:focus,.textarea:focus,.select:focus{border-color:var(--brand);box-shadow:0 0 0 3px rgba(0,164,137,.12)}.textarea{min-height:115px;resize:vertical;line-height:1.6}.row{display:grid;grid-template-columns:1fr 1fr;gap:14px}.cityrow{display:flex;gap:9px}.cityrow input{flex:1}.add{border:0;border-radius:11px;background:var(--brand);color:#fff;padding:0 18px;font-weight:900}.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}.chip{display:flex;align-items:center;gap:7px;background:var(--brand-soft);border:1px solid #c9eee6;color:var(--brand-dark);border-radius:999px;padding:8px 11px;font-weight:800;font-size:13px}.chip button{border:0;background:transparent;color:inherit;font-size:16px;line-height:1;padding:0}.count{font-size:12px;color:var(--muted);margin-top:9px}
+    .hotels{display:grid;gap:12px}.hotel{border:1px solid var(--line);border-radius:14px;padding:17px;background:#fbfcfc}.hotelbar{display:flex;align-items:center;justify-content:space-between;margin-bottom:13px}.hotelbar strong{font-size:14px}.remove{border:0;background:#fff0f0;color:var(--danger);border-radius:8px;padding:7px 10px;font-weight:800;font-size:12px}.hotelgrid{display:grid;grid-template-columns:1.2fr .8fr;gap:10px}.hotelgrid .wide{grid-column:1/-1}.addhotel{width:100%;border:1px dashed var(--brand);background:var(--brand-soft);color:var(--brand-dark);border-radius:12px;padding:12px;font-weight:900;margin-top:12px}
+    .expiry{display:flex;gap:12px;align-items:center}.expiry .select{max-width:240px}.notice{background:#fff8e7;border:1px solid #f3d990;border-radius:11px;padding:12px 14px;color:#7c6327;font-size:13px;line-height:1.55;margin-top:14px}
+    .actions{position:sticky;bottom:0;background:rgba(245,247,247,.94);backdrop-filter:blur(10px);border-top:1px solid var(--line);margin:30px -24px -80px;padding:16px 24px}.actionsin{max-width:932px;margin:auto;display:flex;gap:10px}.generate{flex:1;border:0;border-radius:13px;background:var(--brand);color:#fff;padding:16px;font-weight:900;font-size:16px;box-shadow:0 8px 20px rgba(0,164,137,.22)}.generate:hover{background:var(--brand-dark)}
+    .result{display:none;margin-top:22px;background:#effaf7;border:1px solid #c4ece4;border-radius:16px;padding:20px}.result.show{display:block}.result h3{margin:0 0 7px}.result p{color:var(--muted);font-size:13px;margin:0 0 13px}.linkbox{display:flex;gap:8px}.linkbox input{flex:1;background:#fff}.linkbox button,.resultbuttons a,.resultbuttons button{border:0;border-radius:10px;padding:12px 14px;font-weight:900;text-decoration:none;text-align:center}.copy{background:var(--brand);color:#fff}.resultbuttons{display:flex;gap:8px;margin-top:10px}.preview{background:#fff;color:var(--brand);border:1px solid var(--brand)!important}.msg{background:#26302f;color:#fff}.error{display:none;margin-top:12px;color:var(--danger);font-size:13px;font-weight:700}.error.show{display:block}
+    @media(max-width:680px){.topin{height:62px;padding:0 16px}.logo img{width:140px}.top small{display:none}main{padding:26px 15px 75px}.intro{align-items:start}.intro h1{font-size:27px}.intro p{font-size:14px}.sample{padding:9px 10px;font-size:12px}.panel{padding:18px;border-radius:15px}.row,.hotelgrid{grid-template-columns:1fr}.hotelgrid .wide{grid-column:auto}.actions{margin-left:-15px;margin-right:-15px}.linkbox{flex-direction:column}.resultbuttons{flex-direction:column}}
+  </style>
+</head>
+<body>
+<header class="top"><div class="topin"><a class="logo" href="../travel-info/"><img src="../travel-info/modetour-logo.svg" alt="MODETOUR"></a><small>직원용 여행 준비 안내 생성기 · SAMPLE</small></div></header>
+<main>
+  <section class="intro"><div><span>TRAVEL GUIDE BUILDER</span><h1>고객용 여행 준비 안내 만들기</h1><p>도시와 호텔을 입력하면 모바일 안내 링크를 즉시 생성합니다.</p></div><button class="sample" id="fillSample" type="button">샘플 입력</button></section>
+
+  <section class="panel">
+    <div class="panelhead"><span class="num">1</span><h2>여행지</h2><span class="req">필수 · 최대 5개</span></div>
+    <label for="cityInput">도시 입력</label>
+    <div class="cityrow"><input class="field" id="cityInput" placeholder="예: 캘거리, 밴프, 재스퍼"><button class="add" id="addCity" type="button">추가</button></div>
+    <div class="chips" id="cityChips"></div><div class="count" id="cityCount">0 / 5개 선택</div>
+  </section>
+
+  <section class="panel">
+    <div class="panelhead"><span class="num">2</span><h2>확정 일정</h2><span class="req">필수</span></div>
+    <label for="scheduleUrl">확정 일정 URL</label>
+    <input class="field" id="scheduleUrl" type="url" placeholder="https://www.modetour.com/...">
+    <span class="help">고객 페이지의 ‘확정 일정 바로가기’ 버튼에 연결됩니다.</span>
+  </section>
+
+  <section class="panel">
+    <div class="panelhead"><span class="num">3</span><h2>가이드 정보</h2><span class="req">필수</span></div>
+    <label for="guideInfo">가이드 또는 인솔자 안내</label>
+    <textarea class="textarea" id="guideInfo" placeholder="예: 인솔자 김모두 / 현지 연락처 +1-000-000-0000 / 카카오톡 ID ..."></textarea>
+  </section>
+
+  <section class="panel">
+    <div class="panelhead"><span class="num">4</span><h2>확정 호텔</h2><span class="req">개수 제한 없음</span></div>
+    <div class="hotels" id="hotels"></div>
+    <button class="addhotel" id="addHotel" type="button">＋ 호텔 추가</button>
+  </section>
+
+  <section class="panel">
+    <div class="panelhead"><span class="num">5</span><h2>기타 안내사항</h2><span class="req">선택</span></div>
+    <label for="notes">추가 안내</label>
+    <textarea class="textarea" id="notes" placeholder="미팅 장소, 준비물, 수하물, 현지 유의사항 등을 자유롭게 입력하세요."></textarea>
+  </section>
+
+  <section class="panel">
+    <div class="panelhead"><span class="num">6</span><h2>링크 유효기간</h2></div>
+    <div class="expiry"><select class="select" id="expiryMonths"><option value="1">생성 후 1개월</option><option value="3" selected>생성 후 3개월</option><option value="6">생성 후 6개월</option><option value="12">생성 후 12개월</option></select></div>
+    <div class="notice">샘플 버전은 링크 안에 안내 데이터를 암호화가 아닌 압축 형태로 담습니다. 여권번호·생년월일 등 개인정보는 입력하지 마세요. 유효기간이 지나면 고객 화면에서 안내 내용이 자동으로 가려집니다.</div>
+  </section>
+
+  <div class="error" id="error"></div>
+  <section class="result" id="result"><h3>고객용 안내 링크가 생성되었습니다</h3><p>링크를 문자나 카카오톡에 붙여 넣어 발송하세요.</p><div class="linkbox"><input class="field" id="generatedLink" readonly><button class="copy" id="copyLink" type="button">링크 복사</button></div><div class="resultbuttons"><a class="preview" id="previewLink" target="_blank" rel="noopener">고객 화면 미리보기</a><button class="msg" id="copyMessage" type="button">발송 문구 복사</button></div></section>
+
+  <div class="actions"><div class="actionsin"><button class="generate" id="generate" type="button">고객 안내 URL 생성하기</button></div></div>
+</main>
+<script>
+const cities=[];let hotelSeq=0;
+const $=id=>document.getElementById(id);
+function esc(s=''){return s.replace(/[&<>\"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','\"':'&quot;'}[c]))}
+function renderCities(){
+  $('cityChips').innerHTML=cities.map((c,i)=>`<span class="chip">${esc(c)}<button type="button" data-city="${i}" aria-label="삭제">×</button></span>`).join('');
+  $('cityCount').textContent=`${cities.length} / 5개 선택`;
+  document.querySelectorAll('[data-city]').forEach(b=>b.onclick=()=>{cities.splice(+b.dataset.city,1);renderCities()});
+}
+function addCity(){const v=$('cityInput').value.trim();if(!v)return;if(cities.length>=5)return showError('여행지는 최대 5개까지 입력할 수 있습니다.');if(cities.some(c=>c.toLowerCase()===v.toLowerCase()))return showError('이미 추가한 도시입니다.');cities.push(v);$('cityInput').value='';renderCities();clearError()}
+$('addCity').onclick=addCity;$('cityInput').addEventListener('keydown',e=>{if(e.key==='Enter'){e.preventDefault();addCity()}});
+function addHotel(data={}){hotelSeq++;const el=document.createElement('article');el.className='hotel';el.dataset.id=hotelSeq;el.innerHTML=`<div class="hotelbar"><strong>호텔 ${document.querySelectorAll('.hotel').length+1}</strong><button type="button" class="remove">삭제</button></div><div class="hotelgrid"><input class="field hotel-name" placeholder="호텔명 *" value="${esc(data.name||'')}"><input class="field hotel-city" placeholder="도시 *" value="${esc(data.city||'')}"><input class="field wide hotel-address" placeholder="주소 또는 지역 (선택)" value="${esc(data.address||'')}"><input class="field wide hotel-note" placeholder="조식, 객실, 특이사항 (선택)" value="${esc(data.note||'')}"></div>`;el.querySelector('.remove').onclick=()=>{el.remove();renumberHotels()};$('hotels').appendChild(el);renumberHotels()}
+function renumberHotels(){document.querySelectorAll('.hotel').forEach((h,i)=>h.querySelector('.hotelbar strong').textContent=`호텔 ${i+1}`)}
+$('addHotel').onclick=()=>addHotel();addHotel();
+function collectHotels(){return [...document.querySelectorAll('.hotel')].map(h=>({name:h.querySelector('.hotel-name').value.trim(),city:h.querySelector('.hotel-city').value.trim(),address:h.querySelector('.hotel-address').value.trim(),note:h.querySelector('.hotel-note').value.trim()})).filter(h=>h.name||h.city)}
+function showError(msg){$('error').textContent=msg;$('error').classList.add('show');$('error').scrollIntoView({behavior:'smooth',block:'center'})}function clearError(){$('error').classList.remove('show')}
+function bytesToB64url(bytes){let s='';for(let i=0;i<bytes.length;i+=8192)s+=String.fromCharCode(...bytes.subarray(i,i+8192));return btoa(s).replace(/\+/g,'-').replace(/\//g,'_').replace(/=+$/,'')}
+async function encodeData(obj){const raw=new TextEncoder().encode(JSON.stringify(obj));if('CompressionStream'in window){try{const cs=new CompressionStream('gzip');const writer=cs.writable.getWriter();writer.write(raw);writer.close();const compressed=new Uint8Array(await new Response(cs.readable).arrayBuffer());return'g'+bytesToB64url(compressed)}catch(e){}}return'n'+bytesToB64url(raw)}
+function futureDate(months){const d=new Date();d.setMonth(d.getMonth()+months);return d.toISOString()}
+function validateUrl(v){try{const u=new URL(v);return /^https?:$/.test(u.protocol)}catch{return false}}
+$('generate').onclick=async()=>{
+  clearError();const scheduleUrl=$('scheduleUrl').value.trim(),guide=$('guideInfo').value.trim(),hotels=collectHotels();
+  if(!cities.length)return showError('여행지를 1개 이상 입력해 주세요.');
+  if(!validateUrl(scheduleUrl))return showError('확정 일정 URL을 http 또는 https 주소로 입력해 주세요.');
+  if(!guide)return showError('가이드 정보를 입력해 주세요.');
+  if(!hotels.length||hotels.some(h=>!h.name||!h.city))return showError('확정 호텔의 호텔명과 도시를 모두 입력해 주세요.');
+  $('generate').disabled=true;$('generate').textContent='URL 생성 중...';
+  try{
+    const months=+$('expiryMonths').value;
+    const payload={v:1,cities:[...cities],scheduleUrl,guide,hotels,notes:$('notes').value.trim(),createdAt:new Date().toISOString(),expiresAt:futureDate(months)};
+    const token=await encodeData(payload);const customerBase=new URL('../travel-guide/',location.href);customerBase.searchParams.set('d',token);const link=customerBase.href;
+    $('generatedLink').value=link;$('previewLink').href=link;$('result').classList.add('show');$('result').scrollIntoView({behavior:'smooth',block:'center'});
+  }catch(e){showError('URL 생성 중 오류가 발생했습니다. 다시 시도해 주세요.')}finally{$('generate').disabled=false;$('generate').textContent='고객 안내 URL 생성하기'}
+};
+async function copyText(text,button,label){try{await navigator.clipboard.writeText(text);const old=button.textContent;button.textContent=label;setTimeout(()=>button.textContent=old,1400)}catch{prompt('아래 내용을 복사하세요.',text)}}
+$('copyLink').onclick=()=>copyText($('generatedLink').value,$('copyLink'),'복사 완료');
+$('copyMessage').onclick=()=>{const cityText=cities.join(' · ');const msg=`[모두투어 여행 준비 안내]\n\n${cityText} 여행의 날씨, 옷차림, 환율, 확정 일정과 호텔 정보를 아래 링크에서 확인해 주세요.\n\n${$('generatedLink').value}\n\n안내 링크는 설정된 유효기간 이후 자동 종료됩니다.`;copyText(msg,$('copyMessage'),'문구 복사 완료')};
+$('fillSample').onclick=()=>{
+  cities.splice(0,cities.length,'캘거리','밴프','레이크루이스');renderCities();
+  $('scheduleUrl').value='https://www.modetour.com/';
+  $('guideInfo').value='인솔자 김모두\n현지 연락처: +1-403-000-0000\n카카오톡 ID: modetour-guide\n비상 상황 발생 시 위 연락처로 연락해 주세요.';
+  $('notes').value='출발 당일 인천공항 미팅 시간을 다시 확인해 주세요.\n로키 지역은 일교차가 크므로 얇은 겉옷과 방수 재킷을 준비해 주세요.';
+  $('hotels').innerHTML='';addHotel({name:'Hyatt Regency Calgary',city:'캘거리',address:'700 Centre St S, Calgary',note:'조식 포함 · 무료 Wi-Fi'});addHotel({name:'Banff Park Lodge',city:'밴프',address:'222 Lynx St, Banff',note:'밴프 다운타운 도보 이동 가능'});
+};
+</script>
+</body></html>
