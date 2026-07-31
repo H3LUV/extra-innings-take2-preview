@@ -1,0 +1,334 @@
+/* Hard separation between wizard screens. This prevents stale WebView layers from bleeding into the next step. */
+body.wizard-ready main {
+  isolation: isolate;
+  background: #fff9ee;
+}
+
+body.wizard-ready .wizard-screen[hidden],
+body.wizard-ready .wizard-screen[aria-hidden="true"] {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+  z-index: -1 !important;
+  transform: none !important;
+  animation: none !important;
+}
+
+body.wizard-ready .wizard-screen.is-active {
+  z-index: 2;
+  visibility: visible !important;
+  opacity: 1 !important;
+  pointer-events: auto !important;
+  animation: none !important;
+  transform: none !important;
+  contain: layout paint;
+  isolation: isolate;
+  background: #fff9ee;
+}
+
+body.wizard-ready .hero.home-screen-v2.wizard-screen.is-active {
+  display: block !important;
+}
+
+/* Integrated home screen */
+.home-screen-v2 {
+  width: min(1120px, calc(100% - 32px));
+  padding: 24px 0 44px !important;
+}
+
+.home-v2-layout {
+  width: 100%;
+  min-height: calc(100% - 8px);
+  display: grid;
+  grid-template-columns: minmax(360px, 1fr) minmax(380px, .92fr);
+  align-items: stretch;
+  overflow: hidden;
+  border: 1px solid rgba(55, 114, 74, .13);
+  border-radius: 34px;
+  background: rgba(255, 253, 248, .98);
+  box-shadow: 0 24px 64px rgba(84, 70, 45, .14);
+}
+
+.home-v2-visual {
+  min-height: 520px;
+  padding: 24px;
+  display: grid;
+  place-items: center;
+  background:
+    radial-gradient(circle at 25% 15%, rgba(255, 197, 79, .28), transparent 25%),
+    linear-gradient(145deg, #fff0d7, #f5f3df 70%, #eaf4dd);
+}
+
+.home-v2-image-wrap {
+  position: relative;
+  width: 100%;
+  max-width: 560px;
+  aspect-ratio: 5 / 3;
+  overflow: hidden;
+  border: 6px solid rgba(255,255,255,.9);
+  border-radius: 30px;
+  background: #fff7e8;
+  box-shadow: 0 22px 46px rgba(94, 78, 50, .17);
+}
+
+.home-v2-image-wrap img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+.home-v2-speech {
+  position: absolute;
+  top: 18px;
+  left: 18px;
+  padding: 9px 13px;
+  border: 2px solid #304137;
+  border-radius: 999px;
+  background: rgba(255,253,248,.95);
+  color: #2d3c33;
+  font-size: 12px;
+  font-weight: 900;
+  box-shadow: 0 7px 16px rgba(60,64,50,.1);
+}
+
+.home-v2-spark {
+  position: absolute;
+  color: var(--orange);
+  font-size: 25px;
+}
+.home-v2-spark.spark-a { top: 20px; right: 22px; }
+.home-v2-spark.spark-b { bottom: 20px; left: 22px; color: var(--yellow); }
+
+.home-v2-copy {
+  padding: 48px 42px 38px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.home-v2-kicker {
+  margin: 0 0 14px;
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  color: var(--green);
+  font-size: 13px;
+  font-weight: 900;
+}
+.home-v2-kicker span { width: 26px; height: 2px; background: var(--orange); }
+
+.home-v2-copy h1 {
+  margin: 0;
+  color: #263128;
+  font-family: 'Noto Sans KR', sans-serif;
+  font-size: clamp(44px, 5.6vw, 72px);
+  line-height: 1.08;
+  letter-spacing: -.065em;
+  font-weight: 900;
+}
+.home-v2-copy h1 em { color: var(--orange); font-style: normal; }
+
+.home-v2-description {
+  margin: 20px 0 24px;
+  color: #6f746d;
+  font-size: 14px;
+  line-height: 1.75;
+  word-break: keep-all;
+}
+
+.home-v2-features {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+.home-v2-features > div {
+  min-width: 0;
+  padding: 14px 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3px;
+  border: 1px solid rgba(55,114,74,.13);
+  border-radius: 17px;
+  background: #fff;
+  text-align: center;
+  box-shadow: 0 7px 17px rgba(72,76,57,.055);
+}
+.home-v2-features span { font-size: 24px; }
+.home-v2-features strong { color: #425045; font-size: 12px; }
+.home-v2-features small { color: #94968f; font-size: 9px; }
+
+.home-v2-start {
+  width: 100%;
+  min-height: 64px;
+  margin-top: 20px;
+  padding: 0 22px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 0;
+  border-radius: 19px;
+  background: linear-gradient(135deg, #ff7136, #ff5726);
+  color: #fff;
+  box-shadow: 0 16px 32px rgba(255,100,44,.23);
+  cursor: pointer;
+  font-size: 17px;
+  font-weight: 900;
+}
+.home-v2-start b { font-size: 22px; }
+
+.home-v2-tip {
+  margin-top: 15px;
+  padding: 12px 14px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border-radius: 15px;
+  background: #f1f6e8;
+  color: #677064;
+}
+.home-v2-tip > span { font-size: 20px; }
+.home-v2-tip p { margin: 0; font-size: 10px; line-height: 1.5; }
+.home-v2-tip strong { display: block; color: var(--green); font-size: 11px; }
+
+/* Compact step headings. The old mascot consumed space and looked like another pasted image. */
+.stage-mascot { display: none !important; }
+.wizard-stage-heading {
+  min-height: 0 !important;
+  margin-bottom: 14px !important;
+  padding-top: 0 !important;
+}
+
+/* Taste buttons must use the exact same sizing rules. */
+.preference-panel .pill-options,
+.extra-taste-field .pill-options {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  gap: 8px !important;
+}
+.preference-panel .pill-choice,
+.extra-taste-field .pill-choice {
+  flex: 0 0 auto !important;
+  width: auto !important;
+  min-width: 82px !important;
+  min-height: 40px !important;
+  padding: 0 14px !important;
+}
+
+/* Opaque active panels also stop GPU ghosting in Android WebView. */
+.wizard-form-screen,
+body.wizard-ready .results-section {
+  background: #fff9ee !important;
+}
+
+@media (max-width: 760px) {
+  body.wizard-ready .site-header {
+    margin-top: env(safe-area-inset-top, 0px);
+  }
+
+  body.wizard-ready main {
+    height: calc(100dvh - 120px - env(safe-area-inset-top, 0px));
+  }
+
+  .home-screen-v2 {
+    width: calc(100% - 20px);
+    padding: 12px 0 24px !important;
+  }
+
+  .home-v2-layout {
+    min-height: 0;
+    display: flex;
+    flex-direction: column;
+    border-radius: 25px;
+  }
+
+  .home-v2-visual {
+    min-height: 0;
+    padding: 12px 12px 0;
+    background: linear-gradient(180deg, #fff1d9, #fffaf0);
+  }
+
+  .home-v2-image-wrap {
+    width: 100%;
+    max-width: none;
+    aspect-ratio: 16 / 9;
+    border-width: 4px;
+    border-radius: 21px;
+    box-shadow: 0 13px 26px rgba(94,78,50,.13);
+  }
+
+  .home-v2-speech {
+    top: 10px;
+    left: 10px;
+    padding: 6px 9px;
+    border-width: 1.5px;
+    font-size: 9px;
+  }
+  .home-v2-spark { font-size: 18px; }
+  .home-v2-spark.spark-a { top: 10px; right: 12px; }
+  .home-v2-spark.spark-b { bottom: 10px; left: 12px; }
+
+  .home-v2-copy {
+    padding: 19px 16px 17px;
+    text-align: center;
+  }
+
+  .home-v2-kicker {
+    margin-bottom: 8px;
+    justify-content: center;
+    font-size: 10px;
+  }
+  .home-v2-kicker span { width: 19px; }
+
+  .home-v2-copy h1 {
+    font-size: clamp(35px, 10.5vw, 48px);
+    line-height: 1.08;
+  }
+
+  .home-v2-description {
+    margin: 11px 4px 14px;
+    font-size: 11px;
+    line-height: 1.65;
+  }
+
+  .home-v2-features { gap: 7px; }
+  .home-v2-features > div {
+    padding: 9px 4px;
+    border-radius: 13px;
+  }
+  .home-v2-features span { font-size: 19px; }
+  .home-v2-features strong { font-size: 9px; }
+  .home-v2-features small { display: none; }
+
+  .home-v2-start {
+    min-height: 56px;
+    margin-top: 13px;
+    border-radius: 16px;
+    font-size: 15px;
+  }
+
+  .home-v2-tip {
+    margin-top: 10px;
+    padding: 9px 11px;
+    text-align: left;
+  }
+  .home-v2-tip p { font-size: 9px; }
+  .home-v2-tip strong { font-size: 10px; }
+
+  .wizard-form-screen {
+    padding-top: 14px !important;
+  }
+
+  .wizard-stage-heading h2 {
+    font-size: 28px !important;
+  }
+
+  .preference-panel .pill-choice,
+  .extra-taste-field .pill-choice {
+    min-width: 78px !important;
+    min-height: 39px !important;
+    padding: 0 12px !important;
+  }
+}
