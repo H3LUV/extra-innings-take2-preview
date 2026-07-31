@@ -1,0 +1,41 @@
+name: Publish Fridge Chef
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/publish-fridge-chef.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout main
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+
+      - name: Copy Fridge Chef site from preview branch
+        shell: bash
+        run: |
+          git fetch origin fridge-chef-web-preview
+          rm -rf fridge-chef
+          git archive origin/fridge-chef-web-preview fridge-chef | tar -x
+
+      - name: Commit site to GitHub Pages branch
+        shell: bash
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add fridge-chef
+          if git diff --cached --quiet; then
+            echo 'No changes to publish.'
+            exit 0
+          fi
+          git commit -m 'Publish Fridge Chef web preview'
+          git push origin main
