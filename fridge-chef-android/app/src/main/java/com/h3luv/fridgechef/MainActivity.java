@@ -125,7 +125,7 @@ public class MainActivity extends Activity {
 
     @SuppressLint("SetJavaScriptEnabled")
     private void configureWebView() {
-        WebView.setWebContentsDebuggingEnabled(BuildConfig.DEBUG);
+        WebView.setWebContentsDebuggingEnabled(false);
 
         WebSettings settings = webView.getSettings();
         settings.setJavaScriptEnabled(true);
