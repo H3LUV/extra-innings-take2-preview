@@ -1,7 +1,7 @@
 'use strict';
 
 (() => {
-  const heroAsset = './assets/chef-fridge-final.svg?v=20260801-1';
+  const heroAsset = '/api/hero-image?v=20260801-2';
 
   const dishNames = [
     '돼지김치두루치기', '김치두루치기', '제육볶음', '김치찌개', '된장찌개', '순두부찌개',
