@@ -1,6 +1,13 @@
 (() => {
-  const version = '20260731-strict-detailed-recipes-v2';
-  const files = ['./app-core.js', './app-render.js', './app-ai-only.js', './app-detailed-steps.js', './app-init.js'];
+  const version = '20260731-four-step-app-v1';
+  const files = [
+    './app-core.js',
+    './app-render.js',
+    './app-ai-only.js',
+    './app-detailed-steps.js',
+    './app-wizard.js',
+    './app-init.js'
+  ];
 
   const loadNext = (index) => {
     if (index >= files.length) return;
