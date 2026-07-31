@@ -52,13 +52,13 @@ jobs:
           if (riff !== 'RIFF' || webp !== 'WEBP') {
             throw new Error(`Invalid WebP signature: ${riff}/${webp}`);
           }
-          if (image.byteLength !== 28282) {
+          if (image.byteLength !== 52798) {
             throw new Error(`Unexpected image size: ${image.byteLength}`);
           }
 
           writeFileSync(
             '${{ github.workspace }}/fridge-chef/hero-asset-validation.json',
-            JSON.stringify({ valid: true, format: 'WEBP', bytes: image.byteLength, checkedAt: new Date().toISOString() }, null, 2) + '\n'
+            JSON.stringify({ valid: true, format: 'WEBP', bytes: image.byteLength, asset: 'chef-opening-fridge-final' }, null, 2) + '\n'
           );
           console.log(`Validated WebP hero image: ${image.byteLength} bytes`);
           EOF
