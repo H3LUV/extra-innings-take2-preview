@@ -1,5 +1,5 @@
 (() => {
-  const version = '20260731-detailed-recipes';
+  const version = '20260731-neutral-copy';
   const files = ['./app-core.js', './app-render.js', './app-ai-only.js', './app-detailed-steps.js', './app-init.js'];
 
   const loadNext = (index) => {
