@@ -1,9 +1,10 @@
-export const maxDuration = 30;
+export const maxDuration = 60;
 
 const ALLOWED_CUISINES = new Set(['상관없음', '한식', '일식', '중식', '양식', '동남아', '분식', '퓨전']);
 const ALLOWED_DIFFICULTIES = new Set(['상관없음', '쉬움', '보통', '어려움']);
 const ALLOWED_PURPOSES = new Set(['일상 한 끼', '냉장고 털이', '아이와 함께', '술안주', '다이어트']);
 const ALLOWED_SPICY = new Set(['상관없음', '안 매운맛', '살짝 매콤', '화끈하게']);
+const RETRYABLE_STATUS = new Set([429, 500, 503, 504]);
 
 const recipeSchema = {
   type: 'object',
@@ -46,7 +47,7 @@ const recipeSchema = {
           steps: {
             type: 'array',
             minItems: 5,
-            maxItems: 10,
+            maxItems: 8,
             items: {
               type: 'object',
               required: ['title', 'description', 'heat', 'duration', 'checkpoint'],
@@ -121,9 +122,9 @@ ${JSON.stringify(input, null, 2)}
 레시피 품질 기준:
 - 요리 경험이 거의 없는 사람이 추가 검색 없이 완성할 수 있어야 합니다.
 - '썬다', '볶는다', '익힌다', '간한다'처럼 한 행동만 적은 짧은 문장은 허용하지 않습니다.
-- 각 단계는 실제 주방에서 바로 실행할 수 있는 2~4개의 완전한 문장으로 작성하세요.
-- description은 단계마다 충분히 구체적으로 작성하고, 최소한 재료·분량·손질·도구·순서·동작 중 3가지 이상을 포함하세요.
-- checkpoint는 단순히 '익으면', '노릇해지면'이라고 끝내지 말고 색, 향, 소리, 농도, 질감 중 2가지 이상을 사용해 판단 기준을 설명하세요.
+- 각 단계는 실제 주방에서 바로 실행할 수 있는 1~3개의 완전한 문장으로 작성하세요.
+- description에는 재료·분량·손질·도구·순서·동작 중 3가지 이상을 자연스럽게 포함하세요.
+- checkpoint에는 색, 향, 소리, 농도, 질감 가운데 적어도 1가지 이상의 구체적인 판단 기준을 쓰세요.
 
 반드시 지킬 조건:
 1. 서로 다른 레시피를 정확히 3개 만드세요.
@@ -132,16 +133,11 @@ ${JSON.stringify(input, null, 2)}
 4. 모든 분량은 ${input.servings}인분 기준으로 g, ml, 개, 큰술, 작은술 등 구체적인 단위로 작성하세요. '적당량'은 소금·후추처럼 마지막 간을 조절하는 재료에만 제한적으로 사용하세요.
 5. 각 요리의 총 조리시간은 반드시 ${input.maxTime}분 이내여야 합니다.
 6. 요리 스타일, 난이도, 목적, 매운맛 조건을 반영하세요.
-7. 조리 순서는 준비·손질·예열·조리·마무리가 구분되도록 5~10단계로 작성하세요. 한 단계에 여러 과정을 무리하게 뭉치지 마세요.
-8. 각 단계의 description에는 필요한 내용을 자연스러운 2~4문장으로 작성하세요.
-   - 어떤 재료를 어느 분량 사용하는지
-   - 재료를 몇 cm, 몇 mm 두께 또는 어떤 모양으로 손질하는지
-   - 팬, 냄비, 볼, 체, 칼 등 어떤 조리도구를 사용하는지
-   - 재료를 넣는 정확한 순서와 섞거나 뒤집는 방법
-   - 물기 제거, 예열, 휴지, 뚜껑 사용 여부처럼 결과에 영향을 주는 행동
+7. 조리 순서는 준비·손질·예열·조리·마무리가 구분되도록 5~8단계로 작성하세요.
+8. 각 단계의 description에는 어떤 재료를 어느 분량 사용하는지, 손질 크기나 모양, 조리도구, 재료를 넣는 순서와 섞거나 뒤집는 방법을 가능한 한 구체적으로 작성하세요.
 9. 각 단계의 heat에는 '불 사용 안 함', '약불', '중약불', '중불', '중강불', '강불' 중 가장 적절한 표현 하나를 쓰세요.
 10. 각 단계의 duration에는 '30초', '2~3분', '10분 휴지'처럼 실제 소요 시간을 쓰세요.
-11. 각 단계의 checkpoint에는 다음 단계로 넘어가도 되는 구체적인 완료 기준을 1~2문장으로 작성하세요. 색·향·소리·농도·질감 중 최소 2가지를 포함하세요.
+11. 각 단계의 checkpoint에는 다음 단계로 넘어가도 되는 완료 기준을 1~2문장으로 작성하세요.
 12. 육류·해산물·달걀은 중심부까지 충분히 익히는 판단 기준을 쓰고, 생재료를 만진 도구의 교차오염 방지 안내를 allergyNote 또는 관련 단계에 포함하세요.
 13. tip에는 초보자가 흔히 실패하는 지점 2가지 이상과 각각의 원인·예방 또는 복구 방법을 함께 작성하세요.
 14. storage에는 식히는 방법, 밀폐 여부, 냉장 또는 냉동 보관 기간, 다시 데우는 방법을 구체적으로 작성하세요.
@@ -169,7 +165,7 @@ function detailScore(step) {
   return {
     description,
     checkpoint,
-    score: [description.length >= 70, hasNumber, hasTool, hasActionDetail, checkpoint.length >= 24, checkpointSignals >= 1]
+    score: [description.length >= 50, hasNumber, hasTool, hasActionDetail, checkpoint.length >= 18, checkpointSignals >= 1]
       .filter(Boolean).length
   };
 }
@@ -203,7 +199,7 @@ function normalizeRecipe(recipe, input) {
   });
 
   const steps = Array.isArray(recipe?.steps)
-    ? recipe.steps.slice(0, 10).map((step, index) => ({
+    ? recipe.steps.slice(0, 8).map((step, index) => ({
         title: cleanText(step?.title, 45) || `${index + 1}단계`,
         description: cleanText(step?.description, 900),
         heat: cleanText(step?.heat, 20) || '불 세기 확인',
@@ -217,11 +213,11 @@ function normalizeRecipe(recipe, input) {
   }
 
   const quality = steps.map(detailScore);
-  const detailedSteps = quality.filter((item) => item.score >= 4).length;
+  const detailedSteps = quality.filter((item) => item.score >= 3).length;
   const averageDescriptionLength = quality.reduce((sum, item) => sum + item.description.length, 0) / quality.length;
 
-  if (detailedSteps < Math.ceil(steps.length * 0.8) || averageDescriptionLength < 75) {
-    throw new Error('조리 설명이 충분히 상세하지 않아 결과를 표시하지 않았습니다. 다시 생성해 주세요.');
+  if (detailedSteps < Math.ceil(steps.length * 0.5) && averageDescriptionLength < 45) {
+    throw new Error('조리 설명이 지나치게 짧아 결과를 표시하지 않았습니다. 다시 생성해 주세요.');
   }
 
   return {
@@ -243,6 +239,39 @@ function normalizeRecipe(recipe, input) {
   };
 }
 
+function sleep(ms) {
+  return new Promise((resolve) => setTimeout(resolve, ms));
+}
+
+async function callRecipeService(endpoint, apiKey, input, timeoutMs) {
+  const controller = new AbortController();
+  const timeout = setTimeout(() => controller.abort(), timeoutMs);
+
+  try {
+    const response = await fetch(endpoint, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'x-goog-api-key': apiKey
+      },
+      signal: controller.signal,
+      body: JSON.stringify({
+        contents: [{ role: 'user', parts: [{ text: buildPrompt(input) }] }],
+        generationConfig: {
+          maxOutputTokens: 12288,
+          responseMimeType: 'application/json',
+          responseJsonSchema: recipeSchema
+        }
+      })
+    });
+
+    const data = await response.json().catch(() => ({}));
+    return { response, data };
+  } finally {
+    clearTimeout(timeout);
+  }
+}
+
 export default {
   async fetch(request) {
     if (request.method !== 'POST') {
@@ -262,62 +291,90 @@ export default {
 
     const model = process.env.GEMINI_MODEL || 'gemini-3.5-flash-lite';
     const endpoint = `https://generativelanguage.googleapis.com/v1beta/models/${encodeURIComponent(model)}:generateContent`;
-    const controller = new AbortController();
-    const timeout = setTimeout(() => controller.abort(), 28000);
+    const attemptTimeouts = [34000, 18000];
+    let lastError = null;
 
-    try {
-      const response = await fetch(endpoint, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          'x-goog-api-key': process.env.GEMINI_API_KEY
-        },
-        signal: controller.signal,
-        body: JSON.stringify({
-          contents: [{ role: 'user', parts: [{ text: buildPrompt(input) }] }],
-          generationConfig: {
-            maxOutputTokens: 16384,
-            responseMimeType: 'application/json',
-            responseJsonSchema: recipeSchema
+    for (let attempt = 0; attempt < attemptTimeouts.length; attempt += 1) {
+      try {
+        const { response, data } = await callRecipeService(
+          endpoint,
+          process.env.GEMINI_API_KEY,
+          input,
+          attemptTimeouts[attempt]
+        );
+
+        if (!response.ok) {
+          const detail = cleanText(data?.error?.message, 500) || `HTTP ${response.status}`;
+          lastError = new Error(`레시피 생성 서비스 오류: ${detail}`);
+          lastError.status = response.status;
+          lastError.errorCode = data?.error?.status || String(response.status);
+
+          if (attempt === 0 && RETRYABLE_STATUS.has(response.status)) {
+            await sleep(700);
+            continue;
           }
-        })
-      });
 
-      const data = await response.json().catch(() => ({}));
-      if (!response.ok) {
-        const detail = cleanText(data?.error?.message, 500) || `HTTP ${response.status}`;
+          return json({
+            error: lastError.message,
+            errorCode: lastError.errorCode
+          }, response.status === 429 ? 429 : 502);
+        }
+
+        const text = extractText(data);
+        if (!text) {
+          const reason = cleanText(data?.candidates?.[0]?.finishReason, 80) || '응답 본문 없음';
+          lastError = new Error(`레시피 생성 결과가 비어 있습니다. (${reason})`);
+          if (attempt === 0) {
+            await sleep(500);
+            continue;
+          }
+          return json({ error: lastError.message }, 502);
+        }
+
+        let parsed;
+        try {
+          parsed = JSON.parse(text.replace(/^```json\s*/i, '').replace(/```$/i, '').trim());
+        } catch {
+          lastError = new Error('레시피 생성 결과를 해석하지 못했습니다.');
+          if (attempt === 0) {
+            await sleep(500);
+            continue;
+          }
+          return json({ error: lastError.message }, 502);
+        }
+
+        if (!Array.isArray(parsed?.recipes) || parsed.recipes.length !== 3) {
+          lastError = new Error('레시피 3개가 완성되지 않았습니다.');
+          if (attempt === 0) {
+            await sleep(500);
+            continue;
+          }
+          return json({ error: lastError.message }, 502);
+        }
+
+        const recipes = parsed.recipes.map((recipe) => normalizeRecipe(recipe, input));
+        return json({ recipes, model, source: 'gemini', detailLevel: 'balanced-detailed' });
+      } catch (error) {
+        lastError = error;
+        const timedOut = error?.name === 'AbortError';
+
+        if (attempt === 0) {
+          await sleep(500);
+          continue;
+        }
+
+        if (timedOut) {
+          return json({ error: '레시피 생성 시간이 초과되었습니다. 잠시 후 다시 시도해 주세요.' }, 504);
+        }
+
         return json({
-          error: `Gemini API 오류: ${detail}`,
-          errorCode: data?.error?.status || String(response.status)
+          error: `레시피 서버 오류: ${cleanText(error?.message, 300) || '알 수 없는 오류'}`
         }, 502);
       }
-
-      const text = extractText(data);
-      if (!text) {
-        const reason = cleanText(data?.candidates?.[0]?.finishReason, 80) || '응답 본문 없음';
-        return json({ error: `Gemini가 빈 응답을 반환했습니다. (${reason})` }, 502);
-      }
-
-      let parsed;
-      try {
-        parsed = JSON.parse(text.replace(/^```json\s*/i, '').replace(/```$/i, '').trim());
-      } catch {
-        return json({ error: 'Gemini 응답을 JSON으로 해석하지 못했습니다.' }, 502);
-      }
-
-      if (!Array.isArray(parsed?.recipes) || parsed.recipes.length !== 3) {
-        return json({ error: 'Gemini가 레시피 3개를 반환하지 않았습니다.' }, 502);
-      }
-
-      const recipes = parsed.recipes.map((recipe) => normalizeRecipe(recipe, input));
-      return json({ recipes, model, source: 'gemini', detailLevel: 'strict-full' });
-    } catch (error) {
-      if (error?.name === 'AbortError') {
-        return json({ error: 'Gemini 응답 시간이 초과되었습니다.' }, 504);
-      }
-      return json({ error: `AI 서버 오류: ${cleanText(error?.message, 300) || '알 수 없는 오류'}` }, 502);
-    } finally {
-      clearTimeout(timeout);
     }
+
+    return json({
+      error: `레시피 생성에 실패했습니다. ${cleanText(lastError?.message, 240)}`
+    }, 502);
   }
 };
