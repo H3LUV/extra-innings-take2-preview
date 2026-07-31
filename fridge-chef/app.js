@@ -1,5 +1,5 @@
 (() => {
-  const version = '20260731-cute-ui-v2';
+  const version = '20260731-layout-fix-v2';
   const files = [
     './app-core.js',
     './app-render.js',
@@ -9,7 +9,8 @@
     './app-wizard-bridge.js',
     './app-init.js',
     './app-upgrades.js',
-    './app-cute-upgrades.js'
+    './app-cute-upgrades.js',
+    './app-layout-fixes.js'
   ];
 
   const loadNext = (index) => {
