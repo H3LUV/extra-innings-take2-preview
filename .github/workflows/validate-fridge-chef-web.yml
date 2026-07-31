@@ -1,0 +1,77 @@
+name: Validate Fridge Chef Web
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+    paths:
+      - 'fridge-chef/**'
+      - '.github/workflows/validate-fridge-chef-web.yml'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: validate-fridge-chef-web
+  cancel-in-progress: true
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+
+      - name: Validate JavaScript syntax
+        run: |
+          node --check fridge-chef/api/generate-recipe.js
+          node --check fridge-chef/api/hero-image.js
+          node --check fridge-chef/app-final-polish.js
+
+      - name: Validate final hero image
+        run: |
+          cat > /tmp/validate-hero.mjs <<'EOF'
+          import part1 from '${{ github.workspace }}/fridge-chef/lib/hero-image-chunk-1.js';
+          import part2 from '${{ github.workspace }}/fridge-chef/lib/hero-image-chunk-2.js';
+          import part3 from '${{ github.workspace }}/fridge-chef/lib/hero-image-chunk-3.js';
+          import part4 from '${{ github.workspace }}/fridge-chef/lib/hero-image-chunk-4.js';
+          import { writeFileSync } from 'node:fs';
+
+          const image = Buffer.from(part1 + part2 + part3 + part4, 'base64');
+          const riff = image.subarray(0, 4).toString('ascii');
+          const webp = image.subarray(8, 12).toString('ascii');
+
+          if (riff !== 'RIFF' || webp !== 'WEBP') {
+            throw new Error(`Invalid WebP signature: ${riff}/${webp}`);
+          }
+          if (image.byteLength !== 28282) {
+            throw new Error(`Unexpected image size: ${image.byteLength}`);
+          }
+
+          writeFileSync(
+            '${{ github.workspace }}/fridge-chef/hero-asset-validation.json',
+            JSON.stringify({ valid: true, format: 'WEBP', bytes: image.byteLength, checkedAt: new Date().toISOString() }, null, 2) + '\n'
+          );
+          console.log(`Validated WebP hero image: ${image.byteLength} bytes`);
+          EOF
+          node /tmp/validate-hero.mjs
+
+      - name: Publish validation result
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add fridge-chef/hero-asset-validation.json
+          if git diff --cached --quiet; then
+            echo 'Validation result is unchanged.'
+            exit 0
+          fi
+          git commit -m 'Validate Fridge Chef hero asset [skip ci]'
+          git push
