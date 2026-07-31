@@ -47,19 +47,27 @@ function injectAiOnlyStyles() {
   document.head.appendChild(style);
 }
 
-function setAiReady(model) {
+function publicErrorMessage(message) {
+  return String(message || '알 수 없는 오류가 발생했습니다.')
+    .replace(/Gemini(?: API)?/gi, '레시피 생성 서버')
+    .replace(/\bAI\b/gi, '레시피')
+    .replace(/Vercel 환경변수/gi, '서비스 설정')
+    .replace(/GEMINI_API_KEY/g, '서비스 키');
+}
+
+function setAiReady() {
   state.aiEnabled = true;
   elements.statusBadge.classList.add('ai');
-  elements.statusBadge.innerHTML = '<i></i> Gemini AI 연결됨';
-  elements.generateModeText.textContent = `${model || 'Gemini'}가 실시간으로 만들어요`;
+  elements.statusBadge.innerHTML = '<i></i> 레시피 서비스 준비됨';
+  elements.generateModeText.textContent = '선택한 조건으로 맞춤 레시피를 만들어요';
   elements.generateButton.disabled = false;
   elements.regenerateButton.disabled = false;
 }
 
-function setAiUnavailable(message = 'Gemini 연결을 확인해 주세요') {
+function setAiUnavailable(message = '레시피 서비스 연결을 확인해 주세요') {
   state.aiEnabled = false;
   elements.statusBadge.classList.remove('ai');
-  elements.statusBadge.innerHTML = '<i></i> AI 연결 필요';
+  elements.statusBadge.innerHTML = '<i></i> 서비스 연결 필요';
   elements.generateModeText.textContent = message;
   elements.generateButton.disabled = true;
   elements.regenerateButton.disabled = true;
@@ -73,25 +81,25 @@ checkApiStatus = async function checkApiStatusAiOnly() {
 
   elements.generateButton.disabled = true;
   elements.regenerateButton.disabled = true;
-  elements.generateModeText.textContent = 'Gemini 연결 상태 확인 중...';
+  elements.generateModeText.textContent = '레시피 서비스 연결 상태 확인 중...';
 
   try {
     const response = await fetch('/api/status', { cache: 'no-store' });
     const data = await response.json().catch(() => ({}));
 
     if (!response.ok || !data.aiEnabled) {
-      setAiUnavailable('Vercel 환경변수를 확인해 주세요');
+      setAiUnavailable('서비스 설정을 확인해 주세요');
       return;
     }
 
-    setAiReady(data.model);
+    setAiReady();
   } catch {
-    setAiUnavailable('AI 서버 연결에 실패했습니다');
+    setAiUnavailable('레시피 서비스 연결에 실패했습니다');
   }
 };
 
 setDemoStatus = function disableDemoStatus() {
-  setAiUnavailable('Gemini 연결 후 이용할 수 있어요');
+  setAiUnavailable('온라인 서비스 연결 후 이용할 수 있어요');
 };
 
 function renderAiError(input, message) {
@@ -99,13 +107,13 @@ function renderAiError(input, message) {
   elements.resultSummary.innerHTML = [
     ...input.ingredients.map((item) => `<span class="summary-chip">${escapeHtml(item)}</span>`),
     `<span class="summary-chip">${escapeHtml(input.cuisine)}</span>`,
-    '<span class="summary-chip mode">Gemini 생성 실패</span>'
+    '<span class="summary-chip mode">레시피 생성 실패</span>'
   ].join('');
 
   elements.recipeGrid.innerHTML = `
     <div class="ai-error-panel">
-      <strong>AI 레시피를 만들지 못했습니다.</strong>
-      <p>${escapeHtml(message)}<br>샘플 레시피로 대체하지 않습니다. 잠시 후 다시 시도해 주세요.</p>
+      <strong>레시피를 만들지 못했습니다.</strong>
+      <p>${escapeHtml(publicErrorMessage(message))}<br>샘플 레시피로 대체하지 않습니다. 잠시 후 다시 시도해 주세요.</p>
       <button type="button" id="retryAiButton">연결 확인 후 다시 시도</button>
     </div>
   `;
@@ -132,7 +140,7 @@ generateRecipes = async function generateRecipesAiOnly() {
   if (!state.aiEnabled) {
     await checkApiStatus();
     if (!state.aiEnabled) {
-      renderAiError(input, 'Gemini API가 연결되지 않았습니다. Vercel 환경변수와 최신 배포 상태를 확인하세요.');
+      renderAiError(input, '레시피 생성 서비스가 연결되지 않았습니다. 잠시 후 다시 시도해 주세요.');
       return;
     }
   }
@@ -150,12 +158,12 @@ generateRecipes = async function generateRecipesAiOnly() {
     const data = await response.json().catch(() => ({}));
 
     if (!response.ok) {
-      if (response.status === 503) setAiUnavailable('Vercel 환경변수를 확인해 주세요');
-      throw new Error(data.error || `AI 호출 실패 (${response.status})`);
+      if (response.status === 503) setAiUnavailable('서비스 설정을 확인해 주세요');
+      throw new Error(data.error || `레시피 생성 실패 (${response.status})`);
     }
 
     if (!Array.isArray(data.recipes) || data.recipes.length !== 3) {
-      throw new Error('Gemini 응답 형식이 올바르지 않습니다.');
+      throw new Error('레시피 응답 형식이 올바르지 않습니다.');
     }
 
     state.recipes = data.recipes.map((recipe, index) => ({
@@ -163,12 +171,12 @@ generateRecipes = async function generateRecipesAiOnly() {
       id: `ai-${Date.now()}-${index}`
     }));
 
-    renderResults(input, 'Gemini AI');
+    renderResults(input, '맞춤 레시피');
   } catch (error) {
     state.recipes = [];
     const message = error?.message || '알 수 없는 오류가 발생했습니다.';
     renderAiError(input, message);
-    showToast('AI 레시피 생성에 실패했습니다. 샘플로 대체하지 않습니다.');
+    showToast('레시피 생성에 실패했습니다. 샘플로 대체하지 않습니다.');
   } finally {
     setLoading(false);
     if (!state.aiEnabled) {
@@ -195,7 +203,7 @@ toggleFavorite = function toggleFavoriteAiOnly(recipe) {
   updateFavoriteCount();
 
   if (!elements.resultsSection.hidden && state.recipes.length) {
-    renderResults(getFormData(), 'Gemini AI');
+    renderResults(getFormData(), '맞춤 레시피');
   }
 };
 
