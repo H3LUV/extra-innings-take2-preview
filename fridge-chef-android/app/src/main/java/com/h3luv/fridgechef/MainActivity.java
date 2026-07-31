@@ -5,11 +5,14 @@ import android.app.Activity;
 import android.content.ActivityNotFoundException;
 import android.content.Intent;
 import android.graphics.Color;
+import android.graphics.Insets;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.view.Gravity;
 import android.view.View;
+import android.view.WindowInsets;
+import android.view.WindowInsetsController;
 import android.webkit.CookieManager;
 import android.webkit.JavascriptInterface;
 import android.webkit.WebChromeClient;
@@ -31,6 +34,7 @@ import org.json.JSONObject;
 public class MainActivity extends Activity {
     private static final String HOME_URL = "https://fridge-chef-ai-tan.vercel.app/";
     private static final String TRUSTED_HOST = "fridge-chef-ai-tan.vercel.app";
+    private static final int APP_BACKGROUND = Color.rgb(255, 249, 238);
 
     private WebView webView;
     private ProgressBar progressBar;
@@ -41,19 +45,14 @@ public class MainActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        getWindow().setStatusBarColor(Color.rgb(246, 242, 232));
-        getWindow().setNavigationBarColor(Color.rgb(246, 242, 232));
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-            getWindow().getDecorView().setSystemUiVisibility(
-                    View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR | View.SYSTEM_UI_FLAG_LIGHT_NAVIGATION_BAR
-            );
-        }
+        configureSystemBars();
 
         FrameLayout root = new FrameLayout(this);
-        root.setBackgroundColor(Color.rgb(246, 242, 232));
+        root.setBackgroundColor(APP_BACKGROUND);
+        applySystemBarInsets(root);
 
         webView = new WebView(this);
-        webView.setBackgroundColor(Color.rgb(246, 242, 232));
+        webView.setBackgroundColor(APP_BACKGROUND);
         root.addView(webView, new FrameLayout.LayoutParams(
                 FrameLayout.LayoutParams.MATCH_PARENT,
                 FrameLayout.LayoutParams.MATCH_PARENT
@@ -76,6 +75,7 @@ public class MainActivity extends Activity {
         root.addView(progressBar, progressParams);
 
         setContentView(root);
+        root.requestApplyInsets();
         configureWebView();
 
         if (savedInstanceState != null && webView.restoreState(savedInstanceState) != null) {
@@ -85,12 +85,49 @@ public class MainActivity extends Activity {
         }
     }
 
+    private void configureSystemBars() {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) {
+            getWindow().setDecorFitsSystemWindows(false);
+            getWindow().setStatusBarColor(Color.TRANSPARENT);
+            getWindow().setNavigationBarColor(Color.TRANSPARENT);
+
+            WindowInsetsController controller = getWindow().getInsetsController();
+            if (controller != null) {
+                int appearance = WindowInsetsController.APPEARANCE_LIGHT_STATUS_BARS
+                        | WindowInsetsController.APPEARANCE_LIGHT_NAVIGATION_BARS;
+                controller.setSystemBarsAppearance(appearance, appearance);
+            }
+        } else {
+            getWindow().setStatusBarColor(APP_BACKGROUND);
+            getWindow().setNavigationBarColor(APP_BACKGROUND);
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+                getWindow().getDecorView().setSystemUiVisibility(
+                        View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR | View.SYSTEM_UI_FLAG_LIGHT_NAVIGATION_BAR
+                );
+            }
+        }
+
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
+            getWindow().setNavigationBarContrastEnforced(false);
+        }
+    }
+
+    private void applySystemBarInsets(FrameLayout root) {
+        if (Build.VERSION.SDK_INT < Build.VERSION_CODES.R) return;
+
+        root.setOnApplyWindowInsetsListener((view, windowInsets) -> {
+            Insets bars = windowInsets.getInsets(WindowInsets.Type.systemBars());
+            view.setPadding(bars.left, bars.top, bars.right, bars.bottom);
+            return windowInsets;
+        });
+    }
+
     private LinearLayout buildErrorView() {
         LinearLayout container = new LinearLayout(this);
         container.setOrientation(LinearLayout.VERTICAL);
         container.setGravity(Gravity.CENTER);
         container.setPadding(dp(28), dp(28), dp(28), dp(28));
-        container.setBackgroundColor(Color.rgb(246, 242, 232));
+        container.setBackgroundColor(APP_BACKGROUND);
 
         TextView icon = new TextView(this);
         icon.setText("🍳");
@@ -138,7 +175,7 @@ public class MainActivity extends Activity {
         settings.setBuiltInZoomControls(false);
         settings.setDisplayZoomControls(false);
         settings.setMixedContentMode(WebSettings.MIXED_CONTENT_NEVER_ALLOW);
-        settings.setUserAgentString(settings.getUserAgentString() + " FridgeChefAndroid/1.0");
+        settings.setUserAgentString(settings.getUserAgentString() + " FridgeChefAndroid/1.0.1");
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
             settings.setSafeBrowsingEnabled(true);
         }
