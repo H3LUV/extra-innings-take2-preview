@@ -1,5 +1,5 @@
 (() => {
-  const version = '20260731-four-step-app-v3';
+  const version = '20260731-navigation-tastes-v1';
   const files = [
     './app-core.js',
     './app-render.js',
@@ -7,7 +7,8 @@
     './app-detailed-steps.js',
     './app-wizard.js',
     './app-wizard-bridge.js',
-    './app-init.js'
+    './app-init.js',
+    './app-upgrades.js'
   ];
 
   const loadNext = (index) => {
