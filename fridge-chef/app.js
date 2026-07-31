@@ -1,11 +1,12 @@
 (() => {
-  const version = '20260731-four-step-app-v1';
+  const version = '20260731-four-step-app-v2';
   const files = [
     './app-core.js',
     './app-render.js',
     './app-ai-only.js',
     './app-detailed-steps.js',
     './app-wizard.js',
+    './app-wizard-bridge.js',
     './app-init.js'
   ];
 
