@@ -1,11 +1,12 @@
 (() => {
-  const version = '20260801-hero-image-fix-v1';
+  const version = '20260802-ingredient-guide-v1';
   const files = [
     './app-core.js',
     './app-render.js',
     './app-ai-only.js',
     './app-detailed-steps.js',
     './app-wizard.js',
+    './app-ingredient-tip.js',
     './app-wizard-bridge.js',
     './app-init.js',
     './app-upgrades.js',
