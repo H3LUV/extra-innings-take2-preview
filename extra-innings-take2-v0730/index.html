@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover">
+<title>EXTRA INNINGS TAKE 2 v0.7.3</title>
+<style>
+html,body{margin:0;width:100%;height:100%;overflow:hidden;background:#10121c}
+#game{display:block;width:100%;height:100%;border:0;background:#10121c}
+#patch-status{position:fixed;left:50%;bottom:12px;transform:translateX(-50%);z-index:10;padding:7px 12px;border-radius:16px;background:rgba(16,18,28,.88);color:#f5efe6;font:12px system-ui,sans-serif;pointer-events:none;opacity:1;transition:opacity .25s}
+</style>
+</head>
+<body>
+<iframe id="game" title="EXTRA INNINGS TAKE 2" src="../extra-innings-take2-v0720/?v=0730"></iframe>
+<div id="patch-status">경기 감각 시스템 적용 중</div>
+<script>
+(function(){
+  const frame=document.getElementById('game');
+  const status=document.getElementById('patch-status');
+  let attempts=0;
+
+  function mergeGameSense(training, range){
+    if(!training) return;
+    training.resource=training.resource||{};
+    training.resource.gameSense=range;
+  }
+
+  function applyPatch(){
+    const w=frame.contentWindow;
+    if(!w || !w.GameData || !w.Game || !w.Game.Condition || !w.Game.Training || !w.UI) return false;
+    if(w.__EXTRA_INNINGS_V073_PATCHED__) return true;
+    w.__EXTRA_INNINGS_V073_PATCHED__=true;
+
+    const GD=w.GameData;
+    const byId=id=>GD.TRAININGS.find(t=>t.id===id);
+
+    const senseRanges={
+      video:[3,5], personal_lesson:[2,3], mental:[1,2],
+      contact_tr:[2,3], power_tr:[1,2], eye_tr:[2,3], vs_breaking_tr:[3,5],
+      bunt_tr:[1,2], baserun_tr:[1,2], steal_tr:[1,2],
+      velocity_tr:[1,2], control_tr:[2,3], breaking_tr:[2,3], stuff_tr:[1,2],
+      form_tr:[1,2], pickoff_tr:[1,2], crisis_tr:[3,5], bullpen_tr:[3,4],
+      catcher_lead:[2,3], catcher_block:[1,2], infield_tr:[2,3], outfield_tr:[2,3], dp_tr:[2,3],
+      sp_role_tr:[2,4], rp_role_tr:[2,4], cl_role_tr:[3,5]
+    };
+    Object.entries(senseRanges).forEach(([id,range])=>mergeGameSense(byId(id),range));
+
+    const originalCalculate=w.Game.Condition.calculate;
+    w.Game.Condition.calculate=function(state){
+      const result=originalCalculate(state);
+      const sense=Math.max(0,Math.min(100,Number(state?.player?.condition?.gameSense ?? 50)));
+      const senseF=(sense-50)/50;
+      return Object.assign({},result,{
+        overallModifier:result.overallModifier+Math.round(senseF*2),
+        battingModifier:result.battingModifier+Math.round(senseF*4),
+        pitchingModifier:result.pitchingModifier+Math.round(senseF*7),
+        fieldingModifier:result.fieldingModifier+Math.round(senseF*4),
+        runningModifier:result.runningModifier+Math.round(senseF*2)
+      });
+    };
+
+    const originalShowTrainingMenu=w.UI.showTrainingMenu;
+    w.UI.showTrainingMenu=function(){
+      const result=originalShowTrainingMenu.apply(this,arguments);
+      setTimeout(function(){
+        const buttons=[...w.document.querySelectorAll('.training-btn')];
+        GD.TRAININGS.forEach(function(t){
+          const range=t.resource&&t.resource.gameSense;
+          if(!range || range[1]<=0) return;
+          const btn=buttons.find(b=>b.textContent.trim().startsWith(t.name));
+          if(btn && !btn.dataset.senseShown){
+            btn.dataset.senseShown='1';
+            const text=range[0]===range[1]?'+'+range[0]:'+'+range[0]+'~'+range[1];
+            btn.textContent+=' · 경기 감각 '+text;
+          }
+        });
+      },0);
+      return result;
+    };
+
+    const originalPerform=w.Game.Training.perform;
+    w.Game.Training.perform=function(state,trainingId){
+      const before=Number(state?.player?.condition?.gameSense ?? 50);
+      const result=originalPerform(state,trainingId);
+      const after=Number(state?.player?.condition?.gameSense ?? before);
+      const gain=after-before;
+      if(result && !result.fail && gain>0){
+        const line='[상태] 경기 감각 +'+gain;
+        result.resourceLog=result.resourceLog||[];
+        result.changeLog=result.changeLog||[];
+        if(!result.resourceLog.includes(line)) result.resourceLog.push(line);
+        if(!result.changeLog.includes(line)) result.changeLog.push(line);
+      }
+      return result;
+    };
+
+    try{w.document.title='EXTRA INNINGS TAKE 2 v0.7.3';}catch(e){}
+    status.textContent='경기 감각 시스템 적용 완료';
+    setTimeout(()=>status.style.opacity='0',900);
+    return true;
+  }
+
+  const timer=setInterval(function(){
+    attempts++;
+    try{
+      if(applyPatch()) clearInterval(timer);
+    }catch(e){
+      console.error('v0.7.3 patch failed',e);
+    }
+    if(attempts>200){
+      clearInterval(timer);
+      status.textContent='경기 감각 패치 적용 실패';
+    }
+  },100);
+
+  frame.addEventListener('load',function(){
+    attempts=0;
+    setTimeout(applyPatch,50);
+  });
+})();
+</script>
+</body>
+</html>
