@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover">
+<title>EXTRA INNINGS TAKE 2 v0.8.5</title>
+<style>
+html,body{margin:0;width:100%;height:100%;overflow:hidden;background:#10121c}
+#game{display:block;width:100%;height:100%;border:0;background:#10121c}
+#patch-status{position:fixed;left:50%;bottom:12px;transform:translateX(-50%);z-index:10;padding:7px 12px;border-radius:16px;background:rgba(16,18,28,.9);color:#f5efe6;font:12px system-ui,sans-serif;pointer-events:none;opacity:1;transition:opacity .25s}
+</style>
+</head>
+<body>
+<iframe id="game" title="EXTRA INNINGS TAKE 2" src="../extra-innings-take2-v0840/?v=0850"></iframe>
+<div id="patch-status">일상 이벤트 경기 감각 반영 중</div>
+<script>
+(function(){
+  const rootFrame=document.getElementById('game');
+  const status=document.getElementById('patch-status');
+  let attempts=0;
+
+  function deepestWindow(){
+    try{
+      let w=rootFrame.contentWindow;
+      for(let i=0;i<22;i++){
+        if(!w||!w.document) break;
+        const child=w.document.getElementById('game');
+        if(!child||!child.contentWindow) break;
+        w=child.contentWindow;
+      }
+      return w;
+    }catch(e){return null;}
+  }
+
+  const BASEBALL_WORDS=/야구|훈련|연습|경기|시합|팀|감독|코치|스카우트|분석|데이터|투구|타격|수비|주루|불펜|마운드|배트|글러브|구단|프로|드래프트|포지션|재활/;
+  const SOCIAL_CATEGORIES=new Set(['family','romance','social','friend','life','school']);
+  const BASEBALL_RELATIONS=/^relationships\.(coach_|captain_|rival_|teammate_|scout_)/;
+
+  function effectsOf(choice){
+    if(!choice) return {};
+    if(choice.effects&&typeof choice.effects==='object') return choice.effects;
+    if(Array.isArray(choice)&&choice[1]&&typeof choice[1]==='object') return choice[1];
+    return {};
+  }
+
+  function textOfChoice(choice){
+    if(!choice) return '';
+    return typeof choice.text==='string'?choice.text:(Array.isArray(choice)&&typeof choice[0]==='string'?choice[0]:'');
+  }
+
+  function isBaseballRelated(event,choice){
+    const effects=effectsOf(choice);
+    const keys=Object.keys(effects);
+    if(keys.some(k=>k.startsWith('stats.batting.')||k.startsWith('stats.pitching.')||k==='stats.physical.baseballIQ'||k==='condition.gameSense'||BASEBALL_RELATIONS.test(k))) return true;
+    if(['training','career','game'].includes(event?.category)) return true;
+    const combined=[event?.title,event?.desc,textOfChoice(choice)].filter(Boolean).join(' ');
+    return BASEBALL_WORDS.test(combined);
+  }
+
+  function shouldReduceGameSense(event,choice){
+    if(!event||!SOCIAL_CATEGORIES.has(event.category)) return false;
+    if(isBaseballRelated(event,choice)) return false;
+    const effects=effectsOf(choice);
+    if(typeof effects['condition.gameSense']==='number') return false;
+    return true;
+  }
+
+  function applyPatch(){
+    const w=deepestWindow();
+    if(!w||!w.Game||!w.Game.Events||typeof w.Game.Events.resolveChoice!=='function'||!w.Game.Events.applyDelta) return false;
+    if(w.__EXTRA_INNINGS_V085_PATCHED__) return true;
+    w.__EXTRA_INNINGS_V085_PATCHED__=true;
+
+    const originalResolve=w.Game.Events.resolveChoice.bind(w.Game.Events);
+    w.Game.Events.resolveChoice=function(state,event,choiceIdx){
+      const choice=event?.choices?.[choiceIdx];
+      const reduce=shouldReduceGameSense(event,choice);
+      const result=originalResolve(state,event,choiceIdx);
+      if(reduce&&state?.player?.condition){
+        const before=Number(state.player.condition.gameSense)||0;
+        w.Game.Events.applyDelta(state,'condition.gameSense',-1);
+        const after=Number(state.player.condition.gameSense)||0;
+        if(result&&Array.isArray(result.changeLog)&&after!==before){
+          result.changeLog.push('경기 감각 -1');
+        }
+      }
+      return result;
+    };
+
+    w.document.title='EXTRA INNINGS TAKE 2 v0.8.5';
+    return true;
+  }
+
+  function tick(){
+    attempts++;
+    if(applyPatch()){
+      status.textContent='v0.8.5 적용 완료';
+      setTimeout(()=>status.style.opacity='0',1000);
+      return;
+    }
+    if(attempts<520) setTimeout(tick,100);
+    else status.textContent='경기 감각 수정 적용 실패';
+  }
+
+  rootFrame.addEventListener('load',()=>setTimeout(tick,220));
+  setTimeout(tick,500);
+})();
+</script>
+</body>
+</html>
