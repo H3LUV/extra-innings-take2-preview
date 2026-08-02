@@ -24,7 +24,7 @@
     html=html.replace('<head>','<head><base href="../extra-innings-take2-v0710/">');
     html=html.replace(/EXTRA INNINGS TAKE 2 v0\.7\.1/g,'EXTRA INNINGS TAKE 2 v0.7.2');
 
-    const patch=String.raw`<script>
+    const patch=`<script>
 (function(){
   if(window.__EXTRA_INNINGS_V072_PATCHED__) return;
   window.__EXTRA_INNINGS_V072_PATCHED__=true;
