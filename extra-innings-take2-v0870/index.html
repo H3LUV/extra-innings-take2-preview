@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover">
+<title>EXTRA INNINGS TAKE 2 v0.8.7</title>
+<style>
+html,body{margin:0;width:100%;height:100%;overflow:hidden;background:#10121c}
+#game{display:block;width:100%;height:100%;border:0;background:#10121c}
+#patch-status{position:fixed;left:50%;bottom:12px;transform:translateX(-50%);z-index:10;padding:7px 12px;border-radius:16px;background:rgba(16,18,28,.9);color:#f5efe6;font:12px system-ui,sans-serif;pointer-events:none;opacity:1;transition:opacity .25s}
+</style>
+</head>
+<body>
+<iframe id="game" title="EXTRA INNINGS TAKE 2" src="../extra-innings-take2-v0860/?v=0870"></iframe>
+<div id="patch-status">1인칭 서술 교정 중</div>
+<script>
+(function(){
+  const rootFrame=document.getElementById('game');
+  const status=document.getElementById('patch-status');
+  let attempts=0;
+
+  function deepestWindow(){
+    try{
+      let w=rootFrame.contentWindow;
+      for(let i=0;i<26;i++){
+        if(!w||!w.document) break;
+        const child=w.document.getElementById('game');
+        if(!child||!child.contentWindow) break;
+        w=child.contentWindow;
+      }
+      return w;
+    }catch(e){return null;}
+  }
+
+  function firstPersonNarrative(text){
+    if(typeof text!=='string') return text;
+    let out=text;
+
+    // 문맥이 분명한 대표 문장 우선 교정
+    out=out
+      .replace(/아버지가 말하는 꿈에는 네 미래와 자신의 과거가 뒤섞여 있었다\./g,'아버지가 말하는 꿈에는 내 미래와 아버지의 과거가 뒤섞여 있었다.')
+      .replace(/이해와 부담 사이에서 선을 정해야 했다\./g,'이해와 부담 사이에서 나는 선을 정해야 했다.');
+
+    // 서술문에서 주인공을 가리키는 2인칭·3인칭 표현 교정
+    out=out
+      .replace(/주인공에게/g,'나에게')
+      .replace(/주인공의/g,'나의')
+      .replace(/주인공을/g,'나를')
+      .replace(/주인공이/g,'내가')
+      .replace(/주인공은/g,'나는')
+      .replace(/너에게/g,'나에게')
+      .replace(/네게/g,'내게')
+      .replace(/너의/g,'나의')
+      .replace(/너를/g,'나를')
+      .replace(/너와/g,'나와')
+      .replace(/너도/g,'나도')
+      .replace(/너만/g,'나만')
+      .replace(/너는/g,'나는')
+      .replace(/네가/g,'내가')
+      .replace(/네 미래/g,'내 미래')
+      .replace(/네 인생/g,'내 인생')
+      .replace(/네 선택/g,'내 선택')
+      .replace(/네 마음/g,'내 마음')
+      .replace(/네 꿈/g,'내 꿈')
+      .replace(/네 야구/g,'내 야구')
+      .replace(/네 경기/g,'내 경기')
+      .replace(/네 몸/g,'내 몸')
+      .replace(/네 성적/g,'내 성적')
+      .replace(/네 이름/g,'내 이름')
+      .replace(/네 앞/g,'내 앞')
+      .replace(/네 뒤/g,'내 뒤')
+      .replace(/네 곁/g,'내 곁')
+      .replace(/네 편/g,'내 편')
+      .replace(/네게/g,'내게');
+
+    return out.replace(/\s+/g,' ').trim();
+  }
+
+  function patchChoice(choice){
+    if(!choice) return;
+    // 선택지 문구는 플레이어의 직접 행동 문장이라 유지한다.
+    if(Array.isArray(choice)){
+      if(typeof choice[2]==='string') choice[2]=firstPersonNarrative(choice[2]);
+      return;
+    }
+    if(typeof choice.result==='string') choice.result=firstPersonNarrative(choice.result);
+  }
+
+  function patchEvent(ev){
+    if(!ev||typeof ev!=='object') return;
+    if(typeof ev.desc==='string') ev.desc=firstPersonNarrative(ev.desc);
+    if(typeof ev.narrative==='string') ev.narrative=firstPersonNarrative(ev.narrative);
+    if(typeof ev.line==='string') ev.line=firstPersonNarrative(ev.line);
+    if(typeof ev.text==='string' && !ev.choices) ev.text=firstPersonNarrative(ev.text);
+    if(Array.isArray(ev.choices)) ev.choices.forEach(patchChoice);
+  }
+
+  function patchCollections(w){
+    const GD=w.GameData||{};
+    Object.keys(GD).forEach(key=>{
+      const value=GD[key];
+      if(Array.isArray(value) && /(EVENT|ENDING|OUTCOME|STORY|SCENE|EPISODE|MEMORY)/i.test(key)) value.forEach(patchEvent);
+      else if(value&&typeof value==='object' && /(ENDING|OUTCOME|STORY|SCENE)/i.test(key)) Object.values(value).forEach(patchEvent);
+    });
+    if(Array.isArray(w.EXTRA_INNINGS_V080_EVENTS)) w.EXTRA_INNINGS_V080_EVENTS.forEach(patchEvent);
+  }
+
+  function patchVisible(root){
+    if(!root||root.nodeType!==1) return;
+    const selector='.event-desc,.result-line,.ending-narrative,.intro-text,.story-text,.notice-line,.event-text,.story-narrative';
+    const nodes=[];
+    if(root.matches&&root.matches(selector)) nodes.push(root);
+    if(root.querySelectorAll) nodes.push(...root.querySelectorAll(selector));
+    nodes.forEach(el=>{
+      const before=el.textContent;
+      const after=firstPersonNarrative(before);
+      if(after!==before) el.textContent=after;
+    });
+  }
+
+  function applyPatch(){
+    const w=deepestWindow();
+    if(!w||!w.document||!w.document.body||!w.GameData) return false;
+    if(w.__EXTRA_INNINGS_V087_PATCHED__) return true;
+    w.__EXTRA_INNINGS_V087_PATCHED__=true;
+
+    patchCollections(w);
+    patchVisible(w.document.body);
+
+    const observer=new w.MutationObserver(ms=>ms.forEach(m=>m.addedNodes&&m.addedNodes.forEach(patchVisible)));
+    observer.observe(w.document.body,{childList:true,subtree:true});
+
+    w.document.title='EXTRA INNINGS TAKE 2 v0.8.7';
+    return true;
+  }
+
+  function tick(){
+    attempts++;
+    if(applyPatch()){
+      status.textContent='v0.8.7 적용 완료';
+      setTimeout(()=>status.style.opacity='0',1000);
+      return;
+    }
+    if(attempts<560) setTimeout(tick,100);
+    else status.textContent='1인칭 교정 적용 실패';
+  }
+
+  rootFrame.addEventListener('load',()=>setTimeout(tick,220));
+  setTimeout(tick,500);
+})();
+</script>
+</body>
+</html>
