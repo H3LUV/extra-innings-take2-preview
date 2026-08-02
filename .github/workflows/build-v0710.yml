@@ -1,0 +1,151 @@
+name: Build v0.7.1 single-day flow
+
+on:
+  push:
+    paths:
+      - '.github/workflows/build-v0710.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Patch gameplay flow
+        shell: python
+        run: |
+          from pathlib import Path
+          import re
+
+          src = Path('extra-innings-take2-v0700/source.html')
+          html = src.read_text(encoding='utf-8')
+
+          def replace_once(old, new, label):
+              global html
+              count = html.count(old)
+              if count != 1:
+                  raise RuntimeError(f'{label}: expected 1 match, found {count}')
+              html = html.replace(old, new, 1)
+
+          replace_once(
+              '<title>EXTRA INNINGS TAKE 2 v0.7.0</title>',
+              '<title>EXTRA INNINGS TAKE 2 v0.7.1</title>',
+              'title version'
+          )
+
+          replace_once(
+              'GameData.DAY_PARTS = ["오전", "오후", "저녁"];',
+              'GameData.DAY_PARTS = ["하루"];',
+              'day parts'
+          )
+
+          replace_once(
+              '/* ===================== timeSystem.js =====================\n   하루 3슬롯 진행, 학년 전환, 리그 일정 연결을 담당한다.\n============================================================ */',
+              '/* ===================== timeSystem.js =====================\n   하루 1회 행동, 날짜 전환, 학년 전환, 리그 일정 연결을 담당한다.\n============================================================ */',
+              'time system comment'
+          )
+
+          replace_once(
+              '''  function isGameDay(state) {\n    return state.player.date.part === 0\n      && !["draft", "retired"].includes(state.player.stageId)\n      && Game.League.isPlayerGameDay(state)\n      && !state.player.schedule.results[Game.League.dayInSeason(state)];\n  }''',
+              '''  function isGameDay(state) {\n    return !["draft", "retired"].includes(state.player.stageId)\n      && Game.League.isPlayerGameDay(state)\n      && !state.player.schedule.results[Game.League.dayInSeason(state)];\n  }''',
+              'game day gate'
+          )
+
+          replace_once(
+              '''  function advancePart(state) {\n    const p = state.player;\n    p.date.part += 1;\n    if (p.date.part < 3) return;\n\n    // 오늘 경기를 끝내지 않고 시간을 넘긴 경우에는 백그라운드 진행으로 처리한다.''',
+              '''  function advancePart(state) {\n    const p = state.player;\n    // v0.7.1부터 모든 행동은 하루 전체를 사용한다. 기존 저장의 오전/오후/저녁 값도 0으로 정규화한다.\n    p.date.part = 0;\n\n    // 오늘 경기를 끝내지 않고 날짜를 넘긴 경우에는 백그라운드 진행으로 처리한다.''',
+              'single day advance'
+          )
+
+          replace_once(
+              '`${p.date.year}년차 ${p.date.month}월 ${p.date.day}일 · ${GameData.DAY_PARTS[p.date.part]}`',
+              '`${p.date.year}년차 ${p.date.month}월 ${p.date.day}일`',
+              'status date'
+          )
+
+          replace_once(
+              '{ label: "⏭ 시간 넘기기", fn: () => UI.passTime() },',
+              '{ label: "⏭ 다음 경기까지 넘기기", fn: () => UI.passTime() },',
+              'skip button label'
+          )
+
+          replace_once(
+              '''UI.passTime = function () {\n  const state = Game.state;\n  const ev = Math.random() < 0.3 ? Game.Events.pickAmbientEvent(state) : null;\n  if (ev) {\n    UI.showEventModal(ev, () => { Game.Time.advancePart(state); Game.Save.autosave(state); checkGameOverConditions(); UI.showHub(); });\n    return;\n  }\n  Game.Time.advancePart(state);\n  Game.Save.autosave(state);\n  checkGameOverConditions();\n  UI.showHub();\n};''',
+              '''UI.passTime = function () {\n  const state = Game.state;\n  const nextIn = Game.League.nextDirectGameIn(state);\n  if (nextIn === null) {\n    UI.toast("현재 단계에 예정된 직접 경기가 없습니다.");\n    return;\n  }\n  if (nextIn <= 0) {\n    UI.showGameDayIntro();\n    return;\n  }\n  for (let i = 0; i < nextIn; i += 1) {\n    Game.Time.advancePart(state);\n  }\n  Game.Save.autosave(state);\n  checkGameOverConditions();\n  UI.showHub();\n};''',
+              'skip to next game'
+          )
+
+          replace_once(
+              '''      log: [],\n    };''',
+              '''      log: [],\n      statBaseline: { ...(state.player.season || {}) },\n    };''',
+              'game stat baseline'
+          )
+
+          marker = '  function finalizeGame(state, results, gameStateOrRng, rngMaybe) {'
+          if html.count(marker) != 1:
+              raise RuntimeError(f'personal stat helper marker: expected 1 match, found {html.count(marker)}')
+          helper = '''  function statDelta(state, game, key) {\n    const current = state.player.season?.[key] || 0;\n    const before = game.statBaseline?.[key] || 0;\n    return Math.max(0, current - before);\n  }\n  function formatInningsFromOuts(outs) {\n    return `${Math.floor(outs / 3)}.${outs % 3}`;\n  }\n  function buildPersonalStats(state, game, decision) {\n    if (role(state) === "batter") {\n      const pa = statDelta(state, game, "plateAppearances");\n      const ab = statDelta(state, game, "atBats");\n      const h = statDelta(state, game, "hits");\n      const doubles = statDelta(state, game, "doubles");\n      const triples = statDelta(state, game, "triples");\n      const hr = statDelta(state, game, "hr");\n      const rbi = statDelta(state, game, "rbi");\n      const bb = statDelta(state, game, "walks");\n      const so = statDelta(state, game, "strikeouts");\n      const sb = statDelta(state, game, "stolenBases");\n      const detail = [`${pa}타석`, `${ab}타수`, `${h}안타`];\n      if (doubles) detail.push(`${doubles} 2루타`);\n      if (triples) detail.push(`${triples} 3루타`);\n      if (hr) detail.push(`${hr}홈런`);\n      if (rbi) detail.push(`${rbi}타점`);\n      if (bb) detail.push(`${bb}볼넷`);\n      if (so) detail.push(`${so}삼진`);\n      if (sb) detail.push(`${sb}도루`);\n      return { role: "batter", lines: [`개인 성적 · ${detail.join(" ")}`] };\n    }\n\n    const outs = statDelta(state, game, "outsRecorded");\n    const h = statDelta(state, game, "hitsAllowed");\n    const r = statDelta(state, game, "runsAllowed");\n    const er = statDelta(state, game, "earnedRuns");\n    const bb = statDelta(state, game, "walksAllowed");\n    const k = statDelta(state, game, "strikeoutsPitched");\n    const hr = statDelta(state, game, "hrAllowed");\n    const detail = [`${formatInningsFromOuts(outs)}이닝`, `${h}피안타`, `${r}실점`, `${er}자책`, `${bb}볼넷`, `${k}탈삼진`];\n    if (hr) detail.push(`${hr}피홈런`);\n    if (decision) detail.push(decision === "ND" ? "승패 없음" : decision);\n    return { role: "pitcher", lines: [`개인 성적 · ${detail.join(" ")}`] };\n  }\n\n'''
+          html = html.replace(marker, helper + marker, 1)
+
+          replace_once(
+              'const summary = { teamWon, ratio, naturalInjury, decision, score: { ...game.score }, gameState: game };',
+              'const summary = { teamWon, ratio, naturalInjury, decision, score: { ...game.score }, gameState: game, personalStats: buildPersonalStats(state, game, decision) };',
+              'attach personal stats'
+          )
+
+          replace_once(
+              '''  const decisionLine = summary.decision ? [`투수 판정: ${summary.decision}`] : [];\n  const scoreLine = [`최종 스코어 ${summary.score.player} : ${summary.score.opponent}`];''',
+              '''  const decisionLine = summary.decision ? [`투수 판정: ${summary.decision}`] : [];\n  const scoreLine = [`최종 스코어 ${summary.score.player} : ${summary.score.opponent}`];\n  const personalLines = summary.personalStats?.lines || [];''',
+              'summary personal lines'
+          )
+
+          replace_once(
+              '[...scoreLine, ...decisionLine, ...injuryLine, ...(results || []).map((r, i) => `${i + 1}. ${r.text}`)]',
+              '[...scoreLine, ...personalLines, ...decisionLine, ...injuryLine, ...(results || []).map((r, i) => `${i + 1}. ${r.text}`)]',
+              'render personal lines'
+          )
+
+          out_dir = Path('extra-innings-take2-v0710')
+          out_dir.mkdir(exist_ok=True)
+          (out_dir / 'index.html').write_text(html, encoding='utf-8')
+          (out_dir / 'source.html').write_text(html, encoding='utf-8')
+
+          redirect = '''<!doctype html>\n<html lang="ko">\n<head>\n<meta charset="utf-8">\n<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover">\n<title>EXTRA INNINGS TAKE 2 v0.7.1</title>\n<meta http-equiv="refresh" content="0; url=../extra-innings-take2-v0710/?v=0710">\n<script>location.replace('../extra-innings-take2-v0710/?v=0710');</script>\n<style>body{margin:0;min-height:100vh;display:grid;place-items:center;background:#0e1324;color:#fff;font-family:system-ui,sans-serif;text-align:center}a{color:#ffc04d}</style>\n</head>\n<body><p>EXTRA INNINGS TAKE 2 v0.7.1로 이동 중입니다.<br><a href="../extra-innings-take2-v0710/?v=0710">게임 열기</a></p></body>\n</html>'''
+          Path('extra-innings-take2/index.html').write_text(redirect, encoding='utf-8')
+
+          checks = [
+              'GameData.DAY_PARTS = ["하루"]',
+              '다음 경기까지 넘기기',
+              'personalStats: buildPersonalStats',
+              '개인 성적 ·',
+          ]
+          for check in checks:
+              if check not in html:
+                  raise RuntimeError(f'missing check: {check}')
+          if 'p.date.part < 3' in html:
+              raise RuntimeError('old three-slot gate still present')
+          print(f'Built v0.7.1: {len(html):,} chars')
+
+      - name: Validate JavaScript syntax
+        shell: python
+        run: |
+          from pathlib import Path
+          import re
+          html = Path('extra-innings-take2-v0710/index.html').read_text(encoding='utf-8')
+          scripts = re.findall(r'<script>(.*?)</script>', html, re.S)
+          Path('/tmp/v0710.js').write_text('\n'.join(scripts), encoding='utf-8')
+          print(f'Extracted {len(scripts)} inline scripts')
+      - run: node --check /tmp/v0710.js
+
+      - name: Commit v0.7.1
+        run: |
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          git add extra-innings-take2-v0710 extra-innings-take2/index.html
+          git diff --cached --quiet && exit 0
+          git commit -m "Release v0.7.1 single-day flow and auto-game stats"
+          git push
