@@ -1,0 +1,72 @@
+===== lines 296-312 =====
+00296:   { id: "클러치 본능", name: "클러치 본능", desc: "접전·후반·고위험 승부에서 결과 확률이 좋아진다.", effect: "접전 상황에서 유효 결과 확률 상승" },
+00297:   { id: "빠른 적응력", name: "빠른 적응력", desc: "새 훈련과 포지션을 빠르게 익힌다.", effect: "모든 훈련 성장 +10% / 포지션 경험치 +50%" },
+00298:   { id: "강한 어깨", name: "강한 어깨", desc: "송구와 구속 계열 능력이 뛰어나다.", effect: "송구·구속 +3 / 관련 훈련 +20%" },
+00299:   { id: "회복이 빠름", name: "회복이 빠름", desc: "휴식과 재활의 회복 효율이 높다.", effect: "휴식 에너지·건강 회복 +20%" },
+00300:   { id: "위기에 강함", name: "위기에 강함", desc: "실패와 실점 이후에도 쉽게 무너지지 않는다.", effect: "실패 시 자신감 하락 50% 감소 / 위기 투구·타격 보너스" },
+00301:   { id: "동료를 북돋는 힘", name: "동료를 북돋는 힘", desc: "경기 결과와 관계없이 팀 분위기를 끌어올린다.", effect: "경기 후 사기·감독 신뢰 보너스 / 멘탈 훈련 +20%" },
+00302: ];
+00303: GameData.TRAITS = GameData.TRAIT_OPTIONS.map(x => x.id);
+00304: 
+00305: GameData.WEAKNESS_OPTIONS = {
+00306:   fielder: [
+00307:     { id: "변화구에 약함", name: "변화구에 약함", desc: "변화구 승부에서 헛스윙과 범타가 늘어난다.", effect: "변화구 대기·밀어치기 결과 페널티" },
+00308:     { id: "쉽게 흥분함", name: "쉽게 흥분함", desc: "실패가 이어지면 자신감과 집중력이 크게 흔들린다.", effect: "실패 시 자신감 하락 50% 증가 / 스트레스 증가" },
+00309:     { id: "부상 이력", name: "부상 이력", desc: "과거 부위가 다시 문제를 일으킬 가능성이 있다.", effect: "자연 부상 확률 +1.5%p" },
+00310:     { id: "몸쪽 공에 약함", name: "몸쪽 공에 약함", desc: "공격적인 승부와 몸쪽 공 대처가 불안하다.", effect: "고위험 타격 카드 결과 페널티" },
+00311:     { id: "체력이 약함", name: "체력이 약함", desc: "긴 훈련과 시즌 후반에 체력 저하가 빠르다.", effect: "지구력·인터벌 성장 -20% / 경기 피로 +10%" },
+00312:     { id: "슬럼프가 길게 감", name: "슬럼프가 길게 감", desc: "좋은 결과가 나와도 자신감 회복이 더디다.", effect: "성공 시 자신감 회복 40% 감소" },
+===== lines 334-350 =====
+00334:   { id: "pro1", name: "프로 1군" },
+00335:   { id: "veteran", name: "베테랑" },
+00336:   { id: "retired", name: "은퇴" },
+00337: ];
+00338: 
+00339: GameData.DAY_PARTS = ["오전", "오후", "저녁"];
+00340: 
+00341: GameData.BATTING_STATS = ["contact","power","eye","batSpeed","vsBreaking","vsLefty","vsRighty","bunt","clutch","baserunIQ","speed","steal","throwing","catching","range","reaction"];
+00342: GameData.PITCHING_STATS = ["velocity","stuff","control","stamina","breakingBall","crisis","pickoff","fielding","recovery","mental"];
+00343: GameData.PITCH_TYPES = ["fourseam","twoseam","cutter","slider","curve","changeup","splitter","sinker"];
+00344: 
+00345: // 장기 성장 능력치 (훈련으로 서서히 오르내리는 값. 하루하루 소모/회복되는 '현재 자원'은 condition에 따로 있다)
+00346: GameData.PHYSICAL_STATS = ["stamina","physical","flexibility","injuryResistance","competitiveness","calmness","diligence","leadership","baseballIQ"];
+00347: 
+00348: // 현재 자원/컨디션 (하루 행동으로 소모되고 휴식으로 회복되는 값들)
+00349: GameData.CONDITION_STATS = ["energy","health","fatigue","morale","stress","confidence","focus","gameSense","injuryRisk","trustCoach","teamStanding"];
+00350: 
+===== lines 4627-4643 =====
+04627: UI.statusHeader = function (state) {
+04628:   const p = state.player;
+04629:   return UI.el("div", { class: "status-header" }, [
+04630:     UI.el("div", { class: "status-top" }, [
+04631:       UI.el("div", { class: "status-name" }, `${p.name} (${p.age}세)`),
+04632:       UI.el("div", { class: "status-date" }, `${p.date.year}년차 ${p.date.month}월 ${p.date.day}일 · ${GameData.DAY_PARTS[p.date.part]}`),
+04633:     ]),
+04634:     UI.el("div", { class: "status-sub" }, `${p.team} · ${GameData.POSITIONS.find(x => x.id === p.primaryPos)?.name} · ${stageLabel(state)}`),
+04635:     UI.el("div", { class: "status-bars" }, [
+04636:       UI.statBar("에너지", p.condition.energy, 100, "bar-stamina"),
+04637:       UI.statBar("건강", p.condition.health, 100, "bar-health"),
+04638:       UI.statBar("사기", p.condition.morale, 100, "bar-morale"),
+04639:       UI.statBar("경기 감각", p.condition.gameSense, 100, "bar-sense"),
+04640:       UI.statBar("부상 위험", p.condition.injuryRisk, 100, "bar-injury"),
+04641:     ]),
+04642:   ]);
+04643: };
+===== lines 4708-4724 =====
+04708:     { label: "👥 팀 동료·감독", fn: () => UI.doActionCategory("team", "팀원들과 시간을 보냈다.") },
+04709:     { label: "👪 가족과의 시간", fn: () => UI.doActionCategory("family", "가족과 시간을 보냈다.") },
+04710:     { label: "🤝 친구 만나기", fn: () => UI.doActionCategory("friend", "친구와 시간을 보냈다.") },
+04711:     { label: "💌 연애·데이트", fn: () => UI.showRomanceMenu() },
+04712:     { label: "📱 SNS 확인", fn: () => UI.doActionCategory("sns", "SNS를 확인했다.") },
+04713:     { label: "⏭ 시간 넘기기", fn: () => UI.passTime() },
+04714:   ].filter(a => a.show !== false);
+04715: 
+04716:   container.appendChild(UI.el("div", { class: "action-grid" },
+04717:     actions.map(a => UI.button(a.label, a.fn, "btn action-btn"))));
+04718: 
+04719:   if (state.flags.size) {
+04720:     // 최근 메시지/이벤트 요약 자리 (간단히 최근 로그 몇 개)
+04721:   }
+04722: 
+04723:   root.appendChild(container);
+04724:   UI.appendNav(root, "hub");
