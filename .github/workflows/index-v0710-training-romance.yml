@@ -1,0 +1,55 @@
+name: Index v0.7.1 training and romance
+
+on:
+  push:
+    paths:
+      - '.github/workflows/index-v0710-training-romance.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  index:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build focused indexes
+        shell: python
+        run: |
+          from pathlib import Path
+          src = Path('extra-innings-take2-v0710/index.html')
+          lines = src.read_text(encoding='utf-8').splitlines()
+          groups = {
+            'training-index.txt': [
+              'GameData.TRAININGS', 'Game.Training', 'function perform', 'training.effects',
+              'positionExp', '포지션별 훈련', 'group: "position"', 'doTraining'
+            ],
+            'romance-index.txt': [
+              'GameData.ROMANCE_CHARS', 'state.romance', 'ROMANCE_OUTCOMES', 'showRomanceMenu',
+              'doRomanceVisit', 'category: "romance"', 'ro_', 'discovered', 'unlocked'
+            ],
+          }
+          outdir = Path('extra-innings-take2-v0710')
+          for filename, keywords in groups.items():
+              hits = []
+              seen = set()
+              for i, line in enumerate(lines):
+                  if any(k in line for k in keywords):
+                      start = max(0, i - 12)
+                      end = min(len(lines), i + 28)
+                      key = (start, end)
+                      if key in seen:
+                          continue
+                      seen.add(key)
+                      hits.append(f'===== lines {start+1}-{end} =====')
+                      hits.extend(f'{n+1:05d}: {lines[n]}' for n in range(start, end))
+              (outdir / filename).write_text('\n'.join(hits), encoding='utf-8')
+      - name: Commit indexes
+        run: |
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          git add extra-innings-take2-v0710/training-index.txt extra-innings-take2-v0710/romance-index.txt
+          git diff --cached --quiet && exit 0
+          git commit -m "Index v0.7.1 training and romance source"
+          git push
