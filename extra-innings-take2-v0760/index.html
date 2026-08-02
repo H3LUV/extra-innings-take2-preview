@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover">
+<title>EXTRA INNINGS TAKE 2 v0.7.6</title>
+<style>
+html,body{margin:0;width:100%;height:100%;overflow:hidden;background:#10121c}
+#game{display:block;width:100%;height:100%;border:0;background:#10121c}
+#patch-status{position:fixed;left:50%;bottom:12px;transform:translateX(-50%);z-index:10;padding:7px 12px;border-radius:16px;background:rgba(16,18,28,.88);color:#f5efe6;font:12px system-ui,sans-serif;pointer-events:none;opacity:1;transition:opacity .25s}
+</style>
+</head>
+<body>
+<iframe id="game" title="EXTRA INNINGS TAKE 2" src="../extra-innings-take2-v0750/?v=0760"></iframe>
+<div id="patch-status">스토리 인트로 적용 중</div>
+<script>
+(function(){
+  const rootFrame=document.getElementById('game');
+  const status=document.getElementById('patch-status');
+  let attempts=0;
+
+  function deepestWindow(){
+    try{
+      let w=rootFrame.contentWindow;
+      for(let i=0;i<10;i++){
+        if(!w||!w.document) break;
+        const child=w.document.getElementById('game');
+        if(!child||!child.contentWindow) break;
+        w=child.contentWindow;
+      }
+      return w;
+    }catch(e){ return null; }
+  }
+
+  function applyPatch(){
+    const w=deepestWindow();
+    if(!w||!w.Game||!w.GameData||!w.UI||typeof w.Game.createNewState!=='function'||typeof w.UI.showHub!=='function') return false;
+    if(!w.__EXTRA_INNINGS_V075_PATCHED__) return false;
+    if(w.__EXTRA_INNINGS_V076_PATCHED__) return true;
+    w.__EXTRA_INNINGS_V076_PATCHED__=true;
+
+    const doc=w.document;
+    const style=doc.createElement('style');
+    style.textContent=`
+      .story-intro{
+        min-height:100vh;display:flex;flex-direction:column;position:relative;overflow:hidden;
+        background:linear-gradient(180deg,#45a8df 0%,#77c9ee 38%,#eef8fd 38%,#f7fbfe 100%);
+        color:#1c2940;
+      }
+      .story-intro:before{
+        content:"";position:absolute;left:50%;top:24%;width:330px;height:330px;transform:translateX(-50%) rotate(45deg);
+        border:3px solid rgba(255,255,255,.55);border-radius:28px;background:rgba(255,255,255,.08);
+      }
+      .story-skyline{height:38vh;position:relative;flex-shrink:0;overflow:hidden}
+      .story-sun{position:absolute;right:12%;top:12%;width:66px;height:66px;border-radius:50%;background:#fff7c7;box-shadow:0 0 32px rgba(255,246,176,.8)}
+      .story-cloud{position:absolute;width:90px;height:24px;border-radius:24px;background:rgba(255,255,255,.78)}
+      .story-cloud:before,.story-cloud:after{content:"";position:absolute;border-radius:50%;background:inherit}
+      .story-cloud:before{width:34px;height:34px;left:16px;top:-14px}.story-cloud:after{width:44px;height:44px;right:12px;top:-21px}
+      .story-cloud.c1{left:8%;top:20%}.story-cloud.c2{right:7%;top:58%;transform:scale(.72)}
+      .story-school{position:absolute;left:50%;bottom:-2px;transform:translateX(-50%);width:min(88vw,430px);height:150px;background:#f4efe6;border:4px solid #35567a;border-bottom:0;border-radius:8px 8px 0 0;box-shadow:0 -8px 0 rgba(255,255,255,.22)}
+      .story-school:before{content:"은성고등학교";position:absolute;left:50%;top:14px;transform:translateX(-50%);font-weight:900;color:#284563;white-space:nowrap;font-size:15px}
+      .story-school:after{content:"";position:absolute;left:18px;right:18px;top:48px;height:72px;background:repeating-linear-gradient(90deg,#7bb5d4 0 36px,#eef7fb 36px 45px);border:3px solid #35567a}
+      .story-card{position:relative;z-index:2;flex:1;margin-top:-1px;background:#fff;border-radius:28px 28px 0 0;padding:24px 22px calc(22px + env(safe-area-inset-bottom));box-shadow:0 -12px 30px rgba(26,64,91,.18);display:flex;flex-direction:column}
+      .story-brand{font-size:11px;font-weight:900;letter-spacing:2.4px;color:#3299d2;margin-bottom:10px}
+      .story-kicker{display:inline-flex;align-self:flex-start;padding:6px 10px;border-radius:999px;background:#e9f6fc;color:#167fb9;font-size:12px;font-weight:800;margin-bottom:12px}
+      .story-title{font-family:"Black Han Sans","Noto Sans KR",sans-serif;font-size:27px;line-height:1.25;color:#17304d;margin:0 0 14px}
+      .story-copy{font-size:15px;line-height:1.75;color:#4c5d70;white-space:pre-line;min-height:106px;margin:0}
+      .story-progress{display:flex;gap:7px;margin:20px 0 16px}
+      .story-dot{height:6px;flex:1;border-radius:99px;background:#dce8ee;overflow:hidden}.story-dot.active{background:#37a4dc}
+      .story-actions{display:flex;align-items:center;gap:10px;margin-top:auto}
+      .story-skip{border:0;background:transparent;color:#8493a2;font-size:12px;padding:12px 4px}
+      .story-next{flex:1;border:0;border-radius:13px;min-height:52px;background:linear-gradient(135deg,#33a7df,#1687c4);color:#fff;font-size:16px;font-weight:900;box-shadow:0 8px 18px rgba(29,143,199,.28)}
+      .story-next:active{transform:scale(.98)}
+      @media(max-height:700px){.story-skyline{height:31vh}.story-school{height:118px}.story-school:after{height:48px}.story-card{padding-top:18px}.story-copy{min-height:80px}.story-title{font-size:23px}}
+    `;
+    doc.head.appendChild(style);
+
+    const originalCreateNewState=w.Game.createNewState;
+    w.Game.createNewState=function(options){
+      const state=originalCreateNewState(options);
+      state.flags=state.flags||{};
+      state.flags.storyIntroPending=true;
+      state.flags.storyIntroSeen=false;
+      return state;
+    };
+
+    const originalShowHub=w.UI.showHub;
+
+    w.UI.showStoryIntro=function(){
+      const state=w.Game.state;
+      if(!state||!state.player){ originalShowHub(); return; }
+      const playerName=state.player.name||'주인공';
+      const pages=[
+        {
+          kicker:'3월 · 은성고등학교',
+          title:'새 유니폼, 새로운 시작',
+          copy:`중학교 야구를 마친 ${playerName}은 은성고 야구부의 문을 두드렸다.\n\n아직 이름을 아는 사람도, 보장된 자리도 없다.`
+        },
+        {
+          kicker:'신입생 경쟁',
+          title:'등번호도, 주전 자리도 직접 얻어야 한다',
+          copy:'훈련에서 성장하고 경기에서 증명해야 한다.\n\n감독의 신뢰와 팀 내 평가는 출전 기회와 진로를 바꾼다.'
+        },
+        {
+          kicker:'야구 밖의 인생',
+          title:'모든 선택은 관계와 커리어로 이어진다',
+          copy:'동료, 라이벌, 가족, 그리고 우연히 만나게 될 사람들.\n\n누구와 가까워지고 무엇을 선택하느냐에 따라 이야기는 달라진다.'
+        },
+        {
+          kicker:'첫 번째 시즌',
+          title:'한 번 더, 인생의 타석으로',
+          copy:`부상과 슬럼프를 이겨내고 프로의 문을 두드릴 수 있을까.\n\n${playerName}의 고교 야구 인생이 지금 시작된다.`
+        }
+      ];
+      let index=0;
+      const app=doc.getElementById('app');
+      if(!app){ originalShowHub(); return; }
+
+      function finish(){
+        state.flags=state.flags||{};
+        state.flags.storyIntroPending=false;
+        state.flags.storyIntroSeen=true;
+        originalShowHub();
+      }
+
+      function render(){
+        app.innerHTML='';
+        const shell=doc.createElement('div');
+        shell.className='story-intro';
+        shell.innerHTML=`
+          <div class="story-skyline">
+            <div class="story-sun"></div><div class="story-cloud c1"></div><div class="story-cloud c2"></div><div class="story-school"></div>
+          </div>
+          <div class="story-card">
+            <div class="story-brand">EXTRA INNINGS TAKE 2</div>
+            <div class="story-kicker"></div>
+            <h1 class="story-title"></h1>
+            <p class="story-copy"></p>
+            <div class="story-progress"></div>
+            <div class="story-actions">
+              <button class="story-skip" type="button">건너뛰기</button>
+              <button class="story-next" type="button"></button>
+            </div>
+          </div>`;
+        shell.querySelector('.story-kicker').textContent=pages[index].kicker;
+        shell.querySelector('.story-title').textContent=pages[index].title;
+        shell.querySelector('.story-copy').textContent=pages[index].copy;
+        const progress=shell.querySelector('.story-progress');
+        pages.forEach((_,i)=>{const dot=doc.createElement('div');dot.className='story-dot'+(i<=index?' active':'');progress.appendChild(dot);});
+        const next=shell.querySelector('.story-next');
+        next.textContent=index===pages.length-1?'야구 인생 시작':'다음';
+        next.addEventListener('click',()=>{if(index<pages.length-1){index++;render();}else finish();});
+        shell.querySelector('.story-skip').addEventListener('click',finish);
+        app.appendChild(shell);
+      }
+      render();
+    };
+
+    w.UI.showHub=function(){
+      const state=w.Game.state;
+      if(state&&state.flags&&state.flags.storyIntroPending&&!state.flags.storyIntroSeen){
+        w.UI.showStoryIntro();
+        return;
+      }
+      originalShowHub();
+    };
+
+    doc.title='EXTRA INNINGS TAKE 2 v0.7.6';
+    return true;
+  }
+
+  function tick(){
+    attempts++;
+    if(applyPatch()){
+      status.textContent='v0.7.6 적용 완료';
+      setTimeout(()=>status.style.opacity='0',1000);
+      return;
+    }
+    if(attempts<360) setTimeout(tick,100);
+    else status.textContent='스토리 인트로 적용 실패';
+  }
+
+  rootFrame.addEventListener('load',()=>setTimeout(tick,200));
+  setTimeout(tick,400);
+})();
+</script>
+</body>
+</html>
