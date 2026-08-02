@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover">
+<title>EXTRA INNINGS TAKE 2 v0.7.4</title>
+<style>
+html,body{margin:0;width:100%;height:100%;overflow:hidden;background:#10121c}
+#game{display:block;width:100%;height:100%;border:0;background:#10121c}
+#patch-status{position:fixed;left:50%;bottom:12px;transform:translateX(-50%);z-index:10;padding:7px 12px;border-radius:16px;background:rgba(16,18,28,.88);color:#f5efe6;font:12px system-ui,sans-serif;pointer-events:none;opacity:1;transition:opacity .25s}
+</style>
+</head>
+<body>
+<iframe id="game" title="EXTRA INNINGS TAKE 2" src="../extra-innings-take2-v0730/?v=0740"></iframe>
+<div id="patch-status">훈련·휴식 버튼 정리 중</div>
+<script>
+(function(){
+  const outerFrame=document.getElementById('game');
+  const status=document.getElementById('patch-status');
+  let attempts=0;
+
+  function formatCost(value){
+    return Number(value||0)*100+'만원';
+  }
+
+  function replaceMoneyLog(list, cost){
+    if(!Array.isArray(list)||!cost) return list;
+    return list.map(line=>typeof line==='string'&&line.includes('돈 -'+cost)?'[비용] '+formatCost(cost)+' 지출':line);
+  }
+
+  function getGameWindow(){
+    try{
+      const wrapper=outerFrame.contentWindow;
+      const inner=wrapper&&wrapper.document&&wrapper.document.getElementById('game');
+      return inner&&inner.contentWindow;
+    }catch(e){ return null; }
+  }
+
+  function applyPatch(){
+    const w=getGameWindow();
+    if(!w||!w.GameData||!w.Game||!w.Game.Training||!w.Game.Condition||!w.UI) return false;
+    if(w.__EXTRA_INNINGS_V074_PATCHED__) return true;
+    w.__EXTRA_INNINGS_V074_PATCHED__=true;
+
+    const GD=w.GameData;
+    const UI=w.UI;
+
+    const style=w.document.createElement('style');
+    style.textContent=`
+      .training-list{display:grid!important;grid-template-columns:1fr!important;gap:10px!important}
+      .training-list .training-btn{
+        width:100%!important;
+        min-height:56px!important;
+        height:56px!important;
+        padding:10px 14px!important;
+        display:flex!important;
+        align-items:center!important;
+        justify-content:center!important;
+        text-align:center!important;
+        line-height:1.25!important;
+        white-space:normal!important;
+      }
+    `;
+    w.document.head.appendChild(style);
+
+    UI.showTrainingMenu=function(){
+      const state=w.Game.state;
+      const root=UI.clear();
+      const groups=[['common','공통 훈련'],['batter','타자 훈련'],['pitcher','투수 훈련'],['position','포지션 숙련 훈련']];
+      const posGroup=GD.POSITIONS.find(p=>p.id===state.player.primaryPos)?.group;
+      const activePositions=[state.player.primaryPos,state.player.secondaryPos].filter(id=>id&&id!=='NONE');
+      const content=[];
+
+      groups.forEach(([groupId,label])=>{
+        if(groupId==='batter'&&posGroup==='pitcher') return;
+        if(groupId==='pitcher'&&posGroup==='fielder') return;
+        let items=GD.TRAININGS.filter(t=>t.group===groupId);
+        if(groupId==='position'){
+          items=items.filter(t=>{
+            const mapped=t.positions||GD.TRAINING_POSITION_MAP[t.id]||[];
+            return mapped.some(id=>activePositions.includes(id));
+          });
+        }
+        if(!items.length) return;
+        content.push(UI.el('div',{class:'group-label'},label));
+        content.push(UI.el('div',{class:'training-list'},items.map(t=>{
+          const cost=t.moneyCost?' · 비용 '+formatCost(t.moneyCost):'';
+          return UI.button(t.name+cost,()=>UI.doTraining(t.id),'btn training-btn');
+        })));
+      });
+
+      root.appendChild(UI.screen('훈련 선택',content,{footer:[UI.button('← 홈으로',()=>UI.showHub(),'btn btn-ghost')]}));
+      UI.appendNav(root,'train');
+    };
+
+    UI.showRestMenu=function(){
+      const root=UI.clear();
+      const items=GD.RESTS.map(r=>{
+        const cost=r.moneyCost?' · 비용 '+formatCost(r.moneyCost):'';
+        return UI.button(r.name+cost,()=>UI.doRest(r.id),'btn training-btn');
+      });
+      root.appendChild(UI.screen('휴식 선택',[
+        UI.el('div',{class:'training-list'},items)
+      ],{footer:[UI.button('← 홈으로',()=>UI.showHub(),'btn btn-ghost')]}));
+      UI.appendNav(root,'train');
+    };
+
+    const originalTraining=w.Game.Training.perform;
+    w.Game.Training.perform=function(state,trainingId){
+      const training=GD.TRAININGS.find(t=>t.id===trainingId);
+      const result=originalTraining(state,trainingId);
+      if(result&&!result.fail&&training?.moneyCost){
+        result.resourceLog=replaceMoneyLog(result.resourceLog,training.moneyCost);
+        result.changeLog=replaceMoneyLog(result.changeLog,training.moneyCost);
+      }
+      return result;
+    };
+
+    const originalRest=w.Game.Condition.rest;
+    w.Game.Condition.rest=function(state,restId){
+      const rest=GD.RESTS.find(r=>r.id===restId);
+      const result=originalRest(state,restId);
+      if(result&&!result.fail&&rest?.moneyCost){
+        result.changeLog=replaceMoneyLog(result.changeLog,rest.moneyCost);
+      }
+      return result;
+    };
+
+    w.document.title='EXTRA INNINGS TAKE 2 v0.7.4';
+    return true;
+  }
+
+  function tick(){
+    attempts++;
+    if(applyPatch()){
+      status.textContent='v0.7.4 적용 완료';
+      setTimeout(()=>status.style.opacity='0',1000);
+      return;
+    }
+    if(attempts<240) setTimeout(tick,100);
+    else status.textContent='수정 모듈 적용 실패';
+  }
+
+  outerFrame.addEventListener('load',()=>setTimeout(tick,150));
+  setTimeout(tick,300);
+})();
+</script>
+</body>
+</html>
