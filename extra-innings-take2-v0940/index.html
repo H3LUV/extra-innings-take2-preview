@@ -1,0 +1,361 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover">
+<title>EXTRA INNINGS TAKE 2 v0.9.4</title>
+<style>
+html,body{margin:0;width:100%;height:100%;overflow:hidden;background:#10121c}
+#game{display:block;width:100%;height:100%;border:0}
+#ei-status{position:fixed;left:50%;bottom:12px;transform:translateX(-50%);z-index:2147483647;padding:7px 12px;border-radius:16px;background:#10121cec;color:#fff;font:12px system-ui;opacity:1;transition:.25s;pointer-events:none}
+</style>
+</head>
+<body>
+<iframe id="game" src="../extra-innings-take2-v0910/?v=0940"></iframe>
+<div id="ei-status">통합 UI 적용 중</div>
+<script>
+(()=>{
+'use strict';
+const frame=document.getElementById('game');
+const status=document.getElementById('ei-status');
+let attempts=0;
+const LIFE={
+ school:{title:'학교생활',category:'school',items:[
+  {label:'수업에 집중한다',words:['수업','교실','시험','공부','성적','담임']},
+  {label:'동아리 활동을 한다',words:['동아리','축제','학교 행사','반 친구']},
+  {label:'진로 상담을 받는다',words:['진로','상담','담임','선생님']},
+  {label:'학교에서 휴식한다',words:['학교','옥상','휴식','교실']}
+ ]},
+ family:{title:'가족과의 시간',category:'family',items:[
+  {label:'가족과 식사한다',words:['가족','식사','저녁','밥상']},
+  {label:'아버지와 대화한다',words:['아버지','부친']},
+  {label:'어머니와 외출한다',words:['어머니','엄마','장보기','외출']},
+  {label:'가족과 나들이를 간다',words:['가족','나들이','여행','외출']}
+ ]},
+ friend:{title:'친구 만나기',category:'friend',items:[
+  {label:'PC방에 간다',words:['PC방','게임','친구']},
+  {label:'카페에서 이야기한다',words:['카페','대화','고민','친구']},
+  {label:'영화를 본다',words:['영화','극장','친구']},
+  {label:'산책하거나 외출한다',words:['산책','외출','친구','거리']}
+ ]},
+ team:{title:'팀 동료·감독',category:'team',items:[
+  {label:'감독과 대화한다',words:['감독','출전','선발','보직','기용','면담']},
+  {label:'코치에게 지도를 받는다',words:['코치','지도','레슨','훈련','폼','기술']},
+  {label:'동료와 시간을 보낸다',words:['동료','팀메이트','선배','후배','주장','라커룸','팀워크']},
+  {label:'경쟁자와 이야기한다',words:['라이벌','경쟁자','주전 경쟁','포지션 경쟁','도발']}
+ ]},
+ sns:{title:'SNS 확인',category:'sns',items:[
+  {label:'게시물을 올린다',words:['SNS','게시물','업로드','사진','팔로워']},
+  {label:'팬 반응을 확인한다',words:['팬','댓글','반응','SNS']},
+  {label:'지인 게시물을 확인한다',words:['지인','게시물','SNS','친구']},
+  {label:'SNS 활동을 쉰다',words:['SNS','휴식','휴대폰']}
+ ]}
+};
+const ENTRY_MATCH=[
+ ['school',['학교생활','🏫 학교생활']],
+ ['team',['팀 동료·감독','👥 팀 동료·감독']],
+ ['family',['가족과의 시간','👪 가족과의 시간']],
+ ['friend',['친구 만나기','🤝 친구 만나기']],
+ ['sns',['SNS 확인','📱 SNS 확인']]
+];
+
+function deepest(){
+ try{
+  let w=frame.contentWindow;
+  for(let i=0;i<44;i++){
+   const child=w?.document?.getElementById('game');
+   if(!child?.contentWindow) break;
+   w=child.contentWindow;
+  }
+  return w;
+ }catch(e){return null}
+}
+function stateOf(w){return w?.Game?.state||w?.UI?.state||w?.gameState||w?.state||null}
+function normalize(s){return String(s||'').replace(/\s+/g,' ').trim()}
+function eventText(ev){return [ev?.title,ev?.desc,ev?.line,ev?.role,ev?.targetRole,ev?.characterId].filter(Boolean).join(' ')}
+function weightedPick(list){
+ if(!list.length) return null;
+ const total=list.reduce((n,x)=>n+Math.max(1,Number(x?.weight)||1),0);
+ let r=Math.random()*total;
+ for(const x of list){r-=Math.max(1,Number(x?.weight)||1);if(r<=0)return x}
+ return list[list.length-1];
+}
+function decreaseGameSense(state){
+ const c=state?.player?.condition;
+ if(c&&typeof c.gameSense==='number') c.gameSense=Math.max(0,c.gameSense-1);
+}
+function safeEvent(key,item){
+ const common={
+  id:`ei_${key}_${item.label}_${Date.now()}`,
+  category:LIFE[key].category,
+  weight:1,
+  cooldown:0,
+  desc:`${item.label}. 평범한 하루 속에서 작은 선택이 앞으로의 관계와 컨디션에 영향을 준다.`
+ };
+ const byKey={
+  school:[
+   {text:'끝까지 집중한다',effects:{'school.grade':2,'condition.focus':2,'condition.energy':-2},result:'해야 할 일에 집중하며 하루를 보냈다.'},
+   {text:'균형을 맞춘다',effects:{'school.grade':1,'condition.stress':-1},result:'무리하지 않고 균형을 지켰다.'},
+   {text:'잠시 쉬어 간다',effects:{'condition.energy':3,'condition.stress':-2},result:'잠시 숨을 고르며 컨디션을 회복했다.'}
+  ],
+  family:[
+   {text:'솔직하게 이야기한다',effects:{'relationships.mother.trust':2,'condition.morale':2},result:'가족과 솔직한 대화를 나눴다.'},
+   {text:'함께 시간을 보낸다',effects:{'condition.morale':3,'condition.stress':-2},result:'평범한 시간이 마음을 편하게 했다.'},
+   {text:'다음에 더 길게 이야기한다',effects:{'condition.energy':2},result:'짧게 인사를 나누고 다음을 기약했다.'}
+  ],
+  friend:[
+   {text:'오늘은 마음껏 즐긴다',effects:{'condition.morale':3,'condition.stress':-3,'condition.energy':-2},result:'친구와 웃으며 스트레스를 풀었다.'},
+   {text:'요즘 고민을 털어놓는다',effects:{'condition.morale':2,'condition.focus':1},result:'이야기를 나누며 생각을 정리했다.'},
+   {text:'짧게 만나고 돌아간다',effects:{'condition.energy':1,'condition.stress':-1},result:'부담 없이 짧은 시간을 보냈다.'}
+  ],
+  team:[
+   {text:'먼저 질문한다',effects:{'condition.trustCoach':2,'stats.physical.baseballIQ':1},result:'야구에 관한 조언을 구하며 배움을 얻었다.'},
+   {text:'상대의 말을 끝까지 듣는다',effects:{'condition.teamStanding':2,'condition.morale':1},result:'팀 안에서 신뢰를 조금 더 쌓았다.'},
+   {text:'훈련으로 답하겠다고 말한다',effects:{'stats.physical.diligence':1,'condition.focus':2},result:'말보다 행동으로 보여주기로 했다.'}
+  ],
+  sns:[
+   {text:'긍정적인 내용만 남긴다',effects:{'fame.fan':2,'condition.morale':1},result:'팬들과 가볍게 소통했다.'},
+   {text:'반응을 차분히 살핀다',effects:{'stats.physical.calmness':1,'condition.focus':1},result:'반응에 휘둘리지 않고 필요한 부분만 확인했다.'},
+   {text:'휴대폰을 내려놓는다',effects:{'condition.stress':-3,'condition.energy':2},result:'화면에서 벗어나 잠시 쉬었다.'}
+  ]
+ };
+ return Object.assign(common,{title:item.label,choices:byKey[key]});
+}
+function eligibleFor(w,state,key,item){
+ let pool=[];
+ try{
+  if(typeof w.Game?.Events?.eligible==='function') pool=w.Game.Events.eligible(state,LIFE[key].category)||[];
+  else if(typeof w.Game?.Events?.pickRandomEvent==='function'){
+   const one=w.Game.Events.pickRandomEvent(state,LIFE[key].category); if(one) pool=[one];
+  }
+ }catch(e){pool=[]}
+ const related=pool.filter(ev=>item.words.some(word=>eventText(ev).includes(word)));
+ return weightedPick(related.length?related:pool)||safeEvent(key,item);
+}
+function finishDay(w,state){
+ try{if(typeof w.Game?.Time?.advancePart==='function')w.Game.Time.advancePart(state)}catch(e){}
+ try{if(typeof w.Game?.Save?.autosave==='function')w.Game.Save.autosave(state)}catch(e){}
+ try{if(typeof w.checkGameOverConditions==='function')w.checkGameOverConditions()}catch(e){}
+ w.UI.showHub();
+}
+function injectStyle(w){
+ const d=w.document;
+ if(d.getElementById('ei-v094-style')) return;
+ const s=d.createElement('style');
+ s.id='ei-v094-style';
+ s.textContent=`
+ :root{--ei-blue:#0b3e8b;--ei-deep:#03183e;--ei-paper:#f7f8f4;--ei-ink:#071c45;--ei-yellow:#ffd51f}
+ .ei-life-entry{position:relative!important;color:transparent!important;text-shadow:none!important}
+ .ei-life-entry::before{content:attr(data-ei-label);position:absolute;inset:0;display:grid;place-items:center;color:inherit;color:#f5efe6;font:700 14px "Noto Sans KR",system-ui;white-space:pre-wrap}
+ .ei-life-screen .screen-title{background:linear-gradient(135deg,#05275f,#0c4fa4)!important;color:#fff!important;border:0!important;padding:17px 18px!important}
+ .ei-life-screen .screen-body{background:linear-gradient(#eef5fb,#dbeaff)!important;padding:16px!important;gap:12px!important}
+ .ei-life-list{display:grid;gap:12px}
+ .ei-life-choice{min-height:68px!important;border:3px solid var(--ei-blue)!important;border-radius:0!important;background:linear-gradient(165deg,#fff 0 72%,#eaf3ff 72%)!important;color:var(--ei-ink)!important;box-shadow:0 5px 0 var(--ei-deep)!important;text-align:left!important;padding:14px 16px!important;font-weight:900!important;font-size:16px!important}
+ .ei-life-choice:active{transform:translateY(3px)!important;box-shadow:0 2px 0 var(--ei-deep)!important}
+ .ei-life-choice[disabled]{opacity:.55!important}
+ .overlay{background:rgba(0,16,45,.82)!important;z-index:1000000!important}
+ .event-box,.result-box{width:min(100%,480px)!important;background:var(--ei-paper)!important;border:4px solid var(--ei-blue)!important;border-radius:0!important;box-shadow:0 9px 0 var(--ei-deep)!important;color:var(--ei-ink)!important}
+ .event-box .overlay-scroll,.result-box .overlay-scroll{padding:0!important}
+ .ei-event-head{padding:15px 18px;background:linear-gradient(135deg,#05275f,#0c4fa4);color:#fff;border-bottom:5px solid #efb51f}
+ .ei-event-kicker{font-size:11px;font-weight:900;letter-spacing:.12em;opacity:.78}
+ .ei-event-title{font-size:25px;font-weight:1000;line-height:1.2;margin-top:3px}
+ .ei-event-body{padding:17px 18px 8px}
+ .event-desc{color:#354766!important;line-height:1.7!important;font-size:15px!important;margin:0!important}
+ .event-choices{padding:10px 18px 18px!important;gap:10px!important}
+ .choice-btn{min-height:58px!important;background:linear-gradient(165deg,#fff 0 72%,#eaf3ff 72%)!important;color:var(--ei-ink)!important;border:3px solid var(--ei-blue)!important;border-radius:0!important;box-shadow:0 4px 0 var(--ei-deep)!important;font-weight:900!important;margin:0!important}
+ .choice-btn:active{transform:translateY(2px)!important;box-shadow:0 2px 0 var(--ei-deep)!important}
+ .choice-btn[disabled]{opacity:.55!important}
+ .result-lines{padding:17px 18px 8px!important;gap:8px!important}
+ .result-line{background:#eaf3ff!important;color:var(--ei-ink)!important;border:2px solid var(--ei-blue)!important;border-radius:0!important;padding:10px 12px!important}
+ .overlay-sticky-footer{background:var(--ei-paper)!important;border-top:0!important;padding:12px 18px calc(18px + env(safe-area-inset-bottom))!important}
+ .overlay-sticky-footer .btn{background:linear-gradient(#1262bc,#063d8c)!important;color:#fff!important;border:3px solid var(--ei-deep)!important;border-radius:0!important;box-shadow:0 4px 0 var(--ei-deep)!important;font-weight:900!important}
+ .bottom-nav.ei-nav-clone{isolation:isolate}
+ `;
+ d.head.appendChild(s);
+}
+function installNavSync(w){
+ const UI=w.UI;
+ if(UI.__EI_NAV_SYNC__) return;
+ UI.__EI_NAV_SYNC__=true;
+ const originalAppend=UI.appendNav?.bind(UI);
+ const originalHub=UI.showHub?.bind(UI);
+ if(typeof originalAppend==='function'){
+  UI.appendNav=function(root,activeId){
+   const before=[...root.querySelectorAll('.bottom-nav')];
+   const out=originalAppend(root,activeId);
+   const navs=[...root.querySelectorAll('.bottom-nav')];
+   let nav=navs.find(n=>!before.includes(n))||navs[navs.length-1];
+   if(UI.__EI_HOME_NAV__&&nav){
+    const clone=UI.__EI_HOME_NAV__.cloneNode(true);
+    clone.classList.add('ei-nav-clone');
+    [...clone.querySelectorAll('.nav-btn')].forEach((b,i)=>{
+     const item=UI.NAV_ITEMS?.[i];
+     b.classList.toggle('active',item?.id===activeId);
+     if(item) b.onclick=item.fn;
+    });
+    nav.replaceWith(clone);
+   }
+   return out;
+  };
+ }
+ if(typeof originalHub==='function'){
+  UI.showHub=function(){
+   const out=originalHub.apply(UI,arguments);
+   patchHubEntries(w);
+   const nav=w.document.querySelector('.bottom-nav');
+   if(nav) UI.__EI_HOME_NAV__=nav.cloneNode(true);
+   return out;
+  };
+ }
+}
+function identifyEntry(text){
+ const t=normalize(text);
+ for(const [key,aliases] of ENTRY_MATCH){
+  if(aliases.some(a=>t===a||t.endsWith(a)||t.includes(a))) return key;
+ }
+ return null;
+}
+function patchHubEntries(w){
+ const d=w.document;
+ const buttons=[...d.querySelectorAll('button,.btn,.action-btn')];
+ for(const b of buttons){
+  if(b.dataset.eiPatched==='1') continue;
+  const key=identifyEntry(b.textContent);
+  if(!key) continue;
+  const original=normalize(b.textContent);
+  b.dataset.eiPatched='1';
+  b.dataset.eiLabel=original;
+  b.classList.add('ei-life-entry');
+  b.textContent='';
+  b.onclick=(ev)=>{
+   ev.preventDefault();
+   ev.stopPropagation();
+   w.UI.showLifeActivityMenu(key);
+  };
+ }
+}
+function installLifeFlow(w){
+ const UI=w.UI;
+ if(UI.__EI_LIFE_FLOW__) return;
+ UI.__EI_LIFE_FLOW__=true;
+ UI.showLifeActivityMenu=function(key){
+  const spec=LIFE[key],state=stateOf(w);
+  if(!spec||!state){UI.showHub();return}
+  const root=UI.clear();
+  const list=UI.el('div',{class:'ei-life-list'},spec.items.map(item=>{
+   const btn=UI.button(item.label,()=>UI.performLifeActivity(key,item,btn),'btn ei-life-choice');
+   return btn;
+  }));
+  const screen=UI.screen(spec.title,[list],{footer:[UI.button('← 홈으로',()=>UI.showHub(),'btn btn-ghost')]});
+  screen.classList.add('ei-life-screen');
+  root.appendChild(screen);
+  UI.appendNav(root,'relations');
+ };
+ UI.performLifeActivity=function(key,item,button){
+  if(UI.__EI_INPUT_LOCK__) return;
+  UI.__EI_INPUT_LOCK__=true;
+  if(button)button.disabled=true;
+  const state=stateOf(w);
+  if(!state){UI.__EI_INPUT_LOCK__=false;UI.showHub();return}
+  state.pendingLifeActivity={group:key,choice:item.label,day:state.player?.totalDays||0};
+  state.lastLifeActivity={group:key,choice:item.label,day:state.player?.totalDays||0};
+  if(key!=='team') decreaseGameSense(state);
+  const ev=eligibleFor(w,state,key,item);
+  setTimeout(()=>{
+   UI.__EI_INPUT_LOCK__=false;
+   UI.showEventModal(ev,()=>finishDay(w,state));
+  },0);
+ };
+}
+function installEventUI(w){
+ const UI=w.UI;
+ if(UI.__EI_EVENT_UI__) return;
+ UI.__EI_EVENT_UI__=true;
+ UI.showEventModal=function(event,onClose){
+  const state=stateOf(w),d=w.document;
+  d.querySelectorAll('.overlay').forEach(x=>x.remove());
+  const overlay=UI.el('div',{class:'overlay'});
+  const choices=UI.el('div',{class:'event-choices'});
+  let locked=false;
+  (event.choices||[]).forEach((c,idx)=>{
+   const btn=UI.button(c.text,()=>{
+    if(locked)return;
+    locked=true;
+    [...choices.querySelectorAll('button')].forEach(x=>x.disabled=true);
+    let result;
+    try{result=w.Game.Events.resolveChoice(state,event,idx)}
+    catch(e){result={text:c.result||'선택의 결과가 반영되었다.',changeLog:[]}}
+    overlay.remove();
+    UI.showResultOverlay(event.title,[result?.text,...(result?.changeLog||[])],onClose);
+   },'btn choice-btn'+(c.risky?' risky':''));
+   choices.appendChild(btn);
+  });
+  const box=UI.el('div',{class:'event-box'},[
+   UI.el('div',{class:'overlay-scroll'},[
+    UI.el('div',{class:'ei-event-head'},[
+     UI.el('div',{class:'ei-event-kicker'},'LIFE EVENT'),
+     UI.el('div',{class:'ei-event-title'},event.title||'일상 이벤트')
+    ]),
+    UI.el('div',{class:'ei-event-body'},[
+     UI.el('div',{class:'event-desc'},event.desc||'무슨 일이 일어났다.')
+    ]),
+    choices
+   ])
+  ]);
+  overlay.appendChild(box);
+  d.body.appendChild(overlay);
+ };
+ UI.showResultOverlay=function(title,lines,onClose){
+  const d=w.document;
+  d.querySelectorAll('.overlay').forEach(x=>x.remove());
+  const overlay=UI.el('div',{class:'overlay'});
+  let locked=false;
+  const done=UI.button('홈으로 돌아가기',()=>{
+   if(locked)return;locked=true;done.disabled=true;overlay.remove();if(onClose)onClose();
+  },'btn btn-primary btn-lg');
+  const box=UI.el('div',{class:'result-box'},[
+   UI.el('div',{class:'overlay-scroll'},[
+    UI.el('div',{class:'ei-event-head'},[
+     UI.el('div',{class:'ei-event-kicker'},'EVENT RESULT'),
+     UI.el('div',{class:'ei-event-title'},title||'결과')
+    ]),
+    UI.el('div',{class:'result-lines'},(lines||[]).filter(Boolean).map(x=>UI.el('div',{class:'result-line'},String(x))))
+   ]),
+   UI.el('div',{class:'overlay-sticky-footer'},[done])
+  ]);
+  overlay.appendChild(box);
+  d.body.appendChild(overlay);
+ };
+}
+function patch(w){
+ if(!w?.document?.body||!w?.UI||!w?.Game) return false;
+ injectStyle(w);
+ installNavSync(w);
+ installLifeFlow(w);
+ installEventUI(w);
+ patchHubEntries(w);
+ if(!w.__EI_OBSERVER__){
+  w.__EI_OBSERVER__=new w.MutationObserver(()=>patchHubEntries(w));
+  w.__EI_OBSERVER__.observe(w.document.body,{childList:true,subtree:true});
+ }
+ w.document.title='EXTRA INNINGS TAKE 2 v0.9.4';
+ w.__EXTRA_INNINGS_V094__=true;
+ return true;
+}
+function tick(){
+ attempts++;
+ const w=deepest();
+ if(patch(w)){
+  status.textContent='v0.9.4 적용 완료';
+  setTimeout(()=>status.style.opacity='0',900);
+  return;
+ }
+ if(attempts<900)setTimeout(tick,100);
+ else status.textContent='통합 UI 적용 실패';
+}
+frame.addEventListener('load',()=>setTimeout(tick,250));
+setTimeout(tick,450);
+})();
+</script>
+</body>
+</html>
