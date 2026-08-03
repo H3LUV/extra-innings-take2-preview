@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover">
+<title>EXTRA INNINGS TAKE 2 v0.9.1</title>
+<style>
+html,body{margin:0;width:100%;height:100%;overflow:hidden;background:#10121c}#game{display:block;width:100%;height:100%;border:0}#status{position:fixed;left:50%;bottom:12px;transform:translateX(-50%);z-index:20;padding:7px 12px;border-radius:16px;background:#10121ce8;color:#fff;font:12px system-ui;opacity:1;transition:.25s}
+</style>
+</head>
+<body>
+<iframe id="game" src="../extra-innings-take2-v0900/?v=0910"></iframe><div id="status">선택 인물별 이벤트 연결 중</div>
+<script>
+(()=>{
+ const frame=document.getElementById('game'),status=document.getElementById('status');let tries=0;
+ const roleRules={
+  '감독과 대화한다':{tag:'manager',include:['감독','출전','선발','보직','기용','면담'],exclude:['코치','동료','라이벌','경쟁자']},
+  '코치에게 지도를 받는다':{tag:'coach',include:['코치','지도','레슨','훈련','폼','기술'],exclude:['감독 면담','동료와','라이벌','경쟁자']},
+  '동료와 시간을 보낸다':{tag:'teammate',include:['동료','팀메이트','선배','후배','주장','친구','라커룸','회식','팀워크'],exclude:['감독','코치','라이벌','경쟁자']},
+  '경쟁자와 이야기한다':{tag:'rival',include:['라이벌','경쟁자','주전 경쟁','포지션 경쟁','도발'],exclude:['감독','코치','동료와 시간을']},
+  '가족과 식사한다':{tag:'family_meal',include:['가족','식사','저녁','밥상'],exclude:[]},
+  '아버지와 대화한다':{tag:'father',include:['아버지','부친'],exclude:['어머니']},
+  '어머니와 외출한다':{tag:'mother',include:['어머니','엄마','장보기','외출'],exclude:['아버지']},
+  '가족과 나들이를 간다':{tag:'family_outing',include:['가족','나들이','여행','외출'],exclude:[]},
+  'PC방에 간다':{tag:'pc_room',include:['PC방','게임','친구'],exclude:['감독','코치']},
+  '카페에서 이야기한다':{tag:'cafe',include:['카페','대화','고민','친구'],exclude:['감독','코치']},
+  '영화를 본다':{tag:'movie',include:['영화','극장','친구'],exclude:['감독','코치']},
+  '산책하거나 외출한다':{tag:'walk',include:['산책','외출','친구','거리'],exclude:['감독','코치']},
+  '수업에 집중한다':{tag:'class',include:['수업','교실','시험','공부','성적'],exclude:['동아리','진로 상담']},
+  '동아리 활동을 한다':{tag:'club',include:['동아리','축제','학교 행사'],exclude:['감독','코치']},
+  '진로 상담을 받는다':{tag:'career_counsel',include:['진로','상담','담임','선생님'],exclude:[]},
+  '학교에서 휴식한다':{tag:'school_rest',include:['학교','옥상','휴식','교실'],exclude:['훈련']},
+  '게시물을 올린다':{tag:'sns_post',include:['SNS','게시물','업로드','사진','팔로워'],exclude:[]},
+  '팬 반응을 확인한다':{tag:'fan_reaction',include:['팬','댓글','반응','SNS'],exclude:[]},
+  '지인 게시물을 확인한다':{tag:'acquaintance_post',include:['지인','게시물','SNS','친구'],exclude:[]},
+  'SNS 활동을 쉰다':{tag:'sns_rest',include:['SNS','휴식','휴대폰'],exclude:[]}
+ };
+ function deepest(){try{let w=frame.contentWindow;for(let i=0;i<34;i++){const f=w?.document?.getElementById('game');if(!f?.contentWindow)break;w=f.contentWindow}return w}catch(e){return null}}
+ function stateOf(w){return w?.UI?.state||w?.Game?.state||w?.gameState||w?.state||null}
+ function eventText(ev){return [ev?.title,ev?.desc,ev?.line,ev?.category,ev?.characterId,ev?.role,ev?.targetRole].filter(Boolean).join(' ')}
+ function matches(ev,rule){const text=eventText(ev);if(rule.exclude.some(k=>text.includes(k)))return false;return rule.include.some(k=>text.includes(k))}
+ function installEventFilter(w){const E=w?.Game?.Events;if(!E||typeof E.eligible!=='function'||E.__V091_FILTER__)return;E.__V091_FILTER__=true;const original=E.eligible.bind(E);E.eligible=function(state,category,filterFn){const base=original(state,category,filterFn);const pending=state?.pendingLifeActivity||state?.lastLifeActivity;if(!pending?.choice)return base;const rule=roleRules[pending.choice];if(!rule)return base;const relevant=base.filter(ev=>matches(ev,rule));state.pendingActivityEventTag=rule.tag;return relevant.length?relevant:base};
+ if(typeof E.resolveChoice==='function'){const resolve=E.resolveChoice.bind(E);E.resolveChoice=function(state,event,index){const result=resolve(state,event,index);if(state){delete state.pendingLifeActivity;delete state.pendingActivityEventTag}return result}}
+ }
+ function markChoice(w,choice){const s=stateOf(w);if(!s)return;s.pendingLifeActivity={choice,tag:roleRules[choice]?.tag||'',day:s.player?.totalDays||s.totalDays||0}}
+ function patch(){const w=deepest();if(!w?.document?.body||!w?.Game)return false;if(w.__V091__)return true;w.__V091__=1;installEventFilter(w);
+ const d=w.document;d.addEventListener('click',e=>{const b=e.target.closest?.('#v090-life-modal [data-i],#v089-life-modal [data-i]');if(!b)return;const choice=(b.textContent||'').replace(/\s+/g,' ').trim();if(roleRules[choice])markChoice(w,choice)},true);
+ const mo=new w.MutationObserver(()=>installEventFilter(w));mo.observe(d.body,{childList:true,subtree:true});d.title='EXTRA INNINGS TAKE 2 v0.9.1';return true}
+ function tick(){tries++;if(patch()){status.textContent='v0.9.1 적용 완료';setTimeout(()=>status.style.opacity='0',900)}else if(tries<650)setTimeout(tick,100);else status.textContent='이벤트 연결 적용 실패'}frame.addEventListener('load',()=>setTimeout(tick,250));setTimeout(tick,500)
+})();
+</script>
+</body></html>
