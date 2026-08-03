@@ -5,7 +5,7 @@
     try { return await decodeData(token); } catch { return null; }
   }
 
-  function makeAccordion(section, metaText, open = false) {
+  function makeAccordion(section, open = false) {
     if (!section || section.dataset.accordionReady === '1') return;
     section.dataset.accordionReady = '1';
     section.classList.add('accordionSection');
@@ -17,13 +17,15 @@
     head.setAttribute('tabindex', '0');
     head.setAttribute('aria-expanded', String(open));
 
-    const meta = document.createElement('span');
-    meta.className = 'accordionMeta';
-    meta.textContent = metaText;
-    const chevron = document.createElement('span');
-    chevron.className = 'accordionChevron';
-    chevron.textContent = '⌄';
-    head.append(meta, chevron);
+    const toggleLabel = document.createElement('span');
+    toggleLabel.className = 'accordionToggle';
+    head.append(toggleLabel);
+
+    const updateLabel = () => {
+      const expanded = section.classList.contains('is-open');
+      toggleLabel.textContent = expanded ? '접기 ▲' : '펼쳐보기 ▼';
+      head.setAttribute('aria-expanded', String(expanded));
+    };
 
     const body = document.createElement('div');
     body.className = 'accordionBody';
@@ -31,9 +33,8 @@
     section.appendChild(body);
 
     const toggle = () => {
-      const next = !section.classList.contains('is-open');
-      section.classList.toggle('is-open', next);
-      head.setAttribute('aria-expanded', String(next));
+      section.classList.toggle('is-open');
+      updateLabel();
     };
     head.addEventListener('click', toggle);
     head.addEventListener('keydown', (event) => {
@@ -42,6 +43,8 @@
         toggle();
       }
     });
+
+    updateLabel();
   }
 
   async function enhance() {
@@ -64,10 +67,10 @@
     }
 
     const sections = [...document.querySelectorAll('main > section')];
-    makeAccordion(sections[0], `${labels.length}개 도시`, false);
-    makeAccordion(sections[2], '환율 보기', false);
-    makeAccordion(sections[5], `${(data.hotels || []).length}개 호텔`, false);
-    if (sections[6] && !sections[6].hidden) makeAccordion(sections[6], '안내 보기', false);
+    makeAccordion(sections[0], false);
+    makeAccordion(sections[2], false);
+    makeAccordion(sections[5], false);
+    if (sections[6] && !sections[6].hidden) makeAccordion(sections[6], false);
   }
 
   const observer = new MutationObserver(() => {
