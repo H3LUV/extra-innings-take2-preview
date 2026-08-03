@@ -1,13 +1,39 @@
 {
-  "updatedAt": "2026-08-03T23:28:21.779Z",
+  "updatedAt": "2026-08-03T23:30:48.460Z",
   "range": {
     "start": "2026-07-30",
     "end": "2026-08-04"
   },
   "latestDate": "2026-08-03",
-  "majorCount": 184,
-  "total": 244,
+  "majorCount": 186,
+  "total": 246,
   "items": [
+    {
+      "id": 934420,
+      "date": "2026-08-03",
+      "type": "TR",
+      "typeDesc": "Trade",
+      "kind": "trade",
+      "description": "Colorado Rockies traded RHP Victor Vodnik to Miami Marlins.",
+      "descriptionKo": "Colorado Rockies traded RHP Victor Vodnik to Miami Marlins.",
+      "player": "Victor Vodnik",
+      "from": "Colorado Rockies",
+      "to": "Miami Marlins",
+      "importance": 100
+    },
+    {
+      "id": 934417,
+      "date": "2026-08-03",
+      "type": "TR",
+      "typeDesc": "Trade",
+      "kind": "trade",
+      "description": "Pittsburgh Pirates traded RHP Hunter Stratton to San Diego Padres for RHP Andrew Moore.",
+      "descriptionKo": "Pittsburgh Pirates traded RHP Hunter Stratton to San Diego Padres for RHP Andrew Moore.",
+      "player": "Hunter Stratton",
+      "from": "Pittsburgh Pirates",
+      "to": "San Diego Padres",
+      "importance": 100
+    },
     {
       "id": 934414,
       "date": "2026-08-03",
@@ -406,7 +432,7 @@
       "kind": "trade",
       "description": "Baltimore Orioles traded LF Taylor Ward to Seattle Mariners for RHP Alex Hoppe, RHP Brock Moore and RHP Harrison Kreiling.",
       "descriptionKo": "Baltimore Orioles traded LF Taylor Ward to Seattle Mariners for RHP Alex Hoppe, RHP Brock Moore and RHP Harrison Kreiling.",
-      "player": "Harrison Kreiling",
+      "player": "Brock Moore",
       "from": "Seattle Mariners",
       "to": "Baltimore Orioles",
       "importance": 100
@@ -527,6 +553,19 @@
       "from": "",
       "to": "Detroit Tigers",
       "importance": 88
+    },
+    {
+      "id": 934413,
+      "date": "2026-08-03",
+      "type": "OPT",
+      "typeDesc": "Optioned",
+      "kind": "option",
+      "description": "Tampa Bay Rays optioned RHP Alex Cook to Durham Bulls.",
+      "descriptionKo": "Tampa Bay Rays가 RHP Alex Cook를 Durham Bulls로 옵션 이동시켰다.",
+      "player": "Alex Cook",
+      "from": "Tampa Bay Rays",
+      "to": "Durham Bulls",
+      "importance": 64
     },
     {
       "id": 934411,
@@ -721,19 +760,6 @@
       "player": "Connor Seabold",
       "from": "",
       "to": "Kansas City Royals",
-      "importance": 64
-    },
-    {
-      "id": 934302,
-      "date": "2026-08-03",
-      "type": "OPT",
-      "typeDesc": "Optioned",
-      "kind": "option",
-      "description": "Tampa Bay Rays optioned RHP Alex Cook to Durham Bulls.",
-      "descriptionKo": "Tampa Bay Rays가 RHP Alex Cook를 Durham Bulls로 옵션 이동시켰다.",
-      "player": "Alex Cook",
-      "from": "Tampa Bay Rays",
-      "to": "Durham Bulls",
       "importance": 64
     },
     {
@@ -1030,9 +1056,9 @@
       "kind": "trade",
       "description": "Toronto Blue Jays traded RHP Kevin Gausman to Chicago Cubs for CF Brett Bateman and SS Ty Southisene.",
       "descriptionKo": "Toronto Blue Jays traded RHP Kevin Gausman to Chicago Cubs for CF Brett Bateman and SS Ty Southisene.",
-      "player": "Kevin Gausman",
-      "from": "Toronto Blue Jays",
-      "to": "Chicago Cubs",
+      "player": "Ty Southisene",
+      "from": "Chicago Cubs",
+      "to": "Toronto Blue Jays",
       "importance": 100
     },
     {
@@ -1043,9 +1069,9 @@
       "kind": "trade",
       "description": "New York Mets traded RHP Freddy Peralta to Tampa Bay Rays for RHP Gary Gill Hill, OF Aidan Smith and SS Émilien Pitre.",
       "descriptionKo": "New York Mets traded RHP Freddy Peralta to Tampa Bay Rays for RHP Gary Gill Hill, OF Aidan Smith and SS Émilien Pitre.",
-      "player": "Aidan Smith",
-      "from": "Tampa Bay Rays",
-      "to": "New York Mets",
+      "player": "Freddy Peralta",
+      "from": "New York Mets",
+      "to": "Tampa Bay Rays",
       "importance": 100
     },
     {
@@ -2060,32 +2086,6 @@
       "player": "Sam Huff",
       "from": "Baltimore Orioles",
       "to": "Norfolk Tides",
-      "importance": 45
-    },
-    {
-      "id": 933983,
-      "date": "2026-08-01",
-      "type": "OUT",
-      "typeDesc": "Outrighted",
-      "kind": "move",
-      "description": "Los Angeles Dodgers sent LHP Charlie Barnes outright to Oklahoma City Comets.",
-      "descriptionKo": "Los Angeles Dodgers sent LHP Charlie Barnes outright to Oklahoma City Comets.",
-      "player": "Charlie Barnes",
-      "from": "Los Angeles Dodgers",
-      "to": "Oklahoma City Comets",
-      "importance": 45
-    },
-    {
-      "id": 933982,
-      "date": "2026-08-01",
-      "type": "OUT",
-      "typeDesc": "Outrighted",
-      "kind": "move",
-      "description": "Chicago Cubs sent RHP Andrew Wantz outright to Iowa Cubs.",
-      "descriptionKo": "Chicago Cubs sent RHP Andrew Wantz outright to Iowa Cubs.",
-      "player": "Andrew Wantz",
-      "from": "Chicago Cubs",
-      "to": "Iowa Cubs",
       "importance": 45
     }
   ]
