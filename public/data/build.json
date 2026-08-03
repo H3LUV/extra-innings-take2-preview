@@ -1,1 +1,11 @@
-{"generatedAt":null,"status":"pending"}
+{
+  "generatedAt": "2026-08-03T23:28:21.779Z",
+  "kstDate": "2026-08-04",
+  "status": {
+    "games": "fulfilled",
+    "standings": "fulfilled",
+    "transactions": "fulfilled",
+    "column": "fulfilled",
+    "news": "fulfilled"
+  }
+}

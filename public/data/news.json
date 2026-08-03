@@ -1,1 +1,52 @@
-{"items":[],"edition":"daily_longform","editionAt":"첫 데이터 빌드 대기 중"}
+{
+  "items": [
+    {
+      "id": "fe97cc456459",
+      "articleFile": "./data/articles/fe97cc456459.json",
+      "title": "Scouting the prospects traded to Detroit for Tarik Skubal - Bless You Boys",
+      "titleKo": "Tarik Skubal을 위해 디트로이트로 트레이드된 유망주 스카우트 - Bless You Boys",
+      "link": "https://www.blessyouboys.com/detroit-tigers-opinions-analysis/96128/detroit-tigers-analysis-tarik-skubal-mlb-trade-rumors-zyhir-hope-river-ryan",
+      "pubDate": "Sun, 02 Aug 2026 05:11:00 GMT",
+      "source": "Bless You Boys",
+      "category": "기술·메커니즘",
+      "readingMinutes": 9,
+      "bodyVerified": true,
+      "bodyChars": 11076,
+      "depthScore": 69
+    },
+    {
+      "id": "fa2801c0f2c7",
+      "articleFile": "./data/articles/fa2801c0f2c7.json",
+      "title": "How Shohei Ohtani’s Injuries Impact Dodgers’ Deadline Strategy And Stretch Run - FOX Sports",
+      "titleKo": "오타니 쇼헤이의 부상이 다저스의 데드라인 전략과 연속 경기에 미치는 영향 - FOX Sports",
+      "link": "https://www.foxsports.com/stories/mlb/shohei-ohtani-injuries-impact-dodgers-deadline-strategy-stretch-run",
+      "pubDate": "Wed, 29 Jul 2026 20:39:08 GMT",
+      "source": "FOX Sports",
+      "category": "기술·메커니즘",
+      "readingMinutes": 8,
+      "bodyVerified": true,
+      "bodyChars": 8990,
+      "depthScore": 65
+    },
+    {
+      "id": "ed06f9bbd59a",
+      "articleFile": "./data/articles/ed06f9bbd59a.json",
+      "title": "Will Brewers be aggressive? What's Mets' strategy? Your Trade Deadline questions answered - MLB.com",
+      "titleKo": "브루어스는 공격적으로 행동할 것인가? 메츠의 전략은 무엇입니까? 거래 마감일에 대한 질문에 대한 답변 - MLB.com",
+      "link": "https://www.mlb.com/news/trade-deadline-2026-questions-answered",
+      "pubDate": "Tue, 28 Jul 2026 04:28:19 GMT",
+      "source": "MLB.com",
+      "category": "육성·스카우팅",
+      "readingMinutes": 6,
+      "bodyVerified": true,
+      "bodyChars": 7721,
+      "depthScore": 63
+    }
+  ],
+  "edition": "daily_longform",
+  "editionAt": "2026. 8. 4. AM 8:28",
+  "policy": "longform_body_verified_only",
+  "candidateCount": 30,
+  "selectedCount": 3,
+  "updatedAt": "2026-08-03T23:28:21.779Z"
+}
