@@ -5,9 +5,17 @@
   <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
   <meta name="theme-color" content="#00a489">
   <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Expires" content="0">
   <title>MODETOUR 여행 준비 안내</title>
-  <link rel="stylesheet" href="https://h3luv.github.io/extra-innings-take2-preview/travel-guide/style-v3.css?v=20260803-1015">
-  <link rel="stylesheet" href="https://h3luv.github.io/extra-innings-take2-preview/travel-guide/hotfix-v8.css?v=20260803-1015">
+  <link rel="stylesheet" href="https://h3luv.github.io/extra-innings-take2-preview/travel-guide/style-v3.css?v=20260803-1018">
+  <link rel="stylesheet" href="https://h3luv.github.io/extra-innings-take2-preview/travel-guide/hotfix-v8.css?v=20260803-1018">
+  <style>
+    .accordionSection .sectionHead{padding-right:112px!important}
+    .accordionMeta{right:4px!important;min-width:88px!important;display:inline-flex!important;align-items:center!important;justify-content:flex-end!important;white-space:nowrap!important;font-size:11px!important;line-height:1!important;color:var(--brand2)!important;font-weight:900!important}
+    .accordionChevron{display:none!important}
+    @media(max-width:420px){.accordionSection .sectionHead{padding-right:104px!important}.accordionMeta{min-width:84px!important;font-size:10px!important}}
+  </style>
 </head>
 <body>
 <div id="state" class="state show"><div class="stateIcon" id="stateIcon">🧳</div><h1 id="stateTitle">여행 안내를 불러오는 중입니다</h1><p id="stateText">잠시만 기다려 주세요.</p></div>
@@ -24,7 +32,35 @@
 </main>
 <footer><img src="https://h3luv.github.io/extra-innings-take2-preview/travel-info/modetour-logo.svg" alt="MODETOUR"><p>즐거운 여행을 준비하세요.</p><small>날씨 Open-Meteo · 환율 Frankfurter</small></footer>
 </div>
-<script src="https://h3luv.github.io/extra-innings-take2-preview/travel-guide/app-v3.js?v=20260803-1015"></script>
-<script src="https://h3luv.github.io/extra-innings-take2-preview/travel-guide/hotfix-v8.js?v=20260803-1015"></script>
+<script src="https://h3luv.github.io/extra-innings-take2-preview/travel-guide/app-v3.js?v=20260803-1018"></script>
+<script src="https://h3luv.github.io/extra-innings-take2-preview/travel-guide/hotfix-v8.js?v=20260803-1018"></script>
+<script>
+(() => {
+  function syncAccordionLabels() {
+    document.querySelectorAll('.accordionSection .sectionHead').forEach((head) => {
+      const meta = head.querySelector('.accordionMeta');
+      if (!meta) return;
+      const expanded = head.getAttribute('aria-expanded') === 'true';
+      meta.textContent = expanded ? '접기 ▲' : '펼쳐보기 ▼';
+    });
+  }
+
+  document.addEventListener('click', (event) => {
+    if (event.target.closest('.accordionSection .sectionHead')) {
+      requestAnimationFrame(syncAccordionLabels);
+    }
+  });
+
+  document.addEventListener('keydown', (event) => {
+    if ((event.key === 'Enter' || event.key === ' ') && event.target.closest('.accordionSection .sectionHead')) {
+      requestAnimationFrame(syncAccordionLabels);
+    }
+  });
+
+  const observer = new MutationObserver(syncAccordionLabels);
+  observer.observe(document.documentElement, { childList: true, subtree: true, attributes: true, attributeFilter: ['aria-expanded'] });
+  syncAccordionLabels();
+})();
+</script>
 </body>
 </html>
