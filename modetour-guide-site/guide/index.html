@@ -8,13 +8,57 @@
   <meta http-equiv="Pragma" content="no-cache">
   <meta http-equiv="Expires" content="0">
   <title>MODETOUR 여행 준비 안내</title>
-  <link rel="stylesheet" href="https://h3luv.github.io/extra-innings-take2-preview/travel-guide/style-v3.css?v=20260803-1024">
-  <link rel="stylesheet" href="https://h3luv.github.io/extra-innings-take2-preview/travel-guide/hotfix-v8.css?v=20260803-1024">
+  <link rel="stylesheet" href="https://h3luv.github.io/extra-innings-take2-preview/travel-guide/style-v3.css?v=20260803-1026">
+  <link rel="stylesheet" href="https://h3luv.github.io/extra-innings-take2-preview/travel-guide/hotfix-v8.css?v=20260803-1026">
   <style>
-    .accordionSection .sectionHead{padding-right:112px!important}
-    .accordionMeta{right:4px!important;width:88px!important;min-width:88px!important;display:inline-flex!important;align-items:center!important;justify-content:center!important;text-align:center!important;white-space:nowrap!important;font-size:11px!important;line-height:1!important;color:var(--brand2)!important;font-weight:900!important}
+    .accordionSection .sectionHead{padding-right:108px!important}
+    .accordionMeta{
+      position:absolute!important;
+      right:0!important;
+      top:50%!important;
+      transform:translateY(-50%)!important;
+      width:92px!important;
+      min-width:92px!important;
+      height:30px!important;
+      display:block!important;
+      padding:0!important;
+      border-radius:999px!important;
+      background:var(--brand)!important;
+      color:#fff!important;
+      white-space:nowrap!important;
+      font-size:11px!important;
+      line-height:30px!important;
+      font-weight:900!important;
+      box-sizing:border-box!important;
+      overflow:hidden!important;
+    }
+    .accordionLabelText{
+      position:absolute!important;
+      inset:0!important;
+      display:flex!important;
+      align-items:center!important;
+      justify-content:center!important;
+      text-align:center!important;
+      padding:0 18px 0 8px!important;
+      box-sizing:border-box!important;
+    }
+    .accordionLabelArrow{
+      position:absolute!important;
+      right:8px!important;
+      top:50%!important;
+      transform:translateY(-50%)!important;
+      display:block!important;
+      width:10px!important;
+      text-align:center!important;
+      line-height:1!important;
+      font-size:10px!important;
+    }
     .accordionChevron{display:none!important}
-    @media(max-width:420px){.accordionSection .sectionHead{padding-right:104px!important}.accordionMeta{width:84px!important;min-width:84px!important;font-size:10px!important}}
+    @media(max-width:420px){
+      .accordionSection .sectionHead{padding-right:104px!important}
+      .accordionMeta{width:90px!important;min-width:90px!important;font-size:10px!important}
+      .accordionLabelArrow{right:7px!important;font-size:9px!important}
+    }
   </style>
 </head>
 <body>
@@ -32,8 +76,8 @@
 </main>
 <footer><img src="https://h3luv.github.io/extra-innings-take2-preview/travel-info/modetour-logo.svg" alt="MODETOUR"><p>즐거운 여행을 준비하세요.</p><small>날씨 Open-Meteo · 환율 Frankfurter</small></footer>
 </div>
-<script src="https://h3luv.github.io/extra-innings-take2-preview/travel-guide/app-v3.js?v=20260803-1024"></script>
-<script src="https://h3luv.github.io/extra-innings-take2-preview/travel-guide/hotfix-v8.js?v=20260803-1024"></script>
+<script src="https://h3luv.github.io/extra-innings-take2-preview/travel-guide/app-v3.js?v=20260803-1026"></script>
+<script src="https://h3luv.github.io/extra-innings-take2-preview/travel-guide/hotfix-v8.js?v=20260803-1026"></script>
 <script>
 (() => {
   function syncAccordionLabels() {
@@ -41,7 +85,7 @@
       const meta = head.querySelector('.accordionMeta');
       if (!meta) return;
       const expanded = head.getAttribute('aria-expanded') === 'true';
-      meta.textContent = expanded ? '접기 ▲' : '펼쳐보기 ▼';
+      meta.innerHTML = `<span class="accordionLabelText">${expanded ? '접기' : '펼쳐보기'}</span><span class="accordionLabelArrow">${expanded ? '▲' : '▼'}</span>`;
     });
   }
 
