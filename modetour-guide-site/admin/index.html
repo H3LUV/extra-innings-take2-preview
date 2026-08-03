@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#00a489">
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Expires" content="0">
+  <title>MODETOUR 여행 준비 안내 생성기</title>
+  <link rel="stylesheet" href="https://h3luv.github.io/extra-innings-take2-preview/travel-guide-admin/style-v3.css?v=20260803-0920">
+  <link rel="stylesheet" href="https://h3luv.github.io/extra-innings-take2-preview/travel-guide-admin/hotfix-v4.css?v=20260803-0920">
+</head>
+<body>
+<header class="top"><div class="topin"><a class="logo" href="./"><img src="https://h3luv.github.io/extra-innings-take2-preview/travel-info/modetour-logo.svg" alt="MODETOUR"></a><small>직원용 여행 준비 안내 생성기 · VERCEL V8</small></div></header>
+<main>
+  <section class="intro"><div><span>TRAVEL GUIDE BUILDER</span><h1>고객용 여행 준비 안내 만들기</h1><p>상품명, 도시와 호텔을 입력하면 고객에게 보낼 모바일 안내 링크를 생성합니다.</p></div><button class="outline" id="fillSample" type="button">샘플 입력</button></section>
+
+  <section class="panel">
+    <div class="panelhead"><span class="num">1</span><h2>상품명</h2><span class="req">필수</span></div>
+    <label for="productName">고객 화면 상단에 표시할 상품명</label>
+    <input class="field" id="productName" maxlength="100" placeholder="예: 남미 핵심 3개국 리우데자네이루·페루·칸쿤 10일">
+    <p class="help">확정 일정 URL의 상품명은 자동으로 읽지 않습니다. 고객에게 보일 명칭을 직접 입력하세요.</p>
+  </section>
+
+  <section class="panel">
+    <div class="panelhead"><span class="num">2</span><h2>여행지 <small>(날씨 및 환율 정보 가져올 곳)</small></h2><span class="req">필수 · 최대 5개</span></div>
+    <label for="cityInput">도시 입력</label>
+    <div class="cityrow"><input class="field" id="cityInput" placeholder="예: 취리히, 루체른, 프라하"><button class="primary smallbtn" id="addCity" type="button">추가</button></div>
+    <div class="suggestions" id="suggestions"></div>
+    <div class="chips" id="cityChips"></div><div class="count" id="cityCount">0 / 5개 선택</div>
+    <p class="help">도시를 입력하면 고객 화면에서 날씨와 해당 국가 통화를 자동으로 확인합니다. 검색 결과가 뜨면 정확한 도시를 선택하세요.</p>
+  </section>
+
+  <section class="panel">
+    <div class="panelhead"><span class="num">3</span><h2>확정 일정</h2><span class="req">필수</span></div>
+    <label for="scheduleUrl">확정 일정 URL</label>
+    <input class="field" id="scheduleUrl" type="url" placeholder="https://www.modetour.com/...">
+    <span class="help">고객 페이지의 ‘확정 일정 바로가기’ 버튼에 연결됩니다.</span>
+  </section>
+
+  <section class="panel">
+    <div class="panelhead"><span class="num">4</span><h2>가이드 정보</h2><span class="req">필수</span></div>
+    <label for="guideInfo">가이드 또는 인솔자 안내</label>
+    <textarea class="textarea" id="guideInfo" placeholder="인솔자 이름, 현지 연락처, 카카오톡 ID, 비상 연락 안내 등을 입력하세요."></textarea>
+  </section>
+
+  <section class="panel">
+    <div class="panelhead"><span class="num">5</span><h2>확정 호텔</h2><span class="req">숙박 일차·호텔명·도시 필수</span></div>
+    <div class="hotels" id="hotels"></div>
+    <button class="addhotel" id="addHotel" type="button">＋ 호텔 추가</button>
+    <p class="help">숙박 일차는 ‘1일차’, ‘2~3일차’처럼 입력하면 고객 화면에서 호텔명 앞에 표시됩니다.</p>
+  </section>
+
+  <section class="panel">
+    <div class="panelhead"><span class="num">6</span><h2>기타 안내사항</h2><span class="req">도시 기준 자동 생성 · 수정 가능</span></div>
+    <div class="autohead"><label for="notes">여행지 맞춤 안내</label><button class="outline tiny" id="regenerateNotes" type="button">도시 기준 다시 생성</button></div>
+    <textarea class="textarea" id="notes" placeholder="여행지를 추가하면 준비 안내가 자동으로 생성됩니다."></textarea>
+    <div class="notesstatus" id="notesStatus"></div>
+    <p class="help">자동 생성 문구를 자유롭게 수정하고, 상품별 미팅·수하물·준비 서류 안내를 덧붙일 수 있습니다.</p>
+  </section>
+
+  <section class="panel">
+    <div class="panelhead"><span class="num">7</span><h2>링크 유효기간</h2></div>
+    <select class="select" id="expiryMonths"><option value="1">생성 후 1개월</option><option value="3" selected>생성 후 3개월</option><option value="6">생성 후 6개월</option><option value="12">생성 후 12개월</option></select>
+    <div class="notice">안내 데이터는 전용 Cloudflare 단축 서버에 설정한 유효기간 동안 저장됩니다. 여권번호·생년월일·고객 연락처 같은 개인정보는 입력하지 마세요.</div>
+  </section>
+
+  <div class="error" id="error"></div>
+  <section class="result" id="result">
+    <h3>고객용 안내 링크가 생성되었습니다</h3>
+    <p id="resultDesc">문자나 카카오톡에 붙여 넣어 발송하세요.</p>
+    <div class="linkbox"><input class="field" id="generatedLink" readonly><button class="primary" id="copyLink" type="button">링크 복사</button></div>
+    <div class="resultbuttons"><a class="outline" id="previewLink" target="_blank" rel="noopener">고객 화면 미리보기</a><button class="dark" id="copyMessage" type="button">발송 문구 복사</button></div>
+    <p class="shortnote" id="shortStatus"></p>
+  </section>
+
+  <div class="actions"><button class="generate" id="generate" type="button">고객 안내 단축 URL 생성하기</button></div>
+</main>
+<script src="https://h3luv.github.io/extra-innings-take2-preview/travel-guide-admin/app-v3.js?v=20260803-0920"></script>
+<script src="https://h3luv.github.io/extra-innings-take2-preview/travel-guide-admin/hotfix-v6.js?v=20260803-0920"></script>
+<script src="https://h3luv.github.io/extra-innings-take2-preview/travel-guide-admin/hotfix-v7.js?v=20260803-0920"></script>
+<script src="./hotfix-v8.js?v=20260803-0947"></script>
+</body>
+</html>
