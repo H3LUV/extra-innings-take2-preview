@@ -58,7 +58,6 @@ const ENTRY_MATCH=[
  ['friend',['친구 만나기','🤝 친구 만나기']],
  ['sns',['SNS 확인','📱 SNS 확인']]
 ];
-
 function deepest(){
  try{
   let w=frame.contentWindow;
@@ -130,7 +129,7 @@ function eligibleFor(w,state,key,item){
   }
  }catch(e){pool=[]}
  const related=pool.filter(ev=>item.words.some(word=>eventText(ev).includes(word)));
- return weightedPick(related.length?related:pool)||safeEvent(key,item);
+ return weightedPick(related)||safeEvent(key,item);
 }
 function finishDay(w,state){
  try{if(typeof w.Game?.Time?.advancePart==='function')w.Game.Time.advancePart(state)}catch(e){}
@@ -146,7 +145,7 @@ function injectStyle(w){
  s.textContent=`
  :root{--ei-blue:#0b3e8b;--ei-deep:#03183e;--ei-paper:#f7f8f4;--ei-ink:#071c45;--ei-yellow:#ffd51f}
  .ei-life-entry{position:relative!important;color:transparent!important;text-shadow:none!important}
- .ei-life-entry::before{content:attr(data-ei-label);position:absolute;inset:0;display:grid;place-items:center;color:inherit;color:#f5efe6;font:700 14px "Noto Sans KR",system-ui;white-space:pre-wrap}
+ .ei-life-entry::before{content:attr(data-ei-label);position:absolute;inset:0;display:grid;place-items:center;color:#f5efe6;font:700 14px "Noto Sans KR",system-ui;white-space:pre-wrap}
  .ei-life-screen .screen-title{background:linear-gradient(135deg,#05275f,#0c4fa4)!important;color:#fff!important;border:0!important;padding:17px 18px!important}
  .ei-life-screen .screen-body{background:linear-gradient(#eef5fb,#dbeaff)!important;padding:16px!important;gap:12px!important}
  .ei-life-list{display:grid;gap:12px}
@@ -184,7 +183,7 @@ function installNavSync(w){
    const before=[...root.querySelectorAll('.bottom-nav')];
    const out=originalAppend(root,activeId);
    const navs=[...root.querySelectorAll('.bottom-nav')];
-   let nav=navs.find(n=>!before.includes(n))||navs[navs.length-1];
+   const nav=navs.find(n=>!before.includes(n))||navs[navs.length-1];
    if(UI.__EI_HOME_NAV__&&nav){
     const clone=UI.__EI_HOME_NAV__.cloneNode(true);
     clone.classList.add('ei-nav-clone');
