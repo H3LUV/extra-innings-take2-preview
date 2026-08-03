@@ -1,0 +1,50 @@
+name: Update Today MLB edition
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - .github/workflows/today-mlb-daily.yml
+  schedule:
+    # 22:00 UTC = 07:00 Asia/Seoul
+    - cron: '0 22 * * *'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: today-mlb-daily
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+
+    steps:
+      - name: Check out Cloudflare site branch
+        uses: actions/checkout@v4
+        with:
+          ref: today-mlb-cloudflare
+          fetch-depth: 0
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Generate daily edition
+        run: npm run build
+
+      - name: Commit generated data
+        run: |
+          git config user.name "today-mlb-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add public/data
+          if git diff --cached --quiet; then
+            echo "No data changes"
+          else
+            git commit -m "Update daily MLB edition"
+            git push origin HEAD:today-mlb-cloudflare
+          fi
