@@ -1,0 +1,8 @@
+{
+  "name": "today-mlb-cloudflare",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node scripts/build-daily.mjs"
+  }
+}
