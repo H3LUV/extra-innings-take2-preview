@@ -3,50 +3,70 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover">
-<title>EXTRA INNINGS TAKE 2 v0.9.1</title>
+<title>EXTRA INNINGS TAKE 2 v0.9.1 direct UI</title>
 <style>
-html,body{margin:0;width:100%;height:100%;overflow:hidden;background:#10121c}#game{display:block;width:100%;height:100%;border:0}#status{position:fixed;left:50%;bottom:12px;transform:translateX(-50%);z-index:20;padding:7px 12px;border-radius:16px;background:#10121ce8;color:#fff;font:12px system-ui;opacity:1;transition:.25s}
+html,body{margin:0;width:100%;height:100%;overflow:hidden;background:#10121c}#game{display:block;width:100%;height:100%;border:0;background:#10121c}#status{position:fixed;left:50%;bottom:12px;transform:translateX(-50%);z-index:20;padding:7px 12px;border-radius:16px;background:#10121ce8;color:#fff;font:12px system-ui;opacity:1;transition:.25s;pointer-events:none}
 </style>
 </head>
 <body>
-<iframe id="game" src="../extra-innings-take2-v0900/?v=0910"></iframe><div id="status">선택 인물별 이벤트 연결 중</div>
+<iframe id="game" title="EXTRA INNINGS TAKE 2" src="../extra-innings-take2-v0880/?v=0911"></iframe>
+<div id="status">생활 메뉴와 이벤트 UI 적용 중</div>
 <script>
 (()=>{
- const frame=document.getElementById('game'),status=document.getElementById('status');let tries=0;
- const roleRules={
-  '감독과 대화한다':{tag:'manager',include:['감독','출전','선발','보직','기용','면담'],exclude:['코치','동료','라이벌','경쟁자']},
-  '코치에게 지도를 받는다':{tag:'coach',include:['코치','지도','레슨','훈련','폼','기술'],exclude:['감독 면담','동료와','라이벌','경쟁자']},
-  '동료와 시간을 보낸다':{tag:'teammate',include:['동료','팀메이트','선배','후배','주장','친구','라커룸','회식','팀워크'],exclude:['감독','코치','라이벌','경쟁자']},
-  '경쟁자와 이야기한다':{tag:'rival',include:['라이벌','경쟁자','주전 경쟁','포지션 경쟁','도발'],exclude:['감독','코치','동료와 시간을']},
-  '가족과 식사한다':{tag:'family_meal',include:['가족','식사','저녁','밥상'],exclude:[]},
-  '아버지와 대화한다':{tag:'father',include:['아버지','부친'],exclude:['어머니']},
-  '어머니와 외출한다':{tag:'mother',include:['어머니','엄마','장보기','외출'],exclude:['아버지']},
-  '가족과 나들이를 간다':{tag:'family_outing',include:['가족','나들이','여행','외출'],exclude:[]},
-  'PC방에 간다':{tag:'pc_room',include:['PC방','게임','친구'],exclude:['감독','코치']},
-  '카페에서 이야기한다':{tag:'cafe',include:['카페','대화','고민','친구'],exclude:['감독','코치']},
-  '영화를 본다':{tag:'movie',include:['영화','극장','친구'],exclude:['감독','코치']},
-  '산책하거나 외출한다':{tag:'walk',include:['산책','외출','친구','거리'],exclude:['감독','코치']},
-  '수업에 집중한다':{tag:'class',include:['수업','교실','시험','공부','성적'],exclude:['동아리','진로 상담']},
-  '동아리 활동을 한다':{tag:'club',include:['동아리','축제','학교 행사'],exclude:['감독','코치']},
-  '진로 상담을 받는다':{tag:'career_counsel',include:['진로','상담','담임','선생님'],exclude:[]},
-  '학교에서 휴식한다':{tag:'school_rest',include:['학교','옥상','휴식','교실'],exclude:['훈련']},
-  '게시물을 올린다':{tag:'sns_post',include:['SNS','게시물','업로드','사진','팔로워'],exclude:[]},
-  '팬 반응을 확인한다':{tag:'fan_reaction',include:['팬','댓글','반응','SNS'],exclude:[]},
-  '지인 게시물을 확인한다':{tag:'acquaintance_post',include:['지인','게시물','SNS','친구'],exclude:[]},
-  'SNS 활동을 쉰다':{tag:'sns_rest',include:['SNS','휴식','휴대폰'],exclude:[]}
+ const frame=document.getElementById('game');
+ const status=document.getElementById('status');
+ let tries=0;
+ const defs={
+  school:{title:'학교생활',items:[
+   {label:'수업에 집중한다',include:['수업','교실','시험','공부','성적','담임'],exclude:['동아리','진로'],title:'수업에 집중한다',desc:'오늘은 수업과 학업에 집중하기로 했다.',baseball:false},
+   {label:'동아리 활동을 한다',include:['동아리','축제','학교 행사','친구'],exclude:['감독','코치'],title:'동아리 활동',desc:'수업이 끝난 뒤 동아리 친구들과 시간을 보냈다.',baseball:false},
+   {label:'진로 상담을 받는다',include:['진로','상담','담임','선생님','미래'],exclude:[],title:'진로 상담',desc:'담임 선생님과 앞으로의 진로에 대해 이야기했다.',baseball:false},
+   {label:'학교에서 휴식한다',include:['학교','옥상','휴식','교실','양호실'],exclude:['훈련'],title:'학교에서의 휴식',desc:'학교에서 잠시 숨을 고르며 몸과 마음을 정리했다.',baseball:false}
+  ]},
+  family:{title:'가족과의 시간',items:[
+   {label:'가족과 식사한다',include:['가족','식사','저녁','밥상'],exclude:[],title:'가족과의 식사',desc:'오랜만에 가족과 한자리에 앉아 식사했다.',baseball:false},
+   {label:'아버지와 대화한다',include:['아버지','부친'],exclude:['어머니','엄마'],title:'아버지와의 대화',desc:'아버지와 야구와 미래에 대해 이야기를 나눴다.',baseball:false},
+   {label:'어머니와 외출한다',include:['어머니','엄마','장보기','외출'],exclude:['아버지'],title:'어머니와 외출',desc:'어머니와 함께 외출하며 평소 하지 못한 이야기를 나눴다.',baseball:false},
+   {label:'가족과 나들이를 간다',include:['가족','나들이','여행','외출'],exclude:[],title:'가족 나들이',desc:'가족과 함께 야구장을 벗어난 하루를 보냈다.',baseball:false}
+  ]},
+  friend:{title:'친구 만나기',items:[
+   {label:'PC방에 간다',include:['PC방','게임','친구'],exclude:['감독','코치'],title:'PC방에서',desc:'친구와 PC방에 가서 잠시 야구 생각을 내려놓았다.',baseball:false},
+   {label:'카페에서 이야기한다',include:['카페','대화','고민','친구'],exclude:['감독','코치'],title:'카페의 대화',desc:'친구와 카페에 앉아 미뤄둔 이야기를 나눴다.',baseball:false},
+   {label:'영화를 본다',include:['영화','극장','친구'],exclude:['감독','코치'],title:'평범한 오후',desc:'친구와 영화를 보며 평범한 시간을 보냈다.',baseball:false},
+   {label:'산책하거나 외출한다',include:['산책','외출','친구','거리'],exclude:['감독','코치'],title:'늦은 산책',desc:'친구와 천천히 걸으며 최근의 고민을 이야기했다.',baseball:false}
+  ]},
+  team:{title:'팀 동료·감독',items:[
+   {label:'감독과 대화한다',include:['감독','출전','선발','보직','기용','면담'],exclude:['코치','동료','라이벌','경쟁자'],title:'감독 면담',desc:'감독과 현재 역할과 출전 기회에 대해 이야기했다.',baseball:true},
+   {label:'코치에게 지도를 받는다',include:['코치','지도','레슨','훈련','폼','기술'],exclude:['감독 면담','라이벌','경쟁자'],title:'코치의 지도',desc:'코치에게 최근 플레이의 문제점과 개선 방향을 배웠다.',baseball:true},
+   {label:'동료와 시간을 보낸다',include:['동료','팀메이트','선배','후배','주장','라커룸','회식','팀워크'],exclude:['감독','코치','라이벌','경쟁자'],title:'라커룸의 대화',desc:'훈련이 끝난 뒤 동료와 팀 분위기에 대해 이야기했다.',baseball:true},
+   {label:'경쟁자와 이야기한다',include:['라이벌','경쟁자','주전 경쟁','포지션 경쟁','도발'],exclude:['감독','코치'],title:'같은 자리를 두고',desc:'경쟁자와 주전 자리를 두고 솔직한 대화를 나눴다.',baseball:true}
+  ]},
+  sns:{title:'SNS 확인',items:[
+   {label:'게시물을 올린다',include:['SNS','게시물','업로드','사진','팔로워'],exclude:[],title:'새 게시물',desc:'오늘의 모습을 담은 게시물을 SNS에 올렸다.',baseball:false},
+   {label:'팬 반응을 확인한다',include:['팬','댓글','반응','SNS'],exclude:[],title:'엇갈린 반응',desc:'팬들의 응원과 비판이 뒤섞인 반응을 확인했다.',baseball:false},
+   {label:'지인 게시물을 확인한다',include:['지인','게시물','SNS','친구'],exclude:[],title:'지인의 게시물',desc:'지인이 올린 게시물을 보며 복잡한 기분이 들었다.',baseball:false},
+   {label:'SNS 활동을 쉰다',include:['SNS','휴식','휴대폰','알림'],exclude:[],title:'휴대폰을 내려놓고',desc:'알림을 끄고 온라인에서 잠시 벗어났다.',baseball:false}
+  ]}
  };
- function deepest(){try{let w=frame.contentWindow;for(let i=0;i<34;i++){const f=w?.document?.getElementById('game');if(!f?.contentWindow)break;w=f.contentWindow}return w}catch(e){return null}}
- function stateOf(w){return w?.UI?.state||w?.Game?.state||w?.gameState||w?.state||null}
- function eventText(ev){return [ev?.title,ev?.desc,ev?.line,ev?.category,ev?.characterId,ev?.role,ev?.targetRole].filter(Boolean).join(' ')}
- function matches(ev,rule){const text=eventText(ev);if(rule.exclude.some(k=>text.includes(k)))return false;return rule.include.some(k=>text.includes(k))}
- function installEventFilter(w){const E=w?.Game?.Events;if(!E||typeof E.eligible!=='function'||E.__V091_FILTER__)return;E.__V091_FILTER__=true;const original=E.eligible.bind(E);E.eligible=function(state,category,filterFn){const base=original(state,category,filterFn);const pending=state?.pendingLifeActivity||state?.lastLifeActivity;if(!pending?.choice)return base;const rule=roleRules[pending.choice];if(!rule)return base;const relevant=base.filter(ev=>matches(ev,rule));state.pendingActivityEventTag=rule.tag;return relevant.length?relevant:base};
- if(typeof E.resolveChoice==='function'){const resolve=E.resolveChoice.bind(E);E.resolveChoice=function(state,event,index){const result=resolve(state,event,index);if(state){delete state.pendingLifeActivity;delete state.pendingActivityEventTag}return result}}
- }
- function markChoice(w,choice){const s=stateOf(w);if(!s)return;s.pendingLifeActivity={choice,tag:roleRules[choice]?.tag||'',day:s.player?.totalDays||s.totalDays||0}}
- function patch(){const w=deepest();if(!w?.document?.body||!w?.Game)return false;if(w.__V091__)return true;w.__V091__=1;installEventFilter(w);
- const d=w.document;d.addEventListener('click',e=>{const b=e.target.closest?.('#v090-life-modal [data-i],#v089-life-modal [data-i]');if(!b)return;const choice=(b.textContent||'').replace(/\s+/g,' ').trim();if(roleRules[choice])markChoice(w,choice)},true);
- const mo=new w.MutationObserver(()=>installEventFilter(w));mo.observe(d.body,{childList:true,subtree:true});d.title='EXTRA INNINGS TAKE 2 v0.9.1';return true}
- function tick(){tries++;if(patch()){status.textContent='v0.9.1 적용 완료';setTimeout(()=>status.style.opacity='0',900)}else if(tries<650)setTimeout(tick,100);else status.textContent='이벤트 연결 적용 실패'}frame.addEventListener('load',()=>setTimeout(tick,250));setTimeout(tick,500)
+ function deepest(){try{let w=frame.contentWindow;for(let i=0;i<32;i++){const f=w?.document?.getElementById('game');if(!f?.contentWindow)break;w=f.contentWindow}return w}catch(e){return null}}
+ function textOf(ev){return [ev?.id,ev?.title,ev?.desc,ev?.line,ev?.text,ev?.characterId,ev?.role,ev?.targetRole].filter(Boolean).join(' ')}
+ function match(ev,item){const t=textOf(ev);if(item.exclude.some(k=>t.includes(k)))return false;return item.include.some(k=>t.includes(k))}
+ function fallbackEvent(category,item){const effects=item.baseball?{'condition.morale':2,'condition.teamStanding':1}:{'condition.morale':2,'condition.stress':-2};return {id:'ei_'+category+'_'+Date.now(),title:item.title,category,weight:1,cooldown:0,desc:item.desc,choices:[{text:'상대의 이야기를 끝까지 듣는다',effects,result:'차분히 대화를 마치며 서로를 조금 더 이해하게 됐다.'},{text:'내 생각을 솔직하게 말한다',effects:{'condition.confidence':2,'condition.stress':-1},result:'내 생각을 숨기지 않고 솔직하게 전했다.'},{text:'오늘은 가볍게 마무리한다',effects:{'condition.morale':1},result:'부담을 남기지 않고 오늘의 시간을 마무리했다.'}]}}
+ function injectStyle(w){if(w.document.getElementById('ei-direct-style'))return;const s=w.document.createElement('style');s.id='ei-direct-style';s.textContent=`
+ .ei-life-list{display:flex;flex-direction:column;gap:12px}.ei-life-card{width:100%;min-height:84px;text-align:left;border:3px solid #0b438f!important;border-radius:0!important;background:linear-gradient(160deg,#fff 0 75%,#e9f2ff 75%)!important;color:#071c45!important;box-shadow:0 6px 0 #03183e!important;padding:13px 14px!important;font-weight:900!important}.ei-life-card:active{transform:translateY(3px)!important;box-shadow:0 3px 0 #03183e!important}.ei-life-title{display:block;font-size:18px;font-weight:900}.ei-life-desc{display:block;margin-top:4px;color:#63718d;font-size:12px;font-weight:700;line-height:1.45}
+ .overlay.ei-event-overlay{background:rgba(2,13,37,.88);align-items:flex-end}.ei-event-overlay .event-box,.ei-event-overlay .result-box{background:#f7f8f4;color:#071c45;border-radius:0;max-width:480px;border-top:8px solid #e23a43;box-shadow:0 -8px 0 #073b81}.ei-event-overlay .overlay-scroll{padding:22px 18px 16px}.ei-event-overlay .event-title,.ei-event-overlay .result-title{color:#073b81;font-size:25px;text-shadow:none;border-bottom:4px solid #e23a43;padding-bottom:8px;margin-bottom:13px}.ei-event-overlay .event-desc{color:#33415e;font-weight:700;line-height:1.65}.ei-event-overlay .choice-btn{background:#fff!important;color:#071c45!important;border:3px solid #0b438f!important;border-radius:0!important;box-shadow:0 4px 0 #03183e!important;font-weight:900!important}.ei-event-overlay .choice-btn:disabled{opacity:.55}.ei-event-overlay .result-line{background:#eaf2ff;color:#071c45;border:2px solid #0b438f;border-radius:0;font-weight:800}.ei-event-overlay .overlay-sticky-footer{background:#f7f8f4;border-top:3px solid #0b438f}.ei-event-overlay .overlay-sticky-footer .btn{background:#e23a43!important;color:#fff!important;border:3px solid #fff!important;border-radius:0!important;font-weight:900!important}
+ `;w.document.head.appendChild(s)}
+ function finish(w,state){w.Game.Time.advancePart(state);w.Game.Save.autosave(state);if(typeof w.checkGameOverConditions==='function')w.checkGameOverConditions();w.UI.showHub()}
+ function showActivity(w,category,fallback){const spec=defs[category],UI=w.UI,state=w.Game.state;if(!spec||!state)return;const root=UI.clear();const cards=spec.items.map(item=>UI.el('button',{class:'btn ei-life-card',onclick:()=>runActivity(w,category,item,fallback)},[UI.el('span',{class:'ei-life-title'},item.label),UI.el('span',{class:'ei-life-desc'},item.desc)]));root.appendChild(UI.screen(spec.title,[UI.el('div',{class:'ei-life-list'},cards)],{footer:[UI.button('← 홈으로',()=>UI.showHub(),'btn btn-ghost')]}));UI.appendNav(root,'relations')}
+ function runActivity(w,category,item,fallback){const state=w.Game.state;if(!state||state.__eiActivityBusy)return;state.__eiActivityBusy=1;state.__eiPendingActivity={category,label:item.label,baseball:item.baseball};let pool=[];try{pool=w.Game.Events.eligible(state,category)||[]}catch(e){}let relevant=pool.filter(ev=>match(ev,item));const ev=relevant.length?relevant[Math.floor(Math.random()*relevant.length)]:fallbackEvent(category,item);w.UI.showEventModal(ev,()=>finish(w,state))}
+ function install(w){if(!w?.UI||!w?.Game?.Events||!w?.document?.body)return false;if(w.__EI_DIRECT_UI__)return true;w.__EI_DIRECT_UI__=1;injectStyle(w);const UI=w.UI,Game=w.Game;const originalDo=UI.doActionCategory?.bind(UI);UI.doActionCategory=function(category,fallback){if(defs[category])return showActivity(w,category,fallback);return originalDo?originalDo(category,fallback):undefined};
+ const originalResolve=Game.Events.resolveChoice.bind(Game.Events);Game.Events.resolveChoice=function(state,event,index){const result=originalResolve(state,event,index);const p=state?.__eiPendingActivity;if(p&&!p.baseball){if(typeof Game.Events.applyDelta==='function')Game.Events.applyDelta(state,'condition.gameSense',-1);else if(state.player?.condition)state.player.condition.gameSense=Math.max(0,(state.player.condition.gameSense||0)-1);result.changeLog=result.changeLog||[];result.changeLog.push('[상태] 경기 감각 -1')}if(state){delete state.__eiPendingActivity;delete state.__eiActivityBusy}return result};
+ UI.showEventModal=function(event,onClose){const state=Game.state,overlay=UI.el('div',{class:'overlay ei-event-overlay'});let locked=false;const buttons=[];const box=UI.el('div',{class:'event-box'},[UI.el('div',{class:'overlay-scroll'},[UI.el('div',{class:'event-title'},event.title),UI.el('div',{class:'event-desc'},event.desc),UI.el('div',{class:'event-choices'},event.choices.map((c,idx)=>{const b=UI.button(c.text,()=>{if(locked)return;locked=true;buttons.forEach(x=>x.disabled=true);let result;try{result=Game.Events.resolveChoice(state,event,idx)}catch(err){locked=false;buttons.forEach(x=>x.disabled=false);throw err}overlay.remove();UI.showResultOverlay(event.title,[result.text,...(result.changeLog||[])],onClose)},'btn choice-btn'+(c.risky?' risky':''));buttons.push(b);return b}))])]);overlay.appendChild(box);w.document.body.appendChild(overlay)};
+ UI.showResultOverlay=function(title,lines,onClose){const overlay=UI.el('div',{class:'overlay ei-event-overlay'});let closed=false;const close=()=>{if(closed)return;closed=true;overlay.remove();if(onClose)onClose()};const box=UI.el('div',{class:'result-box'},[UI.el('div',{class:'overlay-scroll'},[UI.el('div',{class:'result-title'},title),UI.el('div',{class:'result-lines'},(lines||[]).filter(Boolean).map(l=>UI.el('div',{class:'result-line'},l)))]),UI.el('div',{class:'overlay-sticky-footer'},[UI.button('확인',close,'btn btn-primary btn-lg')])]);overlay.appendChild(box);w.document.body.appendChild(overlay)};
+ w.document.title='EXTRA INNINGS TAKE 2 v0.9.1';return true}
+ function tick(){tries++;const w=deepest();if(install(w)){status.textContent='생활 메뉴·이벤트 UI 적용 완료';setTimeout(()=>status.style.opacity='0',900)}else if(tries<700)setTimeout(tick,100);else status.textContent='UI 적용 실패'}
+ frame.addEventListener('load',()=>setTimeout(tick,250));setTimeout(tick,500)
 })();
 </script>
-</body></html>
+</body>
+</html>
