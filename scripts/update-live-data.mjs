@@ -1,0 +1,13 @@
+import fs from "node:fs/promises";
+const OUT=new URL("../public/data/",import.meta.url),KST="Asia/Seoul";
+const ymd=(d=new Date())=>new Intl.DateTimeFormat("en-CA",{timeZone:KST,year:"numeric",month:"2-digit",day:"2-digit"}).format(d);
+const shift=(s,n)=>{const d=new Date(`${s}T00:00:00+09:00`);d.setUTCDate(d.getUTCDate()+n);return ymd(d)};
+const get=async url=>{const r=await fetch(url,{headers:{"user-agent":"today-mlb/1.0"}});if(!r.ok)throw new Error(`${r.status} ${url}`);return r.json()};
+const today=ymd(),start=shift(today,-1),end=shift(today,1),season=Number(today.slice(0,4));
+const [scheduleRaw,standingsRaw]=await Promise.all([get(`https://statsapi.mlb.com/api/v1/schedule?sportId=1&startDate=${start}&endDate=${end}&hydrate=linescore,team,probablePitcher,decisions`),get(`https://statsapi.mlb.com/api/v1/standings?leagueId=103,104&season=${season}&standingsTypes=regularSeason&hydrate=division,team`)]);
+const games=(scheduleRaw.dates||[]).flatMap(d=>d.games||[]).map(g=>({id:g.gamePk,status:g.status?.detailedState||"",venue:g.venue?.name||"",gameDate:g.gameDate,away:{id:g.teams?.away?.team?.id,name:g.teams?.away?.team?.name||"",score:g.teams?.away?.score??null,record:g.teams?.away?.leagueRecord||null},home:{id:g.teams?.home?.team?.id,name:g.teams?.home?.team?.name||"",score:g.teams?.home?.score??null,record:g.teams?.home?.leagueRecord||null},probable:{away:g.teams?.away?.probablePitcher?.fullName||"",home:g.teams?.home?.probablePitcher?.fullName||""},decisions:{winner:g.decisions?.winner?.fullName||"",loser:g.decisions?.loser?.fullName||"",save:g.decisions?.save?.fullName||""}}));
+const byDate={};for(const g of games){const key=ymd(new Date(g.gameDate));(byDate[key]??=[]).push(g)}for(const list of Object.values(byDate))list.sort((a,b)=>new Date(a.gameDate)-new Date(b.gameDate));
+await fs.writeFile(new URL("schedule.json",OUT),JSON.stringify({start,end,defaultDate:today,byDate,updatedAt:new Date().toISOString(),source:"MLB Stats API"},null,2));
+const divisions=(standingsRaw.records||[]).map(r=>({division:r.division?.name||r.division?.nameShort||"",league:r.league?.id===103?"AL":"NL",teams:(r.teamRecords||[]).map(t=>({id:t.team?.id,name:t.team?.name||"",w:t.wins,l:t.losses,pct:t.winningPercentage,gb:t.gamesBack,streak:t.streak?.streakCode||""}))}));
+await fs.writeFile(new URL("standings.json",OUT),JSON.stringify({season,divisions,updatedAt:new Date().toISOString(),source:"MLB Stats API"},null,2));
+console.log(`Updated live fallback: ${games.length} games, ${divisions.length} divisions`);
