@@ -29,7 +29,8 @@ function renderNews(d){
   $('#newsList').innerHTML=items.length?items.map(x=>{
     const href=x.link||x.originalLink||'#';
     const external=/^https?:/i.test(href);
-    return `<a class="news" href="${esc(href)}"${external?' target="_blank" rel="noopener noreferrer"':''}><strong>${esc(x.titleKo||x.title)}</strong>${x.summaryKo?`<p class="news-summary">${esc(x.summaryKo)}</p>`:''}<div class="sub">${esc(x.source||'미국 현지 매체')} · ${x.summaryKo?'한국어 번역·요약 보기':'원문 보기'}</div></a>`;
+    const label=x.translationType||x.accessLabel||'상세 한국어 정리';
+    return `<a class="news" href="${esc(href)}"${external?' target="_blank" rel="noopener noreferrer"':''}><strong>${esc(x.titleKo||x.title)}</strong>${x.summaryKo?`<p class="news-summary">${esc(x.summaryKo)}</p>`:''}<div class="sub">${esc(x.source||'미국 현지 매체')} · ${esc(label)}</div></a>`;
   }).join(''):`<div class="empty">${esc(d?.message||'선정된 읽을거리가 없습니다.')}</div>`;
 }
 
