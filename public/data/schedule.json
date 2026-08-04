@@ -2,6 +2,6 @@
   "league": "NBA",
   "status": "offseason",
   "games": [],
-  "message": "현재 NBA 정규시즌 경기가 없습니다. 새 시즌 일정이 시작되면 실시간 경기 정보로 자동 전환됩니다.",
-  "updatedAt": "2026-08-04T15:30:00+09:00"
+  "message": "오늘 예정된 NBA 경기가 없습니다.",
+  "updatedAt": "2026-08-04T06:41:31.283Z"
 }

@@ -1,7 +1,228 @@
 {
   "league": "NBA",
-  "status": "offseason",
-  "conferences": [],
-  "message": "2026-27시즌 순위 데이터 준비 중입니다. 시즌 개막 후 동부·서부 순위가 자동으로 표시됩니다.",
-  "updatedAt": "2026-08-04T15:30:00+09:00"
+  "status": "active",
+  "conferences": [
+    {
+      "name": "Eastern Conference",
+      "teams": [
+        {
+          "seed": 1,
+          "name": "Detroit Pistons",
+          "w": "60",
+          "l": "22",
+          "gb": "-"
+        },
+        {
+          "seed": 2,
+          "name": "Boston Celtics",
+          "w": "56",
+          "l": "26",
+          "gb": "-"
+        },
+        {
+          "seed": 3,
+          "name": "New York Knicks",
+          "w": "53",
+          "l": "29",
+          "gb": "-"
+        },
+        {
+          "seed": 4,
+          "name": "Cleveland Cavaliers",
+          "w": "52",
+          "l": "30",
+          "gb": "-"
+        },
+        {
+          "seed": 5,
+          "name": "Toronto Raptors",
+          "w": "46",
+          "l": "36",
+          "gb": "-"
+        },
+        {
+          "seed": 6,
+          "name": "Atlanta Hawks",
+          "w": "46",
+          "l": "36",
+          "gb": "-"
+        },
+        {
+          "seed": 7,
+          "name": "Philadelphia 76ers",
+          "w": "45",
+          "l": "37",
+          "gb": "-"
+        },
+        {
+          "seed": 8,
+          "name": "Orlando Magic",
+          "w": "45",
+          "l": "37",
+          "gb": "-"
+        },
+        {
+          "seed": 9,
+          "name": "Charlotte Hornets",
+          "w": "44",
+          "l": "38",
+          "gb": "-"
+        },
+        {
+          "seed": 10,
+          "name": "Miami Heat",
+          "w": "43",
+          "l": "39",
+          "gb": "-"
+        },
+        {
+          "seed": 11,
+          "name": "Milwaukee Bucks",
+          "w": "32",
+          "l": "50",
+          "gb": "-"
+        },
+        {
+          "seed": 12,
+          "name": "Chicago Bulls",
+          "w": "31",
+          "l": "51",
+          "gb": "-"
+        },
+        {
+          "seed": 13,
+          "name": "Brooklyn Nets",
+          "w": "20",
+          "l": "62",
+          "gb": "-"
+        },
+        {
+          "seed": 14,
+          "name": "Indiana Pacers",
+          "w": "19",
+          "l": "63",
+          "gb": "-"
+        },
+        {
+          "seed": 15,
+          "name": "Washington Wizards",
+          "w": "17",
+          "l": "65",
+          "gb": "-"
+        }
+      ]
+    },
+    {
+      "name": "Western Conference",
+      "teams": [
+        {
+          "seed": 1,
+          "name": "Oklahoma City Thunder",
+          "w": "64",
+          "l": "18",
+          "gb": "-"
+        },
+        {
+          "seed": 2,
+          "name": "San Antonio Spurs",
+          "w": "62",
+          "l": "20",
+          "gb": "-"
+        },
+        {
+          "seed": 3,
+          "name": "Denver Nuggets",
+          "w": "54",
+          "l": "28",
+          "gb": "-"
+        },
+        {
+          "seed": 4,
+          "name": "Los Angeles Lakers",
+          "w": "53",
+          "l": "29",
+          "gb": "-"
+        },
+        {
+          "seed": 5,
+          "name": "Houston Rockets",
+          "w": "52",
+          "l": "30",
+          "gb": "-"
+        },
+        {
+          "seed": 6,
+          "name": "Minnesota Timberwolves",
+          "w": "49",
+          "l": "33",
+          "gb": "-"
+        },
+        {
+          "seed": 7,
+          "name": "Portland Trail Blazers",
+          "w": "42",
+          "l": "40",
+          "gb": "-"
+        },
+        {
+          "seed": 8,
+          "name": "Phoenix Suns",
+          "w": "45",
+          "l": "37",
+          "gb": "-"
+        },
+        {
+          "seed": 9,
+          "name": "LA Clippers",
+          "w": "42",
+          "l": "40",
+          "gb": "-"
+        },
+        {
+          "seed": 10,
+          "name": "Golden State Warriors",
+          "w": "37",
+          "l": "45",
+          "gb": "-"
+        },
+        {
+          "seed": 11,
+          "name": "New Orleans Pelicans",
+          "w": "26",
+          "l": "56",
+          "gb": "-"
+        },
+        {
+          "seed": 12,
+          "name": "Dallas Mavericks",
+          "w": "26",
+          "l": "56",
+          "gb": "-"
+        },
+        {
+          "seed": 13,
+          "name": "Memphis Grizzlies",
+          "w": "25",
+          "l": "57",
+          "gb": "-"
+        },
+        {
+          "seed": 14,
+          "name": "Sacramento Kings",
+          "w": "22",
+          "l": "60",
+          "gb": "-"
+        },
+        {
+          "seed": 15,
+          "name": "Utah Jazz",
+          "w": "22",
+          "l": "60",
+          "gb": "-"
+        }
+      ]
+    }
+  ],
+  "message": "",
+  "updatedAt": "2026-08-04T06:41:31.283Z"
 }
