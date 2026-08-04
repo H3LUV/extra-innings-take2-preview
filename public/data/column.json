@@ -7,7 +7,7 @@
       "id": 518692,
       "name": "Freddie Freeman",
       "team": "Los Angeles Dodgers",
-      "seasonPa": 473,
+      "seasonPa": 474,
       "recentPa": 45,
       "previousPa": 36,
       "recentAvg": 0.523,
@@ -35,7 +35,7 @@
       "id": 701538,
       "name": "Jackson Merrill",
       "team": "San Diego Padres",
-      "seasonPa": 457,
+      "seasonPa": 458,
       "recentPa": 46,
       "previousPa": 46,
       "recentAvg": 0.395,
@@ -49,7 +49,7 @@
       "id": 691718,
       "name": "Pete Crow-Armstrong",
       "team": "Chicago Cubs",
-      "seasonPa": 495,
+      "seasonPa": 497,
       "recentPa": 56,
       "previousPa": 46,
       "recentAvg": 0.295,
@@ -57,7 +57,7 @@
       "recentSlg": 0.75,
       "recentOps": 1.179,
       "previousOps": 0.721,
-      "opsDelta": 0.458
+      "opsDelta": 0.4580000000000001
     },
     {
       "id": 678882,
@@ -71,7 +71,7 @@
       "recentSlg": 0.788,
       "recentOps": 1.134,
       "previousOps": 0.724,
-      "opsDelta": 0.41
+      "opsDelta": 0.4099999999999999
     }
   ],
   "method": "시즌 180타석 이상, 최근·직전 14일 각각 28타석 이상, 최근 OPS 0.700 이상인 타자 대상. 원인이나 지속 가능성은 추론하지 않습니다.",
@@ -81,6 +81,6 @@
     "previousStart": "2026-07-07",
     "previousEnd": "2026-07-20"
   },
-  "updatedAt": "2026-08-04T02:05:00.000Z",
+  "updatedAt": "2026-08-04T02:40:35.269Z",
   "source": "MLB Stats API"
 }
