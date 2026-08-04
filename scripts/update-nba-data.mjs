@@ -1,6 +1,8 @@
 import fs from 'node:fs/promises';
+import { execFileSync } from 'node:child_process';
 
 const DATA_DIR = new URL('../public/data/', import.meta.url);
+const MLB_DEPLOY_FLAG = new URL('../public/data/deploy-mlb-once.flag', import.meta.url);
 const KST = 'Asia/Seoul';
 const ymd = () => new Intl.DateTimeFormat('en-CA', { timeZone: KST, year: 'numeric', month: '2-digit', day: '2-digit' }).format(new Date());
 const espnDate = () => ymd().replaceAll('-', '');
@@ -58,6 +60,32 @@ function standingsFromEspn(data) {
   })).filter(group => group.teams.length);
 }
 
+async function deployMlbOnce() {
+  try {
+    await fs.access(MLB_DEPLOY_FLAG);
+  } catch {
+    return;
+  }
+
+  if (!process.env.CLOUDFLARE_API_TOKEN) {
+    throw new Error('CLOUDFLARE_API_TOKEN is missing for one-time MLB deployment');
+  }
+
+  execFileSync('bash', ['-lc', `
+    set -euo pipefail
+    tmp="$(mktemp -d)"
+    trap 'rm -rf "$tmp"' EXIT
+    git archive origin/today-mlb-cloudflare public | tar -x -C "$tmp"
+    CLOUDFLARE_ACCOUNT_ID=135ede9cb7c0a586c4facd63f5810921 \
+      npx wrangler@4 pages deploy "$tmp/public" \
+      --project-name today-mlb \
+      --branch today-mlb-cloudflare
+  `], { stdio: 'inherit', env: process.env });
+
+  await fs.unlink(MLB_DEPLOY_FLAG);
+  console.log('One-time Today MLB cross-link deployment completed.');
+}
+
 const updatedAt = new Date().toISOString();
 
 try {
@@ -91,3 +119,5 @@ try {
 } catch (error) {
   console.warn(`NBA standings update failed: ${error.message}`);
 }
+
+await deployMlbOnce();
