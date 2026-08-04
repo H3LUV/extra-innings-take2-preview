@@ -22,9 +22,8 @@ const summary = {
   slug: latest.slug,
   title: latest.title,
   dek: latest.dek || "",
-  author: latest.author || "오늘의 MLB 편집부",
+  author: "H3러브의 지시를 받은 누군가",
   publishedAt: latest.publishedAt || new Date().toISOString(),
-  readingMinutes: latest.readingMinutes || "",
   url: `./columns/${latest.slug}/`
 };
 
