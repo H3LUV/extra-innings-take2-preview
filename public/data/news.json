@@ -1,65 +1,34 @@
 {
   "items": [
     {
-      "id": "ed06f9bbd59a",
-      "articleFile": "./data/articles/ed06f9bbd59a.json",
-      "title": "Will Brewers be aggressive? What's Mets' strategy? Your Trade Deadline questions answered - MLB.com",
-      "titleKo": "브루어스는 얼마나 공격적으로 움직일까? 메츠의 전략은 무엇인가",
-      "link": "https://www.mlb.com/news/trade-deadline-2026-questions-answered",
-      "pubDate": "Tue, 28 Jul 2026 04:28:19 GMT",
-      "source": "MLB.com",
-      "category": "심층 분석",
-      "readingMinutes": 9,
-      "bodyVerified": true,
-      "bodyChars": 10410,
-      "depthScore": 68
+      "id": "nba-official-news",
+      "titleKo": "NBA 공식 뉴스와 리그 발표",
+      "title": "NBA Official News",
+      "link": "https://www.nba.com/news",
+      "source": "NBA.com"
     },
     {
-      "id": "fa2801c0f2c7",
-      "articleFile": "./data/articles/fa2801c0f2c7.json",
-      "title": "How Shohei Ohtani’s Injuries Impact Dodgers’ Deadline Strategy And Stretch Run - FOX Sports",
-      "titleKo": "오타니의 부상이 다저스의 데드라인 전략과 시즌 막판 운영에 미친 영향",
-      "link": "https://www.foxsports.com/stories/mlb/shohei-ohtani-injuries-impact-dodgers-deadline-strategy-stretch-run",
-      "pubDate": "Wed, 29 Jul 2026 20:39:08 GMT",
-      "source": "FOX Sports",
-      "category": "심층 분석",
-      "readingMinutes": 8,
-      "bodyVerified": true,
-      "bodyChars": 8990,
-      "depthScore": 65
+      "id": "espn-nba",
+      "titleKo": "ESPN의 NBA 주요 이슈와 분석",
+      "title": "ESPN NBA",
+      "link": "https://www.espn.com/nba/",
+      "source": "ESPN"
     },
     {
-      "id": "rss-FanGraphs-0-1785811335018",
-      "title": "Foster, for Four People? Guardians Acquire Foster Griffin for Multi-Prospect Package",
-      "titleKo": "포스터 한 명에 유망주 네 명? 가디언스, 대형 패키지로 포스터 그리핀 영입",
-      "link": "https://blogs.fangraphs.com/foster-for-four-people-guardians-acquire-foster-griffin-for-multi-prospect-package/",
-      "pubDate": "Tue, 04 Aug 2026 02:00:36 +0000",
-      "source": "FanGraphs",
-      "category": "미국 현지 읽을거리",
-      "readingMinutes": 6,
-      "bodyVerified": false,
-      "depthScore": 62,
-      "translatedAt": "2026-08-04T03:15:00.000Z"
+      "id": "athletic-nba",
+      "titleKo": "The Athletic의 심층 NBA 보도",
+      "title": "The Athletic NBA",
+      "link": "https://www.nytimes.com/athletic/nba/",
+      "source": "The Athletic"
     },
     {
-      "id": "rss-FanGraphs-1-1785811335018",
-      "title": "Pirates Add a Whole New Bullpen: Camilo Doval, Luke Weaver, Lake Bachar, Kirby Yates",
-      "titleKo": "파이리츠, 불펜을 통째로 개편하다: 카밀로 도발·루크 위버·레이크 바차·커비 예이츠 영입",
-      "link": "https://blogs.fangraphs.com/pirates-add-a-whole-new-bullpen-camilo-doval-luke-weaver-lake-bachar-kirby-yates/",
-      "pubDate": "Tue, 04 Aug 2026 01:40:25 +0000",
-      "source": "FanGraphs",
-      "category": "미국 현지 읽을거리",
-      "readingMinutes": 6,
-      "bodyVerified": false,
-      "depthScore": 62,
-      "translatedAt": "2026-08-04T03:15:00.000Z"
+      "id": "yahoo-nba",
+      "titleKo": "Yahoo Sports의 최신 NBA 소식",
+      "title": "Yahoo Sports NBA",
+      "link": "https://sports.yahoo.com/nba/",
+      "source": "Yahoo Sports"
     }
   ],
-  "edition": "daily_longform",
-  "editionAt": "2026. 8. 4. PM 12:15",
-  "policy": "two_verified_longform_plus_two_translated_current_us_items",
-  "translationPolicy": "korean_title_required_keep_previous_on_failure",
-  "candidateCount": 30,
-  "selectedCount": 4,
-  "updatedAt": "2026-08-04T03:15:00.000Z"
+  "message": "매일 분석 가치가 높은 현지 기사 네 편으로 교체됩니다.",
+  "updatedAt": "2026-08-04T15:30:00+09:00"
 }
