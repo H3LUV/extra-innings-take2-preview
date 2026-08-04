@@ -1,5 +1,4 @@
-# Cloudflare migration bootstrap
-# Manual redeploy trigger: 2026-08-04 10:05 KST
+# Today MLB daily edition
 name: Update Today MLB edition
 
 on:
@@ -24,7 +23,6 @@ jobs:
   build:
     runs-on: ubuntu-latest
     timeout-minutes: 25
-
     steps:
       - name: Check out Cloudflare site branch
         uses: actions/checkout@v4
@@ -37,8 +35,23 @@ jobs:
         with:
           node-version: 22
 
+      - name: Preserve midnight rebound list
+        run: cp public/data/column.json /tmp/rebound-column.json || true
+
       - name: Generate daily edition
         run: npm run build
+
+      - name: Restore midnight rebound list
+        run: |
+          if [ -f /tmp/rebound-column.json ]; then
+            cp /tmp/rebound-column.json public/data/column.json
+          fi
+
+      - name: Select four US reading items
+        run: node scripts/augment-news.mjs
+
+      - name: Refresh games and standings fallback
+        run: node scripts/update-live-data.mjs
 
       - name: Commit generated data
         run: |
