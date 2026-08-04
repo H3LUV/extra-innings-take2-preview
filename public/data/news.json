@@ -1,58 +1,62 @@
 {
   "items": [
     {
-      "id": "rss-MLB.com-7-1785807468497",
+      "id": "ed06f9bbd59a",
+      "articleFile": "./data/articles/ed06f9bbd59a.json",
+      "title": "Will Brewers be aggressive? What's Mets' strategy? Your Trade Deadline questions answered - MLB.com",
+      "titleKo": "브루어스는 얼마나 공격적으로 움직일까? 메츠의 전략은 무엇인가",
+      "link": "https://www.mlb.com/news/trade-deadline-2026-questions-answered",
+      "pubDate": "Tue, 28 Jul 2026 04:28:19 GMT",
+      "source": "MLB.com",
+      "category": "심층 분석",
+      "readingMinutes": 9,
+      "bodyVerified": true,
+      "bodyChars": 10410,
+      "depthScore": 68
+    },
+    {
+      "id": "fa2801c0f2c7",
+      "articleFile": "./data/articles/fa2801c0f2c7.json",
+      "title": "How Shohei Ohtani’s Injuries Impact Dodgers’ Deadline Strategy And Stretch Run - FOX Sports",
+      "titleKo": "오타니의 부상이 다저스의 데드라인 전략과 시즌 막판 운영에 미친 영향",
+      "link": "https://www.foxsports.com/stories/mlb/shohei-ohtani-injuries-impact-dodgers-deadline-strategy-stretch-run",
+      "pubDate": "Wed, 29 Jul 2026 20:39:08 GMT",
+      "source": "FOX Sports",
+      "category": "심층 분석",
+      "readingMinutes": 8,
+      "bodyVerified": true,
+      "bodyChars": 8990,
+      "depthScore": 65
+    },
+    {
+      "id": "mlb-harper-rf-20260804",
       "title": "Harper moving to RF after Arraez trade: 'I'd do anything for this organization'",
-      "titleKo": "Harper moving to RF after Arraez trade: 'I'd do anything for this organization'",
+      "titleKo": "아라에스 영입 이후 우익수로 이동하는 하퍼, 필리스 타선과 수비의 변화",
       "link": "https://www.mlb.com/news/bryce-harper-to-move-back-to-outfield-after-luis-arraez-trade",
       "pubDate": "Tue, 04 Aug 2026 01:18:00 GMT",
       "source": "MLB.com",
-      "category": "미국 현지 읽을거리",
+      "category": "로스터 분석",
       "readingMinutes": 6,
       "bodyVerified": false,
-      "depthScore": 50
+      "depthScore": 55
     },
     {
-      "id": "rss-MLB.com-21-1785807468498",
+      "id": "mlb-brewers-deadline-20260804",
       "title": "Brewers add pitchers May, Senzatela, Romero in deals with Cards, Rox",
-      "titleKo": "Brewers add pitchers May, Senzatela, Romero in deals with Cards, Rox",
+      "titleKo": "메이·센자텔라·로메로를 더한 브루어스, 투수층 보강의 계산",
       "link": "https://www.mlb.com/news/brewers-trade-deadline-2026",
       "pubDate": "Tue, 04 Aug 2026 01:14:00 GMT",
       "source": "MLB.com",
-      "category": "미국 현지 읽을거리",
+      "category": "전력 분석",
       "readingMinutes": 6,
       "bodyVerified": false,
-      "depthScore": 50
-    },
-    {
-      "id": "rss-MLB.com-0-1785807468496",
-      "title": "Trade Deadline Tracker: Every move for every team",
-      "titleKo": "Trade Deadline Tracker: Every move for every team",
-      "link": "https://www.mlb.com/news/mlb-trade-deadline-2026-deal-tracker",
-      "pubDate": "Tue, 04 Aug 2026 01:13:00 GMT",
-      "source": "MLB.com",
-      "category": "미국 현지 읽을거리",
-      "readingMinutes": 6,
-      "bodyVerified": false,
-      "depthScore": 50
-    },
-    {
-      "id": "rss-MLB.com-14-1785807468497",
-      "title": "Twins add another pitcher, get veteran Hoffman from Toronto",
-      "titleKo": "Twins add another pitcher, get veteran Hoffman from Toronto",
-      "link": "https://www.mlb.com/news/jeff-hoffman-traded-to-twins-from-blue-jays",
-      "pubDate": "Tue, 04 Aug 2026 01:13:00 GMT",
-      "source": "MLB.com",
-      "category": "미국 현지 읽을거리",
-      "readingMinutes": 6,
-      "bodyVerified": false,
-      "depthScore": 50
+      "depthScore": 54
     }
   ],
   "edition": "daily_longform",
-  "editionAt": "2026. 8. 4. AM 8:30",
-  "policy": "four_us_longform_or_analysis_items",
+  "editionAt": "2026. 8. 4. AM 10:40",
+  "policy": "two_verified_longform_plus_two_current_us_items",
   "candidateCount": 30,
   "selectedCount": 4,
-  "updatedAt": "2026-08-04T01:37:48.647Z"
+  "updatedAt": "2026-08-04T01:40:00.000Z"
 }
