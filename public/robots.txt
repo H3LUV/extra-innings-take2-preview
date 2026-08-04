@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://today-nba.pages.dev/sitemap.xml
