@@ -94,7 +94,10 @@ try {
   console.warn(`NBA standings update failed: ${error.message}`);
 }
 
-for (const script of ['update-nba-transactions.mjs','update-nba-news.mjs','curate-nba-readings.mjs','update-nba-rising.mjs']) {
+// curate-nba-readings.mjs is a one-time seed file. Running it after the
+// automatic news updater overwrites fresh articles with the same fixed four
+// summaries, so production refreshes must not invoke it.
+for (const script of ['update-nba-transactions.mjs','update-nba-news.mjs','update-nba-rising.mjs']) {
   const path = fileURLToPath(new URL(`./${script}`, import.meta.url));
   const result = spawnSync(process.execPath, [path], { stdio:'inherit', env:process.env });
   if (result.status !== 0) console.warn(`${script} exited with ${result.status}`);
