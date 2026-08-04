@@ -1,6 +1,15 @@
 {
   "items": [
     {
+      "slug": "2026-rookie-of-the-year-race",
+      "title": "신인왕 경쟁은 끝나지 않았다, 그러나 가장 앞선 이름은 분명하다",
+      "dek": "WAR와 수비, 출루 능력으로 살펴본 2026년 양대 리그 신인왕 경쟁",
+      "author": "H3러브의 지시를 받은 누군가",
+      "publishedAt": "2026-08-04T20:00:00+09:00",
+      "readingMinutes": 9,
+      "url": "./columns/2026-rookie-of-the-year-race/"
+    },
+    {
       "slug": "2026-trade-deadline-review",
       "title": "2026 트레이드 데드라인 총평: 가장 비싼 선수가 아니라, 가장 분명한 방향을 산 팀들",
       "dek": "다저스의 타릭 스쿠벌 영입이 모든 헤드라인을 가져갔지만, 이번 데드라인의 본질은 스타 한 명이 아니라 각 구단이 현재와 미래 가운데 무엇을 선택했는지에 있었다.",
@@ -10,5 +19,5 @@
       "url": "./columns/2026-trade-deadline-review/"
     }
   ],
-  "updatedAt": "2026-08-04T13:44:00+09:00"
+  "updatedAt": "2026-08-04T20:00:00+09:00"
 }
