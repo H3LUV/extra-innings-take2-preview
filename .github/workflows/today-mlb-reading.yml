@@ -1,0 +1,53 @@
+name: Select four Today MLB reading items
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - .github/workflows/today-mlb-reading.yml
+  schedule:
+    # 22:15 UTC = 07:15 Asia/Seoul
+    - cron: '15 22 * * *'
+
+permissions:
+  contents: write
+  deployments: write
+
+concurrency:
+  group: today-mlb-reading
+  cancel-in-progress: true
+
+jobs:
+  reading:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: today-mlb-cloudflare
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Select four US reading items
+        run: node scripts/augment-news.mjs
+      - name: Commit reading list
+        run: |
+          git config user.name "today-mlb-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add public/data/news.json
+          if git diff --cached --quiet; then
+            echo "No reading changes"
+          else
+            git commit -m "Select four US MLB reading items"
+            git push origin HEAD:today-mlb-cloudflare
+          fi
+      - name: Deploy to Cloudflare Pages
+        if: ${{ vars.CLOUDFLARE_DEPLOY_ENABLED == 'true' }}
+        uses: cloudflare/wrangler-action@v3
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          command: pages deploy public --project-name=${{ secrets.CLOUDFLARE_PROJECT_NAME }} --branch=today-mlb-cloudflare
+          gitHubToken: ${{ secrets.GITHUB_TOKEN }}
