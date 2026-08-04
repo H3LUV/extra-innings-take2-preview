@@ -1,4 +1,4 @@
-# Trigger immediate production sync 2026-08-04T11:38+09:00
+# Trigger production sync 2026-08-04T12:22+09:00
 name: Deploy Today MLB to Cloudflare
 
 on:
