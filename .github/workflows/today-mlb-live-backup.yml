@@ -1,0 +1,45 @@
+name: Refresh Today MLB games and standings backup
+
+on:
+  workflow_dispatch:
+  schedule:
+    # 07:00 UTC = 16:00 Asia/Seoul
+    - cron: '0 7 * * *'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: today-mlb-live-backup
+  cancel-in-progress: true
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Check out production branch
+        uses: actions/checkout@v4
+        with:
+          ref: today-mlb-cloudflare
+          fetch-depth: 0
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Refresh schedule and standings
+        run: node scripts/update-live-data.mjs
+
+      - name: Commit backup data
+        run: |
+          git config user.name "today-mlb-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add public/data/schedule.json public/data/standings.json
+          if git diff --cached --quiet; then
+            echo "No backup data changes"
+          else
+            git commit -m "Refresh 4 PM games and standings backup"
+            git push origin HEAD:today-mlb-cloudflare
+          fi
