@@ -1,4 +1,4 @@
-# Column publish trigger 2026-08-04 20:00 KST
+# Today NBA hourly update with automatic SEO generation
 name: Update and deploy Today NBA
 
 on:
@@ -56,15 +56,18 @@ jobs:
       - name: Refresh all NBA sections
         run: node scripts/update-nba-data.mjs
 
-      - name: Commit refreshed data
+      - name: Generate static article pages and SEO files
+        run: node scripts/update-seo.mjs
+
+      - name: Commit refreshed data and SEO assets
         run: |
           git config user.name "today-nba-bot"
           git config user.email "actions@users.noreply.github.com"
-          git add public/data public/columns public/reading
+          git add public/data public/columns public/reading public/sitemap.xml public/robots.txt public/rss.xml
           if git diff --cached --quiet; then
             echo "No NBA data changes"
           else
-            git commit -m "Refresh all Today NBA data"
+            git commit -m "Refresh Today NBA data and SEO"
             git push origin HEAD:today-nba-cloudflare
           fi
 
