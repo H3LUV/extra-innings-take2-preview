@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="theme-color" content="#071a33">
-<title>오늘의 MLB | MLB를 좋아하는 사람들</title>
+<meta name="theme-color" content="#12090d">
+<title>오늘의 NBA</title>
 <link rel="stylesheet" href="./styles.css">
 </head>
 <body id="top">
@@ -12,18 +12,28 @@
  <div class="wrap">
   <div class="brand">
    <div>
-    <h1><a class="home-title" href="#top" aria-label="페이지 최상단으로 이동">오늘의 MLB</a> <a class="community-link" href="https://open.kakao.com/o/gOgPl5If" target="_blank" rel="noopener noreferrer" aria-label="카카오톡 오픈채팅 MLB를 좋아하는 사람들 바로가기">(MLB를 좋아하는 사람들)</a></h1>
+    <h1><a class="home-title" href="#top" aria-label="페이지 최상단으로 이동">오늘의 NBA</a></h1>
     <p>경기·순위·현지 분석·데일리 칼럼</p>
    </div>
    <div class="updated" id="updated">데이터 확인 중</div>
   </div>
-  <nav class="nav"><a href="#column">오늘의 칼럼</a><a href="./columns/">지난 칼럼</a><a href="#games">경기</a><a href="#reading">읽을거리</a><a href="#rebound">반등 선수</a><a href="#standings">순위</a><a href="https://open.kakao.com/o/gOgPl5If" target="_blank" rel="noopener noreferrer">오픈채팅 바로가기</a></nav>
+  <nav class="nav">
+   <a href="#column">오늘의 칼럼</a>
+   <a href="./columns/">지난 칼럼</a>
+   <a href="#games">경기</a>
+   <a href="#reading">읽을거리</a>
+   <a href="#rising">상승세 선수</a>
+   <a href="#standings">순위</a>
+  </nav>
  </div>
 </header>
 <main class="wrap">
  <div class="grid">
   <div class="stack">
-   <section class="card hero" id="column"><div class="kicker">TODAY'S COLUMN</div><div id="columnBody"><div class="empty">칼럼을 불러오는 중입니다.</div></div></section>
+   <section class="card hero" id="column">
+    <div class="kicker">TODAY'S COLUMN</div>
+    <div id="columnBody"><div class="empty">칼럼을 불러오는 중입니다.</div></div>
+   </section>
    <section class="card pad" id="games">
     <div class="section-head"><h2>오늘의 경기</h2><span id="gamesStatus" class="status">확인 중</span></div>
     <div id="gamesList" class="games"><div class="empty">경기 데이터를 불러오는 중입니다.</div></div>
@@ -32,28 +42,27 @@
     <div class="section-head"><h2>미국 현지 읽을거리</h2><span class="status">매일 4편 선정</span></div>
     <div id="newsList" class="list"><div class="empty">기사를 불러오는 중입니다.</div></div>
    </section>
-   <section class="card pad" id="rebound">
-    <div class="section-head"><h2>최근 14일 반등 선수</h2><span class="status">매일 00:05 업데이트</span></div>
-    <div id="reboundList" class="rebounds"><div class="empty">반등 데이터를 불러오는 중입니다.</div></div>
+   <section class="card pad" id="rising">
+    <div class="section-head"><h2>최근 상승세 선수</h2><span class="status">최근 10경기 비교</span></div>
+    <div id="risingList" class="rising-grid"><div class="empty">선수 데이터를 불러오는 중입니다.</div></div>
    </section>
   </div>
   <aside class="stack">
    <section class="card pad" id="standings">
-    <div class="section-head"><h2>MLB 순위</h2><span id="standingsStatus" class="status">확인 중</span></div>
+    <div class="section-head"><h2>NBA 순위</h2><span id="standingsStatus" class="status">확인 중</span></div>
     <div id="standingsList" class="standings"><div class="empty">순위를 불러오는 중입니다.</div></div>
    </section>
-   <section class="card pad">
-    <div class="section-head"><h2>주요 트랜잭션</h2><span class="status">최근 거래</span></div>
+   <section class="card pad" id="transactions">
+    <div class="section-head"><h2>주요 트랜잭션</h2><span class="status">최근 이동</span></div>
     <div id="txList"><div class="empty">트랜잭션을 불러오는 중입니다.</div></div>
    </section>
   </aside>
  </div>
  <footer class="footer">
-  <p>실시간 연결 실패 시 경기와 순위는 매일 한국시간 오후 4시 백업 데이터로 갱신됩니다.</p>
+  <p>실시간 연결 실패 시 경기와 순위는 매시간 백업 데이터로 갱신됩니다.</p>
   <p class="credit">Created by <strong>H3LUV</strong></p>
  </footer>
 </main>
-<div id="archiveList" hidden aria-hidden="true"></div>
 <script src="./app.js" defer></script>
 </body>
 </html>
