@@ -29,7 +29,7 @@
       "depthScore": 65
     },
     {
-      "id": "rss-FanGraphs-0-1785842188154",
+      "id": "rss-FanGraphs-0-1785842852464",
       "title": "Casey Mize Dealt to Padres for Kash Considerations",
       "titleKo": "Casey Mize는 현금 고려 사항으로 Padres와 거래했습니다.",
       "link": "https://blogs.fangraphs.com/casey-mize-dealt-to-padres-for-kash-considerations/",
@@ -39,10 +39,10 @@
       "readingMinutes": 6,
       "bodyVerified": false,
       "depthScore": 62,
-      "translatedAt": "2026-08-04T11:16:28.155Z"
+      "translatedAt": "2026-08-04T11:27:32.465Z"
     },
     {
-      "id": "rss-FanGraphs-1-1785842188154",
+      "id": "rss-FanGraphs-1-1785842852464",
       "title": "Diamondbacks Pay Dearly for Nootbaar, and Not a Moment Too Soon",
       "titleKo": "Diamondbacks는 Nootbaar에 대해 막대한 비용을 지불하고 있으며, 너무 빠른 순간은 아닙니다.",
       "link": "https://blogs.fangraphs.com/diamondbacks-pay-dearly-for-nootbaar-and-not-a-moment-too-soon/",
@@ -52,7 +52,7 @@
       "readingMinutes": 6,
       "bodyVerified": false,
       "depthScore": 62,
-      "translatedAt": "2026-08-04T11:16:28.155Z"
+      "translatedAt": "2026-08-04T11:27:32.465Z"
     }
   ],
   "edition": "daily_longform",
@@ -61,5 +61,5 @@
   "translationPolicy": "korean_title_required_keep_previous_on_failure",
   "candidateCount": 30,
   "selectedCount": 4,
-  "updatedAt": "2026-08-04T11:16:28.155Z"
+  "updatedAt": "2026-08-04T11:27:32.465Z"
 }
