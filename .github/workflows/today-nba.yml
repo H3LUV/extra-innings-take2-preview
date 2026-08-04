@@ -1,0 +1,65 @@
+name: Update and deploy Today NBA
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - .github/workflows/today-nba.yml
+  schedule:
+    # Hourly backup refresh. Live browser data refreshes more frequently.
+    - cron: '17 * * * *'
+
+permissions:
+  contents: write
+  deployments: write
+
+concurrency:
+  group: today-nba-production
+  cancel-in-progress: true
+
+jobs:
+  update-and-deploy:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - name: Check out Today NBA branch
+        uses: actions/checkout@v4
+        with:
+          ref: today-nba-cloudflare
+          fetch-depth: 0
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Archive current column
+        run: node scripts/archive-editorial.mjs
+
+      - name: Refresh NBA games and standings
+        run: node scripts/update-nba-data.mjs
+
+      - name: Commit refreshed data
+        run: |
+          git config user.name "today-nba-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add public/data public/columns
+          if git diff --cached --quiet; then
+            echo "No NBA data changes"
+          else
+            git commit -m "Refresh Today NBA data"
+            git push origin HEAD:today-nba-cloudflare
+          fi
+
+      - name: Create Cloudflare Pages project when needed
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: 135ede9cb7c0a586c4facd63f5810921
+        run: npx wrangler@4 pages project create today-nba --production-branch today-nba-cloudflare || true
+
+      - name: Deploy Today NBA to Cloudflare Pages
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: 135ede9cb7c0a586c4facd63f5810921
+        run: npx wrangler@4 pages deploy public --project-name today-nba --branch today-nba-cloudflare
