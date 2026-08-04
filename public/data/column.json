@@ -1,8 +1,86 @@
 {
   "type": "rebound-list",
   "title": "최근 14일 반등 선수",
-  "dek": "첫 일일 데이터 빌드가 실행되면 직전 14일 대비 OPS 상승폭 상위 5명이 표시됩니다.",
-  "players": [],
-  "method": "시즌 180타석 이상, 최근·직전 14일 각각 28타석 이상인 타자를 대상으로 OPS 상승폭을 비교합니다. 원인이나 지속 가능성은 추론하지 않습니다.",
-  "updatedAt": "pending first build"
+  "dek": "직전 14일 대비 OPS 상승폭 상위 5명",
+  "players": [
+    {
+      "id": 518692,
+      "name": "Freddie Freeman",
+      "team": "Los Angeles Dodgers",
+      "seasonPa": 473,
+      "recentPa": 45,
+      "previousPa": 36,
+      "recentAvg": 0.523,
+      "recentObp": 0.533,
+      "recentSlg": 0.614,
+      "recentOps": 1.147,
+      "previousOps": 0.492,
+      "opsDelta": 0.655
+    },
+    {
+      "id": 669065,
+      "name": "Kyle Stowers",
+      "team": "Miami Marlins",
+      "seasonPa": 374,
+      "recentPa": 52,
+      "previousPa": 40,
+      "recentAvg": 0.261,
+      "recentObp": 0.346,
+      "recentSlg": 0.609,
+      "recentOps": 0.955,
+      "previousOps": 0.369,
+      "opsDelta": 0.586
+    },
+    {
+      "id": 701538,
+      "name": "Jackson Merrill",
+      "team": "San Diego Padres",
+      "seasonPa": 457,
+      "recentPa": 46,
+      "previousPa": 46,
+      "recentAvg": 0.395,
+      "recentObp": 0.413,
+      "recentSlg": 0.744,
+      "recentOps": 1.157,
+      "previousOps": 0.655,
+      "opsDelta": 0.502
+    },
+    {
+      "id": 691718,
+      "name": "Pete Crow-Armstrong",
+      "team": "Chicago Cubs",
+      "seasonPa": 495,
+      "recentPa": 56,
+      "previousPa": 46,
+      "recentAvg": 0.295,
+      "recentObp": 0.429,
+      "recentSlg": 0.75,
+      "recentOps": 1.179,
+      "previousOps": 0.721,
+      "opsDelta": 0.4580000000000001
+    },
+    {
+      "id": 678882,
+      "name": "Ceddanne Rafaela",
+      "team": "Boston Red Sox",
+      "seasonPa": 441,
+      "recentPa": 52,
+      "previousPa": 50,
+      "recentAvg": 0.346,
+      "recentObp": 0.346,
+      "recentSlg": 0.788,
+      "recentOps": 1.134,
+      "previousOps": 0.724,
+      "opsDelta": 0.4099999999999999
+    }
+  ],
+  "method": "시즌 180타석 이상, 최근·직전 14일 각각 28타석 이상, 최근 OPS 0.700 이상인 타자 대상. 원인이나 지속 가능성은 추론하지 않습니다.",
+  "range": {
+    "recentStart": "2026-07-21",
+    "recentEnd": "2026-08-03",
+    "previousStart": "2026-07-07",
+    "previousEnd": "2026-07-20"
+  },
+  "updatedAt": "2026-08-04T01:36:36.410Z",
+  "source": "MLB Stats API"
 }
