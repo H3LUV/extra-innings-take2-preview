@@ -1,1 +1,171 @@
-<!doctype html><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>오늘의 MLB</title><body style="margin:0;background:#001c3d;color:white;font-family:sans-serif;display:grid;place-items:center;min-height:100vh"><b>오늘의 MLB를 불러오는 중…</b><script>(async()=>{const t=await(await fetch('./app-v2.b64')).text(),b=Uint8Array.from(atob(t.trim()),c=>c.charCodeAt(0)),s=new Response(new Blob([b]).stream().pipeThrough(new DecompressionStream('gzip')));document.open();document.write(await s.text());document.close()})().catch(e=>document.body.innerHTML='<pre>사이트 로딩 실패\n'+e+'</pre>')</script>
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#06172f">
+  <meta name="description" content="경기, 순위, 트랜잭션, 미국 현지 장문 기사와 편집 칼럼을 한곳에서 보는 오늘의 MLB">
+  <title>오늘의 MLB</title>
+  <style>
+    :root{
+      --bg:#06101f;--bg2:#091a32;--panel:#0c203c;--panel2:#102946;
+      --line:rgba(255,255,255,.1);--text:#f4f7fb;--muted:#9bacbf;
+      --blue:#38a0ff;--cyan:#43d4e7;--red:#ff6b70;--gold:#ffc86b;--green:#62d8a7;
+      --shadow:0 18px 55px rgba(0,0,0,.28);--radius:20px;--max:1180px;
+    }
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:
+      radial-gradient(circle at 85% -10%,rgba(39,134,224,.22),transparent 32%),
+      linear-gradient(180deg,#07162c 0,#06101f 45%,#050c17 100%);color:var(--text);
+      font-family:Pretendard,"Apple SD Gothic Neo","Noto Sans KR","Malgun Gothic",Arial,sans-serif;min-height:100vh}
+    button,a{font:inherit}button{cursor:pointer}.wrap{width:min(var(--max),calc(100% - 32px));margin:auto}
+    .topbar{border-bottom:1px solid var(--line);background:rgba(4,14,29,.86);backdrop-filter:blur(16px);position:sticky;top:0;z-index:30}
+    .topbar-inner{min-height:68px;display:flex;align-items:center;justify-content:space-between;gap:18px}
+    .brand{display:flex;align-items:center;gap:11px;text-decoration:none;color:white;font-weight:900;letter-spacing:-.04em;font-size:22px}
+    .brand-mark{width:36px;height:36px;border-radius:12px;background:linear-gradient(135deg,var(--blue),var(--cyan));display:grid;place-items:center;box-shadow:0 10px 26px rgba(56,160,255,.28)}
+    .brand-mark svg{width:22px;height:22px}.header-side{display:flex;align-items:center;gap:12px;color:var(--muted);font-size:13px}
+    .live-dot{width:8px;height:8px;border-radius:50%;background:var(--green);box-shadow:0 0 0 5px rgba(98,216,167,.12)}
+    .nav{display:flex;gap:4px;overflow:auto;padding:8px 0 10px;scrollbar-width:none}.nav::-webkit-scrollbar{display:none}
+    .nav a{text-decoration:none;color:#b8c7d7;padding:8px 12px;border-radius:999px;font-weight:700;font-size:13px;white-space:nowrap}
+    .nav a:hover{color:white;background:rgba(255,255,255,.08)}
+    main{padding:30px 0 70px}.section{margin-top:30px;scroll-margin-top:110px}.section-head{display:flex;align-items:flex-end;justify-content:space-between;gap:16px;margin-bottom:14px}
+    .eyebrow{font-size:12px;color:var(--cyan);font-weight:900;letter-spacing:.11em;text-transform:uppercase}.section h2{margin:4px 0 0;font-size:25px;letter-spacing:-.045em}.section-desc{color:var(--muted);font-size:13px;line-height:1.6}
+    .panel{background:linear-gradient(145deg,rgba(16,42,74,.96),rgba(8,27,51,.97));border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow)}
+    .hero{position:relative;overflow:hidden;padding:34px;min-height:330px;display:grid;align-content:end}
+    .hero:before{content:"";position:absolute;inset:0;background:
+      linear-gradient(90deg,rgba(5,15,31,.97) 0%,rgba(5,15,31,.83) 52%,rgba(5,15,31,.24) 100%),
+      radial-gradient(circle at 83% 24%,rgba(56,160,255,.52),transparent 25%),
+      repeating-linear-gradient(120deg,transparent 0 44px,rgba(255,255,255,.025) 45px 46px);pointer-events:none}
+    .hero>*{position:relative}.hero-kicker{display:flex;align-items:center;gap:9px;color:var(--gold);font-size:12px;font-weight:900;letter-spacing:.12em}.hero-title{max-width:850px;font-size:clamp(29px,5vw,50px);line-height:1.12;letter-spacing:-.06em;margin:13px 0 13px}.hero-dek{max-width:780px;color:#c5d1dd;font-size:16px;line-height:1.75;margin:0}.meta{display:flex;gap:13px;flex-wrap:wrap;color:var(--muted);font-size:12px;margin-top:19px}
+    .primary-btn,.ghost-btn{border:0;border-radius:12px;padding:12px 16px;font-weight:850;margin-top:22px}.primary-btn{color:#03111f;background:linear-gradient(135deg,#65c2ff,#43d4e7);box-shadow:0 10px 24px rgba(67,212,231,.18)}.ghost-btn{color:white;background:rgba(255,255,255,.08);border:1px solid var(--line)}
+    .grid{display:grid;gap:14px}.news-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.news-card{padding:22px;display:flex;flex-direction:column;min-height:235px;transition:.2s transform,.2s border-color}.news-card:hover{transform:translateY(-3px);border-color:rgba(67,212,231,.36)}
+    .tag-row{display:flex;align-items:center;gap:8px;flex-wrap:wrap}.tag{font-size:11px;padding:6px 9px;border-radius:999px;color:#aeeaf1;background:rgba(67,212,231,.1);border:1px solid rgba(67,212,231,.17);font-weight:800}.source{color:var(--muted);font-size:12px}.news-title{font-size:20px;line-height:1.45;letter-spacing:-.035em;margin:14px 0 10px}.news-info{margin-top:auto;color:var(--muted);font-size:12px}.card-btn{align-self:flex-start;border:0;background:transparent;color:#76c6ff;font-weight:850;padding:10px 0 0}
+    .games-panel{padding:18px}.date-strip{display:flex;gap:8px;overflow:auto;padding:2px 0 15px;scrollbar-width:none}.date-strip::-webkit-scrollbar{display:none}.date-btn{border:1px solid var(--line);background:rgba(255,255,255,.035);color:#aebdd0;border-radius:12px;padding:10px 13px;min-width:78px;font-size:12px;font-weight:800}.date-btn.active{color:#041322;background:linear-gradient(135deg,#65c2ff,#43d4e7);border-color:transparent}.games-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}.game{background:rgba(4,15,31,.55);border:1px solid var(--line);border-radius:15px;padding:15px}.game-top{display:flex;justify-content:space-between;gap:8px;color:var(--muted);font-size:11px;margin-bottom:13px}.game-status{font-weight:900;color:var(--cyan)}.team-row{display:grid;grid-template-columns:1fr auto;gap:10px;align-items:center;padding:7px 0}.team-name{font-weight:800;font-size:14px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.score{font-size:22px;font-weight:950;font-variant-numeric:tabular-nums}.pitchers{border-top:1px solid var(--line);padding-top:10px;margin-top:8px;color:var(--muted);font-size:11px;line-height:1.65}
+    .rebound-grid{grid-template-columns:repeat(5,minmax(0,1fr))}.rebound{padding:18px;min-height:180px}.rank{font-size:11px;color:var(--blue);font-weight:950}.player{font-size:18px;font-weight:900;letter-spacing:-.035em;margin:8px 0 4px}.team{color:var(--muted);font-size:12px}.ops{font-size:30px;font-weight:950;margin:18px 0 3px;font-variant-numeric:tabular-nums}.delta{font-size:12px;color:var(--green);font-weight:850}.triplet{display:flex;gap:9px;flex-wrap:wrap;margin-top:12px;color:#aebdd0;font-size:11px}
+    .two-col{display:grid;grid-template-columns:1.14fr .86fr;gap:14px}.transactions{padding:8px 18px}.tx{display:grid;grid-template-columns:78px 1fr auto;gap:13px;align-items:center;padding:15px 0;border-bottom:1px solid var(--line)}.tx:last-child{border:0}.tx-date{font-size:11px;color:var(--muted)}.tx-text{font-size:13px;line-height:1.55}.tx-type{font-size:10px;font-weight:900;padding:5px 8px;border-radius:999px;background:rgba(255,200,107,.1);color:var(--gold)}
+    .standings{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.division{padding:17px}.division h3{font-size:14px;margin:0 0 12px}.table{width:100%;border-collapse:collapse;font-size:12px}.table th{color:var(--muted);font-weight:700;text-align:right;padding:7px 4px}.table th:first-child,.table td:first-child{text-align:left}.table td{text-align:right;padding:8px 4px;border-top:1px solid rgba(255,255,255,.065);font-variant-numeric:tabular-nums}.table tr:first-child td{font-weight:900;color:white}.team-cell{max-width:130px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+    .loading,.empty,.error{padding:30px;text-align:center;color:var(--muted);border:1px dashed var(--line);border-radius:15px}.error{color:#ffb0b3}.small-note{color:var(--muted);font-size:11px;line-height:1.65;margin-top:12px}.more-row{text-align:center;padding:10px 0 16px}
+    .modal{position:fixed;inset:0;z-index:80;display:none;background:rgba(0,7,17,.82);backdrop-filter:blur(8px);padding:22px;overflow:auto}.modal.open{display:block}.modal-box{width:min(840px,100%);margin:18px auto;background:#f7f8fa;color:#192434;border-radius:22px;box-shadow:0 28px 100px rgba(0,0,0,.5);overflow:hidden}.modal-head{position:sticky;top:0;background:rgba(247,248,250,.96);backdrop-filter:blur(12px);display:flex;align-items:center;justify-content:space-between;padding:16px 20px;border-bottom:1px solid #dfe5ec;z-index:2}.modal-label{font-size:12px;font-weight:900;color:#2675b8}.close{width:38px;height:38px;border-radius:50%;border:0;background:#e7ebf0;font-size:21px}.article{padding:28px clamp(20px,6vw,60px) 55px}.article h1{font-size:clamp(27px,5vw,43px);letter-spacing:-.055em;line-height:1.18;margin:0 0 16px}.article-dek{font-size:17px;color:#536173;line-height:1.7;border-bottom:1px solid #dfe5ec;padding-bottom:22px}.article-meta{font-size:12px;color:#718093;margin:14px 0 28px}.article-body{font-family:Georgia,"Noto Serif KR",serif;font-size:17px;line-height:1.95;color:#273343;white-space:pre-wrap}.article-body p{margin:0 0 22px}.toast{position:fixed;left:50%;bottom:24px;transform:translateX(-50%) translateY(30px);opacity:0;background:#101e31;border:1px solid var(--line);color:white;padding:12px 16px;border-radius:12px;z-index:100;transition:.2s;box-shadow:var(--shadow);font-size:13px}.toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+    footer{border-top:1px solid var(--line);color:var(--muted);font-size:12px;padding:24px 0 36px;text-align:center}
+    @media(max-width:950px){.games-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.rebound-grid{grid-template-columns:repeat(3,minmax(0,1fr))}.two-col{grid-template-columns:1fr}.standings{grid-template-columns:repeat(3,minmax(0,1fr))}}
+    @media(max-width:700px){.wrap{width:min(100% - 22px,var(--max))}.topbar-inner{min-height:60px}.brand{font-size:19px}.header-side .date-full{display:none}main{padding-top:18px}.hero{padding:24px;min-height:360px}.hero-title{font-size:34px}.hero-dek{font-size:14px}.news-grid,.games-grid,.standings{grid-template-columns:1fr}.rebound-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.section h2{font-size:22px}.tx{grid-template-columns:65px 1fr}.tx-type{display:none}.modal{padding:0}.modal-box{margin:0;min-height:100vh;border-radius:0}.article{padding-top:24px}}
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <div class="wrap topbar-inner">
+      <a class="brand" href="#top"><span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M5 19c4.8-1.8 9.1-5.8 12.5-12.2M7.5 5.5c3.6 1.2 7.1 4.2 9.4 8.1" stroke="white" stroke-width="2.3" stroke-linecap="round"/><circle cx="12" cy="12" r="8.5" stroke="white" stroke-width="1.6" opacity=".7"/></svg></span>오늘의 MLB</a>
+      <div class="header-side"><span class="live-dot"></span><span>매일 오전 7시 갱신</span><span class="date-full" id="todayLabel"></span></div>
+    </div>
+    <nav class="wrap nav" aria-label="주요 메뉴">
+      <a href="#column">오늘의 칼럼</a><a href="#news">심층 읽을거리</a><a href="#games">경기</a><a href="#rebound">반등 선수</a><a href="#moves">트랜잭션</a><a href="#standings">순위</a>
+    </nav>
+  </header>
+
+  <main id="top" class="wrap">
+    <section id="column" class="section" style="margin-top:0">
+      <div class="section-head"><div><div class="eyebrow">Editor's Column</div><h2>오늘의 칼럼</h2></div><div class="section-desc">사용자의 관점과 현지 자료를 바탕으로 작성한 편집 칼럼</div></div>
+      <div id="editorial"><div class="loading">첫 칼럼을 불러오는 중입니다.</div></div>
+    </section>
+
+    <section id="news" class="section">
+      <div class="section-head"><div><div class="eyebrow">Deep Reads</div><h2>미국 현지 심층 읽을거리</h2></div><div class="section-desc" id="newsMeta">본문 확인을 거친 장문 기사만 선별합니다.</div></div>
+      <div id="newsGrid" class="grid news-grid"><div class="loading">기사를 불러오는 중입니다.</div></div>
+    </section>
+
+    <section id="games" class="section">
+      <div class="section-head"><div><div class="eyebrow">Scoreboard</div><h2>MLB 경기</h2></div><div class="section-desc">한국시간 기준 경기 일정과 결과</div></div>
+      <div class="panel games-panel"><div id="dateStrip" class="date-strip"></div><div id="gamesGrid" class="games-grid"><div class="loading">경기 데이터를 불러오는 중입니다.</div></div></div>
+    </section>
+
+    <section id="rebound" class="section">
+      <div class="section-head"><div><div class="eyebrow">14-Day Rebound</div><h2>최근 14일 반등 선수</h2></div><div class="section-desc">직전 14일 대비 OPS 상승폭을 단순 비교합니다.</div></div>
+      <div id="reboundGrid" class="grid rebound-grid"><div class="loading">반등 선수 데이터를 불러오는 중입니다.</div></div>
+      <div id="reboundMethod" class="small-note"></div>
+    </section>
+
+    <section id="moves" class="section">
+      <div class="section-head"><div><div class="eyebrow">Transaction Wire</div><h2>트랜잭션</h2></div><div class="section-desc" id="txMeta">MLB 공식 이동 내역</div></div>
+      <div class="two-col">
+        <div class="panel"><div id="transactions" class="transactions"><div class="loading">트랜잭션을 불러오는 중입니다.</div></div><div class="more-row"><button id="moreTx" class="ghost-btn" style="display:none;margin-top:0">더 보기</button></div></div>
+        <div class="panel" style="padding:24px"><div class="eyebrow">How to read</div><h3 style="font-size:24px;letter-spacing:-.04em;margin:8px 0 12px">거래가 몰린 날은<br>선수 이동의 방향을 본다</h3><p class="section-desc" style="font-size:14px">트레이드, 콜업, 부상자 명단 이동을 중요도순으로 정렬합니다. 단순 계약이나 마이너 이동은 하단에 배치됩니다.</p><div style="margin-top:24px;padding-top:20px;border-top:1px solid var(--line)" class="section-desc">최신 데이터 날짜<br><strong id="latestTxDate" style="display:block;color:white;font-size:19px;margin-top:5px">—</strong></div></div>
+      </div>
+    </section>
+
+    <section id="standings" class="section">
+      <div class="section-head"><div><div class="eyebrow">Standings</div><h2>지구별 순위</h2></div><div class="section-desc" id="standingsMeta">정규시즌 순위</div></div>
+      <div id="standingsGrid" class="standings"><div class="loading">순위를 불러오는 중입니다.</div></div>
+    </section>
+  </main>
+
+  <footer><div class="wrap">오늘의 MLB · MLB Stats API와 공개 기사 데이터를 기반으로 구성됩니다.</div></footer>
+
+  <div id="modal" class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modal-box"><div class="modal-head"><div class="modal-label">오늘의 MLB</div><button id="closeModal" class="close" aria-label="닫기">×</button></div><article id="article" class="article"></article></div>
+  </div>
+  <div id="toast" class="toast"></div>
+
+  <script>
+  (()=>{
+    'use strict';
+    const $=s=>document.querySelector(s), esc=v=>String(v??'').replace(/[&<>'"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','"':'&quot;'}[c]));
+    const state={games:null,tx:null,txLimit:10};
+    const fmtDate=(d,opt={})=>{try{return new Intl.DateTimeFormat('ko-KR',{timeZone:'Asia/Seoul',...opt}).format(new Date(d))}catch{return d||''}};
+    const fmtTime=d=>fmtDate(d,{hour:'2-digit',minute:'2-digit',hour12:false});
+    const showToast=msg=>{const t=$('#toast');t.textContent=msg;t.classList.add('show');clearTimeout(showToast.timer);showToast.timer=setTimeout(()=>t.classList.remove('show'),3200)};
+    const fetchJson=async url=>{const r=await fetch(url,{cache:'no-store'});if(!r.ok)throw new Error(`${url} · HTTP ${r.status}`);return r.json()};
+    const safe=fn=>{try{return fn()}catch(e){console.error(e);return ''}};
+    $('#todayLabel').textContent=fmtDate(Date.now(),{year:'numeric',month:'long',day:'numeric',weekday:'short'});
+
+    function openModal(data){
+      const body=Array.isArray(data.body)?data.body.join('\n\n'):(data.translated||data.body||data.content||'본문이 없습니다.');
+      const paragraphs=String(body).split(/\n{2,}/).filter(Boolean).map(p=>`<p>${esc(p)}</p>`).join('');
+      $('#article').innerHTML=`<h1 id="modalTitle">${esc(data.title||data.titleKo||'오늘의 MLB')}</h1>${data.dek?`<div class="article-dek">${esc(data.dek)}</div>`:''}<div class="article-meta">${esc(data.author||data.source||'오늘의 MLB 편집부')} ${data.publishedAt?`· ${esc(fmtDate(data.publishedAt,{year:'numeric',month:'long',day:'numeric'}))}`:''} ${data.readingMinutes?`· 약 ${esc(data.readingMinutes)}분` : ''}</div><div class="article-body">${paragraphs}</div>`;
+      $('#modal').classList.add('open');document.body.style.overflow='hidden';$('#closeModal').focus();
+    }
+    function closeModal(){ $('#modal').classList.remove('open');document.body.style.overflow=''; }
+    $('#closeModal').addEventListener('click',closeModal);$('#modal').addEventListener('click',e=>{if(e.target===$('#modal'))closeModal()});document.addEventListener('keydown',e=>{if(e.key==='Escape')closeModal()});
+
+    function renderEditorial(data){
+      const el=$('#editorial');if(!data||!data.title){el.innerHTML='<div class="empty">등록된 편집 칼럼이 없습니다.</div>';return}
+      el.innerHTML=`<article class="panel hero"><div class="hero-kicker"><span>●</span>${esc(data.eyebrow||"TODAY'S COLUMN")}</div><h1 class="hero-title">${esc(data.title)}</h1><p class="hero-dek">${esc(data.dek||data.thesis||'')}</p><div class="meta"><span>${esc(data.author||'오늘의 MLB 편집부')}</span><span>${esc(fmtDate(data.publishedAt,{year:'numeric',month:'long',day:'numeric'}))}</span>${data.readingMinutes?`<span>약 ${esc(data.readingMinutes)}분</span>`:''}</div><div><button class="primary-btn" id="readEditorial">전체 칼럼 읽기</button></div></article>`;
+      $('#readEditorial').addEventListener('click',()=>openModal(data));
+    }
+
+    function renderNews(data){
+      const items=data?.items||[];$('#newsMeta').textContent=data?.editionAt?`${data.editionAt} 기준 · ${items.length}건 선별`:'본문 확인을 거친 장문 기사만 선별합니다.';
+      const grid=$('#newsGrid');if(!items.length){grid.innerHTML='<div class="empty">오늘 선별된 장문 기사가 없습니다.</div>';return}
+      grid.innerHTML=items.map((n,i)=>`<article class="panel news-card"><div class="tag-row"><span class="tag">${esc(n.category||'심층 기사')}</span><span class="source">${esc(n.source||'')}</span></div><h3 class="news-title">${esc(n.titleKo||n.title)}</h3><div class="news-info">${esc(fmtDate(n.pubDate,{month:'short',day:'numeric'}))} · 약 ${esc(n.readingMinutes||Math.max(3,Math.round((n.bodyChars||4000)/900)))}분</div><button class="card-btn" data-news="${i}">한국어 본문 읽기 →</button></article>`).join('');
+      grid.querySelectorAll('[data-news]').forEach(btn=>btn.addEventListener('click',async()=>{const n=items[+btn.dataset.news];btn.disabled=true;btn.textContent='본문 불러오는 중…';try{const article=await fetchJson(n.articleFile||`./data/articles/${n.id}.json`);openModal({...article,title:article.title||n.titleKo||n.title,source:n.source,readingMinutes:n.readingMinutes})}catch(e){console.error(e);showToast('기사 본문을 불러오지 못했습니다.');window.open(n.link,'_blank','noopener')}finally{btn.disabled=false;btn.textContent='한국어 본문 읽기 →'}}));
+    }
+
+    function dateLabel(s){const d=new Date(`${s}T12:00:00+09:00`);return `<strong style="display:block;font-size:13px">${fmtDate(d,{month:'numeric',day:'numeric'})}</strong>${fmtDate(d,{weekday:'short'})}`}
+    function renderDates(selected){const dates=Object.keys(state.games?.byDate||{}).sort();$('#dateStrip').innerHTML=dates.map(d=>`<button class="date-btn ${d===selected?'active':''}" data-date="${d}">${dateLabel(d)}</button>`).join('');$('#dateStrip').querySelectorAll('[data-date]').forEach(b=>b.addEventListener('click',()=>renderGames(b.dataset.date)))}
+    function renderGames(date){const games=state.games?.byDate?.[date]||[];renderDates(date);const el=$('#gamesGrid');if(!games.length){el.innerHTML='<div class="empty">이 날짜에는 경기가 없습니다.</div>';return}
+      el.innerHTML=games.map(g=>{const final=/final/i.test(g.status||'');const status=final?'종료':(/live|progress/i.test(g.status||'')?'진행 중':fmtTime(g.gameDate));return `<article class="game"><div class="game-top"><span>${esc(g.venue||'MLB')}</span><span class="game-status">${esc(status)}</span></div><div class="team-row"><div class="team-name">${esc(g.away?.name)}</div><div class="score">${Number.isFinite(g.away?.score)?g.away.score:'–'}</div></div><div class="team-row"><div class="team-name">${esc(g.home?.name)}</div><div class="score">${Number.isFinite(g.home?.score)?g.home.score:'–'}</div></div><div class="pitchers">${final&&g.decisions?.winner?`승 ${esc(g.decisions.winner)}${g.decisions.save?` · 세 ${esc(g.decisions.save)}`:''}`:`선발 ${esc(g.probable?.away||'미정')} / ${esc(g.probable?.home||'미정')}`}</div></article>`}).join('')}
+    function setupGames(data){state.games=data;const dates=Object.keys(data?.byDate||{}).sort();renderGames(data?.defaultDate&&data.byDate[data.defaultDate]?data.defaultDate:dates.at(-1))}
+
+    const val=(o,paths,fallback='—')=>{for(const p of paths){const parts=p.split('.');let x=o;for(const k of parts)x=x?.[k];if(x!==undefined&&x!==null&&x!=='')return x}return fallback};
+    const stat=v=>{const n=Number(v);return Number.isFinite(n)?n.toFixed(3).replace(/^0/,''):v??'—'};
+    function renderRebound(data){const players=data?.players||[];$('#reboundMethod').textContent=data?.method||'';const el=$('#reboundGrid');if(!players.length){el.innerHTML='<div class="empty" style="grid-column:1/-1">첫 일일 데이터 생성이 완료되면 최근 14일 반등 선수 5명이 표시됩니다.</div>';return}
+      el.innerHTML=players.slice(0,5).map((p,i)=>{const recent=val(p,['recent.ops','recentOPS','ops']);const previous=val(p,['previous.ops','previousOPS']);const delta=Number(val(p,['deltaOps','opsDelta','delta'],0));const slash=[val(p,['recent.avg','avg'],''),val(p,['recent.obp','obp'],''),val(p,['recent.slg','slg'],'')].filter(x=>x!=='');return `<article class="panel rebound"><div class="rank">#${i+1}</div><div class="player">${esc(val(p,['name','player.name'],'선수'))}</div><div class="team">${esc(val(p,['team','team.name'],'MLB'))}</div><div class="ops">${esc(stat(recent))}</div><div class="delta">직전 14일 대비 ${delta>=0?'+':''}${esc(stat(delta))} OPS</div><div class="triplet">${slash.length?`<span>${slash.map(stat).join(' / ')}</span>`:''}<span>${esc(val(p,['recent.pa','pa'],'—'))} PA</span></div></article>`}).join('')}
+
+    function renderTransactions(){const items=state.tx?.items||[];const shown=items.slice(0,state.txLimit);const el=$('#transactions');if(!shown.length){el.innerHTML='<div class="empty">표시할 트랜잭션이 없습니다.</div>';return}el.innerHTML=shown.map(t=>`<div class="tx"><div class="tx-date">${esc(t.date)}</div><div class="tx-text">${esc(t.descriptionKo||t.description)}</div><div class="tx-type">${esc(t.typeDesc||t.kind||t.type)}</div></div>`).join('');const more=$('#moreTx');more.style.display=state.txLimit<items.length?'inline-block':'none';more.textContent=`더 보기 (${Math.min(15,items.length-state.txLimit)}건)`}
+    function setupTransactions(data){state.tx=data;$('#latestTxDate').textContent=data?.latestDate||'—';$('#txMeta').textContent=`최근 ${esc(data?.range?.start||'')}–${esc(data?.range?.end||'')} · 주요 ${esc(data?.majorCount||0)}건`;renderTransactions()}
+    $('#moreTx').addEventListener('click',()=>{state.txLimit+=15;renderTransactions()});
+
+    function renderStandings(data){const labels=['AL 동부','AL 중부','AL 서부','NL 동부','NL 중부','NL 서부'];$('#standingsMeta').textContent=`${data?.season||''} 정규시즌`;const divisions=data?.divisions||[];const el=$('#standingsGrid');if(!divisions.length){el.innerHTML='<div class="empty">순위 데이터가 없습니다.</div>';return}el.innerHTML=divisions.map((d,i)=>`<section class="panel division"><h3>${labels[i]||`${esc(d.league||'MLB')} 지구`}</h3><table class="table"><thead><tr><th>팀</th><th>승</th><th>패</th><th>승차</th></tr></thead><tbody>${(d.teams||[]).map(t=>`<tr><td class="team-cell">${esc(t.name)}</td><td>${esc(t.w)}</td><td>${esc(t.l)}</td><td>${esc(t.gb)}</td></tr>`).join('')}</tbody></table></section>`).join('')}
+
+    async function loadSection(url,render,errorSelector){try{const data=await fetchJson(url);render(data)}catch(e){console.error(e);$(errorSelector).innerHTML=`<div class="error">데이터를 불러오지 못했습니다.<br><small>${esc(e.message)}</small></div>`}}
+    Promise.all([
+      loadSection('./data/editorial.json',renderEditorial,'#editorial'),
+      loadSection('./data/news.json',renderNews,'#newsGrid'),
+      loadSection('./data/games.json',setupGames,'#gamesGrid'),
+      loadSection('./data/column.json',renderRebound,'#reboundGrid'),
+      loadSection('./data/transactions.json',setupTransactions,'#transactions'),
+      loadSection('./data/standings.json',renderStandings,'#standingsGrid')
+    ]).catch(console.error);
+    window.addEventListener('unhandledrejection',e=>{console.error(e.reason);showToast('일부 데이터를 처리하는 중 오류가 발생했습니다.')});
+  })();
+  </script>
+</body>
+</html>
