@@ -29,37 +29,41 @@
       "depthScore": 65
     },
     {
-      "id": "rss-FanGraphs-0-1785842852464",
+      "id": "rss-18cfa02d0cc6",
+      "title": "Giants Fire Sale Continues with Erik Miller and Heliot Ramos Heading to AL East Rivals",
+      "titleKo": "자이언츠 파이어 세일은 Erik Miller와 Heliot Ramos가 AL East Rivals로 향하면서 계속됩니다.",
+      "link": "https://blogs.fangraphs.com/giants-fire-sale-continues-with-erik-miller-and-heliot-ramos-heading-to-al-east-rivals/",
+      "pubDate": "Tue, 04 Aug 2026 15:05:58 +0000",
+      "source": "FanGraphs",
+      "category": "미국 현지 읽을거리",
+      "readingMinutes": 12,
+      "bodyVerified": true,
+      "depthScore": 62,
+      "articleFile": "./data/articles/rss-18cfa02d0cc6.json",
+      "bodyChars": 6324,
+      "translatedAt": "2026-08-04T15:16:15.849Z"
+    },
+    {
+      "id": "rss-397017ece153",
       "title": "Casey Mize Dealt to Padres for Kash Considerations",
-      "titleKo": "Casey Mize는 현금 고려 사항으로 Padres와 거래했습니다.",
+      "titleKo": "파드리스, 케이시 마이즈 영입…대가는 유망주 카시 메이필드",
       "link": "https://blogs.fangraphs.com/casey-mize-dealt-to-padres-for-kash-considerations/",
       "pubDate": "Tue, 04 Aug 2026 04:15:43 +0000",
       "source": "FanGraphs",
       "category": "미국 현지 읽을거리",
-      "readingMinutes": 6,
-      "bodyVerified": false,
+      "readingMinutes": 11,
+      "bodyVerified": true,
       "depthScore": 62,
-      "translatedAt": "2026-08-04T11:27:32.465Z"
-    },
-    {
-      "id": "rss-FanGraphs-1-1785842852464",
-      "title": "Diamondbacks Pay Dearly for Nootbaar, and Not a Moment Too Soon",
-      "titleKo": "Diamondbacks는 Nootbaar에 대해 막대한 비용을 지불하고 있으며, 너무 빠른 순간은 아닙니다.",
-      "link": "https://blogs.fangraphs.com/diamondbacks-pay-dearly-for-nootbaar-and-not-a-moment-too-soon/",
-      "pubDate": "Tue, 04 Aug 2026 03:40:28 +0000",
-      "source": "FanGraphs",
-      "category": "미국 현지 읽을거리",
-      "readingMinutes": 6,
-      "bodyVerified": false,
-      "depthScore": 62,
-      "translatedAt": "2026-08-04T11:27:32.465Z"
+      "articleFile": "./data/articles/rss-397017ece153.json",
+      "bodyChars": 5336,
+      "translatedAt": "2026-08-04T15:16:31.961Z"
     }
   ],
   "edition": "daily_longform",
   "editionAt": "2026. 8. 4. PM 12:15",
-  "policy": "two_verified_longform_plus_two_translated_current_us_items",
-  "translationPolicy": "korean_title_required_keep_previous_on_failure",
+  "policy": "four_korean_fulltext_reading_items",
+  "translationPolicy": "korean_title_and_body_required_keep_previous_on_failure",
   "candidateCount": 30,
   "selectedCount": 4,
-  "updatedAt": "2026-08-04T11:27:32.465Z"
+  "updatedAt": "2026-08-04T15:16:31.962Z"
 }
