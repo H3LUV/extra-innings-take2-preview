@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#071a33">
+<title>오늘의 MLB 기사</title>
+<link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+<header class="top article-top">
+  <div class="wrap">
+    <a class="back-home" href="./">← 오늘의 MLB로 돌아가기</a>
+    <div class="article-brand">오늘의 MLB · 한국어 읽을거리</div>
+  </div>
+</header>
+<main class="wrap article-page">
+  <article class="card article-card">
+    <div id="articleState" class="empty">한국어 기사를 불러오는 중입니다.</div>
+    <div id="articleContent" hidden>
+      <div class="kicker" id="articleSource">미국 현지 읽을거리</div>
+      <h1 id="articleTitle"></h1>
+      <p class="article-original-title" id="articleOriginalTitle"></p>
+      <div class="article-meta" id="articleMeta"></div>
+      <div class="article-notice" id="articleNotice">원문의 의미와 논지를 유지한 한국어 번역문입니다.</div>
+      <div class="article-body" id="articleBody"></div>
+      <div class="btns article-actions">
+        <a class="btn alt" id="originalLink" href="#" target="_blank" rel="noopener noreferrer">원문 보기</a>
+        <a class="btn" href="./#reading">다른 읽을거리 보기</a>
+      </div>
+    </div>
+  </article>
+</main>
+<script src="./article.js" defer></script>
+</body>
+</html>
