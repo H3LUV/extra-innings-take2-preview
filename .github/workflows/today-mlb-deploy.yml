@@ -1,0 +1,39 @@
+name: Deploy Today MLB to Cloudflare
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+      - today-mlb-cloudflare
+    paths:
+      - public/**
+      - scripts/**
+      - package.json
+      - .github/workflows/today-mlb-deploy.yml
+
+permissions:
+  contents: read
+  deployments: write
+
+concurrency:
+  group: today-mlb-cloudflare-deploy
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Check out production branch
+        uses: actions/checkout@v4
+        with:
+          ref: today-mlb-cloudflare
+
+      - name: Deploy current public directory
+        uses: cloudflare/wrangler-action@v3
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          command: pages deploy public --project-name=${{ secrets.CLOUDFLARE_PROJECT_NAME }} --branch=today-mlb-cloudflare
+          gitHubToken: ${{ secrets.GITHUB_TOKEN }}
