@@ -205,9 +205,10 @@ async function buildItem(url,cached){
 async function main(){
  await fs.mkdir(ARTICLE_DIR,{recursive:true});
  const existing=await readExisting();
- const existingByUrl=new Map((existing.items||[]).map(item=>[canonical(item.link||item.originalLink),item]));
+ const existingByUrl=new Map((existing.items||[]).map(item=>[canonical(item.originalLink||item.link),item]));
  const homeHtml=await fetchText(NEWS_HOME);
- const candidates=articleLinks(homeHtml).slice(0,30);
+ const seedUrls=(existing.items||[]).map(item=>item.originalLink||item.link).filter(url=>/^https?:\/\//i.test(String(url||'')));
+ const candidates=[...new Set([...seedUrls,...articleLinks(homeHtml)])].slice(0,40);
  const items=[];const seen=new Set();
  for(const url of candidates){
   if(items.length>=MAX_ITEMS)break;
@@ -216,7 +217,7 @@ async function main(){
  }
  for(const old of existing.items||[]){
   if(items.length>=MAX_ITEMS)break;
-  const key=canonical(old.link||old.originalLink);if(!key||seen.has(key)||!old.articleFile||!old.bodyVerified||old.translationType!=='full')continue;
+  const key=canonical(old.originalLink||old.link);if(!key||seen.has(key)||!old.articleFile||!old.bodyVerified||old.translationType!=='full')continue;
   items.push(old);seen.add(key);
  }
  if(items.length<2)throw new Error(`Only ${items.length} fully translated NBA articles available; existing data preserved`);
