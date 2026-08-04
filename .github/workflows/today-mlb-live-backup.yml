@@ -8,6 +8,7 @@ on:
 
 permissions:
   contents: write
+  deployments: write
 
 concurrency:
   group: today-mlb-live-backup
@@ -43,3 +44,11 @@ jobs:
             git commit -m "Refresh 4 PM games and standings backup"
             git push origin HEAD:today-mlb-cloudflare
           fi
+
+      - name: Deploy updated backup to Cloudflare Pages
+        uses: cloudflare/wrangler-action@v3
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: 135ede9cb7c0a586c4facd63f5810921
+          command: pages deploy public --project-name=today-mlb --branch=today-mlb-cloudflare
+          gitHubToken: ${{ secrets.GITHUB_TOKEN }}
