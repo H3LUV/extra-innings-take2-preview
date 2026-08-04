@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#071a33">
+<title>지난 칼럼 | 오늘의 MLB</title>
+<link rel="stylesheet" href="./board.css">
+</head>
+<body id="top">
+<header class="top">
+  <div class="wrap">
+    <div class="brand-row">
+      <div>
+        <h1><a class="home-title" href="../#top">오늘의 MLB</a></h1>
+        <p>지난 칼럼 게시판</p>
+      </div>
+      <a class="home-button" href="../#top">홈으로</a>
+    </div>
+  </div>
+</header>
+<main class="wrap board-wrap">
+  <section class="board-card">
+    <div class="board-head">
+      <div>
+        <div class="kicker">COLUMN ARCHIVE</div>
+        <h2>지난 칼럼 보기</h2>
+        <p>게시된 칼럼은 날짜순으로 계속 보관됩니다.</p>
+      </div>
+      <label class="search-box">
+        <span class="sr-only">칼럼 검색</span>
+        <input id="columnSearch" type="search" placeholder="제목 검색">
+      </label>
+    </div>
+    <div class="board-table" role="table" aria-label="지난 칼럼 목록">
+      <div class="board-row board-header" role="row">
+        <div role="columnheader">번호</div>
+        <div role="columnheader">제목</div>
+        <div role="columnheader">글쓴이</div>
+        <div role="columnheader">날짜</div>
+      </div>
+      <div id="columnRows"><div class="empty">칼럼 목록을 불러오는 중입니다.</div></div>
+    </div>
+  </section>
+</main>
+<footer class="footer">
+  <a href="../#top">오늘의 MLB 홈</a>
+  <span>Created by <strong>H3LUV</strong></span>
+</footer>
+<script src="./board.js" defer></script>
+</body>
+</html>
