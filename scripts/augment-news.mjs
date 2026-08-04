@@ -1,0 +1,8 @@
+import fs from "node:fs/promises";
+const FILE=new URL("../public/data/news.json",import.meta.url);const existing=JSON.parse(await fs.readFile(FILE,"utf8"));
+const clean=s=>String(s||"").replace(/<!\[CDATA\[|\]\]>/g,"").replace(/<[^>]+>/g," ").replace(/&amp;/g,"&").replace(/&#39;|&apos;/g,"'").replace(/&quot;/g,'"').replace(/\s+/g," ").trim();
+const itemsFromXml=(xml,source)=>[...xml.matchAll(/<item\b[\s\S]*?<\/item>/gi)].map((m,i)=>{const x=m[0],pick=t=>clean((x.match(new RegExp(`<${t}[^>]*>([\\s\\S]*?)<\\/${t}>`,"i"))||[])[1]);return{id:`rss-${source}-${i}-${Date.now()}`,title:pick("title"),titleKo:pick("title"),link:pick("link")||pick("guid"),pubDate:pick("pubDate"),source,category:"미국 현지 읽을거리",readingMinutes:6,bodyVerified:false,depthScore:50}}).filter(x=>x.title&&x.link);
+const feeds=[["MLB.com","https://www.mlb.com/feeds/news/rss.xml"],["FanGraphs","https://blogs.fangraphs.com/feed/"]];let pool=[...(existing.items||[])];
+for(const[source,url]of feeds){try{const r=await fetch(url,{headers:{"user-agent":"today-mlb/1.0"}});if(r.ok)pool.push(...itemsFromXml(await r.text(),source))}catch(e){console.warn(`Feed failed: ${source}`,e.message)}}
+const seen=new Set(),selected=[];for(const x of pool.sort((a,b)=>new Date(b.pubDate||0)-new Date(a.pubDate||0))){const key=(x.link||x.title).replace(/[?#].*$/,"");if(seen.has(key))continue;seen.add(key);selected.push(x);if(selected.length===4)break}
+const out={...existing,items:selected,selectedCount:selected.length,policy:"four_us_longform_or_analysis_items",updatedAt:new Date().toISOString()};await fs.writeFile(FILE,JSON.stringify(out,null,2));console.log(`Selected reading items: ${selected.length}`);
