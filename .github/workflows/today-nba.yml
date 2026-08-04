@@ -1,4 +1,4 @@
-# Today NBA hourly update with MLB-style Korean full article translations
+# Today NBA hourly update with MLB-style Korean full article translations - seeded retry
 name: Update and deploy Today NBA
 
 on:
