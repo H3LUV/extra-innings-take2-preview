@@ -6,7 +6,7 @@ const DESCRIPTION='NBA 경기, 순위, 미국 현지 분석과 한국어 데이�
 const THEME='#12090d';
 const BYLINE='오늘의 NBA 편집부';
 const root=new URL('../public/',import.meta.url);
-const esc=v=>String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot',"'":'&#39;'}[c]));
+const esc=v=>String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const xml=v=>esc(v);
 const index=JSON.parse(await fs.readFile(new URL('data/editorials/index.json',root),'utf8'));
 const items=(index.items||[]).sort((a,b)=>new Date(b.publishedAt||0)-new Date(a.publishedAt||0));
