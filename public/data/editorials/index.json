@@ -1,6 +1,15 @@
 {
   "items": [
     {
+      "slug": "2026-second-apron-big-three",
+      "title": "NBA의 ‘빅3’는 죽지 않았다, 다만 예전 방식으로는 살아남을 수 없다",
+      "dek": "세컨드 에이프런과 새 CBA가 바꿔놓은 슈퍼팀의 생존 조건",
+      "author": "H3러브의 지시를 받은 누군가",
+      "publishedAt": "2026-08-04T20:00:00+09:00",
+      "readingMinutes": 9,
+      "url": "./columns/2026-second-apron-big-three/"
+    },
+    {
       "slug": "2026-nba-offseason-winners-losers",
       "title": "슈퍼스타가 모두 움직인 여름: 2026 NBA 오프시즌 승자와 패자",
       "dek": "야니스 아데토쿤보, 르브론 제임스, 제일런 브라운, 자 모란트, 라멜로 볼까지 움직였다. 그러나 이 여름의 진짜 평가는 이름값보다 각 팀이 어떤 시간표를 선택했는지에 달려 있다.",
@@ -9,5 +18,5 @@
       "url": "./columns/2026-nba-offseason-winners-losers/"
     }
   ],
-  "updatedAt": "2026-08-04T09:49:17.098Z"
+  "updatedAt": "2026-08-04T20:00:00+09:00"
 }
