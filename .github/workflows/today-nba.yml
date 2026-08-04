@@ -52,17 +52,8 @@ jobs:
       - name: Archive current column
         run: node scripts/archive-editorial.mjs
 
-      - name: Refresh NBA games and standings
+      - name: Refresh all NBA sections
         run: node scripts/update-nba-data.mjs
-
-      - name: Refresh official NBA transactions
-        run: node scripts/update-nba-transactions.mjs
-
-      - name: Refresh translated NBA readings
-        run: node scripts/update-nba-news.mjs
-
-      - name: Refresh NBA Rising Impact Index
-        run: node scripts/update-nba-rising.mjs
 
       - name: Commit refreshed data
         run: |
