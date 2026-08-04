@@ -1,7 +1,12 @@
+# Rebound workflow fixed 2026-08-04
 name: Refresh Today MLB rebound players
 
 on:
   workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - .github/workflows/today-mlb-rebound.yml
   schedule:
     # 15:05 UTC = 00:05 Asia/Seoul
     - cron: '5 15 * * *'
@@ -30,14 +35,8 @@ jobs:
         with:
           node-version: 22
 
-      - name: Generate fresh daily data
-        run: npm run build
-
-      - name: Keep only rebound player output
-        run: |
-          cp public/data/column.json /tmp/rebound-column.json
-          git reset --hard HEAD
-          cp /tmp/rebound-column.json public/data/column.json
+      - name: Calculate rebound players from MLB Stats API
+        run: node scripts/update-rebound.mjs
 
       - name: Commit rebound list
         run: |
