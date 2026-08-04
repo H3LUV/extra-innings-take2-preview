@@ -29,28 +29,28 @@
       "depthScore": 65
     },
     {
-      "id": "mlb-harper-rf-20260804",
-      "title": "Harper moving to RF after Arraez trade: 'I'd do anything for this organization'",
-      "titleKo": "아라에스 영입 이후 우익수로 이동하는 하퍼, 필리스 타선과 수비의 변화",
-      "link": "https://www.mlb.com/news/bryce-harper-to-move-back-to-outfield-after-luis-arraez-trade",
-      "pubDate": "Tue, 04 Aug 2026 01:18:00 GMT",
-      "source": "MLB.com",
-      "category": "로스터 분석",
+      "id": "rss-FanGraphs-0-1785807706721",
+      "title": "Pirates Add a Whole New Bullpen: Camilo Doval, Luke Weaver, Lake Bachar, Kirby Yates",
+      "titleKo": "Pirates Add a Whole New Bullpen: Camilo Doval, Luke Weaver, Lake Bachar, Kirby Yates",
+      "link": "https://blogs.fangraphs.com/pirates-add-a-whole-new-bullpen-camilo-doval-luke-weaver-lake-bachar-kirby-yates/",
+      "pubDate": "Tue, 04 Aug 2026 01:40:25 +0000",
+      "source": "FanGraphs",
+      "category": "미국 현지 읽을거리",
       "readingMinutes": 6,
       "bodyVerified": false,
-      "depthScore": 55
+      "depthScore": 62
     },
     {
-      "id": "mlb-brewers-deadline-20260804",
-      "title": "Brewers add pitchers May, Senzatela, Romero in deals with Cards, Rox",
-      "titleKo": "메이·센자텔라·로메로를 더한 브루어스, 투수층 보강의 계산",
-      "link": "https://www.mlb.com/news/brewers-trade-deadline-2026",
-      "pubDate": "Tue, 04 Aug 2026 01:14:00 GMT",
-      "source": "MLB.com",
-      "category": "전력 분석",
+      "id": "rss-FanGraphs-1-1785807706721",
+      "title": "Astros, Jays Swap Varsho for Arrighetti",
+      "titleKo": "Astros, Jays Swap Varsho for Arrighetti",
+      "link": "https://blogs.fangraphs.com/astros-jays-swap-varsho-for-arrighetti/",
+      "pubDate": "Tue, 04 Aug 2026 00:50:22 +0000",
+      "source": "FanGraphs",
+      "category": "미국 현지 읽을거리",
       "readingMinutes": 6,
       "bodyVerified": false,
-      "depthScore": 54
+      "depthScore": 62
     }
   ],
   "edition": "daily_longform",
@@ -58,5 +58,5 @@
   "policy": "two_verified_longform_plus_two_current_us_items",
   "candidateCount": 30,
   "selectedCount": 4,
-  "updatedAt": "2026-08-04T01:40:00.000Z"
+  "updatedAt": "2026-08-04T01:41:46.722Z"
 }
