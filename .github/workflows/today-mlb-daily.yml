@@ -13,6 +13,7 @@ on:
 
 permissions:
   contents: write
+  deployments: write
 
 concurrency:
   group: today-mlb-daily
@@ -49,3 +50,12 @@ jobs:
             git commit -m "Update daily MLB edition"
             git push origin HEAD:today-mlb-cloudflare
           fi
+
+      - name: Deploy to Cloudflare Pages
+        if: ${{ vars.CLOUDFLARE_DEPLOY_ENABLED == 'true' }}
+        uses: cloudflare/wrangler-action@v3
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          command: pages deploy public --project-name=${{ secrets.CLOUDFLARE_PROJECT_NAME }} --branch=today-mlb-cloudflare
+          gitHubToken: ${{ secrets.GITHUB_TOKEN }}
