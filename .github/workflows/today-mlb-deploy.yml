@@ -34,6 +34,6 @@ jobs:
         uses: cloudflare/wrangler-action@v3
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
-          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-          command: pages deploy public --project-name=${{ secrets.CLOUDFLARE_PROJECT_NAME }} --branch=today-mlb-cloudflare
+          accountId: 135ede9cb7c0a586c4facd63f5810921
+          command: pages deploy public --project-name=today-mlb --branch=today-mlb-cloudflare
           gitHubToken: ${{ secrets.GITHUB_TOKEN }}
