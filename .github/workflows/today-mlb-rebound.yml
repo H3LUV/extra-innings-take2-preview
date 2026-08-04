@@ -1,0 +1,51 @@
+name: Refresh Today MLB rebound players
+
+on:
+  workflow_dispatch:
+  schedule:
+    # 15:05 UTC = 00:05 Asia/Seoul
+    - cron: '5 15 * * *'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: today-mlb-rebound
+  cancel-in-progress: true
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - name: Check out production branch
+        uses: actions/checkout@v4
+        with:
+          ref: today-mlb-cloudflare
+          fetch-depth: 0
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Generate fresh daily data
+        run: npm run build
+
+      - name: Keep only rebound player output
+        run: |
+          cp public/data/column.json /tmp/rebound-column.json
+          git reset --hard HEAD
+          cp /tmp/rebound-column.json public/data/column.json
+
+      - name: Commit rebound list
+        run: |
+          git config user.name "today-mlb-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add public/data/column.json
+          if git diff --cached --quiet; then
+            echo "No rebound data changes"
+          else
+            git commit -m "Refresh midnight rebound players"
+            git push origin HEAD:today-mlb-cloudflare
+          fi
