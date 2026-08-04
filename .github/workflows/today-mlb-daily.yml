@@ -1,4 +1,4 @@
-# Today MLB daily edition without compressed build dependency - column publish 2026-08-04 20:00 KST
+# Today MLB daily edition without compressed build dependency - column publish 2026-08-04 20:00 KST marker
 name: Update Today MLB edition
 
 on:
@@ -63,3 +63,10 @@ jobs:
           accountId: 135ede9cb7c0a586c4facd63f5810921
           command: pages deploy public --project-name=today-mlb --branch=today-mlb-cloudflare
           gitHubToken: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Record successful deployment
+        run: |
+          node -e "const fs=require('fs');fs.writeFileSync('public/data/deployment.json',JSON.stringify({project:'today-mlb',branch:'today-mlb-cloudflare',status:'success',deployedAt:new Date().toISOString()},null,2))"
+          git add public/data/deployment.json
+          git commit -m "Record Today MLB deployment" || true
+          git push origin HEAD:today-mlb-cloudflare
