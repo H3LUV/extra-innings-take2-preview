@@ -1,0 +1,119 @@
+import fs from 'node:fs/promises';
+
+const DATA_FILE = new URL('../public/data/news.json', import.meta.url);
+const READING_DIR = new URL('../public/reading/', import.meta.url);
+const esc = value => String(value ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const kstDate = value => new Intl.DateTimeFormat('ko-KR',{timeZone:'Asia/Seoul',year:'numeric',month:'long',day:'numeric'}).format(new Date(value));
+
+const items = [
+  {
+    id:'nba-offseason-power-rankings-east-2026',
+    slug:'nba-offseason-power-rankings-east-2026',
+    titleKo:'동부 오프시즌 파워랭킹: 우승팀 닉스가 1위, 필라델피아가 2위',
+    title:'Offseason Power Rankings: Knicks lead the way in the East',
+    summaryKo:'NBA.com은 2026년 오프시즌 이후 동부 15개 팀을 다시 평가하며, 우승팀 뉴욕 닉스를 1위로 두고 르브론 제임스와 제일런 브라운을 영입한 필라델피아를 2위에 올렸습니다.',
+    detailsKo:[
+      '동부는 최근 27시즌 중 24시즌에서 서부와의 맞대결 승률이 낮았고, 같은 기간 우승 횟수도 서부에 뒤졌습니다. 다만 2025-26시즌에는 승률 5할 이상 팀이 10개로 서부보다 많았고, 동서부 맞대결 승률도 지난 27년 가운데 네 번째로 높았습니다. NBA.com은 이번 오프시즌의 대형 이동까지 감안하면 동부가 오랜만에 서부와 대등한 경쟁력을 갖출 수 있다고 평가했습니다.',
+      '1위 뉴욕 닉스는 지난 시즌 우승 과정에서 4쿼터 득실마진, 코너 3점슛 생산, 두 자릿수 열세를 뒤집은 경기력에서 역사적인 수치를 남겼습니다. 다만 플레이오프에서 정규시즌보다 더 효율적인 공격을 펼친 유일한 팀이었던 만큼, 그 수준을 새 시즌에도 유지할 수 있는지가 핵심 질문입니다. 미첼 로빈슨의 이탈로 수비와 리바운드 부담이 커졌고, 칼앤서니 타운스의 건강과 수비 기여가 더 중요해졌습니다.',
+      '2위 필라델피아는 제일런 브라운, 르브론 제임스, 앤퍼니 사이먼스, 딘 웨이드를 추가하며 공격 재능을 크게 늘렸습니다. 문제는 조엘 엠비드, 타이리스 맥시, 브라운이 모두 높은 사용률을 요구하는 선수라는 점입니다. NBA.com은 지난 시즌 필라델피아의 슛 품질이 리그 29위였다는 점을 지적하며, 르브론의 패싱이 공격을 정리하고 더 좋은 슛을 만드는 역할을 해야 한다고 봤습니다.',
+      '필라델피아의 더 큰 불안 요소는 수비입니다. 엠비드는 여전히 수비 중심이 될 수 있지만, 공간으로 끌려나왔을 때 공략당할 수 있고 지난 시즌 림 근처 수비 수치도 커리어 최저 수준이었습니다. 공격 재능이 기대만큼 맞물리더라도 플레이오프에서 수비 약점을 숨길 방법이 필요합니다.',
+      '3위 클리블랜드는 큰 변화보다 연속성을 선택했습니다. 제임스 하든과 도노반 미첼이 함께 뛸 때보다 한 명만 코트에 있을 때 공격 효율이 더 좋았다는 점, 그리고 지난 시즌 가장 많이 사용한 라인업조차 89분밖에 함께 뛰지 못했다는 점이 과제로 제시됐습니다. NBA.com은 완전한 훈련캠프와 역할 정리가 클리블랜드의 상승 여지를 결정할 것으로 봤습니다.',
+      '토론토는 카와이 레너드 영입 가능성으로 4위에 평가됐지만, 작은 프런트코트의 리바운드 문제가 지적됐습니다. 디트로이트는 존 콜린스와 아이제아 조를 더해 전력을 보강했지만 케이드 커닝햄에게 집중된 공격 부담이 여전히 큽니다. 보스턴은 제일런 브라운을 잃고 폴 조지와 미첼 로빈슨을 영입했으며, 데릭 화이트의 슈팅 회복이 핵심 변수로 꼽혔습니다.',
+      '마이애미는 야니스 아데토쿤보를 영입했음에도 8위에 머물렀습니다. 전환 공격과 수비 전술의 폭은 넓어졌지만, 타일러 히로와 여러 젊은 자원을 내준 뒤 백코트 득점과 볼 운반이 충분한지가 의문으로 남았습니다. 결국 동부 상위권은 이름값보다 건강, 역할 분담, 리바운드와 하프코트 공격의 완성도에서 갈릴 가능성이 큽니다.'
+    ],
+    source:'NBA.com',
+    byline:'John Schuhmann',
+    publishedAt:'2026-07-27T13:18:13Z',
+    originalLink:'https://www.nba.com/news/offseason-power-rankings-east-2026',
+    related:['뉴욕 닉스','필라델피아 세븐티식서스','클리블랜드 캐벌리어스','토론토 랩터스','마이애미 히트']
+  },
+  {
+    id:'nba-lebron-james-fit-with-76ers',
+    slug:'nba-lebron-james-fit-with-76ers',
+    titleKo:'르브론과 필라델피아는 왜 의외로 잘 맞는 조합인가',
+    title:'Why LeBron James, 76ers could become a perfect match',
+    summaryKo:'겉으로는 뜻밖의 선택이지만, NBA.com은 필라델피아의 수비·득점 자원과 르브론의 현재 역할을 함께 보면 우승을 노릴 수 있는 현실적인 결합이라고 분석했습니다.',
+    detailsKo:[
+      '르브론 제임스와 필라델피아 사이에는 과거의 인연이 거의 없습니다. 선수, 코치, 프런트, 구단주와 특별한 관계가 있었던 것도 아니고 도시와의 개인적 연결도 약합니다. 그럼에도 NBA.com은 현재의 르브론과 현재의 필라델피아를 놓고 보면 농구적으로는 상당히 논리적인 선택이라고 평가했습니다.',
+      '핵심은 르브론이 더 이상 매 경기 첫 번째 득점 옵션일 필요가 없다는 점입니다. 필라델피아에는 조엘 엠비드, 타이리스 맥시, 제일런 브라운이 있고, 이들은 각자 득점과 볼 운반을 맡을 수 있습니다. 르브론은 공격을 전부 책임지기보다 경기 조율, 패싱, 미스매치 공략, 중요한 순간의 판단에 집중할 수 있습니다.',
+      '제일런 브라운은 최근 커리어 최고 수준의 시즌을 보냈고, 7시즌 연속 평균 20점 이상을 기록한 검증된 양방향 선수입니다. 맥시는 엠비드가 빠진 기간 팀 공격을 이끌며 평균 28.3점을 기록했고, 림까지 도달하는 속도와 효율에서 리그 최상위권 모습을 보였습니다. 이 둘이 르브론의 체력 부담을 줄여줄 수 있습니다.',
+      '수비에서도 르브론이 모든 부담을 떠안을 필요가 없습니다. 브라운과 엠비드가 주요 매치업과 림 보호를 담당하고, 닉 너스 감독은 여러 스타의 역할을 조정할 수 있는 우승 경험을 갖고 있습니다. NBA.com은 르브론 주변에 수비수와 득점원이 동시에 있다는 점을 가장 중요한 장점으로 봤습니다.',
+      '동부로 이동한 것도 우승 가능성을 높이는 요소입니다. 서부에서는 오클라호마시티와 샌안토니오 같은 강팀을 넘어야 하지만, 동부에서는 필라델피아가 곧바로 최상위 우승 후보로 올라설 수 있습니다. 디펜딩 챔피언 뉴욕 닉스에도 강력한 경쟁자가 생겼습니다.',
+      '르브론의 목표는 은퇴 전 한 번 더 우승하는 데 있는 것으로 해석됩니다. 필라델피아에서 다섯 번째 우승을 차지하면 마이클 조던의 여섯 차례 우승에 한 개 차이로 접근하며, 오랜 GOAT 논쟁도 다시 달아오를 수 있습니다. 이 결합은 낯설지만, 양쪽 모두가 원하는 것을 고려하면 충분히 성립 가능한 선택이라는 것이 기사의 결론입니다.'
+    ],
+    source:'NBA.com',
+    byline:'Shaun Powell',
+    publishedAt:'2026-07-24T19:02:00Z',
+    originalLink:'https://www.nba.com/news/lebron-james-fit-with-76ers',
+    related:['필라델피아 세븐티식서스','르브론 제임스','조엘 엠비드','타이리스 맥시','제일런 브라운']
+  },
+  {
+    id:'nba-10-most-under-radar-nba-moves-2026-offseason',
+    slug:'nba-10-most-under-radar-nba-moves-2026-offseason',
+    titleKo:'대형 트레이드 뒤에 가려진 2026 NBA 오프시즌의 실속 보강',
+    title:'10 most under-the-radar moves from 2026 offseason',
+    summaryKo:'야니스, 르브론, 제일런 브라운 같은 대형 이동 외에도 로테이션의 약점을 정확히 보완한 계약들이 많았습니다. NBA.com은 비용과 역할, 최근 생산성을 기준으로 주목할 만한 실속 보강을 골랐습니다.',
+    detailsKo:[
+      '디트로이트가 영입한 존 콜린스는 지난 시즌 평균 득점이 13.6점으로 줄었지만 야투 55.2%, 3점슛 40.6%를 기록했습니다. 효율적인 마무리, 리바운드, 수비를 모두 제공할 수 있어 케이드 커닝햄 중심의 공격에 공간과 세로 위협을 더할 수 있습니다.',
+      '골든스테이트는 디앤서니 멜튼과 재계약했습니다. 멜튼은 부상 복귀 시즌에 평균 12.3점과 1.6스틸로 커리어 최고 수준의 생산성을 보였고, 건강을 회복하면 이전 다섯 시즌 동안 유지했던 37% 이상의 3점슛 성공률로 돌아갈 가능성이 있습니다.',
+      '인디애나는 켈리 우브레 주니어를 2년 계약으로 추가했습니다. 타이리스 할리버튼의 복귀와 함께 파스칼 시아캄, 이비차 주바치가 있는 라인업에 운동능력과 윙 득점을 보태는 선택입니다. 지난 시즌 우브레는 평균 14.1점, 5리바운드, 1.4스틸을 기록했습니다.',
+      '마이애미는 야니스 영입 과정에서 여러 득점 자원을 잃었기 때문에 팀 하더웨이 주니어의 슈팅이 중요합니다. 하더웨이는 지난 시즌 평균 13.5점, 3점슛 40.7%를 기록하며 식스맨상 투표 3위에 올랐습니다. 야니스와 뱀 아데바요 주변의 공간을 넓히는 역할이 예상됩니다.',
+      '뉴욕은 우승 로테이션을 유지하기 위해 랜드리 샤멧과 재계약했습니다. 샤멧은 정규시즌 3점슛 39.2%, 플레이오프 47.5%를 기록했고, 콘퍼런스 준결승부터 파이널까지 이어진 8경기 구간에서는 34개 중 23개의 3점슛을 넣었습니다.',
+      '필라델피아의 가장 큰 뉴스는 제일런 브라운과 르브론이지만, 앤퍼니 사이먼스와 딘 웨이드 영입도 로스터 완성도에 중요합니다. 사이먼스는 벤치 득점과 볼 운반을, 웨이드는 슈팅·리바운드·멀티 포지션 수비를 제공할 수 있습니다.',
+      '피닉스는 콜린 길레스피와 장기계약을 맺고 루크 케너드를 추가했습니다. 길레스피는 평균 12.7점, 4.6어시스트, 3점슛 40.1%로 돌파구를 만들었고, 케너드는 지난 시즌 3점슛 47.8%를 기록했습니다. 두 선수는 백코트 슈팅과 세컨드 유닛의 안정성을 높일 수 있습니다.',
+      '샌안토니오는 줄리언 샴페니와 재계약했습니다. 샴페니는 플레이오프에서 평균 11.2점, 5.7리바운드, 3점슛 39.6%를 기록했고, 그가 코트에 있을 때 팀의 공수 효율도 안정적이었습니다. NBA.com은 이런 계약들이 대형 스타 이동만큼 화려하지는 않아도 시즌의 실제 승패에 큰 영향을 줄 수 있다고 평가했습니다.'
+    ],
+    source:'NBA.com',
+    byline:'Jeff Zillgitt',
+    publishedAt:'2026-07-16T13:03:00Z',
+    originalLink:'https://www.nba.com/news/10-most-under-radar-nba-moves-2026-offseason',
+    related:['디트로이트 피스턴스','골든스테이트 워리어스','인디애나 페이서스','마이애미 히트','필라델피아 세븐티식서스']
+  },
+  {
+    id:'nba-closer-look-new-coaches-2026-27',
+    slug:'nba-closer-look-new-coaches-2026-27',
+    titleKo:'2026-27시즌 새 감독 6명, 각 팀은 무엇을 기대하나',
+    title:'Closer look at new coaches for 2026-27 season',
+    summaryKo:'NBA 30개 팀 중 6개 팀이 감독을 교체했습니다. NBA.com은 각 감독의 경력과 새 팀의 로스터를 바탕으로 첫 시즌의 과제와 기대치를 정리했습니다.',
+    detailsKo:[
+      '시카고는 티아고 스플리터에게 젊은 로스터의 성장을 맡겼습니다. 스플리터는 포틀랜드 임시 감독 시절 어려운 상황에서도 팀을 42승으로 이끌었고, 시카고에는 조시 기디, 마타스 부젤리스, 케일럽 윌슨, 니콜라 클랙스턴, 노먼 파월 등 성장과 즉시 전력을 함께 노릴 수 있는 자원이 있습니다.',
+      '댈러스는 NCAA 챔피언 미시간을 이끈 더스티 메이를 선임했습니다. 쿠퍼 플래그와 2026년 신인 모레즈 존슨 주니어, 자카리 리사셰르를 중심으로 새 프런트와 함께 장기적인 팀 문화를 만드는 단계입니다. 메이는 특정 전술을 고집하기보다 선수의 장점을 기준으로 라인업 크기와 경기 방식을 조정하겠다고 밝혔습니다.',
+      '밀워키는 야니스 아데토쿤보 이후의 시대를 테일러 젠킨스에게 맡겼습니다. 야니스 트레이드로 타일러 히로, 하이메 하케스 주니어, 켈엘 웨어, 카스파라스 야쿠치오니스와 미래 1라운드 지명권을 확보했기 때문에, 젠킨스의 과제는 우승 경쟁팀이었던 조직을 젊은 선수 중심의 새 사이클로 전환하는 것입니다.',
+      '뉴올리언스는 올랜도를 꾸준히 성장시킨 자말 모슬리를 영입했습니다. 펠리컨스는 지난 시즌 26승에 그쳤지만 자이언 윌리엄슨, 디존테 머레이, 조던 풀, 허버트 존스, 제레마이아 피어스 등 활용할 자원이 있습니다. 모슬리는 시간 엄수, 활동량, 태도, 소통을 네 가지 비협상 원칙으로 제시했습니다.',
+      '올랜도는 샌안토니오의 파이널 진출을 도운 션 스위니를 첫 NBA 감독으로 선택했습니다. 파올로 반케로, 프란츠 바그너, 제일런 석스, 데스먼드 베인, 조나단 아이작 등 이미 플레이오프 경쟁이 가능한 로스터를 물려받았다는 점이 다른 신임 감독들과 다릅니다. 수비 전문성과 함께 댈러스 시절 공격 코디네이터 경험도 기대받고 있습니다.',
+      '포틀랜드는 미네소타 코치 출신 마이카 노리를 선임했습니다. 지난 시즌 플레이오프에 진출한 팀에 데이미언 릴라드가 복귀하고 자 모란트까지 합류했으며, 즈루 할러데이와 셰이든 샤프까지 백코트 자원이 많습니다. 여러 볼핸들러의 역할을 조정하고 수비 균형을 잡는 일이 첫 번째 과제입니다.',
+      'NBA.com은 첫해 감독의 성공을 반드시 파이널 진출로만 볼 필요는 없다고 설명했습니다. 승수 증가, 플레이오프 진출, 한 차례 시리즈 승리, 젊은 핵심의 성장처럼 각 팀의 단계에 맞는 결과가 중요합니다. 여섯 감독 모두 로스터의 현재 시간표가 서로 다르기 때문에 같은 기준으로 평가하기 어렵습니다.'
+    ],
+    source:'NBA.com',
+    byline:'Jeff Zillgitt',
+    publishedAt:'2026-07-22T16:42:00Z',
+    originalLink:'https://www.nba.com/news/closer-look-new-coaches-2026-27',
+    related:['시카고 불스','댈러스 매버릭스','밀워키 벅스','뉴올리언스 펠리컨스','올랜도 매직','포틀랜드 트레일블레이저스']
+  }
+].map(item=>({
+  ...item,
+  link:`./reading/${item.slug}/`,
+  accessType:'free-full-text',
+  accessLabel:'무료 전문 확인',
+  translationType:'무료 전문 전체 내용 기반 상세 한국어 정리'
+}));
+
+function articlePage(item) {
+  const body=item.detailsKo.map((text,index)=>`<section class="detail-block"><h2>${index===0?'기사 핵심':`핵심 내용 ${index+1}`}</h2><p>${esc(text)}</p></section>`).join('');
+  return `<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#12090d"><title>${esc(item.titleKo)} | 오늘의 NBA</title><meta name="description" content="${esc(item.summaryKo)}"><link rel="stylesheet" href="../../column.css"></head><body><header><div class="bar"><a href="../../#reading">오늘의 NBA</a><span>FULL-ARTICLE DIGEST</span></div></header><article><div class="kicker">미국 현지 읽을거리 · 무료 전문 전체 내용 기반 상세 한국어 정리</div><h1 class="title">${esc(item.titleKo)}</h1><p class="dek">${esc(item.summaryKo)}</p><div class="meta">${esc(item.source)} · ${esc(kstDate(item.publishedAt))} · ${esc(item.byline)}</div><div class="thesis">원문 제목: ${esc(item.title)}</div><div class="body">${body}<p class="translation-note">원문 전체를 확인해 핵심 논리, 수치, 선수와 팀별 평가를 한국어로 상세히 재구성했습니다. 저작권상 원문 문장을 순서대로 복제하는 전문 번역은 제공하지 않습니다.</p></div><div class="takeaways"><h2>관련 팀·선수</h2><ul>${item.related.map(x=>`<li>${esc(x)}</li>`).join('')}</ul></div><div class="share"><a class="primary" href="${esc(item.originalLink)}" target="_blank" rel="noopener noreferrer">NBA.com 무료 원문 보기</a><a class="secondary" href="../../#reading">읽을거리 목록</a></div></article></body></html>`;
+}
+
+await fs.mkdir(new URL('../public/data/',import.meta.url),{recursive:true});
+await fs.mkdir(READING_DIR,{recursive:true});
+for (const item of items) {
+  const dir=new URL(`./${item.slug}/`,READING_DIR);
+  await fs.mkdir(dir,{recursive:true});
+  await fs.writeFile(new URL('index.html',dir),articlePage(item),'utf8');
+}
+await fs.writeFile(DATA_FILE,JSON.stringify({
+  items,
+  message:'유료·로그인 기사를 제외하고 무료로 전문을 확인할 수 있는 NBA.com 기사만 선별해, 원문 전체 내용을 바탕으로 상세한 한국어 정리를 제공합니다.',
+  selectionPolicy:'NBA.com 무료 전문 접근 가능 · 분석/기획 기사 우선 · 트래커와 단순 명단 기사 제외',
+  updatedAt:new Date().toISOString()
+},null,2),'utf8');
+console.log(`Curated detailed NBA readings written: ${items.length}`);
