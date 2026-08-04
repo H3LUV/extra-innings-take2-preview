@@ -1,0 +1,53 @@
+name: Refresh Today MLB games and standings
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - .github/workflows/today-mlb-afternoon.yml
+  schedule:
+    # 07:00 UTC = 16:00 Asia/Seoul
+    - cron: '0 7 * * *'
+
+permissions:
+  contents: write
+  deployments: write
+
+concurrency:
+  group: today-mlb-afternoon
+  cancel-in-progress: true
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: today-mlb-cloudflare
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Refresh games and standings
+        run: node scripts/update-live-data.mjs
+      - name: Commit fallback data
+        run: |
+          git config user.name "today-mlb-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add public/data/schedule.json public/data/standings.json
+          if git diff --cached --quiet; then
+            echo "No data changes"
+          else
+            git commit -m "Refresh games and standings at 16:00 KST"
+            git push origin HEAD:today-mlb-cloudflare
+          fi
+      - name: Deploy to Cloudflare Pages
+        if: ${{ vars.CLOUDFLARE_DEPLOY_ENABLED == 'true' }}
+        uses: cloudflare/wrangler-action@v3
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          command: pages deploy public --project-name=${{ secrets.CLOUDFLARE_PROJECT_NAME }} --branch=today-mlb-cloudflare
+          gitHubToken: ${{ secrets.GITHUB_TOKEN }}
