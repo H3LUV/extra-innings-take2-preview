@@ -34,6 +34,21 @@ jobs:
         with:
           node-version: 22
 
+      - name: Normalize Cloudflare API token
+        env:
+          RAW_CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+        run: |
+          python - <<'PY'
+          import os
+          raw = os.environ.get('RAW_CLOUDFLARE_API_TOKEN', '')
+          clean = raw.lstrip('\ufeff').strip()
+          if not clean:
+              raise SystemExit('CLOUDFLARE_API_TOKEN is empty after normalization')
+          print(f'::add-mask::{clean}')
+          with open(os.environ['GITHUB_ENV'], 'a', encoding='utf-8') as env_file:
+              env_file.write(f'CLOUDFLARE_API_TOKEN={clean}\n')
+          PY
+
       - name: Archive current column
         run: node scripts/archive-editorial.mjs
 
@@ -54,13 +69,11 @@ jobs:
 
       - name: Create Cloudflare Pages project when needed
         env:
-          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           CLOUDFLARE_ACCOUNT_ID: 135ede9cb7c0a586c4facd63f5810921
         run: npx wrangler@4 pages project create today-nba --production-branch today-nba-cloudflare || true
 
       - name: Deploy Today NBA to Cloudflare Pages
         env:
-          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           CLOUDFLARE_ACCOUNT_ID: 135ede9cb7c0a586c4facd63f5810921
         run: npx wrangler@4 pages deploy public --project-name today-nba --branch today-nba-cloudflare
 
@@ -73,6 +86,5 @@ jobs:
 
       - name: Publish deployment marker
         env:
-          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           CLOUDFLARE_ACCOUNT_ID: 135ede9cb7c0a586c4facd63f5810921
         run: npx wrangler@4 pages deploy public --project-name today-nba --branch today-nba-cloudflare
