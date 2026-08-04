@@ -1,4 +1,5 @@
 # Cloudflare migration bootstrap
+# Manual redeploy trigger: 2026-08-04 10:05 KST
 name: Update Today MLB edition
 
 on:
