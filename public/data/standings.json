@@ -2,7 +2,7 @@
   "season": 2026,
   "divisions": [
     {
-      "division": "",
+      "division": "American League East",
       "league": "AL",
       "teams": [
         {
@@ -53,7 +53,7 @@
       ]
     },
     {
-      "division": "",
+      "division": "American League Central",
       "league": "AL",
       "teams": [
         {
@@ -104,7 +104,7 @@
       ]
     },
     {
-      "division": "",
+      "division": "American League West",
       "league": "AL",
       "teams": [
         {
@@ -155,7 +155,7 @@
       ]
     },
     {
-      "division": "",
+      "division": "National League East",
       "league": "NL",
       "teams": [
         {
@@ -170,11 +170,11 @@
         {
           "id": 143,
           "name": "Philadelphia Phillies",
-          "w": 59,
+          "w": 60,
           "l": 53,
-          "pct": ".527",
-          "gb": "8.0",
-          "streak": "W2"
+          "pct": ".531",
+          "gb": "7.5",
+          "streak": "W3"
         },
         {
           "id": 146,
@@ -189,10 +189,10 @@
           "id": 120,
           "name": "Washington Nationals",
           "w": 55,
-          "l": 58,
-          "pct": ".487",
-          "gb": "12.5",
-          "streak": "L5"
+          "l": 59,
+          "pct": ".482",
+          "gb": "13.0",
+          "streak": "L6"
         },
         {
           "id": 121,
@@ -206,7 +206,7 @@
       ]
     },
     {
-      "division": "",
+      "division": "National League Central",
       "league": "NL",
       "teams": [
         {
@@ -257,7 +257,7 @@
       ]
     },
     {
-      "division": "",
+      "division": "National League West",
       "league": "NL",
       "teams": [
         {
@@ -308,5 +308,6 @@
       ]
     }
   ],
-  "updatedAt": "2026-08-03T23:30:48.460Z"
+  "updatedAt": "2026-08-04T01:36:27.675Z",
+  "source": "MLB Stats API"
 }
