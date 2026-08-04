@@ -1,4 +1,4 @@
-# Today MLB daily edition without compressed build dependency - column publish 2026-08-04 20:00 KST marker
+# Today MLB daily edition with automatic SEO generation
 name: Update Today MLB edition
 
 on:
@@ -44,15 +44,18 @@ jobs:
       - name: Refresh games and standings fallback
         run: node scripts/update-live-data.mjs
 
-      - name: Commit generated data
+      - name: Generate static article pages and SEO files
+        run: node scripts/update-seo.mjs
+
+      - name: Commit generated data and SEO assets
         run: |
           git config user.name "today-mlb-bot"
           git config user.email "actions@users.noreply.github.com"
-          git add public/data
+          git add public/data public/columns public/sitemap.xml public/robots.txt public/rss.xml
           if git diff --cached --quiet; then
             echo "No data changes"
           else
-            git commit -m "Update daily MLB edition"
+            git commit -m "Update daily MLB edition and SEO"
             git push origin HEAD:today-mlb-cloudflare
           fi
 
