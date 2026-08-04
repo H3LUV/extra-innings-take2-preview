@@ -21,35 +21,39 @@ concurrency:
 jobs:
   reading:
     runs-on: ubuntu-latest
-    timeout-minutes: 15
+    timeout-minutes: 30
     steps:
       - uses: actions/checkout@v4
         with:
           ref: today-mlb-cloudflare
           fetch-depth: 0
+
       - uses: actions/setup-node@v4
         with:
           node-version: 22
+
       - name: Archive current editorial by slug
         run: node scripts/archive-editorial.mjs
-      - name: Select four US reading items
+
+      - name: Build four Korean full-text reading items
         run: node scripts/augment-news.mjs
-      - name: Commit reading list and editorial archive
+
+      - name: Commit reading list, translations, and editorial archive
         run: |
           git config user.name "today-mlb-bot"
           git config user.email "actions@users.noreply.github.com"
-          git add public/data/news.json public/data/editorials
+          git add public/data/news.json public/data/articles public/data/editorials
           if git diff --cached --quiet; then
             echo "No reading or archive changes"
           else
-            git commit -m "Archive editorial and select four US MLB readings"
+            git commit -m "Publish Korean full-text MLB readings"
             git push origin HEAD:today-mlb-cloudflare
           fi
+
       - name: Deploy to Cloudflare Pages
-        if: ${{ vars.CLOUDFLARE_DEPLOY_ENABLED == 'true' }}
         uses: cloudflare/wrangler-action@v3
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
-          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-          command: pages deploy public --project-name=${{ secrets.CLOUDFLARE_PROJECT_NAME }} --branch=today-mlb-cloudflare
+          accountId: 135ede9cb7c0a586c4facd63f5810921
+          command: pages deploy public --project-name=today-mlb --branch=today-mlb-cloudflare
           gitHubToken: ${{ secrets.GITHUB_TOKEN }}
