@@ -1,34 +1,77 @@
 {
   "items": [
     {
-      "id": "nba-official-news",
-      "titleKo": "NBA 공식 뉴스와 리그 발표",
-      "title": "NBA Official News",
-      "link": "https://www.nba.com/news",
-      "source": "NBA.com"
+      "id": "49526057",
+      "slug": "espn-49526057",
+      "titleKo": "출처: Knicks 임원 Rosas가 4년 만에 팀을 떠남",
+      "title": "Sources: Knicks executive Rosas leaving team after four years",
+      "summaryKo": "ESPN은 Knicks의 농구 운영 담당 수석 부사장인 Gersson Rosas가 4시즌을 마치고 조직을 떠난다고 리그 소식통을 통해 확인했습니다.",
+      "source": "ESPN",
+      "byline": "Vincent Goodwill",
+      "publishedAt": "2026-08-04T03:30:46Z",
+      "originalLink": "https://www.espn.com/nba/story/_/id/49526057/sources-knicks-executive-rosas-leaving-team-four-years",
+      "link": "./reading/espn-49526057/",
+      "related": [
+        "New York Knicks"
+      ],
+      "translationType": "제목·공개 요약문 한국어 번역"
     },
     {
-      "id": "espn-nba",
-      "titleKo": "ESPN의 NBA 주요 이슈와 분석",
-      "title": "ESPN NBA",
-      "link": "https://www.espn.com/nba/",
-      "source": "ESPN"
+      "id": "49521766",
+      "slug": "espn-49521766",
+      "titleKo": "Wembanyama는 프랑스에서 훈련을 위해 일부 스퍼스 팀 동료를 초대합니다",
+      "title": "Wembanyama to host some Spurs teammates for workouts in France",
+      "summaryKo": "Victor Wembanyama는 샌안토니오 스퍼스가 NBA 결승전에서 뉴욕 닉스에게 패한 후 반등을 노리고 있는 가운데 이번 주 프랑스에서 \"8~10명\"의 팀원들을 훈련에 초대할 예정입니다.",
+      "source": "ESPN",
+      "byline": "Michael Wright",
+      "publishedAt": "2026-08-03T19:58:25Z",
+      "originalLink": "https://www.espn.com/nba/story/_/id/49521766/victor-wembanyama-host-some-spurs-teammates-workouts-france",
+      "link": "./reading/espn-49521766/",
+      "related": [
+        "San Antonio Spurs",
+        "Victor Wembanyama"
+      ],
+      "translationType": "제목·공개 요약문 한국어 번역"
     },
     {
-      "id": "athletic-nba",
-      "titleKo": "The Athletic의 심층 NBA 보도",
-      "title": "The Athletic NBA",
-      "link": "https://www.nytimes.com/athletic/nba/",
-      "source": "The Athletic"
+      "id": "49521358",
+      "slug": "espn-49521358",
+      "titleKo": "크리스 보쉬, 웸비에게 혈전 위험 경고: '약을 드세요'",
+      "title": "Chris Bosh cautions Wemby on blood clots: 'Take your medicine'",
+      "summaryKo": "은퇴한 히트의 슈퍼스타 크리스 보쉬(Chris Bosh)는 스퍼스의 스타 빅터 웸바야마(Victor Wembanyama)에게 혈전 진단과 선수 생활 중 건강 유지에 관해 조언과 경고를 보냈습니다.",
+      "source": "ESPN",
+      "byline": "",
+      "publishedAt": "2026-08-03T19:57:41Z",
+      "originalLink": "https://www.espn.com/nba/story/_/id/49521358/chris-bosh-cautions-wemby-blood-clots-take-your-medicine",
+      "link": "./reading/espn-49521358/",
+      "related": [
+        "San Antonio Spurs",
+        "Miami Heat",
+        "Victor Wembanyama"
+      ],
+      "translationType": "제목·공개 요약문 한국어 번역"
     },
     {
-      "id": "yahoo-nba",
-      "titleKo": "Yahoo Sports의 최신 NBA 소식",
-      "title": "Yahoo Sports NBA",
-      "link": "https://sports.yahoo.com/nba/",
-      "source": "Yahoo Sports"
+      "id": "49490878",
+      "slug": "espn-49490878",
+      "titleKo": "NBA FA 2026: 험난한 한 달을 보낸 후 사실과 허구의 대결을 해보자",
+      "title": "NBA free agency 2026: Let's play fact vs. fiction after a wild month",
+      "summaryKo": "NBA 프런트 오피스 내부 인사인 바비 마크스가 2026년 FA에 대한 이야기가 정리되면서 가장 큰 질문에 답합니다.",
+      "source": "ESPN",
+      "byline": "Bobby Marks",
+      "publishedAt": "2026-08-03T12:47:36Z",
+      "originalLink": "https://www.espn.com/nba/story/_/id/49490878/nba-free-agency-2026-bobby-marks-wemby-lebron-deals-giannis-trade-10-offseason-trends",
+      "link": "./reading/espn-49490878/",
+      "related": [
+        "Milwaukee Bucks",
+        "Los Angeles Lakers",
+        "Cleveland Cavaliers",
+        "LA Clippers",
+        "Boston Celtics"
+      ],
+      "translationType": "제목·공개 요약문 한국어 번역"
     }
   ],
-  "message": "매일 분석 가치가 높은 현지 기사 네 편으로 교체됩니다.",
-  "updatedAt": "2026-08-04T15:30:00+09:00"
+  "message": "미국 현지 기사 네 편의 제목과 공개 요약문을 한국어로 번역해 제공합니다.",
+  "updatedAt": "2026-08-04T07:54:20.990Z"
 }

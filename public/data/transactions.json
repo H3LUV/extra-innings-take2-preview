@@ -1,5 +1,260 @@
 {
-  "items": [],
-  "message": "NBA 주요 계약·트레이드·방출·투웨이 계약을 준비 중입니다.",
-  "updatedAt": "2026-08-04T15:30:00+09:00"
+  "items": [
+    {
+      "id": "signing-2026-08-02-0",
+      "type": "Signing",
+      "typeKo": "계약",
+      "date": "2026-08-02T00:00:00",
+      "dateKo": "8월 2일",
+      "title": "계약 · 8월 2일",
+      "descriptionKo": "댈러스 매버릭스가 포워드 Naji Marshall와 베테랑 연장계약을 체결했습니다.",
+      "descriptions": [
+        "Dallas Mavericks re-signed forward Naji Marshall to a Veteran Extension."
+      ],
+      "source": "NBA.com",
+      "sourceLink": "https://www.nba.com/players/transactions"
+    },
+    {
+      "id": "signing-2026-08-01-1",
+      "type": "Signing",
+      "typeKo": "계약",
+      "date": "2026-08-01T00:00:00",
+      "dateKo": "8월 1일",
+      "title": "계약 · 8월 1일",
+      "descriptionKo": "골든스테이트 워리어스가 가드 Gary Payton II와 계약을 체결했습니다.",
+      "descriptions": [
+        "Golden State Warriors re-signed guard Gary Payton II to a Contract."
+      ],
+      "source": "NBA.com",
+      "sourceLink": "https://www.nba.com/players/transactions"
+    },
+    {
+      "id": "signing-2026-07-31-2",
+      "type": "Signing",
+      "typeKo": "계약",
+      "date": "2026-07-31T00:00:00",
+      "dateKo": "7월 31일",
+      "title": "계약 · 7월 31일",
+      "descriptionKo": "덴버 너기츠가 포워드 Spencer Jones와 계약을 체결했습니다.",
+      "descriptions": [
+        "Denver Nuggets signed forward Spencer Jones to a Contract."
+      ],
+      "source": "NBA.com",
+      "sourceLink": "https://www.nba.com/players/transactions"
+    },
+    {
+      "id": "signing-2026-07-31-3",
+      "type": "Signing",
+      "typeKo": "계약",
+      "date": "2026-07-31T00:00:00",
+      "dateKo": "7월 31일",
+      "title": "계약 · 7월 31일",
+      "descriptionKo": "브루클린 네츠가 포워드 Moritz Wagner와 계약을 체결했습니다.",
+      "descriptions": [
+        "Brooklyn Nets signed forward Moritz Wagner to a Contract."
+      ],
+      "source": "NBA.com",
+      "sourceLink": "https://www.nba.com/players/transactions"
+    },
+    {
+      "id": "signing-2026-07-31-4",
+      "type": "Signing",
+      "typeKo": "계약",
+      "date": "2026-07-31T00:00:00",
+      "dateKo": "7월 31일",
+      "title": "계약 · 7월 31일",
+      "descriptionKo": "클리블랜드 캐벌리어스가 포워드 Mario Hezonja와 계약을 체결했습니다.",
+      "descriptions": [
+        "Cleveland Cavaliers signed forward Mario Hezonja to a Contract."
+      ],
+      "source": "NBA.com",
+      "sourceLink": "https://www.nba.com/players/transactions"
+    },
+    {
+      "id": "signing-2026-07-31-5",
+      "type": "Signing",
+      "typeKo": "계약",
+      "date": "2026-07-31T00:00:00",
+      "dateKo": "7월 31일",
+      "title": "계약 · 7월 31일",
+      "descriptionKo": "골든스테이트 워리어스가 가드 De'Anthony Melton와 계약을 체결했습니다.",
+      "descriptions": [
+        "Golden State Warriors re-signed guard De'Anthony Melton to a Contract."
+      ],
+      "source": "NBA.com",
+      "sourceLink": "https://www.nba.com/players/transactions"
+    },
+    {
+      "id": "waive-2026-07-30-6",
+      "type": "Waive",
+      "typeKo": "방출",
+      "date": "2026-07-30T00:00:00",
+      "dateKo": "7월 30일",
+      "title": "방출 · 7월 30일",
+      "descriptionKo": "샬럿 호네츠가 포워드 Mouhamadou Gueye를 방출했습니다.",
+      "descriptions": [
+        "Charlotte Hornets waived forward Mouhamadou Gueye."
+      ],
+      "source": "NBA.com",
+      "sourceLink": "https://www.nba.com/players/transactions"
+    },
+    {
+      "id": "signing-2026-07-29-7",
+      "type": "Signing",
+      "typeKo": "계약",
+      "date": "2026-07-29T00:00:00",
+      "dateKo": "7월 29일",
+      "title": "계약 · 7월 29일",
+      "descriptionKo": "골든스테이트 워리어스가 포워드 Draymond Green와 계약을 체결했습니다.",
+      "descriptions": [
+        "Golden State Warriors re-signed forward Draymond Green to a Contract."
+      ],
+      "source": "NBA.com",
+      "sourceLink": "https://www.nba.com/players/transactions"
+    },
+    {
+      "id": "signing-2026-07-29-8",
+      "type": "Signing",
+      "typeKo": "계약",
+      "date": "2026-07-29T00:00:00",
+      "dateKo": "7월 29일",
+      "title": "계약 · 7월 29일",
+      "descriptionKo": "멤피스 그리즐리스가 포워드 Karim Lopez와 루키 스케일 계약을 체결했습니다.",
+      "descriptions": [
+        "Memphis Grizzlies signed forward Karim Lopez to a Rookie Scale Contract."
+      ],
+      "source": "NBA.com",
+      "sourceLink": "https://www.nba.com/players/transactions"
+    },
+    {
+      "id": "trade-2026-07-28-9",
+      "type": "Trade",
+      "typeKo": "트레이드",
+      "date": "2026-07-28T00:00:00",
+      "dateKo": "7월 28일",
+      "title": "트레이드 · 7월 28일",
+      "descriptionKo": "LA 클리퍼스가 필라델피아 세븐티식서스로부터 포워드 Johni Broome을 받았습니다. LA 클리퍼스가 필라델피아 세븐티식서스로부터 드래프트 자산을 받았습니다.",
+      "descriptions": [
+        "LA Clippers received forward Johni Broome from Philadelphia 76ers.",
+        "LA Clippers received draft consideration from Philadelphia 76ers."
+      ],
+      "source": "NBA.com",
+      "sourceLink": "https://www.nba.com/players/transactions"
+    },
+    {
+      "id": "signing-2026-07-27-10",
+      "type": "Signing",
+      "typeKo": "계약",
+      "date": "2026-07-27T00:00:00",
+      "dateKo": "7월 27일",
+      "title": "계약 · 7월 27일",
+      "descriptionKo": "LA 레이커스가 가드 Matisse Thybulle와 계약을 체결했습니다.",
+      "descriptions": [
+        "Los Angeles Lakers signed guard Matisse Thybulle to a Contract."
+      ],
+      "source": "NBA.com",
+      "sourceLink": "https://www.nba.com/players/transactions"
+    },
+    {
+      "id": "waive-2026-07-27-11",
+      "type": "Waive",
+      "typeKo": "방출",
+      "date": "2026-07-27T00:00:00",
+      "dateKo": "7월 27일",
+      "title": "방출 · 7월 27일",
+      "descriptionKo": "새크라멘토 킹스가 가드 Isaiah Stevens를 방출했습니다.",
+      "descriptions": [
+        "Sacramento Kings waived guard Isaiah Stevens."
+      ],
+      "source": "NBA.com",
+      "sourceLink": "https://www.nba.com/players/transactions"
+    },
+    {
+      "id": "signing-2026-07-26-12",
+      "type": "Signing",
+      "typeKo": "계약",
+      "date": "2026-07-26T00:00:00",
+      "dateKo": "7월 26일",
+      "title": "계약 · 7월 26일",
+      "descriptionKo": "필라델피아 세븐티식서스가 포워드 LeBron James와 계약을 체결했습니다.",
+      "descriptions": [
+        "Philadelphia 76ers signed forward LeBron James to a Contract."
+      ],
+      "source": "NBA.com",
+      "sourceLink": "https://www.nba.com/players/transactions"
+    },
+    {
+      "id": "waive-2026-07-25-13",
+      "type": "Waive",
+      "typeKo": "방출",
+      "date": "2026-07-25T00:00:00",
+      "dateKo": "7월 25일",
+      "title": "방출 · 7월 25일",
+      "descriptionKo": "멤피스 그리즐리스가 가드 Kentavious Caldwell-Pope를 방출했습니다.",
+      "descriptions": [
+        "Memphis Grizzlies waived guard Kentavious Caldwell-Pope."
+      ],
+      "source": "NBA.com",
+      "sourceLink": "https://www.nba.com/players/transactions"
+    },
+    {
+      "id": "waive-2026-07-25-14",
+      "type": "Waive",
+      "typeKo": "방출",
+      "date": "2026-07-25T00:00:00",
+      "dateKo": "7월 25일",
+      "title": "방출 · 7월 25일",
+      "descriptionKo": "필라델피아 세븐티식서스가 포워드 Dalen Terry를 방출했습니다.",
+      "descriptions": [
+        "Philadelphia 76ers waived forward Dalen Terry."
+      ],
+      "source": "NBA.com",
+      "sourceLink": "https://www.nba.com/players/transactions"
+    },
+    {
+      "id": "signing-2026-07-24-15",
+      "type": "Signing",
+      "typeKo": "계약",
+      "date": "2026-07-24T00:00:00",
+      "dateKo": "7월 24일",
+      "title": "계약 · 7월 24일",
+      "descriptionKo": "포틀랜드 트레일블레이저스가 가드 John Tonje와 투웨이 계약을 체결했습니다.",
+      "descriptions": [
+        "Portland Trail Blazers signed guard John Tonje to a Two-Way Contract."
+      ],
+      "source": "NBA.com",
+      "sourceLink": "https://www.nba.com/players/transactions"
+    },
+    {
+      "id": "signing-2026-07-23-16",
+      "type": "Signing",
+      "typeKo": "계약",
+      "date": "2026-07-23T00:00:00",
+      "dateKo": "7월 23일",
+      "title": "계약 · 7월 23일",
+      "descriptionKo": "보스턴 셀틱스가 가드 Jordan Walsh와 베테랑 연장계약을 체결했습니다.",
+      "descriptions": [
+        "Boston Celtics re-signed guard Jordan Walsh to a Veteran Extension."
+      ],
+      "source": "NBA.com",
+      "sourceLink": "https://www.nba.com/players/transactions"
+    },
+    {
+      "id": "signing-2026-07-23-17",
+      "type": "Signing",
+      "typeKo": "계약",
+      "date": "2026-07-23T00:00:00",
+      "dateKo": "7월 23일",
+      "title": "계약 · 7월 23일",
+      "descriptionKo": "휴스턴 로키츠가 포워드 Jae'Sean Tate와 계약을 체결했습니다.",
+      "descriptions": [
+        "Houston Rockets re-signed forward Jae'Sean Tate to a Contract."
+      ],
+      "source": "NBA.com",
+      "sourceLink": "https://www.nba.com/players/transactions"
+    }
+  ],
+  "message": "",
+  "source": "NBA 공식 Player Movement 데이터",
+  "updatedAt": "2026-08-04T07:54:16.360Z"
 }

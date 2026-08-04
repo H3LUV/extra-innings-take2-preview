@@ -1,6 +1,21 @@
 {
   "players": [],
-  "message": "오프시즌에는 최근 10경기 비교 데이터가 없습니다. 시즌 개막 후 출전 경기와 효율 조건을 충족한 상승세 선수 5명을 표시합니다.",
-  "method": "최근 10경기와 직전 10경기의 득점·리바운드·어시스트·효율·출전시간 변화를 종합 비교",
-  "updatedAt": "2026-08-04T15:30:00+09:00"
+  "status": "offseason",
+  "message": "오프시즌에는 최근 경기 표본이 없어 상승세 순위를 표시하지 않습니다. 정규시즌 개막 후 최근 10경기와 직전 10경기를 자동 비교합니다.",
+  "method": {
+    "name": "RII",
+    "fullName": "Rising Impact Index",
+    "comparison": "최근 10경기 vs 직전 10경기",
+    "weights": {
+      "productivity": 45,
+      "efficiency": 25,
+      "role": 20,
+      "minutes": 10
+    },
+    "productivity": "NBA Fantasy Points 공식 가중치를 분당 생산성으로 환산",
+    "efficiency": "True Shooting Percentage 변화",
+    "role": "FGA + 0.44×FTA + TOV를 36분 기준으로 환산한 공격 역할 변화",
+    "eligibility": "각 구간 최소 7경기, 최근 구간 경기당 15분 이상"
+  },
+  "updatedAt": "2026-08-04T07:54:21.063Z"
 }
