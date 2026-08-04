@@ -4,18 +4,32 @@
   "dek": "직전 14일 대비 OPS 상승폭 상위 5명",
   "players": [
     {
+      "id": 808982,
+      "name": "Jung Hoo Lee",
+      "team": "San Francisco Giants",
+      "seasonPa": 416,
+      "recentPa": 48,
+      "previousPa": 37,
+      "recentAvg": 0.333,
+      "recentObp": 0.396,
+      "recentSlg": 0.69,
+      "recentOps": 1.086,
+      "previousOps": 0.438,
+      "opsDelta": 0.6480000000000001
+    },
+    {
       "id": 518692,
       "name": "Freddie Freeman",
       "team": "Los Angeles Dodgers",
       "seasonPa": 474,
-      "recentPa": 45,
+      "recentPa": 49,
       "previousPa": 36,
-      "recentAvg": 0.523,
-      "recentObp": 0.533,
-      "recentSlg": 0.614,
-      "recentOps": 1.147,
+      "recentAvg": 0.5,
+      "recentObp": 0.51,
+      "recentSlg": 0.583,
+      "recentOps": 1.093,
       "previousOps": 0.492,
-      "opsDelta": 0.655
+      "opsDelta": 0.601
     },
     {
       "id": 669065,
@@ -35,43 +49,29 @@
       "id": 701538,
       "name": "Jackson Merrill",
       "team": "San Diego Padres",
-      "seasonPa": 458,
-      "recentPa": 46,
+      "seasonPa": 461,
+      "recentPa": 50,
       "previousPa": 46,
-      "recentAvg": 0.395,
-      "recentObp": 0.413,
-      "recentSlg": 0.744,
-      "recentOps": 1.157,
+      "recentAvg": 0.383,
+      "recentObp": 0.4,
+      "recentSlg": 0.702,
+      "recentOps": 1.102,
       "previousOps": 0.655,
-      "opsDelta": 0.502
+      "opsDelta": 0.44700000000000006
     },
     {
       "id": 691718,
       "name": "Pete Crow-Armstrong",
       "team": "Chicago Cubs",
       "seasonPa": 497,
-      "recentPa": 56,
+      "recentPa": 61,
       "previousPa": 46,
-      "recentAvg": 0.295,
-      "recentObp": 0.429,
-      "recentSlg": 0.75,
-      "recentOps": 1.179,
-      "previousOps": 0.721,
-      "opsDelta": 0.4580000000000001
-    },
-    {
-      "id": 678882,
-      "name": "Ceddanne Rafaela",
-      "team": "Boston Red Sox",
-      "seasonPa": 441,
-      "recentPa": 52,
-      "previousPa": 50,
-      "recentAvg": 0.346,
-      "recentObp": 0.346,
-      "recentSlg": 0.788,
+      "recentAvg": 0.292,
+      "recentObp": 0.426,
+      "recentSlg": 0.708,
       "recentOps": 1.134,
-      "previousOps": 0.724,
-      "opsDelta": 0.4099999999999999
+      "previousOps": 0.721,
+      "opsDelta": 0.4129999999999999
     }
   ],
   "method": "시즌 180타석 이상, 최근·직전 14일 각각 28타석 이상, 최근 OPS 0.700 이상인 타자 대상. 원인이나 지속 가능성은 추론하지 않습니다.",
@@ -81,6 +81,6 @@
     "previousStart": "2026-07-07",
     "previousEnd": "2026-07-20"
   },
-  "updatedAt": "2026-08-04T02:42:14.483Z",
+  "updatedAt": "2026-08-04T11:13:50.929Z",
   "source": "MLB Stats API"
 }
