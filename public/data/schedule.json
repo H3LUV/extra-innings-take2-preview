@@ -43,50 +43,13 @@
       },
       {
         "id": 823520,
-        "status": "In Progress",
+        "status": "Game Over",
         "venue": "Yankee Stadium",
         "gameDate": "2026-08-03T23:05:00Z",
         "away": {
           "id": 138,
           "name": "St. Louis Cardinals",
-          "score": 6,
-          "record": {
-            "wins": 55,
-            "losses": 57,
-            "ties": 0,
-            "pct": ".491"
-          }
-        },
-        "home": {
-          "id": 147,
-          "name": "New York Yankees",
-          "score": 3,
-          "record": {
-            "wins": 63,
-            "losses": 49,
-            "ties": 0,
-            "pct": ".563"
-          }
-        },
-        "probable": {
-          "away": "Michael McGreevy",
-          "home": "Cam Schlittler"
-        },
-        "decisions": {
-          "winner": "",
-          "loser": "",
-          "save": ""
-        }
-      },
-      {
-        "id": 823757,
-        "status": "In Progress",
-        "venue": "American Family Field",
-        "gameDate": "2026-08-03T23:40:00Z",
-        "away": {
-          "id": 134,
-          "name": "Pittsburgh Pirates",
-          "score": 4,
+          "score": 13,
           "record": {
             "wins": 56,
             "losses": 57,
@@ -95,14 +58,51 @@
           }
         },
         "home": {
+          "id": 147,
+          "name": "New York Yankees",
+          "score": 7,
+          "record": {
+            "wins": 63,
+            "losses": 50,
+            "ties": 0,
+            "pct": ".558"
+          }
+        },
+        "probable": {
+          "away": "Michael McGreevy",
+          "home": "Cam Schlittler"
+        },
+        "decisions": {
+          "winner": "Gordon Graceffo",
+          "loser": "Angel Chivilli",
+          "save": ""
+        }
+      },
+      {
+        "id": 823757,
+        "status": "Final",
+        "venue": "American Family Field",
+        "gameDate": "2026-08-03T23:40:00Z",
+        "away": {
+          "id": 134,
+          "name": "Pittsburgh Pirates",
+          "score": 4,
+          "record": {
+            "wins": 57,
+            "losses": 57,
+            "ties": 0,
+            "pct": ".500"
+          }
+        },
+        "home": {
           "id": 158,
           "name": "Milwaukee Brewers",
           "score": 3,
           "record": {
             "wins": 69,
-            "losses": 42,
+            "losses": 43,
             "ties": 0,
-            "pct": ".622"
+            "pct": ".616"
           }
         },
         "probable": {
@@ -110,9 +110,9 @@
           "home": "Brandon Sproat"
         },
         "decisions": {
-          "winner": "",
-          "loser": "",
-          "save": ""
+          "winner": "Bubba Chandler",
+          "loser": "Brandon Sproat",
+          "save": "Mason Montgomery"
         }
       },
       {
@@ -123,7 +123,7 @@
         "away": {
           "id": 119,
           "name": "Los Angeles Dodgers",
-          "score": 4,
+          "score": 5,
           "record": {
             "wins": 69,
             "losses": 43,
@@ -134,7 +134,7 @@
         "home": {
           "id": 112,
           "name": "Chicago Cubs",
-          "score": 7,
+          "score": 10,
           "record": {
             "wins": 63,
             "losses": 49,
@@ -160,7 +160,7 @@
         "away": {
           "id": 137,
           "name": "San Francisco Giants",
-          "score": 3,
+          "score": 5,
           "record": {
             "wins": 47,
             "losses": 65,
@@ -191,7 +191,7 @@
       },
       {
         "id": 824160,
-        "status": "In Progress",
+        "status": "Game Over",
         "venue": "Daikin Park",
         "gameDate": "2026-08-04T00:10:00Z",
         "away": {
@@ -199,21 +199,21 @@
           "name": "Toronto Blue Jays",
           "score": 3,
           "record": {
-            "wins": 52,
+            "wins": 53,
             "losses": 60,
             "ties": 0,
-            "pct": ".464"
+            "pct": ".469"
           }
         },
         "home": {
           "id": 117,
           "name": "Houston Astros",
-          "score": 0,
+          "score": 1,
           "record": {
             "wins": 58,
-            "losses": 55,
+            "losses": 56,
             "ties": 0,
-            "pct": ".513"
+            "pct": ".509"
           }
         },
         "probable": {
@@ -221,9 +221,9 @@
           "home": "Cristian Javier"
         },
         "decisions": {
-          "winner": "",
-          "loser": "",
-          "save": ""
+          "winner": "Shane Bieber",
+          "loser": "Cristian Javier",
+          "save": "Tyler Rogers"
         }
       },
       {
@@ -234,7 +234,7 @@
         "away": {
           "id": 139,
           "name": "Tampa Bay Rays",
-          "score": 7,
+          "score": 10,
           "record": {
             "wins": 65,
             "losses": 46,
@@ -245,7 +245,7 @@
         "home": {
           "id": 115,
           "name": "Colorado Rockies",
-          "score": 1,
+          "score": 4,
           "record": {
             "wins": 45,
             "losses": 67,
@@ -265,7 +265,7 @@
       },
       {
         "id": 825095,
-        "status": "Warmup",
+        "status": "In Progress",
         "venue": "Chase Field",
         "gameDate": "2026-08-04T01:40:00Z",
         "away": {
@@ -282,7 +282,7 @@
         "home": {
           "id": 109,
           "name": "Arizona Diamondbacks",
-          "score": 0,
+          "score": 3,
           "record": {
             "wins": 59,
             "losses": 53,
@@ -330,7 +330,7 @@
           }
         },
         "probable": {
-          "away": "",
+          "away": "Grayson Rodriguez",
           "home": ""
         },
         "decisions": {
@@ -460,10 +460,10 @@
           "name": "St. Louis Cardinals",
           "score": null,
           "record": {
-            "wins": 55,
+            "wins": 56,
             "losses": 57,
             "ties": 0,
-            "pct": ".491"
+            "pct": ".496"
           }
         },
         "home": {
@@ -472,9 +472,9 @@
           "score": null,
           "record": {
             "wins": 63,
-            "losses": 49,
+            "losses": 50,
             "ties": 0,
-            "pct": ".563"
+            "pct": ".558"
           }
         },
         "probable": {
@@ -608,10 +608,10 @@
           "name": "Pittsburgh Pirates",
           "score": null,
           "record": {
-            "wins": 56,
+            "wins": 57,
             "losses": 57,
             "ties": 0,
-            "pct": ".496"
+            "pct": ".500"
           }
         },
         "home": {
@@ -620,9 +620,9 @@
           "score": null,
           "record": {
             "wins": 69,
-            "losses": 42,
+            "losses": 43,
             "ties": 0,
-            "pct": ".622"
+            "pct": ".616"
           }
         },
         "probable": {
@@ -719,10 +719,10 @@
           "name": "Toronto Blue Jays",
           "score": null,
           "record": {
-            "wins": 52,
+            "wins": 53,
             "losses": 60,
             "ties": 0,
-            "pct": ".464"
+            "pct": ".469"
           }
         },
         "home": {
@@ -731,9 +731,9 @@
           "score": null,
           "record": {
             "wins": 58,
-            "losses": 55,
+            "losses": 56,
             "ties": 0,
-            "pct": ".513"
+            "pct": ".509"
           }
         },
         "probable": {
@@ -869,10 +869,10 @@
           "name": "Toronto Blue Jays",
           "score": null,
           "record": {
-            "wins": 52,
+            "wins": 53,
             "losses": 60,
             "ties": 0,
-            "pct": ".464"
+            "pct": ".469"
           }
         },
         "home": {
@@ -881,9 +881,9 @@
           "score": null,
           "record": {
             "wins": 58,
-            "losses": 55,
+            "losses": 56,
             "ties": 0,
-            "pct": ".513"
+            "pct": ".509"
           }
         },
         "probable": {
@@ -1035,7 +1035,7 @@
           }
         },
         "probable": {
-          "away": "",
+          "away": "Reid Detmers",
           "home": ""
         },
         "decisions": {
@@ -1165,10 +1165,10 @@
           "name": "St. Louis Cardinals",
           "score": null,
           "record": {
-            "wins": 55,
+            "wins": 56,
             "losses": 57,
             "ties": 0,
-            "pct": ".491"
+            "pct": ".496"
           }
         },
         "home": {
@@ -1177,9 +1177,9 @@
           "score": null,
           "record": {
             "wins": 63,
-            "losses": 49,
+            "losses": 50,
             "ties": 0,
-            "pct": ".563"
+            "pct": ".558"
           }
         },
         "probable": {
@@ -1313,10 +1313,10 @@
           "name": "Pittsburgh Pirates",
           "score": null,
           "record": {
-            "wins": 56,
+            "wins": 57,
             "losses": 57,
             "ties": 0,
-            "pct": ".496"
+            "pct": ".500"
           }
         },
         "home": {
@@ -1325,9 +1325,9 @@
           "score": null,
           "record": {
             "wins": 69,
-            "losses": 42,
+            "losses": 43,
             "ties": 0,
-            "pct": ".622"
+            "pct": ".616"
           }
         },
         "probable": {
@@ -1416,6 +1416,6 @@
       }
     ]
   },
-  "updatedAt": "2026-08-04T01:36:27.674Z",
+  "updatedAt": "2026-08-04T02:42:15.346Z",
   "source": "MLB Stats API"
 }
