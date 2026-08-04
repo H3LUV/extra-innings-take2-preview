@@ -30,17 +30,19 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 22
+      - name: Archive current editorial by slug
+        run: node scripts/archive-editorial.mjs
       - name: Select four US reading items
         run: node scripts/augment-news.mjs
-      - name: Commit reading list
+      - name: Commit reading list and editorial archive
         run: |
           git config user.name "today-mlb-bot"
           git config user.email "actions@users.noreply.github.com"
-          git add public/data/news.json
+          git add public/data/news.json public/data/editorials
           if git diff --cached --quiet; then
-            echo "No reading changes"
+            echo "No reading or archive changes"
           else
-            git commit -m "Select four US MLB reading items"
+            git commit -m "Archive editorial and select four US MLB readings"
             git push origin HEAD:today-mlb-cloudflare
           fi
       - name: Deploy to Cloudflare Pages
