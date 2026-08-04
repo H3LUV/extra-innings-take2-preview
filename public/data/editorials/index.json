@@ -1,13 +1,13 @@
 {
   "items": [
     {
-      "slug": "today-nba-launch",
-      "title": "오늘의 NBA를 시작하며: 점수보다 먼저 흐름을 읽는 페이지",
-      "dek": "경기 결과를 나열하는 데서 멈추지 않고, 팀의 방향과 선수의 변화가 어디에서 시작되는지 매일 기록한다.",
+      "slug": "2026-nba-offseason-winners-losers",
+      "title": "슈퍼스타가 모두 움직인 여름: 2026 NBA 오프시즌 승자와 패자",
+      "dek": "야니스 아데토쿤보, 르브론 제임스, 제일런 브라운, 자 모란트, 라멜로 볼까지 움직였다. 그러나 이 여름의 진짜 평가는 이름값보다 각 팀이 어떤 시간표를 선택했는지에 달려 있다.",
       "author": "H3러브의 지시를 받은 누군가",
-      "publishedAt": "2026-08-04T15:30:00+09:00",
-      "url": "./columns/today-nba-launch/"
+      "publishedAt": "2026-08-04T16:30:00+09:00",
+      "url": "./columns/2026-nba-offseason-winners-losers/"
     }
   ],
-  "updatedAt": "2026-08-04T07:01:55.108Z"
+  "updatedAt": "2026-08-04T16:30:00+09:00"
 }
