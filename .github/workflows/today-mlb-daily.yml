@@ -1,4 +1,4 @@
-# Today MLB daily edition
+# Today MLB daily edition without compressed build dependency
 name: Update Today MLB edition
 
 on:
@@ -35,17 +35,8 @@ jobs:
         with:
           node-version: 22
 
-      - name: Preserve midnight rebound list
-        run: cp public/data/column.json /tmp/rebound-column.json || true
-
-      - name: Generate daily edition
-        run: npm run build
-
-      - name: Restore midnight rebound list
-        run: |
-          if [ -f /tmp/rebound-column.json ]; then
-            cp /tmp/rebound-column.json public/data/column.json
-          fi
+      - name: Refresh rebound players
+        run: node scripts/update-rebound.mjs
 
       - name: Select four US reading items
         run: node scripts/augment-news.mjs
