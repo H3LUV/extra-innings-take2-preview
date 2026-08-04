@@ -29,34 +29,34 @@
       "depthScore": 65
     },
     {
-      "id": "rss-18cfa02d0cc6",
-      "title": "Giants Fire Sale Continues with Erik Miller and Heliot Ramos Heading to AL East Rivals",
-      "titleKo": "자이언츠의 매각 행진 계속…에릭 밀러와 헬리엇 라모스, AL 동부 라이벌로",
-      "link": "https://blogs.fangraphs.com/giants-fire-sale-continues-with-erik-miller-and-heliot-ramos-heading-to-al-east-rivals/",
-      "pubDate": "Tue, 04 Aug 2026 15:05:58 +0000",
+      "id": "rss-b3e7226c7ba9",
+      "title": "Marlins Cap Off Deadline Day by Ordering Vodnik on the Rockies",
+      "titleKo": "Marlins는 Rockies에서 보드닉을 주문하여 마감일 마감일을 마감했습니다.",
+      "link": "https://blogs.fangraphs.com/marlins-cap-off-deadline-day-by-ordering-vodnik-on-the-rockies/",
+      "pubDate": "Tue, 04 Aug 2026 19:45:17 +0000",
       "source": "FanGraphs",
       "category": "미국 현지 읽을거리",
-      "readingMinutes": 12,
+      "readingMinutes": 7,
       "bodyVerified": true,
       "depthScore": 62,
-      "articleFile": "./data/articles/rss-18cfa02d0cc6.json",
-      "bodyChars": 6324,
-      "translatedAt": "2026-08-04T15:16:15.849Z"
+      "articleFile": "./data/articles/rss-b3e7226c7ba9.json",
+      "bodyChars": 3534,
+      "translatedAt": "2026-08-04T22:56:05.279Z"
     },
     {
-      "id": "rss-397017ece153",
-      "title": "Casey Mize Dealt to Padres for Kash Considerations",
-      "titleKo": "파드리스, 케이시 마이즈 영입…대가는 유망주 카시 메이필드",
-      "link": "https://blogs.fangraphs.com/casey-mize-dealt-to-padres-for-kash-considerations/",
-      "pubDate": "Tue, 04 Aug 2026 04:15:43 +0000",
+      "id": "rss-e8058866ba52",
+      "title": "Reds Deadline Preemption: Nathaniel Lowe to Cleveland, Caleb Ferguson to St. Louis",
+      "titleKo": "레즈 마감일 선점: Nathaniel Lowe에서 클리블랜드로, Caleb Ferguson에서 St. Louis로",
+      "link": "https://blogs.fangraphs.com/reds-deadline-preemption-nathaniel-lowe-to-cleveland-caleb-ferguson-to-st-louis/",
+      "pubDate": "Tue, 04 Aug 2026 19:05:55 +0000",
       "source": "FanGraphs",
       "category": "미국 현지 읽을거리",
-      "readingMinutes": 11,
+      "readingMinutes": 9,
       "bodyVerified": true,
       "depthScore": 62,
-      "articleFile": "./data/articles/rss-397017ece153.json",
-      "bodyChars": 5336,
-      "translatedAt": "2026-08-04T15:16:31.961Z"
+      "articleFile": "./data/articles/rss-e8058866ba52.json",
+      "bodyChars": 4779,
+      "translatedAt": "2026-08-04T22:56:18.277Z"
     }
   ],
   "edition": "daily_longform",
@@ -65,5 +65,5 @@
   "translationPolicy": "korean_title_and_body_required_keep_previous_on_failure",
   "candidateCount": 30,
   "selectedCount": 4,
-  "updatedAt": "2026-08-04T15:16:31.962Z"
+  "updatedAt": "2026-08-04T22:56:18.278Z"
 }
