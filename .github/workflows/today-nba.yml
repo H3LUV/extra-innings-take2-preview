@@ -63,3 +63,16 @@ jobs:
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           CLOUDFLARE_ACCOUNT_ID: 135ede9cb7c0a586c4facd63f5810921
         run: npx wrangler@4 pages deploy public --project-name today-nba --branch today-nba-cloudflare
+
+      - name: Record successful deployment
+        run: |
+          node -e "const fs=require('fs');fs.writeFileSync('public/data/deployment.json',JSON.stringify({project:'today-nba',branch:'today-nba-cloudflare',status:'success',deployedAt:new Date().toISOString()},null,2))"
+          git add public/data/deployment.json
+          git commit -m "Record Today NBA deployment" || true
+          git push origin HEAD:today-nba-cloudflare
+
+      - name: Publish deployment marker
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: 135ede9cb7c0a586c4facd63f5810921
+        run: npx wrangler@4 pages deploy public --project-name today-nba --branch today-nba-cloudflare
