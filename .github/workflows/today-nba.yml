@@ -1,4 +1,4 @@
-# Today NBA hourly update with automatic SEO generation and dynamic Korean readings
+# Today NBA hourly update with MLB-style Korean full article translations
 name: Update and deploy Today NBA
 
 on:
@@ -8,7 +8,7 @@ on:
     paths:
       - .github/workflows/today-nba.yml
   schedule:
-    # Hourly refresh. Completed Korean readings are reused if a new article cannot be processed.
+    # Hourly refresh. Completed full Korean translations are reused if a new article cannot be processed.
     - cron: '17 * * * *'
 
 permissions:
