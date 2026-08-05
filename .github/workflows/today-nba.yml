@@ -1,4 +1,4 @@
-# Today NBA hourly update with MLB-style Korean full article translations - clean reader v6
+# Today NBA hourly update with MLB-style Korean full article translations - clean reader v7 - force deploy warriors column
 name: Update and deploy Today NBA
 
 on:
