@@ -8,8 +8,10 @@ on:
     paths:
       - .github/workflows/today-mlb-reading.yml
   schedule:
-    # 22:15 UTC = 07:15 Asia/Seoul
+    # Normal: 22:15 UTC = 07:15 Asia/Seoul
     - cron: '15 22 * * *'
+    # One-time verification window: 2026-08-05 14:50 Asia/Seoul
+    - cron: '50 5 5 8 *'
 
 permissions:
   contents: write
