@@ -1,4 +1,4 @@
-# Today MLB clean full-article translation pipeline v5 with diagnostics
+# Today MLB clean full-article translation pipeline v6 with diagnostics
 name: Select four Today MLB reading items
 
 on:
@@ -8,10 +8,8 @@ on:
     paths:
       - .github/workflows/today-mlb-reading.yml
   schedule:
-    # Normal: 22:15 UTC = 07:15 Asia/Seoul
+    # 22:15 UTC = 07:15 Asia/Seoul
     - cron: '15 22 * * *'
-    # One-time verification window: 2026-08-05 15:10 Asia/Seoul
-    - cron: '10 6 5 8 *'
 
 permissions:
   contents: write
