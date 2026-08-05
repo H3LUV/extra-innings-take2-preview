@@ -1,5 +1,5 @@
 import { TeamRoom as BaseTeamRoom } from './team-room.js';
-import { aggregateTeamPreferences, findRestaurants } from './recommendations.js';
+import { aggregateTeamPreferences, findRestaurants } from './recommendations-v2.js';
 
 const JSON_HEADERS = {
   'content-type': 'application/json; charset=utf-8',
@@ -46,7 +46,7 @@ export class TeamRoom extends BaseTeamRoom {
     }
 
     if (candidates.length < 2) {
-      throw new Error('이 위치에서 식당 후보를 충분히 찾지 못했습니다. GPS를 다시 잡거나 지역명을 더 구체적으로 입력해 주세요.');
+      throw new Error('반경 1km 안에서 식당 후보를 충분히 찾지 못했습니다. 위치를 바꿔 다시 시도해 주세요.');
     }
 
     room.status = 'voting';
