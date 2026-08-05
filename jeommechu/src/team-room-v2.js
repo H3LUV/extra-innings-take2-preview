@@ -31,22 +31,31 @@ export class TeamRoom extends BaseTeamRoom {
       locationText: room.locationText,
       categories: aggregation.categories,
       hangoverStrength: aggregation.hangoverStrength,
-      limit: 8,
+      limit: 15,
     });
 
-    const excluded = aggregation.excludedMenus.map((value) => value.toLowerCase());
-    const candidates = result.items
-      .filter((item) => !excluded.some((menu) => `${item.name} ${item.categoryRaw || ''}`.toLowerCase().includes(menu)))
-      .slice(0, 5);
+    const excluded = aggregation.excludedMenus.map((value) => value.toLowerCase()).filter(Boolean);
+    const filtered = result.items.filter((item) => !excluded.some((menu) => `${item.name} ${item.categoryRaw || ''}`.toLowerCase().includes(menu)));
+
+    let candidates = filtered.slice(0, 5);
+    let exclusionsRelaxed = false;
+
+    if (candidates.length < 2 && result.items.length >= 2) {
+      candidates = result.items.slice(0, 5);
+      exclusionsRelaxed = true;
+    }
 
     if (candidates.length < 2) {
-      throw new Error('팀 조건에 맞는 식당 후보가 부족합니다. 조건을 완화해 주세요.');
+      throw new Error('이 위치에서 식당 후보를 충분히 찾지 못했습니다. GPS를 다시 잡거나 지역명을 더 구체적으로 입력해 주세요.');
     }
 
     room.status = 'voting';
     room.aggregation = aggregation;
     room.weather = result.weather;
-    room.appliedSignals = result.appliedSignals;
+    room.appliedSignals = [
+      ...(result.appliedSignals || []),
+      ...(exclusionsRelaxed ? ['제외 메뉴 조건 완화'] : []),
+    ];
     room.candidates = candidates;
     room.lastError = '';
     for (const participant of room.participants) participant.vote = null;
