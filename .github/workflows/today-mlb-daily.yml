@@ -1,4 +1,4 @@
-# Today MLB daily edition with automatic SEO generation
+# Today MLB daily edition without duplicate reading translation
 name: Update Today MLB edition
 
 on:
@@ -37,9 +37,6 @@ jobs:
 
       - name: Refresh rebound players
         run: node scripts/update-rebound.mjs
-
-      - name: Select four US reading items
-        run: node scripts/augment-news.mjs
 
       - name: Refresh games and standings fallback
         run: node scripts/update-live-data.mjs
