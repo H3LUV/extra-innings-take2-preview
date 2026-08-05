@@ -1,4 +1,4 @@
-# Today MLB clean full-article translation pipeline v6
+# Today MLB clean full-article translation pipeline v7 - force recovery deploy
 name: Select four Today MLB reading items
 
 on:
