@@ -18,6 +18,34 @@
       "opsDelta": 0.6799999999999999
     },
     {
+      "id": 691718,
+      "name": "Pete Crow-Armstrong",
+      "team": "Chicago Cubs",
+      "seasonPa": 506,
+      "recentPa": 61,
+      "previousPa": 45,
+      "recentAvg": 0.327,
+      "recentObp": 0.41,
+      "recentSlg": 0.808,
+      "recentOps": 1.218,
+      "previousOps": 0.621,
+      "opsDelta": 0.597
+    },
+    {
+      "id": 660271,
+      "name": "Shohei Ohtani",
+      "team": "Los Angeles Dodgers",
+      "seasonPa": 483,
+      "recentPa": 50,
+      "previousPa": 38,
+      "recentAvg": 0.409,
+      "recentObp": 0.46,
+      "recentSlg": 0.795,
+      "recentOps": 1.255,
+      "previousOps": 0.707,
+      "opsDelta": 0.5479999999999999
+    },
+    {
       "id": 678882,
       "name": "Ceddanne Rafaela",
       "team": "Boston Red Sox",
@@ -44,34 +72,6 @@
       "recentOps": 0.995,
       "previousOps": 0.466,
       "opsDelta": 0.5289999999999999
-    },
-    {
-      "id": 518692,
-      "name": "Freddie Freeman",
-      "team": "Los Angeles Dodgers",
-      "seasonPa": 478,
-      "recentPa": 44,
-      "previousPa": 36,
-      "recentAvg": 0.488,
-      "recentObp": 0.5,
-      "recentSlg": 0.535,
-      "recentOps": 1.035,
-      "previousOps": 0.559,
-      "opsDelta": 0.47599999999999987
-    },
-    {
-      "id": 680776,
-      "name": "Jarren Duran",
-      "team": "Boston Red Sox",
-      "seasonPa": 446,
-      "recentPa": 43,
-      "previousPa": 42,
-      "recentAvg": 0.317,
-      "recentObp": 0.333,
-      "recentSlg": 0.463,
-      "recentOps": 0.796,
-      "previousOps": 0.334,
-      "opsDelta": 0.462
     }
   ],
   "method": "시즌 180타석 이상, 최근·직전 14일 각각 28타석 이상, 최근 OPS 0.700 이상인 타자 대상. 원인이나 지속 가능성은 추론하지 않습니다.",
@@ -81,6 +81,6 @@
     "previousStart": "2026-07-09",
     "previousEnd": "2026-07-22"
   },
-  "updatedAt": "2026-08-05T16:47:20.168Z",
+  "updatedAt": "2026-08-05T22:51:23.361Z",
   "source": "MLB Stats API"
 }
