@@ -3,6 +3,9 @@
   "name": "jeommechu",
   "main": "./src/index.js",
   "compatibility_date": "2026-08-05",
+  "secrets": {
+    "required": ["KAKAO_REST_API_KEY"]
+  },
   "assets": {
     "directory": "./public",
     "binding": "ASSETS",
