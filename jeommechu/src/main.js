@@ -1,5 +1,5 @@
 import worker, { TeamRoom } from './index.js';
-import { findRestaurants } from './recommendations.js';
+import { findRestaurants } from './recommendations-v2.js';
 
 export { TeamRoom };
 
@@ -34,7 +34,7 @@ async function handleRestaurants(request, env) {
       locationText: body.locationText || '',
       categories: Array.isArray(body.categories) ? body.categories : [],
       hangoverStrength: body.hangover ? 1 : 0,
-      limit: 20,
+      limit: 30,
     });
 
     return json({
