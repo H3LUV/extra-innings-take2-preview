@@ -3,7 +3,7 @@
   "message": "MLB 전문 번역 기사를 생성하고 있습니다.",
   "selectionPolicy": "최신 무료 전문 우선 · 광고와 회원가입 문구 제거 · 제목과 본문 전체 번역 필수",
   "translationPolicy": "clean_full_translation_keep_previous_on_failure",
-  "pipelineVersion": "reader-v3",
+  "pipelineVersion": "reader-v4",
   "selectedCount": 0,
-  "updatedAt": "2026-08-05T05:50:22.898Z"
+  "updatedAt": "2026-08-05T05:58:56.351Z"
 }
