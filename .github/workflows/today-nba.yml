@@ -1,4 +1,4 @@
-# Today NBA hourly update with MLB-style Korean full article translations - newest-first reader pipeline
+# Today NBA hourly update with MLB-style Korean full article translations - filtered reader v3
 name: Update and deploy Today NBA
 
 on:
@@ -8,7 +8,7 @@ on:
     paths:
       - .github/workflows/today-nba.yml
   schedule:
-    # Hourly refresh. Completed full Korean translations are reused if a new article cannot be processed.
+    # Hourly refresh. Completed full Korean translations are reused if a new valid article cannot be processed.
     - cron: '17 * * * *'
 
 permissions:
@@ -22,7 +22,7 @@ concurrency:
 jobs:
   update-and-deploy:
     runs-on: ubuntu-latest
-    timeout-minutes: 30
+    timeout-minutes: 45
     steps:
       - name: Check out Today NBA branch
         uses: actions/checkout@v4
@@ -53,7 +53,7 @@ jobs:
       - name: Archive current column
         run: node scripts/archive-editorial.mjs
 
-      - name: Refresh all NBA sections
+      - name: Refresh all NBA sections and valid full translations
         run: node scripts/update-nba-data.mjs
 
       - name: Generate static article pages and SEO files
