@@ -56,6 +56,9 @@ jobs:
       - name: Refresh all NBA sections and valid full translations
         run: node scripts/update-nba-data.mjs
 
+      - name: Point NBA reading cards to internal Korean pages
+        run: node scripts/patch-nba-reading-links.mjs
+
       - name: Generate static article pages and SEO files
         run: node scripts/update-seo.mjs
 
@@ -63,7 +66,7 @@ jobs:
         run: |
           git config user.name "today-nba-bot"
           git config user.email "actions@users.noreply.github.com"
-          git add public/data public/columns public/reading public/sitemap.xml public/robots.txt public/rss.xml
+          git add public/data public/app.js public/columns public/reading public/sitemap.xml public/robots.txt public/rss.xml
           if git diff --cached --quiet; then
             echo "No NBA data changes"
           else
