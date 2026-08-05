@@ -6,6 +6,9 @@ const DATA_FILE=new URL('../public/data/news.json',import.meta.url);
 const ARTICLE_DIR=new URL('../public/data/articles/',import.meta.url);
 const MAX_ITEMS=4;
 const MIN_BODY_WORDS=220;
+const PIPELINE='reader-v3';
+const EXCLUDE_URL=/\/news\/(?:category|writers?|authors?|tag|video|podcasts?|archive|key-dates|2026-nba-draft-order|2026-offseason-trade-tracker)(?:\/|$)/i;
+const EXCLUDE_TITLE=/page not found|key dates|draft results|draft order|trade tracker|where to watch|stream|schedule|odds|betting|fantasy|mock draft|tickets|all-time .* leaders/i;
 
 const TEAM_NAMES=[
  ['Atlanta Hawks','애틀랜타 호크스'],['Boston Celtics','보스턴 셀틱스'],['Brooklyn Nets','브루클린 네츠'],
@@ -22,91 +25,64 @@ const TEAM_NAMES=[
 ];
 
 const hasHangul=text=>/[가-힣]/.test(String(text||''));
-const canonical=value=>String(value||'').replace(/[?#].*$/,'');
+const canonical=value=>String(value||'').replace(/[?#].*$/,'').replace(/\/$/,'');
 const stableId=link=>`nba-${crypto.createHash('sha1').update(canonical(link)).digest('hex').slice(0,12)}`;
 const sleep=ms=>new Promise(resolve=>setTimeout(resolve,ms));
 
 function polishKo(text=''){
  let result=String(text).replace(/\s+/g,' ').trim();
  for(const[en,ko]of TEAM_NAMES)result=result.replaceAll(en,ko);
- return result
-  .replace(/three-pointer/gi,'3점슛')
-  .replace(/field goal/gi,'야투')
-  .replace(/free throw/gi,'자유투')
-  .replace(/postseason/gi,'플레이오프')
-  .replace(/\s+([,.:;!?])/g,'$1')
-  .trim();
+ return result.replace(/three-pointer/gi,'3점슛').replace(/field goal/gi,'야투').replace(/free throw/gi,'자유투')
+  .replace(/postseason/gi,'플레이오프').replace(/\s+([,.:;!?])/g,'$1').trim();
 }
 
 function markdownToText(markdown=''){
  const marker='Markdown Content:';
  const source=String(markdown).includes(marker)?String(markdown).split(marker).slice(1).join(marker):String(markdown);
- return source
-  .replace(/!\[[^\]]*\]\([^)]*\)/g,' ')
-  .replace(/\[([^\]]+)\]\([^)]*\)/g,'$1')
-  .replace(/^#{1,6}\s+/gm,'')
-  .replace(/^\s*[-*+]\s+/gm,'')
-  .replace(/^\s*\d+\.\s+/gm,'')
-  .replace(/^[-*_]{3,}\s*$/gm,'')
-  .replace(/`{1,3}([^`]+)`{1,3}/g,'$1')
-  .replace(/<[^>]+>/g,' ')
-  .replace(/[ \t]+/g,' ')
-  .replace(/\n[ \t]+/g,'\n')
-  .replace(/\n{3,}/g,'\n\n')
-  .trim();
+ return source.replace(/!\[[^\]]*\]\([^)]*\)/g,' ').replace(/\[([^\]]+)\]\([^)]*\)/g,'$1')
+  .replace(/^#{1,6}\s+/gm,'').replace(/^\s*[-*+]\s+/gm,'').replace(/^\s*\d+\.\s+/gm,'')
+  .replace(/^[-*_]{3,}\s*$/gm,'').replace(/`{1,3}([^`]+)`{1,3}/g,'$1').replace(/<[^>]+>/g,' ')
+  .replace(/[ \t]+/g,' ').replace(/\n[ \t]+/g,'\n').replace(/\n{3,}/g,'\n\n').trim();
 }
 
-async function readExisting(){
- try{return JSON.parse(await fs.readFile(DATA_FILE,'utf8'))}catch{return{items:[]}}
-}
-
+async function readExisting(){try{return JSON.parse(await fs.readFile(DATA_FILE,'utf8'))}catch{return{items:[]}}}
 async function fetchReader(targetUrl,timeout=60000){
- const url=`https://r.jina.ai/${targetUrl}`;
- const response=await fetch(url,{
-  headers:{accept:'text/plain','user-agent':'today-nba/2.1'},
-  signal:AbortSignal.timeout(timeout)
- });
- if(!response.ok)throw new Error(`reader ${response.status} ${targetUrl}`);
- return response.text();
+ const response=await fetch(`https://r.jina.ai/${targetUrl}`,{headers:{accept:'text/plain','user-agent':'today-nba/3.0'},signal:AbortSignal.timeout(timeout)});
+ if(!response.ok)throw new Error(`reader ${response.status} ${targetUrl}`);return response.text();
 }
-
-function readerMeta(text,key){
- const match=String(text).match(new RegExp(`^${key}:\\s*(.+)$`,'mi'));
- return match?.[1]?.trim()||'';
-}
+function readerMeta(text,key){return String(text).match(new RegExp(`^${key}:\\s*(.+)$`,'mi'))?.[1]?.trim()||''}
 
 function articleLinks(text){
- const matches=[...String(text).matchAll(/https:\/\/www\.nba\.com\/news\/[a-z0-9-]+/gi)].map(match=>match[0].replace(/[),.]+$/,''));
- return[...new Set(matches)].filter(url=>!/(schedule|where-to-watch|odds|betting|fantasy|tickets|mock-draft)/i.test(url));
+ const results=[];
+ for(const match of String(text).matchAll(/\[([^\]]{8,180})\]\((https:\/\/www\.nba\.com\/news\/[a-z0-9-]+)\)/gi)){
+  const titleHint=match[1].replace(/[*_`]/g,'').trim();const link=canonical(match[2]);
+  if(EXCLUDE_URL.test(link)||EXCLUDE_TITLE.test(titleHint))continue;
+  results.push({link,titleHint});
+ }
+ for(const match of String(text).matchAll(/https:\/\/www\.nba\.com\/news\/[a-z0-9-]+/gi)){
+  const link=canonical(match[0]);if(EXCLUDE_URL.test(link))continue;results.push({link,titleHint:''});
+ }
+ return[...new Map(results.map(item=>[item.link,item])).values()];
 }
 
 async function translateChunk(text){
  const url=new URL('https://translate.googleapis.com/translate_a/single');
  url.searchParams.set('client','gtx');url.searchParams.set('sl','en');url.searchParams.set('tl','ko');url.searchParams.set('dt','t');url.searchParams.set('q',text);
- const response=await fetch(url,{headers:{'user-agent':'today-nba/2.1'},signal:AbortSignal.timeout(30000)});
+ const response=await fetch(url,{headers:{'user-agent':'today-nba/3.0'},signal:AbortSignal.timeout(30000)});
  if(!response.ok)throw new Error(`translation ${response.status}`);
- const payload=await response.json();
- const result=(payload?.[0]||[]).map(part=>part?.[0]||'').join('').replace(/\s+/g,' ').trim();
- if(!hasHangul(result))throw new Error('translation returned no Korean text');
- return polishKo(result);
+ const payload=await response.json();const result=(payload?.[0]||[]).map(part=>part?.[0]||'').join('').replace(/\s+/g,' ').trim();
+ if(!hasHangul(result))throw new Error('translation returned no Korean text');return polishKo(result);
 }
 
 function splitText(text,maxLength=1100){
- const paragraphs=String(text||'').split(/\n\s*\n+/).map(x=>x.trim()).filter(Boolean);
- const chunks=[];let current='';
+ const paragraphs=String(text||'').split(/\n\s*\n+/).map(x=>x.trim()).filter(Boolean);const chunks=[];let current='';
  const flush=()=>{if(current.trim())chunks.push(current.trim());current=''};
  for(const paragraph of paragraphs){
-  if(paragraph.length>maxLength){
-   flush();
-   const sentences=paragraph.split(/(?<=[.!?])\s+/);let part='';
-   for(const sentence of sentences){
-    if((`${part} ${sentence}`).trim().length>maxLength){if(part.trim())chunks.push(part.trim());part=sentence}else part=`${part} ${sentence}`.trim();
-   }
-   if(part.trim())chunks.push(part.trim());
-   continue;
+  if(paragraph.length>maxLength){flush();const sentences=paragraph.split(/(?<=[.!?])\s+/);let part='';
+   for(const sentence of sentences){if((`${part} ${sentence}`).trim().length>maxLength){if(part.trim())chunks.push(part.trim());part=sentence}else part=`${part} ${sentence}`.trim()}
+   if(part.trim())chunks.push(part.trim());continue;
   }
-  if((`${current}\n\n${paragraph}`).trim().length>maxLength)flush();
-  current=current?`${current}\n\n${paragraph}`:paragraph;
+  if((`${current}\n\n${paragraph}`).trim().length>maxLength)flush();current=current?`${current}\n\n${paragraph}`:paragraph;
  }
  flush();return chunks;
 }
@@ -114,81 +90,53 @@ function splitText(text,maxLength=1100){
 async function translateText(text){
  const translated=[];
  for(const chunk of splitText(text)){
-  let result='';
-  for(let attempt=0;attempt<3&&!result;attempt+=1){
-   try{result=await translateChunk(chunk)}catch(error){if(attempt===2)console.warn(`NBA translation chunk failed: ${error.message}`);else await sleep(900*(attempt+1))}
-  }
-  if(!result)return'';
-  translated.push(result);
-  await sleep(220);
+  let result='';for(let attempt=0;attempt<3&&!result;attempt+=1){try{result=await translateChunk(chunk)}catch(error){if(attempt===2)console.warn(`NBA translation chunk failed: ${error.message}`);else await sleep(900*(attempt+1))}}
+  if(!result)return'';translated.push(result);await sleep(220);
  }
  return translated.join('\n\n');
 }
 
 function cleanArticleBody(readerText,title){
- let body=markdownToText(readerText);
- const boilerplate=[
-  /^Navigation Toggle$/gmi,/^Download the NBA App$/gmi,/^NBA\.com$/gmi,/^Copyright.*$/gmi,
-  /^Title:.*$/gmi,/^URL Source:.*$/gmi,/^Published Time:.*$/gmi,/^Markdown Content:.*$/gmi
- ];
- for(const pattern of boilerplate)body=body.replace(pattern,'');
- if(title)body=body.replace(new RegExp(`^${title.replace(/[.*+?^${}()|[\]\\]/g,'\\$&')}\\s*`,'i'),'');
- return body.replace(/\n{3,}/g,'\n\n').trim();
+ let body=markdownToText(readerText).replace(/^Title:.*$/gmi,'').replace(/^URL Source:.*$/gmi,'').replace(/^Published Time:.*$/gmi,'').replace(/^Markdown Content:.*$/gmi,'');
+ const escaped=String(title||'').replace(/[.*+?^${}()|[\]\\]/g,'\\$&');
+ if(escaped){const match=body.match(new RegExp(escaped,'i'));if(match&&typeof match.index==='number')body=body.slice(match.index+match[0].length)}
+ return body.split('\n').map(x=>x.trim()).filter(Boolean)
+  .filter(line=>!/^(navigation toggle|download the nba app|nba\.com|sign in|log in|privacy policy|terms of use|copyright.*)$/i.test(line))
+  .join('\n\n').replace(/\n{3,}/g,'\n\n').trim();
 }
 
-async function buildItem(url,cached){
- if(cached?.articleFile&&cached?.bodyVerified&&cached?.translationType==='full')return cached;
- const readerText=await fetchReader(url);
- const title=readerMeta(readerText,'Title')||readerMeta(readerText,'Page Title')||url.split('/').pop().replaceAll('-',' ');
+async function buildItem(candidate,cached){
+ if(cached?.articleFile&&cached?.bodyVerified&&cached?.translationType==='full'&&cached?.pipelineVersion===PIPELINE)return cached;
+ const readerText=await fetchReader(candidate.link);const title=readerMeta(readerText,'Title')||candidate.titleHint||candidate.link.split('/').pop().replaceAll('-',' ');
+ if(EXCLUDE_TITLE.test(title))throw new Error(`excluded title: ${title}`);
  const pubDate=readerMeta(readerText,'Published Time')||readerMeta(readerText,'Published')||new Date().toISOString();
- const body=cleanArticleBody(readerText,title);
- const wordCount=body.split(/\s+/).filter(Boolean).length;
+ const body=cleanArticleBody(readerText,title);const wordCount=body.split(/\s+/).filter(Boolean).length;
  if(wordCount<MIN_BODY_WORDS)throw new Error(`reader body too short: ${wordCount} words`);
- const titleKo=await translateChunk(title);
- const translated=await translateText(body);
+ const titleKo=await translateChunk(title);const translated=await translateText(body);
  if(!titleKo||!translated||translated.length<700)throw new Error('full translation incomplete');
- const id=stableId(url);
- const translatedAt=new Date().toISOString();
- await fs.writeFile(new URL(`${id}.json`,ARTICLE_DIR),JSON.stringify({available:true,title:titleKo,originalTitle:title,translated,source:'NBA.com',link:url,pubDate,translationType:'full',translatedAt},null,2),'utf8');
- return{id,articleFile:`./data/articles/${id}.json`,title,titleKo,link:url,pubDate,source:'NBA.com',category:'미국 현지 읽을거리',readingMinutes:Math.max(4,Math.round(wordCount/220)),bodyVerified:true,bodyChars:translated.length,sourceWordCount:wordCount,translationType:'full',translatedAt};
+ const id=stableId(candidate.link);const translatedAt=new Date().toISOString();
+ await fs.writeFile(new URL(`${id}.json`,ARTICLE_DIR),JSON.stringify({available:true,title:titleKo,originalTitle:title,translated,source:'NBA.com',link:candidate.link,pubDate,translationType:'full',pipelineVersion:PIPELINE,translatedAt},null,2),'utf8');
+ return{id,articleFile:`./data/articles/${id}.json`,title,titleKo,link:candidate.link,pubDate,source:'NBA.com',category:'미국 현지 읽을거리',readingMinutes:Math.max(4,Math.round(wordCount/220)),bodyVerified:true,bodyChars:translated.length,sourceWordCount:wordCount,translationType:'full',pipelineVersion:PIPELINE,translatedAt};
 }
 
 async function main(){
- await fs.mkdir(ARTICLE_DIR,{recursive:true});
- const existing=await readExisting();
- const existingByUrl=new Map((existing.items||[]).map(item=>[canonical(item.originalLink||item.link),item]));
- const fullExisting=(existing.items||[]).filter(item=>item.articleFile&&item.bodyVerified&&item.translationType==='full');
- let homeText='';
- try{homeText=await fetchReader(`${NEWS_HOME}?refresh=${Date.now()}`)}catch(error){console.warn(`NBA news home reader failed: ${error.message}`)}
-
- // 중요: 최신 NBA.com 기사부터 처리합니다. 기존 기사는 번역 실패 때만 아래 fallback에서 사용합니다.
- const candidates=articleLinks(homeText).slice(0,40);
- const items=[];const seen=new Set();
- for(const url of candidates){
-  if(items.length>=MAX_ITEMS)break;
-  const key=canonical(url);if(seen.has(key))continue;
-  try{const item=await buildItem(url,existingByUrl.get(key));items.push(item);seen.add(key)}catch(error){console.warn(`Skipped NBA article ${url}: ${error.message}`)}
+ await fs.mkdir(ARTICLE_DIR,{recursive:true});const existing=await readExisting();
+ const existingByUrl=new Map((existing.items||[]).map(item=>[canonical(item.link),item]));
+ const validExisting=(existing.items||[]).filter(item=>item.articleFile&&item.bodyVerified&&item.translationType==='full'&&item.pipelineVersion===PIPELINE&&!EXCLUDE_URL.test(item.link)&&!EXCLUDE_TITLE.test(item.title));
+ let homeText='';try{homeText=await fetchReader(`${NEWS_HOME}?refresh=${Date.now()}`)}catch(error){console.warn(`NBA news home reader failed: ${error.message}`)}
+ const candidates=articleLinks(homeText).slice(0,60);const built=[];const seen=new Set();
+ for(const candidate of candidates){
+  if(built.length>=12)break;const key=canonical(candidate.link);if(seen.has(key))continue;
+  try{const item=await buildItem(candidate,existingByUrl.get(key));built.push(item);seen.add(key)}catch(error){console.warn(`Skipped NBA article ${candidate.link}: ${error.message}`)}
  }
-
- // 새 기사 번역이 네 편에 미달할 때만 직전 전체 번역 기사를 채웁니다.
- for(const old of fullExisting){
-  if(items.length>=MAX_ITEMS)break;
-  const key=canonical(old.originalLink||old.link);if(!key||seen.has(key))continue;
-  items.push(old);seen.add(key);
- }
- await fs.writeFile(DATA_FILE,JSON.stringify({
-  items:items.slice(0,MAX_ITEMS),
-  message:items.length?'NBA.com 무료 기사 중 제목과 본문 전체 자동 번역이 완료된 기사만 제공합니다.':'NBA 전문 번역 기사를 생성하고 있습니다.',
-  selectionPolicy:'최신 NBA.com 무료 전문 우선 · 제목과 본문 전체 한국어 번역 필수 · 기존 기사는 실패 시에만 유지',
-  translationPolicy:'newest_first_full_translation_keep_previous_on_failure',
-  selectedCount:Math.min(MAX_ITEMS,items.length),updatedAt:new Date().toISOString()
- },null,2),'utf8');
- console.log(`NBA newest-first Korean full-text readings updated: ${items.length}`);
+ built.sort((a,b)=>new Date(b.pubDate||0)-new Date(a.pubDate||0));const items=built.slice(0,MAX_ITEMS);const selected=new Set(items.map(x=>canonical(x.link)));
+ for(const old of validExisting.sort((a,b)=>new Date(b.pubDate||0)-new Date(a.pubDate||0))){if(items.length>=MAX_ITEMS)break;const key=canonical(old.link);if(selected.has(key))continue;items.push(old);selected.add(key)}
+ await fs.writeFile(DATA_FILE,JSON.stringify({items,message:items.length?'NBA.com의 최신 일반 기사 중 제목과 본문 전체 자동 번역이 완료된 기사만 제공합니다.':'NBA 전문 번역 기사를 생성하고 있습니다.',selectionPolicy:'최신 일반 기사 우선 · 오류/분류/일정/트래커 페이지 제외 · 전체 번역 필수',translationPolicy:'newest_valid_article_full_translation_keep_previous_on_failure',pipelineVersion:PIPELINE,selectedCount:items.length,updatedAt:new Date().toISOString()},null,2),'utf8');
+ console.log(`NBA valid full-text readings updated: ${items.length}`);
 }
 
 main().catch(async error=>{
- console.warn(`NBA full-text news update failed: ${error.message}`);
- const existing=await readExisting();
- const full=(existing.items||[]).filter(item=>item.articleFile&&item.bodyVerified&&item.translationType==='full').slice(0,MAX_ITEMS);
- await fs.writeFile(DATA_FILE,JSON.stringify({items:full,message:full.length?'직전 번역 완료 기사를 유지합니다.':'NBA 전문 번역 기사를 생성하고 있습니다.',selectionPolicy:'상세 요약 사용 안 함',translationPolicy:'full_translation_only',selectedCount:full.length,updatedAt:new Date().toISOString()},null,2),'utf8');
+ console.warn(`NBA full-text news update failed: ${error.message}`);const existing=await readExisting();
+ const valid=(existing.items||[]).filter(item=>item.articleFile&&item.bodyVerified&&item.translationType==='full'&&item.pipelineVersion===PIPELINE&&!EXCLUDE_URL.test(item.link)&&!EXCLUDE_TITLE.test(item.title)).slice(0,MAX_ITEMS);
+ await fs.writeFile(DATA_FILE,JSON.stringify({items:valid,message:valid.length?'직전 정상 번역 기사를 유지합니다.':'NBA 전문 번역 기사를 생성하고 있습니다.',selectionPolicy:'상세 요약 및 자료성 페이지 사용 안 함',translationPolicy:'valid_full_translation_only',pipelineVersion:PIPELINE,selectedCount:valid.length,updatedAt:new Date().toISOString()},null,2),'utf8');
 });
