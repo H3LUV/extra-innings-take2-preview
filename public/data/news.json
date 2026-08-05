@@ -1,23 +1,6 @@
 {
   "items": [
     {
-      "id": "mlb-f95bf2c81a3d",
-      "articleFile": "./data/articles/mlb-f95bf2c81a3d.json",
-      "title": "Effectively Wild Episode 2514: The Deadline, From Adell to Zeferjahn",
-      "titleKo": "Effectively Wild 에피소드 2514: 마감일, Adell에서 Zeferjahn까지",
-      "link": "https://blogs.fangraphs.com/effectively-wild-episode-2514-the-deadline-from-adell-to-zeferjahn/",
-      "pubDate": "2026-08-05T05:28:47+00:00",
-      "source": "FanGraphs",
-      "category": "미국 현지 읽을거리",
-      "readingMinutes": 4,
-      "bodyVerified": true,
-      "bodyChars": 1891,
-      "sourceWordCount": 482,
-      "translationType": "full",
-      "pipelineVersion": "reader-v5",
-      "translatedAt": "2026-08-05T06:04:39.373Z"
-    },
-    {
       "id": "mlb-b3e7226c7ba9",
       "articleFile": "./data/articles/mlb-b3e7226c7ba9.json",
       "title": "Marlins Cap Off Deadline Day by Ordering Vodnik on the Rockies",
@@ -28,11 +11,11 @@
       "category": "미국 현지 읽을거리",
       "readingMinutes": 5,
       "bodyVerified": true,
-      "bodyChars": 3488,
-      "sourceWordCount": 1098,
+      "bodyChars": 3469,
+      "sourceWordCount": 1094,
       "translationType": "full",
-      "pipelineVersion": "reader-v5",
-      "translatedAt": "2026-08-05T06:04:52.681Z"
+      "pipelineVersion": "reader-v6",
+      "translatedAt": "2026-08-05T06:34:18.354Z"
     },
     {
       "id": "mlb-e8058866ba52",
@@ -48,8 +31,8 @@
       "bodyChars": 4684,
       "sourceWordCount": 1504,
       "translationType": "full",
-      "pipelineVersion": "reader-v5",
-      "translatedAt": "2026-08-05T06:05:08.144Z"
+      "pipelineVersion": "reader-v6",
+      "translatedAt": "2026-08-05T06:34:41.930Z"
     },
     {
       "id": "mlb-4534e18d9652",
@@ -62,17 +45,34 @@
       "category": "미국 현지 읽을거리",
       "readingMinutes": 9,
       "bodyVerified": true,
-      "bodyChars": 6164,
-      "sourceWordCount": 1927,
+      "bodyChars": 6134,
+      "sourceWordCount": 1920,
       "translationType": "full",
-      "pipelineVersion": "reader-v5",
-      "translatedAt": "2026-08-05T06:05:22.232Z"
+      "pipelineVersion": "reader-v6",
+      "translatedAt": "2026-08-05T06:35:09.376Z"
+    },
+    {
+      "id": "mlb-1cee880280ec",
+      "articleFile": "./data/articles/mlb-1cee880280ec.json",
+      "title": "Winners and Losers From the 2026 Trade Deadline",
+      "titleKo": "2026년 트레이드 마감일의 승자와 패자",
+      "link": "https://blogs.fangraphs.com/winners-and-losers-from-the-2026-trade-deadline/",
+      "pubDate": "2026-08-04T17:30:29+00:00",
+      "source": "FanGraphs",
+      "category": "미국 현지 읽을거리",
+      "readingMinutes": 60,
+      "bodyVerified": true,
+      "bodyChars": 42927,
+      "sourceWordCount": 13195,
+      "translationType": "full",
+      "pipelineVersion": "reader-v6",
+      "translatedAt": "2026-08-05T06:37:19.420Z"
     }
   ],
   "message": "미국 현지 기사 중 광고·회원가입 문구를 제거하고 제목과 본문 전체 자동 번역이 완료된 기사만 제공합니다.",
   "selectionPolicy": "최신 무료 전문 우선 · 광고와 회원가입 문구 제거 · 제목과 본문 전체 번역 필수",
   "translationPolicy": "clean_full_translation_keep_previous_on_failure",
-  "pipelineVersion": "reader-v5",
+  "pipelineVersion": "reader-v6",
   "selectedCount": 4,
-  "updatedAt": "2026-08-05T06:05:22.232Z"
+  "updatedAt": "2026-08-05T06:37:19.422Z"
 }
