@@ -1,4 +1,4 @@
-import { TeamController } from './team.js';
+import { TeamController } from './team-final.js?v=3';
 
 const META = { 한식: '🍚', 중식: '🥟', 일식: '🍣', 양식: '🍝', 분식: '🌶️', 기타: '🥗' };
 const BUDGETS = [
