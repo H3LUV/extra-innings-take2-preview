@@ -1,6 +1,18 @@
-import { TeamController as FixedTeamController } from './team-fixed.js?v=4';
+import { TeamController as FixedTeamController } from './team-fixed.js?v=5';
+
+function formatRemaining(timestamp) {
+  const remain = Math.max(0, Number(timestamp || 0) - Date.now());
+  const minutes = Math.floor(remain / 60000);
+  const seconds = Math.floor((remain % 60000) / 1000);
+  return `${minutes}:${String(seconds).padStart(2, '0')}`;
+}
 
 export class TeamController extends FixedTeamController {
+  constructor(options) {
+    super(options);
+    this.countdownTimer = null;
+  }
+
   resetExpiredRoom(message = '마감된 방을 정리했습니다. 새 팀 방을 만들 수 있습니다.') {
     this.stopPolling();
     if (this.code) this.clearSession(this.code);
@@ -28,12 +40,99 @@ export class TeamController extends FixedTeamController {
     await super.createRoom();
   }
 
-  async loadState(silent = false) {
-    await super.loadState(silent);
+  roomFingerprint(room = this.room) {
+    if (!room) return '';
+    return JSON.stringify({
+      status: room.status,
+      deadline: room.deadline,
+      lastError: room.lastError || '',
+      participants: (room.participants || []).map((participant) => ({
+        id: participant.id,
+        name: participant.name,
+        categories: participant.categories,
+        budget: participant.budget,
+        hangover: participant.hangover,
+        hasVoted: participant.hasVoted,
+      })),
+      candidates: (room.candidates || []).map((candidate) => ({
+        id: candidate.id,
+        score: candidate.score,
+      })),
+      voteCounts: room.voteCounts || {},
+      result: room.result || null,
+      me: room.me ? {
+        id: room.me.id,
+        vote: room.me.vote,
+        categories: room.me.categories,
+        budget: room.me.budget,
+        excludedMenu: room.me.excludedMenu,
+        hangover: room.me.hangover,
+      } : null,
+    });
+  }
 
+  updateLiveDom() {
+    const deadline = document.querySelector('.deadline');
+    if (deadline && this.room?.deadline) {
+      deadline.textContent = formatRemaining(this.room.deadline);
+    }
+  }
+
+  startPolling() {
+    this.stopPolling();
+    if (!this.shouldPoll()) return;
+
+    this.pollTimer = setInterval(() => {
+      if (!this.shouldPoll()) {
+        this.stopPolling();
+        return;
+      }
+      this.loadState(true);
+    }, 3000);
+
+    this.countdownTimer = setInterval(() => this.updateLiveDom(), 1000);
+    this.updateLiveDom();
+  }
+
+  stopPolling() {
+    super.stopPolling();
+    if (this.countdownTimer) clearInterval(this.countdownTimer);
+    this.countdownTimer = null;
+  }
+
+  async loadState(silent = false) {
+    if (!silent) {
+      await super.loadState(false);
+      this.handleRoomLifecycle();
+      return;
+    }
+
+    const before = this.roomFingerprint();
+    const renderChange = this.onChange;
+    const scrollPosition = window.scrollY;
+
+    this.onChange = () => {};
+    try {
+      await super.loadState(true);
+    } finally {
+      this.onChange = renderChange;
+    }
+
+    if (this.handleRoomLifecycle()) return;
+
+    const after = this.roomFingerprint();
+    if (before !== after) {
+      renderChange();
+      requestAnimationFrame(() => window.scrollTo({ top: scrollPosition, behavior: 'auto' }));
+    } else {
+      this.updateLiveDom();
+    }
+  }
+
+  handleRoomLifecycle() {
     if (this.room?.status === 'expired') {
       this.resetExpiredRoom();
-      return;
+      return true;
     }
 
     const deadlineFailed = this.room?.status === 'collecting'
@@ -42,11 +141,14 @@ export class TeamController extends FixedTeamController {
 
     if (deadlineFailed) {
       this.resetExpiredRoom(`마감 후 후보 생성에 실패해 기존 방을 정리했습니다: ${this.room.lastError}`);
-      return;
+      return true;
     }
 
     if (!this.room && this.isUnrecoverableRoomError()) {
       this.resetExpiredRoom('사용할 수 없는 팀 방을 정리했습니다.');
+      return true;
     }
+
+    return false;
   }
 }
