@@ -1,10 +1,10 @@
 {
   "name": "jeommechu-cloudflare-workers",
-  "version": "0.5.0",
+  "version": "0.5.1",
   "private": true,
   "type": "module",
   "scripts": {
-    "check": "node --check src/index.js && node --check src/recommendations.js && node --check src/team-room.js && node --check public/app.js && node --check public/team.js",
+    "check": "node --check src/index.js && node --check src/recommendations.js && node --check src/team-room.js && node --check public/app.js && node --check public/team.js && node --check public/team-fixed.js",
     "dev": "wrangler dev",
     "deploy": "npm run check && wrangler deploy"
   },
