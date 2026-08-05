@@ -1,3 +1,6 @@
+import { fetchCurrentWeather, findRestaurants } from './recommendations.js';
+export { TeamRoom } from './team-room.js';
+
 const JSON_HEADERS = {
   'content-type': 'application/json; charset=utf-8',
   'cache-control': 'no-store',
@@ -8,152 +11,135 @@ function json(data, status = 200) {
   return new Response(JSON.stringify(data), { status, headers: JSON_HEADERS });
 }
 
-function normalizeCategory(raw = '') {
-  if (raw.includes('한식')) return '한식';
-  if (raw.includes('중식')) return '중식';
-  if (raw.includes('일식') || raw.includes('초밥') || raw.includes('돈까스')) return '일식';
-  if (raw.includes('양식') || raw.includes('이탈리안') || raw.includes('패밀리레스토랑')) return '양식';
-  if (raw.includes('분식')) return '분식';
-  return '기타';
+async function readJson(request) {
+  try {
+    return await request.json();
+  } catch {
+    return {};
+  }
 }
 
-function mapPlace(place, index) {
-  const category = normalizeCategory(place.category_name);
-  return {
-    id: place.id || `k${index}`,
-    name: place.place_name,
-    category,
-    menu: category,
-    address: place.road_address_name || place.address_name,
-    lat: Number(place.y),
-    lng: Number(place.x),
-    distance_m: Number(place.distance || 0),
-    price: null,
-    spicy: false,
-    solo: true,
-    group: true,
-    business: false,
-  };
-}
-
-async function kakaoFetch(url, key) {
-  const response = await fetch(url, {
+async function testKakao(key) {
+  const params = new URLSearchParams({ query: '서울 음식점', size: '1' });
+  const response = await fetch(`https://dapi.kakao.com/v2/local/search/keyword.json?${params}`, {
     headers: { Authorization: `KakaoAK ${key}` },
   });
-
   if (!response.ok) {
     const detail = await response.text().catch(() => '');
     throw new Error(`Kakao Local API ${response.status}${detail ? `: ${detail.slice(0, 160)}` : ''}`);
   }
-
-  return response.json();
 }
 
 async function handleStatus(env) {
   const keyConfigured = Boolean(env.KAKAO_REST_API_KEY);
   if (!keyConfigured) {
-    return json({ ok: false, keyConfigured: false, message: 'KAKAO_REST_API_KEY가 등록되지 않았습니다.' }, 503);
+    return json({
+      ok: false,
+      keyConfigured: false,
+      teamRoomsConfigured: Boolean(env.TEAM_ROOMS),
+      message: 'KAKAO_REST_API_KEY가 등록되지 않았습니다.',
+    }, 503);
   }
 
   try {
-    const params = new URLSearchParams({ query: '서울 음식점', size: '1' });
-    await kakaoFetch(`https://dapi.kakao.com/v2/local/search/keyword.json?${params}`, env.KAKAO_REST_API_KEY);
-    return json({ ok: true, keyConfigured: true, kakaoApi: 'connected' });
+    await testKakao(env.KAKAO_REST_API_KEY);
+    return json({
+      ok: true,
+      keyConfigured: true,
+      kakaoApi: 'connected',
+      weatherApi: 'Open-Meteo',
+      teamRoomsConfigured: Boolean(env.TEAM_ROOMS),
+    });
   } catch (error) {
     return json({
       ok: false,
       keyConfigured: true,
       kakaoApi: 'error',
+      teamRoomsConfigured: Boolean(env.TEAM_ROOMS),
       message: error instanceof Error ? error.message : '카카오 API 연결에 실패했습니다.',
     }, 502);
   }
 }
 
+async function handleWeather(request) {
+  const url = new URL(request.url);
+  const lat = Number(url.searchParams.get('lat'));
+  const lng = Number(url.searchParams.get('lng'));
+  if (!Number.isFinite(lat) || !Number.isFinite(lng)) {
+    return json({ message: '위도와 경도가 필요합니다.' }, 400);
+  }
+  const weather = await fetchCurrentWeather({ lat, lng });
+  if (!weather) return json({ message: '현재 날씨를 불러오지 못했습니다.' }, 502);
+  return json({ weather });
+}
+
 async function handleRestaurants(request, env) {
-  if (request.method === 'OPTIONS') {
-    return new Response(null, {
-      status: 204,
-      headers: { allow: 'POST, OPTIONS', 'cache-control': 'no-store' },
-    });
-  }
-
-  if (request.method !== 'POST') {
-    return json({ message: 'POST 요청만 지원합니다.' }, 405);
-  }
-
-  let body;
-  try {
-    body = await request.json();
-  } catch {
-    return json({ message: '요청 본문은 JSON 형식이어야 합니다.' }, 400);
-  }
-
-  const key = env.KAKAO_REST_API_KEY;
-  const { coords, locationText = '', categories = [] } = body || {};
-
-  if (!key) {
-    return json({
-      mode: 'error',
-      code: 'KAKAO_KEY_MISSING',
-      message: '카카오 REST API 키가 Cloudflare Worker에 등록되지 않았습니다.',
-      items: [],
-    }, 503);
-  }
+  if (request.method !== 'POST') return json({ message: 'POST 요청만 지원합니다.' }, 405);
+  const body = await readJson(request);
 
   try {
-    let data;
-
-    if (coords?.lat && coords?.lng) {
-      const params = new URLSearchParams({
-        category_group_code: 'FD6',
-        x: String(coords.lng),
-        y: String(coords.lat),
-        radius: '2000',
-        size: '15',
-        sort: 'distance',
-      });
-
-      data = await kakaoFetch(
-        `https://dapi.kakao.com/v2/local/search/category.json?${params}`,
-        key,
-      );
-    } else {
-      const query = `${locationText || '서울'} ${categories[0] || ''} 맛집`.trim();
-      const params = new URLSearchParams({ query, size: '15' });
-      data = await kakaoFetch(
-        `https://dapi.kakao.com/v2/local/search/keyword.json?${params}`,
-        key,
-      );
-    }
-
-    const items = (data.documents || []).map(mapPlace);
-    return json({
-      mode: 'kakao',
-      source: coords?.lat && coords?.lng ? 'gps' : 'text',
-      receivedCoords: Boolean(coords?.lat && coords?.lng),
-      items,
+    const result = await findRestaurants({
+      key: env.KAKAO_REST_API_KEY,
+      coords: body.coords,
+      locationText: body.locationText || '',
+      categories: Array.isArray(body.categories) ? body.categories : [],
+      hangoverStrength: body.hangover ? 1 : 0,
+      limit: 5,
     });
+    return json({ mode: 'kakao', ...result });
   } catch (error) {
     return json({
       mode: 'error',
-      code: 'KAKAO_API_ERROR',
       message: error instanceof Error ? error.message : '식당 검색에 실패했습니다.',
       items: [],
     }, 502);
   }
 }
 
+function randomRoomCode() {
+  return String(Math.floor(100000 + Math.random() * 900000));
+}
+
+async function createTeamRoom(request, env) {
+  const body = await readJson(request);
+
+  for (let attempt = 0; attempt < 8; attempt += 1) {
+    const code = randomRoomCode();
+    const stub = env.TEAM_ROOMS.getByName(code);
+    const internalUrl = new URL('/internal/create', request.url);
+    const response = await stub.fetch(new Request(internalUrl, {
+      method: 'POST',
+      headers: { 'content-type': 'application/json' },
+      body: JSON.stringify({ ...body, code }),
+    }));
+
+    if (response.status !== 409) return response;
+  }
+
+  return json({ message: '방 코드 생성에 실패했습니다. 잠시 후 다시 시도해 주세요.' }, 503);
+}
+
+async function routeTeamRoom(request, env, url) {
+  const parts = url.pathname.split('/').filter(Boolean);
+  const code = parts[2] || '';
+  const action = parts[3] || 'state';
+  if (!/^\d{6}$/.test(code)) return json({ message: '6자리 방 코드를 확인해 주세요.' }, 400);
+
+  const stub = env.TEAM_ROOMS.getByName(code);
+  const internalUrl = new URL(`/internal/${action}`, request.url);
+  internalUrl.search = url.search;
+  return stub.fetch(new Request(internalUrl, request));
+}
+
 export default {
   async fetch(request, env) {
     const url = new URL(request.url);
 
-    if (url.pathname === '/api/status') {
-      return handleStatus(env);
-    }
-
-    if (url.pathname === '/api/restaurants') {
-      return handleRestaurants(request, env);
-    }
+    if (url.pathname === '/api/status') return handleStatus(env);
+    if (url.pathname === '/api/weather') return handleWeather(request);
+    if (url.pathname === '/api/restaurants') return handleRestaurants(request, env);
+    if (url.pathname === '/api/team/create' && request.method === 'POST') return createTeamRoom(request, env);
+    if (url.pathname.startsWith('/api/team/')) return routeTeamRoom(request, env, url);
 
     return env.ASSETS.fetch(request);
   },
