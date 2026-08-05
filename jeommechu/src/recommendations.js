@@ -1,10 +1,10 @@
 const CATEGORY_TERMS = {
-  한식: ['한식', '백반'],
-  중식: ['중식', '중국집'],
-  일식: ['일식', '초밥'],
-  양식: ['양식', '파스타'],
-  분식: ['분식', '떡볶이'],
-  기타: ['맛집'],
+  한식: ['한식', '백반', '국밥'],
+  중식: ['중식', '중국집', '짬뽕'],
+  일식: ['일식', '초밥', '돈까스'],
+  양식: ['양식', '파스타', '브런치'],
+  분식: ['분식', '떡볶이', '김밥'],
+  기타: ['음식점', '맛집'],
 };
 
 const HANGOVER_TERMS = ['해장국', '콩나물국밥', '북엇국', '순대국', '국밥', '짬뽕'];
@@ -109,9 +109,7 @@ function buildSignals(weather, hangoverStrength = 0) {
     }
   };
 
-  if (hangoverStrength > 0) {
-    addTerms(HANGOVER_TERMS, hangoverStrength >= 0.5 ? 34 : 20, '해장');
-  }
+  if (hangoverStrength > 0) addTerms(HANGOVER_TERMS, hangoverStrength >= 0.5 ? 34 : 20, '해장');
   if (weather?.wet) addTerms(WET_TERMS, 16, '비·눈');
   if (weather?.cold) addTerms(COLD_TERMS, 14, '쌀쌀한 날씨');
   if (weather?.hot) addTerms(HOT_TERMS, 14, '더운 날씨');
@@ -152,7 +150,7 @@ function scoreItem(item, categories, signals) {
   }
 
   if (item.distance_m > 0) {
-    const distanceScore = Math.max(0, 30 - item.distance_m / 70);
+    const distanceScore = Math.max(0, 30 - item.distance_m / 90);
     score += distanceScore;
     if (item.distance_m <= 500) reasons.push('가까운 거리');
   }
@@ -160,8 +158,7 @@ function scoreItem(item, categories, signals) {
   for (const [term, weight] of signals.matchWeights.entries()) {
     if (text.includes(term)) {
       score += weight;
-      if (HANGOVER_TERMS.includes(term)) reasons.push('해장 메뉴');
-      else reasons.push('날씨 맞춤');
+      reasons.push(HANGOVER_TERMS.includes(term) ? '해장 메뉴' : '날씨 맞춤');
       break;
     }
   }
@@ -182,6 +179,47 @@ function uniquePlaces(documents) {
   return [...map.values()];
 }
 
+async function settleSearches(requests) {
+  if (!requests.length) return { documents: [], firstError: null };
+  const settled = await Promise.allSettled(requests);
+  const documents = settled
+    .filter((result) => result.status === 'fulfilled')
+    .flatMap((result) => result.value.documents || []);
+  const firstError = settled.find((result) => result.status === 'rejected')?.reason || null;
+  return { documents, firstError };
+}
+
+function categorySearch(coords, key, radius, page = 1) {
+  const params = new URLSearchParams({
+    category_group_code: 'FD6',
+    x: String(coords.lng),
+    y: String(coords.lat),
+    radius: String(radius),
+    size: '15',
+    page: String(page),
+    sort: 'distance',
+  });
+  return kakaoJson(`https://dapi.kakao.com/v2/local/search/category.json?${params}`, key);
+}
+
+function nearbyKeywordSearch(coords, query, key, radius = 2500) {
+  const params = new URLSearchParams({
+    query,
+    x: String(coords.lng),
+    y: String(coords.lat),
+    radius: String(radius),
+    size: '15',
+    sort: 'distance',
+  });
+  return kakaoJson(`https://dapi.kakao.com/v2/local/search/keyword.json?${params}`, key);
+}
+
+function textKeywordSearch(locationText, keyword, key) {
+  const query = `${locationText} ${keyword}`.trim();
+  const params = new URLSearchParams({ query, size: '15' });
+  return kakaoJson(`https://dapi.kakao.com/v2/local/search/keyword.json?${params}`, key);
+}
+
 export async function findRestaurants({
   key,
   coords,
@@ -192,73 +230,75 @@ export async function findRestaurants({
 }) {
   if (!key) throw new Error('KAKAO_REST_API_KEY가 등록되지 않았습니다.');
 
+  const hasCoords = Boolean(coords?.lat && coords?.lng);
+  const baseLocation = String(locationText || '').trim();
+  if (!hasCoords && (!baseLocation || baseLocation === '현재 위치')) {
+    throw new Error('GPS를 누르거나 검색할 지역명을 입력해 주세요.');
+  }
+
   const selectedCategories = categories.length ? categories : ['한식', '중식', '일식', '양식', '분식', '기타'];
   const weather = await fetchCurrentWeather(coords);
   const signals = buildSignals(weather, hangoverStrength);
-  const requests = [];
+  const primaryRequests = [];
 
-  if (coords?.lat && coords?.lng) {
-    const categoryParams = new URLSearchParams({
-      category_group_code: 'FD6',
-      x: String(coords.lng),
-      y: String(coords.lat),
-      radius: '2000',
-      size: '15',
-      sort: 'distance',
-    });
-    requests.push(kakaoJson(`https://dapi.kakao.com/v2/local/search/category.json?${categoryParams}`, key));
-
+  if (hasCoords) {
+    primaryRequests.push(categorySearch(coords, key, 2500, 1));
     const keywordQueries = [
-      ...selectedCategories.slice(0, 2).flatMap((category) => CATEGORY_TERMS[category]?.slice(0, 1) || []),
+      ...selectedCategories.slice(0, 2).flatMap((category) => CATEGORY_TERMS[category]?.slice(0, 2) || []),
       ...signals.queryTerms.slice(0, 3),
-    ].slice(0, 5);
-
-    for (const query of keywordQueries) {
-      const params = new URLSearchParams({
-        query,
-        x: String(coords.lng),
-        y: String(coords.lat),
-        radius: '2000',
-        size: '15',
-        sort: 'distance',
-      });
-      requests.push(kakaoJson(`https://dapi.kakao.com/v2/local/search/keyword.json?${params}`, key));
-    }
+    ].filter(Boolean).slice(0, 6);
+    for (const query of keywordQueries) primaryRequests.push(nearbyKeywordSearch(coords, query, key, 2500));
   } else {
-    const base = locationText.trim();
     const keywordQueries = [
-      ...selectedCategories.slice(0, 3).flatMap((category) => CATEGORY_TERMS[category]?.slice(0, 1) || []),
+      ...selectedCategories.slice(0, 3).flatMap((category) => CATEGORY_TERMS[category]?.slice(0, 2) || []),
       ...signals.queryTerms.slice(0, 2),
-    ].slice(0, 5);
-
-    for (const keyword of keywordQueries) {
-      const query = `${base} ${keyword} 맛집`.trim();
-      const params = new URLSearchParams({ query, size: '15' });
-      requests.push(kakaoJson(`https://dapi.kakao.com/v2/local/search/keyword.json?${params}`, key));
-    }
+      '음식점',
+      '맛집',
+    ].filter(Boolean).slice(0, 8);
+    for (const keyword of keywordQueries) primaryRequests.push(textKeywordSearch(baseLocation, keyword, key));
   }
 
-  const settled = await Promise.allSettled(requests);
-  const successful = settled
-    .filter((result) => result.status === 'fulfilled')
-    .flatMap((result) => result.value.documents || []);
+  const primary = await settleSearches(primaryRequests);
+  let documents = primary.documents;
+  let searchRelaxed = false;
 
-  if (!successful.length) {
-    const firstError = settled.find((result) => result.status === 'rejected');
-    throw firstError?.reason || new Error('주변 식당 검색 결과가 없습니다.');
+  if (uniquePlaces(documents).length < Math.max(5, limit)) {
+    searchRelaxed = true;
+    const fallbackRequests = hasCoords
+      ? [
+          categorySearch(coords, key, 5000, 1),
+          categorySearch(coords, key, 5000, 2),
+          nearbyKeywordSearch(coords, '음식점', key, 5000),
+          nearbyKeywordSearch(coords, '맛집', key, 5000),
+        ]
+      : [
+          textKeywordSearch(baseLocation, '음식점', key),
+          textKeywordSearch(baseLocation, '맛집', key),
+          textKeywordSearch(baseLocation, '점심', key),
+        ];
+    const fallback = await settleSearches(fallbackRequests);
+    documents = [...documents, ...fallback.documents];
+    if (!documents.length && fallback.firstError) throw fallback.firstError;
   }
 
-  const items = uniquePlaces(successful)
+  if (!documents.length) {
+    throw primary.firstError || new Error('해당 위치에서 식당 검색 결과를 찾지 못했습니다.');
+  }
+
+  const items = uniquePlaces(documents)
     .map(placeToItem)
     .map((item) => scoreItem(item, selectedCategories, signals))
     .sort((a, b) => b.score - a.score || a.distance_m - b.distance_m)
     .slice(0, limit);
 
+  if (!items.length) throw new Error('해당 위치에서 추천 가능한 식당이 없습니다.');
+
   return {
     items,
     weather,
-    appliedSignals: signals.labels,
-    source: coords?.lat && coords?.lng ? 'gps' : 'text',
+    appliedSignals: [...signals.labels, ...(searchRelaxed ? ['검색 범위 확대'] : [])],
+    source: hasCoords ? 'gps' : 'text',
+    searchRelaxed,
   };
 }
 
