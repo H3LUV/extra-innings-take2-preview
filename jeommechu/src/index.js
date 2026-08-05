@@ -20,10 +20,42 @@ function json(data, status = 200) {
 function normalizeCategory(raw = '') {
   if (raw.includes('한식')) return '한식';
   if (raw.includes('중식')) return '중식';
-  if (raw.includes('일식')) return '일식';
-  if (raw.includes('양식')) return '양식';
+  if (raw.includes('일식') || raw.includes('초밥') || raw.includes('돈까스')) return '일식';
+  if (raw.includes('양식') || raw.includes('이탈리안') || raw.includes('패밀리레스토랑')) return '양식';
   if (raw.includes('분식')) return '분식';
   return '기타';
+}
+
+function mapPlace(place, index) {
+  const category = normalizeCategory(place.category_name);
+  return {
+    id: place.id || `k${index}`,
+    name: place.place_name,
+    category,
+    menu: category,
+    address: place.road_address_name || place.address_name,
+    lat: Number(place.y),
+    lng: Number(place.x),
+    distance_m: Number(place.distance || 0),
+    price: null,
+    spicy: false,
+    solo: true,
+    group: true,
+    business: false,
+  };
+}
+
+async function kakaoFetch(url, key) {
+  const response = await fetch(url, {
+    headers: { Authorization: `KakaoAK ${key}` },
+  });
+
+  if (!response.ok) {
+    const detail = await response.text().catch(() => '');
+    throw new Error(`Kakao Local API ${response.status}${detail ? `: ${detail.slice(0, 160)}` : ''}`);
+  }
+
+  return response.json();
 }
 
 async function handleRestaurants(request, env) {
@@ -49,47 +81,37 @@ async function handleRestaurants(request, env) {
   const { coords, locationText = '광화문', categories = [] } = body || {};
 
   if (!key) {
-    return json({ mode: 'demo', items: DEMO_RESTAURANTS });
+    return json({ mode: 'demo', warning: 'KAKAO_REST_API_KEY가 등록되지 않았습니다.', items: DEMO_RESTAURANTS });
   }
 
   try {
-    const params = new URLSearchParams({
-      query: `${locationText} ${categories[0] || ''} 맛집`,
-      size: '15',
-      sort: 'distance',
-    });
+    let data;
 
     if (coords?.lat && coords?.lng) {
-      params.set('x', String(coords.lng));
-      params.set('y', String(coords.lat));
-      params.set('radius', '2000');
+      const params = new URLSearchParams({
+        category_group_code: 'FD6',
+        x: String(coords.lng),
+        y: String(coords.lat),
+        radius: '2000',
+        size: '15',
+        sort: 'distance',
+      });
+
+      data = await kakaoFetch(
+        `https://dapi.kakao.com/v2/local/search/category.json?${params}`,
+        key,
+      );
+    } else {
+      const query = `${locationText} ${categories[0] || ''} 맛집`.trim();
+      const params = new URLSearchParams({ query, size: '15' });
+      data = await kakaoFetch(
+        `https://dapi.kakao.com/v2/local/search/keyword.json?${params}`,
+        key,
+      );
     }
 
-    const response = await fetch(
-      `https://dapi.kakao.com/v2/local/search/keyword.json?${params}`,
-      { headers: { Authorization: `KakaoAK ${key}` } },
-    );
-
-    if (!response.ok) throw new Error(`Kakao Local API ${response.status}`);
-
-    const data = await response.json();
-    const items = (data.documents || []).map((place, index) => ({
-      id: place.id || `k${index}`,
-      name: place.place_name,
-      category: normalizeCategory(place.category_name),
-      menu: normalizeCategory(place.category_name),
-      address: place.road_address_name || place.address_name,
-      lat: Number(place.y),
-      lng: Number(place.x),
-      distance_m: Number(place.distance || 0),
-      price: categories.includes('양식') ? 16000 : 12000,
-      spicy: false,
-      solo: true,
-      group: true,
-      business: false,
-    }));
-
-    return json({ mode: 'kakao', items });
+    const items = (data.documents || []).map(mapPlace);
+    return json({ mode: 'kakao', source: coords?.lat && coords?.lng ? 'gps' : 'text', items });
   } catch (error) {
     return json({
       mode: 'fallback',
