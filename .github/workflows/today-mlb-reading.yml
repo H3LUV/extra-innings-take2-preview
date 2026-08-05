@@ -1,4 +1,4 @@
-# Today MLB clean full-article translation pipeline v3
+# Today MLB clean full-article translation pipeline v3 with diagnostics
 name: Select four Today MLB reading items
 
 on:
@@ -37,13 +37,28 @@ jobs:
         run: node scripts/archive-editorial.mjs
 
       - name: Build four clean Korean full-article translations
-        run: node scripts/augment-news.mjs
+        run: |
+          set +e
+          node scripts/augment-news.mjs > /tmp/mlb-reading.log 2>&1
+          code=$?
+          cat /tmp/mlb-reading.log
+          BUILD_CODE=$code python - <<'PY'
+          import json, os
+          from pathlib import Path
+          log = Path('/tmp/mlb-reading.log').read_text(encoding='utf-8', errors='replace')[-12000:]
+          status = {
+              'status': 'success' if os.environ.get('BUILD_CODE') == '0' else 'failed',
+              'exitCode': int(os.environ.get('BUILD_CODE', '1')),
+              'log': log
+          }
+          Path('public/data/reading-build-status.json').write_text(json.dumps(status, ensure_ascii=False, indent=2), encoding='utf-8')
+          PY
 
-      - name: Commit reading list, translations, and editorial archive
+      - name: Commit reading list, translations, archive, and diagnostics
         run: |
           git config user.name "today-mlb-bot"
           git config user.email "actions@users.noreply.github.com"
-          git add public/data/news.json public/data/articles public/data/editorials
+          git add public/data/news.json public/data/articles public/data/editorials public/data/reading-build-status.json
           if git diff --cached --quiet; then
             echo "No reading or archive changes"
           else
