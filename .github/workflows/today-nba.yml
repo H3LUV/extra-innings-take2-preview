@@ -8,8 +8,10 @@ on:
     paths:
       - .github/workflows/today-nba.yml
   schedule:
-    # Hourly refresh. Completed full Korean translations are reused if a new valid article cannot be processed.
+    # Normal hourly refresh
     - cron: '17 * * * *'
+    # One-time verification window: 2026-08-05 14:50 Asia/Seoul
+    - cron: '50 5 5 8 *'
 
 permissions:
   contents: write
