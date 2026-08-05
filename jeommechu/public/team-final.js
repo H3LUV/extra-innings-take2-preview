@@ -1,4 +1,4 @@
-import { TeamController as FixedTeamController } from './team-fixed.js?v=3';
+import { TeamController as FixedTeamController } from './team-fixed.js?v=4';
 
 export class TeamController extends FixedTeamController {
   resetExpiredRoom(message = '마감된 방을 정리했습니다. 새 팀 방을 만들 수 있습니다.') {
@@ -16,6 +16,16 @@ export class TeamController extends FixedTeamController {
 
   isUnrecoverableRoomError() {
     return /존재하지 않는 방|참여 마감 시간이 지났|이미 조건 취합이 끝난 방/.test(this.error || '');
+  }
+
+  async createRoom() {
+    this.captureDraft();
+    const locationText = (this.draft['team-location-text'] || '').trim();
+    if (!this.coords && (!locationText || locationText === '현재 위치')) {
+      this.showToast('GPS를 누르거나 검색할 지역명을 입력해 주세요.');
+      return;
+    }
+    await super.createRoom();
   }
 
   async loadState(silent = false) {
