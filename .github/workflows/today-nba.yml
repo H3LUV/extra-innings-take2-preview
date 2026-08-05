@@ -9,8 +9,6 @@ on:
       - .github/workflows/today-nba.yml
   schedule:
     - cron: '17 * * * *'
-    # One-time verification: 2026-08-05 15:25 Asia/Seoul
-    - cron: '25 6 5 8 *'
 
 permissions:
   contents: write
