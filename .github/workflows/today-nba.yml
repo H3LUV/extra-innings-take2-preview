@@ -1,4 +1,4 @@
-# Today NBA hourly update with MLB-style Korean full article translations - article-only reader v4
+# Today NBA hourly update with MLB-style Korean full article translations - clean reader v5
 name: Update and deploy Today NBA
 
 on:
@@ -8,10 +8,7 @@ on:
     paths:
       - .github/workflows/today-nba.yml
   schedule:
-    # Normal hourly refresh
     - cron: '17 * * * *'
-    # One-time verification window: 2026-08-05 14:50 Asia/Seoul
-    - cron: '50 5 5 8 *'
 
 permissions:
   contents: write
@@ -55,8 +52,11 @@ jobs:
       - name: Archive current column
         run: node scripts/archive-editorial.mjs
 
-      - name: Refresh all NBA sections and valid full translations
+      - name: Refresh NBA games, standings, transactions, and rising data
         run: node scripts/update-nba-data.mjs
+
+      - name: Rebuild clean NBA full-article translations
+        run: node scripts/run-nba-reading.mjs
 
       - name: Point NBA reading cards to internal Korean pages
         run: node scripts/patch-nba-reading-links.mjs
