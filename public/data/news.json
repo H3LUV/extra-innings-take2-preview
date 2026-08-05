@@ -14,8 +14,8 @@
       "bodyChars": 1165,
       "sourceWordCount": 336,
       "translationType": "full",
-      "pipelineVersion": "reader-v5",
-      "translatedAt": "2026-08-05T06:09:13.703Z"
+      "pipelineVersion": "reader-v6",
+      "translatedAt": "2026-08-05T06:16:59.877Z"
     },
     {
       "id": "nba-1383a4e30bb4",
@@ -31,48 +31,48 @@
       "bodyChars": 1816,
       "sourceWordCount": 479,
       "translationType": "full",
-      "pipelineVersion": "reader-v5",
-      "translatedAt": "2026-08-05T06:09:15.061Z"
+      "pipelineVersion": "reader-v6",
+      "translatedAt": "2026-08-05T06:17:01.370Z"
+    },
+    {
+      "id": "nba-c659a32c8eb7",
+      "articleFile": "./data/articles/nba-c659a32c8eb7.json",
+      "title": "Draymond Green signs 1-year deal to stay with Warriors",
+      "titleKo": "드레이먼드 그린, 워리어스와 1년 계약 체결",
+      "link": "https://www.nba.com/news/draymond-green-warriors-free-agency-2026",
+      "pubDate": "2026-07-28T19:00:31Z",
+      "source": "NBA.com",
+      "category": "미국 현지 읽을거리",
+      "readingMinutes": 4,
+      "bodyVerified": true,
+      "bodyChars": 1346,
+      "sourceWordCount": 405,
+      "translationType": "full",
+      "pipelineVersion": "reader-v6",
+      "translatedAt": "2026-08-05T06:17:02.621Z"
     },
     {
       "id": "nba-ac7ffb9c65ef",
       "articleFile": "./data/articles/nba-ac7ffb9c65ef.json",
       "title": "Offseason Power Rankings: Knicks lead the way in the East",
-      "titleKo": "오프시즌 파워 랭킹: Knicks가 동부에서 선두를 달리고 있습니다.",
+      "titleKo": "오프시즌 파워 랭킹: 뉴욕 닉스가 동부에서 선두를 달리고 있습니다.",
       "link": "https://www.nba.com/news/offseason-power-rankings-east-2026",
       "pubDate": "2026-07-27T13:18:13Z",
       "source": "NBA.com",
       "category": "미국 현지 읽을거리",
       "readingMinutes": 24,
       "bodyVerified": true,
-      "bodyChars": 18372,
+      "bodyChars": 18369,
       "sourceWordCount": 5344,
       "translationType": "full",
-      "pipelineVersion": "reader-v5",
-      "translatedAt": "2026-08-05T06:09:12.781Z"
-    },
-    {
-      "id": "nba-ed09b1321d98",
-      "articleFile": "./data/articles/nba-ed09b1321d98.json",
-      "title": "NBA UK Tax Strategy Statement",
-      "titleKo": "NBA UK 세금 전략 선언문",
-      "link": "https://www.nba.com/news/nba-uk-tax-strategy-statement",
-      "pubDate": "2025-09-16T05:04:44Z",
-      "source": "NBA.com",
-      "category": "미국 현지 읽을거리",
-      "readingMinutes": 4,
-      "bodyVerified": true,
-      "bodyChars": 1414,
-      "sourceWordCount": 448,
-      "translationType": "full",
-      "pipelineVersion": "reader-v5",
-      "translatedAt": "2026-08-05T06:09:02.897Z"
+      "pipelineVersion": "reader-v6",
+      "translatedAt": "2026-08-05T06:16:58.815Z"
     }
   ],
   "message": "NBA.com의 최신 일반 기사 중 제목과 본문 전체 자동 번역이 완료된 기사만 제공합니다.",
   "selectionPolicy": "최신 일반 기사 우선 · 오류/분류/목록/일정/트래커 페이지 제외 · 전체 번역 필수",
   "translationPolicy": "newest_valid_article_full_translation_keep_previous_on_failure",
-  "pipelineVersion": "reader-v5",
+  "pipelineVersion": "reader-v6",
   "selectedCount": 4,
-  "updatedAt": "2026-08-05T06:09:15.062Z"
+  "updatedAt": "2026-08-05T06:17:02.622Z"
 }
