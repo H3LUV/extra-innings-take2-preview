@@ -11,7 +11,7 @@ function replaceRequired(before, after, label) {
 
 replaceRequired(
   "const PIPELINE = 'reader-v3';",
-  "const PIPELINE = 'reader-v4';",
+  "const PIPELINE = 'reader-v5';",
   'pipeline version'
 );
 
@@ -35,7 +35,7 @@ replaceRequired(
 
 replaceRequired(
   "  const translated = await translateText(body);",
-  "  let translated = await translateText(body);\n  translated = translated\n    .replace(/당신은 팬그래프 회원이 아닙니다[\\s\\S]*?(?:과장하고 싶지 않았습니다\\.|다른 모든 광고도 제거했습니다\\.)/gi, '')\n    .replace(/아직 팬그래프 회원이 아니시거나[\\s\\S]*?(?:과장하고 싶지 않았습니다\\.|다른 모든 광고도 제거했습니다\\.)/gi, '')\n    .replace(/팬그래프 회원이 아니신 것 같습니다[\\s\\S]*?과장하고 싶지 않았습니다\\./gi, '')\n    .replace(/\\n{3,}/g, '\\n\\n')\n    .trim();",
+  "  let translated = await translateText(body);\n  const promoSentenceKo = /팬그래프 회원|FanGraphs와 전체|로그인하지 않으신|화난 것이 아니라|실망했을 뿐|이 기사를 읽고 싶|회원이 되어야|광고 없이|기사 무제한|비회원은|회원은 절대로|다크.?모드|맞춤형 플레이어 페이지|원클릭 데이터|홈페이지에 있는 사진|Steamer 프로젝션|연말 리뷰|FOMO|주간 메일백|전체 직원을 지원|멤버십|판매 홍보|다른 모든 광고|과장하고 싶지 않았/i;\n  translated = translated\n    .split(/\\n\\s*\\n+/)\n    .map(paragraph => paragraph\n      .split(/(?<=[.!?])\\s+/)\n      .map(sentence => sentence.trim())\n      .filter(sentence => sentence && !promoSentenceKo.test(sentence))\n      .join(' '))\n    .filter(Boolean)\n    .join('\\n\\n')\n    .replace(/\\n{3,}/g, '\\n\\n')\n    .trim();",
   'translated promotion cleanup'
 );
 
