@@ -1,10 +1,19 @@
 {
   "items": [
     {
+      "slug": "2026-brewers-underrated-powerhouse",
+      "title": "70승 브루어스, 올해 가장 저평가된 강팀",
+      "dek": "스타를 사지 않는 팀이 가장 먼저 70승을 거둔 이유",
+      "author": "오늘의 MLB 편집부",
+      "publishedAt": "2026-08-05T22:00:00+09:00",
+      "readingMinutes": 7,
+      "url": "./columns/2026-brewers-underrated-powerhouse/"
+    },
+    {
       "slug": "2026-rookie-of-the-year-race",
       "title": "신인왕 경쟁은 끝나지 않았다, 그러나 가장 앞선 이름은 분명하다",
       "dek": "WAR와 수비, 출루 능력으로 살펴본 2026년 양대 리그 신인왕 경쟁",
-      "author": "H3러브의 지시를 받은 누군가",
+      "author": "오늘의 MLB 편집부",
       "publishedAt": "2026-08-04T20:00:00+09:00",
       "url": "./columns/2026-rookie-of-the-year-race/"
     },
@@ -18,5 +27,5 @@
       "url": "./columns/2026-trade-deadline-review/"
     }
   ],
-  "updatedAt": "2026-08-05T06:43:29.000Z"
+  "updatedAt": "2026-08-05T22:00:00+09:00"
 }
