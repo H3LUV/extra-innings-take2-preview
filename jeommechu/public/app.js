@@ -1,32 +1,267 @@
-const META={한식:'🍚',중식:'🥟',일식:'🍣',양식:'🍝',분식:'🌶️',기타:'🥗'};
-const BUDGETS=[{value:'under-10000',label:'1만원 이하'},{value:'10000-20000',label:'1~2만원'},{value:'over-20000',label:'2만원 이상'}];
-const state={screen:'home',categories:['한식','일식'],budget:'10000-20000',companion:'동료',excludeSpicy:false,previousMenu:'',locationText:'서울 광화문',coords:null,results:[],loading:false,apiMode:null,apiWarning:''};
-const app=document.querySelector('#app');
-const toast=document.querySelector('#toast');
-const $=(s,r=document)=>r.querySelector(s);
-const esc=(v='')=>String(v).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
-const load=(k,d)=>{try{return JSON.parse(localStorage.getItem(k))??d}catch{return d}};
-const save=(k,v)=>localStorage.setItem(k,JSON.stringify(v));
-const history=()=>load('jeommechu.history.v1',[]);
-function showToast(m){toast.textContent=m;toast.classList.add('is-showing');clearTimeout(showToast.t);showToast.t=setTimeout(()=>toast.classList.remove('is-showing'),2600)}
-function navActive(){document.querySelectorAll('.bottom-nav__item').forEach(b=>b.classList.toggle('is-active',b.dataset.action===(state.screen.startsWith('personal')?'personal':state.screen.startsWith('team')?'team':state.screen)))}
-function go(screen){state.screen=screen;render();scrollTo({top:0,behavior:'smooth'})}
-function header(k,t,p){return `<header class="screen-header"><span class="eyebrow">${k}</span><h2>${t}</h2><p>${p}</p></header>`}
-function renderHome(){return `<section class="screen"><div class="hero"><span class="hero-kicker">⚡ 고민 시간 평균 30초</span><h1>점심 고민은<br><em>점메추</em>에게.</h1><p>예산, 취향, 동행 유형까지 반영해 오늘 먹을 곳을 골라드립니다.</p><div class="hero-plate"></div></div><div class="mode-grid"><button class="mode-card" data-action="personal"><span class="mode-icon">👤</span><span class="mode-copy"><strong>나 혼자 빠르게</strong><span>내 조건으로 주변 식당 추천</span></span><span class="mode-arrow">›</span></button><button class="mode-card" data-action="team"><span class="mode-icon">👥</span><span class="mode-copy"><strong>팀원들과 결정</strong><span>조건을 모아 투표 또는 룰렛</span></span><span class="mode-arrow">›</span></button></div><div class="quick-info"><div class="info-chip"><strong>3~5</strong><small>맞춤 후보</small></div><div class="info-chip"><strong>GPS</strong><small>주변 검색</small></div><div class="info-chip"><strong>1클릭</strong><small>구글맵 연결</small></div></div></section>`}
-function choices(items,selected,type,multi=false){return items.map(v=>`<button type="button" class="choice ${(multi?selected.includes(v):selected===v)?'is-selected':''}" data-select="${type}" data-value="${v}">${META[v]?`<span class="emoji">${META[v]}</span>`:''}${v}</button>`).join('')}
-function budgetChoices(){return BUDGETS.map(x=>`<button type="button" class="choice ${state.budget===x.value?'is-selected':''}" data-select="budget" data-value="${x.value}">${x.label}</button>`).join('')}
-function renderPersonal(){return `<section class="screen">${header('개인 추천','오늘 뭐 먹을까요?','GPS를 누르면 현재 위치 반경 2km의 식당을 검색합니다.')}<div class="form-card"><div class="field"><div class="field-header"><span class="field-label">음식 카테고리</span><span class="field-help">복수 선택 가능</span></div><div class="choice-grid">${choices(Object.keys(META),state.categories,'category',true)}</div></div><div class="field"><div class="field-header"><span class="field-label">예산</span><span class="field-help">가격 정보가 있는 경우 반영</span></div><div class="segmented">${budgetChoices()}</div></div><div class="field"><div class="field-header"><span class="field-label">누구와 먹나요?</span></div><div class="segmented">${choices(['혼밥','동료','비즈니스'],state.companion,'companion')}</div></div><div class="field"><div class="toggle-row"><div class="toggle-copy"><strong>매운 음식 제외</strong><span>맵찔이 안전장치</span></div><button class="switch ${state.excludeSpicy?'is-on':''}" data-action="spicy"></button></div></div><div class="field"><div class="field-header"><span class="field-label">어제 먹은 메뉴</span><span class="field-help">선택 입력</span></div><input class="text-input" id="previous-menu" value="${esc(state.previousMenu)}" placeholder="예: 김치찌개"></div><div class="field"><div class="field-header"><span class="field-label">검색 위치</span><span class="field-help">${state.coords?'GPS 확인 완료':'주소 입력 또는 GPS'}</span></div><div class="inline-input"><input class="text-input" id="location-text" value="${esc(state.locationText)}" placeholder="예: 서울역"><button class="location-button" data-action="gps">${state.coords?'GPS ✓':'GPS'}</button></div></div></div><button class="primary-button" data-action="recommend">식당 추천받기</button></section>`}
-function budgetOk(p){if(state.budget==='under-10000')return p<=10000;if(state.budget==='10000-20000')return p>=10000&&p<=20000;return p>=20000}
-async function locate(){if(!navigator.geolocation)return showToast('이 브라우저는 위치 기능을 지원하지 않습니다.');showToast('현재 위치를 확인하는 중입니다.');navigator.geolocation.getCurrentPosition(p=>{state.coords={lat:p.coords.latitude,lng:p.coords.longitude};state.locationText='현재 위치';render();showToast('현재 위치를 확인했습니다.')},err=>{const messages={1:'위치 권한이 차단되어 있습니다.',2:'현재 위치를 확인할 수 없습니다.',3:'위치 확인 시간이 초과됐습니다.'};showToast(messages[err.code]||'위치 확인에 실패했습니다.')},{enableHighAccuracy:true,timeout:12000,maximumAge:60000})}
-async function recommend(){state.previousMenu=$('#previous-menu')?.value.trim()||'';const typed=$('#location-text')?.value.trim()||'';if(typed&&typed!=='현재 위치')state.coords=null;state.locationText=typed||(state.coords?'현재 위치':'서울 광화문');if(!state.categories.length)return showToast('카테고리를 하나 이상 선택해 주세요.');state.loading=true;go('personal-loading');try{const r=await fetch('/api/restaurants',{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify({coords:state.coords,locationText:state.locationText,categories:state.categories})});if(!r.ok)throw new Error(`검색 오류 ${r.status}`);const d=await r.json();let items=(d.items||[]).filter(x=>state.categories.includes(x.category)||state.categories.includes('기타'));items=items.filter(x=>x.price==null||budgetOk(Number(x.price)));if(state.excludeSpicy)items=items.filter(x=>!x.spicy);if(state.previousMenu)items=items.filter(x=>!`${x.name} ${x.menu}`.includes(state.previousMenu));state.results=items.slice(0,5);state.apiMode=d.mode;state.apiWarning=d.warning||'';go('personal-results');if(d.mode!=='kakao')showToast(d.warning||'API 설정 문제로 샘플 식당을 표시합니다.')}catch(e){state.results=[];state.error=e.message;go('personal-results')}finally{state.loading=false}}
-function renderLoading(){return `<section class="screen">${header('식당 검색','주변 맛집을 찾는 중','조건에 맞는 후보를 점수화하고 있습니다.')}<div class="loading"><div class="loading-dots"><span></span><span></span><span></span></div><strong>잠시만 기다려 주세요</strong><p>${state.coords?'현재 위치 반경 2km를 검색하고 있습니다.':'입력한 지역을 검색하고 있습니다.'}</p></div></section>`}
-function mapUrl(x){return `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(`${x.name} ${x.address||''}`)}`}
-function eat(i){const x=state.results[i];const h=history();h.unshift({date:new Date().toLocaleDateString('sv-SE'),name:x.name,menu:x.menu||x.category,category:x.category,address:x.address});save('jeommechu.history.v1',h.slice(0,30));showToast('오늘의 식사 기록에 저장했습니다.')} 
-function renderResults(){if(!state.results.length)return `<section class="screen">${header('추천 결과','조건에 맞는 식당이 없어요','검색 위치나 카테고리 조건을 조금 완화해 보세요.')}<div class="notice-card"><span class="notice-icon">🔎</span><div><strong>${esc(state.error||state.apiWarning||'검색 결과 0곳')}</strong><span>GPS를 다시 누르거나 위치명을 더 구체적으로 입력해 보세요.</span></div></div><button class="primary-button" data-action="personal">조건 다시 설정</button></section>`;return `<section class="screen">${header('추천 완료','오늘의 후보를 골랐어요',state.apiMode==='kakao'?'실제 카카오 주변 식당 검색 결과입니다.':'현재 샘플 데이터가 표시되고 있습니다.')}<div class="result-summary"><div><strong>${esc(state.locationText)} 주변 추천</strong><span>${state.categories.join(' · ')} · ${state.companion}</span></div><div class="result-count">${state.results.length}</div></div><div class="result-list">${state.results.map((x,i)=>`<article class="result-card"><div class="result-top"><div class="food-icon">${META[x.category]||'🍽️'}</div><div class="result-title"><strong>${esc(x.name)}</strong><span>${esc(x.address||'주소 정보 없음')}</span></div><span class="score-badge">${Math.max(72,96-i*5)}점</span></div><div class="meta-row"><span class="meta">${esc(x.category)}</span><span class="meta">${x.distance_m?`${x.distance_m}m`:'거리 확인'}</span><span class="meta">${x.price==null?'가격 확인':`${Number(x.price).toLocaleString()}원대`}</span></div><div class="reason">선택한 카테고리와 위치 조건을 반영한 추천입니다.</div><div class="card-actions"><a class="map-button" href="${mapUrl(x)}" target="_blank" rel="noopener">구글맵 보기</a><button class="eat-button" data-eat="${i}">오늘 먹었어요</button></div></article>`).join('')}</div><div class="button-row" style="margin-top:14px"><button class="ghost-button" data-action="personal">조건 수정</button><button class="secondary-button" data-action="recommend-again">다시 추천</button></div></section>`}
-function renderTeam(){const room=load('jeommechu.room.v1',null);return `<section class="screen">${header('팀 모드','점심 결정방','휴대폰 한 대에서 후보를 만들고 룰렛으로 결정하는 베타 기능입니다.')}<div class="room-card"><div class="room-title"><strong>${room?'현재 방':'새 결정방'}</strong><span class="status-pill">베타</span></div>${room?`<div class="room-code-box" style="margin-top:14px"><div><span>방 코드</span><strong>${room.code}</strong></div><button data-action="spin">룰렛</button></div><p>${esc(room.name)} · 후보 ${room.candidates.length}곳</p>`:`<div class="field" style="margin-top:16px"><input id="room-name" class="text-input" value="오늘 점심 뭐먹지" placeholder="방 이름"></div><button class="primary-button" style="margin-top:12px" data-action="create-room">방 만들기</button>`}</div>${room?`<div class="result-list">${room.candidates.map(x=>`<article class="result-card"><strong>${esc(x.name)}</strong><div class="meta-row"><span class="meta">${x.category}</span><span class="meta">${x.price==null?'가격 확인':`${Number(x.price).toLocaleString()}원대`}</span></div></article>`).join('')}</div>`:''}</section>`}
-function createRoom(){const candidates=(state.results.length?state.results:[{name:'한식당 A',category:'한식',price:11000},{name:'일식당 B',category:'일식',price:14000},{name:'분식집 C',category:'분식',price:8000}]).slice(0,3);const room={name:$('#room-name')?.value||'오늘 점심 뭐먹지',code:String(Math.floor(1000+Math.random()*9000)),candidates};save('jeommechu.room.v1',room);render();showToast('결정방을 만들었습니다.')} 
-function spin(){const room=load('jeommechu.room.v1',null);if(!room)return;const x=room.candidates[Math.floor(Math.random()*room.candidates.length)];showToast(`오늘 점심은 ${x.name}!`)}
-function renderHistory(){const h=history();return `<section class="screen">${header('식사 기록','최근에 먹은 메뉴','기록은 이 브라우저에만 저장됩니다.')}<div class="history-list">${h.length?h.map((x,i)=>`<article class="history-card"><div class="history-date">${x.date.slice(5).replace('-','/')}</div><div class="history-copy"><strong>${esc(x.name)}</strong><span>${esc(x.menu)} · ${esc(x.address||'')}</span></div><button class="delete-button" data-delete="${i}">×</button></article>`).join(''):`<div class="notice-card"><span class="notice-icon">🍽️</span><div><strong>아직 기록이 없습니다.</strong><span>추천 결과에서 ‘오늘 먹었어요’를 눌러 보세요.</span></div></div>`}</div></section>`}
-function render(){navActive();app.innerHTML=state.screen==='home'?renderHome():state.screen==='personal'?renderPersonal():state.screen==='personal-loading'?renderLoading():state.screen==='personal-results'?renderResults():state.screen==='team'?renderTeam():renderHistory()}
-document.addEventListener('click',e=>{const b=e.target.closest('button,a');if(!b)return;const a=b.dataset.action;if(a==='home')go('home');if(a==='personal')go('personal');if(a==='team')go('team');if(a==='history')go('history');if(a==='spicy'){state.excludeSpicy=!state.excludeSpicy;render()}if(a==='gps')locate();if(a==='recommend'||a==='recommend-again')recommend();if(a==='create-room')createRoom();if(a==='spin')spin();if(b.dataset.select){const t=b.dataset.select,v=b.dataset.value;if(t==='category'){state.categories=state.categories.includes(v)?state.categories.filter(x=>x!==v):[...state.categories,v]}else state[t]=v;render()}if(b.dataset.eat!==undefined)eat(Number(b.dataset.eat));if(b.dataset.delete!==undefined){const h=history();h.splice(Number(b.dataset.delete),1);save('jeommechu.history.v1',h);render()}});
-render();
+import { TeamController } from './team.js';
+
+const META = { 한식: '🍚', 중식: '🥟', 일식: '🍣', 양식: '🍝', 분식: '🌶️', 기타: '🥗' };
+const BUDGETS = [
+  { value: 'under-10000', label: '1만원 이하' },
+  { value: '10000-20000', label: '1~2만원' },
+  { value: 'over-20000', label: '2만원 이상' },
+];
+const state = {
+  screen: 'home',
+  categories: ['한식', '일식'],
+  budget: '10000-20000',
+  companion: '동료',
+  excludeSpicy: false,
+  hangover: false,
+  previousMenu: '',
+  locationText: '서울 광화문',
+  coords: null,
+  results: [],
+  loading: false,
+  weather: null,
+  appliedSignals: [],
+  error: '',
+};
+
+const app = document.querySelector('#app');
+const toast = document.querySelector('#toast');
+const $ = (selector, root = document) => root.querySelector(selector);
+const escapeHtml = (value = '') => String(value).replace(/[&<>"']/g, (character) => ({
+  '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;',
+}[character]));
+const load = (key, fallback) => {
+  try { return JSON.parse(localStorage.getItem(key)) ?? fallback; } catch { return fallback; }
+};
+const save = (key, value) => localStorage.setItem(key, JSON.stringify(value));
+const mealHistory = () => load('jeommechu.history.v1', []);
+
+function showToast(message) {
+  toast.textContent = message;
+  toast.classList.add('is-showing');
+  clearTimeout(showToast.timer);
+  showToast.timer = setTimeout(() => toast.classList.remove('is-showing'), 2800);
+}
+
+const team = new TeamController({ showToast, onChange: render });
+
+function activeNav() {
+  const active = state.screen.startsWith('personal') ? 'personal' : state.screen;
+  document.querySelectorAll('.bottom-nav__item').forEach((button) => {
+    button.classList.toggle('is-active', button.dataset.action === active);
+  });
+}
+
+function go(screen) {
+  if (screen !== 'team') team.stopPolling();
+  state.screen = screen;
+  render();
+  scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+function screenHeader(kicker, title, description) {
+  return `<header class="screen-header"><span class="eyebrow">${kicker}</span><h2>${title}</h2><p>${description}</p></header>`;
+}
+
+function renderHome() {
+  return `<section class="screen">
+    <div class="hero"><span class="hero-kicker">⚡ 고민 시간 평균 30초</span><h1>점심 고민은<br><em>점메추</em>에게.</h1><p>현재 위치, 날씨, 취향, 해장 필요까지 반영해 오늘 먹을 곳을 고릅니다.</p><div class="hero-plate"></div></div>
+    <div class="mode-grid">
+      <button class="mode-card" data-action="personal"><span class="mode-icon">👤</span><span class="mode-copy"><strong>나 혼자 빠르게</strong><span>날씨와 조건으로 주변 식당 추천</span></span><span class="mode-arrow">›</span></button>
+      <button class="mode-card" data-action="team"><span class="mode-icon">👥</span><span class="mode-copy"><strong>팀원들과 결정</strong><span>공유 링크·코드·투표·룰렛</span></span><span class="mode-arrow">›</span></button>
+    </div>
+    <div class="quick-info"><div class="info-chip"><strong>날씨</strong><small>메뉴 가중치</small></div><div class="info-chip"><strong>GPS</strong><small>2km 검색</small></div><div class="info-chip"><strong>실시간</strong><small>팀 공유</small></div></div>
+  </section>`;
+}
+
+function choices(items, selected, type, multiple = false) {
+  return items.map((value) => `<button type="button" class="choice ${(multiple ? selected.includes(value) : selected === value) ? 'is-selected' : ''}" data-select="${type}" data-value="${value}">${META[value] ? `<span class="emoji">${META[value]}</span>` : ''}${value}</button>`).join('');
+}
+
+function budgetChoices() {
+  return BUDGETS.map((item) => `<button type="button" class="choice ${state.budget === item.value ? 'is-selected' : ''}" data-select="budget" data-value="${item.value}">${item.label}</button>`).join('');
+}
+
+function weatherCard(weather = state.weather) {
+  if (!weather) return '';
+  return `<div class="weather-card"><span class="weather-icon">${weather.icon}</span><div><strong>${weather.label} · ${weather.temperature ?? '-'}℃</strong><span>체감 ${weather.apparentTemperature ?? '-'}℃ · 날씨 추천 반영 · ${weather.source}</span></div></div>`;
+}
+
+function renderPersonal() {
+  return `<section class="screen">
+    ${screenHeader('개인 추천', '오늘 뭐 먹을까요?', 'GPS를 사용하면 현재 위치와 현재 날씨를 함께 반영합니다.')}
+    ${weatherCard()}
+    <div class="form-card">
+      <div class="field"><div class="field-header"><span class="field-label">음식 카테고리</span><span class="field-help">복수 선택</span></div><div class="choice-grid">${choices(Object.keys(META), state.categories, 'category', true)}</div></div>
+      <div class="field"><div class="field-header"><span class="field-label">예산</span><span class="field-help">카카오에 가격 정보가 없어 참고 조건</span></div><div class="segmented">${budgetChoices()}</div></div>
+      <div class="field"><div class="field-header"><span class="field-label">누구와 먹나요?</span></div><div class="segmented">${choices(['혼밥', '동료', '비즈니스'], state.companion, 'companion')}</div></div>
+      <div class="field"><div class="toggle-row"><div class="toggle-copy"><strong>해장 필요</strong><span>해장국·국밥·콩나물국밥·짬뽕 우선</span></div><button class="switch ${state.hangover ? 'is-on' : ''}" data-action="hangover"></button></div></div>
+      <div class="field"><div class="toggle-row"><div class="toggle-copy"><strong>매운 음식 제외</strong><span>매운 메뉴로 추정되는 결과 제외</span></div><button class="switch ${state.excludeSpicy ? 'is-on' : ''}" data-action="spicy"></button></div></div>
+      <div class="field"><div class="field-header"><span class="field-label">어제 먹은 메뉴</span><span class="field-help">선택 입력</span></div><input class="text-input" id="previous-menu" value="${escapeHtml(state.previousMenu)}" placeholder="예: 김치찌개"></div>
+      <div class="field"><div class="field-header"><span class="field-label">검색 위치</span><span class="field-help">${state.coords ? 'GPS·날씨 확인 완료' : '주소 입력 또는 GPS'}</span></div><div class="inline-input"><input class="text-input" id="location-text" value="${escapeHtml(state.locationText)}" placeholder="예: 서울역"><button class="location-button" data-action="gps">${state.coords ? 'GPS ✓' : 'GPS'}</button></div></div>
+    </div>
+    <button class="primary-button" data-action="recommend">식당 추천받기</button>
+  </section>`;
+}
+
+async function fetchWeatherPreview() {
+  if (!state.coords) return;
+  try {
+    const response = await fetch(`/api/weather?lat=${encodeURIComponent(state.coords.lat)}&lng=${encodeURIComponent(state.coords.lng)}`);
+    if (response.ok) state.weather = (await response.json()).weather;
+  } catch {
+    state.weather = null;
+  }
+}
+
+async function locate() {
+  if (!navigator.geolocation) return showToast('이 브라우저는 위치 기능을 지원하지 않습니다.');
+  showToast('현재 위치와 날씨를 확인하는 중입니다.');
+  navigator.geolocation.getCurrentPosition(async (position) => {
+    state.coords = { lat: position.coords.latitude, lng: position.coords.longitude };
+    state.locationText = '현재 위치';
+    await fetchWeatherPreview();
+    render();
+    showToast('현재 위치와 날씨를 확인했습니다.');
+  }, (error) => {
+    const messages = { 1: '위치 권한이 차단되어 있습니다.', 2: '현재 위치를 확인할 수 없습니다.', 3: '위치 확인 시간이 초과됐습니다.' };
+    showToast(messages[error.code] || '위치 확인에 실패했습니다.');
+  }, { enableHighAccuracy: true, timeout: 12000, maximumAge: 60000 });
+}
+
+async function recommend() {
+  state.previousMenu = $('#previous-menu')?.value.trim() || '';
+  const typedLocation = $('#location-text')?.value.trim() || '';
+  if (typedLocation && typedLocation !== '현재 위치') {
+    state.coords = null;
+    state.weather = null;
+  }
+  state.locationText = typedLocation || (state.coords ? '현재 위치' : '서울 광화문');
+  if (!state.categories.length) return showToast('카테고리를 하나 이상 선택해 주세요.');
+
+  state.loading = true;
+  state.error = '';
+  go('personal-loading');
+  try {
+    const response = await fetch('/api/restaurants', {
+      method: 'POST',
+      headers: { 'content-type': 'application/json' },
+      body: JSON.stringify({
+        coords: state.coords,
+        locationText: state.locationText,
+        categories: state.categories,
+        hangover: state.hangover,
+        budget: state.budget,
+        companion: state.companion,
+      }),
+    });
+    const data = await response.json().catch(() => ({}));
+    if (!response.ok) throw new Error(data.message || `검색 오류 ${response.status}`);
+
+    let items = data.items || [];
+    if (state.excludeSpicy) items = items.filter((item) => !/(매운|불닭|마라|떡볶이|짬뽕)/.test(`${item.name} ${item.categoryRaw || ''}`));
+    if (state.previousMenu) items = items.filter((item) => !`${item.name} ${item.menu || ''}`.includes(state.previousMenu));
+    state.results = items.slice(0, 5);
+    state.weather = data.weather || state.weather;
+    state.appliedSignals = data.appliedSignals || [];
+    go('personal-results');
+  } catch (error) {
+    state.results = [];
+    state.error = error.message;
+    go('personal-results');
+  } finally {
+    state.loading = false;
+  }
+}
+
+function renderLoading() {
+  return `<section class="screen">${screenHeader('식당 검색', '주변 맛집을 찾는 중', '카카오 식당 데이터와 날씨 신호를 함께 점수화합니다.')}<div class="loading"><div class="loading-dots"><span></span><span></span><span></span></div><strong>잠시만 기다려 주세요</strong><p>${state.coords ? '현재 위치 반경 2km와 현재 날씨를 분석 중입니다.' : '입력한 지역을 검색하고 있습니다.'}</p></div></section>`;
+}
+
+function mapUrl(item) {
+  return `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(`${item.name} ${item.address || ''}`)}`;
+}
+
+function recordMeal(index) {
+  const item = state.results[index];
+  const history = mealHistory();
+  history.unshift({ date: new Date().toLocaleDateString('sv-SE'), name: item.name, menu: item.menu || item.category, category: item.category, address: item.address });
+  save('jeommechu.history.v1', history.slice(0, 30));
+  showToast('오늘의 식사 기록에 저장했습니다.');
+}
+
+function renderResults() {
+  if (!state.results.length) {
+    return `<section class="screen">${screenHeader('추천 결과', '조건에 맞는 식당이 없어요', '검색 위치나 카테고리 조건을 조금 완화해 보세요.')}<div class="notice-card"><span class="notice-icon">🔎</span><div><strong>${escapeHtml(state.error || '검색 결과 0곳')}</strong><span>GPS를 다시 누르거나 다른 카테고리를 선택해 보세요.</span></div></div><button class="primary-button" data-action="personal">조건 다시 설정</button></section>`;
+  }
+
+  const signalText = [state.hangover ? '해장' : '', ...(state.appliedSignals || [])].filter(Boolean).join(' · ');
+  return `<section class="screen">
+    ${screenHeader('추천 완료', '오늘의 후보를 골랐어요', state.coords ? '현재 위치와 날씨를 반영한 실제 주변 식당입니다.' : '입력한 지역의 실제 카카오 식당 검색 결과입니다.')}
+    ${weatherCard()}
+    ${signalText ? `<div class="notice-card"><span class="notice-icon">🎛️</span><div><strong>적용된 추천 신호</strong><span>${escapeHtml(signalText)}</span></div></div>` : ''}
+    <div class="result-summary"><div><strong>${escapeHtml(state.locationText)} 주변 추천</strong><span>${state.categories.join(' · ')} · ${state.companion}${state.hangover ? ' · 해장' : ''}</span></div><div class="result-count">${state.results.length}</div></div>
+    <div class="result-list">${state.results.map((item, index) => `<article class="result-card"><div class="result-top"><div class="food-icon">${META[item.category] || '🍽️'}</div><div class="result-title"><strong>${escapeHtml(item.name)}</strong><span>${escapeHtml(item.address || '주소 정보 없음')}</span></div><span class="score-badge">${item.score || 75}점</span></div><div class="meta-row"><span class="meta">${escapeHtml(item.category)}</span><span class="meta">${item.distance_m ? `${item.distance_m}m` : '거리 확인'}</span><span class="meta">가격 확인</span></div><div class="reason">${escapeHtml((item.reasons || []).join(' · ') || '위치와 선택 조건 반영')}</div><div class="card-actions"><a class="map-button" href="${mapUrl(item)}" target="_blank" rel="noopener">구글맵 보기</a><button class="eat-button" data-eat="${index}">오늘 먹었어요</button></div></article>`).join('')}</div>
+    <div class="button-row" style="margin-top:14px"><button class="ghost-button" data-action="personal">조건 수정</button><button class="secondary-button" data-action="recommend-again">다시 추천</button></div>
+  </section>`;
+}
+
+function renderHistory() {
+  const history = mealHistory();
+  return `<section class="screen">${screenHeader('식사 기록', '최근에 먹은 메뉴', '기록은 현재 브라우저에 저장됩니다.')}<div class="history-list">${history.length ? history.map((item, index) => `<article class="history-card"><div class="history-date">${item.date.slice(5).replace('-', '/')}</div><div class="history-copy"><strong>${escapeHtml(item.name)}</strong><span>${escapeHtml(item.menu)} · ${escapeHtml(item.address || '')}</span></div><button class="delete-button" data-delete="${index}">×</button></article>`).join('') : '<div class="notice-card"><span class="notice-icon">🍽️</span><div><strong>아직 기록이 없습니다.</strong><span>추천 결과에서 ‘오늘 먹었어요’를 눌러 보세요.</span></div></div>'}</div></section>`;
+}
+
+function render() {
+  activeNav();
+  if (state.screen === 'home') app.innerHTML = renderHome();
+  else if (state.screen === 'personal') app.innerHTML = renderPersonal();
+  else if (state.screen === 'personal-loading') app.innerHTML = renderLoading();
+  else if (state.screen === 'personal-results') app.innerHTML = renderResults();
+  else if (state.screen === 'team') app.innerHTML = team.render();
+  else app.innerHTML = renderHistory();
+}
+
+document.addEventListener('click', async (event) => {
+  const button = event.target.closest('button,a');
+  if (!button) return;
+
+  if (button.dataset.teamAction || button.dataset.teamCategory || button.dataset.teamBudget || button.dataset.teamDeadline) {
+    await team.handleClick(button);
+    return;
+  }
+
+  const action = button.dataset.action;
+  if (action === 'home') go('home');
+  if (action === 'personal') go('personal');
+  if (action === 'team') { state.screen = 'team'; team.mode = team.code ? 'room' : 'landing'; render(); team.startPolling(); }
+  if (action === 'history') go('history');
+  if (action === 'spicy') { state.excludeSpicy = !state.excludeSpicy; render(); }
+  if (action === 'hangover') { state.hangover = !state.hangover; render(); }
+  if (action === 'gps') await locate();
+  if (action === 'recommend' || action === 'recommend-again') await recommend();
+
+  if (button.dataset.select) {
+    const type = button.dataset.select;
+    const value = button.dataset.value;
+    if (type === 'category') {
+      state.categories = state.categories.includes(value) ? state.categories.filter((item) => item !== value) : [...state.categories, value];
+      if (!state.categories.length) state.categories = ['한식'];
+    } else {
+      state[type] = value;
+    }
+    render();
+  }
+
+  if (button.dataset.eat !== undefined) recordMeal(Number(button.dataset.eat));
+  if (button.dataset.delete !== undefined) {
+    const history = mealHistory();
+    history.splice(Number(button.dataset.delete), 1);
+    save('jeommechu.history.v1', history);
+    render();
+  }
+});
+
+(async () => {
+  const sharedRoom = await team.initFromUrl();
+  if (sharedRoom) state.screen = 'team';
+  render();
+})();
