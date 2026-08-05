@@ -1,7 +1,21 @@
 {
   "items": [
     {
-      "id": "signing-2026-08-02-0",
+      "id": "signing-2026-08-04-0",
+      "type": "Signing",
+      "typeKo": "계약",
+      "date": "2026-08-04T00:00:00",
+      "dateKo": "8월 4일",
+      "title": "계약 · 8월 4일",
+      "descriptionKo": "토론토 랩터스가 센터 Trey Jemison III와 투웨이 계약을 체결했습니다.",
+      "descriptions": [
+        "Toronto Raptors signed center Trey Jemison III to a Two-Way Contract."
+      ],
+      "source": "NBA.com",
+      "sourceLink": "https://www.nba.com/players/transactions"
+    },
+    {
+      "id": "signing-2026-08-02-1",
       "type": "Signing",
       "typeKo": "계약",
       "date": "2026-08-02T00:00:00",
@@ -15,7 +29,7 @@
       "sourceLink": "https://www.nba.com/players/transactions"
     },
     {
-      "id": "signing-2026-08-01-1",
+      "id": "signing-2026-08-01-2",
       "type": "Signing",
       "typeKo": "계약",
       "date": "2026-08-01T00:00:00",
@@ -29,7 +43,7 @@
       "sourceLink": "https://www.nba.com/players/transactions"
     },
     {
-      "id": "signing-2026-07-31-2",
+      "id": "signing-2026-07-31-3",
       "type": "Signing",
       "typeKo": "계약",
       "date": "2026-07-31T00:00:00",
@@ -43,7 +57,7 @@
       "sourceLink": "https://www.nba.com/players/transactions"
     },
     {
-      "id": "signing-2026-07-31-3",
+      "id": "signing-2026-07-31-4",
       "type": "Signing",
       "typeKo": "계약",
       "date": "2026-07-31T00:00:00",
@@ -57,7 +71,7 @@
       "sourceLink": "https://www.nba.com/players/transactions"
     },
     {
-      "id": "signing-2026-07-31-4",
+      "id": "signing-2026-07-31-5",
       "type": "Signing",
       "typeKo": "계약",
       "date": "2026-07-31T00:00:00",
@@ -71,7 +85,7 @@
       "sourceLink": "https://www.nba.com/players/transactions"
     },
     {
-      "id": "signing-2026-07-31-5",
+      "id": "signing-2026-07-31-6",
       "type": "Signing",
       "typeKo": "계약",
       "date": "2026-07-31T00:00:00",
@@ -85,7 +99,7 @@
       "sourceLink": "https://www.nba.com/players/transactions"
     },
     {
-      "id": "waive-2026-07-30-6",
+      "id": "waive-2026-07-30-7",
       "type": "Waive",
       "typeKo": "방출",
       "date": "2026-07-30T00:00:00",
@@ -99,7 +113,7 @@
       "sourceLink": "https://www.nba.com/players/transactions"
     },
     {
-      "id": "signing-2026-07-29-7",
+      "id": "signing-2026-07-29-8",
       "type": "Signing",
       "typeKo": "계약",
       "date": "2026-07-29T00:00:00",
@@ -113,7 +127,7 @@
       "sourceLink": "https://www.nba.com/players/transactions"
     },
     {
-      "id": "signing-2026-07-29-8",
+      "id": "signing-2026-07-29-9",
       "type": "Signing",
       "typeKo": "계약",
       "date": "2026-07-29T00:00:00",
@@ -127,7 +141,7 @@
       "sourceLink": "https://www.nba.com/players/transactions"
     },
     {
-      "id": "trade-2026-07-28-9",
+      "id": "trade-2026-07-28-10",
       "type": "Trade",
       "typeKo": "트레이드",
       "date": "2026-07-28T00:00:00",
@@ -142,7 +156,7 @@
       "sourceLink": "https://www.nba.com/players/transactions"
     },
     {
-      "id": "signing-2026-07-27-10",
+      "id": "signing-2026-07-27-11",
       "type": "Signing",
       "typeKo": "계약",
       "date": "2026-07-27T00:00:00",
@@ -156,7 +170,7 @@
       "sourceLink": "https://www.nba.com/players/transactions"
     },
     {
-      "id": "waive-2026-07-27-11",
+      "id": "waive-2026-07-27-12",
       "type": "Waive",
       "typeKo": "방출",
       "date": "2026-07-27T00:00:00",
@@ -170,7 +184,7 @@
       "sourceLink": "https://www.nba.com/players/transactions"
     },
     {
-      "id": "signing-2026-07-26-12",
+      "id": "signing-2026-07-26-13",
       "type": "Signing",
       "typeKo": "계약",
       "date": "2026-07-26T00:00:00",
@@ -184,7 +198,7 @@
       "sourceLink": "https://www.nba.com/players/transactions"
     },
     {
-      "id": "waive-2026-07-25-13",
+      "id": "waive-2026-07-25-14",
       "type": "Waive",
       "typeKo": "방출",
       "date": "2026-07-25T00:00:00",
@@ -198,7 +212,7 @@
       "sourceLink": "https://www.nba.com/players/transactions"
     },
     {
-      "id": "waive-2026-07-25-14",
+      "id": "waive-2026-07-25-15",
       "type": "Waive",
       "typeKo": "방출",
       "date": "2026-07-25T00:00:00",
@@ -212,7 +226,7 @@
       "sourceLink": "https://www.nba.com/players/transactions"
     },
     {
-      "id": "signing-2026-07-24-15",
+      "id": "signing-2026-07-24-16",
       "type": "Signing",
       "typeKo": "계약",
       "date": "2026-07-24T00:00:00",
@@ -226,7 +240,7 @@
       "sourceLink": "https://www.nba.com/players/transactions"
     },
     {
-      "id": "signing-2026-07-23-16",
+      "id": "signing-2026-07-23-17",
       "type": "Signing",
       "typeKo": "계약",
       "date": "2026-07-23T00:00:00",
@@ -238,23 +252,9 @@
       ],
       "source": "NBA.com",
       "sourceLink": "https://www.nba.com/players/transactions"
-    },
-    {
-      "id": "signing-2026-07-23-17",
-      "type": "Signing",
-      "typeKo": "계약",
-      "date": "2026-07-23T00:00:00",
-      "dateKo": "7월 23일",
-      "title": "계약 · 7월 23일",
-      "descriptionKo": "휴스턴 로키츠가 포워드 Jae'Sean Tate와 계약을 체결했습니다.",
-      "descriptions": [
-        "Houston Rockets re-signed forward Jae'Sean Tate to a Contract."
-      ],
-      "source": "NBA.com",
-      "sourceLink": "https://www.nba.com/players/transactions"
     }
   ],
   "message": "",
   "source": "NBA 공식 Player Movement 데이터",
-  "updatedAt": "2026-08-04T22:20:47.296Z"
+  "updatedAt": "2026-08-05T00:13:43.792Z"
 }
