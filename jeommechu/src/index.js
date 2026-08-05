@@ -1,12 +1,3 @@
-const DEMO_RESTAURANTS = [
-  { id:'api1', name:'정동밥상', category:'한식', menu:'제육백반', address:'서울 중구 정동길', lat:37.5666, lng:126.9726, distance_m:280, price:9500, spicy:true, solo:true, group:true, business:false },
-  { id:'api2', name:'광화문 국수연구소', category:'한식', menu:'들깨칼국수', address:'서울 종로구 새문안로', lat:37.5702, lng:126.9749, distance_m:410, price:11000, spicy:false, solo:true, group:true, business:false },
-  { id:'api3', name:'호호반점', category:'중식', menu:'유니짜장', address:'서울 중구 세종대로', lat:37.5647, lng:126.9755, distance_m:340, price:9000, spicy:false, solo:true, group:true, business:false },
-  { id:'api4', name:'하루소바', category:'일식', menu:'냉소바 세트', address:'서울 종로구 신문로', lat:37.5701, lng:126.9710, distance_m:390, price:11500, spicy:false, solo:true, group:true, business:false },
-  { id:'api5', name:'오후의 파스타', category:'양식', menu:'라구 파스타', address:'서울 중구 덕수궁길', lat:37.5660, lng:126.9742, distance_m:250, price:16000, spicy:false, solo:true, group:true, business:true },
-  { id:'api6', name:'포 사이공', category:'기타', menu:'양지 쌀국수', address:'서울 종로구 종로5길', lat:37.5714, lng:126.9819, distance_m:840, price:12000, spicy:false, solo:true, group:true, business:false },
-];
-
 const JSON_HEADERS = {
   'content-type': 'application/json; charset=utf-8',
   'cache-control': 'no-store',
@@ -58,6 +49,26 @@ async function kakaoFetch(url, key) {
   return response.json();
 }
 
+async function handleStatus(env) {
+  const keyConfigured = Boolean(env.KAKAO_REST_API_KEY);
+  if (!keyConfigured) {
+    return json({ ok: false, keyConfigured: false, message: 'KAKAO_REST_API_KEY가 등록되지 않았습니다.' }, 503);
+  }
+
+  try {
+    const params = new URLSearchParams({ query: '서울 음식점', size: '1' });
+    await kakaoFetch(`https://dapi.kakao.com/v2/local/search/keyword.json?${params}`, env.KAKAO_REST_API_KEY);
+    return json({ ok: true, keyConfigured: true, kakaoApi: 'connected' });
+  } catch (error) {
+    return json({
+      ok: false,
+      keyConfigured: true,
+      kakaoApi: 'error',
+      message: error instanceof Error ? error.message : '카카오 API 연결에 실패했습니다.',
+    }, 502);
+  }
+}
+
 async function handleRestaurants(request, env) {
   if (request.method === 'OPTIONS') {
     return new Response(null, {
@@ -78,10 +89,15 @@ async function handleRestaurants(request, env) {
   }
 
   const key = env.KAKAO_REST_API_KEY;
-  const { coords, locationText = '광화문', categories = [] } = body || {};
+  const { coords, locationText = '', categories = [] } = body || {};
 
   if (!key) {
-    return json({ mode: 'demo', warning: 'KAKAO_REST_API_KEY가 등록되지 않았습니다.', items: DEMO_RESTAURANTS });
+    return json({
+      mode: 'error',
+      code: 'KAKAO_KEY_MISSING',
+      message: '카카오 REST API 키가 Cloudflare Worker에 등록되지 않았습니다.',
+      items: [],
+    }, 503);
   }
 
   try {
@@ -102,7 +118,7 @@ async function handleRestaurants(request, env) {
         key,
       );
     } else {
-      const query = `${locationText} ${categories[0] || ''} 맛집`.trim();
+      const query = `${locationText || '서울'} ${categories[0] || ''} 맛집`.trim();
       const params = new URLSearchParams({ query, size: '15' });
       data = await kakaoFetch(
         `https://dapi.kakao.com/v2/local/search/keyword.json?${params}`,
@@ -111,19 +127,29 @@ async function handleRestaurants(request, env) {
     }
 
     const items = (data.documents || []).map(mapPlace);
-    return json({ mode: 'kakao', source: coords?.lat && coords?.lng ? 'gps' : 'text', items });
+    return json({
+      mode: 'kakao',
+      source: coords?.lat && coords?.lng ? 'gps' : 'text',
+      receivedCoords: Boolean(coords?.lat && coords?.lng),
+      items,
+    });
   } catch (error) {
     return json({
-      mode: 'fallback',
-      warning: error instanceof Error ? error.message : '식당 검색에 실패했습니다.',
-      items: DEMO_RESTAURANTS,
-    });
+      mode: 'error',
+      code: 'KAKAO_API_ERROR',
+      message: error instanceof Error ? error.message : '식당 검색에 실패했습니다.',
+      items: [],
+    }, 502);
   }
 }
 
 export default {
   async fetch(request, env) {
     const url = new URL(request.url);
+
+    if (url.pathname === '/api/status') {
+      return handleStatus(env);
+    }
 
     if (url.pathname === '/api/restaurants') {
       return handleRestaurants(request, env);
