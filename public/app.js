@@ -27,10 +27,11 @@ async function refreshStandings(staticData){try{const live=standingsFromEspn(awa
 function renderNews(d){
   const items=(d?.items||[]).slice(0,4);
   $('#newsList').innerHTML=items.length?items.map(x=>{
-    const href=x.link||x.originalLink||'#';
-    const external=/^https?:/i.test(href);
-    const label=x.translationType||x.accessLabel||'상세 한국어 정리';
-    return `<a class="news" href="${esc(href)}"${external?' target="_blank" rel="noopener noreferrer"':''}><strong>${esc(x.titleKo||x.title)}</strong>${x.summaryKo?`<p class="news-summary">${esc(x.summaryKo)}</p>`:''}<div class="sub">${esc(x.source||'미국 현지 매체')} · ${esc(label)}</div></a>`;
+    const internal=Boolean(x.articleFile&&x.id);
+    const href=internal?`./article.html?id=${encodeURIComponent(x.id)}`:(x.link||x.originalLink||'#');
+    const attrs=internal?'':` target="_blank" rel="noopener noreferrer"`;
+    const label=internal?'한국어 전문':'원문';
+    return `<a class="news" href="${esc(href)}"${attrs}><strong>${esc(x.titleKo||x.title)}</strong><div class="sub">${esc(x.source||'미국 현지 매체')} · ${esc(x.readingMinutes||'')}분 · ${label}</div></a>`;
   }).join(''):`<div class="empty">${esc(d?.message||'선정된 읽을거리가 없습니다.')}</div>`;
 }
 
