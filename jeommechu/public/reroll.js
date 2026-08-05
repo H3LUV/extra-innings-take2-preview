@@ -3,6 +3,7 @@
   let activeSignature = '';
   let cycleSeen = new Set();
   let lastShown = new Set();
+  let cleanupScheduled = false;
 
   function itemId(item) {
     return String(item?.id || `${item?.name || ''}:${item?.address || ''}`);
@@ -19,7 +20,7 @@
   }
 
   function diversify(items, signature) {
-    const pool = items.slice(0, 20);
+    const pool = items.slice(0, 30);
     if (signature !== activeSignature) {
       activeSignature = signature;
       cycleSeen = new Set();
@@ -48,9 +49,65 @@
     return [
       ...selected,
       ...pool.filter((item) => !selectedIds.has(itemId(item))),
-      ...items.slice(20),
+      ...items.slice(30),
     ];
   }
+
+  function removePriceFields() {
+    document.querySelectorAll('.field-label').forEach((label) => {
+      if (label.textContent.trim() === '예산') {
+        label.closest('.field')?.remove();
+      }
+    });
+
+    document.querySelectorAll('.result-card .meta').forEach((meta) => {
+      if (/가격 확인|원대/.test(meta.textContent.trim())) meta.remove();
+    });
+
+    document.querySelectorAll('.participant-copy span').forEach((element) => {
+      const cleaned = element.textContent
+        .split(' · ')
+        .filter((part) => !/^(1만원 이하|1~2만원|2만원 이상)$/.test(part.trim()))
+        .join(' · ');
+      if (element.textContent !== cleaned) element.textContent = cleaned;
+    });
+  }
+
+  function updateRadiusCopy() {
+    const replacements = [
+      ['반경 2km', '반경 1km'],
+      ['2km 검색', '1km 검색'],
+      ['현재 위치 반경 2km', '현재 위치 반경 1km'],
+      ['위치 조건', '1km 위치 조건'],
+    ];
+
+    const walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT);
+    const nodes = [];
+    while (walker.nextNode()) nodes.push(walker.currentNode);
+    for (const node of nodes) {
+      let value = node.nodeValue;
+      for (const [from, to] of replacements) value = value.replaceAll(from, to);
+      if (value !== node.nodeValue) node.nodeValue = value;
+    }
+  }
+
+  function cleanupUi() {
+    cleanupScheduled = false;
+    removePriceFields();
+    updateRadiusCopy();
+  }
+
+  function scheduleCleanup() {
+    if (cleanupScheduled) return;
+    cleanupScheduled = true;
+    queueMicrotask(cleanupUi);
+  }
+
+  new MutationObserver(scheduleCleanup).observe(document.documentElement, {
+    childList: true,
+    subtree: true,
+  });
+  document.addEventListener('DOMContentLoaded', scheduleCleanup, { once: true });
 
   window.fetch = async (input, init = {}) => {
     const requestUrl = typeof input === 'string' || input instanceof URL
@@ -75,7 +132,6 @@
       locationText: requestBody.locationText || '',
       categories: requestBody.categories || [],
       hangover: Boolean(requestBody.hangover),
-      budget: requestBody.budget || '',
       companion: requestBody.companion || '',
     });
 
@@ -95,12 +151,14 @@
     data.reroll = {
       enabled: true,
       poolSize: data.items.length,
+      searchRadiusM: 1000,
       shownIds: data.items.slice(0, 5).map(itemId),
     };
 
     const headers = new Headers(response.headers);
     headers.delete('content-length');
     headers.set('cache-control', 'no-store');
+    scheduleCleanup();
     return new Response(JSON.stringify(data), {
       status: response.status,
       statusText: response.statusText,
