@@ -1,4 +1,4 @@
-# Today MLB clean full-article translation pipeline v2
+# Today MLB clean full-article translation pipeline v3
 name: Select four Today MLB reading items
 
 on:
@@ -22,7 +22,7 @@ concurrency:
 jobs:
   reading:
     runs-on: ubuntu-latest
-    timeout-minutes: 45
+    timeout-minutes: 60
     steps:
       - uses: actions/checkout@v4
         with:
