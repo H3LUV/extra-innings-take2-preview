@@ -1,5 +1,5 @@
 import { fetchCurrentWeather, findRestaurants } from './recommendations.js';
-export { TeamRoom } from './team-room.js';
+export { TeamRoom } from './team-room-v2.js';
 
 const JSON_HEADERS = {
   'content-type': 'application/json; charset=utf-8',
@@ -61,6 +61,17 @@ async function handleStatus(env) {
   }
 }
 
+async function handleTeamStatus(request, env) {
+  if (!env.TEAM_ROOMS) return json({ ok: false, message: 'TEAM_ROOMS 바인딩이 없습니다.' }, 503);
+  const stub = env.TEAM_ROOMS.getByName('__jeommechu_status__');
+  const internalUrl = new URL('/internal/status', request.url);
+  const internalRequest = new Request(internalUrl, { method: 'GET' });
+  if (env.KAKAO_REST_API_KEY) {
+    internalRequest.headers.set('x-jeommechu-internal-kakao-key', env.KAKAO_REST_API_KEY);
+  }
+  return stub.fetch(internalRequest);
+}
+
 async function handleWeather(request) {
   const url = new URL(request.url);
   const lat = Number(url.searchParams.get('lat'));
@@ -100,6 +111,13 @@ function randomRoomCode() {
   return String(Math.floor(100000 + Math.random() * 900000));
 }
 
+function attachInternalSecret(request, env) {
+  if (env.KAKAO_REST_API_KEY) {
+    request.headers.set('x-jeommechu-internal-kakao-key', env.KAKAO_REST_API_KEY);
+  }
+  return request;
+}
+
 async function createTeamRoom(request, env) {
   const body = await readJson(request);
 
@@ -107,11 +125,12 @@ async function createTeamRoom(request, env) {
     const code = randomRoomCode();
     const stub = env.TEAM_ROOMS.getByName(code);
     const internalUrl = new URL('/internal/create', request.url);
-    const response = await stub.fetch(new Request(internalUrl, {
+    const internalRequest = new Request(internalUrl, {
       method: 'POST',
       headers: { 'content-type': 'application/json' },
       body: JSON.stringify({ ...body, code }),
-    }));
+    });
+    const response = await stub.fetch(attachInternalSecret(internalRequest, env));
 
     if (response.status !== 409) return response;
   }
@@ -128,7 +147,8 @@ async function routeTeamRoom(request, env, url) {
   const stub = env.TEAM_ROOMS.getByName(code);
   const internalUrl = new URL(`/internal/${action}`, request.url);
   internalUrl.search = url.search;
-  return stub.fetch(new Request(internalUrl, request));
+  const internalRequest = new Request(internalUrl, request);
+  return stub.fetch(attachInternalSecret(internalRequest, env));
 }
 
 export default {
@@ -136,6 +156,7 @@ export default {
     const url = new URL(request.url);
 
     if (url.pathname === '/api/status') return handleStatus(env);
+    if (url.pathname === '/api/team-status') return handleTeamStatus(request, env);
     if (url.pathname === '/api/weather') return handleWeather(request);
     if (url.pathname === '/api/restaurants') return handleRestaurants(request, env);
     if (url.pathname === '/api/team/create' && request.method === 'POST') return createTeamRoom(request, env);
