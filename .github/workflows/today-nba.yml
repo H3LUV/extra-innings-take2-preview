@@ -1,4 +1,4 @@
-# Today NBA hourly update with MLB-style Korean full article translations - filtered reader v3
+# Today NBA hourly update with MLB-style Korean full article translations - article-only reader v4
 name: Update and deploy Today NBA
 
 on:
