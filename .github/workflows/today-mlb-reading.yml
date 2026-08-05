@@ -10,8 +10,8 @@ on:
   schedule:
     # Normal: 22:15 UTC = 07:15 Asia/Seoul
     - cron: '15 22 * * *'
-    # One-time verification: 2026-08-05 15:25 Asia/Seoul
-    - cron: '25 6 5 8 *'
+    # One-time verification: 2026-08-05 15:40 Asia/Seoul
+    - cron: '40 6 5 8 *'
 
 permissions:
   contents: write
