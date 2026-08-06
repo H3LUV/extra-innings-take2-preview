@@ -11,6 +11,7 @@ export class TeamController extends FixedTeamController {
   constructor(options) {
     super(options);
     this.countdownTimer = null;
+    this.pollInFlight = false;
   }
 
   resetExpiredRoom(message = '마감된 방을 정리했습니다. 새 팀 방을 만들 수 있습니다.') {
@@ -43,16 +44,19 @@ export class TeamController extends FixedTeamController {
   roomFingerprint(room = this.room) {
     if (!room) return '';
     return JSON.stringify({
+      updatedAt: room.updatedAt || 0,
       status: room.status,
       deadline: room.deadline,
       lastError: room.lastError || '',
       participants: (room.participants || []).map((participant) => ({
         id: participant.id,
         name: participant.name,
+        isHost: participant.isHost,
         categories: participant.categories,
         budget: participant.budget,
         hangover: participant.hangover,
         hasVoted: participant.hasVoted,
+        joinedAt: participant.joinedAt,
       })),
       candidates: (room.candidates || []).map((candidate) => ({
         id: candidate.id,
@@ -87,8 +91,13 @@ export class TeamController extends FixedTeamController {
         this.stopPolling();
         return;
       }
-      this.loadState(true);
-    }, 3000);
+      if (this.pollInFlight) return;
+
+      this.pollInFlight = true;
+      Promise.resolve(this.loadState(true)).finally(() => {
+        this.pollInFlight = false;
+      });
+    }, 1000);
 
     this.countdownTimer = setInterval(() => this.updateLiveDom(), 1000);
     this.updateLiveDom();
