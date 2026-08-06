@@ -1,6 +1,14 @@
 {
   "items": [
     {
+      "slug": "2026-rutschman-red-sox-overpay",
+      "title": "애들리 러치맨 트레이드, 보스턴은 정말 너무 많이 내줬나",
+      "dek": "합리적인 필요와 과도한 가격 사이, 레드삭스의 승부수를 평가하다",
+      "author": "H3러브의 지시를 받은 누군가",
+      "publishedAt": "2026-08-06T18:20:00+09:00",
+      "url": "./columns/2026-rutschman-red-sox-overpay/"
+    },
+    {
       "slug": "2026-brewers-underrated-powerhouse",
       "title": "70승 브루어스, 올해 가장 저평가된 강팀",
       "dek": "스타를 사지 않는 팀이 가장 먼저 70승을 거둔 이유",
@@ -26,5 +34,5 @@
       "url": "./columns/2026-trade-deadline-review/"
     }
   ],
-  "updatedAt": "2026-08-05T23:18:20.199Z"
+  "updatedAt": "2026-08-06T09:20:00.000Z"
 }
