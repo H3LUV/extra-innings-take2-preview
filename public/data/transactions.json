@@ -1,7 +1,21 @@
 {
   "items": [
     {
-      "id": "signing-2026-08-04-0",
+      "id": "waive-2026-08-05-0",
+      "type": "Waive",
+      "typeKo": "방출",
+      "date": "2026-08-05T00:00:00",
+      "dateKo": "8월 5일",
+      "title": "방출 · 8월 5일",
+      "descriptionKo": "휴스턴 로키츠가 가드 JD Davison를 방출했습니다.",
+      "descriptions": [
+        "Houston Rockets waived guard JD Davison."
+      ],
+      "source": "NBA.com",
+      "sourceLink": "https://www.nba.com/players/transactions"
+    },
+    {
+      "id": "signing-2026-08-04-1",
       "type": "Signing",
       "typeKo": "계약",
       "date": "2026-08-04T00:00:00",
@@ -15,7 +29,7 @@
       "sourceLink": "https://www.nba.com/players/transactions"
     },
     {
-      "id": "signing-2026-08-02-1",
+      "id": "signing-2026-08-02-2",
       "type": "Signing",
       "typeKo": "계약",
       "date": "2026-08-02T00:00:00",
@@ -29,7 +43,7 @@
       "sourceLink": "https://www.nba.com/players/transactions"
     },
     {
-      "id": "signing-2026-08-01-2",
+      "id": "signing-2026-08-01-3",
       "type": "Signing",
       "typeKo": "계약",
       "date": "2026-08-01T00:00:00",
@@ -43,7 +57,7 @@
       "sourceLink": "https://www.nba.com/players/transactions"
     },
     {
-      "id": "signing-2026-07-31-3",
+      "id": "signing-2026-07-31-4",
       "type": "Signing",
       "typeKo": "계약",
       "date": "2026-07-31T00:00:00",
@@ -57,7 +71,7 @@
       "sourceLink": "https://www.nba.com/players/transactions"
     },
     {
-      "id": "signing-2026-07-31-4",
+      "id": "signing-2026-07-31-5",
       "type": "Signing",
       "typeKo": "계약",
       "date": "2026-07-31T00:00:00",
@@ -71,7 +85,7 @@
       "sourceLink": "https://www.nba.com/players/transactions"
     },
     {
-      "id": "signing-2026-07-31-5",
+      "id": "signing-2026-07-31-6",
       "type": "Signing",
       "typeKo": "계약",
       "date": "2026-07-31T00:00:00",
@@ -85,7 +99,7 @@
       "sourceLink": "https://www.nba.com/players/transactions"
     },
     {
-      "id": "signing-2026-07-31-6",
+      "id": "signing-2026-07-31-7",
       "type": "Signing",
       "typeKo": "계약",
       "date": "2026-07-31T00:00:00",
@@ -99,7 +113,7 @@
       "sourceLink": "https://www.nba.com/players/transactions"
     },
     {
-      "id": "waive-2026-07-30-7",
+      "id": "waive-2026-07-30-8",
       "type": "Waive",
       "typeKo": "방출",
       "date": "2026-07-30T00:00:00",
@@ -113,7 +127,7 @@
       "sourceLink": "https://www.nba.com/players/transactions"
     },
     {
-      "id": "signing-2026-07-29-8",
+      "id": "signing-2026-07-29-9",
       "type": "Signing",
       "typeKo": "계약",
       "date": "2026-07-29T00:00:00",
@@ -127,7 +141,7 @@
       "sourceLink": "https://www.nba.com/players/transactions"
     },
     {
-      "id": "signing-2026-07-29-9",
+      "id": "signing-2026-07-29-10",
       "type": "Signing",
       "typeKo": "계약",
       "date": "2026-07-29T00:00:00",
@@ -141,7 +155,7 @@
       "sourceLink": "https://www.nba.com/players/transactions"
     },
     {
-      "id": "trade-2026-07-28-10",
+      "id": "trade-2026-07-28-11",
       "type": "Trade",
       "typeKo": "트레이드",
       "date": "2026-07-28T00:00:00",
@@ -156,7 +170,7 @@
       "sourceLink": "https://www.nba.com/players/transactions"
     },
     {
-      "id": "signing-2026-07-27-11",
+      "id": "signing-2026-07-27-12",
       "type": "Signing",
       "typeKo": "계약",
       "date": "2026-07-27T00:00:00",
@@ -170,7 +184,7 @@
       "sourceLink": "https://www.nba.com/players/transactions"
     },
     {
-      "id": "waive-2026-07-27-12",
+      "id": "waive-2026-07-27-13",
       "type": "Waive",
       "typeKo": "방출",
       "date": "2026-07-27T00:00:00",
@@ -184,7 +198,7 @@
       "sourceLink": "https://www.nba.com/players/transactions"
     },
     {
-      "id": "signing-2026-07-26-13",
+      "id": "signing-2026-07-26-14",
       "type": "Signing",
       "typeKo": "계약",
       "date": "2026-07-26T00:00:00",
@@ -198,7 +212,7 @@
       "sourceLink": "https://www.nba.com/players/transactions"
     },
     {
-      "id": "waive-2026-07-25-14",
+      "id": "waive-2026-07-25-15",
       "type": "Waive",
       "typeKo": "방출",
       "date": "2026-07-25T00:00:00",
@@ -212,7 +226,7 @@
       "sourceLink": "https://www.nba.com/players/transactions"
     },
     {
-      "id": "waive-2026-07-25-15",
+      "id": "waive-2026-07-25-16",
       "type": "Waive",
       "typeKo": "방출",
       "date": "2026-07-25T00:00:00",
@@ -226,7 +240,7 @@
       "sourceLink": "https://www.nba.com/players/transactions"
     },
     {
-      "id": "signing-2026-07-24-16",
+      "id": "signing-2026-07-24-17",
       "type": "Signing",
       "typeKo": "계약",
       "date": "2026-07-24T00:00:00",
@@ -238,23 +252,9 @@
       ],
       "source": "NBA.com",
       "sourceLink": "https://www.nba.com/players/transactions"
-    },
-    {
-      "id": "signing-2026-07-23-17",
-      "type": "Signing",
-      "typeKo": "계약",
-      "date": "2026-07-23T00:00:00",
-      "dateKo": "7월 23일",
-      "title": "계약 · 7월 23일",
-      "descriptionKo": "보스턴 셀틱스가 가드 Jordan Walsh와 베테랑 연장계약을 체결했습니다.",
-      "descriptions": [
-        "Boston Celtics re-signed guard Jordan Walsh to a Veteran Extension."
-      ],
-      "source": "NBA.com",
-      "sourceLink": "https://www.nba.com/players/transactions"
     }
   ],
   "message": "",
   "source": "NBA 공식 Player Movement 데이터",
-  "updatedAt": "2026-08-05T22:18:58.090Z"
+  "updatedAt": "2026-08-06T00:09:06.412Z"
 }
