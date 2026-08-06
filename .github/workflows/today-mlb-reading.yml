@@ -1,4 +1,4 @@
-# Today MLB clean full-article translation pipeline v7 - force recovery deploy
+# Today MLB clean full-article translation pipeline v8 - force deploy Rutschman homepage
 name: Select four Today MLB reading items
 
 on:
