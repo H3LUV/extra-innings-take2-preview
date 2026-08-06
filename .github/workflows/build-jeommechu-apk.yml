@@ -42,9 +42,9 @@ jobs:
 
       - name: Generate Android project
         run: |
-          chmod +x android/build-apk.sh android/patch-v1.0.1.sh
+          chmod +x android/build-apk.sh android/patch-v1.0.2.sh
           ./android/build-apk.sh
-          ./android/patch-v1.0.1.sh
+          ./android/patch-v1.0.2.sh
 
       - name: Build installable APK
         working-directory: android/app-project
@@ -53,13 +53,13 @@ jobs:
       - name: Prepare artifact
         run: |
           mkdir -p android/output
-          cp android/app-project/app/build/outputs/apk/debug/app-debug.apk android/output/jeommechu-v1.0.1.apk
-          sha256sum android/output/jeommechu-v1.0.1.apk > android/output/jeommechu-v1.0.1.sha256
+          cp android/app-project/app/build/outputs/apk/debug/app-debug.apk android/output/jeommechu-v1.0.2.apk
+          sha256sum android/output/jeommechu-v1.0.2.apk > android/output/jeommechu-v1.0.2.sha256
 
       - name: Upload APK
         uses: actions/upload-artifact@v4
         with:
-          name: jeommechu-apk-v1.0.1
+          name: jeommechu-apk-v1.0.2
           path: android/output/*
           if-no-files-found: error
           retention-days: 30
