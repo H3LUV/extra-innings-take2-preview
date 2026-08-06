@@ -1,4 +1,4 @@
-# Today NBA hourly update with MLB-style Korean full article translations - clean reader v7 - force deploy warriors column
+# Today NBA hourly update with MLB-style Korean full article translations - clean reader v8 - force deploy giannis bam column
 name: Update and deploy Today NBA
 
 on:
