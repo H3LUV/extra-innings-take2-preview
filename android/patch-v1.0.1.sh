@@ -25,7 +25,7 @@ if replacement not in styles:
     styles = styles.replace(needle, replacement)
 styles_file.write_text(styles, encoding="utf-8")
 
-activity = activity_file.read_text(encoding="utf-8")n
+activity = activity_file.read_text(encoding="utf-8")
 activity = activity.replace(
     "        super.onCreate(savedInstanceState);\n\n        FrameLayout root = new FrameLayout(this);",
     "        super.onCreate(savedInstanceState);\n        configureSystemBars();\n\n        FrameLayout root = new FrameLayout(this);\n        root.setFitsSystemWindows(true);",
