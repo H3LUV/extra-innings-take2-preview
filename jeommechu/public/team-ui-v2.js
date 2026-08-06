@@ -1,4 +1,4 @@
-import { TeamController as BaseTeamController } from './team-final.js?v=6';
+import { TeamController as BaseTeamController } from './team-final.js?v=7';
 
 function escapeHtml(value = '') {
   return String(value).replace(/[&<>"']/g, (character) => ({
@@ -63,8 +63,46 @@ export class TeamController extends BaseTeamController {
       ${this.weatherCard()}
       ${this.room.lastError ? `<div class="notice-card"><span class="notice-icon">⚠️</span><div><strong>후보 생성 오류</strong><span>${escapeHtml(this.room.lastError)}</span></div></div>` : ''}
       <div class="room-card"><div class="room-title"><strong>참여자 조건</strong><span class="status-pill">${this.room.participants.length}명</span></div><div class="participant-list">${this.participantList()}</div></div>
-      <div class="button-row"><button class="ghost-button" data-team-action="edit">내 조건 수정</button>${this.room.me?.isHost ? '<button class="secondary-button" data-team-action="close">지금 마감</button>' : '<button class="secondary-button" data-team-action="refresh">새로고침</button>'}</div>
+      <div class="button-row"><button class="ghost-button" data-team-action="edit">내 조건 수정</button>${this.room.me?.isHost ? '<button class="secondary-button" data-team-action="close">모집 마감</button>' : '<button class="secondary-button" data-team-action="refresh">새로고침</button>'}</div>
       <button class="ghost-button leave-room-button" data-team-action="leave">방 나가기</button>
     </section>`;
+  }
+
+  async closeCollectingNow() {
+    if (!this.code || !this.token || !this.room?.me?.isHost) {
+      this.showToast('방장만 모집을 마감할 수 있습니다.');
+      return;
+    }
+
+    this.stopPolling();
+    this.loading = true;
+    this.onChange();
+
+    try {
+      const data = await this.api(`/api/team/${this.code}/close`, {
+        method: 'POST',
+        body: JSON.stringify({ participantToken: this.token }),
+      });
+
+      this.room = data.room;
+      this.error = '';
+      this.mode = 'room';
+      this.loading = false;
+      this.onChange();
+      this.startPolling();
+      this.showToast('모집을 마감하고 메뉴 선택을 시작했습니다.');
+    } catch (error) {
+      this.loading = false;
+      this.showToast(error.message);
+      this.onChange();
+      this.startPolling();
+    }
+  }
+
+  async handleClick(button) {
+    if (button.dataset.teamAction === 'close') {
+      return this.closeCollectingNow();
+    }
+    return super.handleClick(button);
   }
 }
