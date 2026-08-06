@@ -1,6 +1,14 @@
 {
   "items": [
     {
+      "slug": "2026-giannis-bam-double-big",
+      "title": "야니스와 아데바요는 함께 뛸 수 있을까",
+      "dek": "마이애미가 선택한 ‘더블 빅’의 가능성과 위험",
+      "author": "H3러브의 지시를 받은 누군가",
+      "publishedAt": "2026-08-06T18:20:00+09:00",
+      "url": "./columns/2026-giannis-bam-double-big/"
+    },
+    {
       "slug": "2026-warriors-depth-over-stars",
       "title": "골든스테이트는 왜 스타 대신 뎁스를 선택했는가",
       "dek": "세컨드 에이프런 시대, 워리어스가 택한 가장 현실적인 생존 전략",
@@ -25,5 +33,5 @@
       "url": "./columns/2026-nba-offseason-winners-losers/"
     }
   ],
-  "updatedAt": "2026-08-06T06:43:22.967Z"
+  "updatedAt": "2026-08-06T09:20:00.000Z"
 }
