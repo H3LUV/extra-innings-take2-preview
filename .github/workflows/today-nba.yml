@@ -1,4 +1,4 @@
-# Today NBA hourly update with MLB-style Korean full article translations - clean reader v9 - force deploy Walker Kessler column
+# Today NBA hourly update with MLB-style Korean full article translations - clean reader v10 - redeploy full approved Walker Kessler column
 name: Update and deploy Today NBA
 
 on:
