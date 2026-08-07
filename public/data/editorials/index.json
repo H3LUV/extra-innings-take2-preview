@@ -1,6 +1,14 @@
 {
   "items": [
     {
+      "slug": "2026-walker-kessler-luka-fit",
+      "title": "워커 케슬러는 루카 돈치치에게 가장 필요한 센터인가",
+      "dek": "레이커스가 찾은 ‘수비와 롤맨’의 해답, 그리고 미래 자산을 건 베팅",
+      "author": "H3LUV · support by GPT",
+      "publishedAt": "2026-08-07T19:25:00+09:00",
+      "url": "./columns/2026-walker-kessler-luka-fit/"
+    },
+    {
       "slug": "2026-giannis-bam-double-big",
       "title": "야니스와 아데바요는 함께 뛸 수 있을까",
       "dek": "마이애미가 선택한 ‘더블 빅’의 가능성과 위험",
@@ -33,5 +41,5 @@
       "url": "./columns/2026-nba-offseason-winners-losers/"
     }
   ],
-  "updatedAt": "2026-08-07T10:10:22.981Z"
+  "updatedAt": "2026-08-07T19:27:00+09:00"
 }
