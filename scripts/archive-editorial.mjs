@@ -6,7 +6,18 @@ if (!latest.slug) throw new Error('editorial.json has no slug');
 
 const archiveDir = new URL('../public/data/editorials/', import.meta.url);
 await fs.mkdir(archiveDir, { recursive: true });
-await fs.writeFile(new URL(`${latest.slug}.json`, archiveDir), JSON.stringify(latest, null, 2), 'utf8');
+const archiveUrl = new URL(`${latest.slug}.json`, archiveDir);
+let toArchive = latest;
+try {
+  const existing = JSON.parse(await fs.readFile(archiveUrl, 'utf8'));
+  const existingBody = Array.isArray(existing.body) ? existing.body.join('\n') : '';
+  const latestBody = Array.isArray(latest.body) ? latest.body.join('\n') : '';
+  if (existing.slug === latest.slug && existingBody.length > latestBody.length) {
+    toArchive = { ...latest, ...existing, slug: latest.slug, title: latest.title || existing.title, publishedAt: latest.publishedAt || existing.publishedAt };
+    console.log(`Preserving fuller archived editorial for ${latest.slug}`);
+  }
+} catch {}
+await fs.writeFile(archiveUrl, JSON.stringify(toArchive, null, 2), 'utf8');
 
 const indexUrl = new URL('index.json', archiveDir);
 let archiveIndex = { items: [] };
