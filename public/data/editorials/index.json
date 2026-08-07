@@ -1,6 +1,14 @@
 {
   "items": [
     {
+      "slug": "2026-dodgers-crisis-or-mirage",
+      "title": "다저스는 정말 위기인가, 아니면 또 하나의 착시인가",
+      "dek": "6연패에 빠진 디펜딩 챔피언. 문제는 패배의 숫자가 아니라, 10월에 해결될 수 있는 문제인가에 있다",
+      "author": "오늘의 MLB 편집부",
+      "publishedAt": "2026-08-07T18:10:00+09:00",
+      "url": "./columns/2026-dodgers-crisis-or-mirage/"
+    },
+    {
       "slug": "2026-rutschman-red-sox-overpay",
       "title": "애들리 러치맨 트레이드, 보스턴은 정말 너무 많이 내줬나",
       "dek": "합리적인 필요와 과도한 가격 사이, 레드삭스의 승부수를 평가하다",
@@ -34,5 +42,5 @@
       "url": "./columns/2026-trade-deadline-review/"
     }
   ],
-  "updatedAt": "2026-08-07T01:33:54.225Z"
+  "updatedAt": "2026-08-07T09:15:00.000Z"
 }
