@@ -1,7 +1,21 @@
 {
   "items": [
     {
-      "id": "signing-2026-08-05-0",
+      "id": "signing-2026-08-06-0",
+      "type": "Signing",
+      "typeKo": "계약",
+      "date": "2026-08-06T00:00:00",
+      "dateKo": "8월 6일",
+      "title": "계약 · 8월 6일",
+      "descriptionKo": "LA 클리퍼스가 센터 Jamarion Sharp와 투웨이 계약을 체결했습니다.",
+      "descriptions": [
+        "LA Clippers signed center Jamarion Sharp to a Two-Way Contract."
+      ],
+      "source": "NBA.com",
+      "sourceLink": "https://www.nba.com/players/transactions"
+    },
+    {
+      "id": "signing-2026-08-05-1",
       "type": "Signing",
       "typeKo": "계약",
       "date": "2026-08-05T00:00:00",
@@ -15,7 +29,7 @@
       "sourceLink": "https://www.nba.com/players/transactions"
     },
     {
-      "id": "signing-2026-08-05-1",
+      "id": "signing-2026-08-05-2",
       "type": "Signing",
       "typeKo": "계약",
       "date": "2026-08-05T00:00:00",
@@ -29,7 +43,7 @@
       "sourceLink": "https://www.nba.com/players/transactions"
     },
     {
-      "id": "waive-2026-08-05-2",
+      "id": "waive-2026-08-05-3",
       "type": "Waive",
       "typeKo": "방출",
       "date": "2026-08-05T00:00:00",
@@ -43,7 +57,7 @@
       "sourceLink": "https://www.nba.com/players/transactions"
     },
     {
-      "id": "signing-2026-08-04-3",
+      "id": "signing-2026-08-04-4",
       "type": "Signing",
       "typeKo": "계약",
       "date": "2026-08-04T00:00:00",
@@ -57,7 +71,7 @@
       "sourceLink": "https://www.nba.com/players/transactions"
     },
     {
-      "id": "signing-2026-08-02-4",
+      "id": "signing-2026-08-02-5",
       "type": "Signing",
       "typeKo": "계약",
       "date": "2026-08-02T00:00:00",
@@ -71,7 +85,7 @@
       "sourceLink": "https://www.nba.com/players/transactions"
     },
     {
-      "id": "signing-2026-08-01-5",
+      "id": "signing-2026-08-01-6",
       "type": "Signing",
       "typeKo": "계약",
       "date": "2026-08-01T00:00:00",
@@ -85,7 +99,7 @@
       "sourceLink": "https://www.nba.com/players/transactions"
     },
     {
-      "id": "signing-2026-07-31-6",
+      "id": "signing-2026-07-31-7",
       "type": "Signing",
       "typeKo": "계약",
       "date": "2026-07-31T00:00:00",
@@ -99,7 +113,7 @@
       "sourceLink": "https://www.nba.com/players/transactions"
     },
     {
-      "id": "signing-2026-07-31-7",
+      "id": "signing-2026-07-31-8",
       "type": "Signing",
       "typeKo": "계약",
       "date": "2026-07-31T00:00:00",
@@ -113,7 +127,7 @@
       "sourceLink": "https://www.nba.com/players/transactions"
     },
     {
-      "id": "signing-2026-07-31-8",
+      "id": "signing-2026-07-31-9",
       "type": "Signing",
       "typeKo": "계약",
       "date": "2026-07-31T00:00:00",
@@ -127,7 +141,7 @@
       "sourceLink": "https://www.nba.com/players/transactions"
     },
     {
-      "id": "signing-2026-07-31-9",
+      "id": "signing-2026-07-31-10",
       "type": "Signing",
       "typeKo": "계약",
       "date": "2026-07-31T00:00:00",
@@ -141,7 +155,7 @@
       "sourceLink": "https://www.nba.com/players/transactions"
     },
     {
-      "id": "waive-2026-07-30-10",
+      "id": "waive-2026-07-30-11",
       "type": "Waive",
       "typeKo": "방출",
       "date": "2026-07-30T00:00:00",
@@ -155,7 +169,7 @@
       "sourceLink": "https://www.nba.com/players/transactions"
     },
     {
-      "id": "signing-2026-07-29-11",
+      "id": "signing-2026-07-29-12",
       "type": "Signing",
       "typeKo": "계약",
       "date": "2026-07-29T00:00:00",
@@ -169,7 +183,7 @@
       "sourceLink": "https://www.nba.com/players/transactions"
     },
     {
-      "id": "signing-2026-07-29-12",
+      "id": "signing-2026-07-29-13",
       "type": "Signing",
       "typeKo": "계약",
       "date": "2026-07-29T00:00:00",
@@ -183,7 +197,7 @@
       "sourceLink": "https://www.nba.com/players/transactions"
     },
     {
-      "id": "trade-2026-07-28-13",
+      "id": "trade-2026-07-28-14",
       "type": "Trade",
       "typeKo": "트레이드",
       "date": "2026-07-28T00:00:00",
@@ -198,7 +212,7 @@
       "sourceLink": "https://www.nba.com/players/transactions"
     },
     {
-      "id": "signing-2026-07-27-14",
+      "id": "signing-2026-07-27-15",
       "type": "Signing",
       "typeKo": "계약",
       "date": "2026-07-27T00:00:00",
@@ -212,7 +226,7 @@
       "sourceLink": "https://www.nba.com/players/transactions"
     },
     {
-      "id": "waive-2026-07-27-15",
+      "id": "waive-2026-07-27-16",
       "type": "Waive",
       "typeKo": "방출",
       "date": "2026-07-27T00:00:00",
@@ -226,7 +240,7 @@
       "sourceLink": "https://www.nba.com/players/transactions"
     },
     {
-      "id": "signing-2026-07-26-16",
+      "id": "signing-2026-07-26-17",
       "type": "Signing",
       "typeKo": "계약",
       "date": "2026-07-26T00:00:00",
@@ -238,23 +252,9 @@
       ],
       "source": "NBA.com",
       "sourceLink": "https://www.nba.com/players/transactions"
-    },
-    {
-      "id": "waive-2026-07-25-17",
-      "type": "Waive",
-      "typeKo": "방출",
-      "date": "2026-07-25T00:00:00",
-      "dateKo": "7월 25일",
-      "title": "방출 · 7월 25일",
-      "descriptionKo": "멤피스 그리즐리스가 가드 Kentavious Caldwell-Pope를 방출했습니다.",
-      "descriptions": [
-        "Memphis Grizzlies waived guard Kentavious Caldwell-Pope."
-      ],
-      "source": "NBA.com",
-      "sourceLink": "https://www.nba.com/players/transactions"
     }
   ],
   "message": "",
   "source": "NBA 공식 Player Movement 데이터",
-  "updatedAt": "2026-08-07T00:44:16.934Z"
+  "updatedAt": "2026-08-07T04:03:30.948Z"
 }
