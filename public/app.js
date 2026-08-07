@@ -1,6 +1,6 @@
 const $=s=>document.querySelector(s);
-const esc=v=>String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
-const COLUMN_BYLINE='H3러브의 지시를 받은 누군가';
+const esc=v=>String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot',"'":'&#39;'}[c]));
+const COLUMN_BYLINE='H3LUV · support by GPT';
 const getJSON=async(url,timeout=12000)=>{const ctrl=new AbortController();const timer=setTimeout(()=>ctrl.abort(),timeout);try{const r=await fetch(url,{cache:'no-store',signal:ctrl.signal});if(!r.ok)throw Error(r.status);return await r.json()}finally{clearTimeout(timer)}};
 const kstParts=(date=new Date())=>new Intl.DateTimeFormat('en-CA',{timeZone:'Asia/Seoul',year:'numeric',month:'2-digit',day:'2-digit'}).format(date);
 const shiftDate=(ymd,days)=>{const d=new Date(ymd+'T00:00:00+09:00');d.setUTCDate(d.getUTCDate()+days);return kstParts(d)};
