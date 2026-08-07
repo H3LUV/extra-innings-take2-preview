@@ -1,0 +1,33 @@
+name: Remove migrated Jeommechu files
+
+on:
+  pull_request:
+    branches:
+      - jeommechu-cloudflare
+
+permissions:
+  contents: write
+
+jobs:
+  cleanup:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Remove migrated project directories
+        shell: bash
+        run: |
+          set -euo pipefail
+          rm -rf jeommechu android
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add -A -- jeommechu android
+          if git diff --cached --quiet; then
+            echo 'No migrated project directories remain.'
+            exit 0
+          fi
+          git commit -m 'Remove Jeommechu files after repository migration'
+          git push origin HEAD:jeommechu-cloudflare
