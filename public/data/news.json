@@ -1,6 +1,23 @@
 {
   "items": [
     {
+      "id": "mlb-0648d3c1891f",
+      "articleFile": "./data/articles/mlb-0648d3c1891f.json",
+      "title": "Not one but TWO Marlins outfielders helped this Acuña HR over the wall",
+      "titleKo": "한 명도 아니고 두 명의 말린스 외야수가 이 Acuña HR을 벽 너머로 도왔습니다.",
+      "link": "https://www.mlb.com/news/ronald-acuna-jr-hits-home-run-after-it-deflects-off-two-marlins-players",
+      "pubDate": "2026-08-07T00:26:56.946Z",
+      "source": "MLB.com",
+      "category": "미국 현지 읽을거리",
+      "readingMinutes": 8,
+      "bodyVerified": true,
+      "bodyChars": 6053,
+      "sourceWordCount": 1751,
+      "translationType": "full",
+      "pipelineVersion": "reader-v6",
+      "translatedAt": "2026-08-07T01:34:48.739Z"
+    },
+    {
       "id": "mlb-f68eed6f88d7",
       "articleFile": "./data/articles/mlb-f68eed6f88d7.json",
       "title": "EIGHT doubles on 16 hits?! Phils' offense picks up Sánchez after short outing",
@@ -16,23 +33,6 @@
       "translationType": "full",
       "pipelineVersion": "reader-v6",
       "translatedAt": "2026-08-07T01:34:08.677Z"
-    },
-    {
-      "id": "mlb-6cfdd1bdc849",
-      "articleFile": "./data/articles/mlb-6cfdd1bdc849.json",
-      "title": "18 days after taking liner off head, Jays' top pitching prospect dominates at Double-A",
-      "titleKo": "라이너를 머리에서 떼어낸 지 18일 만에 Jays의 최고 투수 유망주가 Double-A를 장악했습니다.",
-      "link": "https://www.mlb.com/news/blue-jays-prospect-nolan-perry-3-no-hit-innings-return",
-      "pubDate": "2026-08-07T01:00:00Z",
-      "source": "MLB.com",
-      "category": "미국 현지 읽을거리",
-      "readingMinutes": 5,
-      "bodyVerified": true,
-      "bodyChars": 4200,
-      "sourceWordCount": 1207,
-      "translationType": "full",
-      "pipelineVersion": "reader-v6",
-      "translatedAt": "2026-08-07T01:34:22.036Z"
     },
     {
       "id": "mlb-58c41602c8ac",
@@ -52,21 +52,21 @@
       "translatedAt": "2026-08-07T01:34:39.997Z"
     },
     {
-      "id": "mlb-0648d3c1891f",
-      "articleFile": "./data/articles/mlb-0648d3c1891f.json",
-      "title": "Not one but TWO Marlins outfielders helped this Acuña HR over the wall",
-      "titleKo": "한 명도 아니고 두 명의 말린스 외야수가 이 Acuña HR을 벽 너머로 도왔습니다.",
-      "link": "https://www.mlb.com/news/ronald-acuna-jr-hits-home-run-after-it-deflects-off-two-marlins-players",
-      "pubDate": "2026-08-07T00:26:56.946Z",
+      "id": "mlb-6cfdd1bdc849",
+      "articleFile": "./data/articles/mlb-6cfdd1bdc849.json",
+      "title": "18 days after taking liner off head, Jays' top pitching prospect dominates at Double-A",
+      "titleKo": "라이너를 머리에서 떼어낸 지 18일 만에 Jays의 최고 투수 유망주가 Double-A를 장악했습니다.",
+      "link": "https://www.mlb.com/news/blue-jays-prospect-nolan-perry-3-no-hit-innings-return",
+      "pubDate": "2026-08-07T01:00:00Z",
       "source": "MLB.com",
       "category": "미국 현지 읽을거리",
-      "readingMinutes": 8,
+      "readingMinutes": 5,
       "bodyVerified": true,
-      "bodyChars": 6053,
-      "sourceWordCount": 1751,
+      "bodyChars": 4200,
+      "sourceWordCount": 1207,
       "translationType": "full",
       "pipelineVersion": "reader-v6",
-      "translatedAt": "2026-08-07T01:34:48.739Z"
+      "translatedAt": "2026-08-07T01:34:22.036Z"
     }
   ],
   "message": "미국 현지 기사 중 광고·회원가입 문구를 제거하고 제목과 본문 전체 자동 번역이 완료된 기사만 제공합니다.",
@@ -74,5 +74,5 @@
   "translationPolicy": "clean_full_translation_keep_previous_on_failure",
   "pipelineVersion": "reader-v6",
   "selectedCount": 4,
-  "updatedAt": "2026-08-07T01:34:48.740Z"
+  "updatedAt": "2026-08-07T09:56:12.003Z"
 }
