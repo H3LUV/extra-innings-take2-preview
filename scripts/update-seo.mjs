@@ -4,7 +4,7 @@ const SITE='https://today-nba.pages.dev';
 const NAME='오늘의 NBA';
 const DESCRIPTION='NBA 경기, 순위, 미국 현지 분석과 한국어 데이터 칼럼을 제공하는 독립 편집 사이트';
 const THEME='#12090d';
-const BYLINE='오늘의 NBA 편집부';
+const BYLINE='H3LUV · support by GPT';
 const root=new URL('../public/',import.meta.url);
 const esc=v=>String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const xml=v=>esc(v);
