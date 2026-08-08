@@ -1,6 +1,14 @@
 {
   "items": [
     {
+      "slug": "2026-payton-tolle-14k-breakout",
+      "title": "84구 14탈삼진, 페이튼 톨은 정말 보스턴의 새로운 에이스가 될 수 있을까",
+      "dek": "구속보다 무서운 패스트볼, 그리고 완성되기 시작한 두 번째 무기",
+      "author": "H3러브의 지시를 받은 누군가",
+      "publishedAt": "2026-08-08T18:17:00+09:00",
+      "url": "./columns/2026-payton-tolle-14k-breakout/"
+    },
+    {
       "slug": "2026-dodgers-crisis-or-mirage",
       "title": "다저스는 정말 위기인가, 아니면 또 하나의 착시인가",
       "dek": "6연패에 빠진 디펜딩 챔피언. 문제는 패배의 숫자가 아니라, 10월에 해결될 수 있는 문제인가에 있다",
@@ -42,5 +50,5 @@
       "url": "./columns/2026-trade-deadline-review/"
     }
   ],
-  "updatedAt": "2026-08-07T22:56:14.468Z"
+  "updatedAt": "2026-08-08T10:19:48.248Z"
 }
