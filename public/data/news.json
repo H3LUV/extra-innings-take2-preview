@@ -15,24 +15,24 @@
       "sourceWordCount": 912,
       "translationType": "full",
       "pipelineVersion": "reader-v6",
-      "translatedAt": "2026-08-08T09:53:24.684Z"
+      "translatedAt": "2026-08-08T10:21:56.669Z"
     },
     {
       "id": "nba-6bd5d886cdac",
       "articleFile": "./data/articles/nba-6bd5d886cdac.json",
       "title": "‘It doesn’t get any better than this.’ Tracy McGrady revives ABCD Camp",
-      "titleKo": "'이보다 더 좋을 수는 없습니다.' Tracy McGrady가 ABCD 캠프를 부활시켰습니다.",
+      "titleKo": "'이보다 더 좋을 수는 없습니다.' 트레이시 맥그레이디(Tracy McGrady)가 ABCD 캠프를 부활시켰습니다.",
       "link": "https://www.nba.com/news/it-doesnt-get-any-better-than-this-tracy-mcgrady-revives-legendary-abcd-camp",
       "pubDate": "2026-08-03T17:15:11Z",
       "source": "NBA.com",
       "category": "미국 현지 읽을거리",
-      "readingMinutes": 4,
+      "readingMinutes": 5,
       "bodyVerified": true,
-      "bodyChars": 3014,
-      "sourceWordCount": 983,
+      "bodyChars": 3097,
+      "sourceWordCount": 1003,
       "translationType": "full",
       "pipelineVersion": "reader-v6",
-      "translatedAt": "2026-08-08T09:53:46.917Z"
+      "translatedAt": "2026-08-08T10:22:18.088Z"
     },
     {
       "id": "nba-6609172bc3cd",
@@ -45,11 +45,11 @@
       "category": "미국 현지 읽을거리",
       "readingMinutes": 24,
       "bodyVerified": true,
-      "bodyChars": 18174,
+      "bodyChars": 18190,
       "sourceWordCount": 5292,
       "translationType": "full",
       "pipelineVersion": "reader-v6",
-      "translatedAt": "2026-08-08T09:53:33.508Z"
+      "translatedAt": "2026-08-08T10:22:05.610Z"
     },
     {
       "id": "nba-ac7ffb9c65ef",
@@ -62,11 +62,11 @@
       "category": "미국 현지 읽을거리",
       "readingMinutes": 24,
       "bodyVerified": true,
-      "bodyChars": 18376,
+      "bodyChars": 18358,
       "sourceWordCount": 5344,
       "translationType": "full",
       "pipelineVersion": "reader-v6",
-      "translatedAt": "2026-08-08T09:53:42.862Z"
+      "translatedAt": "2026-08-08T10:22:14.792Z"
     }
   ],
   "message": "NBA.com의 최신 일반 기사 중 제목과 본문 전체 자동 번역이 완료된 기사만 제공합니다.",
@@ -74,5 +74,5 @@
   "translationPolicy": "newest_valid_article_full_translation_keep_previous_on_failure",
   "pipelineVersion": "reader-v6",
   "selectedCount": 4,
-  "updatedAt": "2026-08-08T09:53:46.918Z"
+  "updatedAt": "2026-08-08T10:22:18.089Z"
 }
