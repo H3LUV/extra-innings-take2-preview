@@ -1,4 +1,4 @@
-# Today MLB clean full-article translation pipeline v11 - deploy Payton Tolle column
+# Today MLB clean full-article translation pipeline v12 - deploy Payton Tolle column with success marker
 name: Select four Today MLB reading items
 
 on:
@@ -58,3 +58,12 @@ jobs:
           accountId: 135ede9cb7c0a586c4facd63f5810921
           command: pages deploy public --project-name=today-mlb --branch=today-mlb-cloudflare
           gitHubToken: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Record successful deployment
+        run: |
+          node -e "const fs=require('fs');fs.writeFileSync('public/data/deployment.json',JSON.stringify({project:'today-mlb',branch:'today-mlb-cloudflare',status:'success',deployedAt:new Date().toISOString()},null,2))"
+          git config user.name "today-mlb-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add public/data/deployment.json
+          git commit -m "Record Today MLB deployment" || true
+          git push origin HEAD:today-mlb-cloudflare
