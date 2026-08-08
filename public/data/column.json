@@ -21,7 +21,7 @@
       "id": 669065,
       "name": "Kyle Stowers",
       "team": "Miami Marlins",
-      "seasonPa": 391,
+      "seasonPa": 395,
       "recentPa": 51,
       "previousPa": 37,
       "recentAvg": 0.318,
@@ -63,7 +63,7 @@
       "id": 680776,
       "name": "Jarren Duran",
       "team": "Boston Red Sox",
-      "seasonPa": 460,
+      "seasonPa": 463,
       "recentPa": 50,
       "previousPa": 38,
       "recentAvg": 0.304,
@@ -81,6 +81,6 @@
     "previousStart": "2026-07-12",
     "previousEnd": "2026-07-25"
   },
-  "updatedAt": "2026-08-08T15:37:05.473Z",
+  "updatedAt": "2026-08-08T22:20:52.739Z",
   "source": "MLB Stats API"
 }
