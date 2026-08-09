@@ -1,4 +1,4 @@
-# Today NBA hourly update with MLB-style Korean full article translations - clean reader v10 - redeploy full approved Walker Kessler column - trigger 2026-08-08
+# Today NBA hourly update with MLB-style Korean full article translations - clean reader v11 - deploy Cade Cunningham Pistons rebuild column - trigger 2026-08-09
 name: Update and deploy Today NBA
 
 on:
