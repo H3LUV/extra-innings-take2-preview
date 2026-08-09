@@ -15,24 +15,24 @@
       "sourceWordCount": 912,
       "translationType": "full",
       "pipelineVersion": "reader-v6",
-      "translatedAt": "2026-08-09T21:50:06.732Z"
+      "translatedAt": "2026-08-09T22:52:58.020Z"
     },
     {
-      "id": "nba-6bd5d886cdac",
-      "articleFile": "./data/articles/nba-6bd5d886cdac.json",
-      "title": "‘It doesn’t get any better than this.’ Tracy McGrady revives ABCD Camp",
-      "titleKo": "'이보다 더 좋을 수는 없습니다.' 트레이시 맥그레이디(Tracy McGrady)가 ABCD 캠프를 부활시켰습니다.",
-      "link": "https://www.nba.com/news/it-doesnt-get-any-better-than-this-tracy-mcgrady-revives-legendary-abcd-camp",
-      "pubDate": "2026-08-03T17:15:11Z",
+      "id": "nba-ecf98669b538",
+      "articleFile": "./data/articles/nba-ecf98669b538.json",
+      "title": "Dillon Brooks, Suns agree on 3-year extension",
+      "titleKo": "딜런 브룩스, 선즈와 3년 연장 합의",
+      "link": "https://www.nba.com/news/dillon-brooks-suns-extension",
+      "pubDate": "2026-08-06T01:52:46Z",
       "source": "NBA.com",
       "category": "미국 현지 읽을거리",
-      "readingMinutes": 5,
+      "readingMinutes": 4,
       "bodyVerified": true,
-      "bodyChars": 3107,
-      "sourceWordCount": 1003,
+      "bodyChars": 1025,
+      "sourceWordCount": 292,
       "translationType": "full",
       "pipelineVersion": "reader-v6",
-      "translatedAt": "2026-08-09T21:50:28.319Z"
+      "translatedAt": "2026-08-09T22:53:17.396Z"
     },
     {
       "id": "nba-6609172bc3cd",
@@ -45,11 +45,11 @@
       "category": "미국 현지 읽을거리",
       "readingMinutes": 24,
       "bodyVerified": true,
-      "bodyChars": 18157,
+      "bodyChars": 18192,
       "sourceWordCount": 5292,
       "translationType": "full",
       "pipelineVersion": "reader-v6",
-      "translatedAt": "2026-08-09T21:50:15.943Z"
+      "translatedAt": "2026-08-09T22:53:07.069Z"
     },
     {
       "id": "nba-ac7ffb9c65ef",
@@ -62,11 +62,11 @@
       "category": "미국 현지 읽을거리",
       "readingMinutes": 24,
       "bodyVerified": true,
-      "bodyChars": 18373,
+      "bodyChars": 18367,
       "sourceWordCount": 5344,
       "translationType": "full",
       "pipelineVersion": "reader-v6",
-      "translatedAt": "2026-08-09T21:50:25.799Z"
+      "translatedAt": "2026-08-09T22:53:16.561Z"
     }
   ],
   "message": "NBA.com의 최신 일반 기사 중 제목과 본문 전체 자동 번역이 완료된 기사만 제공합니다.",
@@ -74,5 +74,5 @@
   "translationPolicy": "newest_valid_article_full_translation_keep_previous_on_failure",
   "pipelineVersion": "reader-v6",
   "selectedCount": 4,
-  "updatedAt": "2026-08-09T21:50:28.320Z"
+  "updatedAt": "2026-08-09T22:53:17.397Z"
 }
