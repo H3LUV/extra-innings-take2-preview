@@ -1,6 +1,14 @@
 {
   "items": [
     {
+      "slug": "2026-gerrit-cole-new-version-ace",
+      "title": "게릿 콜은 돌아온 것이 아니다",
+      "dek": "35세의 에이스는 이제 다른 방식으로 이기기 시작했다",
+      "author": "H3러브의 지시를 받은 누군가",
+      "publishedAt": "2026-08-09T18:05:00+09:00",
+      "url": "./columns/2026-gerrit-cole-new-version-ace/"
+    },
+    {
       "slug": "2026-payton-tolle-14k-breakout",
       "title": "84구 14탈삼진, 페이튼 톨은 정말 보스턴의 새로운 에이스가 될 수 있을까",
       "dek": "구속보다 무서운 패스트볼, 그리고 완성되기 시작한 두 번째 무기",
@@ -50,5 +58,5 @@
       "url": "./columns/2026-trade-deadline-review/"
     }
   ],
-  "updatedAt": "2026-08-08T22:48:33.232Z"
+  "updatedAt": "2026-08-09T09:10:29.429Z"
 }
