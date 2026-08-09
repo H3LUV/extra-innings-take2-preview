@@ -15,24 +15,24 @@
       "sourceWordCount": 912,
       "translationType": "full",
       "pipelineVersion": "reader-v6",
-      "translatedAt": "2026-08-09T09:03:21.466Z"
+      "translatedAt": "2026-08-09T09:45:44.037Z"
     },
     {
       "id": "nba-6bd5d886cdac",
       "articleFile": "./data/articles/nba-6bd5d886cdac.json",
       "title": "‘It doesn’t get any better than this.’ Tracy McGrady revives ABCD Camp",
-      "titleKo": "'이보다 더 좋을 수는 없습니다.' 트레이시 맥그레이디(Tracy McGrady)가 ABCD 캠프를 부활시켰습니다.",
+      "titleKo": "'이보다 더 좋을 수는 없습니다.' Tracy McGrady가 ABCD 캠프를 부활시켰습니다.",
       "link": "https://www.nba.com/news/it-doesnt-get-any-better-than-this-tracy-mcgrady-revives-legendary-abcd-camp",
       "pubDate": "2026-08-03T17:15:11Z",
       "source": "NBA.com",
       "category": "미국 현지 읽을거리",
       "readingMinutes": 5,
       "bodyVerified": true,
-      "bodyChars": 3097,
+      "bodyChars": 3096,
       "sourceWordCount": 1003,
       "translationType": "full",
       "pipelineVersion": "reader-v6",
-      "translatedAt": "2026-08-09T09:03:42.477Z"
+      "translatedAt": "2026-08-09T09:46:04.799Z"
     },
     {
       "id": "nba-6609172bc3cd",
@@ -45,11 +45,11 @@
       "category": "미국 현지 읽을거리",
       "readingMinutes": 24,
       "bodyVerified": true,
-      "bodyChars": 18190,
+      "bodyChars": 18173,
       "sourceWordCount": 5292,
       "translationType": "full",
       "pipelineVersion": "reader-v6",
-      "translatedAt": "2026-08-09T09:03:30.445Z"
+      "translatedAt": "2026-08-09T09:45:52.962Z"
     },
     {
       "id": "nba-ac7ffb9c65ef",
@@ -62,11 +62,11 @@
       "category": "미국 현지 읽을거리",
       "readingMinutes": 24,
       "bodyVerified": true,
-      "bodyChars": 18358,
+      "bodyChars": 18376,
       "sourceWordCount": 5344,
       "translationType": "full",
       "pipelineVersion": "reader-v6",
-      "translatedAt": "2026-08-09T09:03:40.008Z"
+      "translatedAt": "2026-08-09T09:46:02.366Z"
     }
   ],
   "message": "NBA.com의 최신 일반 기사 중 제목과 본문 전체 자동 번역이 완료된 기사만 제공합니다.",
@@ -74,5 +74,5 @@
   "translationPolicy": "newest_valid_article_full_translation_keep_previous_on_failure",
   "pipelineVersion": "reader-v6",
   "selectedCount": 4,
-  "updatedAt": "2026-08-09T09:03:42.478Z"
+  "updatedAt": "2026-08-09T09:46:04.799Z"
 }

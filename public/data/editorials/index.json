@@ -1,6 +1,14 @@
 {
   "items": [
     {
+      "slug": "2026-pistons-rebuild-cade-cunningham",
+      "title": "14승짜리 팀은 어떻게 다시 살아났나",
+      "dek": "케이드 커닝햄과 디트로이트가 보여주는 리빌딩의 진짜 마지막 단계",
+      "author": "H3러브의 지시를 받은 누군가",
+      "publishedAt": "2026-08-09T18:00:00+09:00",
+      "url": "./columns/2026-pistons-rebuild-cade-cunningham/"
+    },
+    {
       "slug": "2026-nba-expansion-seattle-las-vegas",
       "title": "NBA 32개 팀 시대가 온다",
       "dek": "시애틀과 라스베이거스, 두 도시가 바꿀 리그의 지도",
@@ -49,5 +57,5 @@
       "url": "./columns/2026-nba-offseason-winners-losers/"
     }
   ],
-  "updatedAt": "2026-08-09T09:00:30.195Z"
+  "updatedAt": "2026-08-09T09:44:31.770Z"
 }
