@@ -1,7 +1,21 @@
 {
   "items": [
     {
-      "id": "signing-2026-08-06-0",
+      "id": "signing-2026-08-08-0",
+      "type": "Signing",
+      "typeKo": "계약",
+      "date": "2026-08-08T00:00:00",
+      "dateKo": "8월 8일",
+      "title": "계약 · 8월 8일",
+      "descriptionKo": "피닉스 선스가 가드 Dillon Brooks와 베테랑 연장계약을 체결했습니다.",
+      "descriptions": [
+        "Phoenix Suns re-signed guard Dillon Brooks to a Veteran Extension."
+      ],
+      "source": "NBA.com",
+      "sourceLink": "https://www.nba.com/players/transactions"
+    },
+    {
+      "id": "signing-2026-08-06-1",
       "type": "Signing",
       "typeKo": "계약",
       "date": "2026-08-06T00:00:00",
@@ -15,7 +29,7 @@
       "sourceLink": "https://www.nba.com/players/transactions"
     },
     {
-      "id": "waive-2026-08-06-1",
+      "id": "waive-2026-08-06-2",
       "type": "Waive",
       "typeKo": "방출",
       "date": "2026-08-06T00:00:00",
@@ -29,7 +43,7 @@
       "sourceLink": "https://www.nba.com/players/transactions"
     },
     {
-      "id": "signing-2026-08-05-2",
+      "id": "signing-2026-08-05-3",
       "type": "Signing",
       "typeKo": "계약",
       "date": "2026-08-05T00:00:00",
@@ -43,7 +57,7 @@
       "sourceLink": "https://www.nba.com/players/transactions"
     },
     {
-      "id": "signing-2026-08-05-3",
+      "id": "signing-2026-08-05-4",
       "type": "Signing",
       "typeKo": "계약",
       "date": "2026-08-05T00:00:00",
@@ -57,7 +71,7 @@
       "sourceLink": "https://www.nba.com/players/transactions"
     },
     {
-      "id": "waive-2026-08-05-4",
+      "id": "waive-2026-08-05-5",
       "type": "Waive",
       "typeKo": "방출",
       "date": "2026-08-05T00:00:00",
@@ -71,7 +85,7 @@
       "sourceLink": "https://www.nba.com/players/transactions"
     },
     {
-      "id": "signing-2026-08-04-5",
+      "id": "signing-2026-08-04-6",
       "type": "Signing",
       "typeKo": "계약",
       "date": "2026-08-04T00:00:00",
@@ -85,7 +99,7 @@
       "sourceLink": "https://www.nba.com/players/transactions"
     },
     {
-      "id": "signing-2026-08-02-6",
+      "id": "signing-2026-08-02-7",
       "type": "Signing",
       "typeKo": "계약",
       "date": "2026-08-02T00:00:00",
@@ -99,7 +113,7 @@
       "sourceLink": "https://www.nba.com/players/transactions"
     },
     {
-      "id": "signing-2026-08-01-7",
+      "id": "signing-2026-08-01-8",
       "type": "Signing",
       "typeKo": "계약",
       "date": "2026-08-01T00:00:00",
@@ -113,7 +127,7 @@
       "sourceLink": "https://www.nba.com/players/transactions"
     },
     {
-      "id": "signing-2026-07-31-8",
+      "id": "signing-2026-07-31-9",
       "type": "Signing",
       "typeKo": "계약",
       "date": "2026-07-31T00:00:00",
@@ -127,7 +141,7 @@
       "sourceLink": "https://www.nba.com/players/transactions"
     },
     {
-      "id": "signing-2026-07-31-9",
+      "id": "signing-2026-07-31-10",
       "type": "Signing",
       "typeKo": "계약",
       "date": "2026-07-31T00:00:00",
@@ -141,7 +155,7 @@
       "sourceLink": "https://www.nba.com/players/transactions"
     },
     {
-      "id": "signing-2026-07-31-10",
+      "id": "signing-2026-07-31-11",
       "type": "Signing",
       "typeKo": "계약",
       "date": "2026-07-31T00:00:00",
@@ -155,7 +169,7 @@
       "sourceLink": "https://www.nba.com/players/transactions"
     },
     {
-      "id": "signing-2026-07-31-11",
+      "id": "signing-2026-07-31-12",
       "type": "Signing",
       "typeKo": "계약",
       "date": "2026-07-31T00:00:00",
@@ -169,7 +183,7 @@
       "sourceLink": "https://www.nba.com/players/transactions"
     },
     {
-      "id": "waive-2026-07-30-12",
+      "id": "waive-2026-07-30-13",
       "type": "Waive",
       "typeKo": "방출",
       "date": "2026-07-30T00:00:00",
@@ -183,7 +197,7 @@
       "sourceLink": "https://www.nba.com/players/transactions"
     },
     {
-      "id": "signing-2026-07-29-13",
+      "id": "signing-2026-07-29-14",
       "type": "Signing",
       "typeKo": "계약",
       "date": "2026-07-29T00:00:00",
@@ -197,7 +211,7 @@
       "sourceLink": "https://www.nba.com/players/transactions"
     },
     {
-      "id": "signing-2026-07-29-14",
+      "id": "signing-2026-07-29-15",
       "type": "Signing",
       "typeKo": "계약",
       "date": "2026-07-29T00:00:00",
@@ -211,7 +225,7 @@
       "sourceLink": "https://www.nba.com/players/transactions"
     },
     {
-      "id": "trade-2026-07-28-15",
+      "id": "trade-2026-07-28-16",
       "type": "Trade",
       "typeKo": "트레이드",
       "date": "2026-07-28T00:00:00",
@@ -226,7 +240,7 @@
       "sourceLink": "https://www.nba.com/players/transactions"
     },
     {
-      "id": "signing-2026-07-27-16",
+      "id": "signing-2026-07-27-17",
       "type": "Signing",
       "typeKo": "계약",
       "date": "2026-07-27T00:00:00",
@@ -238,23 +252,9 @@
       ],
       "source": "NBA.com",
       "sourceLink": "https://www.nba.com/players/transactions"
-    },
-    {
-      "id": "waive-2026-07-27-17",
-      "type": "Waive",
-      "typeKo": "방출",
-      "date": "2026-07-27T00:00:00",
-      "dateKo": "7월 27일",
-      "title": "방출 · 7월 27일",
-      "descriptionKo": "새크라멘토 킹스가 가드 Isaiah Stevens를 방출했습니다.",
-      "descriptions": [
-        "Sacramento Kings waived guard Isaiah Stevens."
-      ],
-      "source": "NBA.com",
-      "sourceLink": "https://www.nba.com/players/transactions"
     }
   ],
   "message": "",
   "source": "NBA 공식 Player Movement 데이터",
-  "updatedAt": "2026-08-08T23:42:35.121Z"
+  "updatedAt": "2026-08-09T02:26:45.902Z"
 }
