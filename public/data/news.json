@@ -1,6 +1,23 @@
 {
   "items": [
     {
+      "id": "nba-129d3d83adb3",
+      "articleFile": "./data/articles/nba-129d3d83adb3.json",
+      "title": "Don Nelson was an NBA original, one who experienced the game from all angles",
+      "titleKo": "돈 넬슨(Don Nelson)은 NBA 오리지널 선수였으며 모든 각도에서 게임을 경험한 사람이었습니다.",
+      "link": "https://www.nba.com/news/don-nelson-tribute",
+      "pubDate": "2026-08-09T23:37:53Z",
+      "source": "NBA.com",
+      "category": "미국 현지 읽을거리",
+      "readingMinutes": 7,
+      "bodyVerified": true,
+      "bodyChars": 5253,
+      "sourceWordCount": 1501,
+      "translationType": "full",
+      "pipelineVersion": "reader-v6",
+      "translatedAt": "2026-08-10T02:38:23.376Z"
+    },
+    {
       "id": "nba-eacb39f09338",
       "articleFile": "./data/articles/nba-eacb39f09338.json",
       "title": "Don Nelson, second-winningest NBA coach who won 5 titles as a Celtics player, dies at 86",
@@ -11,11 +28,11 @@
       "category": "미국 현지 읽을거리",
       "readingMinutes": 5,
       "bodyVerified": true,
-      "bodyChars": 3812,
-      "sourceWordCount": 1142,
+      "bodyChars": 3820,
+      "sourceWordCount": 1145,
       "translationType": "full",
       "pipelineVersion": "reader-v6",
-      "translatedAt": "2026-08-09T23:49:26.027Z"
+      "translatedAt": "2026-08-10T02:38:20.315Z"
     },
     {
       "id": "nba-ece88e34885f",
@@ -32,7 +49,7 @@
       "sourceWordCount": 295,
       "translationType": "full",
       "pipelineVersion": "reader-v6",
-      "translatedAt": "2026-08-09T23:49:28.171Z"
+      "translatedAt": "2026-08-10T02:38:25.791Z"
     },
     {
       "id": "nba-eadc2eadd784",
@@ -49,24 +66,7 @@
       "sourceWordCount": 585,
       "translationType": "full",
       "pipelineVersion": "reader-v6",
-      "translatedAt": "2026-08-09T23:49:27.370Z"
-    },
-    {
-      "id": "nba-5204f251941a",
-      "articleFile": "./data/articles/nba-5204f251941a.json",
-      "title": "Jaylen Brown processing how he became a former Celtic, but ready to win with 76ers",
-      "titleKo": "Jaylen Brown은 어떻게 전 셀틱 선수가 되었지만 76ers에서 우승할 준비가 되었는지 설명합니다.",
-      "link": "https://www.nba.com/news/jaylen-brown-76ers-intro",
-      "pubDate": "2026-08-06T22:53:31Z",
-      "source": "NBA.com",
-      "category": "미국 현지 읽을거리",
-      "readingMinutes": 4,
-      "bodyVerified": true,
-      "bodyChars": 2921,
-      "sourceWordCount": 912,
-      "translationType": "full",
-      "pipelineVersion": "reader-v6",
-      "translatedAt": "2026-08-09T23:49:30.106Z"
+      "translatedAt": "2026-08-10T02:38:24.821Z"
     }
   ],
   "message": "NBA.com의 최신 일반 기사 중 제목과 본문 전체 자동 번역이 완료된 기사만 제공합니다.",
@@ -74,5 +74,5 @@
   "translationPolicy": "newest_valid_article_full_translation_keep_previous_on_failure",
   "pipelineVersion": "reader-v6",
   "selectedCount": 4,
-  "updatedAt": "2026-08-09T23:49:30.107Z"
+  "updatedAt": "2026-08-10T02:38:25.791Z"
 }
