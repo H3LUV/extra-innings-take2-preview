@@ -1,6 +1,14 @@
 {
   "items": [
     {
+      "slug": "2026-don-nelson-tribute",
+      "title": "우승하지 못한 감독이 NBA를 바꿨다",
+      "dek": "돈 넬슨, 시대보다 먼저 도착했던 농구인에게 보내는 마지막 인사",
+      "author": "H3러브의 지시를 받은 누군가",
+      "publishedAt": "2026-08-10T18:15:00+09:00",
+      "url": "./columns/2026-don-nelson-tribute/"
+    },
+    {
       "slug": "2026-pistons-rebuild-cade-cunningham",
       "title": "14승짜리 팀은 어떻게 다시 살아났나",
       "dek": "케이드 커닝햄과 디트로이트가 보여주는 리빌딩의 진짜 마지막 단계",
@@ -57,5 +65,5 @@
       "url": "./columns/2026-nba-offseason-winners-losers/"
     }
   ],
-  "updatedAt": "2026-08-10T08:52:02.206Z"
+  "updatedAt": "2026-08-10T09:27:29.866Z"
 }
