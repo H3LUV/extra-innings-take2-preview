@@ -1,6 +1,23 @@
 {
   "items": [
     {
+      "id": "mlb-196dafbabc27",
+      "articleFile": "./data/articles/mlb-196dafbabc27.json",
+      "title": "Padres sign outfielder Austin Hays (source)",
+      "titleKo": "파드레스가 외야수 오스틴 헤이스를 영입했습니다(출처)",
+      "link": "https://www.mlb.com/news/austin-hays-padres-contract",
+      "pubDate": "2026-08-09T19:08:55.792Z",
+      "source": "MLB.com",
+      "category": "미국 현지 읽을거리",
+      "readingMinutes": 7,
+      "bodyVerified": true,
+      "bodyChars": 6371,
+      "sourceWordCount": 1608,
+      "translationType": "full",
+      "pipelineVersion": "reader-v6",
+      "translatedAt": "2026-08-09T22:51:52.239Z"
+    },
+    {
       "id": "mlb-91031de35b67",
       "articleFile": "./data/articles/mlb-91031de35b67.json",
       "title": "E-Rod's 115-pitch gem helps D-backs secure season series vs. LA for 1st time since '18",
@@ -35,38 +52,21 @@
       "translatedAt": "2026-08-09T22:51:43.784Z"
     },
     {
-      "id": "mlb-196dafbabc27",
-      "articleFile": "./data/articles/mlb-196dafbabc27.json",
-      "title": "Padres sign outfielder Austin Hays (source)",
-      "titleKo": "파드레스가 외야수 오스틴 헤이스를 영입했습니다(출처)",
-      "link": "https://www.mlb.com/news/austin-hays-padres-contract",
-      "pubDate": "2026-08-09T19:08:55.792Z",
-      "source": "MLB.com",
+      "id": "mlb-385d8c33642c",
+      "articleFile": "./data/articles/mlb-385d8c33642c.json",
+      "title": "Sunday Notes: Davis Martin Had a First Inning to Forget at Fenway Park",
+      "titleKo": "Sunday Notes: 데이비스 마틴(Davis Martin)이 펜웨이 파크에서 첫 이닝을 잊었습니다.",
+      "link": "https://blogs.fangraphs.com/sunday-notes-davis-martin-had-a-first-inning-to-forget-at-fenway-park/",
+      "pubDate": "2026-08-09T11:38:01+00:00",
+      "source": "FanGraphs",
       "category": "미국 현지 읽을거리",
-      "readingMinutes": 7,
+      "readingMinutes": 14,
       "bodyVerified": true,
-      "bodyChars": 6371,
-      "sourceWordCount": 1608,
+      "bodyChars": 10387,
+      "sourceWordCount": 3161,
       "translationType": "full",
       "pipelineVersion": "reader-v6",
-      "translatedAt": "2026-08-09T22:51:52.239Z"
-    },
-    {
-      "id": "mlb-2817402efebd",
-      "articleFile": "./data/articles/mlb-2817402efebd.json",
-      "title": "Astros, Padres clash in matchup of playoff contenders on Sunday Night Baseball (NBC, 8:20 ET)",
-      "titleKo": "애스트로스와 파드리스가 Sunday Night Baseball의 플레이오프 경쟁자 매치업에서 충돌합니다(NBC, 8:20 ET).",
-      "link": "https://www.mlb.com/news/sunday-night-baseball-on-peacock-nbc-for-2026-mlb-season",
-      "pubDate": "2026-08-09T22:25:00Z",
-      "source": "MLB.com",
-      "category": "미국 현지 읽을거리",
-      "readingMinutes": 4,
-      "bodyVerified": true,
-      "bodyChars": 3712,
-      "sourceWordCount": 961,
-      "translationType": "full",
-      "pipelineVersion": "reader-v6",
-      "translatedAt": "2026-08-09T22:52:07.532Z"
+      "translatedAt": "2026-08-10T09:16:39.479Z"
     }
   ],
   "message": "미국 현지 기사 중 광고·회원가입 문구를 제거하고 제목과 본문 전체 자동 번역이 완료된 기사만 제공합니다.",
@@ -74,5 +74,5 @@
   "translationPolicy": "clean_full_translation_keep_previous_on_failure",
   "pipelineVersion": "reader-v6",
   "selectedCount": 4,
-  "updatedAt": "2026-08-09T22:52:07.533Z"
+  "updatedAt": "2026-08-10T09:16:39.480Z"
 }

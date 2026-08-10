@@ -1,6 +1,14 @@
 {
   "items": [
     {
+      "slug": "2026-george-lombard-jr-yankees-shortstop-heir",
+      "title": "또 지터의 후계자인가",
+      "dek": "앤서니 볼피의 실패 뒤 등장한 조지 롬바드 주니어는 진짜일까",
+      "author": "H3러브의 지시를 받은 누군가",
+      "publishedAt": "2026-08-10T18:12:00+09:00",
+      "url": "./columns/2026-george-lombard-jr-yankees-shortstop-heir/"
+    },
+    {
       "slug": "2026-gerrit-cole-new-version-ace",
       "title": "게릿 콜은 돌아온 것이 아니다",
       "dek": "35세의 에이스는 이제 다른 방식으로 이기기 시작했다",
@@ -58,5 +66,5 @@
       "url": "./columns/2026-trade-deadline-review/"
     }
   ],
-  "updatedAt": "2026-08-09T22:51:11.396Z"
+  "updatedAt": "2026-08-10T09:15:58.659Z"
 }
