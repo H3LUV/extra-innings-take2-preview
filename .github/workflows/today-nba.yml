@@ -8,7 +8,7 @@ on:
     paths:
       - .github/workflows/today-nba.yml
   schedule:
-    - cron: '28 * * * *'
+    - cron: '17 * * * *'
 
 permissions:
   contents: write
