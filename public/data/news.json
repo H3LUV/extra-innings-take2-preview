@@ -4,18 +4,18 @@
       "id": "nba-129d3d83adb3",
       "articleFile": "./data/articles/nba-129d3d83adb3.json",
       "title": "Don Nelson was an NBA original, one who experienced the game from all angles",
-      "titleKo": "돈 넬슨(Don Nelson)은 NBA 오리지널 선수였으며 모든 각도에서 게임을 경험한 사람이었습니다.",
+      "titleKo": "Don Nelson은 NBA의 오리지널 선수였으며 모든 각도에서 게임을 경험한 사람이었습니다.",
       "link": "https://www.nba.com/news/don-nelson-tribute",
       "pubDate": "2026-08-09T23:37:53Z",
       "source": "NBA.com",
       "category": "미국 현지 읽을거리",
       "readingMinutes": 7,
       "bodyVerified": true,
-      "bodyChars": 5242,
+      "bodyChars": 5234,
       "sourceWordCount": 1501,
       "translationType": "full",
       "pipelineVersion": "reader-v6",
-      "translatedAt": "2026-08-10T15:20:52.728Z"
+      "translatedAt": "2026-08-10T16:14:14.504Z"
     },
     {
       "id": "nba-eacb39f09338",
@@ -28,11 +28,11 @@
       "category": "미국 현지 읽을거리",
       "readingMinutes": 5,
       "bodyVerified": true,
-      "bodyChars": 3824,
+      "bodyChars": 3827,
       "sourceWordCount": 1145,
       "translationType": "full",
       "pipelineVersion": "reader-v6",
-      "translatedAt": "2026-08-10T15:20:49.714Z"
+      "translatedAt": "2026-08-10T16:14:11.599Z"
     },
     {
       "id": "nba-ece88e34885f",
@@ -49,7 +49,7 @@
       "sourceWordCount": 295,
       "translationType": "full",
       "pipelineVersion": "reader-v6",
-      "translatedAt": "2026-08-10T15:20:55.138Z"
+      "translatedAt": "2026-08-10T16:14:17.024Z"
     },
     {
       "id": "nba-eadc2eadd784",
@@ -62,11 +62,11 @@
       "category": "미국 현지 읽을거리",
       "readingMinutes": 4,
       "bodyVerified": true,
-      "bodyChars": 1859,
+      "bodyChars": 1851,
       "sourceWordCount": 585,
       "translationType": "full",
       "pipelineVersion": "reader-v6",
-      "translatedAt": "2026-08-10T15:20:54.145Z"
+      "translatedAt": "2026-08-10T16:14:16.159Z"
     }
   ],
   "message": "NBA.com의 최신 일반 기사 중 제목과 본문 전체 자동 번역이 완료된 기사만 제공합니다.",
@@ -74,5 +74,5 @@
   "translationPolicy": "newest_valid_article_full_translation_keep_previous_on_failure",
   "pipelineVersion": "reader-v6",
   "selectedCount": 4,
-  "updatedAt": "2026-08-10T15:20:55.138Z"
+  "updatedAt": "2026-08-10T16:14:17.024Z"
 }
