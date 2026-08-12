@@ -1,6 +1,23 @@
 {
   "items": [
     {
+      "id": "nba-b5eebf4529e7",
+      "articleFile": "./data/articles/nba-b5eebf4529e7.json",
+      "title": "Russell Westbrook retires as one of the NBA's all-time great point guards",
+      "titleKo": "러셀 웨스트브룩이 NBA 역대 최고의 포인트 가드 중 한 명으로 은퇴했습니다.",
+      "link": "https://www.nba.com/news/russell-westbrook-retires-all-time-great",
+      "pubDate": "2026-08-12T22:28:38Z",
+      "source": "NBA.com",
+      "category": "미국 현지 읽을거리",
+      "readingMinutes": 4,
+      "bodyVerified": true,
+      "bodyChars": 3042,
+      "sourceWordCount": 863,
+      "translationType": "full",
+      "pipelineVersion": "reader-v6",
+      "translatedAt": "2026-08-12T23:04:45.891Z"
+    },
+    {
       "id": "nba-03efc67b7022",
       "articleFile": "./data/articles/nba-03efc67b7022.json",
       "title": "Russell Westbrook, former NBA MVP and 9-time All-Star, announces retirement after 18 seasons",
@@ -11,11 +28,11 @@
       "category": "미국 현지 읽을거리",
       "readingMinutes": 4,
       "bodyVerified": true,
-      "bodyChars": 1066,
-      "sourceWordCount": 312,
+      "bodyChars": 1062,
+      "sourceWordCount": 308,
       "translationType": "full",
       "pipelineVersion": "reader-v6",
-      "translatedAt": "2026-08-12T22:04:21.736Z"
+      "translatedAt": "2026-08-12T23:04:43.868Z"
     },
     {
       "id": "nba-e1700be40a8b",
@@ -26,30 +43,13 @@
       "pubDate": "2026-08-11T12:08:21Z",
       "source": "NBA.com",
       "category": "미국 현지 읽을거리",
-      "readingMinutes": 4,
+      "readingMinutes": 5,
       "bodyVerified": true,
-      "bodyChars": 3603,
-      "sourceWordCount": 964,
+      "bodyChars": 3708,
+      "sourceWordCount": 990,
       "translationType": "full",
       "pipelineVersion": "reader-v6",
-      "translatedAt": "2026-08-12T22:04:24.461Z"
-    },
-    {
-      "id": "nba-129d3d83adb3",
-      "articleFile": "./data/articles/nba-129d3d83adb3.json",
-      "title": "Don Nelson was an NBA original, one who experienced the game from all angles",
-      "titleKo": "돈 넬슨(Don Nelson)은 NBA 오리지널 선수였으며 모든 각도에서 게임을 경험한 사람이었습니다.",
-      "link": "https://www.nba.com/news/don-nelson-tribute",
-      "pubDate": "2026-08-09T23:37:53Z",
-      "source": "NBA.com",
-      "category": "미국 현지 읽을거리",
-      "readingMinutes": 7,
-      "bodyVerified": true,
-      "bodyChars": 5249,
-      "sourceWordCount": 1501,
-      "translationType": "full",
-      "pipelineVersion": "reader-v6",
-      "translatedAt": "2026-08-12T22:04:29.504Z"
+      "translatedAt": "2026-08-12T23:04:48.684Z"
     },
     {
       "id": "nba-eacb39f09338",
@@ -66,7 +66,7 @@
       "sourceWordCount": 1145,
       "translationType": "full",
       "pipelineVersion": "reader-v6",
-      "translatedAt": "2026-08-12T22:04:26.666Z"
+      "translatedAt": "2026-08-12T23:04:50.961Z"
     }
   ],
   "message": "NBA.com의 최신 일반 기사 중 제목과 본문 전체 자동 번역이 완료된 기사만 제공합니다.",
@@ -74,5 +74,5 @@
   "translationPolicy": "newest_valid_article_full_translation_keep_previous_on_failure",
   "pipelineVersion": "reader-v6",
   "selectedCount": 4,
-  "updatedAt": "2026-08-12T22:04:29.505Z"
+  "updatedAt": "2026-08-12T23:04:50.961Z"
 }
