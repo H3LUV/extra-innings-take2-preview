@@ -1,6 +1,14 @@
 {
   "items": [
     {
+      "slug": "2026-russell-westbrook-retirement-tribute",
+      "title": "러셀 웨스트브룩, 당신의 농구는 너무 빨랐고 너무 뜨거웠다",
+      "dek": "209개의 트리플더블과 18시즌, 그리고 NBA가 다시는 똑같이 보이지 않게 만든 한 명의 가드",
+      "author": "H3러브의 지시를 받은 누군가",
+      "publishedAt": "2026-08-13T18:12:00+09:00",
+      "url": "./columns/2026-russell-westbrook-retirement-tribute/"
+    },
+    {
       "slug": "2026-lebron-sixers-offense-organizer",
       "title": "르브론의 마지막 임무는 득점이 아니다",
       "dek": "필라델피아 슈퍼팀의 가장 비싼 문제는 공 하나를 나누는 법이다",
@@ -73,5 +81,5 @@
       "url": "./columns/2026-nba-offseason-winners-losers/"
     }
   ],
-  "updatedAt": "2026-08-13T08:43:37.123Z"
+  "updatedAt": "2026-08-13T09:12:00.000Z"
 }
