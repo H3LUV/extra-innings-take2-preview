@@ -1,7 +1,21 @@
 {
   "items": [
     {
-      "id": "signing-2026-08-12-0",
+      "id": "waive-2026-08-13-0",
+      "type": "Waive",
+      "typeKo": "방출",
+      "date": "2026-08-13T00:00:00",
+      "dateKo": "8월 13일",
+      "title": "방출 · 8월 13일",
+      "descriptionKo": "인디애나 페이서스가 가드 Ethan Thompson를 방출했습니다.",
+      "descriptions": [
+        "Indiana Pacers waived guard Ethan Thompson."
+      ],
+      "source": "NBA.com",
+      "sourceLink": "https://www.nba.com/players/transactions"
+    },
+    {
+      "id": "signing-2026-08-12-1",
       "type": "Signing",
       "typeKo": "계약",
       "date": "2026-08-12T00:00:00",
@@ -15,7 +29,7 @@
       "sourceLink": "https://www.nba.com/players/transactions"
     },
     {
-      "id": "waive-2026-08-12-1",
+      "id": "waive-2026-08-12-2",
       "type": "Waive",
       "typeKo": "방출",
       "date": "2026-08-12T00:00:00",
@@ -29,7 +43,7 @@
       "sourceLink": "https://www.nba.com/players/transactions"
     },
     {
-      "id": "signing-2026-08-08-2",
+      "id": "signing-2026-08-08-3",
       "type": "Signing",
       "typeKo": "계약",
       "date": "2026-08-08T00:00:00",
@@ -43,7 +57,7 @@
       "sourceLink": "https://www.nba.com/players/transactions"
     },
     {
-      "id": "signing-2026-08-06-3",
+      "id": "signing-2026-08-06-4",
       "type": "Signing",
       "typeKo": "계약",
       "date": "2026-08-06T00:00:00",
@@ -57,7 +71,7 @@
       "sourceLink": "https://www.nba.com/players/transactions"
     },
     {
-      "id": "waive-2026-08-06-4",
+      "id": "waive-2026-08-06-5",
       "type": "Waive",
       "typeKo": "방출",
       "date": "2026-08-06T00:00:00",
@@ -71,7 +85,7 @@
       "sourceLink": "https://www.nba.com/players/transactions"
     },
     {
-      "id": "signing-2026-08-05-5",
+      "id": "signing-2026-08-05-6",
       "type": "Signing",
       "typeKo": "계약",
       "date": "2026-08-05T00:00:00",
@@ -85,7 +99,7 @@
       "sourceLink": "https://www.nba.com/players/transactions"
     },
     {
-      "id": "signing-2026-08-05-6",
+      "id": "signing-2026-08-05-7",
       "type": "Signing",
       "typeKo": "계약",
       "date": "2026-08-05T00:00:00",
@@ -99,7 +113,7 @@
       "sourceLink": "https://www.nba.com/players/transactions"
     },
     {
-      "id": "waive-2026-08-05-7",
+      "id": "waive-2026-08-05-8",
       "type": "Waive",
       "typeKo": "방출",
       "date": "2026-08-05T00:00:00",
@@ -113,7 +127,7 @@
       "sourceLink": "https://www.nba.com/players/transactions"
     },
     {
-      "id": "signing-2026-08-04-8",
+      "id": "signing-2026-08-04-9",
       "type": "Signing",
       "typeKo": "계약",
       "date": "2026-08-04T00:00:00",
@@ -127,7 +141,7 @@
       "sourceLink": "https://www.nba.com/players/transactions"
     },
     {
-      "id": "signing-2026-08-02-9",
+      "id": "signing-2026-08-02-10",
       "type": "Signing",
       "typeKo": "계약",
       "date": "2026-08-02T00:00:00",
@@ -141,7 +155,7 @@
       "sourceLink": "https://www.nba.com/players/transactions"
     },
     {
-      "id": "signing-2026-08-01-10",
+      "id": "signing-2026-08-01-11",
       "type": "Signing",
       "typeKo": "계약",
       "date": "2026-08-01T00:00:00",
@@ -155,7 +169,7 @@
       "sourceLink": "https://www.nba.com/players/transactions"
     },
     {
-      "id": "signing-2026-07-31-11",
+      "id": "signing-2026-07-31-12",
       "type": "Signing",
       "typeKo": "계약",
       "date": "2026-07-31T00:00:00",
@@ -169,7 +183,7 @@
       "sourceLink": "https://www.nba.com/players/transactions"
     },
     {
-      "id": "signing-2026-07-31-12",
+      "id": "signing-2026-07-31-13",
       "type": "Signing",
       "typeKo": "계약",
       "date": "2026-07-31T00:00:00",
@@ -183,7 +197,7 @@
       "sourceLink": "https://www.nba.com/players/transactions"
     },
     {
-      "id": "signing-2026-07-31-13",
+      "id": "signing-2026-07-31-14",
       "type": "Signing",
       "typeKo": "계약",
       "date": "2026-07-31T00:00:00",
@@ -197,7 +211,7 @@
       "sourceLink": "https://www.nba.com/players/transactions"
     },
     {
-      "id": "signing-2026-07-31-14",
+      "id": "signing-2026-07-31-15",
       "type": "Signing",
       "typeKo": "계약",
       "date": "2026-07-31T00:00:00",
@@ -211,7 +225,7 @@
       "sourceLink": "https://www.nba.com/players/transactions"
     },
     {
-      "id": "waive-2026-07-30-15",
+      "id": "waive-2026-07-30-16",
       "type": "Waive",
       "typeKo": "방출",
       "date": "2026-07-30T00:00:00",
@@ -225,7 +239,7 @@
       "sourceLink": "https://www.nba.com/players/transactions"
     },
     {
-      "id": "signing-2026-07-29-16",
+      "id": "signing-2026-07-29-17",
       "type": "Signing",
       "typeKo": "계약",
       "date": "2026-07-29T00:00:00",
@@ -237,23 +251,9 @@
       ],
       "source": "NBA.com",
       "sourceLink": "https://www.nba.com/players/transactions"
-    },
-    {
-      "id": "signing-2026-07-29-17",
-      "type": "Signing",
-      "typeKo": "계약",
-      "date": "2026-07-29T00:00:00",
-      "dateKo": "7월 29일",
-      "title": "계약 · 7월 29일",
-      "descriptionKo": "멤피스 그리즐리스가 포워드 Karim Lopez와 루키 스케일 계약을 체결했습니다.",
-      "descriptions": [
-        "Memphis Grizzlies signed forward Karim Lopez to a Rookie Scale Contract."
-      ],
-      "source": "NBA.com",
-      "sourceLink": "https://www.nba.com/players/transactions"
     }
   ],
   "message": "",
   "source": "NBA 공식 Player Movement 데이터",
-  "updatedAt": "2026-08-13T21:03:46.189Z"
+  "updatedAt": "2026-08-13T22:03:19.027Z"
 }
