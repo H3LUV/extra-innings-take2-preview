@@ -1,16 +1,15 @@
-# Trigger separate column-board deployment 2026-08-04T15:08+09:00
-name: Deploy Today MLB to Cloudflare
+name: Deploy Today NBA to Cloudflare
 
 on:
   workflow_dispatch:
   push:
     branches:
-      - main
-      - today-mlb-cloudflare
+      - today-nba-cloudflare
     paths:
       - public/**
       - scripts/**
       - package.json
+      - wrangler.jsonc
       - .github/workflows/today-mlb-deploy.yml
 
 permissions:
@@ -18,7 +17,7 @@ permissions:
   deployments: write
 
 concurrency:
-  group: today-mlb-cloudflare-deploy
+  group: today-nba-cloudflare-deploy
   cancel-in-progress: true
 
 jobs:
@@ -29,12 +28,12 @@ jobs:
       - name: Check out production branch
         uses: actions/checkout@v4
         with:
-          ref: today-mlb-cloudflare
+          ref: today-nba-cloudflare
 
       - name: Deploy current public directory
         uses: cloudflare/wrangler-action@v3
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: 135ede9cb7c0a586c4facd63f5810921
-          command: pages deploy public --project-name=today-mlb --branch=today-mlb-cloudflare
+          command: pages deploy public --project-name=today-nba --branch=today-nba-cloudflare
           gitHubToken: ${{ secrets.GITHUB_TOKEN }}
