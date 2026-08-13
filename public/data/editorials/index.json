@@ -1,6 +1,14 @@
 {
   "items": [
     {
+      "slug": "2026-kevin-mcgonigle-zone-control",
+      "title": "21세 신인이 가장 노련한 타석을 만든다",
+      "dek": "케빈 맥고니글의 진짜 재능은 파워가 아니라 스트라이크존을 지배하는 능력이다",
+      "author": "H3러브의 지시를 받은 누군가",
+      "publishedAt": "2026-08-13T18:10:00+09:00",
+      "url": "./columns/2026-kevin-mcgonigle-zone-control/"
+    },
+    {
       "slug": "2026-abs-challenge-strategy",
       "title": "4,030번 뒤집혔다. ABS의 진짜 승부는 정확도가 아니다",
       "dek": "7,532번의 챌린지가 보여준 새 야구 — 성공률보다 중요한 것은 언제 위험을 감수하느냐다",
@@ -74,5 +82,5 @@
       "url": "./columns/2026-trade-deadline-review/"
     }
   ],
-  "updatedAt": "2026-08-12T23:02:32.860Z"
+  "updatedAt": "2026-08-13T09:10:00.000Z"
 }
