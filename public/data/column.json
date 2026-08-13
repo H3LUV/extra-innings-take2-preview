@@ -7,15 +7,15 @@
       "id": 663757,
       "name": "Trent Grisham",
       "team": "New York Yankees",
-      "seasonPa": 399,
-      "recentPa": 43,
+      "seasonPa": 403,
+      "recentPa": 47,
       "previousPa": 53,
-      "recentAvg": 0.262,
-      "recentObp": 0.279,
-      "recentSlg": 0.667,
-      "recentOps": 0.946,
+      "recentAvg": 0.261,
+      "recentObp": 0.277,
+      "recentSlg": 0.63,
+      "recentOps": 0.907,
       "previousOps": 0.386,
-      "opsDelta": 0.5599999999999999
+      "opsDelta": 0.521
     },
     {
       "id": 605137,
@@ -35,29 +35,15 @@
       "id": 677800,
       "name": "Wilyer Abreu",
       "team": "Boston Red Sox",
-      "seasonPa": 508,
-      "recentPa": 49,
+      "seasonPa": 513,
+      "recentPa": 54,
       "previousPa": 59,
-      "recentAvg": 0.316,
-      "recentObp": 0.429,
-      "recentSlg": 0.763,
-      "recentOps": 1.192,
+      "recentAvg": 0.317,
+      "recentObp": 0.444,
+      "recentSlg": 0.732,
+      "recentOps": 1.176,
       "previousOps": 0.718,
-      "opsDelta": 0.474
-    },
-    {
-      "id": 677594,
-      "name": "Julio Rodríguez",
-      "team": "Seattle Mariners",
-      "seasonPa": 475,
-      "recentPa": 47,
-      "previousPa": 50,
-      "recentAvg": 0.316,
-      "recentObp": 0.447,
-      "recentSlg": 0.553,
-      "recentOps": 1,
-      "previousOps": 0.568,
-      "opsDelta": 0.43200000000000005
+      "opsDelta": 0.45799999999999996
     },
     {
       "id": 621566,
@@ -72,6 +58,20 @@
       "recentOps": 1.182,
       "previousOps": 0.759,
       "opsDelta": 0.42299999999999993
+    },
+    {
+      "id": 676475,
+      "name": "Alec Burleson",
+      "team": "St. Louis Cardinals",
+      "seasonPa": 508,
+      "recentPa": 50,
+      "previousPa": 60,
+      "recentAvg": 0.341,
+      "recentObp": 0.46,
+      "recentSlg": 0.732,
+      "recentOps": 1.192,
+      "previousOps": 0.776,
+      "opsDelta": 0.4159999999999999
     }
   ],
   "method": "시즌 180타석 이상, 최근·직전 14일 각각 28타석 이상, 최근 OPS 0.700 이상인 타자 대상. 원인이나 지속 가능성은 추론하지 않습니다.",
@@ -81,6 +81,6 @@
     "previousStart": "2026-07-17",
     "previousEnd": "2026-07-30"
   },
-  "updatedAt": "2026-08-13T16:04:02.864Z",
+  "updatedAt": "2026-08-13T22:33:53.761Z",
   "source": "MLB Stats API"
 }
