@@ -1,7 +1,35 @@
 {
   "items": [
     {
-      "id": "signing-2026-08-08-0",
+      "id": "signing-2026-08-12-0",
+      "type": "Signing",
+      "typeKo": "계약",
+      "date": "2026-08-12T00:00:00",
+      "dateKo": "8월 12일",
+      "title": "계약 · 8월 12일",
+      "descriptionKo": "LA 클리퍼스가 가드 Jalen Pickett와 투웨이 계약을 체결했습니다.",
+      "descriptions": [
+        "LA Clippers signed guard Jalen Pickett to a Two-Way Contract."
+      ],
+      "source": "NBA.com",
+      "sourceLink": "https://www.nba.com/players/transactions"
+    },
+    {
+      "id": "waive-2026-08-12-1",
+      "type": "Waive",
+      "typeKo": "방출",
+      "date": "2026-08-12T00:00:00",
+      "dateKo": "8월 12일",
+      "title": "방출 · 8월 12일",
+      "descriptionKo": "피닉스 선스가 포워드 Haywood Highsmith를 방출했습니다.",
+      "descriptions": [
+        "Phoenix Suns waived forward Haywood Highsmith."
+      ],
+      "source": "NBA.com",
+      "sourceLink": "https://www.nba.com/players/transactions"
+    },
+    {
+      "id": "signing-2026-08-08-2",
       "type": "Signing",
       "typeKo": "계약",
       "date": "2026-08-08T00:00:00",
@@ -15,7 +43,7 @@
       "sourceLink": "https://www.nba.com/players/transactions"
     },
     {
-      "id": "signing-2026-08-06-1",
+      "id": "signing-2026-08-06-3",
       "type": "Signing",
       "typeKo": "계약",
       "date": "2026-08-06T00:00:00",
@@ -29,7 +57,7 @@
       "sourceLink": "https://www.nba.com/players/transactions"
     },
     {
-      "id": "waive-2026-08-06-2",
+      "id": "waive-2026-08-06-4",
       "type": "Waive",
       "typeKo": "방출",
       "date": "2026-08-06T00:00:00",
@@ -43,7 +71,7 @@
       "sourceLink": "https://www.nba.com/players/transactions"
     },
     {
-      "id": "signing-2026-08-05-3",
+      "id": "signing-2026-08-05-5",
       "type": "Signing",
       "typeKo": "계약",
       "date": "2026-08-05T00:00:00",
@@ -57,7 +85,7 @@
       "sourceLink": "https://www.nba.com/players/transactions"
     },
     {
-      "id": "signing-2026-08-05-4",
+      "id": "signing-2026-08-05-6",
       "type": "Signing",
       "typeKo": "계약",
       "date": "2026-08-05T00:00:00",
@@ -71,7 +99,7 @@
       "sourceLink": "https://www.nba.com/players/transactions"
     },
     {
-      "id": "waive-2026-08-05-5",
+      "id": "waive-2026-08-05-7",
       "type": "Waive",
       "typeKo": "방출",
       "date": "2026-08-05T00:00:00",
@@ -85,7 +113,7 @@
       "sourceLink": "https://www.nba.com/players/transactions"
     },
     {
-      "id": "signing-2026-08-04-6",
+      "id": "signing-2026-08-04-8",
       "type": "Signing",
       "typeKo": "계약",
       "date": "2026-08-04T00:00:00",
@@ -99,7 +127,7 @@
       "sourceLink": "https://www.nba.com/players/transactions"
     },
     {
-      "id": "signing-2026-08-02-7",
+      "id": "signing-2026-08-02-9",
       "type": "Signing",
       "typeKo": "계약",
       "date": "2026-08-02T00:00:00",
@@ -113,7 +141,7 @@
       "sourceLink": "https://www.nba.com/players/transactions"
     },
     {
-      "id": "signing-2026-08-01-8",
+      "id": "signing-2026-08-01-10",
       "type": "Signing",
       "typeKo": "계약",
       "date": "2026-08-01T00:00:00",
@@ -127,7 +155,7 @@
       "sourceLink": "https://www.nba.com/players/transactions"
     },
     {
-      "id": "signing-2026-07-31-9",
+      "id": "signing-2026-07-31-11",
       "type": "Signing",
       "typeKo": "계약",
       "date": "2026-07-31T00:00:00",
@@ -141,7 +169,7 @@
       "sourceLink": "https://www.nba.com/players/transactions"
     },
     {
-      "id": "signing-2026-07-31-10",
+      "id": "signing-2026-07-31-12",
       "type": "Signing",
       "typeKo": "계약",
       "date": "2026-07-31T00:00:00",
@@ -155,7 +183,7 @@
       "sourceLink": "https://www.nba.com/players/transactions"
     },
     {
-      "id": "signing-2026-07-31-11",
+      "id": "signing-2026-07-31-13",
       "type": "Signing",
       "typeKo": "계약",
       "date": "2026-07-31T00:00:00",
@@ -169,7 +197,7 @@
       "sourceLink": "https://www.nba.com/players/transactions"
     },
     {
-      "id": "signing-2026-07-31-12",
+      "id": "signing-2026-07-31-14",
       "type": "Signing",
       "typeKo": "계약",
       "date": "2026-07-31T00:00:00",
@@ -183,7 +211,7 @@
       "sourceLink": "https://www.nba.com/players/transactions"
     },
     {
-      "id": "waive-2026-07-30-13",
+      "id": "waive-2026-07-30-15",
       "type": "Waive",
       "typeKo": "방출",
       "date": "2026-07-30T00:00:00",
@@ -197,7 +225,7 @@
       "sourceLink": "https://www.nba.com/players/transactions"
     },
     {
-      "id": "signing-2026-07-29-14",
+      "id": "signing-2026-07-29-16",
       "type": "Signing",
       "typeKo": "계약",
       "date": "2026-07-29T00:00:00",
@@ -211,7 +239,7 @@
       "sourceLink": "https://www.nba.com/players/transactions"
     },
     {
-      "id": "signing-2026-07-29-15",
+      "id": "signing-2026-07-29-17",
       "type": "Signing",
       "typeKo": "계약",
       "date": "2026-07-29T00:00:00",
@@ -223,38 +251,9 @@
       ],
       "source": "NBA.com",
       "sourceLink": "https://www.nba.com/players/transactions"
-    },
-    {
-      "id": "trade-2026-07-28-16",
-      "type": "Trade",
-      "typeKo": "트레이드",
-      "date": "2026-07-28T00:00:00",
-      "dateKo": "7월 28일",
-      "title": "트레이드 · 7월 28일",
-      "descriptionKo": "LA 클리퍼스가 필라델피아 세븐티식서스로부터 포워드 Johni Broome을 받았습니다. LA 클리퍼스가 필라델피아 세븐티식서스로부터 드래프트 자산을 받았습니다.",
-      "descriptions": [
-        "LA Clippers received forward Johni Broome from Philadelphia 76ers.",
-        "LA Clippers received draft consideration from Philadelphia 76ers."
-      ],
-      "source": "NBA.com",
-      "sourceLink": "https://www.nba.com/players/transactions"
-    },
-    {
-      "id": "signing-2026-07-27-17",
-      "type": "Signing",
-      "typeKo": "계약",
-      "date": "2026-07-27T00:00:00",
-      "dateKo": "7월 27일",
-      "title": "계약 · 7월 27일",
-      "descriptionKo": "LA 레이커스가 가드 Matisse Thybulle와 계약을 체결했습니다.",
-      "descriptions": [
-        "Los Angeles Lakers signed guard Matisse Thybulle to a Contract."
-      ],
-      "source": "NBA.com",
-      "sourceLink": "https://www.nba.com/players/transactions"
     }
   ],
   "message": "",
   "source": "NBA 공식 Player Movement 데이터",
-  "updatedAt": "2026-08-12T23:58:13.507Z"
+  "updatedAt": "2026-08-13T02:47:18.591Z"
 }
