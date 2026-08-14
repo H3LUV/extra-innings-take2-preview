@@ -191,7 +191,7 @@
       },
       {
         "id": 822696,
-        "status": "Game Over",
+        "status": "Final",
         "venue": "Nationals Park",
         "gameDate": "2026-08-13T20:05:00Z",
         "away": {
@@ -228,23 +228,49 @@
       },
       {
         "id": 823669,
-        "status": "Pre-Game",
+        "status": "Final",
         "venue": "Field of Dreams",
         "gameDate": "2026-08-13T23:30:00Z",
         "away": {
           "id": 143,
           "name": "Philadelphia Phillies",
-          "score": 0,
+          "score": 7,
           "record": {
-            "wins": 64,
+            "wins": 65,
             "losses": 58,
             "ties": 0,
-            "pct": ".525"
+            "pct": ".528"
           }
         },
         "home": {
           "id": 142,
           "name": "Minnesota Twins",
+          "score": 1,
+          "record": {
+            "wins": 60,
+            "losses": 63,
+            "ties": 0,
+            "pct": ".488"
+          }
+        },
+        "probable": {
+          "away": "Aaron Nola",
+          "home": "Taj Bradley"
+        },
+        "decisions": {
+          "winner": "Aaron Nola",
+          "loser": "Taj Bradley",
+          "save": ""
+        }
+      },
+      {
+        "id": 823995,
+        "status": "Final",
+        "venue": "Angel Stadium",
+        "gameDate": "2026-08-14T02:07:00Z",
+        "away": {
+          "id": 140,
+          "name": "Texas Rangers",
           "score": 0,
           "record": {
             "wins": 60,
@@ -253,41 +279,15 @@
             "pct": ".492"
           }
         },
-        "probable": {
-          "away": "Aaron Nola",
-          "home": "Taj Bradley"
-        },
-        "decisions": {
-          "winner": "",
-          "loser": "",
-          "save": ""
-        }
-      },
-      {
-        "id": 823995,
-        "status": "Scheduled",
-        "venue": "Angel Stadium",
-        "gameDate": "2026-08-14T02:07:00Z",
-        "away": {
-          "id": 140,
-          "name": "Texas Rangers",
-          "score": null,
-          "record": {
-            "wins": 60,
-            "losses": 61,
-            "ties": 0,
-            "pct": ".496"
-          }
-        },
         "home": {
           "id": 108,
           "name": "Los Angeles Angels",
-          "score": null,
+          "score": 7,
           "record": {
-            "wins": 47,
+            "wins": 48,
             "losses": 74,
             "ties": 0,
-            "pct": ".388"
+            "pct": ".393"
           }
         },
         "probable": {
@@ -295,36 +295,36 @@
           "home": "Walbert Ureña"
         },
         "decisions": {
-          "winner": "",
-          "loser": "",
+          "winner": "Walbert Ureña",
+          "loser": "Jacob deGrom",
           "save": ""
         }
       },
       {
         "id": 823915,
-        "status": "Pre-Game",
+        "status": "Final",
         "venue": "UNIQLO Field at Dodger Stadium",
         "gameDate": "2026-08-14T02:10:00Z",
         "away": {
           "id": 158,
           "name": "Milwaukee Brewers",
-          "score": null,
+          "score": 5,
           "record": {
-            "wins": 74,
+            "wins": 75,
             "losses": 47,
             "ties": 0,
-            "pct": ".612"
+            "pct": ".615"
           }
         },
         "home": {
           "id": 119,
           "name": "Los Angeles Dodgers",
-          "score": null,
+          "score": 4,
           "record": {
             "wins": 73,
-            "losses": 48,
+            "losses": 49,
             "ties": 0,
-            "pct": ".603"
+            "pct": ".598"
           }
         },
         "probable": {
@@ -332,9 +332,9 @@
           "home": "Roki Sasaki"
         },
         "decisions": {
-          "winner": "",
-          "loser": "",
-          "save": ""
+          "winner": "DL Hall",
+          "loser": "Edwin Díaz",
+          "save": "Trevor Megill"
         }
       }
     ],
@@ -478,7 +478,7 @@
           }
         },
         "probable": {
-          "away": "",
+          "away": "Sean Newcomb",
           "home": "Jackson Jobe"
         },
         "decisions": {
@@ -730,15 +730,15 @@
           "name": "Los Angeles Angels",
           "score": null,
           "record": {
-            "wins": 47,
+            "wins": 48,
             "losses": 74,
             "ties": 0,
-            "pct": ".388"
+            "pct": ".393"
           }
         },
         "probable": {
           "away": "Seth Lugo",
-          "home": ""
+          "home": "Grayson Rodriguez"
         },
         "decisions": {
           "winner": "",
@@ -757,9 +757,9 @@
           "score": null,
           "record": {
             "wins": 60,
-            "losses": 61,
+            "losses": 62,
             "ties": 0,
-            "pct": ".496"
+            "pct": ".492"
           }
         },
         "home": {
@@ -774,7 +774,7 @@
           }
         },
         "probable": {
-          "away": "",
+          "away": "Kumar Rocker",
           "home": ""
         },
         "decisions": {
@@ -793,10 +793,10 @@
           "name": "Milwaukee Brewers",
           "score": null,
           "record": {
-            "wins": 74,
+            "wins": 75,
             "losses": 47,
             "ties": 0,
-            "pct": ".612"
+            "pct": ".615"
           }
         },
         "home": {
@@ -805,9 +805,9 @@
           "score": null,
           "record": {
             "wins": 73,
-            "losses": 48,
+            "losses": 49,
             "ties": 0,
-            "pct": ".603"
+            "pct": ".598"
           }
         },
         "probable": {
@@ -1202,10 +1202,10 @@
           "name": "Philadelphia Phillies",
           "score": null,
           "record": {
-            "wins": 64,
+            "wins": 65,
             "losses": 58,
             "ties": 0,
-            "pct": ".525"
+            "pct": ".528"
           }
         },
         "home": {
@@ -1214,9 +1214,9 @@
           "score": null,
           "record": {
             "wins": 60,
-            "losses": 62,
+            "losses": 63,
             "ties": 0,
-            "pct": ".492"
+            "pct": ".488"
           }
         },
         "probable": {
@@ -1313,10 +1313,10 @@
           "name": "Milwaukee Brewers",
           "score": null,
           "record": {
-            "wins": 74,
+            "wins": 75,
             "losses": 47,
             "ties": 0,
-            "pct": ".612"
+            "pct": ".615"
           }
         },
         "home": {
@@ -1325,9 +1325,9 @@
           "score": null,
           "record": {
             "wins": 73,
-            "losses": 48,
+            "losses": 49,
             "ties": 0,
-            "pct": ".603"
+            "pct": ".598"
           }
         },
         "probable": {
@@ -1361,15 +1361,15 @@
           "name": "Los Angeles Angels",
           "score": null,
           "record": {
-            "wins": 47,
+            "wins": 48,
             "losses": 74,
             "ties": 0,
-            "pct": ".388"
+            "pct": ".393"
           }
         },
         "probable": {
           "away": "Randy Dobnak",
-          "home": ""
+          "home": "Reid Detmers"
         },
         "decisions": {
           "winner": "",
@@ -1388,9 +1388,9 @@
           "score": null,
           "record": {
             "wins": 60,
-            "losses": 61,
+            "losses": 62,
             "ties": 0,
-            "pct": ".496"
+            "pct": ".492"
           }
         },
         "home": {
@@ -1405,7 +1405,7 @@
           }
         },
         "probable": {
-          "away": "",
+          "away": "MacKenzie Gore",
           "home": ""
         },
         "decisions": {
@@ -1416,6 +1416,6 @@
       }
     ]
   },
-  "updatedAt": "2026-08-13T22:33:54.296Z",
+  "updatedAt": "2026-08-14T08:05:49.783Z",
   "source": "MLB Stats API"
 }
