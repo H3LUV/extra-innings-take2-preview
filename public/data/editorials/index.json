@@ -1,86 +1,16 @@
 {
   "items": [
-    {
-      "slug": "2026-kevin-mcgonigle-zone-control",
-      "title": "21세 신인이 가장 노련한 타석을 만든다",
-      "dek": "케빈 맥고니글의 진짜 재능은 파워가 아니라 스트라이크존을 지배하는 능력이다",
-      "author": "H3러브의 지시를 받은 누군가",
-      "publishedAt": "2026-08-13T18:10:00+09:00",
-      "url": "./columns/2026-kevin-mcgonigle-zone-control/"
-    },
-    {
-      "slug": "2026-abs-challenge-strategy",
-      "title": "4,030번 뒤집혔다. ABS의 진짜 승부는 정확도가 아니다",
-      "dek": "7,532번의 챌린지가 보여준 새 야구 — 성공률보다 중요한 것은 언제 위험을 감수하느냐다",
-      "author": "H3러브의 지시를 받은 누군가",
-      "publishedAt": "2026-08-11T18:44:00+09:00",
-      "url": "./columns/2026-abs-challenge-strategy/"
-    },
-    {
-      "slug": "2026-george-lombard-jr-yankees-shortstop-heir",
-      "title": "또 지터의 후계자인가",
-      "dek": "앤서니 볼피의 실패 뒤 등장한 조지 롬바드 주니어는 진짜일까",
-      "author": "H3러브의 지시를 받은 누군가",
-      "publishedAt": "2026-08-10T18:12:00+09:00",
-      "url": "./columns/2026-george-lombard-jr-yankees-shortstop-heir/"
-    },
-    {
-      "slug": "2026-gerrit-cole-new-version-ace",
-      "title": "게릿 콜은 돌아온 것이 아니다",
-      "dek": "35세의 에이스는 이제 다른 방식으로 이기기 시작했다",
-      "author": "H3러브의 지시를 받은 누군가",
-      "publishedAt": "2026-08-09T18:05:00+09:00",
-      "url": "./columns/2026-gerrit-cole-new-version-ace/"
-    },
-    {
-      "slug": "2026-payton-tolle-14k-breakout",
-      "title": "84구 14탈삼진, 페이튼 톨은 정말 보스턴의 새로운 에이스가 될 수 있을까",
-      "dek": "구속보다 무서운 패스트볼, 그리고 완성되기 시작한 두 번째 무기",
-      "author": "H3러브의 지시를 받은 누군가",
-      "publishedAt": "2026-08-08T18:17:00+09:00",
-      "url": "./columns/2026-payton-tolle-14k-breakout/"
-    },
-    {
-      "slug": "2026-dodgers-crisis-or-mirage",
-      "title": "다저스는 정말 위기인가, 아니면 또 하나의 착시인가",
-      "dek": "6연패에 빠진 디펜딩 챔피언. 문제는 패배의 숫자가 아니라, 10월에 해결될 수 있는 문제인가에 있다",
-      "author": "H3러브의 지시를 받은 누군가",
-      "publishedAt": "2026-08-07T18:10:00+09:00",
-      "url": "./columns/2026-dodgers-crisis-or-mirage/"
-    },
-    {
-      "slug": "2026-rutschman-red-sox-overpay",
-      "title": "애들리 러치맨 트레이드, 보스턴은 정말 너무 많이 내줬나",
-      "dek": "합리적인 필요와 과도한 가격 사이, 레드삭스의 승부수를 평가하다",
-      "author": "H3러브의 지시를 받은 누군가",
-      "publishedAt": "2026-08-06T18:30:00+09:00",
-      "url": "./columns/2026-rutschman-red-sox-overpay/"
-    },
-    {
-      "slug": "2026-brewers-underrated-powerhouse",
-      "title": "70승 브루어스, 올해 가장 저평가된 강팀",
-      "dek": "스타를 사지 않는 팀이 가장 먼저 70승을 거둔 이유",
-      "author": "H3러브의 지시를 받은 누군가",
-      "publishedAt": "2026-08-05T22:00:00+09:00",
-      "url": "./columns/2026-brewers-underrated-powerhouse/"
-    },
-    {
-      "slug": "2026-rookie-of-the-year-race",
-      "title": "신인왕 경쟁은 끝나지 않았다, 그러나 가장 앞선 이름은 분명하다",
-      "dek": "WAR와 수비, 출루 능력으로 살펴본 2026년 양대 리그 신인왕 경쟁",
-      "author": "오늘의 MLB 편집부",
-      "publishedAt": "2026-08-04T20:00:00+09:00",
-      "url": "./columns/2026-rookie-of-the-year-race/"
-    },
-    {
-      "slug": "2026-trade-deadline-review",
-      "title": "2026 트레이드 데드라인 총평: 가장 비싼 선수가 아니라, 가장 분명한 방향을 산 팀들",
-      "dek": "다저스의 타릭 스쿠벌 영입이 모든 헤드라인을 가져갔지만, 이번 데드라인의 본질은 스타 한 명이 아니라 각 구단이 현재와 미래 가운데 무엇을 선택했는지에 있었다.",
-      "author": "오늘의 MLB 편집부",
-      "publishedAt": "2026-08-04T09:00:00+09:00",
-      "readingMinutes": 8,
-      "url": "./columns/2026-trade-deadline-review/"
-    }
+    {"slug":"2026-mlb-netflix-event-strategy","title":"꿈의 구장보다 중요한 건 Netflix였다","dek":"MLB는 왜 평범한 정규시즌 한 경기를 ‘반드시 봐야 할 이벤트’로 바꾸려 하는가","author":"H3러브의 지시를 받은 누군가","publishedAt":"2026-08-14T18:09:00+09:00","url":"./columns/2026-mlb-netflix-event-strategy/"},
+    {"slug":"2026-kevin-mcgonigle-zone-control","title":"21세 신인이 가장 노련한 타석을 만든다","dek":"케빈 맥고니글의 진짜 재능은 파워가 아니라 스트라이크존을 지배하는 능력이다","author":"H3러브의 지시를 받은 누군가","publishedAt":"2026-08-13T18:10:00+09:00","url":"./columns/2026-kevin-mcgonigle-zone-control/"},
+    {"slug":"2026-abs-challenge-strategy","title":"4,030번 뒤집혔다. ABS의 진짜 승부는 정확도가 아니다","dek":"7,532번의 챌린지가 보여준 새 야구 — 성공률보다 중요한 것은 언제 위험을 감수하느냐다","author":"H3러브의 지시를 받은 누군가","publishedAt":"2026-08-11T18:44:00+09:00","url":"./columns/2026-abs-challenge-strategy/"},
+    {"slug":"2026-george-lombard-jr-yankees-shortstop-heir","title":"또 지터의 후계자인가","dek":"앤서니 볼피의 실패 뒤 등장한 조지 롬바드 주니어는 진짜일까","author":"H3러브의 지시를 받은 누군가","publishedAt":"2026-08-10T18:12:00+09:00","url":"./columns/2026-george-lombard-jr-yankees-shortstop-heir/"},
+    {"slug":"2026-gerrit-cole-new-version-ace","title":"게릿 콜은 돌아온 것이 아니다","dek":"35세의 에이스는 이제 다른 방식으로 이기기 시작했다","author":"H3러브의 지시를 받은 누군가","publishedAt":"2026-08-09T18:05:00+09:00","url":"./columns/2026-gerrit-cole-new-version-ace/"},
+    {"slug":"2026-payton-tolle-14k-breakout","title":"84구 14탈삼진, 페이튼 톨은 정말 보스턴의 새로운 에이스가 될 수 있을까","dek":"구속보다 무서운 패스트볼, 그리고 완성되기 시작한 두 번째 무기","author":"H3러브의 지시를 받은 누군가","publishedAt":"2026-08-08T18:17:00+09:00","url":"./columns/2026-payton-tolle-14k-breakout/"},
+    {"slug":"2026-dodgers-crisis-or-mirage","title":"다저스는 정말 위기인가, 아니면 또 하나의 착시인가","dek":"6연패에 빠진 디펜딩 챔피언. 문제는 패배의 숫자가 아니라, 10월에 해결될 수 있는 문제인가에 있다","author":"H3러브의 지시를 받은 누군가","publishedAt":"2026-08-07T18:10:00+09:00","url":"./columns/2026-dodgers-crisis-or-mirage/"},
+    {"slug":"2026-rutschman-red-sox-overpay","title":"애들리 러치맨 트레이드, 보스턴은 정말 너무 많이 내줬나","dek":"합리적인 필요와 과도한 가격 사이, 레드삭스의 승부수를 평가하다","author":"H3러브의 지시를 받은 누군가","publishedAt":"2026-08-06T18:30:00+09:00","url":"./columns/2026-rutschman-red-sox-overpay/"},
+    {"slug":"2026-brewers-underrated-powerhouse","title":"70승 브루어스, 올해 가장 저평가된 강팀","dek":"스타를 사지 않는 팀이 가장 먼저 70승을 거둔 이유","author":"H3러브의 지시를 받은 누군가","publishedAt":"2026-08-05T22:00:00+09:00","url":"./columns/2026-brewers-underrated-powerhouse/"},
+    {"slug":"2026-rookie-of-the-year-race","title":"신인왕 경쟁은 끝나지 않았다, 그러나 가장 앞선 이름은 분명하다","dek":"WAR와 수비, 출루 능력으로 살펴본 2026년 양대 리그 신인왕 경쟁","author":"오늘의 MLB 편집부","publishedAt":"2026-08-04T20:00:00+09:00","url":"./columns/2026-rookie-of-the-year-race/"},
+    {"slug":"2026-trade-deadline-review","title":"2026 트레이드 데드라인 총평: 가장 비싼 선수가 아니라, 가장 분명한 방향을 산 팀들","dek":"다저스의 타릭 스쿠벌 영입이 모든 헤드라인을 가져갔지만, 이번 데드라인의 본질은 스타 한 명이 아니라 각 구단이 현재와 미래 가운데 무엇을 선택했는지에 있었다.","author":"오늘의 MLB 편집부","publishedAt":"2026-08-04T09:00:00+09:00","readingMinutes":8,"url":"./columns/2026-trade-deadline-review/"}
   ],
-  "updatedAt": "2026-08-13T23:04:01.988Z"
+  "updatedAt": "2026-08-14T09:09:00.000Z"
 }
