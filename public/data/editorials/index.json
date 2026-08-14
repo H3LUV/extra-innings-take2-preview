@@ -1,16 +1,93 @@
 {
   "items": [
-    {"slug":"2026-lakers-12-5b-franchise-valuation","title":"14개월 만에 25억 달러가 더 비싸졌다","dek":"레이커스의 125억 달러 거래가 보여주는 NBA 구단 가치의 새로운 공식","author":"H3러브의 지시를 받은 누군가","publishedAt":"2026-08-14T18:09:00+09:00","url":"./columns/2026-lakers-12-5b-franchise-valuation/"},
-    {"slug":"2026-russell-westbrook-retirement-tribute","title":"러셀 웨스트브룩, 당신의 농구는 너무 빨랐고 너무 뜨거웠다","dek":"209개의 트리플더블과 18시즌, 그리고 NBA가 다시는 똑같이 보이지 않게 만든 한 명의 가드","author":"H3러브의 지시를 받은 누군가","publishedAt":"2026-08-13T18:12:00+09:00","url":"./columns/2026-russell-westbrook-retirement-tribute/"},
-    {"slug":"2026-lebron-sixers-offense-organizer","title":"르브론의 마지막 임무는 득점이 아니다","dek":"필라델피아 슈퍼팀의 가장 비싼 문제는 공 하나를 나누는 법이다","author":"H3러브의 지시를 받은 누군가","publishedAt":"2026-08-11T19:45:00+09:00","url":"./columns/2026-lebron-sixers-offense-organizer/"},
-    {"slug":"2026-don-nelson-tribute","title":"우승하지 못한 감독이 NBA를 바꿨다","dek":"돈 넬슨, 시대보다 먼저 도착했던 농구인에게 보내는 마지막 인사","author":"H3러브의 지시를 받은 누군가","publishedAt":"2026-08-10T18:15:00+09:00","url":"./columns/2026-don-nelson-tribute/"},
-    {"slug":"2026-pistons-rebuild-cade-cunningham","title":"14승짜리 팀은 어떻게 다시 살아났나","dek":"케이드 커닝햄과 디트로이트가 보여주는 리빌딩의 진짜 마지막 단계","author":"H3러브의 지시를 받은 누군가","publishedAt":"2026-08-09T18:00:00+09:00","url":"./columns/2026-pistons-rebuild-cade-cunningham/"},
-    {"slug":"2026-nba-expansion-seattle-las-vegas","title":"NBA 32개 팀 시대가 온다","dek":"시애틀과 라스베이거스, 두 도시가 바꿀 리그의 지도","author":"H3러브의 지시를 받은 누군가","publishedAt":"2026-08-08T18:40:00+09:00","url":"./columns/2026-nba-expansion-seattle-las-vegas/"},
-    {"slug":"2026-walker-kessler-luka-fit","title":"워커 케슬러는 루카 돈치치에게 가장 필요한 센터인가","dek":"레이커스가 찾은 ‘수비와 롤맨’의 해답, 그리고 미래 자산을 건 베팅","author":"H3러브의 지시를 받은 누군가","publishedAt":"2026-08-07T19:25:00+09:00","url":"./columns/2026-walker-kessler-luka-fit/"},
-    {"slug":"2026-giannis-bam-double-big","title":"야니스와 아데바요는 함께 뛸 수 있을까","dek":"마이애미가 선택한 ‘더블 빅’의 가능성과 위험","author":"H3러브의 지시를 받은 누군가","publishedAt":"2026-08-06T18:45:00+09:00","url":"./columns/2026-giannis-bam-double-big/"},
-    {"slug":"2026-warriors-depth-over-stars","title":"골든스테이트는 왜 스타 대신 뎁스를 선택했는가","dek":"세컨드 에이프런 시대, 워리어스가 택한 가장 현실적인 생존 전략","author":"H3러브의 지시를 받은 누군가","publishedAt":"2026-08-05T22:00:00+09:00","url":"./columns/2026-warriors-depth-over-stars/"},
-    {"slug":"2026-second-apron-big-three","title":"NBA의 ‘빅3’는 죽지 않았다, 다만 예전 방식으로는 살아남을 수 없다","dek":"세컨드 에이프런과 새 CBA가 바꿔놓은 슈퍼팀의 생존 조건","author":"오늘의 NBA 편집부","publishedAt":"2026-08-04T20:00:00+09:00","url":"./columns/2026-second-apron-big-three/"},
-    {"slug":"2026-nba-offseason-winners-losers","title":"슈퍼스타가 모두 움직인 여름: 2026 NBA 오프시즌 승자와 패자","dek":"야니스 아데토쿤보, 르브론 제임스, 제일런 브라운, 자 모란트, 라멜로 볼까지 움직였다. 그러나 이 여름의 진짜 평가는 이름값보다 각 팀이 어떤 시간표를 선택했는지에 달려 있다.","author":"오늘의 NBA 편집부","publishedAt":"2026-08-04T16:30:00+09:00","url":"./columns/2026-nba-offseason-winners-losers/"}
+    {
+      "slug": "2026-lakers-12-5b-franchise-valuation",
+      "title": "14개월 만에 25억 달러가 더 비싸졌다",
+      "dek": "레이커스의 125억 달러 거래가 보여주는 NBA 구단 가치의 새로운 공식",
+      "author": "H3러브의 지시를 받은 누군가",
+      "publishedAt": "2026-08-14T18:09:00+09:00",
+      "url": "./columns/2026-lakers-12-5b-franchise-valuation/"
+    },
+    {
+      "slug": "2026-russell-westbrook-retirement-tribute",
+      "title": "러셀 웨스트브룩, 당신의 농구는 너무 빨랐고 너무 뜨거웠다",
+      "dek": "209개의 트리플더블과 18시즌, 그리고 NBA가 다시는 똑같이 보이지 않게 만든 한 명의 가드",
+      "author": "H3러브의 지시를 받은 누군가",
+      "publishedAt": "2026-08-13T18:12:00+09:00",
+      "url": "./columns/2026-russell-westbrook-retirement-tribute/"
+    },
+    {
+      "slug": "2026-lebron-sixers-offense-organizer",
+      "title": "르브론의 마지막 임무는 득점이 아니다",
+      "dek": "필라델피아 슈퍼팀의 가장 비싼 문제는 공 하나를 나누는 법이다",
+      "author": "H3러브의 지시를 받은 누군가",
+      "publishedAt": "2026-08-11T19:45:00+09:00",
+      "url": "./columns/2026-lebron-sixers-offense-organizer/"
+    },
+    {
+      "slug": "2026-don-nelson-tribute",
+      "title": "우승하지 못한 감독이 NBA를 바꿨다",
+      "dek": "돈 넬슨, 시대보다 먼저 도착했던 농구인에게 보내는 마지막 인사",
+      "author": "H3러브의 지시를 받은 누군가",
+      "publishedAt": "2026-08-10T18:15:00+09:00",
+      "url": "./columns/2026-don-nelson-tribute/"
+    },
+    {
+      "slug": "2026-pistons-rebuild-cade-cunningham",
+      "title": "14승짜리 팀은 어떻게 다시 살아났나",
+      "dek": "케이드 커닝햄과 디트로이트가 보여주는 리빌딩의 진짜 마지막 단계",
+      "author": "H3러브의 지시를 받은 누군가",
+      "publishedAt": "2026-08-09T18:00:00+09:00",
+      "url": "./columns/2026-pistons-rebuild-cade-cunningham/"
+    },
+    {
+      "slug": "2026-nba-expansion-seattle-las-vegas",
+      "title": "NBA 32개 팀 시대가 온다",
+      "dek": "시애틀과 라스베이거스, 두 도시가 바꿀 리그의 지도",
+      "author": "H3러브의 지시를 받은 누군가",
+      "publishedAt": "2026-08-08T18:40:00+09:00",
+      "url": "./columns/2026-nba-expansion-seattle-las-vegas/"
+    },
+    {
+      "slug": "2026-walker-kessler-luka-fit",
+      "title": "워커 케슬러는 루카 돈치치에게 가장 필요한 센터인가",
+      "dek": "레이커스가 찾은 ‘수비와 롤맨’의 해답, 그리고 미래 자산을 건 베팅",
+      "author": "H3러브의 지시를 받은 누군가",
+      "publishedAt": "2026-08-07T19:25:00+09:00",
+      "url": "./columns/2026-walker-kessler-luka-fit/"
+    },
+    {
+      "slug": "2026-giannis-bam-double-big",
+      "title": "야니스와 아데바요는 함께 뛸 수 있을까",
+      "dek": "마이애미가 선택한 ‘더블 빅’의 가능성과 위험",
+      "author": "H3러브의 지시를 받은 누군가",
+      "publishedAt": "2026-08-06T18:45:00+09:00",
+      "url": "./columns/2026-giannis-bam-double-big/"
+    },
+    {
+      "slug": "2026-warriors-depth-over-stars",
+      "title": "골든스테이트는 왜 스타 대신 뎁스를 선택했는가",
+      "dek": "세컨드 에이프런 시대, 워리어스가 택한 가장 현실적인 생존 전략",
+      "author": "H3러브의 지시를 받은 누군가",
+      "publishedAt": "2026-08-05T22:00:00+09:00",
+      "url": "./columns/2026-warriors-depth-over-stars/"
+    },
+    {
+      "slug": "2026-second-apron-big-three",
+      "title": "NBA의 ‘빅3’는 죽지 않았다, 다만 예전 방식으로는 살아남을 수 없다",
+      "dek": "세컨드 에이프런과 새 CBA가 바꿔놓은 슈퍼팀의 생존 조건",
+      "author": "오늘의 NBA 편집부",
+      "publishedAt": "2026-08-04T20:00:00+09:00",
+      "url": "./columns/2026-second-apron-big-three/"
+    },
+    {
+      "slug": "2026-nba-offseason-winners-losers",
+      "title": "슈퍼스타가 모두 움직인 여름: 2026 NBA 오프시즌 승자와 패자",
+      "dek": "야니스 아데토쿤보, 르브론 제임스, 제일런 브라운, 자 모란트, 라멜로 볼까지 움직였다. 그러나 이 여름의 진짜 평가는 이름값보다 각 팀이 어떤 시간표를 선택했는지에 달려 있다.",
+      "author": "오늘의 NBA 편집부",
+      "publishedAt": "2026-08-04T16:30:00+09:00",
+      "url": "./columns/2026-nba-offseason-winners-losers/"
+    }
   ],
-  "updatedAt": "2026-08-14T09:09:00.000Z"
+  "updatedAt": "2026-08-14T10:16:26.538Z"
 }
