@@ -11,11 +11,11 @@
       "category": "미국 현지 읽을거리",
       "readingMinutes": 9,
       "bodyVerified": true,
-      "bodyChars": 7962,
+      "bodyChars": 7960,
       "sourceWordCount": 2083,
       "translationType": "full",
       "pipelineVersion": "reader-v6",
-      "translatedAt": "2026-08-14T16:07:55.752Z"
+      "translatedAt": "2026-08-14T17:15:06.865Z"
     },
     {
       "id": "nba-95b12cde5b41",
@@ -28,28 +28,28 @@
       "category": "미국 현지 읽을거리",
       "readingMinutes": 7,
       "bodyVerified": true,
-      "bodyChars": 5332,
+      "bodyChars": 5338,
       "sourceWordCount": 1588,
       "translationType": "full",
       "pipelineVersion": "reader-v6",
-      "translatedAt": "2026-08-14T16:08:02.797Z"
+      "translatedAt": "2026-08-14T17:15:14.310Z"
     },
     {
       "id": "nba-b9d46a86b661",
       "articleFile": "./data/articles/nba-b9d46a86b661.json",
       "title": "10 national TV must-see matchups during first 2 months of the 2026-27 season",
-      "titleKo": "2026-27 시즌 첫 2개월 동안 전국 TV에서 꼭 봐야 할 매치업 10개",
+      "titleKo": "2026-27 시즌의 첫 2개월 동안 전국 TV에서 꼭 봐야 할 매치업 10개",
       "link": "https://www.nba.com/news/10-must-see-matchups-during-first-2-months-of-2026-27-nba-season",
       "pubDate": "2026-08-13T15:50:20Z",
       "source": "NBA.com",
       "category": "미국 현지 읽을거리",
       "readingMinutes": 5,
       "bodyVerified": true,
-      "bodyChars": 3534,
+      "bodyChars": 3536,
       "sourceWordCount": 1071,
       "translationType": "full",
       "pipelineVersion": "reader-v6",
-      "translatedAt": "2026-08-14T16:07:57.981Z"
+      "translatedAt": "2026-08-14T17:15:09.315Z"
     },
     {
       "id": "nba-74df6d3de370",
@@ -62,11 +62,11 @@
       "category": "미국 현지 읽을거리",
       "readingMinutes": 4,
       "bodyVerified": true,
-      "bodyChars": 2839,
+      "bodyChars": 2815,
       "sourceWordCount": 827,
       "translationType": "full",
       "pipelineVersion": "reader-v6",
-      "translatedAt": "2026-08-14T16:07:59.679Z"
+      "translatedAt": "2026-08-14T17:15:11.089Z"
     }
   ],
   "message": "NBA.com의 최신 일반 기사 중 제목과 본문 전체 자동 번역이 완료된 기사만 제공합니다.",
@@ -74,5 +74,5 @@
   "translationPolicy": "newest_valid_article_full_translation_keep_previous_on_failure",
   "pipelineVersion": "reader-v6",
   "selectedCount": 4,
-  "updatedAt": "2026-08-14T16:08:02.798Z"
+  "updatedAt": "2026-08-14T17:15:14.311Z"
 }
