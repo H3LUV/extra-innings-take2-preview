@@ -221,20 +221,20 @@
         {
           "id": 112,
           "name": "Chicago Cubs",
-          "w": 71,
+          "w": 72,
           "l": 51,
-          "pct": ".582",
-          "gb": "4.0",
-          "streak": "L1"
+          "pct": ".585",
+          "gb": "3.5",
+          "streak": "W1"
         },
         {
           "id": 138,
           "name": "St. Louis Cardinals",
           "w": 61,
-          "l": 60,
-          "pct": ".504",
-          "gb": "13.5",
-          "streak": "W2"
+          "l": 61,
+          "pct": ".500",
+          "gb": "14.0",
+          "streak": "L1"
         },
         {
           "id": 113,
@@ -308,6 +308,6 @@
       ]
     }
   ],
-  "updatedAt": "2026-08-14T08:15:13.653Z",
+  "updatedAt": "2026-08-14T22:15:06.294Z",
   "source": "MLB Stats API"
 }
