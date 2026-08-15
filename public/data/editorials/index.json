@@ -1,6 +1,14 @@
 {
   "items": [
     {
+      "slug": "2026-stephen-curry-final-contract-warriors-transition",
+      "title": "스테픈 커리의 마지막 계약",
+      "dek": "골든스테이트는 전설과 현실 사이에서 어디까지 가야 하나",
+      "author": "H3러브의 지시를 받은 누군가",
+      "publishedAt": "2026-08-15T18:14:00+09:00",
+      "url": "./columns/2026-stephen-curry-final-contract-warriors-transition/"
+    },
+    {
       "slug": "2026-lakers-12-5b-franchise-valuation",
       "title": "14개월 만에 25억 달러가 더 비싸졌다",
       "dek": "레이커스의 125억 달러 거래가 보여주는 NBA 구단 가치의 새로운 공식",
@@ -89,5 +97,5 @@
       "url": "./columns/2026-nba-offseason-winners-losers/"
     }
   ],
-  "updatedAt": "2026-08-15T08:45:07.760Z"
+  "updatedAt": "2026-08-15T09:14:00.000Z"
 }
