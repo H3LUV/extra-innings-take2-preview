@@ -21,15 +21,15 @@
       "id": 663757,
       "name": "Trent Grisham",
       "team": "New York Yankees",
-      "seasonPa": 407,
-      "recentPa": 46,
+      "seasonPa": 411,
+      "recentPa": 50,
       "previousPa": 54,
-      "recentAvg": 0.304,
-      "recentObp": 0.304,
-      "recentSlg": 0.739,
-      "recentOps": 1.043,
+      "recentAvg": 0.286,
+      "recentObp": 0.3,
+      "recentSlg": 0.694,
+      "recentOps": 0.994,
       "previousOps": 0.356,
-      "opsDelta": 0.6869999999999999
+      "opsDelta": 0.638
     },
     {
       "id": 605137,
@@ -46,24 +46,10 @@
       "opsDelta": 0.483
     },
     {
-      "id": 805367,
-      "name": "Chase Meidroth",
-      "team": "Chicago White Sox",
-      "seasonPa": 489,
-      "recentPa": 41,
-      "previousPa": 49,
-      "recentAvg": 0.4,
-      "recentObp": 0.488,
-      "recentSlg": 0.771,
-      "recentOps": 1.259,
-      "previousOps": 0.829,
-      "opsDelta": 0.42999999999999994
-    },
-    {
       "id": 664983,
       "name": "Jake McCarthy",
       "team": "Colorado Rockies",
-      "seasonPa": 417,
+      "seasonPa": 420,
       "recentPa": 51,
       "previousPa": 50,
       "recentAvg": 0.333,
@@ -72,6 +58,20 @@
       "recentOps": 0.923,
       "previousOps": 0.54,
       "opsDelta": 0.383
+    },
+    {
+      "id": 694192,
+      "name": "Jackson Chourio",
+      "team": "Milwaukee Brewers",
+      "seasonPa": 402,
+      "recentPa": 56,
+      "previousPa": 53,
+      "recentAvg": 0.283,
+      "recentObp": 0.411,
+      "recentSlg": 0.543,
+      "recentOps": 0.954,
+      "previousOps": 0.583,
+      "opsDelta": 0.371
     }
   ],
   "method": "시즌 180타석 이상, 최근·직전 14일 각각 28타석 이상, 최근 OPS 0.700 이상인 타자 대상. 원인이나 지속 가능성은 추론하지 않습니다.",
@@ -81,6 +81,6 @@
     "previousStart": "2026-07-19",
     "previousEnd": "2026-08-01"
   },
-  "updatedAt": "2026-08-15T15:28:37.098Z",
+  "updatedAt": "2026-08-15T22:13:24.095Z",
   "source": "MLB Stats API"
 }

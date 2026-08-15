@@ -1,55 +1,55 @@
 {
-  "start": "2026-08-14",
-  "end": "2026-08-16",
-  "defaultDate": "2026-08-15",
+  "start": "2026-08-15",
+  "end": "2026-08-17",
+  "defaultDate": "2026-08-16",
   "byDate": {
-    "2026-08-15": [
+    "2026-08-16": [
       {
-        "id": 824643,
+        "id": 824239,
         "status": "Final",
-        "venue": "Wrigley Field",
-        "gameDate": "2026-08-14T18:20:00Z",
+        "venue": "Comerica Park",
+        "gameDate": "2026-08-15T17:10:00Z",
         "away": {
-          "id": 138,
-          "name": "St. Louis Cardinals",
-          "score": 0,
+          "id": 145,
+          "name": "Chicago White Sox",
+          "score": 4,
           "record": {
-            "wins": 61,
-            "losses": 61,
+            "wins": 64,
+            "losses": 58,
             "ties": 0,
-            "pct": ".500"
+            "pct": ".525"
           }
         },
         "home": {
-          "id": 112,
-          "name": "Chicago Cubs",
+          "id": 116,
+          "name": "Detroit Tigers",
           "score": 3,
           "record": {
-            "wins": 72,
-            "losses": 51,
+            "wins": 60,
+            "losses": 63,
             "ties": 0,
-            "pct": ".585"
+            "pct": ".488"
           }
         },
         "probable": {
-          "away": "Matthew Liberatore",
-          "home": "Clay Holmes"
+          "away": "Anthony Kay",
+          "home": "Troy Melton"
         },
         "decisions": {
-          "winner": "Clay Holmes",
-          "loser": "Matthew Liberatore",
-          "save": "Jacob Webb"
+          "winner": "Jordan Hicks",
+          "loser": "Drew Sommers",
+          "save": "Bryan Hudson"
         }
       },
       {
-        "id": 824479,
+        "id": 824644,
         "status": "Final",
-        "venue": "Great American Ball Park",
-        "gameDate": "2026-08-14T22:10:00Z",
+        "venue": "Wrigley Field",
+        "gameDate": "2026-08-15T18:20:00Z",
         "away": {
-          "id": 146,
-          "name": "Miami Marlins",
-          "score": 0,
+          "id": 138,
+          "name": "St. Louis Cardinals",
+          "score": 8,
           "record": {
             "wins": 62,
             "losses": 61,
@@ -58,534 +58,14 @@
           }
         },
         "home": {
-          "id": 113,
-          "name": "Cincinnati Reds",
-          "score": 1,
-          "record": {
-            "wins": 59,
-            "losses": 62,
-            "ties": 0,
-            "pct": ".488"
-          }
-        },
-        "probable": {
-          "away": "Sandy Alcantara",
-          "home": "Chase Burns"
-        },
-        "decisions": {
-          "winner": "Chase Burns",
-          "loser": "Sandy Alcantara",
-          "save": "Emilio Pagán"
-        }
-      },
-      {
-        "id": 823346,
-        "status": "Final",
-        "venue": "PNC Park",
-        "gameDate": "2026-08-14T22:40:00Z",
-        "away": {
-          "id": 111,
-          "name": "Boston Red Sox",
-          "score": 4,
-          "record": {
-            "wins": 65,
-            "losses": 57,
-            "ties": 0,
-            "pct": ".533"
-          }
-        },
-        "home": {
-          "id": 134,
-          "name": "Pittsburgh Pirates",
-          "score": 8,
-          "record": {
-            "wins": 60,
-            "losses": 64,
-            "ties": 0,
-            "pct": ".484"
-          }
-        },
-        "probable": {
-          "away": "Jake Bennett",
-          "home": "Bubba Chandler"
-        },
-        "decisions": {
-          "winner": "Bubba Chandler",
-          "loser": "Jake Bennett",
-          "save": "Mason Montgomery"
-        }
-      },
-      {
-        "id": 824237,
-        "status": "Final",
-        "venue": "Comerica Park",
-        "gameDate": "2026-08-14T22:40:00Z",
-        "away": {
-          "id": 145,
-          "name": "Chicago White Sox",
-          "score": 9,
-          "record": {
-            "wins": 63,
-            "losses": 58,
-            "ties": 0,
-            "pct": ".521"
-          }
-        },
-        "home": {
-          "id": 116,
-          "name": "Detroit Tigers",
-          "score": 5,
-          "record": {
-            "wins": 60,
-            "losses": 62,
-            "ties": 0,
-            "pct": ".492"
-          }
-        },
-        "probable": {
-          "away": "Sean Newcomb",
-          "home": "Jackson Jobe"
-        },
-        "decisions": {
-          "winner": "José Urquidy",
-          "loser": "Jackson Jobe",
-          "save": ""
-        }
-      },
-      {
-        "id": 823591,
-        "status": "Final",
-        "venue": "Citi Field",
-        "gameDate": "2026-08-14T23:10:00Z",
-        "away": {
-          "id": 120,
-          "name": "Washington Nationals",
-          "score": 1,
-          "record": {
-            "wins": 60,
-            "losses": 64,
-            "ties": 0,
-            "pct": ".484"
-          }
-        },
-        "home": {
-          "id": 121,
-          "name": "New York Mets",
-          "score": 4,
-          "record": {
-            "wins": 54,
-            "losses": 69,
-            "ties": 0,
-            "pct": ".439"
-          }
-        },
-        "probable": {
-          "away": "Andrew Alvarez",
-          "home": "Robert Stock"
-        },
-        "decisions": {
-          "winner": "Jonathan Pintaro",
-          "loser": "Andrew Alvarez",
-          "save": "Kodai Senga"
-        }
-      },
-      {
-        "id": 824399,
-        "status": "Final",
-        "venue": "Progressive Field",
-        "gameDate": "2026-08-14T23:10:00Z",
-        "away": {
-          "id": 135,
-          "name": "San Diego Padres",
-          "score": 7,
-          "record": {
-            "wins": 66,
-            "losses": 57,
-            "ties": 0,
-            "pct": ".537"
-          }
-        },
-        "home": {
-          "id": 114,
-          "name": "Cleveland Guardians",
-          "score": 5,
-          "record": {
-            "wins": 59,
-            "losses": 64,
-            "ties": 0,
-            "pct": ".480"
-          }
-        },
-        "probable": {
-          "away": "Michael King",
-          "home": "Gavin Williams"
-        },
-        "decisions": {
-          "winner": "Michael King",
-          "loser": "Gavin Williams",
-          "save": "Bradgley Rodriguez"
-        }
-      },
-      {
-        "id": 822942,
-        "status": "Final",
-        "venue": "Tropicana Field",
-        "gameDate": "2026-08-14T23:10:00Z",
-        "away": {
-          "id": 110,
-          "name": "Baltimore Orioles",
-          "score": 6,
-          "record": {
-            "wins": 59,
-            "losses": 63,
-            "ties": 0,
-            "pct": ".484"
-          }
-        },
-        "home": {
-          "id": 139,
-          "name": "Tampa Bay Rays",
-          "score": 5,
-          "record": {
-            "wins": 74,
-            "losses": 47,
-            "ties": 0,
-            "pct": ".612"
-          }
-        },
-        "probable": {
-          "away": "Chris Bassitt",
-          "home": "Steven Matz"
-        },
-        "decisions": {
-          "winner": "Josh Walker",
-          "loser": "Garrett Cleavinger",
-          "save": "Cam Sanders"
-        }
-      },
-      {
-        "id": 824882,
-        "status": "Final",
-        "venue": "Truist Park",
-        "gameDate": "2026-08-14T23:15:00Z",
-        "away": {
-          "id": 109,
-          "name": "Arizona Diamondbacks",
-          "score": 2,
-          "record": {
-            "wins": 65,
-            "losses": 58,
-            "ties": 0,
-            "pct": ".528"
-          }
-        },
-        "home": {
-          "id": 144,
-          "name": "Atlanta Braves",
-          "score": 0,
-          "record": {
-            "wins": 73,
-            "losses": 49,
-            "ties": 0,
-            "pct": ".598"
-          }
-        },
-        "probable": {
-          "away": "Brandon Pfaadt",
-          "home": "Chris Sale"
-        },
-        "decisions": {
-          "winner": "Brandon Pfaadt",
-          "loser": "Chris Sale",
-          "save": "Brandyn Garcia"
-        }
-      },
-      {
-        "id": 822777,
-        "status": "Final",
-        "venue": "Rogers Centre",
-        "gameDate": "2026-08-14T23:15:00Z",
-        "away": {
-          "id": 147,
-          "name": "New York Yankees",
-          "score": 1,
-          "record": {
-            "wins": 68,
-            "losses": 54,
-            "ties": 0,
-            "pct": ".557"
-          }
-        },
-        "home": {
-          "id": 141,
-          "name": "Toronto Blue Jays",
-          "score": 3,
-          "record": {
-            "wins": 60,
-            "losses": 64,
-            "ties": 0,
-            "pct": ".484"
-          }
-        },
-        "probable": {
-          "away": "Gerrit Cole",
-          "home": "Shane Bieber"
-        },
-        "decisions": {
-          "winner": "Shane Bieber",
-          "loser": "Gerrit Cole",
-          "save": "Louis Varland"
-        }
-      },
-      {
-        "id": 824159,
-        "status": "Final",
-        "venue": "Daikin Park",
-        "gameDate": "2026-08-15T00:10:00Z",
-        "away": {
-          "id": 136,
-          "name": "Seattle Mariners",
-          "score": 7,
-          "record": {
-            "wins": 57,
-            "losses": 66,
-            "ties": 0,
-            "pct": ".463"
-          }
-        },
-        "home": {
-          "id": 117,
-          "name": "Houston Astros",
-          "score": 10,
-          "record": {
-            "wins": 63,
-            "losses": 60,
-            "ties": 0,
-            "pct": ".512"
-          }
-        },
-        "probable": {
-          "away": "George Kirby",
-          "home": "Peter Lambert"
-        },
-        "decisions": {
-          "winner": "Enyel De Los Santos",
-          "loser": "Andrés Muñoz",
-          "save": ""
-        }
-      },
-      {
-        "id": 823993,
-        "status": "Final",
-        "venue": "Angel Stadium",
-        "gameDate": "2026-08-15T01:38:00Z",
-        "away": {
-          "id": 118,
-          "name": "Kansas City Royals",
-          "score": 7,
-          "record": {
-            "wins": 50,
-            "losses": 73,
-            "ties": 0,
-            "pct": ".407"
-          }
-        },
-        "home": {
-          "id": 108,
-          "name": "Los Angeles Angels",
-          "score": 6,
-          "record": {
-            "wins": 48,
-            "losses": 75,
-            "ties": 0,
-            "pct": ".390"
-          }
-        },
-        "probable": {
-          "away": "Seth Lugo",
-          "home": "Grayson Rodriguez"
-        },
-        "decisions": {
-          "winner": "Alex Lange",
-          "loser": "Tayler Saucedo",
-          "save": "Steven Cruz"
-        }
-      },
-      {
-        "id": 824968,
-        "status": "Final",
-        "venue": "Sutter Health Park",
-        "gameDate": "2026-08-15T01:40:00Z",
-        "away": {
-          "id": 140,
-          "name": "Texas Rangers",
-          "score": 3,
-          "record": {
-            "wins": 60,
-            "losses": 63,
-            "ties": 0,
-            "pct": ".488"
-          }
-        },
-        "home": {
-          "id": 133,
-          "name": "Athletics",
-          "score": 8,
-          "record": {
-            "wins": 48,
-            "losses": 74,
-            "ties": 0,
-            "pct": ".393"
-          }
-        },
-        "probable": {
-          "away": "Kumar Rocker",
-          "home": "Gage Jump"
-        },
-        "decisions": {
-          "winner": "Luis Medina",
-          "loser": "Chase Silseth",
-          "save": ""
-        }
-      },
-      {
-        "id": 823913,
-        "status": "Final",
-        "venue": "UNIQLO Field at Dodger Stadium",
-        "gameDate": "2026-08-15T02:10:00Z",
-        "away": {
-          "id": 158,
-          "name": "Milwaukee Brewers",
-          "score": 1,
-          "record": {
-            "wins": 75,
-            "losses": 48,
-            "ties": 0,
-            "pct": ".610"
-          }
-        },
-        "home": {
-          "id": 119,
-          "name": "Los Angeles Dodgers",
-          "score": 3,
-          "record": {
-            "wins": 74,
-            "losses": 49,
-            "ties": 0,
-            "pct": ".602"
-          }
-        },
-        "probable": {
-          "away": "Robert Gasser",
-          "home": "Yoshinobu Yamamoto"
-        },
-        "decisions": {
-          "winner": "Yoshinobu Yamamoto",
-          "loser": "Robert Gasser",
-          "save": "Edwin Díaz"
-        }
-      },
-      {
-        "id": 823185,
-        "status": "Final",
-        "venue": "Oracle Park",
-        "gameDate": "2026-08-15T02:15:00Z",
-        "away": {
-          "id": 115,
-          "name": "Colorado Rockies",
-          "score": 5,
-          "record": {
-            "wins": 49,
-            "losses": 73,
-            "ties": 0,
-            "pct": ".402"
-          }
-        },
-        "home": {
-          "id": 137,
-          "name": "San Francisco Giants",
-          "score": 2,
-          "record": {
-            "wins": 50,
-            "losses": 72,
-            "ties": 0,
-            "pct": ".410"
-          }
-        },
-        "probable": {
-          "away": "Kyle Freeland",
-          "home": "Landen Roupp"
-        },
-        "decisions": {
-          "winner": "Kyle Freeland",
-          "loser": "Landen Roupp",
-          "save": ""
-        }
-      }
-    ],
-    "2026-08-16": [
-      {
-        "id": 824239,
-        "status": "Scheduled",
-        "venue": "Comerica Park",
-        "gameDate": "2026-08-15T17:10:00Z",
-        "away": {
-          "id": 145,
-          "name": "Chicago White Sox",
-          "score": null,
-          "record": {
-            "wins": 63,
-            "losses": 58,
-            "ties": 0,
-            "pct": ".521"
-          }
-        },
-        "home": {
-          "id": 116,
-          "name": "Detroit Tigers",
-          "score": null,
-          "record": {
-            "wins": 60,
-            "losses": 62,
-            "ties": 0,
-            "pct": ".492"
-          }
-        },
-        "probable": {
-          "away": "Anthony Kay",
-          "home": "Troy Melton"
-        },
-        "decisions": {
-          "winner": "",
-          "loser": "",
-          "save": ""
-        }
-      },
-      {
-        "id": 824644,
-        "status": "Scheduled",
-        "venue": "Wrigley Field",
-        "gameDate": "2026-08-15T18:20:00Z",
-        "away": {
-          "id": 138,
-          "name": "St. Louis Cardinals",
-          "score": null,
-          "record": {
-            "wins": 61,
-            "losses": 61,
-            "ties": 0,
-            "pct": ".500"
-          }
-        },
-        "home": {
           "id": 112,
           "name": "Chicago Cubs",
-          "score": null,
+          "score": 4,
           "record": {
             "wins": 72,
-            "losses": 51,
+            "losses": 52,
             "ties": 0,
-            "pct": ".585"
+            "pct": ".581"
           }
         },
         "probable": {
@@ -593,36 +73,36 @@
           "home": "Matthew Boyd"
         },
         "decisions": {
-          "winner": "",
-          "loser": "",
+          "winner": "Michael McGreevy",
+          "loser": "Matthew Boyd",
           "save": ""
         }
       },
       {
         "id": 822775,
-        "status": "Scheduled",
+        "status": "Final",
         "venue": "Rogers Centre",
         "gameDate": "2026-08-15T19:07:00Z",
         "away": {
           "id": 147,
           "name": "New York Yankees",
-          "score": null,
+          "score": 1,
           "record": {
             "wins": 68,
-            "losses": 54,
+            "losses": 55,
             "ties": 0,
-            "pct": ".557"
+            "pct": ".553"
           }
         },
         "home": {
           "id": 141,
           "name": "Toronto Blue Jays",
-          "score": null,
+          "score": 4,
           "record": {
-            "wins": 60,
+            "wins": 61,
             "losses": 64,
             "ties": 0,
-            "pct": ".484"
+            "pct": ".488"
           }
         },
         "probable": {
@@ -630,20 +110,20 @@
           "home": "Braydon Fisher"
         },
         "decisions": {
-          "winner": "",
-          "loser": "",
-          "save": ""
+          "winner": "Spencer Miles",
+          "loser": "Brent Headrick",
+          "save": "Louis Varland"
         }
       },
       {
         "id": 823184,
-        "status": "Scheduled",
+        "status": "In Progress",
         "venue": "Oracle Park",
         "gameDate": "2026-08-15T20:05:00Z",
         "away": {
           "id": 115,
           "name": "Colorado Rockies",
-          "score": null,
+          "score": 1,
           "record": {
             "wins": 49,
             "losses": 73,
@@ -654,7 +134,7 @@
         "home": {
           "id": 137,
           "name": "San Francisco Giants",
-          "score": null,
+          "score": 7,
           "record": {
             "wins": 50,
             "losses": 72,
@@ -674,13 +154,13 @@
       },
       {
         "id": 823588,
-        "status": "Scheduled",
+        "status": "In Progress",
         "venue": "Citi Field",
         "gameDate": "2026-08-15T20:10:00Z",
         "away": {
           "id": 120,
           "name": "Washington Nationals",
-          "score": null,
+          "score": 4,
           "record": {
             "wins": 60,
             "losses": 64,
@@ -691,7 +171,7 @@
         "home": {
           "id": 121,
           "name": "New York Mets",
-          "score": null,
+          "score": 3,
           "record": {
             "wins": 54,
             "losses": 69,
@@ -711,13 +191,13 @@
       },
       {
         "id": 822941,
-        "status": "Scheduled",
+        "status": "In Progress",
         "venue": "Tropicana Field",
         "gameDate": "2026-08-15T22:10:00Z",
         "away": {
           "id": 110,
           "name": "Baltimore Orioles",
-          "score": null,
+          "score": 0,
           "record": {
             "wins": 59,
             "losses": 63,
@@ -728,7 +208,7 @@
         "home": {
           "id": 139,
           "name": "Tampa Bay Rays",
-          "score": null,
+          "score": 0,
           "record": {
             "wins": 74,
             "losses": 47,
@@ -748,13 +228,13 @@
       },
       {
         "id": 824480,
-        "status": "Scheduled",
+        "status": "Warmup",
         "venue": "Great American Ball Park",
         "gameDate": "2026-08-15T22:40:00Z",
         "away": {
           "id": 146,
           "name": "Miami Marlins",
-          "score": null,
+          "score": 0,
           "record": {
             "wins": 62,
             "losses": 61,
@@ -765,7 +245,7 @@
         "home": {
           "id": 113,
           "name": "Cincinnati Reds",
-          "score": null,
+          "score": 0,
           "record": {
             "wins": 59,
             "losses": 62,
@@ -785,13 +265,13 @@
       },
       {
         "id": 824400,
-        "status": "Scheduled",
+        "status": "Pre-Game",
         "venue": "Progressive Field",
         "gameDate": "2026-08-15T23:10:00Z",
         "away": {
           "id": 135,
           "name": "San Diego Padres",
-          "score": null,
+          "score": 0,
           "record": {
             "wins": 66,
             "losses": 57,
@@ -802,7 +282,7 @@
         "home": {
           "id": 114,
           "name": "Cleveland Guardians",
-          "score": null,
+          "score": 0,
           "record": {
             "wins": 59,
             "losses": 64,
@@ -811,7 +291,7 @@
           }
         },
         "probable": {
-          "away": "",
+          "away": "Wandy Peralta",
           "home": "Joey Cantillo"
         },
         "decisions": {
@@ -822,13 +302,13 @@
       },
       {
         "id": 824157,
-        "status": "Scheduled",
+        "status": "Pre-Game",
         "venue": "Daikin Park",
         "gameDate": "2026-08-15T23:10:00Z",
         "away": {
           "id": 136,
           "name": "Seattle Mariners",
-          "score": null,
+          "score": 0,
           "record": {
             "wins": 57,
             "losses": 66,
@@ -839,7 +319,7 @@
         "home": {
           "id": 117,
           "name": "Houston Astros",
-          "score": null,
+          "score": 0,
           "record": {
             "wins": 63,
             "losses": 60,
@@ -859,13 +339,13 @@
       },
       {
         "id": 823671,
-        "status": "Scheduled",
+        "status": "Pre-Game",
         "venue": "Target Field",
         "gameDate": "2026-08-15T23:10:00Z",
         "away": {
           "id": 143,
           "name": "Philadelphia Phillies",
-          "score": null,
+          "score": 0,
           "record": {
             "wins": 65,
             "losses": 58,
@@ -876,7 +356,7 @@
         "home": {
           "id": 142,
           "name": "Minnesota Twins",
-          "score": null,
+          "score": 0,
           "record": {
             "wins": 60,
             "losses": 63,
@@ -896,13 +376,13 @@
       },
       {
         "id": 823347,
-        "status": "Scheduled",
+        "status": "Pre-Game",
         "venue": "PNC Park",
         "gameDate": "2026-08-15T23:15:00Z",
         "away": {
           "id": 111,
           "name": "Boston Red Sox",
-          "score": null,
+          "score": 0,
           "record": {
             "wins": 65,
             "losses": 57,
@@ -913,7 +393,7 @@
         "home": {
           "id": 134,
           "name": "Pittsburgh Pirates",
-          "score": null,
+          "score": 0,
           "record": {
             "wins": 60,
             "losses": 64,
@@ -933,13 +413,13 @@
       },
       {
         "id": 824884,
-        "status": "Scheduled",
+        "status": "Pre-Game",
         "venue": "Truist Park",
         "gameDate": "2026-08-15T23:15:00Z",
         "away": {
           "id": 109,
           "name": "Arizona Diamondbacks",
-          "score": null,
+          "score": 0,
           "record": {
             "wins": 65,
             "losses": 58,
@@ -950,7 +430,7 @@
         "home": {
           "id": 144,
           "name": "Atlanta Braves",
-          "score": null,
+          "score": 0,
           "record": {
             "wins": 73,
             "losses": 49,
@@ -970,13 +450,13 @@
       },
       {
         "id": 823914,
-        "status": "Scheduled",
+        "status": "Pre-Game",
         "venue": "UNIQLO Field at Dodger Stadium",
         "gameDate": "2026-08-15T23:15:00Z",
         "away": {
           "id": 158,
           "name": "Milwaukee Brewers",
-          "score": null,
+          "score": 0,
           "record": {
             "wins": 75,
             "losses": 48,
@@ -987,7 +467,7 @@
         "home": {
           "id": 119,
           "name": "Los Angeles Dodgers",
-          "score": null,
+          "score": 0,
           "record": {
             "wins": 74,
             "losses": 49,
@@ -1007,13 +487,13 @@
       },
       {
         "id": 823990,
-        "status": "Scheduled",
+        "status": "Pre-Game",
         "venue": "Angel Stadium",
         "gameDate": "2026-08-16T01:38:00Z",
         "away": {
           "id": 118,
           "name": "Kansas City Royals",
-          "score": null,
+          "score": 0,
           "record": {
             "wins": 50,
             "losses": 73,
@@ -1024,7 +504,7 @@
         "home": {
           "id": 108,
           "name": "Los Angeles Angels",
-          "score": null,
+          "score": 0,
           "record": {
             "wins": 48,
             "losses": 75,
@@ -1044,7 +524,7 @@
       },
       {
         "id": 824966,
-        "status": "Scheduled",
+        "status": "Pre-Game",
         "venue": "Sutter Health Park",
         "gameDate": "2026-08-16T01:40:00Z",
         "away": {
@@ -1203,9 +683,9 @@
           "score": null,
           "record": {
             "wins": 68,
-            "losses": 54,
+            "losses": 55,
             "ties": 0,
-            "pct": ".557"
+            "pct": ".553"
           }
         },
         "home": {
@@ -1213,10 +693,10 @@
           "name": "Toronto Blue Jays",
           "score": null,
           "record": {
-            "wins": 60,
+            "wins": 61,
             "losses": 64,
             "ties": 0,
-            "pct": ".484"
+            "pct": ".488"
           }
         },
         "probable": {
@@ -1313,10 +793,10 @@
           "name": "Chicago White Sox",
           "score": null,
           "record": {
-            "wins": 63,
+            "wins": 64,
             "losses": 58,
             "ties": 0,
-            "pct": ".521"
+            "pct": ".525"
           }
         },
         "home": {
@@ -1325,9 +805,9 @@
           "score": null,
           "record": {
             "wins": 60,
-            "losses": 62,
+            "losses": 63,
             "ties": 0,
-            "pct": ".492"
+            "pct": ".488"
           }
         },
         "probable": {
@@ -1424,10 +904,10 @@
           "name": "St. Louis Cardinals",
           "score": null,
           "record": {
-            "wins": 61,
+            "wins": 62,
             "losses": 61,
             "ties": 0,
-            "pct": ".500"
+            "pct": ".504"
           }
         },
         "home": {
@@ -1436,9 +916,9 @@
           "score": null,
           "record": {
             "wins": 72,
-            "losses": 51,
+            "losses": 52,
             "ties": 0,
-            "pct": ".585"
+            "pct": ".581"
           }
         },
         "probable": {
@@ -1636,8 +1116,417 @@
           "save": ""
         }
       }
+    ],
+    "2026-08-18": [
+      {
+        "id": 824514,
+        "status": "Scheduled",
+        "venue": "Great American Ball Park",
+        "gameDate": "2026-08-17T17:40:00Z",
+        "away": {
+          "id": 138,
+          "name": "St. Louis Cardinals",
+          "score": null,
+          "record": {
+            "wins": 62,
+            "losses": 61,
+            "ties": 0,
+            "pct": ".504"
+          }
+        },
+        "home": {
+          "id": 113,
+          "name": "Cincinnati Reds",
+          "score": null,
+          "record": {
+            "wins": 59,
+            "losses": 62,
+            "ties": 0,
+            "pct": ".488"
+          }
+        },
+        "probable": {
+          "away": "",
+          "home": "Rhett Lowder"
+        },
+        "decisions": {
+          "winner": "",
+          "loser": "",
+          "save": ""
+        }
+      },
+      {
+        "id": 822939,
+        "status": "Scheduled",
+        "venue": "Tropicana Field",
+        "gameDate": "2026-08-17T22:05:00Z",
+        "away": {
+          "id": 110,
+          "name": "Baltimore Orioles",
+          "score": null,
+          "record": {
+            "wins": 59,
+            "losses": 63,
+            "ties": 0,
+            "pct": ".484"
+          }
+        },
+        "home": {
+          "id": 139,
+          "name": "Tampa Bay Rays",
+          "score": null,
+          "record": {
+            "wins": 74,
+            "losses": 47,
+            "ties": 0,
+            "pct": ".612"
+          }
+        },
+        "probable": {
+          "away": "Brandon Young",
+          "home": ""
+        },
+        "decisions": {
+          "winner": "",
+          "loser": "",
+          "save": ""
+        }
+      },
+      {
+        "id": 824478,
+        "status": "Scheduled",
+        "venue": "Great American Ball Park",
+        "gameDate": "2026-08-17T22:40:00Z",
+        "away": {
+          "id": 138,
+          "name": "St. Louis Cardinals",
+          "score": null,
+          "record": {
+            "wins": 62,
+            "losses": 61,
+            "ties": 0,
+            "pct": ".504"
+          }
+        },
+        "home": {
+          "id": 113,
+          "name": "Cincinnati Reds",
+          "score": null,
+          "record": {
+            "wins": 59,
+            "losses": 62,
+            "ties": 0,
+            "pct": ".488"
+          }
+        },
+        "probable": {
+          "away": "",
+          "home": ""
+        },
+        "decisions": {
+          "winner": "",
+          "loser": "",
+          "save": ""
+        }
+      },
+      {
+        "id": 823427,
+        "status": "Scheduled",
+        "venue": "Citizens Bank Park",
+        "gameDate": "2026-08-17T22:40:00Z",
+        "away": {
+          "id": 146,
+          "name": "Miami Marlins",
+          "score": null,
+          "record": {
+            "wins": 62,
+            "losses": 61,
+            "ties": 0,
+            "pct": ".504"
+          }
+        },
+        "home": {
+          "id": 143,
+          "name": "Philadelphia Phillies",
+          "score": null,
+          "record": {
+            "wins": 65,
+            "losses": 58,
+            "ties": 0,
+            "pct": ".528"
+          }
+        },
+        "probable": {
+          "away": "",
+          "home": ""
+        },
+        "decisions": {
+          "winner": "",
+          "loser": "",
+          "save": ""
+        }
+      },
+      {
+        "id": 823343,
+        "status": "Scheduled",
+        "venue": "PNC Park",
+        "gameDate": "2026-08-17T23:05:00Z",
+        "away": {
+          "id": 116,
+          "name": "Detroit Tigers",
+          "score": null,
+          "record": {
+            "wins": 60,
+            "losses": 63,
+            "ties": 0,
+            "pct": ".488"
+          }
+        },
+        "home": {
+          "id": 134,
+          "name": "Pittsburgh Pirates",
+          "score": null,
+          "record": {
+            "wins": 60,
+            "losses": 64,
+            "ties": 0,
+            "pct": ".484"
+          }
+        },
+        "probable": {
+          "away": "",
+          "home": ""
+        },
+        "decisions": {
+          "winner": "",
+          "loser": "",
+          "save": ""
+        }
+      },
+      {
+        "id": 824725,
+        "status": "Scheduled",
+        "venue": "Fenway Park",
+        "gameDate": "2026-08-17T23:10:00Z",
+        "away": {
+          "id": 109,
+          "name": "Arizona Diamondbacks",
+          "score": null,
+          "record": {
+            "wins": 65,
+            "losses": 58,
+            "ties": 0,
+            "pct": ".528"
+          }
+        },
+        "home": {
+          "id": 111,
+          "name": "Boston Red Sox",
+          "score": null,
+          "record": {
+            "wins": 65,
+            "losses": 57,
+            "ties": 0,
+            "pct": ".533"
+          }
+        },
+        "probable": {
+          "away": "",
+          "home": ""
+        },
+        "decisions": {
+          "winner": "",
+          "loser": "",
+          "save": ""
+        }
+      },
+      {
+        "id": 823589,
+        "status": "Scheduled",
+        "venue": "Citi Field",
+        "gameDate": "2026-08-17T23:10:00Z",
+        "away": {
+          "id": 135,
+          "name": "San Diego Padres",
+          "score": null,
+          "record": {
+            "wins": 66,
+            "losses": 57,
+            "ties": 0,
+            "pct": ".537"
+          }
+        },
+        "home": {
+          "id": 121,
+          "name": "New York Mets",
+          "score": null,
+          "record": {
+            "wins": 54,
+            "losses": 69,
+            "ties": 0,
+            "pct": ".439"
+          }
+        },
+        "probable": {
+          "away": "",
+          "home": "Nolan McLean"
+        },
+        "decisions": {
+          "winner": "",
+          "loser": "",
+          "save": ""
+        }
+      },
+      {
+        "id": 824077,
+        "status": "Scheduled",
+        "venue": "Kauffman Stadium",
+        "gameDate": "2026-08-17T23:40:00Z",
+        "away": {
+          "id": 133,
+          "name": "Athletics",
+          "score": null,
+          "record": {
+            "wins": 48,
+            "losses": 74,
+            "ties": 0,
+            "pct": ".393"
+          }
+        },
+        "home": {
+          "id": 118,
+          "name": "Kansas City Royals",
+          "score": null,
+          "record": {
+            "wins": 50,
+            "losses": 73,
+            "ties": 0,
+            "pct": ".407"
+          }
+        },
+        "probable": {
+          "away": "",
+          "home": ""
+        },
+        "decisions": {
+          "winner": "",
+          "loser": "",
+          "save": ""
+        }
+      },
+      {
+        "id": 823668,
+        "status": "Scheduled",
+        "venue": "Target Field",
+        "gameDate": "2026-08-17T23:40:00Z",
+        "away": {
+          "id": 144,
+          "name": "Atlanta Braves",
+          "score": null,
+          "record": {
+            "wins": 73,
+            "losses": 49,
+            "ties": 0,
+            "pct": ".598"
+          }
+        },
+        "home": {
+          "id": 142,
+          "name": "Minnesota Twins",
+          "score": null,
+          "record": {
+            "wins": 60,
+            "losses": 63,
+            "ties": 0,
+            "pct": ".488"
+          }
+        },
+        "probable": {
+          "away": "",
+          "home": ""
+        },
+        "decisions": {
+          "winner": "",
+          "loser": "",
+          "save": ""
+        }
+      },
+      {
+        "id": 824641,
+        "status": "Scheduled",
+        "venue": "Wrigley Field",
+        "gameDate": "2026-08-18T00:05:00Z",
+        "away": {
+          "id": 145,
+          "name": "Chicago White Sox",
+          "score": null,
+          "record": {
+            "wins": 64,
+            "losses": 58,
+            "ties": 0,
+            "pct": ".525"
+          }
+        },
+        "home": {
+          "id": 112,
+          "name": "Chicago Cubs",
+          "score": null,
+          "record": {
+            "wins": 72,
+            "losses": 52,
+            "ties": 0,
+            "pct": ".581"
+          }
+        },
+        "probable": {
+          "away": "",
+          "home": "Shota Imanaga"
+        },
+        "decisions": {
+          "winner": "",
+          "loser": "",
+          "save": ""
+        }
+      },
+      {
+        "id": 824320,
+        "status": "Scheduled",
+        "venue": "Coors Field",
+        "gameDate": "2026-08-18T00:40:00Z",
+        "away": {
+          "id": 119,
+          "name": "Los Angeles Dodgers",
+          "score": null,
+          "record": {
+            "wins": 74,
+            "losses": 49,
+            "ties": 0,
+            "pct": ".602"
+          }
+        },
+        "home": {
+          "id": 115,
+          "name": "Colorado Rockies",
+          "score": null,
+          "record": {
+            "wins": 49,
+            "losses": 73,
+            "ties": 0,
+            "pct": ".402"
+          }
+        },
+        "probable": {
+          "away": "",
+          "home": ""
+        },
+        "decisions": {
+          "winner": "",
+          "loser": "",
+          "save": ""
+        }
+      }
     ]
   },
-  "updatedAt": "2026-08-15T07:30:34.748Z",
+  "updatedAt": "2026-08-15T22:13:24.458Z",
   "source": "MLB Stats API"
 }
