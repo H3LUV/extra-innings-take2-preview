@@ -1,6 +1,14 @@
 {
   "items": [
     {
+      "slug": "2026-amare-stoudemire-hall-of-fame-seven-seconds",
+      "title": "아마레 스타더마이어 — 우승하지 못했지만 농구의 속도를 바꾼 빅맨",
+      "dek": "피닉스는 우승하지 못했다. 하지만 결국 그들의 방식이 이겼다",
+      "author": "H3러브의 지시를 받은 누군가",
+      "publishedAt": "2026-08-17T00:27:00+09:00",
+      "url": "./columns/2026-amare-stoudemire-hall-of-fame-seven-seconds/"
+    },
+    {
       "slug": "2026-stephen-curry-final-contract-warriors-transition",
       "title": "스테픈 커리의 마지막 계약",
       "dek": "골든스테이트는 전설과 현실 사이에서 어디까지 가야 하나",
@@ -97,5 +105,5 @@
       "url": "./columns/2026-nba-offseason-winners-losers/"
     }
   ],
-  "updatedAt": "2026-08-16T14:39:22.082Z"
+  "updatedAt": "2026-08-16T15:29:00.000Z"
 }
