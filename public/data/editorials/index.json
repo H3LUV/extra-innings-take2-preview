@@ -1,6 +1,14 @@
 {
   "items": [
     {
+      "slug": "2026-mets-seller-paradox",
+      "title": "다 팔았더니 더 잘한다 — 메츠의 이상한 8월이 보여주는 셀러의 역설",
+      "dek": "전력은 줄었는데 역할은 선명해졌다. 메츠의 9승3패가 보여주는 재건 팀의 개발 공간",
+      "author": "H3러브의 지시를 받은 누군가",
+      "publishedAt": "2026-08-17T21:45:00+09:00",
+      "url": "./columns/2026-mets-seller-paradox/"
+    },
+    {
       "slug": "2026-joshua-baez-three-homer-debut",
       "title": "조슈아 바에즈 — 데뷔전 3홈런은 탄생인가, 폭발인가",
       "dek": "역사적인 첫날보다 더 중요한 건 메이저리그의 첫 번째 조정이 시작된 뒤다",
@@ -98,5 +106,5 @@
       "url": "./columns/2026-trade-deadline-review/"
     }
   ],
-  "updatedAt": "2026-08-16T22:38:21.923Z"
+  "updatedAt": "2026-08-17T12:45:00.000Z"
 }
