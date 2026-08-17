@@ -46,6 +46,20 @@
       "opsDelta": 0.47400000000000003
     },
     {
+      "id": 691023,
+      "name": "Jordan Walker",
+      "team": "St. Louis Cardinals",
+      "seasonPa": 516,
+      "recentPa": 41,
+      "previousPa": 61,
+      "recentAvg": 0.297,
+      "recentObp": 0.366,
+      "recentSlg": 0.568,
+      "recentOps": 0.934,
+      "previousOps": 0.533,
+      "opsDelta": 0.401
+    },
+    {
       "id": 694384,
       "name": "Nolan Schanuel",
       "team": "Los Angeles Angels",
@@ -58,20 +72,6 @@
       "recentOps": 0.927,
       "previousOps": 0.533,
       "opsDelta": 0.394
-    },
-    {
-      "id": 624413,
-      "name": "Pete Alonso",
-      "team": "Baltimore Orioles",
-      "seasonPa": 538,
-      "recentPa": 52,
-      "previousPa": 48,
-      "recentAvg": 0.409,
-      "recentObp": 0.5,
-      "recentSlg": 0.727,
-      "recentOps": 1.227,
-      "previousOps": 0.844,
-      "opsDelta": 0.3830000000000001
     }
   ],
   "method": "시즌 180타석 이상, 최근·직전 14일 각각 28타석 이상, 최근 OPS 0.700 이상인 타자 대상. 원인이나 지속 가능성은 추론하지 않습니다.",
@@ -81,6 +81,6 @@
     "previousStart": "2026-07-21",
     "previousEnd": "2026-08-03"
   },
-  "updatedAt": "2026-08-17T15:32:17.230Z",
+  "updatedAt": "2026-08-17T22:16:22.369Z",
   "source": "MLB Stats API"
 }

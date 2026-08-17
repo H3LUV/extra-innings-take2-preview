@@ -230,11 +230,11 @@
         {
           "id": 138,
           "name": "St. Louis Cardinals",
-          "w": 63,
+          "w": 64,
           "l": 61,
-          "pct": ".508",
-          "gb": "13.5",
-          "streak": "W2"
+          "pct": ".512",
+          "gb": "13.0",
+          "streak": "W3"
         },
         {
           "id": 134,
@@ -249,10 +249,10 @@
           "id": 113,
           "name": "Cincinnati Reds",
           "w": 59,
-          "l": 64,
-          "pct": ".480",
-          "gb": "17.0",
-          "streak": "L2"
+          "l": 65,
+          "pct": ".476",
+          "gb": "17.5",
+          "streak": "L3"
         }
       ]
     },
@@ -308,6 +308,6 @@
       ]
     }
   ],
-  "updatedAt": "2026-08-17T07:53:11.896Z",
+  "updatedAt": "2026-08-17T22:16:22.646Z",
   "source": "MLB Stats API"
 }
