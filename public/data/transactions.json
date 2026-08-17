@@ -29,7 +29,35 @@
       "sourceLink": "https://www.nba.com/players/transactions"
     },
     {
-      "id": "signing-2026-08-13-2",
+      "id": "signing-2026-08-17-2",
+      "type": "Signing",
+      "typeKo": "계약",
+      "date": "2026-08-17T00:00:00",
+      "dateKo": "8월 17일",
+      "title": "계약 · 8월 17일",
+      "descriptionKo": "휴스턴 로키츠가 가드 Sean Pedulla와 투웨이 계약을 체결했습니다.",
+      "descriptions": [
+        "Houston Rockets signed guard Sean Pedulla to a Two-Way Contract."
+      ],
+      "source": "NBA.com",
+      "sourceLink": "https://www.nba.com/players/transactions"
+    },
+    {
+      "id": "signing-2026-08-17-3",
+      "type": "Signing",
+      "typeKo": "계약",
+      "date": "2026-08-17T00:00:00",
+      "dateKo": "8월 17일",
+      "title": "계약 · 8월 17일",
+      "descriptionKo": "뉴올리언스 펠리컨스가 가드 Trendon Watford와 계약을 체결했습니다.",
+      "descriptions": [
+        "New Orleans Pelicans signed guard Trendon Watford to a Contract."
+      ],
+      "source": "NBA.com",
+      "sourceLink": "https://www.nba.com/players/transactions"
+    },
+    {
+      "id": "signing-2026-08-13-4",
       "type": "Signing",
       "typeKo": "계약",
       "date": "2026-08-13T00:00:00",
@@ -43,7 +71,7 @@
       "sourceLink": "https://www.nba.com/players/transactions"
     },
     {
-      "id": "waive-2026-08-13-3",
+      "id": "waive-2026-08-13-5",
       "type": "Waive",
       "typeKo": "방출",
       "date": "2026-08-13T00:00:00",
@@ -57,7 +85,7 @@
       "sourceLink": "https://www.nba.com/players/transactions"
     },
     {
-      "id": "signing-2026-08-12-4",
+      "id": "signing-2026-08-12-6",
       "type": "Signing",
       "typeKo": "계약",
       "date": "2026-08-12T00:00:00",
@@ -71,7 +99,7 @@
       "sourceLink": "https://www.nba.com/players/transactions"
     },
     {
-      "id": "waive-2026-08-12-5",
+      "id": "waive-2026-08-12-7",
       "type": "Waive",
       "typeKo": "방출",
       "date": "2026-08-12T00:00:00",
@@ -85,7 +113,7 @@
       "sourceLink": "https://www.nba.com/players/transactions"
     },
     {
-      "id": "signing-2026-08-08-6",
+      "id": "signing-2026-08-08-8",
       "type": "Signing",
       "typeKo": "계약",
       "date": "2026-08-08T00:00:00",
@@ -99,7 +127,7 @@
       "sourceLink": "https://www.nba.com/players/transactions"
     },
     {
-      "id": "signing-2026-08-06-7",
+      "id": "signing-2026-08-06-9",
       "type": "Signing",
       "typeKo": "계약",
       "date": "2026-08-06T00:00:00",
@@ -113,7 +141,7 @@
       "sourceLink": "https://www.nba.com/players/transactions"
     },
     {
-      "id": "waive-2026-08-06-8",
+      "id": "waive-2026-08-06-10",
       "type": "Waive",
       "typeKo": "방출",
       "date": "2026-08-06T00:00:00",
@@ -127,7 +155,7 @@
       "sourceLink": "https://www.nba.com/players/transactions"
     },
     {
-      "id": "signing-2026-08-05-9",
+      "id": "signing-2026-08-05-11",
       "type": "Signing",
       "typeKo": "계약",
       "date": "2026-08-05T00:00:00",
@@ -141,7 +169,7 @@
       "sourceLink": "https://www.nba.com/players/transactions"
     },
     {
-      "id": "signing-2026-08-05-10",
+      "id": "signing-2026-08-05-12",
       "type": "Signing",
       "typeKo": "계약",
       "date": "2026-08-05T00:00:00",
@@ -155,7 +183,7 @@
       "sourceLink": "https://www.nba.com/players/transactions"
     },
     {
-      "id": "waive-2026-08-05-11",
+      "id": "waive-2026-08-05-13",
       "type": "Waive",
       "typeKo": "방출",
       "date": "2026-08-05T00:00:00",
@@ -169,7 +197,7 @@
       "sourceLink": "https://www.nba.com/players/transactions"
     },
     {
-      "id": "signing-2026-08-04-12",
+      "id": "signing-2026-08-04-14",
       "type": "Signing",
       "typeKo": "계약",
       "date": "2026-08-04T00:00:00",
@@ -183,7 +211,7 @@
       "sourceLink": "https://www.nba.com/players/transactions"
     },
     {
-      "id": "signing-2026-08-02-13",
+      "id": "signing-2026-08-02-15",
       "type": "Signing",
       "typeKo": "계약",
       "date": "2026-08-02T00:00:00",
@@ -197,7 +225,7 @@
       "sourceLink": "https://www.nba.com/players/transactions"
     },
     {
-      "id": "signing-2026-08-01-14",
+      "id": "signing-2026-08-01-16",
       "type": "Signing",
       "typeKo": "계약",
       "date": "2026-08-01T00:00:00",
@@ -211,7 +239,7 @@
       "sourceLink": "https://www.nba.com/players/transactions"
     },
     {
-      "id": "signing-2026-07-31-15",
+      "id": "signing-2026-07-31-17",
       "type": "Signing",
       "typeKo": "계약",
       "date": "2026-07-31T00:00:00",
@@ -223,37 +251,9 @@
       ],
       "source": "NBA.com",
       "sourceLink": "https://www.nba.com/players/transactions"
-    },
-    {
-      "id": "signing-2026-07-31-16",
-      "type": "Signing",
-      "typeKo": "계약",
-      "date": "2026-07-31T00:00:00",
-      "dateKo": "7월 31일",
-      "title": "계약 · 7월 31일",
-      "descriptionKo": "브루클린 네츠가 포워드 Moritz Wagner와 계약을 체결했습니다.",
-      "descriptions": [
-        "Brooklyn Nets signed forward Moritz Wagner to a Contract."
-      ],
-      "source": "NBA.com",
-      "sourceLink": "https://www.nba.com/players/transactions"
-    },
-    {
-      "id": "signing-2026-07-31-17",
-      "type": "Signing",
-      "typeKo": "계약",
-      "date": "2026-07-31T00:00:00",
-      "dateKo": "7월 31일",
-      "title": "계약 · 7월 31일",
-      "descriptionKo": "클리블랜드 캐벌리어스가 포워드 Mario Hezonja와 계약을 체결했습니다.",
-      "descriptions": [
-        "Cleveland Cavaliers signed forward Mario Hezonja to a Contract."
-      ],
-      "source": "NBA.com",
-      "sourceLink": "https://www.nba.com/players/transactions"
     }
   ],
   "message": "",
   "source": "NBA 공식 Player Movement 데이터",
-  "updatedAt": "2026-08-17T21:41:11.792Z"
+  "updatedAt": "2026-08-17T22:41:26.479Z"
 }
