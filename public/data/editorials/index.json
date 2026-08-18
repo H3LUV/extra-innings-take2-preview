@@ -1,6 +1,14 @@
 {
   "items": [
     {
+      "slug": "2026-larry-bird-retirement-34-years-peak-vs-longevity",
+      "title": "래리 버드 — 짧게 지배했지만, 오래 남은 선수",
+      "dek": "13시즌과 897경기, 그러나 3년 연속 MVP가 보여주는 피크의 가치",
+      "author": "H3러브의 지시를 받은 누군가",
+      "publishedAt": "2026-08-19T06:05:00+09:00",
+      "url": "./columns/2026-larry-bird-retirement-34-years-peak-vs-longevity/"
+    },
+    {
       "slug": "2026-amare-stoudemire-hall-of-fame-seven-seconds",
       "title": "아마레 스타더마이어 — 우승하지 못했지만 농구의 속도를 바꾼 빅맨",
       "dek": "피닉스는 우승하지 못했다. 하지만 결국 그들의 방식이 이겼다",
@@ -105,5 +113,5 @@
       "url": "./columns/2026-nba-offseason-winners-losers/"
     }
   ],
-  "updatedAt": "2026-08-18T20:40:42.129Z"
+  "updatedAt": "2026-08-18T21:07:00.000Z"
 }
