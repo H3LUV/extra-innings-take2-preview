@@ -1,7 +1,21 @@
 {
   "items": [
     {
-      "id": "signing-2026-08-17-0",
+      "id": "signing-2026-08-18-0",
+      "type": "Signing",
+      "typeKo": "계약",
+      "date": "2026-08-18T00:00:00",
+      "dateKo": "8월 18일",
+      "title": "계약 · 8월 18일",
+      "descriptionKo": "뉴올리언스 펠리컨스가  Malik Dia와 투웨이 계약을 체결했습니다.",
+      "descriptions": [
+        "New Orleans Pelicans signed  Malik Dia to a Two-Way Contract."
+      ],
+      "source": "NBA.com",
+      "sourceLink": "https://www.nba.com/players/transactions"
+    },
+    {
+      "id": "signing-2026-08-17-1",
       "type": "Signing",
       "typeKo": "계약",
       "date": "2026-08-17T00:00:00",
@@ -15,7 +29,7 @@
       "sourceLink": "https://www.nba.com/players/transactions"
     },
     {
-      "id": "signing-2026-08-17-1",
+      "id": "signing-2026-08-17-2",
       "type": "Signing",
       "typeKo": "계약",
       "date": "2026-08-17T00:00:00",
@@ -29,7 +43,7 @@
       "sourceLink": "https://www.nba.com/players/transactions"
     },
     {
-      "id": "signing-2026-08-17-2",
+      "id": "signing-2026-08-17-3",
       "type": "Signing",
       "typeKo": "계약",
       "date": "2026-08-17T00:00:00",
@@ -43,7 +57,7 @@
       "sourceLink": "https://www.nba.com/players/transactions"
     },
     {
-      "id": "signing-2026-08-17-3",
+      "id": "signing-2026-08-17-4",
       "type": "Signing",
       "typeKo": "계약",
       "date": "2026-08-17T00:00:00",
@@ -57,7 +71,7 @@
       "sourceLink": "https://www.nba.com/players/transactions"
     },
     {
-      "id": "signing-2026-08-13-4",
+      "id": "signing-2026-08-13-5",
       "type": "Signing",
       "typeKo": "계약",
       "date": "2026-08-13T00:00:00",
@@ -71,7 +85,7 @@
       "sourceLink": "https://www.nba.com/players/transactions"
     },
     {
-      "id": "waive-2026-08-13-5",
+      "id": "waive-2026-08-13-6",
       "type": "Waive",
       "typeKo": "방출",
       "date": "2026-08-13T00:00:00",
@@ -85,7 +99,7 @@
       "sourceLink": "https://www.nba.com/players/transactions"
     },
     {
-      "id": "signing-2026-08-12-6",
+      "id": "signing-2026-08-12-7",
       "type": "Signing",
       "typeKo": "계약",
       "date": "2026-08-12T00:00:00",
@@ -99,7 +113,7 @@
       "sourceLink": "https://www.nba.com/players/transactions"
     },
     {
-      "id": "waive-2026-08-12-7",
+      "id": "waive-2026-08-12-8",
       "type": "Waive",
       "typeKo": "방출",
       "date": "2026-08-12T00:00:00",
@@ -113,7 +127,7 @@
       "sourceLink": "https://www.nba.com/players/transactions"
     },
     {
-      "id": "signing-2026-08-08-8",
+      "id": "signing-2026-08-08-9",
       "type": "Signing",
       "typeKo": "계약",
       "date": "2026-08-08T00:00:00",
@@ -127,7 +141,7 @@
       "sourceLink": "https://www.nba.com/players/transactions"
     },
     {
-      "id": "signing-2026-08-06-9",
+      "id": "signing-2026-08-06-10",
       "type": "Signing",
       "typeKo": "계약",
       "date": "2026-08-06T00:00:00",
@@ -141,7 +155,7 @@
       "sourceLink": "https://www.nba.com/players/transactions"
     },
     {
-      "id": "waive-2026-08-06-10",
+      "id": "waive-2026-08-06-11",
       "type": "Waive",
       "typeKo": "방출",
       "date": "2026-08-06T00:00:00",
@@ -155,7 +169,7 @@
       "sourceLink": "https://www.nba.com/players/transactions"
     },
     {
-      "id": "signing-2026-08-05-11",
+      "id": "signing-2026-08-05-12",
       "type": "Signing",
       "typeKo": "계약",
       "date": "2026-08-05T00:00:00",
@@ -169,7 +183,7 @@
       "sourceLink": "https://www.nba.com/players/transactions"
     },
     {
-      "id": "signing-2026-08-05-12",
+      "id": "signing-2026-08-05-13",
       "type": "Signing",
       "typeKo": "계약",
       "date": "2026-08-05T00:00:00",
@@ -183,7 +197,7 @@
       "sourceLink": "https://www.nba.com/players/transactions"
     },
     {
-      "id": "waive-2026-08-05-13",
+      "id": "waive-2026-08-05-14",
       "type": "Waive",
       "typeKo": "방출",
       "date": "2026-08-05T00:00:00",
@@ -197,7 +211,7 @@
       "sourceLink": "https://www.nba.com/players/transactions"
     },
     {
-      "id": "signing-2026-08-04-14",
+      "id": "signing-2026-08-04-15",
       "type": "Signing",
       "typeKo": "계약",
       "date": "2026-08-04T00:00:00",
@@ -211,7 +225,7 @@
       "sourceLink": "https://www.nba.com/players/transactions"
     },
     {
-      "id": "signing-2026-08-02-15",
+      "id": "signing-2026-08-02-16",
       "type": "Signing",
       "typeKo": "계약",
       "date": "2026-08-02T00:00:00",
@@ -225,7 +239,7 @@
       "sourceLink": "https://www.nba.com/players/transactions"
     },
     {
-      "id": "signing-2026-08-01-16",
+      "id": "signing-2026-08-01-17",
       "type": "Signing",
       "typeKo": "계약",
       "date": "2026-08-01T00:00:00",
@@ -237,23 +251,9 @@
       ],
       "source": "NBA.com",
       "sourceLink": "https://www.nba.com/players/transactions"
-    },
-    {
-      "id": "signing-2026-07-31-17",
-      "type": "Signing",
-      "typeKo": "계약",
-      "date": "2026-07-31T00:00:00",
-      "dateKo": "7월 31일",
-      "title": "계약 · 7월 31일",
-      "descriptionKo": "덴버 너기츠가 포워드 Spencer Jones와 계약을 체결했습니다.",
-      "descriptions": [
-        "Denver Nuggets signed forward Spencer Jones to a Contract."
-      ],
-      "source": "NBA.com",
-      "sourceLink": "https://www.nba.com/players/transactions"
     }
   ],
   "message": "",
   "source": "NBA 공식 Player Movement 데이터",
-  "updatedAt": "2026-08-18T19:41:01.363Z"
+  "updatedAt": "2026-08-18T20:40:43.055Z"
 }
