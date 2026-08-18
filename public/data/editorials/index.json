@@ -1,6 +1,14 @@
 {
   "items": [
     {
+      "slug": "2026-tommy-john-tribute",
+      "title": "토미 존 — 자신의 이름보다 더 많은 커리어를 살린 투수",
+      "dek": "288승보다 더 오래 남은 이름, 야구가 팔꿈치 부상을 마지막 장으로만 쓰지 않게 만든 사람",
+      "author": "H3러브의 지시를 받은 누군가",
+      "publishedAt": "2026-08-18T18:20:00+09:00",
+      "url": "./columns/2026-tommy-john-tribute/"
+    },
+    {
       "slug": "2026-mets-seller-paradox",
       "title": "다 팔았더니 더 잘한다 — 메츠의 이상한 8월이 보여주는 셀러의 역설",
       "dek": "전력은 줄었는데 역할은 선명해졌다. 메츠의 9승3패가 보여주는 재건 팀의 개발 공간",
@@ -106,5 +114,5 @@
       "url": "./columns/2026-trade-deadline-review/"
     }
   ],
-  "updatedAt": "2026-08-17T22:42:41.544Z"
+  "updatedAt": "2026-08-18T09:21:30.000Z"
 }
