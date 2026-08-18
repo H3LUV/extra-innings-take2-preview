@@ -43,29 +43,29 @@
       },
       {
         "id": 822939,
-        "status": "In Progress",
+        "status": "Final",
         "venue": "Tropicana Field",
         "gameDate": "2026-08-17T22:05:00Z",
         "away": {
           "id": 110,
           "name": "Baltimore Orioles",
-          "score": 0,
+          "score": 6,
           "record": {
             "wins": 61,
-            "losses": 63,
+            "losses": 64,
             "ties": 0,
-            "pct": ".492"
+            "pct": ".488"
           }
         },
         "home": {
           "id": 139,
           "name": "Tampa Bay Rays",
-          "score": 0,
+          "score": 7,
           "record": {
-            "wins": 74,
+            "wins": 75,
             "losses": 49,
             "ties": 0,
-            "pct": ".602"
+            "pct": ".605"
           }
         },
         "probable": {
@@ -73,253 +73,31 @@
           "home": "Shane McClanahan"
         },
         "decisions": {
-          "winner": "",
-          "loser": "",
-          "save": ""
+          "winner": "Cam Booser",
+          "loser": "Yennier Cano",
+          "save": "Bryan Baker"
         }
       },
       {
         "id": 824478,
-        "status": "Warmup",
+        "status": "Final",
         "venue": "Great American Ball Park",
         "gameDate": "2026-08-17T22:40:00Z",
         "away": {
           "id": 138,
           "name": "St. Louis Cardinals",
-          "score": 0,
+          "score": 5,
           "record": {
             "wins": 64,
-            "losses": 61,
+            "losses": 62,
             "ties": 0,
-            "pct": ".512"
+            "pct": ".508"
           }
         },
         "home": {
           "id": 113,
           "name": "Cincinnati Reds",
-          "score": 0,
-          "record": {
-            "wins": 59,
-            "losses": 65,
-            "ties": 0,
-            "pct": ".476"
-          }
-        },
-        "probable": {
-          "away": "Andre Pallante",
-          "home": "Rhett Lowder"
-        },
-        "decisions": {
-          "winner": "",
-          "loser": "",
-          "save": ""
-        }
-      },
-      {
-        "id": 823427,
-        "status": "Pre-Game",
-        "venue": "Citizens Bank Park",
-        "gameDate": "2026-08-17T22:40:00Z",
-        "away": {
-          "id": 146,
-          "name": "Miami Marlins",
-          "score": 0,
-          "record": {
-            "wins": 64,
-            "losses": 61,
-            "ties": 0,
-            "pct": ".512"
-          }
-        },
-        "home": {
-          "id": 143,
-          "name": "Philadelphia Phillies",
-          "score": 0,
-          "record": {
-            "wins": 67,
-            "losses": 58,
-            "ties": 0,
-            "pct": ".536"
-          }
-        },
-        "probable": {
-          "away": "Janson Junk",
-          "home": "Cristopher Sánchez"
-        },
-        "decisions": {
-          "winner": "",
-          "loser": "",
-          "save": ""
-        }
-      },
-      {
-        "id": 823343,
-        "status": "Pre-Game",
-        "venue": "PNC Park",
-        "gameDate": "2026-08-17T23:05:00Z",
-        "away": {
-          "id": 116,
-          "name": "Detroit Tigers",
-          "score": 0,
-          "record": {
-            "wins": 60,
-            "losses": 64,
-            "ties": 0,
-            "pct": ".484"
-          }
-        },
-        "home": {
-          "id": 134,
-          "name": "Pittsburgh Pirates",
-          "score": 0,
-          "record": {
-            "wins": 61,
-            "losses": 65,
-            "ties": 0,
-            "pct": ".484"
-          }
-        },
-        "probable": {
-          "away": "Framber Valdez",
-          "home": "Carmen Mlodzinski"
-        },
-        "decisions": {
-          "winner": "",
-          "loser": "",
-          "save": ""
-        }
-      },
-      {
-        "id": 824725,
-        "status": "Pre-Game",
-        "venue": "Fenway Park",
-        "gameDate": "2026-08-17T23:10:00Z",
-        "away": {
-          "id": 109,
-          "name": "Arizona Diamondbacks",
-          "score": null,
-          "record": {
-            "wins": 66,
-            "losses": 59,
-            "ties": 0,
-            "pct": ".528"
-          }
-        },
-        "home": {
-          "id": 111,
-          "name": "Boston Red Sox",
-          "score": null,
-          "record": {
-            "wins": 66,
-            "losses": 58,
-            "ties": 0,
-            "pct": ".532"
-          }
-        },
-        "probable": {
-          "away": "Mitch Bratt",
-          "home": "Alec Gamboa"
-        },
-        "decisions": {
-          "winner": "",
-          "loser": "",
-          "save": ""
-        }
-      },
-      {
-        "id": 823589,
-        "status": "Pre-Game",
-        "venue": "Citi Field",
-        "gameDate": "2026-08-17T23:10:00Z",
-        "away": {
-          "id": 135,
-          "name": "San Diego Padres",
-          "score": 0,
-          "record": {
-            "wins": 67,
-            "losses": 58,
-            "ties": 0,
-            "pct": ".536"
-          }
-        },
-        "home": {
-          "id": 121,
-          "name": "New York Mets",
-          "score": 0,
-          "record": {
-            "wins": 56,
-            "losses": 69,
-            "ties": 0,
-            "pct": ".448"
-          }
-        },
-        "probable": {
-          "away": "Walker Buehler",
-          "home": "Nolan McLean"
-        },
-        "decisions": {
-          "winner": "",
-          "loser": "",
-          "save": ""
-        }
-      },
-      {
-        "id": 824077,
-        "status": "Pre-Game",
-        "venue": "Kauffman Stadium",
-        "gameDate": "2026-08-17T23:40:00Z",
-        "away": {
-          "id": 133,
-          "name": "Athletics",
-          "score": 0,
-          "record": {
-            "wins": 49,
-            "losses": 75,
-            "ties": 0,
-            "pct": ".395"
-          }
-        },
-        "home": {
-          "id": 118,
-          "name": "Kansas City Royals",
-          "score": 0,
-          "record": {
-            "wins": 51,
-            "losses": 74,
-            "ties": 0,
-            "pct": ".408"
-          }
-        },
-        "probable": {
-          "away": "Mason Barnett",
-          "home": "Michael Wacha"
-        },
-        "decisions": {
-          "winner": "",
-          "loser": "",
-          "save": ""
-        }
-      },
-      {
-        "id": 823668,
-        "status": "Pre-Game",
-        "venue": "Target Field",
-        "gameDate": "2026-08-17T23:40:00Z",
-        "away": {
-          "id": 144,
-          "name": "Atlanta Braves",
-          "score": 0,
-          "record": {
-            "wins": 74,
-            "losses": 50,
-            "ties": 0,
-            "pct": ".597"
-          }
-        },
-        "home": {
-          "id": 142,
-          "name": "Minnesota Twins",
-          "score": 0,
+          "score": 6,
           "record": {
             "wins": 60,
             "losses": 65,
@@ -328,61 +106,209 @@
           }
         },
         "probable": {
-          "away": "Martín Pérez",
-          "home": "Bailey Ober"
+          "away": "Andre Pallante",
+          "home": "Rhett Lowder"
         },
         "decisions": {
-          "winner": "",
-          "loser": "",
+          "winner": "Emilio Pagán",
+          "loser": "Justin Bruihl",
           "save": ""
         }
       },
       {
-        "id": 824641,
-        "status": "Pre-Game",
-        "venue": "Wrigley Field",
-        "gameDate": "2026-08-18T00:05:00Z",
+        "id": 823427,
+        "status": "Final",
+        "venue": "Citizens Bank Park",
+        "gameDate": "2026-08-17T22:40:00Z",
         "away": {
-          "id": 145,
-          "name": "Chicago White Sox",
-          "score": 0,
+          "id": 146,
+          "name": "Miami Marlins",
+          "score": 5,
           "record": {
-            "wins": 65,
-            "losses": 58,
+            "wins": 64,
+            "losses": 62,
             "ties": 0,
-            "pct": ".528"
+            "pct": ".508"
           }
         },
         "home": {
-          "id": 112,
-          "name": "Chicago Cubs",
-          "score": 0,
+          "id": 143,
+          "name": "Philadelphia Phillies",
+          "score": 6,
           "record": {
-            "wins": 72,
-            "losses": 53,
+            "wins": 68,
+            "losses": 58,
             "ties": 0,
-            "pct": ".576"
+            "pct": ".540"
           }
         },
         "probable": {
-          "away": "Luis Castillo",
-          "home": "Shota Imanaga"
+          "away": "Janson Junk",
+          "home": "Cristopher Sánchez"
         },
         "decisions": {
-          "winner": "",
-          "loser": "",
+          "winner": "Cristopher Sánchez",
+          "loser": "Janson Junk",
+          "save": "Jhoan Duran"
+        }
+      },
+      {
+        "id": 823343,
+        "status": "Final",
+        "venue": "PNC Park",
+        "gameDate": "2026-08-17T23:05:00Z",
+        "away": {
+          "id": 116,
+          "name": "Detroit Tigers",
+          "score": 8,
+          "record": {
+            "wins": 61,
+            "losses": 64,
+            "ties": 0,
+            "pct": ".488"
+          }
+        },
+        "home": {
+          "id": 134,
+          "name": "Pittsburgh Pirates",
+          "score": 5,
+          "record": {
+            "wins": 61,
+            "losses": 66,
+            "ties": 0,
+            "pct": ".480"
+          }
+        },
+        "probable": {
+          "away": "Framber Valdez",
+          "home": "Carmen Mlodzinski"
+        },
+        "decisions": {
+          "winner": "Framber Valdez",
+          "loser": "Carmen Mlodzinski",
+          "save": "Kenley Jansen"
+        }
+      },
+      {
+        "id": 824725,
+        "status": "Final",
+        "venue": "Fenway Park",
+        "gameDate": "2026-08-17T23:10:00Z",
+        "away": {
+          "id": 109,
+          "name": "Arizona Diamondbacks",
+          "score": 1,
+          "record": {
+            "wins": 66,
+            "losses": 60,
+            "ties": 0,
+            "pct": ".524"
+          }
+        },
+        "home": {
+          "id": 111,
+          "name": "Boston Red Sox",
+          "score": 11,
+          "record": {
+            "wins": 67,
+            "losses": 58,
+            "ties": 0,
+            "pct": ".536"
+          }
+        },
+        "probable": {
+          "away": "Mitch Bratt",
+          "home": "Alec Gamboa"
+        },
+        "decisions": {
+          "winner": "Brayan Bello",
+          "loser": "Mitch Bratt",
           "save": ""
         }
       },
       {
-        "id": 824320,
-        "status": "Pre-Game",
-        "venue": "Coors Field",
-        "gameDate": "2026-08-18T00:40:00Z",
+        "id": 823589,
+        "status": "Final",
+        "venue": "Citi Field",
+        "gameDate": "2026-08-17T23:10:00Z",
         "away": {
-          "id": 119,
-          "name": "Los Angeles Dodgers",
-          "score": 0,
+          "id": 135,
+          "name": "San Diego Padres",
+          "score": 1,
+          "record": {
+            "wins": 67,
+            "losses": 59,
+            "ties": 0,
+            "pct": ".532"
+          }
+        },
+        "home": {
+          "id": 121,
+          "name": "New York Mets",
+          "score": 2,
+          "record": {
+            "wins": 57,
+            "losses": 69,
+            "ties": 0,
+            "pct": ".452"
+          }
+        },
+        "probable": {
+          "away": "Walker Buehler",
+          "home": "Nolan McLean"
+        },
+        "decisions": {
+          "winner": "Nolan McLean",
+          "loser": "Walker Buehler",
+          "save": "Daniel Duarte"
+        }
+      },
+      {
+        "id": 824077,
+        "status": "Final",
+        "venue": "Kauffman Stadium",
+        "gameDate": "2026-08-17T23:40:00Z",
+        "away": {
+          "id": 133,
+          "name": "Athletics",
+          "score": 5,
+          "record": {
+            "wins": 49,
+            "losses": 76,
+            "ties": 0,
+            "pct": ".392"
+          }
+        },
+        "home": {
+          "id": 118,
+          "name": "Kansas City Royals",
+          "score": 9,
+          "record": {
+            "wins": 52,
+            "losses": 74,
+            "ties": 0,
+            "pct": ".413"
+          }
+        },
+        "probable": {
+          "away": "Mason Barnett",
+          "home": "Michael Wacha"
+        },
+        "decisions": {
+          "winner": "Michael Wacha",
+          "loser": "Mason Barnett",
+          "save": "Steven Cruz"
+        }
+      },
+      {
+        "id": 823668,
+        "status": "Final",
+        "venue": "Target Field",
+        "gameDate": "2026-08-17T23:40:00Z",
+        "away": {
+          "id": 144,
+          "name": "Atlanta Braves",
+          "score": 2,
           "record": {
             "wins": 74,
             "losses": 51,
@@ -391,14 +317,88 @@
           }
         },
         "home": {
+          "id": 142,
+          "name": "Minnesota Twins",
+          "score": 4,
+          "record": {
+            "wins": 61,
+            "losses": 65,
+            "ties": 0,
+            "pct": ".484"
+          }
+        },
+        "probable": {
+          "away": "Martín Pérez",
+          "home": "Bailey Ober"
+        },
+        "decisions": {
+          "winner": "Travis Adams",
+          "loser": "Martín Pérez",
+          "save": "Yoendrys Gómez"
+        }
+      },
+      {
+        "id": 824641,
+        "status": "Final",
+        "venue": "Wrigley Field",
+        "gameDate": "2026-08-18T00:05:00Z",
+        "away": {
+          "id": 145,
+          "name": "Chicago White Sox",
+          "score": 5,
+          "record": {
+            "wins": 65,
+            "losses": 59,
+            "ties": 0,
+            "pct": ".524"
+          }
+        },
+        "home": {
+          "id": 112,
+          "name": "Chicago Cubs",
+          "score": 7,
+          "record": {
+            "wins": 73,
+            "losses": 53,
+            "ties": 0,
+            "pct": ".579"
+          }
+        },
+        "probable": {
+          "away": "Luis Castillo",
+          "home": "Shota Imanaga"
+        },
+        "decisions": {
+          "winner": "Jacob Webb",
+          "loser": "Hagen Smith",
+          "save": ""
+        }
+      },
+      {
+        "id": 824320,
+        "status": "Final",
+        "venue": "Coors Field",
+        "gameDate": "2026-08-18T00:40:00Z",
+        "away": {
+          "id": 119,
+          "name": "Los Angeles Dodgers",
+          "score": 11,
+          "record": {
+            "wins": 75,
+            "losses": 51,
+            "ties": 0,
+            "pct": ".595"
+          }
+        },
+        "home": {
           "id": 115,
           "name": "Colorado Rockies",
-          "score": 0,
+          "score": 5,
           "record": {
             "wins": 50,
-            "losses": 74,
+            "losses": 75,
             "ties": 0,
-            "pct": ".403"
+            "pct": ".400"
           }
         },
         "probable": {
@@ -406,8 +406,8 @@
           "home": "Tomoyuki Sugano"
         },
         "decisions": {
-          "winner": "",
-          "loser": "",
+          "winner": "Blake Snell",
+          "loser": "Tomoyuki Sugano",
           "save": ""
         }
       }
@@ -435,9 +435,9 @@
           "score": null,
           "record": {
             "wins": 61,
-            "losses": 63,
+            "losses": 64,
             "ties": 0,
-            "pct": ".492"
+            "pct": ".488"
           }
         },
         "probable": {
@@ -460,10 +460,10 @@
           "name": "Detroit Tigers",
           "score": null,
           "record": {
-            "wins": 60,
+            "wins": 61,
             "losses": 64,
             "ties": 0,
-            "pct": ".484"
+            "pct": ".488"
           }
         },
         "home": {
@@ -472,9 +472,9 @@
           "score": null,
           "record": {
             "wins": 61,
-            "losses": 65,
+            "losses": 66,
             "ties": 0,
-            "pct": ".484"
+            "pct": ".480"
           }
         },
         "probable": {
@@ -535,9 +535,9 @@
           "score": null,
           "record": {
             "wins": 64,
-            "losses": 61,
+            "losses": 62,
             "ties": 0,
-            "pct": ".512"
+            "pct": ".508"
           }
         },
         "home": {
@@ -545,10 +545,10 @@
           "name": "Cincinnati Reds",
           "score": null,
           "record": {
-            "wins": 59,
+            "wins": 60,
             "losses": 65,
             "ties": 0,
-            "pct": ".476"
+            "pct": ".480"
           }
         },
         "probable": {
@@ -582,10 +582,10 @@
           "name": "Tampa Bay Rays",
           "score": null,
           "record": {
-            "wins": 74,
+            "wins": 75,
             "losses": 49,
             "ties": 0,
-            "pct": ".602"
+            "pct": ".605"
           }
         },
         "probable": {
@@ -609,9 +609,9 @@
           "score": null,
           "record": {
             "wins": 64,
-            "losses": 61,
+            "losses": 62,
             "ties": 0,
-            "pct": ".512"
+            "pct": ".508"
           }
         },
         "home": {
@@ -619,14 +619,14 @@
           "name": "Philadelphia Phillies",
           "score": null,
           "record": {
-            "wins": 67,
+            "wins": 68,
             "losses": 58,
             "ties": 0,
-            "pct": ".536"
+            "pct": ".540"
           }
         },
         "probable": {
-          "away": "",
+          "away": "Cade Gibson",
           "home": "Zack Wheeler"
         },
         "decisions": {
@@ -646,9 +646,9 @@
           "score": null,
           "record": {
             "wins": 66,
-            "losses": 59,
+            "losses": 60,
             "ties": 0,
-            "pct": ".528"
+            "pct": ".524"
           }
         },
         "home": {
@@ -656,10 +656,10 @@
           "name": "Boston Red Sox",
           "score": null,
           "record": {
-            "wins": 66,
+            "wins": 67,
             "losses": 58,
             "ties": 0,
-            "pct": ".532"
+            "pct": ".536"
           }
         },
         "probable": {
@@ -683,9 +683,9 @@
           "score": null,
           "record": {
             "wins": 67,
-            "losses": 58,
+            "losses": 59,
             "ties": 0,
-            "pct": ".536"
+            "pct": ".532"
           }
         },
         "home": {
@@ -693,10 +693,10 @@
           "name": "New York Mets",
           "score": null,
           "record": {
-            "wins": 56,
+            "wins": 57,
             "losses": 69,
             "ties": 0,
-            "pct": ".448"
+            "pct": ".452"
           }
         },
         "probable": {
@@ -720,9 +720,9 @@
           "score": null,
           "record": {
             "wins": 49,
-            "losses": 75,
+            "losses": 76,
             "ties": 0,
-            "pct": ".395"
+            "pct": ".392"
           }
         },
         "home": {
@@ -730,10 +730,10 @@
           "name": "Kansas City Royals",
           "score": null,
           "record": {
-            "wins": 51,
+            "wins": 52,
             "losses": 74,
             "ties": 0,
-            "pct": ".408"
+            "pct": ".413"
           }
         },
         "probable": {
@@ -757,9 +757,9 @@
           "score": null,
           "record": {
             "wins": 74,
-            "losses": 50,
+            "losses": 51,
             "ties": 0,
-            "pct": ".597"
+            "pct": ".592"
           }
         },
         "home": {
@@ -767,10 +767,10 @@
           "name": "Minnesota Twins",
           "score": null,
           "record": {
-            "wins": 60,
+            "wins": 61,
             "losses": 65,
             "ties": 0,
-            "pct": ".480"
+            "pct": ".484"
           }
         },
         "probable": {
@@ -868,9 +868,9 @@
           "score": null,
           "record": {
             "wins": 65,
-            "losses": 58,
+            "losses": 59,
             "ties": 0,
-            "pct": ".528"
+            "pct": ".524"
           }
         },
         "home": {
@@ -878,10 +878,10 @@
           "name": "Chicago Cubs",
           "score": null,
           "record": {
-            "wins": 72,
+            "wins": 73,
             "losses": 53,
             "ties": 0,
-            "pct": ".576"
+            "pct": ".579"
           }
         },
         "probable": {
@@ -941,10 +941,10 @@
           "name": "Los Angeles Dodgers",
           "score": null,
           "record": {
-            "wins": 74,
+            "wins": 75,
             "losses": 51,
             "ties": 0,
-            "pct": ".592"
+            "pct": ".595"
           }
         },
         "home": {
@@ -953,9 +953,9 @@
           "score": null,
           "record": {
             "wins": 50,
-            "losses": 74,
+            "losses": 75,
             "ties": 0,
-            "pct": ".403"
+            "pct": ".400"
           }
         },
         "probable": {
@@ -980,10 +980,10 @@
           "name": "Detroit Tigers",
           "score": null,
           "record": {
-            "wins": 60,
+            "wins": 61,
             "losses": 64,
             "ties": 0,
-            "pct": ".484"
+            "pct": ".488"
           }
         },
         "home": {
@@ -992,9 +992,9 @@
           "score": null,
           "record": {
             "wins": 61,
-            "losses": 65,
+            "losses": 66,
             "ties": 0,
-            "pct": ".484"
+            "pct": ".480"
           }
         },
         "probable": {
@@ -1018,9 +1018,9 @@
           "score": null,
           "record": {
             "wins": 67,
-            "losses": 58,
+            "losses": 59,
             "ties": 0,
-            "pct": ".536"
+            "pct": ".532"
           }
         },
         "home": {
@@ -1028,10 +1028,10 @@
           "name": "New York Mets",
           "score": null,
           "record": {
-            "wins": 56,
+            "wins": 57,
             "losses": 69,
             "ties": 0,
-            "pct": ".448"
+            "pct": ".452"
           }
         },
         "probable": {
@@ -1055,9 +1055,9 @@
           "score": null,
           "record": {
             "wins": 74,
-            "losses": 50,
+            "losses": 51,
             "ties": 0,
-            "pct": ".597"
+            "pct": ".592"
           }
         },
         "home": {
@@ -1065,10 +1065,10 @@
           "name": "Minnesota Twins",
           "score": null,
           "record": {
-            "wins": 60,
+            "wins": 61,
             "losses": 65,
             "ties": 0,
-            "pct": ".480"
+            "pct": ".484"
           }
         },
         "probable": {
@@ -1092,9 +1092,9 @@
           "score": null,
           "record": {
             "wins": 65,
-            "losses": 58,
+            "losses": 59,
             "ties": 0,
-            "pct": ".528"
+            "pct": ".524"
           }
         },
         "home": {
@@ -1102,10 +1102,10 @@
           "name": "Chicago Cubs",
           "score": null,
           "record": {
-            "wins": 72,
+            "wins": 73,
             "losses": 53,
             "ties": 0,
-            "pct": ".576"
+            "pct": ".579"
           }
         },
         "probable": {
@@ -1129,9 +1129,9 @@
           "score": null,
           "record": {
             "wins": 66,
-            "losses": 59,
+            "losses": 60,
             "ties": 0,
-            "pct": ".528"
+            "pct": ".524"
           }
         },
         "home": {
@@ -1139,10 +1139,10 @@
           "name": "Boston Red Sox",
           "score": null,
           "record": {
-            "wins": 66,
+            "wins": 67,
             "losses": 58,
             "ties": 0,
-            "pct": ".532"
+            "pct": ".536"
           }
         },
         "probable": {
@@ -1166,9 +1166,9 @@
           "score": null,
           "record": {
             "wins": 64,
-            "losses": 61,
+            "losses": 62,
             "ties": 0,
-            "pct": ".512"
+            "pct": ".508"
           }
         },
         "home": {
@@ -1176,10 +1176,10 @@
           "name": "Philadelphia Phillies",
           "score": null,
           "record": {
-            "wins": 67,
+            "wins": 68,
             "losses": 58,
             "ties": 0,
-            "pct": ".536"
+            "pct": ".540"
           }
         },
         "probable": {
@@ -1214,13 +1214,13 @@
           "score": null,
           "record": {
             "wins": 61,
-            "losses": 63,
+            "losses": 64,
             "ties": 0,
-            "pct": ".492"
+            "pct": ".488"
           }
         },
         "probable": {
-          "away": "Max Fried",
+          "away": "",
           "home": "Chris Bassitt"
         },
         "decisions": {
@@ -1277,9 +1277,9 @@
           "score": null,
           "record": {
             "wins": 64,
-            "losses": 61,
+            "losses": 62,
             "ties": 0,
-            "pct": ".512"
+            "pct": ".508"
           }
         },
         "home": {
@@ -1287,10 +1287,10 @@
           "name": "Cincinnati Reds",
           "score": null,
           "record": {
-            "wins": 59,
+            "wins": 60,
             "losses": 65,
             "ties": 0,
-            "pct": ".476"
+            "pct": ".480"
           }
         },
         "probable": {
@@ -1324,10 +1324,10 @@
           "name": "Tampa Bay Rays",
           "score": null,
           "record": {
-            "wins": 74,
+            "wins": 75,
             "losses": 49,
             "ties": 0,
-            "pct": ".602"
+            "pct": ".605"
           }
         },
         "probable": {
@@ -1351,9 +1351,9 @@
           "score": null,
           "record": {
             "wins": 49,
-            "losses": 75,
+            "losses": 76,
             "ties": 0,
-            "pct": ".395"
+            "pct": ".392"
           }
         },
         "home": {
@@ -1361,10 +1361,10 @@
           "name": "Kansas City Royals",
           "score": null,
           "record": {
-            "wins": 51,
+            "wins": 52,
             "losses": 74,
             "ties": 0,
-            "pct": ".408"
+            "pct": ".413"
           }
         },
         "probable": {
@@ -1498,10 +1498,10 @@
           "name": "Los Angeles Dodgers",
           "score": null,
           "record": {
-            "wins": 74,
+            "wins": 75,
             "losses": 51,
             "ties": 0,
-            "pct": ".592"
+            "pct": ".595"
           }
         },
         "home": {
@@ -1510,9 +1510,9 @@
           "score": null,
           "record": {
             "wins": 50,
-            "losses": 74,
+            "losses": 75,
             "ties": 0,
-            "pct": ".403"
+            "pct": ".400"
           }
         },
         "probable": {
@@ -1527,6 +1527,6 @@
       }
     ]
   },
-  "updatedAt": "2026-08-17T22:16:22.645Z",
+  "updatedAt": "2026-08-18T07:27:36.154Z",
   "source": "MLB Stats API"
 }
