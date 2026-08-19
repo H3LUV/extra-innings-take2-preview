@@ -32,46 +32,46 @@
       "opsDelta": 0.557
     },
     {
-      "id": 666182,
-      "name": "Bo Bichette",
-      "team": "New York Mets",
-      "seasonPa": 544,
-      "recentPa": 52,
-      "previousPa": 52,
-      "recentAvg": 0.391,
-      "recentObp": 0.462,
-      "recentSlg": 0.609,
-      "recentOps": 1.071,
-      "previousOps": 0.583,
-      "opsDelta": 0.488
-    },
-    {
-      "id": 670623,
-      "name": "Isaac Paredes",
-      "team": "Houston Astros",
-      "seasonPa": 505,
-      "recentPa": 42,
-      "previousPa": 53,
-      "recentAvg": 0.368,
-      "recentObp": 0.429,
-      "recentSlg": 0.526,
-      "recentOps": 0.955,
-      "previousOps": 0.488,
-      "opsDelta": 0.46699999999999997
-    },
-    {
       "id": 665487,
       "name": "Fernando Tatis Jr.",
       "team": "San Diego Padres",
-      "seasonPa": 551,
-      "recentPa": 52,
+      "seasonPa": 555,
+      "recentPa": 56,
       "previousPa": 55,
-      "recentAvg": 0.279,
-      "recentObp": 0.385,
-      "recentSlg": 0.744,
-      "recentOps": 1.129,
+      "recentAvg": 0.283,
+      "recentObp": 0.393,
+      "recentSlg": 0.739,
+      "recentOps": 1.132,
       "previousOps": 0.681,
-      "opsDelta": 0.44799999999999995
+      "opsDelta": 0.45099999999999985
+    },
+    {
+      "id": 666182,
+      "name": "Bo Bichette",
+      "team": "New York Mets",
+      "seasonPa": 548,
+      "recentPa": 56,
+      "previousPa": 52,
+      "recentAvg": 0.367,
+      "recentObp": 0.446,
+      "recentSlg": 0.571,
+      "recentOps": 1.017,
+      "previousOps": 0.583,
+      "opsDelta": 0.43399999999999994
+    },
+    {
+      "id": 656941,
+      "name": "Kyle Schwarber",
+      "team": "Philadelphia Phillies",
+      "seasonPa": 542,
+      "recentPa": 58,
+      "previousPa": 44,
+      "recentAvg": 0.292,
+      "recentObp": 0.386,
+      "recentSlg": 0.604,
+      "recentOps": 0.99,
+      "previousOps": 0.59,
+      "opsDelta": 0.4
     }
   ],
   "method": "시즌 180타석 이상, 최근·직전 14일 각각 28타석 이상, 최근 OPS 0.700 이상인 타자 대상. 원인이나 지속 가능성은 추론하지 않습니다.",
@@ -81,6 +81,6 @@
     "previousStart": "2026-07-23",
     "previousEnd": "2026-08-05"
   },
-  "updatedAt": "2026-08-19T15:38:51.527Z",
+  "updatedAt": "2026-08-19T22:17:08.106Z",
   "source": "MLB Stats API"
 }
