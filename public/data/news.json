@@ -3,19 +3,19 @@
     {
       "id": "nba-10f86037b83c",
       "articleFile": "./data/articles/nba-10f86037b83c.json",
-      "title": "Report: Nuggets deal Peyton Watson to Cavaliers in 4-team trade",
-      "titleKo": "보고서: 너겟츠는 페이튼 왓슨을 캐벌리어스에 4팀 트레이드로 거래했습니다.",
+      "title": "Reports: Nuggets deal Peyton Watson to Cavaliers in 5-team sign-and-trade",
+      "titleKo": "보고서: 너게츠는 페이튼 왓슨을 캐벌리어스에 5팀 사인 앤 트레이드로 거래했습니다.",
       "link": "https://www.nba.com/news/peyton-watson-trade-cavaliers",
       "pubDate": "2026-08-20T00:34:01Z",
       "source": "NBA.com",
       "category": "미국 현지 읽을거리",
       "readingMinutes": 4,
       "bodyVerified": true,
-      "bodyChars": 1355,
-      "sourceWordCount": 390,
+      "bodyChars": 1710,
+      "sourceWordCount": 477,
       "translationType": "full",
       "pipelineVersion": "reader-v6",
-      "translatedAt": "2026-08-20T14:58:09.572Z"
+      "translatedAt": "2026-08-20T15:50:38.049Z"
     },
     {
       "id": "nba-6fddc2814db1",
@@ -32,7 +32,7 @@
       "sourceWordCount": 1913,
       "translationType": "full",
       "pipelineVersion": "reader-v6",
-      "translatedAt": "2026-08-20T14:58:12.990Z"
+      "translatedAt": "2026-08-20T15:50:41.323Z"
     },
     {
       "id": "nba-574b77445cfa",
@@ -45,11 +45,11 @@
       "category": "미국 현지 읽을거리",
       "readingMinutes": 4,
       "bodyVerified": true,
-      "bodyChars": 2006,
+      "bodyChars": 2011,
       "sourceWordCount": 611,
       "translationType": "full",
       "pipelineVersion": "reader-v6",
-      "translatedAt": "2026-08-20T14:58:17.697Z"
+      "translatedAt": "2026-08-20T15:50:45.970Z"
     },
     {
       "id": "nba-e29ef99eef24",
@@ -62,11 +62,11 @@
       "category": "미국 현지 읽을거리",
       "readingMinutes": 8,
       "bodyVerified": true,
-      "bodyChars": 6075,
+      "bodyChars": 6070,
       "sourceWordCount": 1732,
       "translationType": "full",
       "pipelineVersion": "reader-v6",
-      "translatedAt": "2026-08-20T14:58:16.317Z"
+      "translatedAt": "2026-08-20T15:50:44.514Z"
     }
   ],
   "message": "NBA.com의 최신 일반 기사 중 제목과 본문 전체 자동 번역이 완료된 기사만 제공합니다.",
@@ -74,5 +74,5 @@
   "translationPolicy": "newest_valid_article_full_translation_keep_previous_on_failure",
   "pipelineVersion": "reader-v6",
   "selectedCount": 4,
-  "updatedAt": "2026-08-20T14:58:17.697Z"
+  "updatedAt": "2026-08-20T15:50:45.971Z"
 }
