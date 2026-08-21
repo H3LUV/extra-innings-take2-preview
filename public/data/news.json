@@ -1,23 +1,6 @@
 {
   "items": [
     {
-      "id": "nba-1882d2feb13f",
-      "articleFile": "./data/articles/nba-1882d2feb13f.json",
-      "title": "Report: James Harden returns to Cleveland on 3-year deal",
-      "titleKo": "보고서: 제임스 하든이 3년 계약으로 클리블랜드로 복귀했습니다.",
-      "link": "https://www.nba.com/news/james-harden-cavaliers-free-agency",
-      "pubDate": "2026-08-20T17:54:29Z",
-      "source": "NBA.com",
-      "category": "미국 현지 읽을거리",
-      "readingMinutes": 4,
-      "bodyVerified": true,
-      "bodyChars": 993,
-      "sourceWordCount": 260,
-      "translationType": "full",
-      "pipelineVersion": "reader-v6",
-      "translatedAt": "2026-08-21T10:49:44.731Z"
-    },
-    {
       "id": "nba-10f86037b83c",
       "articleFile": "./data/articles/nba-10f86037b83c.json",
       "title": "Nuggets deal Peyton Watson to Cavaliers in 5-team sign-and-trade",
@@ -28,11 +11,11 @@
       "category": "미국 현지 읽을거리",
       "readingMinutes": 4,
       "bodyVerified": true,
-      "bodyChars": 2078,
-      "sourceWordCount": 556,
+      "bodyChars": 1715,
+      "sourceWordCount": 477,
       "translationType": "full",
       "pipelineVersion": "reader-v6",
-      "translatedAt": "2026-08-21T10:49:46.404Z"
+      "translatedAt": "2026-08-21T11:43:33.744Z"
     },
     {
       "id": "nba-6fddc2814db1",
@@ -45,11 +28,28 @@
       "category": "미국 현지 읽을거리",
       "readingMinutes": 9,
       "bodyVerified": true,
-      "bodyChars": 6520,
+      "bodyChars": 6514,
       "sourceWordCount": 1913,
       "translationType": "full",
       "pipelineVersion": "reader-v6",
-      "translatedAt": "2026-08-21T10:49:49.644Z"
+      "translatedAt": "2026-08-21T11:43:37.058Z"
+    },
+    {
+      "id": "nba-574b77445cfa",
+      "articleFile": "./data/articles/nba-574b77445cfa.json",
+      "title": "Vote Now: 2025-26 NBA ID Fan Favorites",
+      "titleKo": "지금 투표하세요: 2025-26 NBA ID 팬 즐겨찾기",
+      "link": "https://www.nba.com/news/2026-nba-id-fan-favorites",
+      "pubDate": "2026-08-18T15:55:25Z",
+      "source": "NBA.com",
+      "category": "미국 현지 읽을거리",
+      "readingMinutes": 4,
+      "bodyVerified": true,
+      "bodyChars": 2006,
+      "sourceWordCount": 611,
+      "translationType": "full",
+      "pipelineVersion": "reader-v6",
+      "translatedAt": "2026-08-21T11:43:41.866Z"
     },
     {
       "id": "nba-e29ef99eef24",
@@ -62,11 +62,11 @@
       "category": "미국 현지 읽을거리",
       "readingMinutes": 8,
       "bodyVerified": true,
-      "bodyChars": 6074,
+      "bodyChars": 6085,
       "sourceWordCount": 1732,
       "translationType": "full",
       "pipelineVersion": "reader-v6",
-      "translatedAt": "2026-08-21T10:49:52.770Z"
+      "translatedAt": "2026-08-21T11:43:40.286Z"
     }
   ],
   "message": "NBA.com의 최신 일반 기사 중 제목과 본문 전체 자동 번역이 완료된 기사만 제공합니다.",
@@ -74,5 +74,5 @@
   "translationPolicy": "newest_valid_article_full_translation_keep_previous_on_failure",
   "pipelineVersion": "reader-v6",
   "selectedCount": 4,
-  "updatedAt": "2026-08-21T10:49:52.771Z"
+  "updatedAt": "2026-08-21T11:43:41.867Z"
 }
