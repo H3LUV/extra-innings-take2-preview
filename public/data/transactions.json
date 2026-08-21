@@ -1,7 +1,27 @@
 {
   "items": [
     {
-      "id": "signing-2026-08-18-0",
+      "id": "trade-2026-08-20-0",
+      "type": "Trade",
+      "typeKo": "트레이드",
+      "date": "2026-08-20T00:00:00",
+      "dateKo": "8월 20일",
+      "title": "트레이드 · 8월 20일",
+      "descriptionKo": "클리블랜드 캐벌리어스가 덴버 너기츠로부터 가드 Peyton Watson을 받았습니다. 클리블랜드 캐벌리어스가 워싱턴 위저즈로부터 포워드 Cam Whitmore을 받았습니다. 덴버 너기츠가 클리블랜드 캐벌리어스로부터 드래프트 자산을 받았습니다. LA 클리퍼스가 클리블랜드 캐벌리어스로부터 가드 Max Strus을 받았습니다. 워싱턴 위저즈가 LA 클리퍼스로부터 드래프트 자산을 받았습니다. 워싱턴 위저즈가 샬럿 호네츠로부터 가드 Tre Mann을 받았습니다. 샬럿 호네츠가 클리블랜드 캐벌리어스로부터 가드 Dennis Schroder을 받았습니다.",
+      "descriptions": [
+        "Cleveland Cavaliers received guard Peyton Watson from Denver Nuggets.",
+        "Cleveland Cavaliers received forward Cam Whitmore from Washington Wizards.",
+        "Denver Nuggets received draft consideration from Cleveland Cavaliers.",
+        "LA Clippers received guard Max Strus from Cleveland Cavaliers.",
+        "Washington Wizards received draft consideration from LA Clippers.",
+        "Washington Wizards received guard Tre Mann from Charlotte Hornets.",
+        "Charlotte Hornets received guard Dennis Schroder from Cleveland Cavaliers."
+      ],
+      "source": "NBA.com",
+      "sourceLink": "https://www.nba.com/players/transactions"
+    },
+    {
+      "id": "signing-2026-08-18-1",
       "type": "Signing",
       "typeKo": "계약",
       "date": "2026-08-18T00:00:00",
@@ -15,7 +35,7 @@
       "sourceLink": "https://www.nba.com/players/transactions"
     },
     {
-      "id": "waive-2026-08-18-1",
+      "id": "waive-2026-08-18-2",
       "type": "Waive",
       "typeKo": "방출",
       "date": "2026-08-18T00:00:00",
@@ -29,7 +49,7 @@
       "sourceLink": "https://www.nba.com/players/transactions"
     },
     {
-      "id": "signing-2026-08-17-2",
+      "id": "signing-2026-08-17-3",
       "type": "Signing",
       "typeKo": "계약",
       "date": "2026-08-17T00:00:00",
@@ -43,7 +63,7 @@
       "sourceLink": "https://www.nba.com/players/transactions"
     },
     {
-      "id": "signing-2026-08-17-3",
+      "id": "signing-2026-08-17-4",
       "type": "Signing",
       "typeKo": "계약",
       "date": "2026-08-17T00:00:00",
@@ -57,7 +77,7 @@
       "sourceLink": "https://www.nba.com/players/transactions"
     },
     {
-      "id": "signing-2026-08-17-4",
+      "id": "signing-2026-08-17-5",
       "type": "Signing",
       "typeKo": "계약",
       "date": "2026-08-17T00:00:00",
@@ -71,7 +91,7 @@
       "sourceLink": "https://www.nba.com/players/transactions"
     },
     {
-      "id": "signing-2026-08-13-5",
+      "id": "signing-2026-08-13-6",
       "type": "Signing",
       "typeKo": "계약",
       "date": "2026-08-13T00:00:00",
@@ -85,7 +105,7 @@
       "sourceLink": "https://www.nba.com/players/transactions"
     },
     {
-      "id": "waive-2026-08-13-6",
+      "id": "waive-2026-08-13-7",
       "type": "Waive",
       "typeKo": "방출",
       "date": "2026-08-13T00:00:00",
@@ -99,7 +119,7 @@
       "sourceLink": "https://www.nba.com/players/transactions"
     },
     {
-      "id": "signing-2026-08-12-7",
+      "id": "signing-2026-08-12-8",
       "type": "Signing",
       "typeKo": "계약",
       "date": "2026-08-12T00:00:00",
@@ -113,7 +133,7 @@
       "sourceLink": "https://www.nba.com/players/transactions"
     },
     {
-      "id": "waive-2026-08-12-8",
+      "id": "waive-2026-08-12-9",
       "type": "Waive",
       "typeKo": "방출",
       "date": "2026-08-12T00:00:00",
@@ -127,7 +147,7 @@
       "sourceLink": "https://www.nba.com/players/transactions"
     },
     {
-      "id": "signing-2026-08-08-9",
+      "id": "signing-2026-08-08-10",
       "type": "Signing",
       "typeKo": "계약",
       "date": "2026-08-08T00:00:00",
@@ -141,7 +161,7 @@
       "sourceLink": "https://www.nba.com/players/transactions"
     },
     {
-      "id": "signing-2026-08-06-10",
+      "id": "signing-2026-08-06-11",
       "type": "Signing",
       "typeKo": "계약",
       "date": "2026-08-06T00:00:00",
@@ -155,7 +175,7 @@
       "sourceLink": "https://www.nba.com/players/transactions"
     },
     {
-      "id": "waive-2026-08-06-11",
+      "id": "waive-2026-08-06-12",
       "type": "Waive",
       "typeKo": "방출",
       "date": "2026-08-06T00:00:00",
@@ -169,7 +189,7 @@
       "sourceLink": "https://www.nba.com/players/transactions"
     },
     {
-      "id": "signing-2026-08-05-12",
+      "id": "signing-2026-08-05-13",
       "type": "Signing",
       "typeKo": "계약",
       "date": "2026-08-05T00:00:00",
@@ -183,7 +203,7 @@
       "sourceLink": "https://www.nba.com/players/transactions"
     },
     {
-      "id": "signing-2026-08-05-13",
+      "id": "signing-2026-08-05-14",
       "type": "Signing",
       "typeKo": "계약",
       "date": "2026-08-05T00:00:00",
@@ -197,7 +217,7 @@
       "sourceLink": "https://www.nba.com/players/transactions"
     },
     {
-      "id": "waive-2026-08-05-14",
+      "id": "waive-2026-08-05-15",
       "type": "Waive",
       "typeKo": "방출",
       "date": "2026-08-05T00:00:00",
@@ -211,7 +231,7 @@
       "sourceLink": "https://www.nba.com/players/transactions"
     },
     {
-      "id": "signing-2026-08-04-15",
+      "id": "signing-2026-08-04-16",
       "type": "Signing",
       "typeKo": "계약",
       "date": "2026-08-04T00:00:00",
@@ -225,7 +245,7 @@
       "sourceLink": "https://www.nba.com/players/transactions"
     },
     {
-      "id": "signing-2026-08-02-16",
+      "id": "signing-2026-08-02-17",
       "type": "Signing",
       "typeKo": "계약",
       "date": "2026-08-02T00:00:00",
@@ -237,23 +257,9 @@
       ],
       "source": "NBA.com",
       "sourceLink": "https://www.nba.com/players/transactions"
-    },
-    {
-      "id": "signing-2026-08-01-17",
-      "type": "Signing",
-      "typeKo": "계약",
-      "date": "2026-08-01T00:00:00",
-      "dateKo": "8월 1일",
-      "title": "계약 · 8월 1일",
-      "descriptionKo": "골든스테이트 워리어스가 가드 Gary Payton II와 계약을 체결했습니다.",
-      "descriptions": [
-        "Golden State Warriors re-signed guard Gary Payton II to a Contract."
-      ],
-      "source": "NBA.com",
-      "sourceLink": "https://www.nba.com/players/transactions"
     }
   ],
   "message": "",
   "source": "NBA 공식 Player Movement 데이터",
-  "updatedAt": "2026-08-21T01:57:55.757Z"
+  "updatedAt": "2026-08-21T03:16:04.376Z"
 }
