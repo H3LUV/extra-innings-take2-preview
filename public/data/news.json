@@ -11,11 +11,11 @@
       "category": "미국 현지 읽을거리",
       "readingMinutes": 4,
       "bodyVerified": true,
-      "bodyChars": 1677,
+      "bodyChars": 1678,
       "sourceWordCount": 475,
       "translationType": "full",
       "pipelineVersion": "reader-v6",
-      "translatedAt": "2026-08-22T07:02:58.001Z"
+      "translatedAt": "2026-08-22T07:46:45.783Z"
     },
     {
       "id": "nba-6fddc2814db1",
@@ -28,11 +28,11 @@
       "category": "미국 현지 읽을거리",
       "readingMinutes": 9,
       "bodyVerified": true,
-      "bodyChars": 6516,
+      "bodyChars": 6520,
       "sourceWordCount": 1913,
       "translationType": "full",
       "pipelineVersion": "reader-v6",
-      "translatedAt": "2026-08-22T07:03:01.070Z"
+      "translatedAt": "2026-08-22T07:46:48.935Z"
     },
     {
       "id": "nba-574b77445cfa",
@@ -45,11 +45,11 @@
       "category": "미국 현지 읽을거리",
       "readingMinutes": 4,
       "bodyVerified": true,
-      "bodyChars": 2008,
+      "bodyChars": 1999,
       "sourceWordCount": 611,
       "translationType": "full",
       "pipelineVersion": "reader-v6",
-      "translatedAt": "2026-08-22T07:03:05.601Z"
+      "translatedAt": "2026-08-22T07:46:53.546Z"
     },
     {
       "id": "nba-e29ef99eef24",
@@ -62,11 +62,11 @@
       "category": "미국 현지 읽을거리",
       "readingMinutes": 8,
       "bodyVerified": true,
-      "bodyChars": 6084,
+      "bodyChars": 6074,
       "sourceWordCount": 1732,
       "translationType": "full",
       "pipelineVersion": "reader-v6",
-      "translatedAt": "2026-08-22T07:03:04.173Z"
+      "translatedAt": "2026-08-22T07:46:52.132Z"
     }
   ],
   "message": "NBA.com의 최신 일반 기사 중 제목과 본문 전체 자동 번역이 완료된 기사만 제공합니다.",
@@ -74,5 +74,5 @@
   "translationPolicy": "newest_valid_article_full_translation_keep_previous_on_failure",
   "pipelineVersion": "reader-v6",
   "selectedCount": 4,
-  "updatedAt": "2026-08-22T07:03:05.602Z"
+  "updatedAt": "2026-08-22T07:46:53.546Z"
 }
