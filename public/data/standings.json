@@ -8,47 +8,47 @@
         {
           "id": 139,
           "name": "Tampa Bay Rays",
-          "w": 76,
+          "w": 77,
           "l": 53,
-          "pct": ".589",
+          "pct": ".592",
           "gb": "-",
-          "streak": "L3"
+          "streak": "W1"
         },
         {
           "id": 147,
           "name": "New York Yankees",
-          "w": 73,
+          "w": 74,
           "l": 56,
-          "pct": ".566",
+          "pct": ".569",
           "gb": "3.0",
-          "streak": "L1"
+          "streak": "W1"
         },
         {
           "id": 111,
           "name": "Boston Red Sox",
-          "w": 70,
+          "w": 71,
           "l": 59,
-          "pct": ".543",
+          "pct": ".546",
           "gb": "6.0",
-          "streak": "W2"
+          "streak": "W3"
         },
         {
           "id": 141,
           "name": "Toronto Blue Jays",
           "w": 64,
-          "l": 67,
-          "pct": ".489",
-          "gb": "13.0",
-          "streak": "W1"
+          "l": 68,
+          "pct": ".485",
+          "gb": "14.0",
+          "streak": "L1"
         },
         {
           "id": 110,
           "name": "Baltimore Orioles",
           "w": 63,
-          "l": 67,
-          "pct": ".485",
-          "gb": "13.5",
-          "streak": "W2"
+          "l": 68,
+          "pct": ".481",
+          "gb": "14.5",
+          "streak": "L1"
         }
       ]
     },
@@ -59,11 +59,11 @@
         {
           "id": 145,
           "name": "Chicago White Sox",
-          "w": 67,
+          "w": 68,
           "l": 62,
-          "pct": ".519",
+          "pct": ".523",
           "gb": "-",
-          "streak": "L1"
+          "streak": "W1"
         },
         {
           "id": 114,
@@ -71,7 +71,7 @@
           "w": 64,
           "l": 66,
           "pct": ".492",
-          "gb": "3.5",
+          "gb": "4.0",
           "streak": "W3"
         },
         {
@@ -80,26 +80,26 @@
           "w": 63,
           "l": 67,
           "pct": ".485",
-          "gb": "4.5",
+          "gb": "5.0",
           "streak": "L2"
         },
         {
           "id": 116,
           "name": "Detroit Tigers",
           "w": 61,
-          "l": 68,
-          "pct": ".473",
-          "gb": "6.0",
-          "streak": "L4"
+          "l": 69,
+          "pct": ".469",
+          "gb": "7.0",
+          "streak": "L5"
         },
         {
           "id": 118,
           "name": "Kansas City Royals",
-          "w": 57,
+          "w": 58,
           "l": 74,
-          "pct": ".435",
+          "pct": ".439",
           "gb": "11.0",
-          "streak": "W7"
+          "streak": "W8"
         }
       ]
     },
@@ -111,19 +111,19 @@
           "id": 117,
           "name": "Houston Astros",
           "w": 65,
-          "l": 65,
-          "pct": ".500",
+          "l": 66,
+          "pct": ".496",
           "gb": "-",
-          "streak": "L1"
+          "streak": "L2"
         },
         {
           "id": 140,
           "name": "Texas Rangers",
-          "w": 64,
+          "w": 65,
           "l": 66,
-          "pct": ".492",
-          "gb": "1.0",
-          "streak": "L1"
+          "pct": ".496",
+          "gb": "-",
+          "streak": "W1"
         },
         {
           "id": 136,
@@ -131,26 +131,26 @@
           "w": 62,
           "l": 68,
           "pct": ".477",
-          "gb": "3.0",
+          "gb": "2.5",
           "streak": "W2"
         },
         {
           "id": 108,
           "name": "Los Angeles Angels",
           "w": 52,
-          "l": 78,
-          "pct": ".400",
+          "l": 79,
+          "pct": ".397",
           "gb": "13.0",
-          "streak": "W1"
+          "streak": "L1"
         },
         {
           "id": 133,
           "name": "Athletics",
-          "w": 50,
+          "w": 51,
           "l": 80,
-          "pct": ".385",
-          "gb": "15.0",
-          "streak": "W1"
+          "pct": ".389",
+          "gb": "14.0",
+          "streak": "W2"
         }
       ]
     },
@@ -170,38 +170,38 @@
         {
           "id": 143,
           "name": "Philadelphia Phillies",
-          "w": 72,
+          "w": 73,
           "l": 58,
-          "pct": ".554",
-          "gb": "3.0",
-          "streak": "W8"
+          "pct": ".557",
+          "gb": "2.5",
+          "streak": "W9"
         },
         {
           "id": 146,
           "name": "Miami Marlins",
-          "w": 66,
+          "w": 67,
           "l": 64,
-          "pct": ".508",
-          "gb": "9.0",
-          "streak": "W2"
+          "pct": ".511",
+          "gb": "8.5",
+          "streak": "W3"
         },
         {
           "id": 120,
           "name": "Washington Nationals",
           "w": 61,
-          "l": 70,
-          "pct": ".466",
-          "gb": "14.5",
-          "streak": "L3"
+          "l": 71,
+          "pct": ".462",
+          "gb": "15.0",
+          "streak": "L4"
         },
         {
           "id": 121,
           "name": "New York Mets",
           "w": 59,
-          "l": 71,
-          "pct": ".454",
-          "gb": "16.0",
-          "streak": "W1"
+          "l": 72,
+          "pct": ".450",
+          "gb": "16.5",
+          "streak": "L1"
         }
       ]
     },
@@ -231,10 +231,10 @@
           "id": 138,
           "name": "St. Louis Cardinals",
           "w": 66,
-          "l": 65,
-          "pct": ".504",
-          "gb": "15.5",
-          "streak": "L2"
+          "l": 66,
+          "pct": ".500",
+          "gb": "16.0",
+          "streak": "L3"
         },
         {
           "id": 134,
@@ -291,10 +291,10 @@
           "id": 137,
           "name": "San Francisco Giants",
           "w": 52,
-          "l": 77,
-          "pct": ".403",
-          "gb": "26.5",
-          "streak": "L3"
+          "l": 78,
+          "pct": ".400",
+          "gb": "27.0",
+          "streak": "L4"
         },
         {
           "id": 115,
@@ -308,6 +308,6 @@
       ]
     }
   ],
-  "updatedAt": "2026-08-23T07:33:10.002Z",
+  "updatedAt": "2026-08-23T22:13:48.416Z",
   "source": "MLB Stats API"
 }
