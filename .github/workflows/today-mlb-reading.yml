@@ -1,4 +1,4 @@
-# Today MLB clean full-article translation pipeline v15 - deploy Jacob deGrom 2,000K column
+# Today MLB clean full-article translation pipeline v16 - deploy Giancarlo Stanton availability column
 name: Select four Today MLB reading items
 
 on:
