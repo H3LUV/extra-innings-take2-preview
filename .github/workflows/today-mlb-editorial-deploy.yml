@@ -1,0 +1,43 @@
+name: Fast deploy Today MLB editorial
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - .github/workflows/today-mlb-editorial-deploy.yml
+
+permissions:
+  contents: write
+  deployments: write
+
+concurrency:
+  group: today-mlb-editorial-fast-deploy
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: today-mlb-cloudflare
+          fetch-depth: 0
+
+      - name: Deploy current Today MLB public site to Cloudflare Pages
+        uses: cloudflare/wrangler-action@v3
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: 135ede9cb7c0a586c4facd63f5810921
+          command: pages deploy public --project-name=today-mlb --branch=today-mlb-cloudflare
+          gitHubToken: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Record successful editorial deployment
+        run: |
+          node -e "const fs=require('fs');fs.writeFileSync('public/data/deployment.json',JSON.stringify({project:'today-mlb',branch:'today-mlb-cloudflare',status:'success',type:'editorial-fast-deploy',deployedAt:new Date().toISOString()},null,2))"
+          git config user.name "today-mlb-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add public/data/deployment.json
+          git commit -m "Record Today MLB editorial deployment" || true
+          git push origin HEAD:today-mlb-cloudflare
