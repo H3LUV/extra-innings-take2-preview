@@ -2,5 +2,6 @@
   "project": "today-mlb",
   "branch": "today-mlb-cloudflare",
   "status": "success",
-  "deployedAt": "2026-08-23T12:08:56.539Z"
+  "type": "editorial-fast-deploy",
+  "deployedAt": "2026-08-23T12:10:09.621Z"
 }
