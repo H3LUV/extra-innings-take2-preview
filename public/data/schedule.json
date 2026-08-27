@@ -12,7 +12,7 @@
         "away": {
           "id": 115,
           "name": "Colorado Rockies",
-          "score": 0,
+          "score": 1,
           "record": {
             "wins": 52,
             "losses": 81,
@@ -43,7 +43,7 @@
       },
       {
         "id": 823014,
-        "status": "Pre-Game",
+        "status": "Warmup",
         "venue": "Busch Stadium",
         "gameDate": "2026-08-27T18:15:00Z",
         "away": {
@@ -1453,6 +1453,6 @@
       }
     ]
   },
-  "updatedAt": "2026-08-27T17:56:40.720Z",
+  "updatedAt": "2026-08-27T18:06:37.121Z",
   "source": "MLB Stats API"
 }
