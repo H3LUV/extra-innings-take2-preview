@@ -15,7 +15,21 @@
       "sourceLink": "https://www.nba.com/players/transactions"
     },
     {
-      "id": "signing-2026-08-26-1",
+      "id": "signing-2026-08-27-1",
+      "type": "Signing",
+      "typeKo": "계약",
+      "date": "2026-08-27T00:00:00",
+      "dateKo": "8월 27일",
+      "title": "계약 · 8월 27일",
+      "descriptionKo": "마이애미 히트가 포워드 Keshad Johnson와 투웨이 계약을 체결했습니다.",
+      "descriptions": [
+        "Miami Heat re-signed forward Keshad Johnson to a Two-Way Contract."
+      ],
+      "source": "NBA.com",
+      "sourceLink": "https://www.nba.com/players/transactions"
+    },
+    {
+      "id": "signing-2026-08-26-2",
       "type": "Signing",
       "typeKo": "계약",
       "date": "2026-08-26T00:00:00",
@@ -29,7 +43,7 @@
       "sourceLink": "https://www.nba.com/players/transactions"
     },
     {
-      "id": "signing-2026-08-26-2",
+      "id": "signing-2026-08-26-3",
       "type": "Signing",
       "typeKo": "계약",
       "date": "2026-08-26T00:00:00",
@@ -43,7 +57,7 @@
       "sourceLink": "https://www.nba.com/players/transactions"
     },
     {
-      "id": "signing-2026-08-26-3",
+      "id": "signing-2026-08-26-4",
       "type": "Signing",
       "typeKo": "계약",
       "date": "2026-08-26T00:00:00",
@@ -57,7 +71,7 @@
       "sourceLink": "https://www.nba.com/players/transactions"
     },
     {
-      "id": "waive-2026-08-26-4",
+      "id": "waive-2026-08-26-5",
       "type": "Waive",
       "typeKo": "방출",
       "date": "2026-08-26T00:00:00",
@@ -71,7 +85,7 @@
       "sourceLink": "https://www.nba.com/players/transactions"
     },
     {
-      "id": "signing-2026-08-25-5",
+      "id": "signing-2026-08-25-6",
       "type": "Signing",
       "typeKo": "계약",
       "date": "2026-08-25T00:00:00",
@@ -85,7 +99,7 @@
       "sourceLink": "https://www.nba.com/players/transactions"
     },
     {
-      "id": "signing-2026-08-23-6",
+      "id": "signing-2026-08-23-7",
       "type": "Signing",
       "typeKo": "계약",
       "date": "2026-08-23T00:00:00",
@@ -99,7 +113,7 @@
       "sourceLink": "https://www.nba.com/players/transactions"
     },
     {
-      "id": "waive-2026-08-21-7",
+      "id": "waive-2026-08-21-8",
       "type": "Waive",
       "typeKo": "방출",
       "date": "2026-08-21T00:00:00",
@@ -113,7 +127,7 @@
       "sourceLink": "https://www.nba.com/players/transactions"
     },
     {
-      "id": "trade-2026-08-20-8",
+      "id": "trade-2026-08-20-9",
       "type": "Trade",
       "typeKo": "트레이드",
       "date": "2026-08-20T00:00:00",
@@ -133,7 +147,7 @@
       "sourceLink": "https://www.nba.com/players/transactions"
     },
     {
-      "id": "signing-2026-08-18-9",
+      "id": "signing-2026-08-18-10",
       "type": "Signing",
       "typeKo": "계약",
       "date": "2026-08-18T00:00:00",
@@ -147,7 +161,7 @@
       "sourceLink": "https://www.nba.com/players/transactions"
     },
     {
-      "id": "waive-2026-08-18-10",
+      "id": "waive-2026-08-18-11",
       "type": "Waive",
       "typeKo": "방출",
       "date": "2026-08-18T00:00:00",
@@ -161,7 +175,7 @@
       "sourceLink": "https://www.nba.com/players/transactions"
     },
     {
-      "id": "signing-2026-08-17-11",
+      "id": "signing-2026-08-17-12",
       "type": "Signing",
       "typeKo": "계약",
       "date": "2026-08-17T00:00:00",
@@ -175,7 +189,7 @@
       "sourceLink": "https://www.nba.com/players/transactions"
     },
     {
-      "id": "signing-2026-08-17-12",
+      "id": "signing-2026-08-17-13",
       "type": "Signing",
       "typeKo": "계약",
       "date": "2026-08-17T00:00:00",
@@ -189,7 +203,7 @@
       "sourceLink": "https://www.nba.com/players/transactions"
     },
     {
-      "id": "signing-2026-08-17-13",
+      "id": "signing-2026-08-17-14",
       "type": "Signing",
       "typeKo": "계약",
       "date": "2026-08-17T00:00:00",
@@ -203,7 +217,7 @@
       "sourceLink": "https://www.nba.com/players/transactions"
     },
     {
-      "id": "signing-2026-08-13-14",
+      "id": "signing-2026-08-13-15",
       "type": "Signing",
       "typeKo": "계약",
       "date": "2026-08-13T00:00:00",
@@ -217,7 +231,7 @@
       "sourceLink": "https://www.nba.com/players/transactions"
     },
     {
-      "id": "waive-2026-08-13-15",
+      "id": "waive-2026-08-13-16",
       "type": "Waive",
       "typeKo": "방출",
       "date": "2026-08-13T00:00:00",
@@ -231,7 +245,7 @@
       "sourceLink": "https://www.nba.com/players/transactions"
     },
     {
-      "id": "signing-2026-08-12-16",
+      "id": "signing-2026-08-12-17",
       "type": "Signing",
       "typeKo": "계약",
       "date": "2026-08-12T00:00:00",
@@ -243,23 +257,9 @@
       ],
       "source": "NBA.com",
       "sourceLink": "https://www.nba.com/players/transactions"
-    },
-    {
-      "id": "waive-2026-08-12-17",
-      "type": "Waive",
-      "typeKo": "방출",
-      "date": "2026-08-12T00:00:00",
-      "dateKo": "8월 12일",
-      "title": "방출 · 8월 12일",
-      "descriptionKo": "피닉스 선스가 포워드 Haywood Highsmith를 방출했습니다.",
-      "descriptions": [
-        "Phoenix Suns waived forward Haywood Highsmith."
-      ],
-      "source": "NBA.com",
-      "sourceLink": "https://www.nba.com/players/transactions"
     }
   ],
   "message": "",
   "source": "NBA 공식 Player Movement 데이터",
-  "updatedAt": "2026-08-28T05:24:32.301Z"
+  "updatedAt": "2026-08-28T18:42:29.997Z"
 }
