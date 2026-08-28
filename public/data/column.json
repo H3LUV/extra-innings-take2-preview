@@ -32,20 +32,6 @@
       "opsDelta": 0.5680000000000001
     },
     {
-      "id": 661388,
-      "name": "William Contreras",
-      "team": "Milwaukee Brewers",
-      "seasonPa": 534,
-      "recentPa": 47,
-      "previousPa": 56,
-      "recentAvg": 0.39,
-      "recentObp": 0.447,
-      "recentSlg": 0.561,
-      "recentOps": 1.008,
-      "previousOps": 0.502,
-      "opsDelta": 0.506
-    },
-    {
       "id": 671732,
       "name": "Lawrence Butler",
       "team": "Athletics",
@@ -60,18 +46,32 @@
       "opsDelta": 0.4620000000000001
     },
     {
+      "id": 661388,
+      "name": "William Contreras",
+      "team": "Milwaukee Brewers",
+      "seasonPa": 537,
+      "recentPa": 52,
+      "previousPa": 56,
+      "recentAvg": 0.356,
+      "recentObp": 0.423,
+      "recentSlg": 0.511,
+      "recentOps": 0.934,
+      "previousOps": 0.502,
+      "opsDelta": 0.43200000000000005
+    },
+    {
       "id": 646240,
       "name": "Rafael Devers",
       "team": "San Francisco Giants",
-      "seasonPa": 564,
-      "recentPa": 53,
+      "seasonPa": 568,
+      "recentPa": 57,
       "previousPa": 47,
-      "recentAvg": 0.261,
-      "recentObp": 0.358,
-      "recentSlg": 0.674,
-      "recentOps": 1.032,
+      "recentAvg": 0.28,
+      "recentObp": 0.368,
+      "recentSlg": 0.66,
+      "recentOps": 1.028,
       "previousOps": 0.699,
-      "opsDelta": 0.3330000000000001
+      "opsDelta": 0.32900000000000007
     }
   ],
   "method": "시즌 180타석 이상, 최근·직전 14일 각각 28타석 이상, 최근 OPS 0.700 이상인 타자 대상. 원인이나 지속 가능성은 추론하지 않습니다.",
@@ -81,6 +81,6 @@
     "previousStart": "2026-07-31",
     "previousEnd": "2026-08-13"
   },
-  "updatedAt": "2026-08-28T00:21:16.925Z",
+  "updatedAt": "2026-08-28T05:53:32.922Z",
   "source": "MLB Stats API"
 }
