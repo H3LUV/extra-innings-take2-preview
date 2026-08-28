@@ -23,7 +23,7 @@
         "home": {
           "id": 112,
           "name": "Chicago Cubs",
-          "score": 1,
+          "score": 3,
           "record": {
             "wins": 76,
             "losses": 58,
@@ -271,7 +271,7 @@
         "away": {
           "id": 115,
           "name": "Colorado Rockies",
-          "score": null,
+          "score": 0,
           "record": {
             "wins": 52,
             "losses": 82,
@@ -282,7 +282,7 @@
         "home": {
           "id": 144,
           "name": "Atlanta Braves",
-          "score": null,
+          "score": 0,
           "record": {
             "wins": 79,
             "losses": 55,
@@ -302,7 +302,7 @@
       },
       {
         "id": 823504,
-        "status": "Scheduled",
+        "status": "Pre-Game",
         "venue": "Yankee Stadium",
         "gameDate": "2026-08-28T23:15:00Z",
         "away": {
@@ -1712,6 +1712,6 @@
       }
     ]
   },
-  "updatedAt": "2026-08-28T19:06:49.975Z",
+  "updatedAt": "2026-08-28T19:16:31.461Z",
   "source": "MLB Stats API"
 }
