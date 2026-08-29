@@ -450,18 +450,18 @@
       },
       {
         "id": 823985,
-        "status": "In Progress",
+        "status": "Final",
         "venue": "Angel Stadium",
         "gameDate": "2026-08-29T01:38:00Z",
         "away": {
           "id": 143,
           "name": "Philadelphia Phillies",
-          "score": 1,
+          "score": 5,
           "record": {
-            "wins": 74,
+            "wins": 75,
             "losses": 60,
             "ties": 0,
-            "pct": ".552"
+            "pct": ".556"
           }
         },
         "home": {
@@ -470,9 +470,9 @@
           "score": 3,
           "record": {
             "wins": 52,
-            "losses": 82,
+            "losses": 83,
             "ties": 0,
-            "pct": ".388"
+            "pct": ".385"
           }
         },
         "probable": {
@@ -480,36 +480,36 @@
           "home": "Reid Detmers"
         },
         "decisions": {
-          "winner": "",
-          "loser": "",
-          "save": ""
+          "winner": "Alex McFarlane",
+          "loser": "Ben Joyce",
+          "save": "Jonathan Bowlan"
         }
       },
       {
         "id": 824960,
-        "status": "In Progress",
+        "status": "Final",
         "venue": "Sutter Health Park",
         "gameDate": "2026-08-29T01:40:00Z",
         "away": {
           "id": 110,
           "name": "Baltimore Orioles",
-          "score": 2,
+          "score": 4,
           "record": {
-            "wins": 65,
+            "wins": 66,
             "losses": 69,
             "ties": 0,
-            "pct": ".485"
+            "pct": ".489"
           }
         },
         "home": {
           "id": 133,
           "name": "Athletics",
-          "score": 0,
+          "score": 3,
           "record": {
             "wins": 53,
-            "losses": 81,
+            "losses": 82,
             "ties": 0,
-            "pct": ".396"
+            "pct": ".393"
           }
         },
         "probable": {
@@ -517,36 +517,36 @@
           "home": "Jacob Lopez"
         },
         "decisions": {
-          "winner": "",
-          "loser": "",
-          "save": ""
+          "winner": "Andrew Kittredge",
+          "loser": "Brady Basso",
+          "save": "Alex Hoppe"
         }
       },
       {
         "id": 823178,
-        "status": "In Progress",
+        "status": "Final",
         "venue": "Oracle Park",
         "gameDate": "2026-08-29T02:15:00Z",
         "away": {
           "id": 109,
           "name": "Arizona Diamondbacks",
-          "score": 6,
+          "score": 10,
           "record": {
-            "wins": 71,
+            "wins": 72,
             "losses": 64,
             "ties": 0,
-            "pct": ".526"
+            "pct": ".529"
           }
         },
         "home": {
           "id": 137,
           "name": "San Francisco Giants",
-          "score": 5,
+          "score": 6,
           "record": {
             "wins": 55,
-            "losses": 79,
+            "losses": 80,
             "ties": 0,
-            "pct": ".410"
+            "pct": ".407"
           }
         },
         "probable": {
@@ -554,8 +554,8 @@
           "home": "Blade Tidwell"
         },
         "decisions": {
-          "winner": "",
-          "loser": "",
+          "winner": "Gerardo Carrillo",
+          "loser": "Blade Tidwell",
           "save": ""
         }
       }
@@ -700,7 +700,7 @@
           }
         },
         "probable": {
-          "away": "",
+          "away": "Lake Bachar",
           "home": "Kyle Leahy"
         },
         "decisions": {
@@ -793,10 +793,10 @@
           "name": "Arizona Diamondbacks",
           "score": null,
           "record": {
-            "wins": 71,
+            "wins": 72,
             "losses": 64,
             "ties": 0,
-            "pct": ".526"
+            "pct": ".529"
           }
         },
         "home": {
@@ -805,13 +805,13 @@
           "score": null,
           "record": {
             "wins": 55,
-            "losses": 79,
+            "losses": 80,
             "ties": 0,
-            "pct": ".410"
+            "pct": ".407"
           }
         },
         "probable": {
-          "away": "",
+          "away": "Merrill Kelly",
           "home": ""
         },
         "decisions": {
@@ -1089,10 +1089,10 @@
           "name": "Arizona Diamondbacks",
           "score": null,
           "record": {
-            "wins": 71,
+            "wins": 72,
             "losses": 64,
             "ties": 0,
-            "pct": ".526"
+            "pct": ".529"
           }
         },
         "home": {
@@ -1101,13 +1101,13 @@
           "score": null,
           "record": {
             "wins": 55,
-            "losses": 79,
+            "losses": 80,
             "ties": 0,
-            "pct": ".410"
+            "pct": ".407"
           }
         },
         "probable": {
-          "away": "",
+          "away": "Mitch Bratt",
           "home": ""
         },
         "decisions": {
@@ -1126,10 +1126,10 @@
           "name": "Baltimore Orioles",
           "score": null,
           "record": {
-            "wins": 65,
+            "wins": 66,
             "losses": 69,
             "ties": 0,
-            "pct": ".485"
+            "pct": ".489"
           }
         },
         "home": {
@@ -1138,14 +1138,14 @@
           "score": null,
           "record": {
             "wins": 53,
-            "losses": 81,
+            "losses": 82,
             "ties": 0,
-            "pct": ".396"
+            "pct": ".393"
           }
         },
         "probable": {
           "away": "Shane Baz",
-          "home": ""
+          "home": "Jack Perkins"
         },
         "decisions": {
           "winner": "",
@@ -1163,10 +1163,10 @@
           "name": "Philadelphia Phillies",
           "score": null,
           "record": {
-            "wins": 74,
+            "wins": 75,
             "losses": 60,
             "ties": 0,
-            "pct": ".552"
+            "pct": ".556"
           }
         },
         "home": {
@@ -1175,9 +1175,9 @@
           "score": null,
           "record": {
             "wins": 52,
-            "losses": 82,
+            "losses": 83,
             "ties": 0,
-            "pct": ".388"
+            "pct": ".385"
           }
         },
         "probable": {
@@ -1609,10 +1609,10 @@
           "name": "Baltimore Orioles",
           "score": null,
           "record": {
-            "wins": 65,
+            "wins": 66,
             "losses": 69,
             "ties": 0,
-            "pct": ".485"
+            "pct": ".489"
           }
         },
         "home": {
@@ -1621,9 +1621,9 @@
           "score": null,
           "record": {
             "wins": 53,
-            "losses": 81,
+            "losses": 82,
             "ties": 0,
-            "pct": ".396"
+            "pct": ".393"
           }
         },
         "probable": {
@@ -1646,10 +1646,10 @@
           "name": "Philadelphia Phillies",
           "score": null,
           "record": {
-            "wins": 74,
+            "wins": 75,
             "losses": 60,
             "ties": 0,
-            "pct": ".552"
+            "pct": ".556"
           }
         },
         "home": {
@@ -1658,9 +1658,9 @@
           "score": null,
           "record": {
             "wins": 52,
-            "losses": 82,
+            "losses": 83,
             "ties": 0,
-            "pct": ".388"
+            "pct": ".385"
           }
         },
         "probable": {
@@ -1712,6 +1712,6 @@
       }
     ]
   },
-  "updatedAt": "2026-08-29T03:26:32.207Z",
+  "updatedAt": "2026-08-29T12:51:25.337Z",
   "source": "MLB Stats API"
 }
