@@ -18,32 +18,32 @@
       "opsDelta": 0.561
     },
     {
+      "id": 691718,
+      "name": "Pete Crow-Armstrong",
+      "team": "Chicago Cubs",
+      "seasonPa": 608,
+      "recentPa": 58,
+      "previousPa": 62,
+      "recentAvg": 0.327,
+      "recentObp": 0.397,
+      "recentSlg": 0.904,
+      "recentOps": 1.301,
+      "previousOps": 0.792,
+      "opsDelta": 0.5089999999999999
+    },
+    {
       "id": 700250,
       "name": "Ben Rice",
       "team": "New York Yankees",
-      "seasonPa": 556,
-      "recentPa": 50,
+      "seasonPa": 559,
+      "recentPa": 54,
       "previousPa": 51,
-      "recentAvg": 0.293,
-      "recentObp": 0.42,
-      "recentSlg": 0.561,
-      "recentOps": 0.981,
+      "recentAvg": 0.267,
+      "recentObp": 0.389,
+      "recentSlg": 0.511,
+      "recentOps": 0.9,
       "previousOps": 0.421,
-      "opsDelta": 0.56
-    },
-    {
-      "id": 672960,
-      "name": "Kazuma Okamoto",
-      "team": "Toronto Blue Jays",
-      "seasonPa": 535,
-      "recentPa": 46,
-      "previousPa": 49,
-      "recentAvg": 0.268,
-      "recentObp": 0.326,
-      "recentSlg": 0.61,
-      "recentOps": 0.936,
-      "previousOps": 0.504,
-      "opsDelta": 0.43200000000000005
+      "opsDelta": 0.47900000000000004
     },
     {
       "id": 671732,
@@ -60,18 +60,18 @@
       "opsDelta": 0.43199999999999994
     },
     {
-      "id": 646240,
-      "name": "Rafael Devers",
-      "team": "San Francisco Giants",
-      "seasonPa": 573,
-      "recentPa": 53,
-      "previousPa": 48,
-      "recentAvg": 0.289,
-      "recentObp": 0.396,
-      "recentSlg": 0.667,
-      "recentOps": 1.063,
-      "previousOps": 0.673,
-      "opsDelta": 0.3899999999999999
+      "id": 672960,
+      "name": "Kazuma Okamoto",
+      "team": "Toronto Blue Jays",
+      "seasonPa": 539,
+      "recentPa": 50,
+      "previousPa": 49,
+      "recentAvg": 0.256,
+      "recentObp": 0.34,
+      "recentSlg": 0.581,
+      "recentOps": 0.921,
+      "previousOps": 0.504,
+      "opsDelta": 0.41700000000000004
     }
   ],
   "method": "시즌 180타석 이상, 최근·직전 14일 각각 28타석 이상, 최근 OPS 0.700 이상인 타자 대상. 원인이나 지속 가능성은 추론하지 않습니다.",
@@ -81,6 +81,6 @@
     "previousStart": "2026-08-02",
     "previousEnd": "2026-08-15"
   },
-  "updatedAt": "2026-08-29T18:19:20.510Z",
+  "updatedAt": "2026-08-29T23:47:51.806Z",
   "source": "MLB Stats API"
 }
