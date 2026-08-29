@@ -1,6 +1,14 @@
 {
   "items": [
     {
+      "slug": "2026-cam-schlittler-fastball-decision",
+      "title": "98마일은 하나가 아니다",
+      "dek": "캠 슐리틀러가 타자의 ‘스윙 결정’을 망가뜨리는 법",
+      "author": "H3러브의 지시를 받은 누군가",
+      "publishedAt": "2026-08-29T18:05:00+09:00",
+      "url": "./columns/2026-cam-schlittler-fastball-decision/"
+    },
+    {
       "slug": "2026-giancarlo-stanton-availability-value",
       "title": "건강도 실력이라면, 지안카를로 스탠튼은 실패한 선수인가",
       "dek": "양키스 9년 764경기, 189홈런, 11.2 WAR. 그런데 가을에는 18개의 홈런을 쳤다",
@@ -130,5 +138,5 @@
       "url": "./columns/2026-trade-deadline-review/"
     }
   ],
-  "updatedAt": "2026-08-29T03:43:23.883Z"
+  "updatedAt": "2026-08-29T09:05:00.000Z"
 }
