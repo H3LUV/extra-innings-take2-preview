@@ -11,11 +11,45 @@
       "category": "미국 현지 읽을거리",
       "readingMinutes": 4,
       "bodyVerified": true,
-      "bodyChars": 2690,
+      "bodyChars": 2676,
       "sourceWordCount": 699,
       "translationType": "full",
       "pipelineVersion": "reader-v6",
-      "translatedAt": "2026-08-29T14:33:58.952Z"
+      "translatedAt": "2026-08-29T18:35:25.770Z"
+    },
+    {
+      "id": "nba-477682bdd34e",
+      "articleFile": "./data/articles/nba-477682bdd34e.json",
+      "title": "Toronto Raptors announce Kyle Lowry’s retirement ceremony",
+      "titleKo": "토론토 랩터스, 카일 라우리 은퇴식 발표",
+      "link": "https://www.nba.com/news/kyle-lowry-raptors-jersey-retirement-announcement",
+      "pubDate": "2026-08-27T15:28:43Z",
+      "source": "NBA.com",
+      "category": "미국 현지 읽을거리",
+      "readingMinutes": 4,
+      "bodyVerified": true,
+      "bodyChars": 1476,
+      "sourceWordCount": 465,
+      "translationType": "full",
+      "pipelineVersion": "reader-v6",
+      "translatedAt": "2026-08-29T18:35:32.333Z"
+    },
+    {
+      "id": "nba-7905ab70016b",
+      "articleFile": "./data/articles/nba-7905ab70016b.json",
+      "title": "Trending Topics: Picks for 2025-26 NBA ID Fan Favorites",
+      "titleKo": "인기 주제: 2025-26 NBA ID 팬 즐겨찾기 추천",
+      "link": "https://www.nba.com/news/trending-topics-2026-27-nba-id-fan-favorites",
+      "pubDate": "2026-08-25T19:34:37Z",
+      "source": "NBA.com",
+      "category": "미국 현지 읽을거리",
+      "readingMinutes": 4,
+      "bodyVerified": true,
+      "bodyChars": 2499,
+      "sourceWordCount": 691,
+      "translationType": "full",
+      "pipelineVersion": "reader-v6",
+      "translatedAt": "2026-08-29T18:35:41.627Z"
     },
     {
       "id": "nba-b4795cf79293",
@@ -28,17 +62,17 @@
       "category": "미국 현지 읽을거리",
       "readingMinutes": 14,
       "bodyVerified": true,
-      "bodyChars": 8739,
+      "bodyChars": 8711,
       "sourceWordCount": 3161,
       "translationType": "full",
       "pipelineVersion": "reader-v6",
-      "translatedAt": "2026-08-29T14:33:51.638Z"
+      "translatedAt": "2026-08-29T18:35:18.641Z"
     }
   ],
   "message": "NBA.com의 최신 일반 기사 중 제목과 본문 전체 자동 번역이 완료된 기사만 제공합니다.",
   "selectionPolicy": "최신 일반 기사 우선 · 오류/분류/목록/일정/트래커 페이지 제외 · 전체 번역 필수",
   "translationPolicy": "newest_valid_article_full_translation_keep_previous_on_failure",
   "pipelineVersion": "reader-v6",
-  "selectedCount": 2,
-  "updatedAt": "2026-08-29T14:34:17.388Z"
+  "selectedCount": 4,
+  "updatedAt": "2026-08-29T18:35:41.628Z"
 }
