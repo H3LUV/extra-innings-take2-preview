@@ -1,6 +1,40 @@
 {
   "items": [
     {
+      "id": "mlb-270ec25dc66e",
+      "articleFile": "./data/articles/mlb-270ec25dc66e.json",
+      "title": "Can't stop PCA! Cubs' superstar crushes another leadoff homer",
+      "titleKo": "PCA를 막을 수는 없다! 컵스의 슈퍼스타가 또 다른 선두 홈런을 압도했습니다.",
+      "link": "https://www.mlb.com/news/pete-crow-armstrong-hits-leadoff-homer-vs-reds",
+      "pubDate": "2026-08-31T00:27:04.182Z",
+      "source": "MLB.com",
+      "category": "미국 현지 읽을거리",
+      "readingMinutes": 8,
+      "bodyVerified": true,
+      "bodyChars": 5608,
+      "sourceWordCount": 1729,
+      "translationType": "full",
+      "pipelineVersion": "reader-v6",
+      "translatedAt": "2026-08-31T00:38:20.343Z"
+    },
+    {
+      "id": "mlb-00738d28b0bd",
+      "articleFile": "./data/articles/mlb-00738d28b0bd.json",
+      "title": "'I needed this': Ramos hits 1st HR for Yankees, who take season series from Sox",
+      "titleKo": "'나는 이것이 필요했다': 라모스는 Sox에서 시즌 시리즈를 가져간 양키스의 첫 홈런을 쳤습니다.",
+      "link": "https://www.mlb.com/news/heliot-ramos-hits-first-homer-as-yankee",
+      "pubDate": "2026-08-31T00:09:00Z",
+      "source": "MLB.com",
+      "category": "미국 현지 읽을거리",
+      "readingMinutes": 8,
+      "bodyVerified": true,
+      "bodyChars": 5986,
+      "sourceWordCount": 1661,
+      "translationType": "full",
+      "pipelineVersion": "reader-v6",
+      "translatedAt": "2026-08-31T00:38:42.382Z"
+    },
+    {
       "id": "mlb-a0558655f961",
       "articleFile": "./data/articles/mlb-a0558655f961.json",
       "title": "Miz outduels Sale in battle of aces that lived up to the hype",
@@ -33,40 +67,6 @@
       "translationType": "full",
       "pipelineVersion": "reader-v6",
       "translatedAt": "2026-08-21T22:43:34.365Z"
-    },
-    {
-      "id": "mlb-0e3e839db32b",
-      "articleFile": "./data/articles/mlb-0e3e839db32b.json",
-      "title": "WOW! Acuña denies Lara extra bases on 92.3 mph throw from right field",
-      "titleKo": "우와! Acuña는 라라의 우익수 시속 92.3마일 던진 추가 베이스를 거부했습니다.",
-      "link": "https://www.mlb.com/news/ronald-acuna-jr-throws-out-luis-lara-at-second-base",
-      "pubDate": "2026-08-21T21:57:21.212Z",
-      "source": "MLB.com",
-      "category": "미국 현지 읽을거리",
-      "readingMinutes": 6,
-      "bodyVerified": true,
-      "bodyChars": 4768,
-      "sourceWordCount": 1326,
-      "translationType": "full",
-      "pipelineVersion": "reader-v6",
-      "translatedAt": "2026-08-21T22:43:39.469Z"
-    },
-    {
-      "id": "mlb-15749fe9d18c",
-      "articleFile": "./data/articles/mlb-15749fe9d18c.json",
-      "title": "Iowa throws combo no-no in the LLWS ... and the starter homers for the only run!",
-      "titleKo": "아이오와는 LLWS에서 콤보 노노노를 던졌고... 유일한 득점을 위한 선발 홈런을 기록했습니다!",
-      "link": "https://www.mlb.com/news/iowa-throws-combined-no-hitter-in-2026-little-league-world-series",
-      "pubDate": "2026-08-21T21:10:00Z",
-      "source": "MLB.com",
-      "category": "미국 현지 읽을거리",
-      "readingMinutes": 15,
-      "bodyVerified": true,
-      "bodyChars": 10941,
-      "sourceWordCount": 3399,
-      "translationType": "full",
-      "pipelineVersion": "reader-v6",
-      "translatedAt": "2026-08-21T22:43:49.917Z"
     }
   ],
   "message": "미국 현지 기사 중 광고·회원가입 문구를 제거하고 제목과 본문 전체 자동 번역이 완료된 기사만 제공합니다.",
@@ -74,5 +74,5 @@
   "translationPolicy": "clean_full_translation_keep_previous_on_failure",
   "pipelineVersion": "reader-v6",
   "selectedCount": 4,
-  "updatedAt": "2026-08-30T00:23:32.314Z"
+  "updatedAt": "2026-08-31T00:43:00.088Z"
 }
