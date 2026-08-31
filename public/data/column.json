@@ -21,7 +21,7 @@
       "id": 691718,
       "name": "Pete Crow-Armstrong",
       "team": "Chicago Cubs",
-      "seasonPa": 608,
+      "seasonPa": 609,
       "recentPa": 53,
       "previousPa": 63,
       "recentAvg": 0.34,
@@ -30,20 +30,6 @@
       "recentOps": 1.33,
       "previousOps": 0.793,
       "opsDelta": 0.537
-    },
-    {
-      "id": 695600,
-      "name": "Carter Jensen",
-      "team": "Kansas City Royals",
-      "seasonPa": 508,
-      "recentPa": 48,
-      "previousPa": 44,
-      "recentAvg": 0.243,
-      "recentObp": 0.396,
-      "recentSlg": 0.514,
-      "recentOps": 0.91,
-      "previousOps": 0.417,
-      "opsDelta": 0.49300000000000005
     },
     {
       "id": 661388,
@@ -63,15 +49,29 @@
       "id": 672960,
       "name": "Kazuma Okamoto",
       "team": "Toronto Blue Jays",
-      "seasonPa": 540,
-      "recentPa": 46,
+      "seasonPa": 543,
+      "recentPa": 50,
       "previousPa": 49,
-      "recentAvg": 0.256,
-      "recentObp": 0.348,
-      "recentSlg": 0.59,
-      "recentOps": 0.938,
+      "recentAvg": 0.262,
+      "recentObp": 0.36,
+      "recentSlg": 0.643,
+      "recentOps": 1.003,
       "previousOps": 0.526,
-      "opsDelta": 0.4119999999999999
+      "opsDelta": 0.47699999999999987
+    },
+    {
+      "id": 695600,
+      "name": "Carter Jensen",
+      "team": "Kansas City Royals",
+      "seasonPa": 512,
+      "recentPa": 53,
+      "previousPa": 44,
+      "recentAvg": 0.244,
+      "recentObp": 0.396,
+      "recentSlg": 0.488,
+      "recentOps": 0.884,
+      "previousOps": 0.417,
+      "opsDelta": 0.467
     }
   ],
   "method": "시즌 180타석 이상, 최근·직전 14일 각각 28타석 이상, 최근 OPS 0.700 이상인 타자 대상. 원인이나 지속 가능성은 추론하지 않습니다.",
@@ -81,6 +81,6 @@
     "previousStart": "2026-08-03",
     "previousEnd": "2026-08-16"
   },
-  "updatedAt": "2026-08-30T18:33:11.688Z",
+  "updatedAt": "2026-08-31T00:06:17.439Z",
   "source": "MLB Stats API"
 }
