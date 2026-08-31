@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://today-mlb.pages.dev/</loc><lastmod>2026-08-30T00:21:55.310Z</lastmod><changefreq>daily</changefreq><priority>1.0</priority></url>
-  <url><loc>https://today-mlb.pages.dev/columns/</loc><lastmod>2026-08-30T00:21:55.310Z</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://today-mlb.pages.dev/</loc><lastmod>2026-08-31T12:40:00.000Z</lastmod><changefreq>daily</changefreq><priority>1.0</priority></url>
+  <url><loc>https://today-mlb.pages.dev/columns/</loc><lastmod>2026-08-31T12:40:00.000Z</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://today-mlb.pages.dev/columns/2026-trajekt-hitting-arms-race/</loc><lastmod>2026-08-31T12:40:00.000Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
   <url><loc>https://today-mlb.pages.dev/columns/2026-cam-schlittler-fastball-decision/</loc><lastmod>2026-08-29T09:05:00.000Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
   <url><loc>https://today-mlb.pages.dev/columns/2026-giancarlo-stanton-availability-value/</loc><lastmod>2026-08-23T11:58:00.000Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
   <url><loc>https://today-mlb.pages.dev/columns/2026-jacob-degrom-2000-strikeouts-density/</loc><lastmod>2026-08-21T13:30:00.000Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
