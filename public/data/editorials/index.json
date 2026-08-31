@@ -1,6 +1,14 @@
 {
   "items": [
     {
+      "slug": "2026-trajekt-hitting-arms-race",
+      "title": "타자는 이제 상대 투수를 경기 전에 복제한다",
+      "dek": "Trajekt가 바꾼 MLB 타격 훈련, 그런데 왜 리그 공격력은 그대로일까",
+      "author": "H3러브의 지시를 받은 누군가",
+      "publishedAt": "2026-08-31T21:40:00+09:00",
+      "url": "./columns/2026-trajekt-hitting-arms-race/"
+    },
+    {
       "slug": "2026-cam-schlittler-fastball-decision",
       "title": "98마일은 하나가 아니다",
       "dek": "캠 슐리틀러가 타자의 ‘스윙 결정’을 망가뜨리는 법",
@@ -138,5 +146,5 @@
       "url": "./columns/2026-trade-deadline-review/"
     }
   ],
-  "updatedAt": "2026-08-31T00:37:59.138Z"
+  "updatedAt": "2026-08-31T12:40:00.000Z"
 }
