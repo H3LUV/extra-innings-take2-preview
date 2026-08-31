@@ -18,32 +18,18 @@
       "opsDelta": 0.685
     },
     {
-      "id": 691718,
-      "name": "Pete Crow-Armstrong",
-      "team": "Chicago Cubs",
-      "seasonPa": 609,
-      "recentPa": 53,
-      "previousPa": 63,
-      "recentAvg": 0.34,
-      "recentObp": 0.415,
-      "recentSlg": 0.915,
-      "recentOps": 1.33,
-      "previousOps": 0.793,
-      "opsDelta": 0.537
-    },
-    {
-      "id": 661388,
-      "name": "William Contreras",
-      "team": "Milwaukee Brewers",
-      "seasonPa": 546,
-      "recentPa": 48,
-      "previousPa": 56,
-      "recentAvg": 0.415,
-      "recentObp": 0.458,
-      "recentSlg": 0.585,
-      "recentOps": 1.043,
-      "previousOps": 0.563,
-      "opsDelta": 0.48
+      "id": 677649,
+      "name": "Ezequiel Duran",
+      "team": "Texas Rangers",
+      "seasonPa": 494,
+      "recentPa": 51,
+      "previousPa": 49,
+      "recentAvg": 0.364,
+      "recentObp": 0.451,
+      "recentSlg": 0.614,
+      "recentOps": 1.065,
+      "previousOps": 0.489,
+      "opsDelta": 0.576
     },
     {
       "id": 672960,
@@ -51,36 +37,50 @@
       "team": "Toronto Blue Jays",
       "seasonPa": 543,
       "recentPa": 50,
-      "previousPa": 49,
+      "previousPa": 45,
       "recentAvg": 0.262,
       "recentObp": 0.36,
       "recentSlg": 0.643,
       "recentOps": 1.003,
-      "previousOps": 0.526,
-      "opsDelta": 0.47699999999999987
+      "previousOps": 0.482,
+      "opsDelta": 0.5209999999999999
     },
     {
       "id": 695600,
       "name": "Carter Jensen",
       "team": "Kansas City Royals",
       "seasonPa": 512,
-      "recentPa": 53,
-      "previousPa": 44,
-      "recentAvg": 0.244,
-      "recentObp": 0.396,
-      "recentSlg": 0.488,
-      "recentOps": 0.884,
-      "previousOps": 0.417,
-      "opsDelta": 0.467
+      "recentPa": 48,
+      "previousPa": 49,
+      "recentAvg": 0.25,
+      "recentObp": 0.417,
+      "recentSlg": 0.5,
+      "recentOps": 0.917,
+      "previousOps": 0.44,
+      "opsDelta": 0.47700000000000004
+    },
+    {
+      "id": 661388,
+      "name": "William Contreras",
+      "team": "Milwaukee Brewers",
+      "seasonPa": 546,
+      "recentPa": 48,
+      "previousPa": 52,
+      "recentAvg": 0.415,
+      "recentObp": 0.458,
+      "recentSlg": 0.585,
+      "recentOps": 1.043,
+      "previousOps": 0.61,
+      "opsDelta": 0.43299999999999994
     }
   ],
   "method": "시즌 180타석 이상, 최근·직전 14일 각각 28타석 이상, 최근 OPS 0.700 이상인 타자 대상. 원인이나 지속 가능성은 추론하지 않습니다.",
   "range": {
-    "recentStart": "2026-08-17",
-    "recentEnd": "2026-08-30",
-    "previousStart": "2026-08-03",
-    "previousEnd": "2026-08-16"
+    "recentStart": "2026-08-18",
+    "recentEnd": "2026-08-31",
+    "previousStart": "2026-08-04",
+    "previousEnd": "2026-08-17"
   },
-  "updatedAt": "2026-08-31T00:06:17.439Z",
+  "updatedAt": "2026-08-31T20:42:06.692Z",
   "source": "MLB Stats API"
 }
