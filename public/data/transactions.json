@@ -197,9 +197,9 @@
       "date": "2026-08-18T00:00:00",
       "dateKo": "8월 18일",
       "title": "계약 · 8월 18일",
-      "descriptionKo": "뉴올리언스 펠리컨스가  Malik Dia와 투웨이 계약을 체결했습니다.",
+      "descriptionKo": "뉴올리언스 펠리컨스가 포워드 Malik Dia와 투웨이 계약을 체결했습니다.",
       "descriptions": [
-        "New Orleans Pelicans signed  Malik Dia to a Two-Way Contract."
+        "New Orleans Pelicans signed forward Malik Dia to a Two-Way Contract."
       ],
       "source": "NBA.com",
       "sourceLink": "https://www.nba.com/players/transactions"
@@ -263,5 +263,5 @@
   ],
   "message": "",
   "source": "NBA 공식 Player Movement 데이터",
-  "updatedAt": "2026-08-31T13:50:54.653Z"
+  "updatedAt": "2026-08-31T20:05:10.184Z"
 }
