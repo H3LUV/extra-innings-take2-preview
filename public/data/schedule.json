@@ -487,29 +487,29 @@
       },
       {
         "id": 824636,
-        "status": "In Progress",
+        "status": "Final",
         "venue": "Wrigley Field",
         "gameDate": "2026-08-30T23:20:00Z",
         "away": {
           "id": 113,
           "name": "Cincinnati Reds",
-          "score": 0,
+          "score": 7,
           "record": {
-            "wins": 64,
+            "wins": 65,
             "losses": 72,
             "ties": 0,
-            "pct": ".471"
+            "pct": ".474"
           }
         },
         "home": {
           "id": 112,
           "name": "Chicago Cubs",
-          "score": 1,
+          "score": 5,
           "record": {
             "wins": 77,
-            "losses": 59,
+            "losses": 60,
             "ties": 0,
-            "pct": ".566"
+            "pct": ".562"
           }
         },
         "probable": {
@@ -517,9 +517,9 @@
           "home": "Shota Imanaga"
         },
         "decisions": {
-          "winner": "",
-          "loser": "",
-          "save": ""
+          "winner": "Chase Burns",
+          "loser": "Shota Imanaga",
+          "save": "Emilio Pagán"
         }
       }
     ],
@@ -582,10 +582,10 @@
           "name": "Cincinnati Reds",
           "score": null,
           "record": {
-            "wins": 64,
+            "wins": 65,
             "losses": 72,
             "ties": 0,
-            "pct": ".471"
+            "pct": ".474"
           }
         },
         "probable": {
@@ -768,9 +768,9 @@
           "score": null,
           "record": {
             "wins": 77,
-            "losses": 59,
+            "losses": 60,
             "ties": 0,
-            "pct": ".566"
+            "pct": ".562"
           }
         },
         "probable": {
@@ -991,10 +991,10 @@
           "name": "Cincinnati Reds",
           "score": null,
           "record": {
-            "wins": 64,
+            "wins": 65,
             "losses": 72,
             "ties": 0,
-            "pct": ".471"
+            "pct": ".474"
           }
         },
         "probable": {
@@ -1288,9 +1288,9 @@
           "score": null,
           "record": {
             "wins": 77,
-            "losses": 59,
+            "losses": 60,
             "ties": 0,
-            "pct": ".566"
+            "pct": ".562"
           }
         },
         "probable": {
@@ -1527,6 +1527,6 @@
       }
     ]
   },
-  "updatedAt": "2026-08-31T00:06:17.743Z",
+  "updatedAt": "2026-08-31T14:31:07.070Z",
   "source": "MLB Stats API"
 }
