@@ -1,6 +1,14 @@
 {
   "items": [
     {
+      "slug": "2026-tigers-pythagorean-gap",
+      "title": "75승짜리 팀이 왜 63승밖에 못 했나",
+      "dek": "+55 득실차의 디트로이트가 보여주는 피타고리안 승률의 맹점",
+      "author": "H3러브의 지시를 받은 누군가",
+      "publishedAt": "2026-09-01T18:22:00+09:00",
+      "url": "./columns/2026-tigers-pythagorean-gap/"
+    },
+    {
       "slug": "2026-trajekt-hitting-arms-race",
       "title": "타자는 이제 상대 투수를 경기 전에 복제한다",
       "dek": "Trajekt가 바꾼 MLB 타격 훈련, 그런데 왜 리그 공격력은 그대로일까",
@@ -146,5 +154,5 @@
       "url": "./columns/2026-trade-deadline-review/"
     }
   ],
-  "updatedAt": "2026-09-01T01:18:42.095Z"
+  "updatedAt": "2026-09-01T09:22:00.000Z"
 }
