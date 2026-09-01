@@ -21,7 +21,7 @@
       "id": 695734,
       "name": "Daylen Lile",
       "team": "Washington Nationals",
-      "seasonPa": 573,
+      "seasonPa": 575,
       "recentPa": 57,
       "previousPa": 48,
       "recentAvg": 0.367,
@@ -49,7 +49,7 @@
       "id": 682829,
       "name": "Elly De La Cruz",
       "team": "Cincinnati Reds",
-      "seasonPa": 533,
+      "seasonPa": 535,
       "recentPa": 55,
       "previousPa": 60,
       "recentAvg": 0.367,
@@ -81,6 +81,6 @@
     "previousStart": "2026-08-05",
     "previousEnd": "2026-08-18"
   },
-  "updatedAt": "2026-09-01T18:21:28.406Z",
+  "updatedAt": "2026-09-01T23:42:44.943Z",
   "source": "MLB Stats API"
 }
