@@ -1,6 +1,40 @@
 {
   "items": [
     {
+      "id": "mlb-5be281bfa958",
+      "articleFile": "./data/articles/mlb-5be281bfa958.json",
+      "title": "Greene to return Tuesday, and Tigers' lineup badly needs him",
+      "titleKo": "Greene은 화요일에 복귀할 예정이며 타이거스의 라인업에는 Greene이 절실히 필요합니다.",
+      "link": "https://www.mlb.com/news/riley-greene-tigers-injury-return-2026",
+      "pubDate": "2026-09-01T00:41:00Z",
+      "source": "MLB.com",
+      "category": "미국 현지 읽을거리",
+      "readingMinutes": 7,
+      "bodyVerified": true,
+      "bodyChars": 5145,
+      "sourceWordCount": 1491,
+      "translationType": "full",
+      "pipelineVersion": "reader-v6",
+      "translatedAt": "2026-09-01T01:19:29.489Z"
+    },
+    {
+      "id": "mlb-122fd705c470",
+      "articleFile": "./data/articles/mlb-122fd705c470.json",
+      "title": "Ben Clemens FanGraphs Chat - 9/1/26",
+      "titleKo": "벤 클레멘스 팬그래프 채팅 - 9/1/26",
+      "link": "https://blogs.fangraphs.com/ben-clemens-fangraphs-chat-9-1-26/",
+      "pubDate": "2026-09-01T17:30:00+00:00",
+      "source": "FanGraphs",
+      "category": "미국 현지 읽을거리",
+      "readingMinutes": 16,
+      "bodyVerified": true,
+      "bodyChars": 11576,
+      "sourceWordCount": 3592,
+      "translationType": "full",
+      "pipelineVersion": "reader-v6",
+      "translatedAt": "2026-09-02T00:17:11.570Z"
+    },
+    {
       "id": "mlb-9462e5092957",
       "articleFile": "./data/articles/mlb-9462e5092957.json",
       "title": "Giants' young bats -- and Devers' 30th HR -- help down Braves in makeup game",
@@ -33,40 +67,6 @@
       "translationType": "full",
       "pipelineVersion": "reader-v6",
       "translatedAt": "2026-09-01T01:19:18.067Z"
-    },
-    {
-      "id": "mlb-5be281bfa958",
-      "articleFile": "./data/articles/mlb-5be281bfa958.json",
-      "title": "Greene to return Tuesday, and Tigers' lineup badly needs him",
-      "titleKo": "Greene은 화요일에 복귀할 예정이며 타이거스의 라인업에는 Greene이 절실히 필요합니다.",
-      "link": "https://www.mlb.com/news/riley-greene-tigers-injury-return-2026",
-      "pubDate": "2026-09-01T00:41:00Z",
-      "source": "MLB.com",
-      "category": "미국 현지 읽을거리",
-      "readingMinutes": 7,
-      "bodyVerified": true,
-      "bodyChars": 5145,
-      "sourceWordCount": 1491,
-      "translationType": "full",
-      "pipelineVersion": "reader-v6",
-      "translatedAt": "2026-09-01T01:19:29.489Z"
-    },
-    {
-      "id": "mlb-0f86694e8e74",
-      "articleFile": "./data/articles/mlb-0f86694e8e74.json",
-      "title": "Marte opens up about absence, planned to address teammates",
-      "titleKo": "Marte는 결석에 대해 공개하고 팀원들에게 연설할 계획입니다.",
-      "link": "https://www.mlb.com/news/ketel-marte-explains-absence-to-media-planned-to-talk-to-teammates",
-      "pubDate": "2026-09-01T00:31:14.535Z",
-      "source": "MLB.com",
-      "category": "미국 현지 읽을거리",
-      "readingMinutes": 8,
-      "bodyVerified": true,
-      "bodyChars": 6011,
-      "sourceWordCount": 1753,
-      "translationType": "full",
-      "pipelineVersion": "reader-v6",
-      "translatedAt": "2026-09-01T01:19:41.666Z"
     }
   ],
   "message": "미국 현지 기사 중 광고·회원가입 문구를 제거하고 제목과 본문 전체 자동 번역이 완료된 기사만 제공합니다.",
@@ -74,5 +74,5 @@
   "translationPolicy": "clean_full_translation_keep_previous_on_failure",
   "pipelineVersion": "reader-v6",
   "selectedCount": 4,
-  "updatedAt": "2026-09-01T01:19:41.667Z"
+  "updatedAt": "2026-09-02T00:19:02.200Z"
 }
