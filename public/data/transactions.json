@@ -1,7 +1,21 @@
 {
   "items": [
     {
-      "id": "waive-2026-09-01-0",
+      "id": "signing-2026-09-02-0",
+      "type": "Signing",
+      "typeKo": "계약",
+      "date": "2026-09-02T00:00:00",
+      "dateKo": "9월 2일",
+      "title": "계약 · 9월 2일",
+      "descriptionKo": "클리블랜드 캐벌리어스가 센터 Khalifa Diop와 계약을 체결했습니다.",
+      "descriptions": [
+        "Cleveland Cavaliers signed center Khalifa Diop to a Contract."
+      ],
+      "source": "NBA.com",
+      "sourceLink": "https://www.nba.com/players/transactions"
+    },
+    {
+      "id": "waive-2026-09-01-1",
       "type": "Waive",
       "typeKo": "방출",
       "date": "2026-09-01T00:00:00",
@@ -15,7 +29,7 @@
       "sourceLink": "https://www.nba.com/players/transactions"
     },
     {
-      "id": "trade-2026-08-29-1",
+      "id": "trade-2026-08-29-2",
       "type": "Trade",
       "typeKo": "트레이드",
       "date": "2026-08-29T00:00:00",
@@ -31,7 +45,7 @@
       "sourceLink": "https://www.nba.com/players/transactions"
     },
     {
-      "id": "waive-2026-08-29-2",
+      "id": "waive-2026-08-29-3",
       "type": "Waive",
       "typeKo": "방출",
       "date": "2026-08-29T00:00:00",
@@ -45,7 +59,7 @@
       "sourceLink": "https://www.nba.com/players/transactions"
     },
     {
-      "id": "waive-2026-08-28-3",
+      "id": "waive-2026-08-28-4",
       "type": "Waive",
       "typeKo": "방출",
       "date": "2026-08-28T00:00:00",
@@ -59,7 +73,7 @@
       "sourceLink": "https://www.nba.com/players/transactions"
     },
     {
-      "id": "waive-2026-08-28-4",
+      "id": "waive-2026-08-28-5",
       "type": "Waive",
       "typeKo": "방출",
       "date": "2026-08-28T00:00:00",
@@ -73,7 +87,7 @@
       "sourceLink": "https://www.nba.com/players/transactions"
     },
     {
-      "id": "signing-2026-08-27-5",
+      "id": "signing-2026-08-27-6",
       "type": "Signing",
       "typeKo": "계약",
       "date": "2026-08-27T00:00:00",
@@ -87,7 +101,7 @@
       "sourceLink": "https://www.nba.com/players/transactions"
     },
     {
-      "id": "signing-2026-08-27-6",
+      "id": "signing-2026-08-27-7",
       "type": "Signing",
       "typeKo": "계약",
       "date": "2026-08-27T00:00:00",
@@ -101,7 +115,7 @@
       "sourceLink": "https://www.nba.com/players/transactions"
     },
     {
-      "id": "signing-2026-08-26-7",
+      "id": "signing-2026-08-26-8",
       "type": "Signing",
       "typeKo": "계약",
       "date": "2026-08-26T00:00:00",
@@ -115,7 +129,7 @@
       "sourceLink": "https://www.nba.com/players/transactions"
     },
     {
-      "id": "signing-2026-08-26-8",
+      "id": "signing-2026-08-26-9",
       "type": "Signing",
       "typeKo": "계약",
       "date": "2026-08-26T00:00:00",
@@ -129,7 +143,7 @@
       "sourceLink": "https://www.nba.com/players/transactions"
     },
     {
-      "id": "signing-2026-08-26-9",
+      "id": "signing-2026-08-26-10",
       "type": "Signing",
       "typeKo": "계약",
       "date": "2026-08-26T00:00:00",
@@ -143,7 +157,7 @@
       "sourceLink": "https://www.nba.com/players/transactions"
     },
     {
-      "id": "waive-2026-08-26-10",
+      "id": "waive-2026-08-26-11",
       "type": "Waive",
       "typeKo": "방출",
       "date": "2026-08-26T00:00:00",
@@ -157,7 +171,7 @@
       "sourceLink": "https://www.nba.com/players/transactions"
     },
     {
-      "id": "signing-2026-08-25-11",
+      "id": "signing-2026-08-25-12",
       "type": "Signing",
       "typeKo": "계약",
       "date": "2026-08-25T00:00:00",
@@ -171,7 +185,7 @@
       "sourceLink": "https://www.nba.com/players/transactions"
     },
     {
-      "id": "signing-2026-08-23-12",
+      "id": "signing-2026-08-23-13",
       "type": "Signing",
       "typeKo": "계약",
       "date": "2026-08-23T00:00:00",
@@ -185,7 +199,7 @@
       "sourceLink": "https://www.nba.com/players/transactions"
     },
     {
-      "id": "waive-2026-08-21-13",
+      "id": "waive-2026-08-21-14",
       "type": "Waive",
       "typeKo": "방출",
       "date": "2026-08-21T00:00:00",
@@ -199,7 +213,7 @@
       "sourceLink": "https://www.nba.com/players/transactions"
     },
     {
-      "id": "trade-2026-08-20-14",
+      "id": "trade-2026-08-20-15",
       "type": "Trade",
       "typeKo": "트레이드",
       "date": "2026-08-20T00:00:00",
@@ -219,7 +233,7 @@
       "sourceLink": "https://www.nba.com/players/transactions"
     },
     {
-      "id": "signing-2026-08-18-15",
+      "id": "signing-2026-08-18-16",
       "type": "Signing",
       "typeKo": "계약",
       "date": "2026-08-18T00:00:00",
@@ -233,7 +247,7 @@
       "sourceLink": "https://www.nba.com/players/transactions"
     },
     {
-      "id": "waive-2026-08-18-16",
+      "id": "waive-2026-08-18-17",
       "type": "Waive",
       "typeKo": "방출",
       "date": "2026-08-18T00:00:00",
@@ -245,23 +259,9 @@
       ],
       "source": "NBA.com",
       "sourceLink": "https://www.nba.com/players/transactions"
-    },
-    {
-      "id": "signing-2026-08-17-17",
-      "type": "Signing",
-      "typeKo": "계약",
-      "date": "2026-08-17T00:00:00",
-      "dateKo": "8월 17일",
-      "title": "계약 · 8월 17일",
-      "descriptionKo": "인디애나 페이서스가 가드 Braden Smith와 투웨이 계약을 체결했습니다.",
-      "descriptions": [
-        "Indiana Pacers signed guard Braden Smith to a Two-Way Contract."
-      ],
-      "source": "NBA.com",
-      "sourceLink": "https://www.nba.com/players/transactions"
     }
   ],
   "message": "",
   "source": "NBA 공식 Player Movement 데이터",
-  "updatedAt": "2026-09-02T14:29:44.243Z"
+  "updatedAt": "2026-09-02T18:42:56.033Z"
 }
