@@ -7,29 +7,15 @@
       "id": 677649,
       "name": "Ezequiel Duran",
       "team": "Texas Rangers",
-      "seasonPa": 503,
-      "recentPa": 52,
+      "seasonPa": 507,
+      "recentPa": 56,
       "previousPa": 48,
-      "recentAvg": 0.372,
-      "recentObp": 0.481,
-      "recentSlg": 0.628,
-      "recentOps": 1.109,
+      "recentAvg": 0.404,
+      "recentObp": 0.5,
+      "recentSlg": 0.702,
+      "recentOps": 1.202,
       "previousOps": 0.367,
-      "opsDelta": 0.742
-    },
-    {
-      "id": 695734,
-      "name": "Daylen Lile",
-      "team": "Washington Nationals",
-      "seasonPa": 579,
-      "recentPa": 57,
-      "previousPa": 47,
-      "recentAvg": 0.383,
-      "recentObp": 0.474,
-      "recentSlg": 0.809,
-      "recentOps": 1.283,
-      "previousOps": 0.581,
-      "opsDelta": 0.702
+      "opsDelta": 0.835
     },
     {
       "id": 661388,
@@ -44,6 +30,20 @@
       "recentOps": 1.164,
       "previousOps": 0.518,
       "opsDelta": 0.6459999999999999
+    },
+    {
+      "id": 695734,
+      "name": "Daylen Lile",
+      "team": "Washington Nationals",
+      "seasonPa": 581,
+      "recentPa": 60,
+      "previousPa": 47,
+      "recentAvg": 0.36,
+      "recentObp": 0.45,
+      "recentSlg": 0.76,
+      "recentOps": 1.21,
+      "previousOps": 0.581,
+      "opsDelta": 0.629
     },
     {
       "id": 687263,
@@ -63,15 +63,15 @@
       "id": 682829,
       "name": "Elly De La Cruz",
       "team": "Cincinnati Reds",
-      "seasonPa": 540,
-      "recentPa": 55,
+      "seasonPa": 541,
+      "recentPa": 59,
       "previousPa": 60,
-      "recentAvg": 0.375,
-      "recentObp": 0.455,
-      "recentSlg": 0.542,
-      "recentOps": 0.997,
+      "recentAvg": 0.385,
+      "recentObp": 0.458,
+      "recentSlg": 0.538,
+      "recentOps": 0.996,
       "previousOps": 0.481,
-      "opsDelta": 0.516
+      "opsDelta": 0.515
     }
   ],
   "method": "시즌 180타석 이상, 최근·직전 14일 각각 28타석 이상, 최근 OPS 0.700 이상인 타자 대상. 원인이나 지속 가능성은 추론하지 않습니다.",
@@ -81,6 +81,6 @@
     "previousStart": "2026-08-06",
     "previousEnd": "2026-08-19"
   },
-  "updatedAt": "2026-09-02T18:33:00.130Z",
+  "updatedAt": "2026-09-02T23:44:32.291Z",
   "source": "MLB Stats API"
 }

@@ -27,19 +27,19 @@
           "id": 111,
           "name": "Boston Red Sox",
           "w": 75,
-          "l": 64,
-          "pct": ".540",
-          "gb": "8.5",
-          "streak": "L1"
+          "l": 65,
+          "pct": ".536",
+          "gb": "9.0",
+          "streak": "L2"
         },
         {
           "id": 110,
           "name": "Baltimore Orioles",
           "w": 69,
-          "l": 70,
-          "pct": ".496",
-          "gb": "14.5",
-          "streak": "L1"
+          "l": 71,
+          "pct": ".493",
+          "gb": "15.0",
+          "streak": "L2"
         },
         {
           "id": 141,
@@ -120,28 +120,28 @@
           "id": 140,
           "name": "Texas Rangers",
           "w": 69,
-          "l": 70,
-          "pct": ".496",
-          "gb": "1.0",
-          "streak": "W3"
+          "l": 71,
+          "pct": ".493",
+          "gb": "1.5",
+          "streak": "L1"
         },
         {
           "id": 136,
           "name": "Seattle Mariners",
-          "w": 65,
+          "w": 66,
           "l": 74,
-          "pct": ".468",
-          "gb": "5.0",
-          "streak": "W1"
+          "pct": ".471",
+          "gb": "4.5",
+          "streak": "W2"
         },
         {
           "id": 133,
           "name": "Athletics",
-          "w": 53,
+          "w": 54,
           "l": 86,
-          "pct": ".381",
-          "gb": "17.0",
-          "streak": "L5"
+          "pct": ".386",
+          "gb": "16.5",
+          "streak": "W1"
         },
         {
           "id": 108,
@@ -161,20 +161,20 @@
         {
           "id": 144,
           "name": "Atlanta Braves",
-          "w": 82,
+          "w": 83,
           "l": 57,
-          "pct": ".590",
+          "pct": ".593",
           "gb": "-",
-          "streak": "L2"
+          "streak": "W1"
         },
         {
           "id": 143,
           "name": "Philadelphia Phillies",
           "w": 79,
-          "l": 60,
-          "pct": ".568",
-          "gb": "3.0",
-          "streak": "W6"
+          "l": 61,
+          "pct": ".564",
+          "gb": "4.0",
+          "streak": "L1"
         },
         {
           "id": 146,
@@ -182,17 +182,17 @@
           "w": 70,
           "l": 69,
           "pct": ".504",
-          "gb": "12.0",
+          "gb": "12.5",
           "streak": "W1"
         },
         {
           "id": 120,
           "name": "Washington Nationals",
           "w": 67,
-          "l": 74,
-          "pct": ".475",
-          "gb": "16.0",
-          "streak": "W2"
+          "l": 75,
+          "pct": ".472",
+          "gb": "17.0",
+          "streak": "L1"
         },
         {
           "id": 121,
@@ -200,7 +200,7 @@
           "w": 62,
           "l": 77,
           "pct": ".446",
-          "gb": "20.0",
+          "gb": "20.5",
           "streak": "L1"
         }
       ]
@@ -248,11 +248,11 @@
         {
           "id": 113,
           "name": "Cincinnati Reds",
-          "w": 66,
+          "w": 67,
           "l": 73,
-          "pct": ".475",
-          "gb": "20.0",
-          "streak": "W1"
+          "pct": ".479",
+          "gb": "19.5",
+          "streak": "W2"
         }
       ]
     },
@@ -270,22 +270,22 @@
           "streak": "L1"
         },
         {
-          "id": 135,
-          "name": "San Diego Padres",
-          "w": 73,
-          "l": 66,
-          "pct": ".525",
-          "gb": "9.5",
-          "streak": "L1"
-        },
-        {
           "id": 109,
           "name": "Arizona Diamondbacks",
+          "w": 74,
+          "l": 67,
+          "pct": ".525",
+          "gb": "9.5",
+          "streak": "W1"
+        },
+        {
+          "id": 135,
+          "name": "San Diego Padres",
           "w": 73,
           "l": 67,
           "pct": ".521",
           "gb": "10.0",
-          "streak": "L3"
+          "streak": "L2"
         },
         {
           "id": 137,
@@ -299,15 +299,15 @@
         {
           "id": 115,
           "name": "Colorado Rockies",
-          "w": 53,
+          "w": 54,
           "l": 86,
-          "pct": ".381",
-          "gb": "29.5",
-          "streak": "W1"
+          "pct": ".386",
+          "gb": "29.0",
+          "streak": "W2"
         }
       ]
     }
   ],
-  "updatedAt": "2026-09-02T11:58:02.271Z",
+  "updatedAt": "2026-09-02T23:44:32.567Z",
   "source": "MLB Stats API"
 }
