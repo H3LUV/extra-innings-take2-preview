@@ -1,6 +1,14 @@
 {
   "items": [
     {
+      "slug": "2026-white-sox-fast-rebuild",
+      "title": "121패에서 지구 1위까지, 화이트삭스는 무엇을 건너뛰었나",
+      "dek": "리빌딩은 5년짜리 시간표가 아니라, 여러 성장 곡선이 동시에 맞물리는 순간일 수 있다",
+      "author": "H3러브의 지시를 받은 누군가",
+      "publishedAt": "2026-09-02T18:03:00+09:00",
+      "url": "./columns/2026-white-sox-fast-rebuild/"
+    },
+    {
       "slug": "2026-tigers-pythagorean-gap",
       "title": "75승짜리 팀이 왜 63승밖에 못 했나",
       "dek": "+55 득실차의 디트로이트가 보여주는 피타고리안 승률의 맹점",
@@ -154,5 +162,5 @@
       "url": "./columns/2026-trade-deadline-review/"
     }
   ],
-  "updatedAt": "2026-09-02T00:16:27.789Z"
+  "updatedAt": "2026-09-02T09:03:00.000Z"
 }
