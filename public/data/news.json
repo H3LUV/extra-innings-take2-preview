@@ -1,21 +1,21 @@
 {
   "items": [
     {
-      "id": "mlb-5be281bfa958",
-      "articleFile": "./data/articles/mlb-5be281bfa958.json",
-      "title": "Greene to return Tuesday, and Tigers' lineup badly needs him",
-      "titleKo": "Greene은 화요일에 복귀할 예정이며 타이거스의 라인업에는 Greene이 절실히 필요합니다.",
-      "link": "https://www.mlb.com/news/riley-greene-tigers-injury-return-2026",
-      "pubDate": "2026-09-01T00:41:00Z",
+      "id": "mlb-578d487d0c2f",
+      "articleFile": "./data/articles/mlb-578d487d0c2f.json",
+      "title": "Painter twirls 7 scoreless frames before bullpen allows winning run",
+      "titleKo": "페인터는 불펜이 결승점을 허용하기 전에 7프레임을 무득점으로 돌렸습니다.",
+      "link": "https://www.mlb.com/news/andrew-painter-tosses-seven-scoreless-innings-in-phillies-loss-to-d-backs",
+      "pubDate": "2026-09-03T00:04:00Z",
       "source": "MLB.com",
       "category": "미국 현지 읽을거리",
-      "readingMinutes": 7,
+      "readingMinutes": 9,
       "bodyVerified": true,
-      "bodyChars": 5145,
-      "sourceWordCount": 1491,
+      "bodyChars": 7000,
+      "sourceWordCount": 2039,
       "translationType": "full",
       "pipelineVersion": "reader-v6",
-      "translatedAt": "2026-09-01T01:19:29.489Z"
+      "translatedAt": "2026-09-03T00:18:26.552Z"
     },
     {
       "id": "mlb-122fd705c470",
@@ -35,6 +35,23 @@
       "translatedAt": "2026-09-02T00:17:11.570Z"
     },
     {
+      "id": "mlb-5be281bfa958",
+      "articleFile": "./data/articles/mlb-5be281bfa958.json",
+      "title": "Greene to return Tuesday, and Tigers' lineup badly needs him",
+      "titleKo": "Greene은 화요일에 복귀할 예정이며 타이거스의 라인업에는 Greene이 절실히 필요합니다.",
+      "link": "https://www.mlb.com/news/riley-greene-tigers-injury-return-2026",
+      "pubDate": "2026-09-01T00:41:00Z",
+      "source": "MLB.com",
+      "category": "미국 현지 읽을거리",
+      "readingMinutes": 7,
+      "bodyVerified": true,
+      "bodyChars": 5145,
+      "sourceWordCount": 1491,
+      "translationType": "full",
+      "pipelineVersion": "reader-v6",
+      "translatedAt": "2026-09-01T01:19:29.489Z"
+    },
+    {
       "id": "mlb-9462e5092957",
       "articleFile": "./data/articles/mlb-9462e5092957.json",
       "title": "Giants' young bats -- and Devers' 30th HR -- help down Braves in makeup game",
@@ -50,23 +67,6 @@
       "translationType": "full",
       "pipelineVersion": "reader-v6",
       "translatedAt": "2026-09-01T01:19:08.248Z"
-    },
-    {
-      "id": "mlb-afb2f7a642f4",
-      "articleFile": "./data/articles/mlb-afb2f7a642f4.json",
-      "title": "Veteran umpire Gonzalez exits Padres-Reds game due to heat exhaustion",
-      "titleKo": "베테랑 심판 곤잘레스, 열사병으로 파드레스-레즈 경기 종료",
-      "link": "https://www.mlb.com/news/umpire-manny-gonzalez-exits-padres-reds-game-due-to-heat-exhaustion",
-      "pubDate": "2026-09-01T00:46:53.819Z",
-      "source": "MLB.com",
-      "category": "미국 현지 읽을거리",
-      "readingMinutes": 6,
-      "bodyVerified": true,
-      "bodyChars": 4444,
-      "sourceWordCount": 1244,
-      "translationType": "full",
-      "pipelineVersion": "reader-v6",
-      "translatedAt": "2026-09-01T01:19:18.067Z"
     }
   ],
   "message": "미국 현지 기사 중 광고·회원가입 문구를 제거하고 제목과 본문 전체 자동 번역이 완료된 기사만 제공합니다.",
@@ -74,5 +74,5 @@
   "translationPolicy": "clean_full_translation_keep_previous_on_failure",
   "pipelineVersion": "reader-v6",
   "selectedCount": 4,
-  "updatedAt": "2026-09-02T00:19:02.200Z"
+  "updatedAt": "2026-09-03T00:23:06.302Z"
 }
