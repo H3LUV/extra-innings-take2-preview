@@ -21,7 +21,7 @@
       "id": 661388,
       "name": "William Contreras",
       "team": "Milwaukee Brewers",
-      "seasonPa": 559,
+      "seasonPa": 560,
       "recentPa": 50,
       "previousPa": 55,
       "recentAvg": 0.444,
@@ -46,20 +46,6 @@
       "opsDelta": 0.5980000000000001
     },
     {
-      "id": 646240,
-      "name": "Rafael Devers",
-      "team": "San Francisco Giants",
-      "seasonPa": 601,
-      "recentPa": 60,
-      "previousPa": 50,
-      "recentAvg": 0.354,
-      "recentObp": 0.483,
-      "recentSlg": 0.813,
-      "recentOps": 1.296,
-      "previousOps": 0.732,
-      "opsDelta": 0.5640000000000001
-    },
-    {
       "id": 682829,
       "name": "Elly De La Cruz",
       "team": "Cincinnati Reds",
@@ -72,6 +58,20 @@
       "recentOps": 0.995,
       "previousOps": 0.466,
       "opsDelta": 0.5289999999999999
+    },
+    {
+      "id": 695600,
+      "name": "Carter Jensen",
+      "team": "Kansas City Royals",
+      "seasonPa": 521,
+      "recentPa": 49,
+      "previousPa": 44,
+      "recentAvg": 0.282,
+      "recentObp": 0.408,
+      "recentSlg": 0.692,
+      "recentOps": 1.1,
+      "previousOps": 0.575,
+      "opsDelta": 0.5250000000000001
     }
   ],
   "method": "시즌 180타석 이상, 최근·직전 14일 각각 28타석 이상, 최근 OPS 0.700 이상인 타자 대상. 원인이나 지속 가능성은 추론하지 않습니다.",
@@ -81,6 +81,6 @@
     "previousStart": "2026-08-07",
     "previousEnd": "2026-08-20"
   },
-  "updatedAt": "2026-09-03T18:30:02.054Z",
+  "updatedAt": "2026-09-03T23:43:22.562Z",
   "source": "MLB Stats API"
 }
