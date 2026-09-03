@@ -15,7 +15,35 @@
       "sourceLink": "https://www.nba.com/players/transactions"
     },
     {
-      "id": "waive-2026-09-01-1",
+      "id": "waive-2026-09-02-1",
+      "type": "Waive",
+      "typeKo": "방출",
+      "date": "2026-09-02T00:00:00",
+      "dateKo": "9월 2일",
+      "title": "방출 · 9월 2일",
+      "descriptionKo": "샬럿 호네츠가 포워드 Trey Townsend를 방출했습니다.",
+      "descriptions": [
+        "Charlotte Hornets waived forward Trey Townsend."
+      ],
+      "source": "NBA.com",
+      "sourceLink": "https://www.nba.com/players/transactions"
+    },
+    {
+      "id": "waive-2026-09-02-2",
+      "type": "Waive",
+      "typeKo": "방출",
+      "date": "2026-09-02T00:00:00",
+      "dateKo": "9월 2일",
+      "title": "방출 · 9월 2일",
+      "descriptionKo": "유타 재즈가 가드 Matthew Murrell를 방출했습니다.",
+      "descriptions": [
+        "Utah Jazz waived guard Matthew Murrell."
+      ],
+      "source": "NBA.com",
+      "sourceLink": "https://www.nba.com/players/transactions"
+    },
+    {
+      "id": "waive-2026-09-01-3",
       "type": "Waive",
       "typeKo": "방출",
       "date": "2026-09-01T00:00:00",
@@ -29,7 +57,7 @@
       "sourceLink": "https://www.nba.com/players/transactions"
     },
     {
-      "id": "trade-2026-08-29-2",
+      "id": "trade-2026-08-29-4",
       "type": "Trade",
       "typeKo": "트레이드",
       "date": "2026-08-29T00:00:00",
@@ -45,7 +73,7 @@
       "sourceLink": "https://www.nba.com/players/transactions"
     },
     {
-      "id": "waive-2026-08-29-3",
+      "id": "waive-2026-08-29-5",
       "type": "Waive",
       "typeKo": "방출",
       "date": "2026-08-29T00:00:00",
@@ -59,7 +87,7 @@
       "sourceLink": "https://www.nba.com/players/transactions"
     },
     {
-      "id": "waive-2026-08-28-4",
+      "id": "waive-2026-08-28-6",
       "type": "Waive",
       "typeKo": "방출",
       "date": "2026-08-28T00:00:00",
@@ -73,7 +101,7 @@
       "sourceLink": "https://www.nba.com/players/transactions"
     },
     {
-      "id": "waive-2026-08-28-5",
+      "id": "waive-2026-08-28-7",
       "type": "Waive",
       "typeKo": "방출",
       "date": "2026-08-28T00:00:00",
@@ -87,7 +115,7 @@
       "sourceLink": "https://www.nba.com/players/transactions"
     },
     {
-      "id": "signing-2026-08-27-6",
+      "id": "signing-2026-08-27-8",
       "type": "Signing",
       "typeKo": "계약",
       "date": "2026-08-27T00:00:00",
@@ -101,7 +129,7 @@
       "sourceLink": "https://www.nba.com/players/transactions"
     },
     {
-      "id": "signing-2026-08-27-7",
+      "id": "signing-2026-08-27-9",
       "type": "Signing",
       "typeKo": "계약",
       "date": "2026-08-27T00:00:00",
@@ -115,7 +143,7 @@
       "sourceLink": "https://www.nba.com/players/transactions"
     },
     {
-      "id": "signing-2026-08-26-8",
+      "id": "signing-2026-08-26-10",
       "type": "Signing",
       "typeKo": "계약",
       "date": "2026-08-26T00:00:00",
@@ -129,7 +157,7 @@
       "sourceLink": "https://www.nba.com/players/transactions"
     },
     {
-      "id": "signing-2026-08-26-9",
+      "id": "signing-2026-08-26-11",
       "type": "Signing",
       "typeKo": "계약",
       "date": "2026-08-26T00:00:00",
@@ -143,7 +171,7 @@
       "sourceLink": "https://www.nba.com/players/transactions"
     },
     {
-      "id": "signing-2026-08-26-10",
+      "id": "signing-2026-08-26-12",
       "type": "Signing",
       "typeKo": "계약",
       "date": "2026-08-26T00:00:00",
@@ -157,7 +185,7 @@
       "sourceLink": "https://www.nba.com/players/transactions"
     },
     {
-      "id": "waive-2026-08-26-11",
+      "id": "waive-2026-08-26-13",
       "type": "Waive",
       "typeKo": "방출",
       "date": "2026-08-26T00:00:00",
@@ -171,7 +199,7 @@
       "sourceLink": "https://www.nba.com/players/transactions"
     },
     {
-      "id": "signing-2026-08-25-12",
+      "id": "signing-2026-08-25-14",
       "type": "Signing",
       "typeKo": "계약",
       "date": "2026-08-25T00:00:00",
@@ -185,7 +213,7 @@
       "sourceLink": "https://www.nba.com/players/transactions"
     },
     {
-      "id": "signing-2026-08-23-13",
+      "id": "signing-2026-08-23-15",
       "type": "Signing",
       "typeKo": "계약",
       "date": "2026-08-23T00:00:00",
@@ -199,7 +227,7 @@
       "sourceLink": "https://www.nba.com/players/transactions"
     },
     {
-      "id": "waive-2026-08-21-14",
+      "id": "waive-2026-08-21-16",
       "type": "Waive",
       "typeKo": "방출",
       "date": "2026-08-21T00:00:00",
@@ -213,7 +241,7 @@
       "sourceLink": "https://www.nba.com/players/transactions"
     },
     {
-      "id": "trade-2026-08-20-15",
+      "id": "trade-2026-08-20-17",
       "type": "Trade",
       "typeKo": "트레이드",
       "date": "2026-08-20T00:00:00",
@@ -231,37 +259,9 @@
       ],
       "source": "NBA.com",
       "sourceLink": "https://www.nba.com/players/transactions"
-    },
-    {
-      "id": "signing-2026-08-18-16",
-      "type": "Signing",
-      "typeKo": "계약",
-      "date": "2026-08-18T00:00:00",
-      "dateKo": "8월 18일",
-      "title": "계약 · 8월 18일",
-      "descriptionKo": "뉴올리언스 펠리컨스가 포워드 Malik Dia와 투웨이 계약을 체결했습니다.",
-      "descriptions": [
-        "New Orleans Pelicans signed forward Malik Dia to a Two-Way Contract."
-      ],
-      "source": "NBA.com",
-      "sourceLink": "https://www.nba.com/players/transactions"
-    },
-    {
-      "id": "waive-2026-08-18-17",
-      "type": "Waive",
-      "typeKo": "방출",
-      "date": "2026-08-18T00:00:00",
-      "dateKo": "8월 18일",
-      "title": "방출 · 8월 18일",
-      "descriptionKo": "뉴올리언스 펠리컨스가 센터 Hunter Dickinson를 방출했습니다.",
-      "descriptions": [
-        "New Orleans Pelicans waived center Hunter Dickinson."
-      ],
-      "source": "NBA.com",
-      "sourceLink": "https://www.nba.com/players/transactions"
     }
   ],
   "message": "",
   "source": "NBA 공식 Player Movement 데이터",
-  "updatedAt": "2026-09-02T21:49:41.521Z"
+  "updatedAt": "2026-09-03T00:16:09.596Z"
 }
