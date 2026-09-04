@@ -68,11 +68,11 @@
         {
           "id": 114,
           "name": "Cleveland Guardians",
-          "w": 70,
+          "w": 71,
           "l": 70,
-          "pct": ".500",
-          "gb": "3.0",
-          "streak": "L2"
+          "pct": ".504",
+          "gb": "2.5",
+          "streak": "W1"
         },
         {
           "id": 142,
@@ -87,10 +87,10 @@
           "id": 116,
           "name": "Detroit Tigers",
           "w": 64,
-          "l": 75,
-          "pct": ".460",
-          "gb": "8.5",
-          "streak": "W1"
+          "l": 76,
+          "pct": ".457",
+          "gb": "9.0",
+          "streak": "L1"
         },
         {
           "id": 118,
@@ -308,6 +308,6 @@
       ]
     }
   ],
-  "updatedAt": "2026-09-04T11:59:30.212Z",
+  "updatedAt": "2026-09-04T23:36:13.035Z",
   "source": "MLB Stats API"
 }

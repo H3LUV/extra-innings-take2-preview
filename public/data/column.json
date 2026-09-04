@@ -21,7 +21,7 @@
       "id": 682829,
       "name": "Elly De La Cruz",
       "team": "Cincinnati Reds",
-      "seasonPa": 541,
+      "seasonPa": 542,
       "recentPa": 50,
       "previousPa": 60,
       "recentAvg": 0.422,
@@ -63,7 +63,7 @@
       "id": 547180,
       "name": "Bryce Harper",
       "team": "Philadelphia Phillies",
-      "seasonPa": 599,
+      "seasonPa": 600,
       "recentPa": 48,
       "previousPa": 57,
       "recentAvg": 0.475,
@@ -81,6 +81,6 @@
     "previousStart": "2026-08-08",
     "previousEnd": "2026-08-21"
   },
-  "updatedAt": "2026-09-04T18:16:19.007Z",
+  "updatedAt": "2026-09-04T23:36:12.687Z",
   "source": "MLB Stats API"
 }
