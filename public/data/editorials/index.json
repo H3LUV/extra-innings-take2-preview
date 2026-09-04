@@ -1,6 +1,14 @@
 {
   "items": [
     {
+      "slug": "2026-pca-selective-chase-zone",
+      "title": "나쁜 공을 잘 치는 타자는 나쁜 타자인가",
+      "dek": "지면 1.20피트 체인지업을 넘긴 PCA. 그러나 그의 MVP급 시즌을 만든 건 존 확장이 아니라 오히려 Chase%를 크게 낮춘 변화였다",
+      "author": "H3러브의 지시를 받은 누군가",
+      "publishedAt": "2026-09-04T18:08:00+09:00",
+      "url": "./columns/2026-pca-selective-chase-zone/"
+    },
+    {
       "slug": "2026-white-sox-fast-rebuild",
       "title": "121패에서 지구 1위까지, 화이트삭스는 무엇을 건너뛰었나",
       "dek": "리빌딩은 5년짜리 시간표가 아니라, 여러 성장 곡선이 동시에 맞물리는 순간일 수 있다",
@@ -162,5 +170,5 @@
       "url": "./columns/2026-trade-deadline-review/"
     }
   ],
-  "updatedAt": "2026-09-04T00:07:44.046Z"
+  "updatedAt": "2026-09-04T09:08:00.000Z"
 }
