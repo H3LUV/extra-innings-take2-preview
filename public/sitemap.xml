@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://today-mlb.pages.dev/</loc><lastmod>2026-09-03T00:17:58.823Z</lastmod><changefreq>daily</changefreq><priority>1.0</priority></url>
-  <url><loc>https://today-mlb.pages.dev/columns/</loc><lastmod>2026-09-03T00:17:58.823Z</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://today-mlb.pages.dev/</loc><lastmod>2026-09-04T09:08:00.000Z</lastmod><changefreq>daily</changefreq><priority>1.0</priority></url>
+  <url><loc>https://today-mlb.pages.dev/columns/</loc><lastmod>2026-09-04T09:08:00.000Z</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://today-mlb.pages.dev/columns/2026-pca-selective-chase-zone/</loc><lastmod>2026-09-04T09:08:00.000Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
   <url><loc>https://today-mlb.pages.dev/columns/2026-white-sox-fast-rebuild/</loc><lastmod>2026-09-02T09:03:00.000Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
   <url><loc>https://today-mlb.pages.dev/columns/2026-tigers-pythagorean-gap/</loc><lastmod>2026-09-01T09:22:00.000Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
   <url><loc>https://today-mlb.pages.dev/columns/2026-trajekt-hitting-arms-race/</loc><lastmod>2026-08-31T12:40:00.000Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
