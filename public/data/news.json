@@ -15,7 +15,7 @@
       "sourceWordCount": 251,
       "translationType": "full",
       "pipelineVersion": "reader-v6",
-      "translatedAt": "2026-09-04T18:27:55.824Z"
+      "translatedAt": "2026-09-04T21:32:49.265Z"
     },
     {
       "id": "nba-7d326bf26c04",
@@ -28,28 +28,28 @@
       "category": "미국 현지 읽을거리",
       "readingMinutes": 4,
       "bodyVerified": true,
-      "bodyChars": 2035,
+      "bodyChars": 2034,
       "sourceWordCount": 611,
       "translationType": "full",
       "pipelineVersion": "reader-v6",
-      "translatedAt": "2026-09-04T18:27:57.980Z"
+      "translatedAt": "2026-09-04T21:32:50.672Z"
     },
     {
       "id": "nba-91a7b9bbe0d8",
       "articleFile": "./data/articles/nba-91a7b9bbe0d8.json",
       "title": "How NBA players performed at the 2027 FIBA World Cup qualifiers",
-      "titleKo": "2027 FIBA ​​월드컵 예선에서 NBA 선수들의 활약",
+      "titleKo": "2027년 FIBA ​​월드컵 예선에서 NBA 선수들의 활약",
       "link": "https://www.nba.com/news/nba-players-fiba-world-cup-qualifiers-august-2026",
       "pubDate": "2026-08-27T18:25:05Z",
       "source": "NBA.com",
       "category": "미국 현지 읽을거리",
       "readingMinutes": 7,
       "bodyVerified": true,
-      "bodyChars": 6096,
+      "bodyChars": 6099,
       "sourceWordCount": 1544,
       "translationType": "full",
       "pipelineVersion": "reader-v6",
-      "translatedAt": "2026-09-04T18:28:42.362Z"
+      "translatedAt": "2026-09-04T21:32:59.674Z"
     },
     {
       "id": "nba-b4795cf79293",
@@ -62,11 +62,11 @@
       "category": "미국 현지 읽을거리",
       "readingMinutes": 14,
       "bodyVerified": true,
-      "bodyChars": 8702,
+      "bodyChars": 8708,
       "sourceWordCount": 3161,
       "translationType": "full",
       "pipelineVersion": "reader-v6",
-      "translatedAt": "2026-09-04T18:28:28.389Z"
+      "translatedAt": "2026-09-04T21:32:56.341Z"
     }
   ],
   "message": "NBA.com의 최신 일반 기사 중 제목과 본문 전체 자동 번역이 완료된 기사만 제공합니다.",
@@ -74,5 +74,5 @@
   "translationPolicy": "newest_valid_article_full_translation_keep_previous_on_failure",
   "pipelineVersion": "reader-v6",
   "selectedCount": 4,
-  "updatedAt": "2026-09-04T18:28:42.363Z"
+  "updatedAt": "2026-09-04T21:32:59.675Z"
 }
