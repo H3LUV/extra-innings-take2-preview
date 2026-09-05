@@ -1,6 +1,23 @@
 {
   "items": [
     {
+      "id": "mlb-b31526b6ebbf",
+      "articleFile": "./data/articles/mlb-b31526b6ebbf.json",
+      "title": "Weaver trying to shake struggles on mound ... and a tough case of poison ivy",
+      "titleKo": "마운드에서 몸부림을 치려는 위버... 그리고 포이즌 아이비의 힘든 사례",
+      "link": "https://www.mlb.com/news/luke-weaver-dealing-with-poison-ivy",
+      "pubDate": "2026-09-04T22:30:33.782Z",
+      "source": "MLB.com",
+      "category": "미국 현지 읽을거리",
+      "readingMinutes": 6,
+      "bodyVerified": true,
+      "bodyChars": 4355,
+      "sourceWordCount": 1233,
+      "translationType": "full",
+      "pipelineVersion": "reader-v6",
+      "translatedAt": "2026-09-05T00:08:50.186Z"
+    },
+    {
       "id": "mlb-bef15870b464",
       "articleFile": "./data/articles/mlb-bef15870b464.json",
       "title": "Myers fears no wall! Reds' CF robs another Brewers hitter with incredible catch",
@@ -35,23 +52,6 @@
       "translatedAt": "2026-09-05T00:08:33.820Z"
     },
     {
-      "id": "mlb-b31526b6ebbf",
-      "articleFile": "./data/articles/mlb-b31526b6ebbf.json",
-      "title": "Weaver trying to shake struggles on mound ... and a tough case of poison ivy",
-      "titleKo": "마운드에서 몸부림을 치려는 위버... 그리고 포이즌 아이비의 힘든 사례",
-      "link": "https://www.mlb.com/news/luke-weaver-dealing-with-poison-ivy",
-      "pubDate": "2026-09-04T22:30:33.782Z",
-      "source": "MLB.com",
-      "category": "미국 현지 읽을거리",
-      "readingMinutes": 6,
-      "bodyVerified": true,
-      "bodyChars": 4355,
-      "sourceWordCount": 1233,
-      "translationType": "full",
-      "pipelineVersion": "reader-v6",
-      "translatedAt": "2026-09-05T00:08:50.186Z"
-    },
-    {
       "id": "mlb-578d487d0c2f",
       "articleFile": "./data/articles/mlb-578d487d0c2f.json",
       "title": "Painter twirls 7 scoreless frames before bullpen allows winning run",
@@ -74,5 +74,5 @@
   "translationPolicy": "clean_full_translation_keep_previous_on_failure",
   "pipelineVersion": "reader-v6",
   "selectedCount": 4,
-  "updatedAt": "2026-09-05T00:13:41.149Z"
+  "updatedAt": "2026-09-05T23:59:55.336Z"
 }
