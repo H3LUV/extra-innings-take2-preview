@@ -487,29 +487,29 @@
       },
       {
         "id": 824552,
-        "status": "In Progress",
+        "status": "Final",
         "venue": "Rate Field",
         "gameDate": "2026-09-06T22:20:00Z",
         "away": {
           "id": 142,
           "name": "Minnesota Twins",
-          "score": 0,
+          "score": 1,
           "record": {
             "wins": 68,
-            "losses": 74,
+            "losses": 75,
             "ties": 0,
-            "pct": ".479"
+            "pct": ".476"
           }
         },
         "home": {
           "id": 145,
           "name": "Chicago White Sox",
-          "score": 0,
+          "score": 10,
           "record": {
-            "wins": 74,
+            "wins": 75,
             "losses": 68,
             "ties": 0,
-            "pct": ".521"
+            "pct": ".524"
           }
         },
         "probable": {
@@ -517,36 +517,36 @@
           "home": "Bryan Hudson"
         },
         "decisions": {
-          "winner": "",
-          "loser": "",
+          "winner": "Hagen Smith",
+          "loser": "Bailey Ober",
           "save": ""
         }
       },
       {
         "id": 823903,
-        "status": "Pre-Game",
+        "status": "Final",
         "venue": "UNIQLO Field at Dodger Stadium",
         "gameDate": "2026-09-07T02:10:00Z",
         "away": {
           "id": 120,
           "name": "Washington Nationals",
-          "score": null,
+          "score": 5,
           "record": {
             "wins": 67,
-            "losses": 77,
+            "losses": 78,
             "ties": 0,
-            "pct": ".465"
+            "pct": ".462"
           }
         },
         "home": {
           "id": 119,
           "name": "Los Angeles Dodgers",
-          "score": null,
+          "score": 7,
           "record": {
-            "wins": 85,
+            "wins": 86,
             "losses": 57,
             "ties": 0,
-            "pct": ".599"
+            "pct": ".601"
           }
         },
         "probable": {
@@ -554,9 +554,9 @@
           "home": "Justin Wrobleski"
         },
         "decisions": {
-          "winner": "",
-          "loser": "",
-          "save": ""
+          "winner": "Bobby Miller",
+          "loser": "Will Dion",
+          "save": "Edgardo Henriquez"
         }
       }
     ],
@@ -794,9 +794,9 @@
           "score": null,
           "record": {
             "wins": 68,
-            "losses": 74,
+            "losses": 75,
             "ties": 0,
-            "pct": ".479"
+            "pct": ".476"
           }
         },
         "home": {
@@ -831,9 +831,9 @@
           "score": null,
           "record": {
             "wins": 67,
-            "losses": 77,
+            "losses": 78,
             "ties": 0,
-            "pct": ".465"
+            "pct": ".462"
           }
         },
         "home": {
@@ -848,7 +848,7 @@
           }
         },
         "probable": {
-          "away": "",
+          "away": "Jake Irvin",
           "home": "Nick Pivetta"
         },
         "decisions": {
@@ -915,10 +915,10 @@
           "name": "Los Angeles Dodgers",
           "score": null,
           "record": {
-            "wins": 85,
+            "wins": 86,
             "losses": 57,
             "ties": 0,
-            "pct": ".599"
+            "pct": ".601"
           }
         },
         "probable": {
@@ -1018,9 +1018,9 @@
           "score": null,
           "record": {
             "wins": 68,
-            "losses": 74,
+            "losses": 75,
             "ties": 0,
-            "pct": ".479"
+            "pct": ".476"
           }
         },
         "home": {
@@ -1073,7 +1073,7 @@
         },
         "probable": {
           "away": "Hayden Wesneski",
-          "home": ""
+          "home": "Andrew Painter"
         },
         "decisions": {
           "winner": "",
@@ -1287,10 +1287,10 @@
           "name": "Chicago White Sox",
           "score": null,
           "record": {
-            "wins": 74,
+            "wins": 75,
             "losses": 68,
             "ties": 0,
-            "pct": ".521"
+            "pct": ".524"
           }
         },
         "probable": {
@@ -1351,9 +1351,9 @@
           "score": null,
           "record": {
             "wins": 67,
-            "losses": 77,
+            "losses": 78,
             "ties": 0,
-            "pct": ".465"
+            "pct": ".462"
           }
         },
         "home": {
@@ -1509,15 +1509,15 @@
           "name": "Los Angeles Dodgers",
           "score": null,
           "record": {
-            "wins": 85,
+            "wins": 86,
             "losses": 57,
             "ties": 0,
-            "pct": ".599"
+            "pct": ".601"
           }
         },
         "probable": {
           "away": "Nick Lodolo",
-          "home": ""
+          "home": "Tarik Skubal"
         },
         "decisions": {
           "winner": "",
@@ -1527,6 +1527,6 @@
       }
     ]
   },
-  "updatedAt": "2026-09-06T23:22:56.957Z",
+  "updatedAt": "2026-09-07T13:05:19.981Z",
   "source": "MLB Stats API"
 }
