@@ -4,20 +4,6 @@
   "dek": "직전 14일 대비 OPS 상승폭 상위 5명",
   "players": [
     {
-      "id": 695734,
-      "name": "Daylen Lile",
-      "team": "Washington Nationals",
-      "seasonPa": 592,
-      "recentPa": 48,
-      "previousPa": 56,
-      "recentAvg": 0.385,
-      "recentObp": 0.479,
-      "recentSlg": 0.846,
-      "recentOps": 1.325,
-      "previousOps": 0.601,
-      "opsDelta": 0.724
-    },
-    {
       "id": 682829,
       "name": "Elly De La Cruz",
       "team": "Cincinnati Reds",
@@ -30,6 +16,20 @@
       "recentOps": 1.238,
       "previousOps": 0.569,
       "opsDelta": 0.669
+    },
+    {
+      "id": 695734,
+      "name": "Daylen Lile",
+      "team": "Washington Nationals",
+      "seasonPa": 595,
+      "recentPa": 51,
+      "previousPa": 56,
+      "recentAvg": 0.357,
+      "recentObp": 0.451,
+      "recentSlg": 0.786,
+      "recentOps": 1.237,
+      "previousOps": 0.601,
+      "opsDelta": 0.6360000000000001
     },
     {
       "id": 646240,
@@ -81,6 +81,6 @@
     "previousStart": "2026-08-11",
     "previousEnd": "2026-08-24"
   },
-  "updatedAt": "2026-09-07T19:05:14.503Z",
+  "updatedAt": "2026-09-07T23:52:57.687Z",
   "source": "MLB Stats API"
 }
