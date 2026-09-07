@@ -1,6 +1,14 @@
 {
   "items": [
     {
+      "slug": "2026-chapman-400-saves-closer-era",
+      "title": "400세이브는 구위의 기록이 아니라 역할의 기록이다",
+      "dek": "38세 채프먼이 101마일로 찍은 400번째 세이브. 그러나 현대 MLB는 그 기록을 쌓게 해주는 ‘9회 전담 마무리’부터 줄이고 있다",
+      "author": "H3러브의 지시를 받은 누군가",
+      "publishedAt": "2026-09-07T18:28:00+09:00",
+      "url": "./columns/2026-chapman-400-saves-closer-era/"
+    },
+    {
       "slug": "2026-pca-selective-chase-zone",
       "title": "나쁜 공을 잘 치는 타자는 나쁜 타자인가",
       "dek": "지면 1.20피트 체인지업을 넘긴 PCA. 그러나 그의 MVP급 시즌을 만든 건 존 확장이 아니라 오히려 Chase%를 크게 낮춘 변화였다",
@@ -170,5 +178,5 @@
       "url": "./columns/2026-trade-deadline-review/"
     }
   ],
-  "updatedAt": "2026-09-06T23:56:32.737Z"
+  "updatedAt": "2026-09-07T09:28:00.000Z"
 }
