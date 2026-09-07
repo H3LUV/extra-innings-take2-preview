@@ -1,6 +1,23 @@
 {
   "items": [
     {
+      "id": "mlb-e060cf73b231",
+      "articleFile": "./data/articles/mlb-e060cf73b231.json",
+      "title": "Happ (left knee discomfort) scratched from Sunday lineup",
+      "titleKo": "햅(왼쪽 ​​무릎 불편) 일요일 라인업에서 긁힘",
+      "link": "https://www.mlb.com/news/ian-happ-scratched-from-lineup-due-to-left-knee-injury",
+      "pubDate": "2026-09-06T23:42:00Z",
+      "source": "MLB.com",
+      "category": "미국 현지 읽을거리",
+      "readingMinutes": 10,
+      "bodyVerified": true,
+      "bodyChars": 7069,
+      "sourceWordCount": 2090,
+      "translationType": "full",
+      "pipelineVersion": "reader-v6",
+      "translatedAt": "2026-09-06T23:57:02.519Z"
+    },
+    {
       "id": "mlb-b31526b6ebbf",
       "articleFile": "./data/articles/mlb-b31526b6ebbf.json",
       "title": "Weaver trying to shake struggles on mound ... and a tough case of poison ivy",
@@ -50,23 +67,6 @@
       "translationType": "full",
       "pipelineVersion": "reader-v6",
       "translatedAt": "2026-09-05T00:08:33.820Z"
-    },
-    {
-      "id": "mlb-578d487d0c2f",
-      "articleFile": "./data/articles/mlb-578d487d0c2f.json",
-      "title": "Painter twirls 7 scoreless frames before bullpen allows winning run",
-      "titleKo": "페인터는 불펜이 결승점을 허용하기 전에 7프레임을 무득점으로 돌렸습니다.",
-      "link": "https://www.mlb.com/news/andrew-painter-tosses-seven-scoreless-innings-in-phillies-loss-to-d-backs",
-      "pubDate": "2026-09-03T00:04:00Z",
-      "source": "MLB.com",
-      "category": "미국 현지 읽을거리",
-      "readingMinutes": 9,
-      "bodyVerified": true,
-      "bodyChars": 7000,
-      "sourceWordCount": 2039,
-      "translationType": "full",
-      "pipelineVersion": "reader-v6",
-      "translatedAt": "2026-09-03T00:18:26.552Z"
     }
   ],
   "message": "미국 현지 기사 중 광고·회원가입 문구를 제거하고 제목과 본문 전체 자동 번역이 완료된 기사만 제공합니다.",
@@ -74,5 +74,5 @@
   "translationPolicy": "clean_full_translation_keep_previous_on_failure",
   "pipelineVersion": "reader-v6",
   "selectedCount": 4,
-  "updatedAt": "2026-09-05T23:59:55.336Z"
+  "updatedAt": "2026-09-07T00:02:38.326Z"
 }
