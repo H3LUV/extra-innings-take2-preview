@@ -302,29 +302,29 @@
       },
       {
         "id": 823175,
-        "status": "Warmup",
+        "status": "Final",
         "venue": "Oracle Park",
         "gameDate": "2026-09-08T00:10:00Z",
         "away": {
           "id": 138,
           "name": "St. Louis Cardinals",
-          "score": 0,
+          "score": 4,
           "record": {
             "wins": 72,
-            "losses": 72,
+            "losses": 73,
             "ties": 0,
-            "pct": ".500"
+            "pct": ".497"
           }
         },
         "home": {
           "id": 137,
           "name": "San Francisco Giants",
-          "score": 0,
+          "score": 5,
           "record": {
-            "wins": 59,
+            "wins": 60,
             "losses": 85,
             "ties": 0,
-            "pct": ".410"
+            "pct": ".414"
           }
         },
         "probable": {
@@ -332,36 +332,36 @@
           "home": "Logan Webb"
         },
         "decisions": {
-          "winner": "",
-          "loser": "",
+          "winner": "Jason Foley",
+          "loser": "George Soriano",
           "save": ""
         }
       },
       {
         "id": 823902,
-        "status": "Pre-Game",
+        "status": "Final",
         "venue": "UNIQLO Field at Dodger Stadium",
         "gameDate": "2026-09-08T01:10:00Z",
         "away": {
           "id": 113,
           "name": "Cincinnati Reds",
-          "score": 0,
+          "score": 3,
           "record": {
             "wins": 69,
-            "losses": 74,
+            "losses": 75,
             "ties": 0,
-            "pct": ".483"
+            "pct": ".479"
           }
         },
         "home": {
           "id": 119,
           "name": "Los Angeles Dodgers",
-          "score": 0,
+          "score": 6,
           "record": {
-            "wins": 86,
+            "wins": 87,
             "losses": 57,
             "ties": 0,
-            "pct": ".601"
+            "pct": ".604"
           }
         },
         "probable": {
@@ -369,36 +369,36 @@
           "home": "Emmet Sheehan"
         },
         "decisions": {
-          "winner": "",
-          "loser": "",
-          "save": ""
+          "winner": "Emmet Sheehan",
+          "loser": "Brandon Williamson",
+          "save": "Evan Phillips"
         }
       },
       {
         "id": 824958,
-        "status": "Pre-Game",
+        "status": "Final",
         "venue": "Sutter Health Park",
         "gameDate": "2026-09-08T02:05:00Z",
         "away": {
           "id": 141,
           "name": "Toronto Blue Jays",
-          "score": 0,
+          "score": 5,
           "record": {
             "wins": 72,
-            "losses": 72,
+            "losses": 73,
             "ties": 0,
-            "pct": ".500"
+            "pct": ".497"
           }
         },
         "home": {
           "id": 133,
           "name": "Athletics",
-          "score": 0,
+          "score": 6,
           "record": {
-            "wins": 57,
+            "wins": 58,
             "losses": 87,
             "ties": 0,
-            "pct": ".396"
+            "pct": ".400"
           }
         },
         "probable": {
@@ -406,8 +406,8 @@
           "home": "Jacob Lopez"
         },
         "decisions": {
-          "winner": "",
-          "loser": "",
+          "winner": "Hogan Harris",
+          "loser": "Louis Varland",
           "save": ""
         }
       }
@@ -811,7 +811,7 @@
           }
         },
         "probable": {
-          "away": "",
+          "away": "Riley Cornelio",
           "home": "Casey Mize"
         },
         "decisions": {
@@ -868,9 +868,9 @@
           "score": null,
           "record": {
             "wins": 72,
-            "losses": 72,
+            "losses": 73,
             "ties": 0,
-            "pct": ".500"
+            "pct": ".497"
           }
         },
         "home": {
@@ -878,10 +878,10 @@
           "name": "Athletics",
           "score": null,
           "record": {
-            "wins": 57,
+            "wins": 58,
             "losses": 87,
             "ties": 0,
-            "pct": ".396"
+            "pct": ".400"
           }
         },
         "probable": {
@@ -905,9 +905,9 @@
           "score": null,
           "record": {
             "wins": 72,
-            "losses": 72,
+            "losses": 73,
             "ties": 0,
-            "pct": ".500"
+            "pct": ".497"
           }
         },
         "home": {
@@ -915,10 +915,10 @@
           "name": "San Francisco Giants",
           "score": null,
           "record": {
-            "wins": 59,
+            "wins": 60,
             "losses": 85,
             "ties": 0,
-            "pct": ".410"
+            "pct": ".414"
           }
         },
         "probable": {
@@ -942,9 +942,9 @@
           "score": null,
           "record": {
             "wins": 69,
-            "losses": 74,
+            "losses": 75,
             "ties": 0,
-            "pct": ".483"
+            "pct": ".479"
           }
         },
         "home": {
@@ -952,10 +952,10 @@
           "name": "Los Angeles Dodgers",
           "score": null,
           "record": {
-            "wins": 86,
+            "wins": 87,
             "losses": 57,
             "ties": 0,
-            "pct": ".601"
+            "pct": ".604"
           }
         },
         "probable": {
@@ -1018,9 +1018,9 @@
           "score": null,
           "record": {
             "wins": 72,
-            "losses": 72,
+            "losses": 73,
             "ties": 0,
-            "pct": ".500"
+            "pct": ".497"
           }
         },
         "home": {
@@ -1028,10 +1028,10 @@
           "name": "Athletics",
           "score": null,
           "record": {
-            "wins": 57,
+            "wins": 58,
             "losses": 87,
             "ties": 0,
-            "pct": ".396"
+            "pct": ".400"
           }
         },
         "probable": {
@@ -1055,9 +1055,9 @@
           "score": null,
           "record": {
             "wins": 72,
-            "losses": 72,
+            "losses": 73,
             "ties": 0,
-            "pct": ".500"
+            "pct": ".497"
           }
         },
         "home": {
@@ -1065,10 +1065,10 @@
           "name": "San Francisco Giants",
           "score": null,
           "record": {
-            "wins": 59,
+            "wins": 60,
             "losses": 85,
             "ties": 0,
-            "pct": ".410"
+            "pct": ".414"
           }
         },
         "probable": {
@@ -1499,9 +1499,9 @@
           "score": null,
           "record": {
             "wins": 69,
-            "losses": 74,
+            "losses": 75,
             "ties": 0,
-            "pct": ".483"
+            "pct": ".479"
           }
         },
         "home": {
@@ -1509,10 +1509,10 @@
           "name": "Los Angeles Dodgers",
           "score": null,
           "record": {
-            "wins": 86,
+            "wins": 87,
             "losses": 57,
             "ties": 0,
-            "pct": ".601"
+            "pct": ".604"
           }
         },
         "probable": {
@@ -1527,6 +1527,6 @@
       }
     ]
   },
-  "updatedAt": "2026-09-07T23:52:57.981Z",
+  "updatedAt": "2026-09-08T11:49:30.510Z",
   "source": "MLB Stats API"
 }
