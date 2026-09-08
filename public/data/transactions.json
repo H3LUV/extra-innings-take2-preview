@@ -1,7 +1,35 @@
 {
   "items": [
     {
-      "id": "trade-2026-09-08-0",
+      "id": "signing-2026-09-08-0",
+      "type": "Signing",
+      "typeKo": "계약",
+      "date": "2026-09-08T00:00:00",
+      "dateKo": "9월 8일",
+      "title": "계약 · 9월 8일",
+      "descriptionKo": "클리블랜드 캐벌리어스가 가드 James Harden와 계약을 체결했습니다.",
+      "descriptions": [
+        "Cleveland Cavaliers re-signed guard James Harden to a Contract."
+      ],
+      "source": "NBA.com",
+      "sourceLink": "https://www.nba.com/players/transactions"
+    },
+    {
+      "id": "signing-2026-09-08-1",
+      "type": "Signing",
+      "typeKo": "계약",
+      "date": "2026-09-08T00:00:00",
+      "dateKo": "9월 8일",
+      "title": "계약 · 9월 8일",
+      "descriptionKo": "덴버 너기츠가 가드 DeMar DeRozan와 계약을 체결했습니다.",
+      "descriptions": [
+        "Denver Nuggets signed guard DeMar DeRozan to a Contract."
+      ],
+      "source": "NBA.com",
+      "sourceLink": "https://www.nba.com/players/transactions"
+    },
+    {
+      "id": "trade-2026-09-08-2",
       "type": "Trade",
       "typeKo": "트레이드",
       "date": "2026-09-08T00:00:00",
@@ -19,7 +47,7 @@
       "sourceLink": "https://www.nba.com/players/transactions"
     },
     {
-      "id": "signing-2026-09-07-1",
+      "id": "signing-2026-09-07-3",
       "type": "Signing",
       "typeKo": "계약",
       "date": "2026-09-07T00:00:00",
@@ -33,7 +61,7 @@
       "sourceLink": "https://www.nba.com/players/transactions"
     },
     {
-      "id": "waive-2026-09-07-2",
+      "id": "waive-2026-09-07-4",
       "type": "Waive",
       "typeKo": "방출",
       "date": "2026-09-07T00:00:00",
@@ -47,7 +75,7 @@
       "sourceLink": "https://www.nba.com/players/transactions"
     },
     {
-      "id": "signing-2026-09-04-3",
+      "id": "signing-2026-09-04-5",
       "type": "Signing",
       "typeKo": "계약",
       "date": "2026-09-04T00:00:00",
@@ -61,7 +89,7 @@
       "sourceLink": "https://www.nba.com/players/transactions"
     },
     {
-      "id": "waive-2026-09-04-4",
+      "id": "waive-2026-09-04-6",
       "type": "Waive",
       "typeKo": "방출",
       "date": "2026-09-04T00:00:00",
@@ -75,7 +103,7 @@
       "sourceLink": "https://www.nba.com/players/transactions"
     },
     {
-      "id": "signing-2026-09-03-5",
+      "id": "signing-2026-09-03-7",
       "type": "Signing",
       "typeKo": "계약",
       "date": "2026-09-03T00:00:00",
@@ -89,7 +117,7 @@
       "sourceLink": "https://www.nba.com/players/transactions"
     },
     {
-      "id": "signing-2026-09-03-6",
+      "id": "signing-2026-09-03-8",
       "type": "Signing",
       "typeKo": "계약",
       "date": "2026-09-03T00:00:00",
@@ -103,7 +131,7 @@
       "sourceLink": "https://www.nba.com/players/transactions"
     },
     {
-      "id": "waive-2026-09-03-7",
+      "id": "waive-2026-09-03-9",
       "type": "Waive",
       "typeKo": "방출",
       "date": "2026-09-03T00:00:00",
@@ -117,7 +145,7 @@
       "sourceLink": "https://www.nba.com/players/transactions"
     },
     {
-      "id": "signing-2026-09-02-8",
+      "id": "signing-2026-09-02-10",
       "type": "Signing",
       "typeKo": "계약",
       "date": "2026-09-02T00:00:00",
@@ -131,7 +159,7 @@
       "sourceLink": "https://www.nba.com/players/transactions"
     },
     {
-      "id": "waive-2026-09-02-9",
+      "id": "waive-2026-09-02-11",
       "type": "Waive",
       "typeKo": "방출",
       "date": "2026-09-02T00:00:00",
@@ -145,7 +173,7 @@
       "sourceLink": "https://www.nba.com/players/transactions"
     },
     {
-      "id": "waive-2026-09-02-10",
+      "id": "waive-2026-09-02-12",
       "type": "Waive",
       "typeKo": "방출",
       "date": "2026-09-02T00:00:00",
@@ -159,7 +187,7 @@
       "sourceLink": "https://www.nba.com/players/transactions"
     },
     {
-      "id": "waive-2026-09-01-11",
+      "id": "waive-2026-09-01-13",
       "type": "Waive",
       "typeKo": "방출",
       "date": "2026-09-01T00:00:00",
@@ -173,7 +201,7 @@
       "sourceLink": "https://www.nba.com/players/transactions"
     },
     {
-      "id": "trade-2026-08-29-12",
+      "id": "trade-2026-08-29-14",
       "type": "Trade",
       "typeKo": "트레이드",
       "date": "2026-08-29T00:00:00",
@@ -189,7 +217,7 @@
       "sourceLink": "https://www.nba.com/players/transactions"
     },
     {
-      "id": "waive-2026-08-29-13",
+      "id": "waive-2026-08-29-15",
       "type": "Waive",
       "typeKo": "방출",
       "date": "2026-08-29T00:00:00",
@@ -203,7 +231,7 @@
       "sourceLink": "https://www.nba.com/players/transactions"
     },
     {
-      "id": "waive-2026-08-28-14",
+      "id": "waive-2026-08-28-16",
       "type": "Waive",
       "typeKo": "방출",
       "date": "2026-08-28T00:00:00",
@@ -217,7 +245,7 @@
       "sourceLink": "https://www.nba.com/players/transactions"
     },
     {
-      "id": "waive-2026-08-28-15",
+      "id": "waive-2026-08-28-17",
       "type": "Waive",
       "typeKo": "방출",
       "date": "2026-08-28T00:00:00",
@@ -229,37 +257,9 @@
       ],
       "source": "NBA.com",
       "sourceLink": "https://www.nba.com/players/transactions"
-    },
-    {
-      "id": "signing-2026-08-27-16",
-      "type": "Signing",
-      "typeKo": "계약",
-      "date": "2026-08-27T00:00:00",
-      "dateKo": "8월 27일",
-      "title": "계약 · 8월 27일",
-      "descriptionKo": "마이애미 히트가 센터 Nick Richards와 계약을 체결했습니다.",
-      "descriptions": [
-        "Miami Heat signed center Nick Richards to a Contract."
-      ],
-      "source": "NBA.com",
-      "sourceLink": "https://www.nba.com/players/transactions"
-    },
-    {
-      "id": "signing-2026-08-27-17",
-      "type": "Signing",
-      "typeKo": "계약",
-      "date": "2026-08-27T00:00:00",
-      "dateKo": "8월 27일",
-      "title": "계약 · 8월 27일",
-      "descriptionKo": "마이애미 히트가 포워드 Keshad Johnson와 투웨이 계약을 체결했습니다.",
-      "descriptions": [
-        "Miami Heat re-signed forward Keshad Johnson to a Two-Way Contract."
-      ],
-      "source": "NBA.com",
-      "sourceLink": "https://www.nba.com/players/transactions"
     }
   ],
   "message": "",
   "source": "NBA 공식 Player Movement 데이터",
-  "updatedAt": "2026-09-08T18:40:35.059Z"
+  "updatedAt": "2026-09-08T21:51:38.816Z"
 }
