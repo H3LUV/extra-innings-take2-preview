@@ -21,7 +21,7 @@
       "id": 681198,
       "name": "TJ Rumfield",
       "team": "Colorado Rockies",
-      "seasonPa": 569,
+      "seasonPa": 570,
       "recentPa": 48,
       "previousPa": 47,
       "recentAvg": 0.432,
@@ -30,34 +30,6 @@
       "recentOps": 1.266,
       "previousOps": 0.682,
       "opsDelta": 0.584
-    },
-    {
-      "id": 592518,
-      "name": "Manny Machado",
-      "team": "San Diego Padres",
-      "seasonPa": 602,
-      "recentPa": 43,
-      "previousPa": 54,
-      "recentAvg": 0.4,
-      "recentObp": 0.488,
-      "recentSlg": 0.629,
-      "recentOps": 1.117,
-      "previousOps": 0.641,
-      "opsDelta": 0.476
-    },
-    {
-      "id": 695734,
-      "name": "Daylen Lile",
-      "team": "Washington Nationals",
-      "seasonPa": 599,
-      "recentPa": 48,
-      "previousPa": 55,
-      "recentAvg": 0.325,
-      "recentObp": 0.417,
-      "recentSlg": 0.7,
-      "recentOps": 1.117,
-      "previousOps": 0.695,
-      "opsDelta": 0.42200000000000004
     },
     {
       "id": 608324,
@@ -72,6 +44,34 @@
       "recentOps": 1.136,
       "previousOps": 0.718,
       "opsDelta": 0.4179999999999999
+    },
+    {
+      "id": 605141,
+      "name": "Mookie Betts",
+      "team": "Los Angeles Dodgers",
+      "seasonPa": 456,
+      "recentPa": 51,
+      "previousPa": 51,
+      "recentAvg": 0.318,
+      "recentObp": 0.412,
+      "recentSlg": 0.568,
+      "recentOps": 0.98,
+      "previousOps": 0.598,
+      "opsDelta": 0.382
+    },
+    {
+      "id": 592518,
+      "name": "Manny Machado",
+      "team": "San Diego Padres",
+      "seasonPa": 607,
+      "recentPa": 48,
+      "previousPa": 54,
+      "recentAvg": 0.359,
+      "recentObp": 0.458,
+      "recentSlg": 0.564,
+      "recentOps": 1.022,
+      "previousOps": 0.641,
+      "opsDelta": 0.381
     }
   ],
   "method": "시즌 180타석 이상, 최근·직전 14일 각각 28타석 이상, 최근 OPS 0.700 이상인 타자 대상. 원인이나 지속 가능성은 추론하지 않습니다.",
@@ -81,6 +81,6 @@
     "previousStart": "2026-08-13",
     "previousEnd": "2026-08-26"
   },
-  "updatedAt": "2026-09-09T18:28:44.678Z",
+  "updatedAt": "2026-09-09T23:43:58.592Z",
   "source": "MLB Stats API"
 }
