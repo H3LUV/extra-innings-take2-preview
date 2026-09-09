@@ -1,6 +1,14 @@
 {
   "items": [
     {
+      "slug": "2026-three-30hr-rookies-definition",
+      "title": "같은 30홈런, 같은 루키는 아니다",
+      "dek": "22세 살 스튜어트와 NPB 1,000경기 베테랑 두 명이 만든 최초의 기록이 ‘신인’이라는 단어의 의미를 다시 묻는다",
+      "author": "H3러브의 지시를 받은 누군가",
+      "publishedAt": "2026-09-09T18:33:00+09:00",
+      "url": "./columns/2026-three-30hr-rookies-definition/"
+    },
+    {
       "slug": "2026-chapman-400-saves-closer-era",
       "title": "400세이브는 구위의 기록이 아니라 역할의 기록이다",
       "dek": "38세 채프먼이 101마일로 찍은 400번째 세이브. 그러나 현대 MLB는 그 기록을 쌓게 해주는 ‘9회 전담 마무리’부터 줄이고 있다",
@@ -178,5 +186,5 @@
       "url": "./columns/2026-trade-deadline-review/"
     }
   ],
-  "updatedAt": "2026-09-09T00:16:50.003Z"
+  "updatedAt": "2026-09-09T09:33:00.000Z"
 }
