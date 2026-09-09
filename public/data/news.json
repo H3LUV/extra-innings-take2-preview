@@ -1,6 +1,23 @@
 {
   "items": [
     {
+      "id": "mlb-0124696c902f",
+      "articleFile": "./data/articles/mlb-0124696c902f.json",
+      "title": "'Everyone's excited' as Judge brings MVP presence back to Yanks",
+      "titleKo": "저지가 양키스에 MVP 존재감을 다시 가져오자 '모두가 흥분한다'",
+      "link": "https://www.mlb.com/news/aaron-judge-first-game-off-injured-list-vs-rockies",
+      "pubDate": "2026-09-08T23:55:00Z",
+      "source": "MLB.com",
+      "category": "미국 현지 읽을거리",
+      "readingMinutes": 8,
+      "bodyVerified": true,
+      "bodyChars": 5742,
+      "sourceWordCount": 1701,
+      "translationType": "full",
+      "pipelineVersion": "reader-v6",
+      "translatedAt": "2026-09-09T00:17:15.570Z"
+    },
+    {
       "id": "mlb-e060cf73b231",
       "articleFile": "./data/articles/mlb-e060cf73b231.json",
       "title": "Happ (left knee discomfort) scratched from Sunday lineup",
@@ -50,23 +67,6 @@
       "translationType": "full",
       "pipelineVersion": "reader-v6",
       "translatedAt": "2026-09-05T00:08:16.820Z"
-    },
-    {
-      "id": "mlb-c19f3a4acc08",
-      "articleFile": "./data/articles/mlb-c19f3a4acc08.json",
-      "title": "Crochet throws off mound for 1st time since injury; Houck, Oviedo progressing well",
-      "titleKo": "크로셰는 부상 이후 처음으로 마운드를 벗어났습니다. Houck, Oviedo가 잘 진행되고 있음",
-      "link": "https://www.mlb.com/news/garrett-crochet-tanner-houck-working-toward-returning-to-red-sox",
-      "pubDate": "2026-09-04T22:55:10.154Z",
-      "source": "MLB.com",
-      "category": "미국 현지 읽을거리",
-      "readingMinutes": 7,
-      "bodyVerified": true,
-      "bodyChars": 5436,
-      "sourceWordCount": 1641,
-      "translationType": "full",
-      "pipelineVersion": "reader-v6",
-      "translatedAt": "2026-09-05T00:08:33.820Z"
     }
   ],
   "message": "미국 현지 기사 중 광고·회원가입 문구를 제거하고 제목과 본문 전체 자동 번역이 완료된 기사만 제공합니다.",
@@ -74,5 +74,5 @@
   "translationPolicy": "clean_full_translation_keep_previous_on_failure",
   "pipelineVersion": "reader-v6",
   "selectedCount": 4,
-  "updatedAt": "2026-09-08T00:27:24.278Z"
+  "updatedAt": "2026-09-09T00:22:18.139Z"
 }
