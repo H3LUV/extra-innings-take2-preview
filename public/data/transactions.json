@@ -15,21 +15,7 @@
       "sourceLink": "https://www.nba.com/players/transactions"
     },
     {
-      "id": "waive-2026-09-09-1",
-      "type": "Waive",
-      "typeKo": "방출",
-      "date": "2026-09-09T00:00:00",
-      "dateKo": "9월 9일",
-      "title": "방출 · 9월 9일",
-      "descriptionKo": "뉴올리언스 펠리컨스가 포워드 Taj Gibson를 방출했습니다.",
-      "descriptions": [
-        "New Orleans Pelicans waived forward Taj Gibson."
-      ],
-      "source": "NBA.com",
-      "sourceLink": "https://www.nba.com/players/transactions"
-    },
-    {
-      "id": "signing-2026-09-08-2",
+      "id": "signing-2026-09-08-1",
       "type": "Signing",
       "typeKo": "계약",
       "date": "2026-09-08T00:00:00",
@@ -43,7 +29,7 @@
       "sourceLink": "https://www.nba.com/players/transactions"
     },
     {
-      "id": "signing-2026-09-08-3",
+      "id": "signing-2026-09-08-2",
       "type": "Signing",
       "typeKo": "계약",
       "date": "2026-09-08T00:00:00",
@@ -57,7 +43,7 @@
       "sourceLink": "https://www.nba.com/players/transactions"
     },
     {
-      "id": "trade-2026-09-08-4",
+      "id": "trade-2026-09-08-3",
       "type": "Trade",
       "typeKo": "트레이드",
       "date": "2026-09-08T00:00:00",
@@ -70,6 +56,20 @@
         "Memphis Grizzlies received guard Micah Peavy from New Orleans Pelicans.",
         "Memphis Grizzlies received guard Jordan Hawkins from New Orleans Pelicans.",
         "Memphis Grizzlies received draft consideration from New Orleans Pelicans."
+      ],
+      "source": "NBA.com",
+      "sourceLink": "https://www.nba.com/players/transactions"
+    },
+    {
+      "id": "waive-2026-09-08-4",
+      "type": "Waive",
+      "typeKo": "방출",
+      "date": "2026-09-08T00:00:00",
+      "dateKo": "9월 8일",
+      "title": "방출 · 9월 8일",
+      "descriptionKo": "뉴올리언스 펠리컨스가 포워드 Taj Gibson를 방출했습니다.",
+      "descriptions": [
+        "New Orleans Pelicans waived forward Taj Gibson."
       ],
       "source": "NBA.com",
       "sourceLink": "https://www.nba.com/players/transactions"
@@ -261,5 +261,5 @@
   ],
   "message": "",
   "source": "NBA 공식 Player Movement 데이터",
-  "updatedAt": "2026-09-10T14:26:39.147Z"
+  "updatedAt": "2026-09-10T18:28:54.621Z"
 }

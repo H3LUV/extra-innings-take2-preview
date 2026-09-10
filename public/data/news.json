@@ -1,6 +1,40 @@
 {
   "items": [
     {
+      "id": "nba-093ab2cf8687",
+      "articleFile": "./data/articles/nba-093ab2cf8687.json",
+      "title": "Northwest Division: Offseason recap and a look ahead to the 2026-27 season",
+      "titleKo": "노스웨스트 디비전: 오프시즌 요약 및 2026-27 시즌 전망",
+      "link": "https://www.nba.com/news/northwest-division-offseason-recap-look-ahead",
+      "pubDate": "2026-09-10T16:15:17Z",
+      "source": "NBA.com",
+      "category": "미국 현지 읽을거리",
+      "readingMinutes": 6,
+      "bodyVerified": true,
+      "bodyChars": 4833,
+      "sourceWordCount": 1212,
+      "translationType": "full",
+      "pipelineVersion": "reader-v6",
+      "translatedAt": "2026-09-10T18:31:48.583Z"
+    },
+    {
+      "id": "nba-5f66bb5026d4",
+      "articleFile": "./data/articles/nba-5f66bb5026d4.json",
+      "title": "U.S. women defeat Hungary to reach FIBA World Cup semifinals",
+      "titleKo": "미국 여자팀, 헝가리 꺾고 FIBA ​​월드컵 준결승 진출",
+      "link": "https://www.nba.com/news/us-woman-reach-fiba-world-cup-semifinals",
+      "pubDate": "2026-09-10T15:24:25Z",
+      "source": "NBA.com",
+      "category": "미국 현지 읽을거리",
+      "readingMinutes": 4,
+      "bodyVerified": true,
+      "bodyChars": 1662,
+      "sourceWordCount": 538,
+      "translationType": "full",
+      "pipelineVersion": "reader-v6",
+      "translatedAt": "2026-09-10T18:31:50.138Z"
+    },
+    {
       "id": "nba-bd5a0f55bf38",
       "articleFile": "./data/articles/nba-bd5a0f55bf38.json",
       "title": "Jalen Brunson to host 'Saturday Night Live' season premiere on Sept. 26",
@@ -15,7 +49,7 @@
       "sourceWordCount": 239,
       "translationType": "full",
       "pipelineVersion": "reader-v6",
-      "translatedAt": "2026-09-10T14:30:53.702Z"
+      "translatedAt": "2026-09-10T18:31:50.978Z"
     },
     {
       "id": "nba-d8e749b7621d",
@@ -32,41 +66,7 @@
       "sourceWordCount": 1322,
       "translationType": "full",
       "pipelineVersion": "reader-v6",
-      "translatedAt": "2026-09-10T14:30:57.316Z"
-    },
-    {
-      "id": "nba-aab70aae620a",
-      "articleFile": "./data/articles/nba-aab70aae620a.json",
-      "title": "Grizzlies, Pelicans agree to 4-player trade",
-      "titleKo": "그리즐리스, 펠리컨스 4인 트레이드에 합의",
-      "link": "https://www.nba.com/news/pelicans-grizzlies-hawkins-johnson-trade",
-      "pubDate": "2026-09-08T15:14:58Z",
-      "source": "NBA.com",
-      "category": "미국 현지 읽을거리",
-      "readingMinutes": 4,
-      "bodyVerified": true,
-      "bodyChars": 857,
-      "sourceWordCount": 261,
-      "translationType": "full",
-      "pipelineVersion": "reader-v6",
-      "translatedAt": "2026-09-10T14:31:00.996Z"
-    },
-    {
-      "id": "nba-7f1f4d56afb2",
-      "articleFile": "./data/articles/nba-7f1f4d56afb2.json",
-      "title": "Central Division: Offseason recap and a look ahead to the 2026-27 season",
-      "titleKo": "센트럴 디비전: 오프시즌 요약 및 2026-27 시즌 전망",
-      "link": "https://www.nba.com/news/central-division-offseason-recap-look-ahead",
-      "pubDate": "2026-09-07T14:17:31Z",
-      "source": "NBA.com",
-      "category": "미국 현지 읽을거리",
-      "readingMinutes": 6,
-      "bodyVerified": true,
-      "bodyChars": 4883,
-      "sourceWordCount": 1232,
-      "translationType": "full",
-      "pipelineVersion": "reader-v6",
-      "translatedAt": "2026-09-10T14:30:59.995Z"
+      "translatedAt": "2026-09-10T18:31:53.516Z"
     }
   ],
   "message": "NBA.com의 최신 일반 기사 중 제목과 본문 전체 자동 번역이 완료된 기사만 제공합니다.",
@@ -74,5 +74,5 @@
   "translationPolicy": "newest_valid_article_full_translation_keep_previous_on_failure",
   "pipelineVersion": "reader-v6",
   "selectedCount": 4,
-  "updatedAt": "2026-09-10T14:31:00.997Z"
+  "updatedAt": "2026-09-10T18:31:53.517Z"
 }
