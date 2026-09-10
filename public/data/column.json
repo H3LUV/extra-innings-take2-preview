@@ -18,20 +18,6 @@
       "opsDelta": 0.754
     },
     {
-      "id": 607208,
-      "name": "Trea Turner",
-      "team": "Philadelphia Phillies",
-      "seasonPa": 630,
-      "recentPa": 54,
-      "previousPa": 45,
-      "recentAvg": 0.28,
-      "recentObp": 0.333,
-      "recentSlg": 0.5,
-      "recentOps": 0.833,
-      "previousOps": 0.393,
-      "opsDelta": 0.43999999999999995
-    },
-    {
       "id": 605141,
       "name": "Mookie Betts",
       "team": "Los Angeles Dodgers",
@@ -60,6 +46,20 @@
       "opsDelta": 0.381
     },
     {
+      "id": 607208,
+      "name": "Trea Turner",
+      "team": "Philadelphia Phillies",
+      "seasonPa": 632,
+      "recentPa": 58,
+      "previousPa": 45,
+      "recentAvg": 0.259,
+      "recentObp": 0.31,
+      "recentSlg": 0.463,
+      "recentOps": 0.773,
+      "previousOps": 0.393,
+      "opsDelta": 0.38
+    },
+    {
       "id": 608324,
       "name": "Alex Bregman",
       "team": "Chicago Cubs",
@@ -81,6 +81,6 @@
     "previousStart": "2026-08-14",
     "previousEnd": "2026-08-27"
   },
-  "updatedAt": "2026-09-10T18:17:29.221Z",
+  "updatedAt": "2026-09-10T23:36:01.557Z",
   "source": "MLB Stats API"
 }
