@@ -221,20 +221,20 @@
         {
           "id": 112,
           "name": "Chicago Cubs",
-          "w": 81,
+          "w": 82,
           "l": 66,
-          "pct": ".551",
-          "gb": "10.0",
-          "streak": "L4"
+          "pct": ".554",
+          "gb": "9.5",
+          "streak": "W1"
         },
         {
           "id": 134,
           "name": "Pittsburgh Pirates",
           "w": 74,
-          "l": 73,
-          "pct": ".503",
-          "gb": "17.0",
-          "streak": "W4"
+          "l": 74,
+          "pct": ".500",
+          "gb": "17.5",
+          "streak": "L1"
         },
         {
           "id": 138,
@@ -308,6 +308,6 @@
       ]
     }
   ],
-  "updatedAt": "2026-09-11T12:02:39.450Z",
+  "updatedAt": "2026-09-11T23:45:07.504Z",
   "source": "MLB Stats API"
 }

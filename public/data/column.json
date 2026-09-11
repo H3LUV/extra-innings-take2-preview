@@ -35,21 +35,21 @@
       "id": 608324,
       "name": "Alex Bregman",
       "team": "Chicago Cubs",
-      "seasonPa": 657,
-      "recentPa": 53,
+      "seasonPa": 661,
+      "recentPa": 57,
       "previousPa": 55,
-      "recentAvg": 0.348,
-      "recentObp": 0.434,
-      "recentSlg": 0.761,
-      "recentOps": 1.195,
+      "recentAvg": 0.38,
+      "recentObp": 0.456,
+      "recentSlg": 0.84,
+      "recentOps": 1.296,
       "previousOps": 0.778,
-      "opsDelta": 0.41700000000000004
+      "opsDelta": 0.518
     },
     {
       "id": 605141,
       "name": "Mookie Betts",
       "team": "Los Angeles Dodgers",
-      "seasonPa": 461,
+      "seasonPa": 462,
       "recentPa": 47,
       "previousPa": 55,
       "recentAvg": 0.341,
@@ -81,6 +81,6 @@
     "previousStart": "2026-08-15",
     "previousEnd": "2026-08-28"
   },
-  "updatedAt": "2026-09-11T18:21:44.369Z",
+  "updatedAt": "2026-09-11T23:45:07.213Z",
   "source": "MLB Stats API"
 }
