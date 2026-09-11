@@ -117,29 +117,29 @@
       },
       {
         "id": 823499,
-        "status": "In Progress",
+        "status": "Final",
         "venue": "Yankee Stadium",
         "gameDate": "2026-09-10T23:05:00Z",
         "away": {
           "id": 115,
           "name": "Colorado Rockies",
-          "score": 0,
+          "score": 3,
           "record": {
             "wins": 55,
-            "losses": 90,
+            "losses": 91,
             "ties": 0,
-            "pct": ".379"
+            "pct": ".377"
           }
         },
         "home": {
           "id": 147,
           "name": "New York Yankees",
-          "score": 2,
+          "score": 10,
           "record": {
-            "wins": 83,
+            "wins": 84,
             "losses": 62,
             "ties": 0,
-            "pct": ".572"
+            "pct": ".575"
           }
         },
         "probable": {
@@ -147,25 +147,25 @@
           "home": "Max Fried"
         },
         "decisions": {
-          "winner": "",
-          "loser": "",
+          "winner": "John Schreiber",
+          "loser": "Ryan Feltner",
           "save": ""
         }
       },
       {
         "id": 824550,
-        "status": "Warmup",
+        "status": "Final",
         "venue": "Rate Field",
         "gameDate": "2026-09-10T23:40:00Z",
         "away": {
           "id": 134,
           "name": "Pittsburgh Pirates",
-          "score": 0,
+          "score": 2,
           "record": {
-            "wins": 73,
+            "wins": 74,
             "losses": 73,
             "ties": 0,
-            "pct": ".500"
+            "pct": ".503"
           }
         },
         "home": {
@@ -174,9 +174,9 @@
           "score": 0,
           "record": {
             "wins": 75,
-            "losses": 70,
+            "losses": 71,
             "ties": 0,
-            "pct": ".517"
+            "pct": ".514"
           }
         },
         "probable": {
@@ -184,9 +184,9 @@
           "home": "Hagen Smith"
         },
         "decisions": {
-          "winner": "",
-          "loser": "",
-          "save": ""
+          "winner": "Jared Jones",
+          "loser": "Erick Fedde",
+          "save": "Mason Montgomery"
         }
       }
     ],
@@ -201,10 +201,10 @@
           "name": "Pittsburgh Pirates",
           "score": null,
           "record": {
-            "wins": 73,
+            "wins": 74,
             "losses": 73,
             "ties": 0,
-            "pct": ".500"
+            "pct": ".503"
           }
         },
         "home": {
@@ -219,7 +219,7 @@
           }
         },
         "probable": {
-          "away": "",
+          "away": "Wilber Dotel",
           "home": "Shota Imanaga"
         },
         "decisions": {
@@ -239,9 +239,9 @@
           "score": null,
           "record": {
             "wins": 55,
-            "losses": 90,
+            "losses": 91,
             "ties": 0,
-            "pct": ".379"
+            "pct": ".377"
           }
         },
         "home": {
@@ -323,10 +323,10 @@
           "name": "New York Yankees",
           "score": null,
           "record": {
-            "wins": 83,
+            "wins": 84,
             "losses": 62,
             "ties": 0,
-            "pct": ".572"
+            "pct": ".575"
           }
         },
         "probable": {
@@ -609,9 +609,9 @@
           "score": null,
           "record": {
             "wins": 75,
-            "losses": 70,
+            "losses": 71,
             "ties": 0,
-            "pct": ".517"
+            "pct": ".514"
           }
         },
         "home": {
@@ -759,9 +759,9 @@
           "score": null,
           "record": {
             "wins": 55,
-            "losses": 90,
+            "losses": 91,
             "ties": 0,
-            "pct": ".379"
+            "pct": ".377"
           }
         },
         "home": {
@@ -806,10 +806,10 @@
           "name": "New York Yankees",
           "score": null,
           "record": {
-            "wins": 83,
+            "wins": 84,
             "losses": 62,
             "ties": 0,
-            "pct": ".572"
+            "pct": ".575"
           }
         },
         "probable": {
@@ -832,10 +832,10 @@
           "name": "Pittsburgh Pirates",
           "score": null,
           "record": {
-            "wins": 73,
+            "wins": 74,
             "losses": 73,
             "ties": 0,
-            "pct": ".500"
+            "pct": ".503"
           }
         },
         "home": {
@@ -1203,9 +1203,9 @@
           "score": null,
           "record": {
             "wins": 75,
-            "losses": 70,
+            "losses": 71,
             "ties": 0,
-            "pct": ".517"
+            "pct": ".514"
           }
         },
         "home": {
@@ -1305,6 +1305,6 @@
       }
     ]
   },
-  "updatedAt": "2026-09-10T23:36:01.872Z",
+  "updatedAt": "2026-09-11T11:53:30.061Z",
   "source": "MLB Stats API"
 }
