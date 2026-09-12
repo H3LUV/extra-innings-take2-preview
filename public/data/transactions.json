@@ -1,7 +1,49 @@
 {
   "items": [
     {
-      "id": "signing-2026-09-10-0",
+      "id": "waive-2026-09-11-0",
+      "type": "Waive",
+      "typeKo": "방출",
+      "date": "2026-09-11T00:00:00",
+      "dateKo": "9월 11일",
+      "title": "방출 · 9월 11일",
+      "descriptionKo": "보스턴 셀틱스가 포워드 Hank Morgan를 방출했습니다.",
+      "descriptions": [
+        "Boston Celtics waived forward Hank Morgan."
+      ],
+      "source": "NBA.com",
+      "sourceLink": "https://www.nba.com/players/transactions"
+    },
+    {
+      "id": "waive-2026-09-11-1",
+      "type": "Waive",
+      "typeKo": "방출",
+      "date": "2026-09-11T00:00:00",
+      "dateKo": "9월 11일",
+      "title": "방출 · 9월 11일",
+      "descriptionKo": "애틀랜타 호크스가 가드 Lamont Butler를 방출했습니다.",
+      "descriptions": [
+        "Atlanta Hawks waived guard Lamont Butler."
+      ],
+      "source": "NBA.com",
+      "sourceLink": "https://www.nba.com/players/transactions"
+    },
+    {
+      "id": "waive-2026-09-11-2",
+      "type": "Waive",
+      "typeKo": "방출",
+      "date": "2026-09-11T00:00:00",
+      "dateKo": "9월 11일",
+      "title": "방출 · 9월 11일",
+      "descriptionKo": "애틀랜타 호크스가 가드 Devin Carter를 방출했습니다.",
+      "descriptions": [
+        "Atlanta Hawks waived guard Devin Carter."
+      ],
+      "source": "NBA.com",
+      "sourceLink": "https://www.nba.com/players/transactions"
+    },
+    {
+      "id": "signing-2026-09-10-3",
       "type": "Signing",
       "typeKo": "계약",
       "date": "2026-09-10T00:00:00",
@@ -15,7 +57,7 @@
       "sourceLink": "https://www.nba.com/players/transactions"
     },
     {
-      "id": "waive-2026-09-10-1",
+      "id": "waive-2026-09-10-4",
       "type": "Waive",
       "typeKo": "방출",
       "date": "2026-09-10T00:00:00",
@@ -29,7 +71,7 @@
       "sourceLink": "https://www.nba.com/players/transactions"
     },
     {
-      "id": "waive-2026-09-09-2",
+      "id": "waive-2026-09-09-5",
       "type": "Waive",
       "typeKo": "방출",
       "date": "2026-09-09T00:00:00",
@@ -43,7 +85,7 @@
       "sourceLink": "https://www.nba.com/players/transactions"
     },
     {
-      "id": "signing-2026-09-08-3",
+      "id": "signing-2026-09-08-6",
       "type": "Signing",
       "typeKo": "계약",
       "date": "2026-09-08T00:00:00",
@@ -57,7 +99,7 @@
       "sourceLink": "https://www.nba.com/players/transactions"
     },
     {
-      "id": "signing-2026-09-08-4",
+      "id": "signing-2026-09-08-7",
       "type": "Signing",
       "typeKo": "계약",
       "date": "2026-09-08T00:00:00",
@@ -71,7 +113,7 @@
       "sourceLink": "https://www.nba.com/players/transactions"
     },
     {
-      "id": "trade-2026-09-08-5",
+      "id": "trade-2026-09-08-8",
       "type": "Trade",
       "typeKo": "트레이드",
       "date": "2026-09-08T00:00:00",
@@ -89,7 +131,7 @@
       "sourceLink": "https://www.nba.com/players/transactions"
     },
     {
-      "id": "waive-2026-09-08-6",
+      "id": "waive-2026-09-08-9",
       "type": "Waive",
       "typeKo": "방출",
       "date": "2026-09-08T00:00:00",
@@ -103,7 +145,7 @@
       "sourceLink": "https://www.nba.com/players/transactions"
     },
     {
-      "id": "signing-2026-09-07-7",
+      "id": "signing-2026-09-07-10",
       "type": "Signing",
       "typeKo": "계약",
       "date": "2026-09-07T00:00:00",
@@ -117,7 +159,7 @@
       "sourceLink": "https://www.nba.com/players/transactions"
     },
     {
-      "id": "waive-2026-09-07-8",
+      "id": "waive-2026-09-07-11",
       "type": "Waive",
       "typeKo": "방출",
       "date": "2026-09-07T00:00:00",
@@ -131,7 +173,7 @@
       "sourceLink": "https://www.nba.com/players/transactions"
     },
     {
-      "id": "signing-2026-09-04-9",
+      "id": "signing-2026-09-04-12",
       "type": "Signing",
       "typeKo": "계약",
       "date": "2026-09-04T00:00:00",
@@ -145,7 +187,7 @@
       "sourceLink": "https://www.nba.com/players/transactions"
     },
     {
-      "id": "waive-2026-09-04-10",
+      "id": "waive-2026-09-04-13",
       "type": "Waive",
       "typeKo": "방출",
       "date": "2026-09-04T00:00:00",
@@ -159,7 +201,7 @@
       "sourceLink": "https://www.nba.com/players/transactions"
     },
     {
-      "id": "signing-2026-09-03-11",
+      "id": "signing-2026-09-03-14",
       "type": "Signing",
       "typeKo": "계약",
       "date": "2026-09-03T00:00:00",
@@ -173,7 +215,7 @@
       "sourceLink": "https://www.nba.com/players/transactions"
     },
     {
-      "id": "signing-2026-09-03-12",
+      "id": "signing-2026-09-03-15",
       "type": "Signing",
       "typeKo": "계약",
       "date": "2026-09-03T00:00:00",
@@ -187,7 +229,7 @@
       "sourceLink": "https://www.nba.com/players/transactions"
     },
     {
-      "id": "waive-2026-09-03-13",
+      "id": "waive-2026-09-03-16",
       "type": "Waive",
       "typeKo": "방출",
       "date": "2026-09-03T00:00:00",
@@ -201,7 +243,7 @@
       "sourceLink": "https://www.nba.com/players/transactions"
     },
     {
-      "id": "signing-2026-09-02-14",
+      "id": "signing-2026-09-02-17",
       "type": "Signing",
       "typeKo": "계약",
       "date": "2026-09-02T00:00:00",
@@ -213,51 +255,9 @@
       ],
       "source": "NBA.com",
       "sourceLink": "https://www.nba.com/players/transactions"
-    },
-    {
-      "id": "waive-2026-09-02-15",
-      "type": "Waive",
-      "typeKo": "방출",
-      "date": "2026-09-02T00:00:00",
-      "dateKo": "9월 2일",
-      "title": "방출 · 9월 2일",
-      "descriptionKo": "샬럿 호네츠가 포워드 Trey Townsend를 방출했습니다.",
-      "descriptions": [
-        "Charlotte Hornets waived forward Trey Townsend."
-      ],
-      "source": "NBA.com",
-      "sourceLink": "https://www.nba.com/players/transactions"
-    },
-    {
-      "id": "waive-2026-09-02-16",
-      "type": "Waive",
-      "typeKo": "방출",
-      "date": "2026-09-02T00:00:00",
-      "dateKo": "9월 2일",
-      "title": "방출 · 9월 2일",
-      "descriptionKo": "유타 재즈가 가드 Matthew Murrell를 방출했습니다.",
-      "descriptions": [
-        "Utah Jazz waived guard Matthew Murrell."
-      ],
-      "source": "NBA.com",
-      "sourceLink": "https://www.nba.com/players/transactions"
-    },
-    {
-      "id": "waive-2026-09-01-17",
-      "type": "Waive",
-      "typeKo": "방출",
-      "date": "2026-09-01T00:00:00",
-      "dateKo": "9월 1일",
-      "title": "방출 · 9월 1일",
-      "descriptionKo": "샬럿 호네츠가 포워드 Josiah Allick를 방출했습니다.",
-      "descriptions": [
-        "Charlotte Hornets waived forward Josiah Allick."
-      ],
-      "source": "NBA.com",
-      "sourceLink": "https://www.nba.com/players/transactions"
     }
   ],
   "message": "",
   "source": "NBA 공식 Player Movement 데이터",
-  "updatedAt": "2026-09-11T21:43:30.657Z"
+  "updatedAt": "2026-09-12T00:18:30.509Z"
 }
