@@ -339,7 +339,7 @@
       },
       {
         "id": 822927,
-        "status": "In Progress",
+        "status": "Final",
         "venue": "Tropicana Field",
         "gameDate": "2026-09-12T22:10:00Z",
         "away": {
@@ -348,20 +348,20 @@
           "score": 2,
           "record": {
             "wins": 75,
-            "losses": 73,
+            "losses": 74,
             "ties": 0,
-            "pct": ".507"
+            "pct": ".503"
           }
         },
         "home": {
           "id": 139,
           "name": "Tampa Bay Rays",
-          "score": 2,
+          "score": 3,
           "record": {
-            "wins": 88,
+            "wins": 89,
             "losses": 59,
             "ties": 0,
-            "pct": ".599"
+            "pct": ".601"
           }
         },
         "probable": {
@@ -369,168 +369,20 @@
           "home": "Ian Seymour"
         },
         "decisions": {
-          "winner": "",
-          "loser": "",
-          "save": ""
+          "winner": "Tyler Wells",
+          "loser": "Peter Lambert",
+          "save": "Bryan Baker"
         }
       },
       {
         "id": 823737,
-        "status": "In Progress",
+        "status": "Final",
         "venue": "American Family Field",
         "gameDate": "2026-09-12T23:10:00Z",
         "away": {
           "id": 113,
           "name": "Cincinnati Reds",
-          "score": 1,
-          "record": {
-            "wins": 69,
-            "losses": 78,
-            "ties": 0,
-            "pct": ".469"
-          }
-        },
-        "home": {
-          "id": 158,
-          "name": "Milwaukee Brewers",
-          "score": 4,
-          "record": {
-            "wins": 92,
-            "losses": 56,
-            "ties": 0,
-            "pct": ".622"
-          }
-        },
-        "probable": {
-          "away": "Brady Singer",
-          "home": "Shane Drohan"
-        },
-        "decisions": {
-          "winner": "",
-          "loser": "",
-          "save": ""
-        }
-      },
-      {
-        "id": 824870,
-        "status": "In Progress",
-        "venue": "Truist Park",
-        "gameDate": "2026-09-12T23:15:00Z",
-        "away": {
-          "id": 143,
-          "name": "Philadelphia Phillies",
-          "score": 1,
-          "record": {
-            "wins": 82,
-            "losses": 66,
-            "ties": 0,
-            "pct": ".554"
-          }
-        },
-        "home": {
-          "id": 144,
-          "name": "Atlanta Braves",
-          "score": 0,
-          "record": {
-            "wins": 87,
-            "losses": 61,
-            "ties": 0,
-            "pct": ".588"
-          }
-        },
-        "probable": {
-          "away": "Tim Mayza",
-          "home": "Tyler Mahle"
-        },
-        "decisions": {
-          "winner": "",
-          "loser": "",
-          "save": ""
-        }
-      },
-      {
-        "id": 823009,
-        "status": "In Progress",
-        "venue": "Busch Stadium",
-        "gameDate": "2026-09-12T23:15:00Z",
-        "away": {
-          "id": 145,
-          "name": "Chicago White Sox",
-          "score": 0,
-          "record": {
-            "wins": 75,
-            "losses": 72,
-            "ties": 0,
-            "pct": ".510"
-          }
-        },
-        "home": {
-          "id": 138,
-          "name": "St. Louis Cardinals",
-          "score": 0,
-          "record": {
-            "wins": 73,
-            "losses": 75,
-            "ties": 0,
-            "pct": ".493"
-          }
-        },
-        "probable": {
-          "away": "Sean Newcomb",
-          "home": "Kyle Leahy"
-        },
-        "decisions": {
-          "winner": "",
-          "loser": "",
-          "save": ""
-        }
-      },
-      {
-        "id": 825035,
-        "status": "Pre-Game",
-        "venue": "Chase Field",
-        "gameDate": "2026-09-13T00:10:00Z",
-        "away": {
-          "id": 140,
-          "name": "Texas Rangers",
-          "score": 0,
-          "record": {
-            "wins": 72,
-            "losses": 76,
-            "ties": 0,
-            "pct": ".486"
-          }
-        },
-        "home": {
-          "id": 109,
-          "name": "Arizona Diamondbacks",
-          "score": 0,
-          "record": {
-            "wins": 79,
-            "losses": 69,
-            "ties": 0,
-            "pct": ".534"
-          }
-        },
-        "probable": {
-          "away": "Kumar Rocker",
-          "home": "Brandon Pfaadt"
-        },
-        "decisions": {
-          "winner": "",
-          "loser": "",
-          "save": ""
-        }
-      },
-      {
-        "id": 824955,
-        "status": "Pre-Game",
-        "venue": "Sutter Health Park",
-        "gameDate": "2026-09-13T01:40:00Z",
-        "away": {
-          "id": 136,
-          "name": "Seattle Mariners",
-          "score": 0,
+          "score": 9,
           "record": {
             "wins": 69,
             "losses": 79,
@@ -539,14 +391,162 @@
           }
         },
         "home": {
+          "id": 158,
+          "name": "Milwaukee Brewers",
+          "score": 13,
+          "record": {
+            "wins": 93,
+            "losses": 56,
+            "ties": 0,
+            "pct": ".624"
+          }
+        },
+        "probable": {
+          "away": "Brady Singer",
+          "home": "Shane Drohan"
+        },
+        "decisions": {
+          "winner": "Chad Patrick",
+          "loser": "Brady Singer",
+          "save": ""
+        }
+      },
+      {
+        "id": 824870,
+        "status": "Final",
+        "venue": "Truist Park",
+        "gameDate": "2026-09-12T23:15:00Z",
+        "away": {
+          "id": 143,
+          "name": "Philadelphia Phillies",
+          "score": 2,
+          "record": {
+            "wins": 82,
+            "losses": 67,
+            "ties": 0,
+            "pct": ".550"
+          }
+        },
+        "home": {
+          "id": 144,
+          "name": "Atlanta Braves",
+          "score": 12,
+          "record": {
+            "wins": 88,
+            "losses": 61,
+            "ties": 0,
+            "pct": ".591"
+          }
+        },
+        "probable": {
+          "away": "Tim Mayza",
+          "home": "Tyler Mahle"
+        },
+        "decisions": {
+          "winner": "Tyler Mahle",
+          "loser": "Brooks Raley",
+          "save": ""
+        }
+      },
+      {
+        "id": 823009,
+        "status": "Final",
+        "venue": "Busch Stadium",
+        "gameDate": "2026-09-12T23:15:00Z",
+        "away": {
+          "id": 145,
+          "name": "Chicago White Sox",
+          "score": 6,
+          "record": {
+            "wins": 76,
+            "losses": 72,
+            "ties": 0,
+            "pct": ".514"
+          }
+        },
+        "home": {
+          "id": 138,
+          "name": "St. Louis Cardinals",
+          "score": 5,
+          "record": {
+            "wins": 73,
+            "losses": 76,
+            "ties": 0,
+            "pct": ".490"
+          }
+        },
+        "probable": {
+          "away": "Sean Newcomb",
+          "home": "Kyle Leahy"
+        },
+        "decisions": {
+          "winner": "Jordan Hicks",
+          "loser": "Riley O'Brien",
+          "save": "Bryan Hudson"
+        }
+      },
+      {
+        "id": 825035,
+        "status": "Final",
+        "venue": "Chase Field",
+        "gameDate": "2026-09-13T00:10:00Z",
+        "away": {
+          "id": 140,
+          "name": "Texas Rangers",
+          "score": 6,
+          "record": {
+            "wins": 73,
+            "losses": 76,
+            "ties": 0,
+            "pct": ".490"
+          }
+        },
+        "home": {
+          "id": 109,
+          "name": "Arizona Diamondbacks",
+          "score": 2,
+          "record": {
+            "wins": 79,
+            "losses": 70,
+            "ties": 0,
+            "pct": ".530"
+          }
+        },
+        "probable": {
+          "away": "Kumar Rocker",
+          "home": "Brandon Pfaadt"
+        },
+        "decisions": {
+          "winner": "Robert Garcia",
+          "loser": "Brandon Pfaadt",
+          "save": ""
+        }
+      },
+      {
+        "id": 824955,
+        "status": "Final",
+        "venue": "Sutter Health Park",
+        "gameDate": "2026-09-13T01:40:00Z",
+        "away": {
+          "id": 136,
+          "name": "Seattle Mariners",
+          "score": 19,
+          "record": {
+            "wins": 70,
+            "losses": 79,
+            "ties": 0,
+            "pct": ".470"
+          }
+        },
+        "home": {
           "id": 133,
           "name": "Athletics",
-          "score": 0,
+          "score": 1,
           "record": {
             "wins": 60,
-            "losses": 88,
+            "losses": 89,
             "ties": 0,
-            "pct": ".405"
+            "pct": ".403"
           }
         },
         "probable": {
@@ -554,8 +554,8 @@
           "home": "Gage Jump"
         },
         "decisions": {
-          "winner": "",
-          "loser": "",
+          "winner": "Bryan Woo",
+          "loser": "Gage Jump",
           "save": ""
         }
       }
@@ -646,9 +646,9 @@
           "score": null,
           "record": {
             "wins": 82,
-            "losses": 66,
+            "losses": 67,
             "ties": 0,
-            "pct": ".554"
+            "pct": ".550"
           }
         },
         "home": {
@@ -656,10 +656,10 @@
           "name": "Atlanta Braves",
           "score": null,
           "record": {
-            "wins": 87,
+            "wins": 88,
             "losses": 61,
             "ties": 0,
-            "pct": ".588"
+            "pct": ".591"
           }
         },
         "probable": {
@@ -757,9 +757,9 @@
           "score": null,
           "record": {
             "wins": 75,
-            "losses": 73,
+            "losses": 74,
             "ties": 0,
-            "pct": ".507"
+            "pct": ".503"
           }
         },
         "home": {
@@ -767,10 +767,10 @@
           "name": "Tampa Bay Rays",
           "score": null,
           "record": {
-            "wins": 88,
+            "wins": 89,
             "losses": 59,
             "ties": 0,
-            "pct": ".599"
+            "pct": ".601"
           }
         },
         "probable": {
@@ -811,7 +811,7 @@
           }
         },
         "probable": {
-          "away": "",
+          "away": "Emmet Sheehan",
           "home": "Eury Pérez"
         },
         "decisions": {
@@ -868,9 +868,9 @@
           "score": null,
           "record": {
             "wins": 69,
-            "losses": 78,
+            "losses": 79,
             "ties": 0,
-            "pct": ".469"
+            "pct": ".466"
           }
         },
         "home": {
@@ -878,15 +878,15 @@
           "name": "Milwaukee Brewers",
           "score": null,
           "record": {
-            "wins": 92,
+            "wins": 93,
             "losses": 56,
             "ties": 0,
-            "pct": ".622"
+            "pct": ".624"
           }
         },
         "probable": {
           "away": "Chase Burns",
-          "home": ""
+          "home": "Robert Gasser"
         },
         "decisions": {
           "winner": "",
@@ -904,10 +904,10 @@
           "name": "Chicago White Sox",
           "score": null,
           "record": {
-            "wins": 75,
+            "wins": 76,
             "losses": 72,
             "ties": 0,
-            "pct": ".510"
+            "pct": ".514"
           }
         },
         "home": {
@@ -916,9 +916,9 @@
           "score": null,
           "record": {
             "wins": 73,
-            "losses": 75,
+            "losses": 76,
             "ties": 0,
-            "pct": ".493"
+            "pct": ".490"
           }
         },
         "probable": {
@@ -1015,10 +1015,10 @@
           "name": "Seattle Mariners",
           "score": null,
           "record": {
-            "wins": 69,
+            "wins": 70,
             "losses": 79,
             "ties": 0,
-            "pct": ".466"
+            "pct": ".470"
           }
         },
         "home": {
@@ -1027,9 +1027,9 @@
           "score": null,
           "record": {
             "wins": 60,
-            "losses": 88,
+            "losses": 89,
             "ties": 0,
-            "pct": ".405"
+            "pct": ".403"
           }
         },
         "probable": {
@@ -1052,10 +1052,10 @@
           "name": "Texas Rangers",
           "score": null,
           "record": {
-            "wins": 72,
+            "wins": 73,
             "losses": 76,
             "ties": 0,
-            "pct": ".486"
+            "pct": ".490"
           }
         },
         "home": {
@@ -1064,13 +1064,13 @@
           "score": null,
           "record": {
             "wins": 79,
-            "losses": 69,
+            "losses": 70,
             "ties": 0,
-            "pct": ".534"
+            "pct": ".530"
           }
         },
         "probable": {
-          "away": "",
+          "away": "Cal Quantrill",
           "home": "Eduardo Rodriguez"
         },
         "decisions": {
@@ -1140,9 +1140,9 @@
           "score": null,
           "record": {
             "wins": 69,
-            "losses": 78,
+            "losses": 79,
             "ties": 0,
-            "pct": ".469"
+            "pct": ".466"
           }
         },
         "probable": {
@@ -1165,10 +1165,10 @@
           "name": "Chicago White Sox",
           "score": null,
           "record": {
-            "wins": 75,
+            "wins": 76,
             "losses": 72,
             "ties": 0,
-            "pct": ".510"
+            "pct": ".514"
           }
         },
         "home": {
@@ -1276,10 +1276,10 @@
           "name": "Atlanta Braves",
           "score": null,
           "record": {
-            "wins": 87,
+            "wins": 88,
             "losses": 61,
             "ties": 0,
-            "pct": ".588"
+            "pct": ".591"
           }
         },
         "home": {
@@ -1362,9 +1362,9 @@
           "score": null,
           "record": {
             "wins": 73,
-            "losses": 75,
+            "losses": 76,
             "ties": 0,
-            "pct": ".493"
+            "pct": ".490"
           }
         },
         "probable": {
@@ -1424,10 +1424,10 @@
           "name": "Seattle Mariners",
           "score": null,
           "record": {
-            "wins": 69,
+            "wins": 70,
             "losses": 79,
             "ties": 0,
-            "pct": ".466"
+            "pct": ".470"
           }
         },
         "home": {
@@ -1473,9 +1473,9 @@
           "score": null,
           "record": {
             "wins": 79,
-            "losses": 69,
+            "losses": 70,
             "ties": 0,
-            "pct": ".534"
+            "pct": ".530"
           }
         },
         "probable": {
@@ -1490,6 +1490,6 @@
       }
     ]
   },
-  "updatedAt": "2026-09-12T23:38:21.479Z",
+  "updatedAt": "2026-09-13T12:23:17.253Z",
   "source": "MLB Stats API"
 }
