@@ -1,6 +1,23 @@
 {
   "items": [
     {
+      "id": "mlb-fb228048ce17",
+      "articleFile": "./data/articles/mlb-fb228048ce17.json",
+      "title": "With Yanks on cusp of berth, Cole battling homer bug -- but what's the cure?",
+      "titleKo": "Yanks가 결장을 앞두고 있는 상황에서 Cole은 홈런 버그와 싸우고 있습니다. 하지만 치료법은 무엇입니까?",
+      "link": "https://www.mlb.com/news/gerrit-cole-allows-three-home-runs-to-mets",
+      "pubDate": "2026-09-12T23:34:00Z",
+      "source": "MLB.com",
+      "category": "미국 현지 읽을거리",
+      "readingMinutes": 7,
+      "bodyVerified": true,
+      "bodyChars": 5306,
+      "sourceWordCount": 1644,
+      "translationType": "full",
+      "pipelineVersion": "reader-v6",
+      "translatedAt": "2026-09-13T00:01:23.940Z"
+    },
+    {
       "id": "mlb-e4837f292499",
       "articleFile": "./data/articles/mlb-e4837f292499.json",
       "title": "Rangers squander deGrom's 12-K gem in bid for 1st road series win since break",
@@ -50,23 +67,6 @@
       "translationType": "full",
       "pipelineVersion": "reader-v6",
       "translatedAt": "2026-09-11T00:14:35.976Z"
-    },
-    {
-      "id": "mlb-2c01a0a3b7a7",
-      "articleFile": "./data/articles/mlb-2c01a0a3b7a7.json",
-      "title": "The Cubs are the best-hitting, best-fielding team in baseball. There's just one little problem ...",
-      "titleKo": "컵스는 야구에서 최고의 타격과 최고의 수비를 자랑하는 팀입니다. 다만 작은 문제가 하나 있습니다...",
-      "link": "https://www.mlb.com/news/2026-cubs-a-historically-unbalanced-team",
-      "pubDate": "2026-09-10T19:00:00Z",
-      "source": "MLB.com",
-      "category": "미국 현지 읽을거리",
-      "readingMinutes": 11,
-      "bodyVerified": true,
-      "bodyChars": 7261,
-      "sourceWordCount": 2367,
-      "translationType": "full",
-      "pipelineVersion": "reader-v6",
-      "translatedAt": "2026-09-11T00:14:57.431Z"
     }
   ],
   "message": "미국 현지 기사 중 광고·회원가입 문구를 제거하고 제목과 본문 전체 자동 번역이 완료된 기사만 제공합니다.",
@@ -74,5 +74,5 @@
   "translationPolicy": "clean_full_translation_keep_previous_on_failure",
   "pipelineVersion": "reader-v6",
   "selectedCount": 4,
-  "updatedAt": "2026-09-12T00:25:03.458Z"
+  "updatedAt": "2026-09-13T00:07:10.595Z"
 }
