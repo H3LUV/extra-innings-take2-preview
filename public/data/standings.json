@@ -272,11 +272,11 @@
         {
           "id": 135,
           "name": "San Diego Padres",
-          "w": 80,
+          "w": 81,
           "l": 68,
-          "pct": ".541",
-          "gb": "9.5",
-          "streak": "W6"
+          "pct": ".544",
+          "gb": "9.0",
+          "streak": "W7"
         },
         {
           "id": 109,
@@ -291,10 +291,10 @@
           "id": 137,
           "name": "San Francisco Giants",
           "w": 62,
-          "l": 87,
-          "pct": ".416",
-          "gb": "28.0",
-          "streak": "L2"
+          "l": 88,
+          "pct": ".413",
+          "gb": "28.5",
+          "streak": "L3"
         },
         {
           "id": 115,
@@ -308,6 +308,6 @@
       ]
     }
   ],
-  "updatedAt": "2026-09-13T23:49:48.144Z",
+  "updatedAt": "2026-09-14T13:26:17.874Z",
   "source": "MLB Stats API"
 }

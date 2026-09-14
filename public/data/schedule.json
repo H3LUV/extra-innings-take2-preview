@@ -524,29 +524,29 @@
       },
       {
         "id": 823171,
-        "status": "In Progress",
+        "status": "Final",
         "venue": "Oracle Park",
         "gameDate": "2026-09-13T23:20:00Z",
         "away": {
           "id": 135,
           "name": "San Diego Padres",
-          "score": 3,
+          "score": 6,
           "record": {
-            "wins": 80,
+            "wins": 81,
             "losses": 68,
             "ties": 0,
-            "pct": ".541"
+            "pct": ".544"
           }
         },
         "home": {
           "id": 137,
           "name": "San Francisco Giants",
-          "score": 0,
+          "score": 4,
           "record": {
             "wins": 62,
-            "losses": 87,
+            "losses": 88,
             "ties": 0,
-            "pct": ".416"
+            "pct": ".413"
           }
         },
         "probable": {
@@ -554,9 +554,9 @@
           "home": "Logan Webb"
         },
         "decisions": {
-          "winner": "",
-          "loser": "",
-          "save": ""
+          "winner": "Wandy Peralta",
+          "loser": "Logan Webb",
+          "save": "Yuki Matsui"
         }
       }
     ],
@@ -627,7 +627,7 @@
         },
         "probable": {
           "away": "Sean Newcomb",
-          "home": ""
+          "home": "Gavin Williams"
         },
         "decisions": {
           "winner": "",
@@ -794,9 +794,9 @@
           "score": null,
           "record": {
             "wins": 62,
-            "losses": 87,
+            "losses": 88,
             "ties": 0,
-            "pct": ".416"
+            "pct": ".413"
           }
         },
         "home": {
@@ -830,10 +830,10 @@
           "name": "San Diego Padres",
           "score": null,
           "record": {
-            "wins": 80,
+            "wins": 81,
             "losses": 68,
             "ties": 0,
-            "pct": ".541"
+            "pct": ".544"
           }
         },
         "home": {
@@ -1036,7 +1036,7 @@
         },
         "probable": {
           "away": "Davis Martin",
-          "home": ""
+          "home": "Foster Griffin"
         },
         "decisions": {
           "winner": "",
@@ -1277,9 +1277,9 @@
           "score": null,
           "record": {
             "wins": 62,
-            "losses": 87,
+            "losses": 88,
             "ties": 0,
-            "pct": ".416"
+            "pct": ".413"
           }
         },
         "home": {
@@ -1387,10 +1387,10 @@
           "name": "San Diego Padres",
           "score": null,
           "record": {
-            "wins": 80,
+            "wins": 81,
             "losses": 68,
             "ties": 0,
-            "pct": ".541"
+            "pct": ".544"
           }
         },
         "home": {
@@ -1490,6 +1490,6 @@
       }
     ]
   },
-  "updatedAt": "2026-09-13T23:49:48.143Z",
+  "updatedAt": "2026-09-14T13:26:17.873Z",
   "source": "MLB Stats API"
 }
