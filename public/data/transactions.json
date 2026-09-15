@@ -18,7 +18,35 @@
       "sourceLink": "https://www.nba.com/players/transactions"
     },
     {
-      "id": "waive-2026-09-11-1",
+      "id": "waive-2026-09-14-1",
+      "type": "Waive",
+      "typeKo": "방출",
+      "date": "2026-09-14T00:00:00",
+      "dateKo": "9월 14일",
+      "title": "방출 · 9월 14일",
+      "descriptionKo": "보스턴 셀틱스가 가드 Caleb Grill를 방출했습니다.",
+      "descriptions": [
+        "Boston Celtics waived guard Caleb Grill."
+      ],
+      "source": "NBA.com",
+      "sourceLink": "https://www.nba.com/players/transactions"
+    },
+    {
+      "id": "waive-2026-09-14-2",
+      "type": "Waive",
+      "typeKo": "방출",
+      "date": "2026-09-14T00:00:00",
+      "dateKo": "9월 14일",
+      "title": "방출 · 9월 14일",
+      "descriptionKo": "뉴올리언스 펠리컨스가 포워드 Christian Shumate를 방출했습니다.",
+      "descriptions": [
+        "New Orleans Pelicans waived forward Christian Shumate."
+      ],
+      "source": "NBA.com",
+      "sourceLink": "https://www.nba.com/players/transactions"
+    },
+    {
+      "id": "waive-2026-09-11-3",
       "type": "Waive",
       "typeKo": "방출",
       "date": "2026-09-11T00:00:00",
@@ -32,7 +60,7 @@
       "sourceLink": "https://www.nba.com/players/transactions"
     },
     {
-      "id": "waive-2026-09-11-2",
+      "id": "waive-2026-09-11-4",
       "type": "Waive",
       "typeKo": "방출",
       "date": "2026-09-11T00:00:00",
@@ -46,7 +74,7 @@
       "sourceLink": "https://www.nba.com/players/transactions"
     },
     {
-      "id": "waive-2026-09-11-3",
+      "id": "waive-2026-09-11-5",
       "type": "Waive",
       "typeKo": "방출",
       "date": "2026-09-11T00:00:00",
@@ -60,7 +88,7 @@
       "sourceLink": "https://www.nba.com/players/transactions"
     },
     {
-      "id": "signing-2026-09-10-4",
+      "id": "signing-2026-09-10-6",
       "type": "Signing",
       "typeKo": "계약",
       "date": "2026-09-10T00:00:00",
@@ -74,7 +102,7 @@
       "sourceLink": "https://www.nba.com/players/transactions"
     },
     {
-      "id": "waive-2026-09-10-5",
+      "id": "waive-2026-09-10-7",
       "type": "Waive",
       "typeKo": "방출",
       "date": "2026-09-10T00:00:00",
@@ -88,7 +116,7 @@
       "sourceLink": "https://www.nba.com/players/transactions"
     },
     {
-      "id": "waive-2026-09-09-6",
+      "id": "waive-2026-09-09-8",
       "type": "Waive",
       "typeKo": "방출",
       "date": "2026-09-09T00:00:00",
@@ -102,7 +130,7 @@
       "sourceLink": "https://www.nba.com/players/transactions"
     },
     {
-      "id": "signing-2026-09-08-7",
+      "id": "signing-2026-09-08-9",
       "type": "Signing",
       "typeKo": "계약",
       "date": "2026-09-08T00:00:00",
@@ -116,7 +144,7 @@
       "sourceLink": "https://www.nba.com/players/transactions"
     },
     {
-      "id": "signing-2026-09-08-8",
+      "id": "signing-2026-09-08-10",
       "type": "Signing",
       "typeKo": "계약",
       "date": "2026-09-08T00:00:00",
@@ -130,7 +158,7 @@
       "sourceLink": "https://www.nba.com/players/transactions"
     },
     {
-      "id": "trade-2026-09-08-9",
+      "id": "trade-2026-09-08-11",
       "type": "Trade",
       "typeKo": "트레이드",
       "date": "2026-09-08T00:00:00",
@@ -148,7 +176,7 @@
       "sourceLink": "https://www.nba.com/players/transactions"
     },
     {
-      "id": "waive-2026-09-08-10",
+      "id": "waive-2026-09-08-12",
       "type": "Waive",
       "typeKo": "방출",
       "date": "2026-09-08T00:00:00",
@@ -162,7 +190,7 @@
       "sourceLink": "https://www.nba.com/players/transactions"
     },
     {
-      "id": "signing-2026-09-07-11",
+      "id": "signing-2026-09-07-13",
       "type": "Signing",
       "typeKo": "계약",
       "date": "2026-09-07T00:00:00",
@@ -176,7 +204,7 @@
       "sourceLink": "https://www.nba.com/players/transactions"
     },
     {
-      "id": "waive-2026-09-07-12",
+      "id": "waive-2026-09-07-14",
       "type": "Waive",
       "typeKo": "방출",
       "date": "2026-09-07T00:00:00",
@@ -190,7 +218,7 @@
       "sourceLink": "https://www.nba.com/players/transactions"
     },
     {
-      "id": "signing-2026-09-04-13",
+      "id": "signing-2026-09-04-15",
       "type": "Signing",
       "typeKo": "계약",
       "date": "2026-09-04T00:00:00",
@@ -204,7 +232,7 @@
       "sourceLink": "https://www.nba.com/players/transactions"
     },
     {
-      "id": "waive-2026-09-04-14",
+      "id": "waive-2026-09-04-16",
       "type": "Waive",
       "typeKo": "방출",
       "date": "2026-09-04T00:00:00",
@@ -218,7 +246,7 @@
       "sourceLink": "https://www.nba.com/players/transactions"
     },
     {
-      "id": "signing-2026-09-03-15",
+      "id": "signing-2026-09-03-17",
       "type": "Signing",
       "typeKo": "계약",
       "date": "2026-09-03T00:00:00",
@@ -230,37 +258,9 @@
       ],
       "source": "NBA.com",
       "sourceLink": "https://www.nba.com/players/transactions"
-    },
-    {
-      "id": "signing-2026-09-03-16",
-      "type": "Signing",
-      "typeKo": "계약",
-      "date": "2026-09-03T00:00:00",
-      "dateKo": "9월 3일",
-      "title": "계약 · 9월 3일",
-      "descriptionKo": "미네소타 팀버울브스가 포워드 Jonathan Kuminga와 계약을 체결했습니다.",
-      "descriptions": [
-        "Minnesota Timberwolves signed forward Jonathan Kuminga to a Contract."
-      ],
-      "source": "NBA.com",
-      "sourceLink": "https://www.nba.com/players/transactions"
-    },
-    {
-      "id": "waive-2026-09-03-17",
-      "type": "Waive",
-      "typeKo": "방출",
-      "date": "2026-09-03T00:00:00",
-      "dateKo": "9월 3일",
-      "title": "방출 · 9월 3일",
-      "descriptionKo": "샬럿 호네츠가 가드 Kyle Mangas를 방출했습니다.",
-      "descriptions": [
-        "Charlotte Hornets waived guard Kyle Mangas."
-      ],
-      "source": "NBA.com",
-      "sourceLink": "https://www.nba.com/players/transactions"
     }
   ],
   "message": "",
   "source": "NBA 공식 Player Movement 데이터",
-  "updatedAt": "2026-09-15T18:11:47.172Z"
+  "updatedAt": "2026-09-15T21:21:13.407Z"
 }

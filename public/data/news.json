@@ -15,7 +15,7 @@
       "sourceWordCount": 567,
       "translationType": "full",
       "pipelineVersion": "reader-v6",
-      "translatedAt": "2026-09-15T18:16:24.106Z"
+      "translatedAt": "2026-09-15T21:25:28.364Z"
     },
     {
       "id": "nba-093ab2cf8687",
@@ -32,7 +32,7 @@
       "sourceWordCount": 1212,
       "translationType": "full",
       "pipelineVersion": "reader-v6",
-      "translatedAt": "2026-09-15T18:16:36.046Z"
+      "translatedAt": "2026-09-15T21:25:30.856Z"
     },
     {
       "id": "nba-a8d223c83def",
@@ -49,7 +49,7 @@
       "sourceWordCount": 1341,
       "translationType": "full",
       "pipelineVersion": "reader-v6",
-      "translatedAt": "2026-09-15T18:16:09.630Z"
+      "translatedAt": "2026-09-15T21:25:25.500Z"
     },
     {
       "id": "nba-308e1e0ee267",
@@ -66,7 +66,7 @@
       "sourceWordCount": 452,
       "translationType": "full",
       "pipelineVersion": "reader-v6",
-      "translatedAt": "2026-09-15T18:16:17.733Z"
+      "translatedAt": "2026-09-15T21:25:26.941Z"
     }
   ],
   "message": "NBA.com의 최신 일반 기사 중 제목과 본문 전체 자동 번역이 완료된 기사만 제공합니다.",
@@ -74,5 +74,5 @@
   "translationPolicy": "newest_valid_article_full_translation_keep_previous_on_failure",
   "pipelineVersion": "reader-v6",
   "selectedCount": 4,
-  "updatedAt": "2026-09-15T18:16:36.047Z"
+  "updatedAt": "2026-09-15T21:25:30.857Z"
 }
