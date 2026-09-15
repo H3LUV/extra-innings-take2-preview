@@ -7,7 +7,7 @@
       "id": 668930,
       "name": "Brice Turang",
       "team": "Milwaukee Brewers",
-      "seasonPa": 630,
+      "seasonPa": 632,
       "recentPa": 47,
       "previousPa": 56,
       "recentAvg": 0.417,
@@ -35,7 +35,7 @@
       "id": 666018,
       "name": "Jonathan Aranda",
       "team": "Tampa Bay Rays",
-      "seasonPa": 630,
+      "seasonPa": 632,
       "recentPa": 47,
       "previousPa": 47,
       "recentAvg": 0.3,
@@ -46,24 +46,10 @@
       "opsDelta": 0.45400000000000007
     },
     {
-      "id": 695600,
-      "name": "Carter Jensen",
-      "team": "Kansas City Royals",
-      "seasonPa": 558,
-      "recentPa": 42,
-      "previousPa": 48,
-      "recentAvg": 0.333,
-      "recentObp": 0.429,
-      "recentSlg": 0.944,
-      "recentOps": 1.373,
-      "previousOps": 0.922,
-      "opsDelta": 0.45099999999999996
-    },
-    {
       "id": 663656,
       "name": "Kyle Tucker",
       "team": "Los Angeles Dodgers",
-      "seasonPa": 580,
+      "seasonPa": 582,
       "recentPa": 47,
       "previousPa": 45,
       "recentAvg": 0.231,
@@ -72,6 +58,20 @@
       "recentOps": 0.955,
       "previousOps": 0.527,
       "opsDelta": 0.42799999999999994
+    },
+    {
+      "id": 682829,
+      "name": "Elly De La Cruz",
+      "team": "Cincinnati Reds",
+      "seasonPa": 587,
+      "recentPa": 48,
+      "previousPa": 59,
+      "recentAvg": 0.422,
+      "recentObp": 0.458,
+      "recentSlg": 0.911,
+      "recentOps": 1.369,
+      "previousOps": 0.96,
+      "opsDelta": 0.40900000000000003
     }
   ],
   "method": "시즌 180타석 이상, 최근·직전 14일 각각 28타석 이상, 최근 OPS 0.700 이상인 타자 대상. 원인이나 지속 가능성은 추론하지 않습니다.",
@@ -81,6 +81,6 @@
     "previousStart": "2026-08-19",
     "previousEnd": "2026-09-01"
   },
-  "updatedAt": "2026-09-15T18:52:40.253Z",
+  "updatedAt": "2026-09-15T23:52:56.332Z",
   "source": "MLB Stats API"
 }
