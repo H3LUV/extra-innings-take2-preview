@@ -63,7 +63,7 @@
       "id": 605141,
       "name": "Mookie Betts",
       "team": "Los Angeles Dodgers",
-      "seasonPa": 475,
+      "seasonPa": 478,
       "recentPa": 52,
       "previousPa": 51,
       "recentAvg": 0.349,
@@ -81,6 +81,6 @@
     "previousStart": "2026-08-18",
     "previousEnd": "2026-08-31"
   },
-  "updatedAt": "2026-09-14T19:48:17.727Z",
+  "updatedAt": "2026-09-15T00:07:00.597Z",
   "source": "MLB Stats API"
 }
