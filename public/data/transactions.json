@@ -1,7 +1,24 @@
 {
   "items": [
     {
-      "id": "waive-2026-09-11-0",
+      "id": "trade-2026-09-14-0",
+      "type": "Trade",
+      "typeKo": "트레이드",
+      "date": "2026-09-14T00:00:00",
+      "dateKo": "9월 14일",
+      "title": "트레이드 · 9월 14일",
+      "descriptionKo": "LA 클리퍼스가 토론토 랩터스로부터 가드 Gradey Dick을 받았습니다. LA 클리퍼스가 토론토 랩터스로부터 포워드 Brandon Ingram을 받았습니다. LA 클리퍼스가 토론토 랩터스로부터 드래프트 자산을 받았습니다. 토론토 랩터스가 LA 클리퍼스로부터 포워드 Kawhi Leonard을 받았습니다.",
+      "descriptions": [
+        "LA Clippers received guard Gradey Dick from Toronto Raptors.",
+        "LA Clippers received forward Brandon Ingram from Toronto Raptors.",
+        "LA Clippers received draft consideration from Toronto Raptors.",
+        "Toronto Raptors received forward Kawhi Leonard from LA Clippers."
+      ],
+      "source": "NBA.com",
+      "sourceLink": "https://www.nba.com/players/transactions"
+    },
+    {
+      "id": "waive-2026-09-11-1",
       "type": "Waive",
       "typeKo": "방출",
       "date": "2026-09-11T00:00:00",
@@ -15,7 +32,7 @@
       "sourceLink": "https://www.nba.com/players/transactions"
     },
     {
-      "id": "waive-2026-09-11-1",
+      "id": "waive-2026-09-11-2",
       "type": "Waive",
       "typeKo": "방출",
       "date": "2026-09-11T00:00:00",
@@ -29,7 +46,7 @@
       "sourceLink": "https://www.nba.com/players/transactions"
     },
     {
-      "id": "waive-2026-09-11-2",
+      "id": "waive-2026-09-11-3",
       "type": "Waive",
       "typeKo": "방출",
       "date": "2026-09-11T00:00:00",
@@ -43,7 +60,7 @@
       "sourceLink": "https://www.nba.com/players/transactions"
     },
     {
-      "id": "signing-2026-09-10-3",
+      "id": "signing-2026-09-10-4",
       "type": "Signing",
       "typeKo": "계약",
       "date": "2026-09-10T00:00:00",
@@ -57,7 +74,7 @@
       "sourceLink": "https://www.nba.com/players/transactions"
     },
     {
-      "id": "waive-2026-09-10-4",
+      "id": "waive-2026-09-10-5",
       "type": "Waive",
       "typeKo": "방출",
       "date": "2026-09-10T00:00:00",
@@ -71,7 +88,7 @@
       "sourceLink": "https://www.nba.com/players/transactions"
     },
     {
-      "id": "waive-2026-09-09-5",
+      "id": "waive-2026-09-09-6",
       "type": "Waive",
       "typeKo": "방출",
       "date": "2026-09-09T00:00:00",
@@ -85,7 +102,7 @@
       "sourceLink": "https://www.nba.com/players/transactions"
     },
     {
-      "id": "signing-2026-09-08-6",
+      "id": "signing-2026-09-08-7",
       "type": "Signing",
       "typeKo": "계약",
       "date": "2026-09-08T00:00:00",
@@ -99,7 +116,7 @@
       "sourceLink": "https://www.nba.com/players/transactions"
     },
     {
-      "id": "signing-2026-09-08-7",
+      "id": "signing-2026-09-08-8",
       "type": "Signing",
       "typeKo": "계약",
       "date": "2026-09-08T00:00:00",
@@ -113,7 +130,7 @@
       "sourceLink": "https://www.nba.com/players/transactions"
     },
     {
-      "id": "trade-2026-09-08-8",
+      "id": "trade-2026-09-08-9",
       "type": "Trade",
       "typeKo": "트레이드",
       "date": "2026-09-08T00:00:00",
@@ -131,7 +148,7 @@
       "sourceLink": "https://www.nba.com/players/transactions"
     },
     {
-      "id": "waive-2026-09-08-9",
+      "id": "waive-2026-09-08-10",
       "type": "Waive",
       "typeKo": "방출",
       "date": "2026-09-08T00:00:00",
@@ -145,7 +162,7 @@
       "sourceLink": "https://www.nba.com/players/transactions"
     },
     {
-      "id": "signing-2026-09-07-10",
+      "id": "signing-2026-09-07-11",
       "type": "Signing",
       "typeKo": "계약",
       "date": "2026-09-07T00:00:00",
@@ -159,7 +176,7 @@
       "sourceLink": "https://www.nba.com/players/transactions"
     },
     {
-      "id": "waive-2026-09-07-11",
+      "id": "waive-2026-09-07-12",
       "type": "Waive",
       "typeKo": "방출",
       "date": "2026-09-07T00:00:00",
@@ -173,7 +190,7 @@
       "sourceLink": "https://www.nba.com/players/transactions"
     },
     {
-      "id": "signing-2026-09-04-12",
+      "id": "signing-2026-09-04-13",
       "type": "Signing",
       "typeKo": "계약",
       "date": "2026-09-04T00:00:00",
@@ -187,7 +204,7 @@
       "sourceLink": "https://www.nba.com/players/transactions"
     },
     {
-      "id": "waive-2026-09-04-13",
+      "id": "waive-2026-09-04-14",
       "type": "Waive",
       "typeKo": "방출",
       "date": "2026-09-04T00:00:00",
@@ -201,7 +218,7 @@
       "sourceLink": "https://www.nba.com/players/transactions"
     },
     {
-      "id": "signing-2026-09-03-14",
+      "id": "signing-2026-09-03-15",
       "type": "Signing",
       "typeKo": "계약",
       "date": "2026-09-03T00:00:00",
@@ -215,7 +232,7 @@
       "sourceLink": "https://www.nba.com/players/transactions"
     },
     {
-      "id": "signing-2026-09-03-15",
+      "id": "signing-2026-09-03-16",
       "type": "Signing",
       "typeKo": "계약",
       "date": "2026-09-03T00:00:00",
@@ -229,7 +246,7 @@
       "sourceLink": "https://www.nba.com/players/transactions"
     },
     {
-      "id": "waive-2026-09-03-16",
+      "id": "waive-2026-09-03-17",
       "type": "Waive",
       "typeKo": "방출",
       "date": "2026-09-03T00:00:00",
@@ -241,23 +258,9 @@
       ],
       "source": "NBA.com",
       "sourceLink": "https://www.nba.com/players/transactions"
-    },
-    {
-      "id": "signing-2026-09-02-17",
-      "type": "Signing",
-      "typeKo": "계약",
-      "date": "2026-09-02T00:00:00",
-      "dateKo": "9월 2일",
-      "title": "계약 · 9월 2일",
-      "descriptionKo": "클리블랜드 캐벌리어스가 센터 Khalifa Diop와 계약을 체결했습니다.",
-      "descriptions": [
-        "Cleveland Cavaliers signed center Khalifa Diop to a Contract."
-      ],
-      "source": "NBA.com",
-      "sourceLink": "https://www.nba.com/players/transactions"
     }
   ],
   "message": "",
   "source": "NBA 공식 Player Movement 데이터",
-  "updatedAt": "2026-09-15T01:28:03.774Z"
+  "updatedAt": "2026-09-15T07:44:38.026Z"
 }
