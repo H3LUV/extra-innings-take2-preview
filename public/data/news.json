@@ -11,11 +11,11 @@
       "category": "미국 현지 읽을거리",
       "readingMinutes": 4,
       "bodyVerified": true,
-      "bodyChars": 2138,
+      "bodyChars": 2142,
       "sourceWordCount": 567,
       "translationType": "full",
       "pipelineVersion": "reader-v6",
-      "translatedAt": "2026-09-16T11:38:14.144Z"
+      "translatedAt": "2026-09-16T16:59:53.148Z"
     },
     {
       "id": "nba-093ab2cf8687",
@@ -28,11 +28,11 @@
       "category": "미국 현지 읽을거리",
       "readingMinutes": 6,
       "bodyVerified": true,
-      "bodyChars": 4834,
+      "bodyChars": 4831,
       "sourceWordCount": 1212,
       "translationType": "full",
       "pipelineVersion": "reader-v6",
-      "translatedAt": "2026-09-16T11:38:16.534Z"
+      "translatedAt": "2026-09-16T16:59:55.445Z"
     },
     {
       "id": "nba-a8d223c83def",
@@ -45,28 +45,28 @@
       "category": "미국 현지 읽을거리",
       "readingMinutes": 6,
       "bodyVerified": true,
-      "bodyChars": 4110,
+      "bodyChars": 4109,
       "sourceWordCount": 1341,
       "translationType": "full",
       "pipelineVersion": "reader-v6",
-      "translatedAt": "2026-09-16T11:38:10.952Z"
+      "translatedAt": "2026-09-16T16:59:50.417Z"
     },
     {
       "id": "nba-308e1e0ee267",
       "articleFile": "./data/articles/nba-308e1e0ee267.json",
       "title": "Raptors acquire Kawhi Leonard from the LA Clippers",
-      "titleKo": "랩터스, LA 클리퍼스로부터 카와이 레너드 영입",
+      "titleKo": "랩터스는 LA 클리퍼스로부터 카와이 레너드를 영입했습니다.",
       "link": "https://www.nba.com/news/raptors-clippers-kawhi-leonard-trade",
       "pubDate": "2026-06-30T20:12:02Z",
       "source": "NBA.com",
       "category": "미국 현지 읽을거리",
       "readingMinutes": 4,
       "bodyVerified": true,
-      "bodyChars": 1598,
+      "bodyChars": 1601,
       "sourceWordCount": 452,
       "translationType": "full",
       "pipelineVersion": "reader-v6",
-      "translatedAt": "2026-09-16T11:38:12.733Z"
+      "translatedAt": "2026-09-16T16:59:51.879Z"
     }
   ],
   "message": "NBA.com의 최신 일반 기사 중 제목과 본문 전체 자동 번역이 완료된 기사만 제공합니다.",
@@ -74,5 +74,5 @@
   "translationPolicy": "newest_valid_article_full_translation_keep_previous_on_failure",
   "pipelineVersion": "reader-v6",
   "selectedCount": 4,
-  "updatedAt": "2026-09-16T11:38:16.535Z"
+  "updatedAt": "2026-09-16T16:59:55.445Z"
 }
