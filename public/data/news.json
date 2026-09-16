@@ -4,18 +4,18 @@
       "id": "nba-305770162af7",
       "articleFile": "./data/articles/nba-305770162af7.json",
       "title": "The Athletic: Jalen Brunson’s Emmys video with Mariska Hargitay continues high-profile offseason",
-      "titleKo": "The Athletic: Jalen Brunson의 Mariska Hargitay와 함께한 에미상 비디오가 오프시즌에도 큰 주목을 받았습니다.",
+      "titleKo": "The Athletic: Jalen Brunson의 Mariska Hargitay와 함께한 에미상 비디오가 오프시즌에도 주목을 끌고 있습니다.",
       "link": "https://www.nba.com/news/the-athletic-jalen-brunsons-emmys-video-with-mariska-hargitay-continues-high-profile-offseason",
       "pubDate": "2026-09-15T06:55:53Z",
       "source": "NBA.com",
       "category": "미국 현지 읽을거리",
       "readingMinutes": 4,
       "bodyVerified": true,
-      "bodyChars": 2137,
+      "bodyChars": 2138,
       "sourceWordCount": 567,
       "translationType": "full",
       "pipelineVersion": "reader-v6",
-      "translatedAt": "2026-09-15T21:25:28.364Z"
+      "translatedAt": "2026-09-16T00:24:52.506Z"
     },
     {
       "id": "nba-093ab2cf8687",
@@ -28,11 +28,11 @@
       "category": "미국 현지 읽을거리",
       "readingMinutes": 6,
       "bodyVerified": true,
-      "bodyChars": 4836,
+      "bodyChars": 4834,
       "sourceWordCount": 1212,
       "translationType": "full",
       "pipelineVersion": "reader-v6",
-      "translatedAt": "2026-09-15T21:25:30.856Z"
+      "translatedAt": "2026-09-16T00:25:05.523Z"
     },
     {
       "id": "nba-a8d223c83def",
@@ -45,17 +45,17 @@
       "category": "미국 현지 읽을거리",
       "readingMinutes": 6,
       "bodyVerified": true,
-      "bodyChars": 4104,
+      "bodyChars": 4110,
       "sourceWordCount": 1341,
       "translationType": "full",
       "pipelineVersion": "reader-v6",
-      "translatedAt": "2026-09-15T21:25:25.500Z"
+      "translatedAt": "2026-09-16T00:24:38.747Z"
     },
     {
       "id": "nba-308e1e0ee267",
       "articleFile": "./data/articles/nba-308e1e0ee267.json",
       "title": "Raptors acquire Kawhi Leonard from the LA Clippers",
-      "titleKo": "랩터스는 LA 클리퍼스로부터 카와이 레너드를 영입했습니다.",
+      "titleKo": "랩터스, LA 클리퍼스로부터 카와이 레너드 영입",
       "link": "https://www.nba.com/news/raptors-clippers-kawhi-leonard-trade",
       "pubDate": "2026-06-30T20:12:02Z",
       "source": "NBA.com",
@@ -66,7 +66,7 @@
       "sourceWordCount": 452,
       "translationType": "full",
       "pipelineVersion": "reader-v6",
-      "translatedAt": "2026-09-15T21:25:26.941Z"
+      "translatedAt": "2026-09-16T00:24:45.655Z"
     }
   ],
   "message": "NBA.com의 최신 일반 기사 중 제목과 본문 전체 자동 번역이 완료된 기사만 제공합니다.",
@@ -74,5 +74,5 @@
   "translationPolicy": "newest_valid_article_full_translation_keep_previous_on_failure",
   "pipelineVersion": "reader-v6",
   "selectedCount": 4,
-  "updatedAt": "2026-09-15T21:25:30.857Z"
+  "updatedAt": "2026-09-16T00:25:05.524Z"
 }
