@@ -7,7 +7,7 @@
       "id": 668930,
       "name": "Brice Turang",
       "team": "Milwaukee Brewers",
-      "seasonPa": 635,
+      "seasonPa": 637,
       "recentPa": 47,
       "previousPa": 56,
       "recentAvg": 0.455,
@@ -35,21 +35,21 @@
       "id": 805808,
       "name": "Kevin McGonigle",
       "team": "Detroit Tigers",
-      "seasonPa": 658,
-      "recentPa": 50,
+      "seasonPa": 663,
+      "recentPa": 55,
       "previousPa": 53,
-      "recentAvg": 0.293,
-      "recentObp": 0.42,
-      "recentSlg": 0.61,
-      "recentOps": 1.03,
+      "recentAvg": 0.304,
+      "recentObp": 0.418,
+      "recentSlg": 0.587,
+      "recentOps": 1.005,
       "previousOps": 0.516,
-      "opsDelta": 0.514
+      "opsDelta": 0.4889999999999999
     },
     {
       "id": 663656,
       "name": "Kyle Tucker",
       "team": "Los Angeles Dodgers",
-      "seasonPa": 584,
+      "seasonPa": 586,
       "recentPa": 46,
       "previousPa": 45,
       "recentAvg": 0.216,
@@ -60,18 +60,18 @@
       "opsDelta": 0.46499999999999997
     },
     {
-      "id": 676475,
-      "name": "Alec Burleson",
-      "team": "St. Louis Cardinals",
-      "seasonPa": 639,
-      "recentPa": 49,
-      "previousPa": 49,
-      "recentAvg": 0.31,
-      "recentObp": 0.408,
-      "recentSlg": 0.524,
-      "recentOps": 0.932,
-      "previousOps": 0.487,
-      "opsDelta": 0.44500000000000006
+      "id": 682829,
+      "name": "Elly De La Cruz",
+      "team": "Cincinnati Reds",
+      "seasonPa": 591,
+      "recentPa": 48,
+      "previousPa": 59,
+      "recentAvg": 0.432,
+      "recentObp": 0.479,
+      "recentSlg": 0.955,
+      "recentOps": 1.434,
+      "previousOps": 0.996,
+      "opsDelta": 0.43799999999999994
     }
   ],
   "method": "시즌 180타석 이상, 최근·직전 14일 각각 28타석 이상, 최근 OPS 0.700 이상인 타자 대상. 원인이나 지속 가능성은 추론하지 않습니다.",
@@ -81,6 +81,6 @@
     "previousStart": "2026-08-20",
     "previousEnd": "2026-09-02"
   },
-  "updatedAt": "2026-09-16T18:48:19.733Z",
+  "updatedAt": "2026-09-16T23:59:43.069Z",
   "source": "MLB Stats API"
 }
