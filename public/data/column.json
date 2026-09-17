@@ -7,15 +7,15 @@
       "id": 668930,
       "name": "Brice Turang",
       "team": "Milwaukee Brewers",
-      "seasonPa": 644,
-      "recentPa": 48,
+      "seasonPa": 645,
+      "recentPa": 53,
       "previousPa": 55,
-      "recentAvg": 0.485,
-      "recentObp": 0.646,
-      "recentSlg": 0.818,
-      "recentOps": 1.464,
+      "recentAvg": 0.459,
+      "recentObp": 0.623,
+      "recentSlg": 0.757,
+      "recentOps": 1.38,
       "previousOps": 0.446,
-      "opsDelta": 1.018
+      "opsDelta": 0.9339999999999999
     },
     {
       "id": 571448,
@@ -32,6 +32,20 @@
       "opsDelta": 0.796
     },
     {
+      "id": 663656,
+      "name": "Kyle Tucker",
+      "team": "Los Angeles Dodgers",
+      "seasonPa": 593,
+      "recentPa": 51,
+      "previousPa": 49,
+      "recentAvg": 0.302,
+      "recentObp": 0.392,
+      "recentSlg": 0.767,
+      "recentOps": 1.159,
+      "previousOps": 0.485,
+      "opsDelta": 0.674
+    },
+    {
       "id": 672515,
       "name": "Gabriel Moreno",
       "team": "Arizona Diamondbacks",
@@ -46,32 +60,18 @@
       "opsDelta": 0.501
     },
     {
-      "id": 663656,
-      "name": "Kyle Tucker",
-      "team": "Los Angeles Dodgers",
-      "seasonPa": 592,
-      "recentPa": 46,
-      "previousPa": 49,
-      "recentAvg": 0.237,
-      "recentObp": 0.348,
-      "recentSlg": 0.632,
-      "recentOps": 0.98,
-      "previousOps": 0.485,
-      "opsDelta": 0.495
-    },
-    {
-      "id": 666018,
-      "name": "Jonathan Aranda",
-      "team": "Tampa Bay Rays",
-      "seasonPa": 637,
-      "recentPa": 43,
-      "previousPa": 47,
-      "recentAvg": 0.324,
-      "recentObp": 0.395,
-      "recentSlg": 0.73,
-      "recentOps": 1.125,
-      "previousOps": 0.634,
-      "opsDelta": 0.491
+      "id": 676475,
+      "name": "Alec Burleson",
+      "team": "St. Louis Cardinals",
+      "seasonPa": 642,
+      "recentPa": 52,
+      "previousPa": 46,
+      "recentAvg": 0.311,
+      "recentObp": 0.404,
+      "recentSlg": 0.533,
+      "recentOps": 0.937,
+      "previousOps": 0.448,
+      "opsDelta": 0.48900000000000005
     }
   ],
   "method": "시즌 180타석 이상, 최근·직전 14일 각각 28타석 이상, 최근 OPS 0.700 이상인 타자 대상. 원인이나 지속 가능성은 추론하지 않습니다.",
@@ -81,6 +81,6 @@
     "previousStart": "2026-08-21",
     "previousEnd": "2026-09-03"
   },
-  "updatedAt": "2026-09-17T18:55:41.642Z",
+  "updatedAt": "2026-09-17T23:50:10.480Z",
   "source": "MLB Stats API"
 }
