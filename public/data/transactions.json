@@ -1,7 +1,21 @@
 {
   "items": [
     {
-      "id": "signing-2026-09-17-0",
+      "id": "signing-2026-09-18-0",
+      "type": "Signing",
+      "typeKo": "계약",
+      "date": "2026-09-18T00:00:00",
+      "dateKo": "9월 18일",
+      "title": "계약 · 9월 18일",
+      "descriptionKo": "덴버 너기츠가 포워드 Cam Whitmore와 투웨이 계약을 체결했습니다.",
+      "descriptions": [
+        "Denver Nuggets signed forward Cam Whitmore to a Two-Way Contract."
+      ],
+      "source": "NBA.com",
+      "sourceLink": "https://www.nba.com/players/transactions"
+    },
+    {
+      "id": "signing-2026-09-17-1",
       "type": "Signing",
       "typeKo": "계약",
       "date": "2026-09-17T00:00:00",
@@ -15,7 +29,7 @@
       "sourceLink": "https://www.nba.com/players/transactions"
     },
     {
-      "id": "waive-2026-09-17-1",
+      "id": "waive-2026-09-17-2",
       "type": "Waive",
       "typeKo": "방출",
       "date": "2026-09-17T00:00:00",
@@ -29,7 +43,7 @@
       "sourceLink": "https://www.nba.com/players/transactions"
     },
     {
-      "id": "waive-2026-09-17-2",
+      "id": "waive-2026-09-17-3",
       "type": "Waive",
       "typeKo": "방출",
       "date": "2026-09-17T00:00:00",
@@ -43,7 +57,7 @@
       "sourceLink": "https://www.nba.com/players/transactions"
     },
     {
-      "id": "waive-2026-09-16-3",
+      "id": "waive-2026-09-16-4",
       "type": "Waive",
       "typeKo": "방출",
       "date": "2026-09-16T00:00:00",
@@ -57,7 +71,7 @@
       "sourceLink": "https://www.nba.com/players/transactions"
     },
     {
-      "id": "waive-2026-09-16-4",
+      "id": "waive-2026-09-16-5",
       "type": "Waive",
       "typeKo": "방출",
       "date": "2026-09-16T00:00:00",
@@ -71,7 +85,7 @@
       "sourceLink": "https://www.nba.com/players/transactions"
     },
     {
-      "id": "waive-2026-09-16-5",
+      "id": "waive-2026-09-16-6",
       "type": "Waive",
       "typeKo": "방출",
       "date": "2026-09-16T00:00:00",
@@ -85,7 +99,7 @@
       "sourceLink": "https://www.nba.com/players/transactions"
     },
     {
-      "id": "waive-2026-09-16-6",
+      "id": "waive-2026-09-16-7",
       "type": "Waive",
       "typeKo": "방출",
       "date": "2026-09-16T00:00:00",
@@ -99,7 +113,7 @@
       "sourceLink": "https://www.nba.com/players/transactions"
     },
     {
-      "id": "waive-2026-09-15-7",
+      "id": "waive-2026-09-15-8",
       "type": "Waive",
       "typeKo": "방출",
       "date": "2026-09-15T00:00:00",
@@ -113,7 +127,7 @@
       "sourceLink": "https://www.nba.com/players/transactions"
     },
     {
-      "id": "waive-2026-09-15-8",
+      "id": "waive-2026-09-15-9",
       "type": "Waive",
       "typeKo": "방출",
       "date": "2026-09-15T00:00:00",
@@ -127,7 +141,7 @@
       "sourceLink": "https://www.nba.com/players/transactions"
     },
     {
-      "id": "waive-2026-09-15-9",
+      "id": "waive-2026-09-15-10",
       "type": "Waive",
       "typeKo": "방출",
       "date": "2026-09-15T00:00:00",
@@ -141,7 +155,7 @@
       "sourceLink": "https://www.nba.com/players/transactions"
     },
     {
-      "id": "waive-2026-09-15-10",
+      "id": "waive-2026-09-15-11",
       "type": "Waive",
       "typeKo": "방출",
       "date": "2026-09-15T00:00:00",
@@ -155,7 +169,7 @@
       "sourceLink": "https://www.nba.com/players/transactions"
     },
     {
-      "id": "waive-2026-09-15-11",
+      "id": "waive-2026-09-15-12",
       "type": "Waive",
       "typeKo": "방출",
       "date": "2026-09-15T00:00:00",
@@ -169,7 +183,7 @@
       "sourceLink": "https://www.nba.com/players/transactions"
     },
     {
-      "id": "waive-2026-09-15-12",
+      "id": "waive-2026-09-15-13",
       "type": "Waive",
       "typeKo": "방출",
       "date": "2026-09-15T00:00:00",
@@ -183,7 +197,7 @@
       "sourceLink": "https://www.nba.com/players/transactions"
     },
     {
-      "id": "waive-2026-09-15-13",
+      "id": "waive-2026-09-15-14",
       "type": "Waive",
       "typeKo": "방출",
       "date": "2026-09-15T00:00:00",
@@ -197,7 +211,7 @@
       "sourceLink": "https://www.nba.com/players/transactions"
     },
     {
-      "id": "waive-2026-09-15-14",
+      "id": "waive-2026-09-15-15",
       "type": "Waive",
       "typeKo": "방출",
       "date": "2026-09-15T00:00:00",
@@ -211,7 +225,7 @@
       "sourceLink": "https://www.nba.com/players/transactions"
     },
     {
-      "id": "waive-2026-09-15-15",
+      "id": "waive-2026-09-15-16",
       "type": "Waive",
       "typeKo": "방출",
       "date": "2026-09-15T00:00:00",
@@ -225,7 +239,7 @@
       "sourceLink": "https://www.nba.com/players/transactions"
     },
     {
-      "id": "waive-2026-09-15-16",
+      "id": "waive-2026-09-15-17",
       "type": "Waive",
       "typeKo": "방출",
       "date": "2026-09-15T00:00:00",
@@ -237,23 +251,9 @@
       ],
       "source": "NBA.com",
       "sourceLink": "https://www.nba.com/players/transactions"
-    },
-    {
-      "id": "waive-2026-09-15-17",
-      "type": "Waive",
-      "typeKo": "방출",
-      "date": "2026-09-15T00:00:00",
-      "dateKo": "9월 15일",
-      "title": "방출 · 9월 15일",
-      "descriptionKo": "뉴욕 닉스가 포워드 Nick Jourdain를 방출했습니다.",
-      "descriptions": [
-        "New York Knicks waived forward Nick Jourdain."
-      ],
-      "source": "NBA.com",
-      "sourceLink": "https://www.nba.com/players/transactions"
     }
   ],
   "message": "",
   "source": "NBA 공식 Player Movement 데이터",
-  "updatedAt": "2026-09-18T15:01:03.919Z"
+  "updatedAt": "2026-09-18T18:28:59.225Z"
 }
