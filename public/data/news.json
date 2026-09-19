@@ -11,28 +11,28 @@
       "category": "미국 현지 읽을거리",
       "readingMinutes": 4,
       "bodyVerified": true,
-      "bodyChars": 981,
+      "bodyChars": 987,
       "sourceWordCount": 266,
       "translationType": "full",
       "pipelineVersion": "reader-v6",
-      "translatedAt": "2026-09-18T21:44:55.627Z"
+      "translatedAt": "2026-09-19T00:25:19.681Z"
     },
     {
       "id": "nba-9da0585ad584",
       "articleFile": "./data/articles/nba-9da0585ad584.json",
       "title": "Peyton Watson excited for his fit with Cavaliers",
-      "titleKo": "페이튼 왓슨(Peyton Watson)은 캐벌리어스에 적응한 것에 대해 흥분했습니다.",
+      "titleKo": "페이튼 왓슨은 캐벌리어스에 적응한 것에 대해 흥분했습니다.",
       "link": "https://www.nba.com/news/peyton-watson-excited-for-new-opportunity",
       "pubDate": "2026-09-17T21:10:28Z",
       "source": "NBA.com",
       "category": "미국 현지 읽을거리",
       "readingMinutes": 4,
       "bodyVerified": true,
-      "bodyChars": 1843,
+      "bodyChars": 1840,
       "sourceWordCount": 624,
       "translationType": "full",
       "pipelineVersion": "reader-v6",
-      "translatedAt": "2026-09-18T21:44:54.846Z"
+      "translatedAt": "2026-09-19T00:25:18.869Z"
     },
     {
       "id": "nba-b3db0d0fc9e6",
@@ -45,11 +45,11 @@
       "category": "미국 현지 읽을거리",
       "readingMinutes": 5,
       "bodyVerified": true,
-      "bodyChars": 4776,
+      "bodyChars": 4780,
       "sourceWordCount": 1165,
       "translationType": "full",
       "pipelineVersion": "reader-v6",
-      "translatedAt": "2026-09-18T21:44:58.478Z"
+      "translatedAt": "2026-09-19T00:25:22.904Z"
     },
     {
       "id": "nba-0dbbe8286d05",
@@ -62,11 +62,11 @@
       "category": "미국 현지 읽을거리",
       "readingMinutes": 5,
       "bodyVerified": true,
-      "bodyChars": 3972,
+      "bodyChars": 3971,
       "sourceWordCount": 1129,
       "translationType": "full",
       "pipelineVersion": "reader-v6",
-      "translatedAt": "2026-09-18T21:45:00.821Z"
+      "translatedAt": "2026-09-19T00:25:25.509Z"
     }
   ],
   "message": "NBA.com의 최신 일반 기사 중 제목과 본문 전체 자동 번역이 완료된 기사만 제공합니다.",
@@ -74,5 +74,5 @@
   "translationPolicy": "newest_valid_article_full_translation_keep_previous_on_failure",
   "pipelineVersion": "reader-v6",
   "selectedCount": 4,
-  "updatedAt": "2026-09-18T21:45:00.822Z"
+  "updatedAt": "2026-09-19T00:25:25.510Z"
 }
