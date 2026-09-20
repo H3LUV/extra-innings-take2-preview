@@ -1,6 +1,40 @@
 {
   "items": [
     {
+      "id": "mlb-4db51483e651",
+      "articleFile": "./data/articles/mlb-4db51483e651.json",
+      "title": "Bracket, tiebreakers and more: Here is the current playoff picture",
+      "titleKo": "대진표, 타이브레이커 등: 현재 플레이오프 사진은 다음과 같습니다.",
+      "link": "https://www.mlb.com/news/mlb-playoff-picture-and-bracket-2026",
+      "pubDate": "2026-09-19T22:43:00Z",
+      "source": "MLB.com",
+      "category": "미국 현지 읽을거리",
+      "readingMinutes": 8,
+      "bodyVerified": true,
+      "bodyChars": 6355,
+      "sourceWordCount": 1716,
+      "translationType": "full",
+      "pipelineVersion": "reader-v6",
+      "translatedAt": "2026-09-20T00:09:33.168Z"
+    },
+    {
+      "id": "mlb-f06261a5d573",
+      "articleFile": "./data/articles/mlb-f06261a5d573.json",
+      "title": "Beltrán feted with number retirement, Mets HOF -- but is another chapter possible?",
+      "titleKo": "벨트란은 메츠 HOF에서 은퇴를 맞이했지만 또 다른 장이 가능할까요?",
+      "link": "https://www.mlb.com/news/carlos-beltran-has-number-retired-enters-mets-hall-of-fame",
+      "pubDate": "2026-09-19T23:58:00Z",
+      "source": "MLB.com",
+      "category": "미국 현지 읽을거리",
+      "readingMinutes": 10,
+      "bodyVerified": true,
+      "bodyChars": 7522,
+      "sourceWordCount": 2268,
+      "translationType": "full",
+      "pipelineVersion": "reader-v6",
+      "translatedAt": "2026-09-20T00:10:05.663Z"
+    },
+    {
       "id": "mlb-2c722681b456",
       "articleFile": "./data/articles/mlb-2c722681b456.json",
       "title": "Yesavage (meniscus) throws side session before possible Sunday return",
@@ -16,40 +50,6 @@
       "translationType": "full",
       "pipelineVersion": "reader-v6",
       "translatedAt": "2026-09-19T00:22:55.044Z"
-    },
-    {
-      "id": "mlb-427d7a1943be",
-      "articleFile": "./data/articles/mlb-427d7a1943be.json",
-      "title": "Verlander throws a simulated inning in push to start next Saturday",
-      "titleKo": "Verlander는 다음 주 토요일에 시작하기 위해 모의 이닝을 던졌습니다.",
-      "link": "https://www.mlb.com/news/justin-verlander-throws-simulated-inning-tries-to-make-one-last-start",
-      "pubDate": "2026-09-18T23:58:25.71Z",
-      "source": "MLB.com",
-      "category": "미국 현지 읽을거리",
-      "readingMinutes": 7,
-      "bodyVerified": true,
-      "bodyChars": 5320,
-      "sourceWordCount": 1522,
-      "translationType": "full",
-      "pipelineVersion": "reader-v6",
-      "translatedAt": "2026-09-19T00:23:12.797Z"
-    },
-    {
-      "id": "mlb-2e4785070fb9",
-      "articleFile": "./data/articles/mlb-2e4785070fb9.json",
-      "title": "Jay Sartori returning to Tigers as VP of baseball operations (source)",
-      "titleKo": "Jay Sartori가 야구 운영 부사장으로 타이거스에 복귀합니다(출처)",
-      "link": "https://www.mlb.com/news/jay-sartori-returning-to-tigers-front-office",
-      "pubDate": "2026-09-18T23:38:13.289Z",
-      "source": "MLB.com",
-      "category": "미국 현지 읽을거리",
-      "readingMinutes": 6,
-      "bodyVerified": true,
-      "bodyChars": 4693,
-      "sourceWordCount": 1309,
-      "translationType": "full",
-      "pipelineVersion": "reader-v6",
-      "translatedAt": "2026-09-19T00:23:20.871Z"
     },
     {
       "id": "mlb-8ac61e02b023",
@@ -74,5 +74,5 @@
   "translationPolicy": "clean_full_translation_keep_previous_on_failure",
   "pipelineVersion": "reader-v6",
   "selectedCount": 4,
-  "updatedAt": "2026-09-19T00:23:40.999Z"
+  "updatedAt": "2026-09-20T00:11:38.819Z"
 }
