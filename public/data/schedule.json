@@ -228,29 +228,29 @@
       },
       {
         "id": 824546,
-        "status": "In Progress",
+        "status": "Final",
         "venue": "Rate Field",
         "gameDate": "2026-09-20T18:10:00Z",
         "away": {
           "id": 116,
           "name": "Detroit Tigers",
-          "score": 0,
+          "score": 1,
           "record": {
             "wins": 73,
-            "losses": 82,
+            "losses": 83,
             "ties": 0,
-            "pct": ".471"
+            "pct": ".468"
           }
         },
         "home": {
           "id": 145,
           "name": "Chicago White Sox",
-          "score": 4,
+          "score": 8,
           "record": {
-            "wins": 79,
+            "wins": 80,
             "losses": 76,
             "ties": 0,
-            "pct": ".510"
+            "pct": ".513"
           }
         },
         "probable": {
@@ -258,8 +258,8 @@
           "home": "Davis Martin"
         },
         "decisions": {
-          "winner": "",
-          "loser": "",
+          "winner": "Huascar Brazobán",
+          "loser": "Troy Melton",
           "save": ""
         }
       },
@@ -524,18 +524,18 @@
       },
       {
         "id": 824789,
-        "status": "In Progress",
+        "status": "Final",
         "venue": "Oriole Park at Camden Yards",
         "gameDate": "2026-09-20T23:20:00Z",
         "away": {
           "id": 158,
           "name": "Milwaukee Brewers",
-          "score": 1,
+          "score": 3,
           "record": {
-            "wins": 97,
+            "wins": 98,
             "losses": 58,
             "ties": 0,
-            "pct": ".626"
+            "pct": ".628"
           }
         },
         "home": {
@@ -544,9 +544,9 @@
           "score": 0,
           "record": {
             "wins": 75,
-            "losses": 80,
+            "losses": 81,
             "ties": 0,
-            "pct": ".484"
+            "pct": ".481"
           }
         },
         "probable": {
@@ -554,9 +554,9 @@
           "home": "Brandon Young"
         },
         "decisions": {
-          "winner": "",
-          "loser": "",
-          "save": ""
+          "winner": "DL Hall",
+          "loser": "Brandon Young",
+          "save": "Trevor Megill"
         }
       }
     ],
@@ -583,9 +583,9 @@
           "score": null,
           "record": {
             "wins": 75,
-            "losses": 80,
+            "losses": 81,
             "ties": 0,
-            "pct": ".484"
+            "pct": ".481"
           }
         },
         "probable": {
@@ -620,13 +620,13 @@
           "score": null,
           "record": {
             "wins": 73,
-            "losses": 82,
+            "losses": 83,
             "ties": 0,
-            "pct": ".471"
+            "pct": ".468"
           }
         },
         "probable": {
-          "away": "",
+          "away": "DJ Herz",
           "home": "River Ryan"
         },
         "decisions": {
@@ -733,9 +733,9 @@
           "score": null,
           "record": {
             "wins": 75,
-            "losses": 80,
+            "losses": 81,
             "ties": 0,
-            "pct": ".484"
+            "pct": ".481"
           }
         },
         "probable": {
@@ -770,9 +770,9 @@
           "score": null,
           "record": {
             "wins": 73,
-            "losses": 82,
+            "losses": 83,
             "ties": 0,
-            "pct": ".471"
+            "pct": ".468"
           }
         },
         "probable": {
@@ -832,10 +832,10 @@
           "name": "Milwaukee Brewers",
           "score": null,
           "record": {
-            "wins": 97,
+            "wins": 98,
             "losses": 58,
             "ties": 0,
-            "pct": ".626"
+            "pct": ".628"
           }
         },
         "home": {
@@ -980,10 +980,10 @@
           "name": "Chicago White Sox",
           "score": null,
           "record": {
-            "wins": 79,
+            "wins": 80,
             "losses": 76,
             "ties": 0,
-            "pct": ".510"
+            "pct": ".513"
           }
         },
         "home": {
@@ -1268,6 +1268,6 @@
       }
     ]
   },
-  "updatedAt": "2026-09-20T23:45:46.529Z",
+  "updatedAt": "2026-09-21T13:25:42.223Z",
   "source": "MLB Stats API"
 }
