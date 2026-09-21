@@ -18,40 +18,6 @@
       "translatedAt": "2026-09-20T00:09:33.168Z"
     },
     {
-      "id": "mlb-f06261a5d573",
-      "articleFile": "./data/articles/mlb-f06261a5d573.json",
-      "title": "Beltrán feted with number retirement, Mets HOF -- but is another chapter possible?",
-      "titleKo": "벨트란은 메츠 HOF에서 은퇴를 맞이했지만 또 다른 장이 가능할까요?",
-      "link": "https://www.mlb.com/news/carlos-beltran-has-number-retired-enters-mets-hall-of-fame",
-      "pubDate": "2026-09-19T23:58:00Z",
-      "source": "MLB.com",
-      "category": "미국 현지 읽을거리",
-      "readingMinutes": 10,
-      "bodyVerified": true,
-      "bodyChars": 7522,
-      "sourceWordCount": 2268,
-      "translationType": "full",
-      "pipelineVersion": "reader-v6",
-      "translatedAt": "2026-09-20T00:10:05.663Z"
-    },
-    {
-      "id": "mlb-2c722681b456",
-      "articleFile": "./data/articles/mlb-2c722681b456.json",
-      "title": "Yesavage (meniscus) throws side session before possible Sunday return",
-      "titleKo": "Yesavage(반월판)는 일요일 복귀가 가능하기 전에 사이드 세션을 던졌습니다.",
-      "link": "https://www.mlb.com/news/trey-yesavage-throws-side-session-ahead-of-return-for-blue-jays",
-      "pubDate": "2026-09-19T00:00:25.688Z",
-      "source": "MLB.com",
-      "category": "미국 현지 읽을거리",
-      "readingMinutes": 7,
-      "bodyVerified": true,
-      "bodyChars": 5420,
-      "sourceWordCount": 1526,
-      "translationType": "full",
-      "pipelineVersion": "reader-v6",
-      "translatedAt": "2026-09-19T00:22:55.044Z"
-    },
-    {
       "id": "mlb-8ac61e02b023",
       "articleFile": "./data/articles/mlb-8ac61e02b023.json",
       "title": "Injuries: Judge, Dodgers, Red Sox, McClanahan, Guardians",
@@ -67,6 +33,40 @@
       "translationType": "full",
       "pipelineVersion": "reader-v6",
       "translatedAt": "2026-09-19T00:23:40.999Z"
+    },
+    {
+      "id": "mlb-4d05d1b700a0",
+      "articleFile": "./data/articles/mlb-4d05d1b700a0.json",
+      "title": "Sunday Notes: Ever Evolving, (the A’s) Max Muncy Remains In Search of His Groove",
+      "titleKo": "Sunday Notes: 끊임없이 진화하는 (the A's) Max Muncy는 자신의 그루브를 계속 찾고 있습니다.",
+      "link": "https://blogs.fangraphs.com/sunday-notes-ever-evolving-the-as-max-muncy-remains-in-search-of-his-groove/",
+      "pubDate": "2026-09-20T11:46:56+00:00",
+      "source": "FanGraphs",
+      "category": "미국 현지 읽을거리",
+      "readingMinutes": 13,
+      "bodyVerified": true,
+      "bodyChars": 10004,
+      "sourceWordCount": 2949,
+      "translationType": "full",
+      "pipelineVersion": "reader-v6",
+      "translatedAt": "2026-09-21T00:18:16.240Z"
+    },
+    {
+      "id": "mlb-f06261a5d573",
+      "articleFile": "./data/articles/mlb-f06261a5d573.json",
+      "title": "Beltrán feted with number retirement, Mets HOF -- but is another chapter possible?",
+      "titleKo": "벨트란은 메츠 HOF에서 은퇴를 맞이했지만 또 다른 장이 가능할까요?",
+      "link": "https://www.mlb.com/news/carlos-beltran-has-number-retired-enters-mets-hall-of-fame",
+      "pubDate": "2026-09-19T23:58:00Z",
+      "source": "MLB.com",
+      "category": "미국 현지 읽을거리",
+      "readingMinutes": 10,
+      "bodyVerified": true,
+      "bodyChars": 7522,
+      "sourceWordCount": 2268,
+      "translationType": "full",
+      "pipelineVersion": "reader-v6",
+      "translatedAt": "2026-09-20T00:10:05.663Z"
     }
   ],
   "message": "미국 현지 기사 중 광고·회원가입 문구를 제거하고 제목과 본문 전체 자동 번역이 완료된 기사만 제공합니다.",
@@ -74,5 +74,5 @@
   "translationPolicy": "clean_full_translation_keep_previous_on_failure",
   "pipelineVersion": "reader-v6",
   "selectedCount": 4,
-  "updatedAt": "2026-09-20T00:11:38.819Z"
+  "updatedAt": "2026-09-21T00:19:57.651Z"
 }
