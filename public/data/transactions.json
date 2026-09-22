@@ -29,7 +29,91 @@
       "sourceLink": "https://www.nba.com/players/transactions"
     },
     {
-      "id": "waive-2026-09-20-2",
+      "id": "signing-2026-09-21-2",
+      "type": "Signing",
+      "typeKo": "계약",
+      "date": "2026-09-21T00:00:00",
+      "dateKo": "9월 21일",
+      "title": "계약 · 9월 21일",
+      "descriptionKo": "골든스테이트 워리어스가  Graham Ike와 투웨이 계약을 체결했습니다.",
+      "descriptions": [
+        "Golden State Warriors signed  Graham Ike to a Two-Way Contract."
+      ],
+      "source": "NBA.com",
+      "sourceLink": "https://www.nba.com/players/transactions"
+    },
+    {
+      "id": "waive-2026-09-21-3",
+      "type": "Waive",
+      "typeKo": "방출",
+      "date": "2026-09-21T00:00:00",
+      "dateKo": "9월 21일",
+      "title": "방출 · 9월 21일",
+      "descriptionKo": "브루클린 네츠가 가드 DJ Rodman를 방출했습니다.",
+      "descriptions": [
+        "Brooklyn Nets waived guard DJ Rodman."
+      ],
+      "source": "NBA.com",
+      "sourceLink": "https://www.nba.com/players/transactions"
+    },
+    {
+      "id": "waive-2026-09-21-4",
+      "type": "Waive",
+      "typeKo": "방출",
+      "date": "2026-09-21T00:00:00",
+      "dateKo": "9월 21일",
+      "title": "방출 · 9월 21일",
+      "descriptionKo": "브루클린 네츠가 포워드 Aaron Scott를 방출했습니다.",
+      "descriptions": [
+        "Brooklyn Nets waived forward Aaron Scott."
+      ],
+      "source": "NBA.com",
+      "sourceLink": "https://www.nba.com/players/transactions"
+    },
+    {
+      "id": "waive-2026-09-21-5",
+      "type": "Waive",
+      "typeKo": "방출",
+      "date": "2026-09-21T00:00:00",
+      "dateKo": "9월 21일",
+      "title": "방출 · 9월 21일",
+      "descriptionKo": "인디애나 페이서스가 포워드 Kowacie Reeves Jr.를 방출했습니다.",
+      "descriptions": [
+        "Indiana Pacers waived forward Kowacie Reeves Jr.."
+      ],
+      "source": "NBA.com",
+      "sourceLink": "https://www.nba.com/players/transactions"
+    },
+    {
+      "id": "waive-2026-09-21-6",
+      "type": "Waive",
+      "typeKo": "방출",
+      "date": "2026-09-21T00:00:00",
+      "dateKo": "9월 21일",
+      "title": "방출 · 9월 21일",
+      "descriptionKo": "인디애나 페이서스가 가드 Jalen Warley를 방출했습니다.",
+      "descriptions": [
+        "Indiana Pacers waived guard Jalen Warley."
+      ],
+      "source": "NBA.com",
+      "sourceLink": "https://www.nba.com/players/transactions"
+    },
+    {
+      "id": "waive-2026-09-21-7",
+      "type": "Waive",
+      "typeKo": "방출",
+      "date": "2026-09-21T00:00:00",
+      "dateKo": "9월 21일",
+      "title": "방출 · 9월 21일",
+      "descriptionKo": "뉴올리언스 펠리컨스가  Dominique Daniels, Jr.를 방출했습니다.",
+      "descriptions": [
+        "New Orleans Pelicans waived  Dominique Daniels, Jr.."
+      ],
+      "source": "NBA.com",
+      "sourceLink": "https://www.nba.com/players/transactions"
+    },
+    {
+      "id": "waive-2026-09-20-8",
       "type": "Waive",
       "typeKo": "방출",
       "date": "2026-09-20T00:00:00",
@@ -43,7 +127,7 @@
       "sourceLink": "https://www.nba.com/players/transactions"
     },
     {
-      "id": "waive-2026-09-19-3",
+      "id": "waive-2026-09-19-9",
       "type": "Waive",
       "typeKo": "방출",
       "date": "2026-09-19T00:00:00",
@@ -57,7 +141,7 @@
       "sourceLink": "https://www.nba.com/players/transactions"
     },
     {
-      "id": "waive-2026-09-19-4",
+      "id": "waive-2026-09-19-10",
       "type": "Waive",
       "typeKo": "방출",
       "date": "2026-09-19T00:00:00",
@@ -71,7 +155,7 @@
       "sourceLink": "https://www.nba.com/players/transactions"
     },
     {
-      "id": "waive-2026-09-19-5",
+      "id": "waive-2026-09-19-11",
       "type": "Waive",
       "typeKo": "방출",
       "date": "2026-09-19T00:00:00",
@@ -85,7 +169,7 @@
       "sourceLink": "https://www.nba.com/players/transactions"
     },
     {
-      "id": "signing-2026-09-18-6",
+      "id": "signing-2026-09-18-12",
       "type": "Signing",
       "typeKo": "계약",
       "date": "2026-09-18T00:00:00",
@@ -99,7 +183,7 @@
       "sourceLink": "https://www.nba.com/players/transactions"
     },
     {
-      "id": "signing-2026-09-18-7",
+      "id": "signing-2026-09-18-13",
       "type": "Signing",
       "typeKo": "계약",
       "date": "2026-09-18T00:00:00",
@@ -113,7 +197,7 @@
       "sourceLink": "https://www.nba.com/players/transactions"
     },
     {
-      "id": "waive-2026-09-18-8",
+      "id": "waive-2026-09-18-14",
       "type": "Waive",
       "typeKo": "방출",
       "date": "2026-09-18T00:00:00",
@@ -127,7 +211,7 @@
       "sourceLink": "https://www.nba.com/players/transactions"
     },
     {
-      "id": "waive-2026-09-18-9",
+      "id": "waive-2026-09-18-15",
       "type": "Waive",
       "typeKo": "방출",
       "date": "2026-09-18T00:00:00",
@@ -141,7 +225,7 @@
       "sourceLink": "https://www.nba.com/players/transactions"
     },
     {
-      "id": "waive-2026-09-18-10",
+      "id": "waive-2026-09-18-16",
       "type": "Waive",
       "typeKo": "방출",
       "date": "2026-09-18T00:00:00",
@@ -155,7 +239,7 @@
       "sourceLink": "https://www.nba.com/players/transactions"
     },
     {
-      "id": "waive-2026-09-18-11",
+      "id": "waive-2026-09-18-17",
       "type": "Waive",
       "typeKo": "방출",
       "date": "2026-09-18T00:00:00",
@@ -167,93 +251,9 @@
       ],
       "source": "NBA.com",
       "sourceLink": "https://www.nba.com/players/transactions"
-    },
-    {
-      "id": "waive-2026-09-18-12",
-      "type": "Waive",
-      "typeKo": "방출",
-      "date": "2026-09-18T00:00:00",
-      "dateKo": "9월 18일",
-      "title": "방출 · 9월 18일",
-      "descriptionKo": "피닉스 선스가 가드 David Stockton를 방출했습니다.",
-      "descriptions": [
-        "Phoenix Suns waived guard David Stockton."
-      ],
-      "source": "NBA.com",
-      "sourceLink": "https://www.nba.com/players/transactions"
-    },
-    {
-      "id": "signing-2026-09-17-13",
-      "type": "Signing",
-      "typeKo": "계약",
-      "date": "2026-09-17T00:00:00",
-      "dateKo": "9월 17일",
-      "title": "계약 · 9월 17일",
-      "descriptionKo": "뉴올리언스 펠리컨스가 가드 Saddiq Bey와 베테랑 연장계약을 체결했습니다.",
-      "descriptions": [
-        "New Orleans Pelicans re-signed guard Saddiq Bey to a Veteran Extension."
-      ],
-      "source": "NBA.com",
-      "sourceLink": "https://www.nba.com/players/transactions"
-    },
-    {
-      "id": "waive-2026-09-17-14",
-      "type": "Waive",
-      "typeKo": "방출",
-      "date": "2026-09-17T00:00:00",
-      "dateKo": "9월 17일",
-      "title": "방출 · 9월 17일",
-      "descriptionKo": "클리블랜드 캐벌리어스가 가드 Sean McNeil를 방출했습니다.",
-      "descriptions": [
-        "Cleveland Cavaliers waived guard Sean McNeil."
-      ],
-      "source": "NBA.com",
-      "sourceLink": "https://www.nba.com/players/transactions"
-    },
-    {
-      "id": "waive-2026-09-17-15",
-      "type": "Waive",
-      "typeKo": "방출",
-      "date": "2026-09-17T00:00:00",
-      "dateKo": "9월 17일",
-      "title": "방출 · 9월 17일",
-      "descriptionKo": "피닉스 선스가 가드 Jordan Schakel를 방출했습니다.",
-      "descriptions": [
-        "Phoenix Suns waived guard Jordan Schakel."
-      ],
-      "source": "NBA.com",
-      "sourceLink": "https://www.nba.com/players/transactions"
-    },
-    {
-      "id": "waive-2026-09-16-16",
-      "type": "Waive",
-      "typeKo": "방출",
-      "date": "2026-09-16T00:00:00",
-      "dateKo": "9월 16일",
-      "title": "방출 · 9월 16일",
-      "descriptionKo": "골든스테이트 워리어스가 가드 Chance McMillian를 방출했습니다.",
-      "descriptions": [
-        "Golden State Warriors waived guard Chance McMillian."
-      ],
-      "source": "NBA.com",
-      "sourceLink": "https://www.nba.com/players/transactions"
-    },
-    {
-      "id": "waive-2026-09-16-17",
-      "type": "Waive",
-      "typeKo": "방출",
-      "date": "2026-09-16T00:00:00",
-      "dateKo": "9월 16일",
-      "title": "방출 · 9월 16일",
-      "descriptionKo": "골든스테이트 워리어스가 가드 Deivon Smith를 방출했습니다.",
-      "descriptions": [
-        "Golden State Warriors waived guard Deivon Smith."
-      ],
-      "source": "NBA.com",
-      "sourceLink": "https://www.nba.com/players/transactions"
     }
   ],
   "message": "",
   "source": "NBA 공식 Player Movement 데이터",
-  "updatedAt": "2026-09-21T21:04:58.072Z"
+  "updatedAt": "2026-09-22T00:07:29.050Z"
 }
