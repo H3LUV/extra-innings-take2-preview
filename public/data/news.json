@@ -1,6 +1,23 @@
 {
   "items": [
     {
+      "id": "mlb-bfa4fec55083",
+      "articleFile": "./data/articles/mlb-bfa4fec55083.json",
+      "title": "Here are the Minor League champions of the 2026 season",
+      "titleKo": "2026시즌 마이너리그 챔피언은 다음과 같습니다.",
+      "link": "https://www.mlb.com/news/2026-minor-league-champions",
+      "pubDate": "2026-09-21T22:45:00Z",
+      "source": "MLB.com",
+      "category": "미국 현지 읽을거리",
+      "readingMinutes": 10,
+      "bodyVerified": true,
+      "bodyChars": 7997,
+      "sourceWordCount": 2245,
+      "translationType": "full",
+      "pipelineVersion": "reader-v6",
+      "translatedAt": "2026-09-22T00:52:23.602Z"
+    },
+    {
       "id": "mlb-4db51483e651",
       "articleFile": "./data/articles/mlb-4db51483e651.json",
       "title": "Bracket, tiebreakers and more: Here is the current playoff picture",
@@ -16,23 +33,6 @@
       "translationType": "full",
       "pipelineVersion": "reader-v6",
       "translatedAt": "2026-09-20T00:09:33.168Z"
-    },
-    {
-      "id": "mlb-8ac61e02b023",
-      "articleFile": "./data/articles/mlb-8ac61e02b023.json",
-      "title": "Injuries: Judge, Dodgers, Red Sox, McClanahan, Guardians",
-      "titleKo": "부상자: 저지, 다저스, 레드삭스, 맥클라나한, 가디언즈",
-      "link": "https://www.mlb.com/news/baseball-injury-updates",
-      "pubDate": "2026-09-18T23:34:00Z",
-      "source": "MLB.com",
-      "category": "미국 현지 읽을거리",
-      "readingMinutes": 7,
-      "bodyVerified": true,
-      "bodyChars": 4615,
-      "sourceWordCount": 1479,
-      "translationType": "full",
-      "pipelineVersion": "reader-v6",
-      "translatedAt": "2026-09-19T00:23:40.999Z"
     },
     {
       "id": "mlb-4d05d1b700a0",
@@ -52,21 +52,21 @@
       "translatedAt": "2026-09-21T00:18:16.240Z"
     },
     {
-      "id": "mlb-f06261a5d573",
-      "articleFile": "./data/articles/mlb-f06261a5d573.json",
-      "title": "Beltrán feted with number retirement, Mets HOF -- but is another chapter possible?",
-      "titleKo": "벨트란은 메츠 HOF에서 은퇴를 맞이했지만 또 다른 장이 가능할까요?",
-      "link": "https://www.mlb.com/news/carlos-beltran-has-number-retired-enters-mets-hall-of-fame",
-      "pubDate": "2026-09-19T23:58:00Z",
+      "id": "mlb-8ac61e02b023",
+      "articleFile": "./data/articles/mlb-8ac61e02b023.json",
+      "title": "Injuries: Judge, Dodgers, Red Sox, McClanahan, Guardians",
+      "titleKo": "부상자: 저지, 다저스, 레드삭스, 맥클라나한, 가디언즈",
+      "link": "https://www.mlb.com/news/baseball-injury-updates",
+      "pubDate": "2026-09-18T23:34:00Z",
       "source": "MLB.com",
       "category": "미국 현지 읽을거리",
-      "readingMinutes": 10,
+      "readingMinutes": 7,
       "bodyVerified": true,
-      "bodyChars": 7522,
-      "sourceWordCount": 2268,
+      "bodyChars": 4615,
+      "sourceWordCount": 1479,
       "translationType": "full",
       "pipelineVersion": "reader-v6",
-      "translatedAt": "2026-09-20T00:10:05.663Z"
+      "translatedAt": "2026-09-19T00:23:40.999Z"
     }
   ],
   "message": "미국 현지 기사 중 광고·회원가입 문구를 제거하고 제목과 본문 전체 자동 번역이 완료된 기사만 제공합니다.",
@@ -74,5 +74,5 @@
   "translationPolicy": "clean_full_translation_keep_previous_on_failure",
   "pipelineVersion": "reader-v6",
   "selectedCount": 4,
-  "updatedAt": "2026-09-21T00:19:57.651Z"
+  "updatedAt": "2026-09-22T00:56:52.089Z"
 }
