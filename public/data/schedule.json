@@ -6,7 +6,7 @@
     "2026-09-22": [
       {
         "id": 824787,
-        "status": "In Progress",
+        "status": "Final",
         "venue": "Oriole Park at Camden Yards",
         "gameDate": "2026-09-21T22:35:00Z",
         "away": {
@@ -15,20 +15,20 @@
           "score": 3,
           "record": {
             "wins": 77,
-            "losses": 79,
+            "losses": 80,
             "ties": 0,
-            "pct": ".494"
+            "pct": ".490"
           }
         },
         "home": {
           "id": 110,
           "name": "Baltimore Orioles",
-          "score": 1,
+          "score": 4,
           "record": {
-            "wins": 75,
+            "wins": 76,
             "losses": 81,
             "ties": 0,
-            "pct": ".481"
+            "pct": ".484"
           }
         },
         "probable": {
@@ -36,25 +36,25 @@
           "home": "Shane Baz"
         },
         "decisions": {
-          "winner": "",
-          "loser": "",
-          "save": ""
+          "winner": "Yennier Cano",
+          "loser": "Tyler Rogers",
+          "save": "Rico Garcia"
         }
       },
       {
         "id": 824221,
-        "status": "In Progress",
+        "status": "Final",
         "venue": "Comerica Park",
         "gameDate": "2026-09-21T22:40:00Z",
         "away": {
           "id": 120,
           "name": "Washington Nationals",
-          "score": 0,
+          "score": 2,
           "record": {
             "wins": 73,
-            "losses": 83,
+            "losses": 84,
             "ties": 0,
-            "pct": ".468"
+            "pct": ".465"
           }
         },
         "home": {
@@ -62,10 +62,10 @@
           "name": "Detroit Tigers",
           "score": 9,
           "record": {
-            "wins": 73,
+            "wins": 74,
             "losses": 83,
             "ties": 0,
-            "pct": ".468"
+            "pct": ".471"
           }
         },
         "probable": {
@@ -73,36 +73,36 @@
           "home": "River Ryan"
         },
         "decisions": {
-          "winner": "",
-          "loser": "",
+          "winner": "Keider Montero",
+          "loser": "DJ Herz",
           "save": ""
         }
       },
       {
         "id": 823169,
-        "status": "Pre-Game",
+        "status": "Final",
         "venue": "Oracle Park",
         "gameDate": "2026-09-22T01:45:00Z",
         "away": {
           "id": 142,
           "name": "Minnesota Twins",
-          "score": 0,
+          "score": 2,
           "record": {
             "wins": 73,
-            "losses": 83,
+            "losses": 84,
             "ties": 0,
-            "pct": ".468"
+            "pct": ".465"
           }
         },
         "home": {
           "id": 137,
           "name": "San Francisco Giants",
-          "score": 0,
+          "score": 5,
           "record": {
-            "wins": 64,
+            "wins": 65,
             "losses": 92,
             "ties": 0,
-            "pct": ".410"
+            "pct": ".414"
           }
         },
         "probable": {
@@ -110,9 +110,9 @@
           "home": "Blade Tidwell"
         },
         "decisions": {
-          "winner": "",
-          "loser": "",
-          "save": ""
+          "winner": "Tristan Beck",
+          "loser": "Zebby Matthews",
+          "save": "Trent Harris"
         }
       }
     ],
@@ -165,9 +165,9 @@
           "score": null,
           "record": {
             "wins": 77,
-            "losses": 79,
+            "losses": 80,
             "ties": 0,
-            "pct": ".494"
+            "pct": ".490"
           }
         },
         "home": {
@@ -175,10 +175,10 @@
           "name": "Baltimore Orioles",
           "score": null,
           "record": {
-            "wins": 75,
+            "wins": 76,
             "losses": 81,
             "ties": 0,
-            "pct": ".481"
+            "pct": ".484"
           }
         },
         "probable": {
@@ -202,9 +202,9 @@
           "score": null,
           "record": {
             "wins": 73,
-            "losses": 83,
+            "losses": 84,
             "ties": 0,
-            "pct": ".468"
+            "pct": ".465"
           }
         },
         "home": {
@@ -212,10 +212,10 @@
           "name": "Detroit Tigers",
           "score": null,
           "record": {
-            "wins": 73,
+            "wins": 74,
             "losses": 83,
             "ties": 0,
-            "pct": ".468"
+            "pct": ".471"
           }
         },
         "probable": {
@@ -646,9 +646,9 @@
           "score": null,
           "record": {
             "wins": 73,
-            "losses": 83,
+            "losses": 84,
             "ties": 0,
-            "pct": ".468"
+            "pct": ".465"
           }
         },
         "home": {
@@ -656,10 +656,10 @@
           "name": "San Francisco Giants",
           "score": null,
           "record": {
-            "wins": 64,
+            "wins": 65,
             "losses": 92,
             "ties": 0,
-            "pct": ".410"
+            "pct": ".414"
           }
         },
         "probable": {
@@ -722,9 +722,9 @@
           "score": null,
           "record": {
             "wins": 73,
-            "losses": 83,
+            "losses": 84,
             "ties": 0,
-            "pct": ".468"
+            "pct": ".465"
           }
         },
         "home": {
@@ -732,10 +732,10 @@
           "name": "Detroit Tigers",
           "score": null,
           "record": {
-            "wins": 73,
+            "wins": 74,
             "losses": 83,
             "ties": 0,
-            "pct": ".468"
+            "pct": ".471"
           }
         },
         "probable": {
@@ -759,9 +759,9 @@
           "score": null,
           "record": {
             "wins": 73,
-            "losses": 83,
+            "losses": 84,
             "ties": 0,
-            "pct": ".468"
+            "pct": ".465"
           }
         },
         "home": {
@@ -769,10 +769,10 @@
           "name": "San Francisco Giants",
           "score": null,
           "record": {
-            "wins": 64,
+            "wins": 65,
             "losses": 92,
             "ties": 0,
-            "pct": ".410"
+            "pct": ".414"
           }
         },
         "probable": {
@@ -796,9 +796,9 @@
           "score": null,
           "record": {
             "wins": 77,
-            "losses": 79,
+            "losses": 80,
             "ties": 0,
-            "pct": ".494"
+            "pct": ".490"
           }
         },
         "home": {
@@ -806,10 +806,10 @@
           "name": "Baltimore Orioles",
           "score": null,
           "record": {
-            "wins": 75,
+            "wins": 76,
             "losses": 81,
             "ties": 0,
-            "pct": ".481"
+            "pct": ".484"
           }
         },
         "probable": {
@@ -1268,6 +1268,6 @@
       }
     ]
   },
-  "updatedAt": "2026-09-22T00:27:49.006Z",
+  "updatedAt": "2026-09-22T12:10:20.788Z",
   "source": "MLB Stats API"
 }
