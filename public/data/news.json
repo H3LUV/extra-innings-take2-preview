@@ -15,24 +15,24 @@
       "sourceWordCount": 446,
       "translationType": "full",
       "pipelineVersion": "reader-v6",
-      "translatedAt": "2026-09-23T17:03:15.176Z"
+      "translatedAt": "2026-09-23T20:26:32.755Z"
     },
     {
       "id": "nba-7ea05a992c57",
       "articleFile": "./data/articles/nba-7ea05a992c57.json",
       "title": "'This team is scary' | Recap: 2026 Houston Rockets media day",
-      "titleKo": "'이 팀은 무섭다' | 요약: 2026년 휴스턴 로키츠 미디어 데이",
+      "titleKo": "'이 팀은 무섭다' | 요약: 2026년 휴스턴 로케츠 미디어 데이",
       "link": "https://www.nba.com/news/live-updates-2026-27-houston-rockets-media-day",
       "pubDate": "2026-09-22T15:40:44Z",
       "source": "NBA.com",
       "category": "미국 현지 읽을거리",
       "readingMinutes": 13,
       "bodyVerified": true,
-      "bodyChars": 9717,
+      "bodyChars": 9722,
       "sourceWordCount": 2900,
       "translationType": "full",
       "pipelineVersion": "reader-v6",
-      "translatedAt": "2026-09-23T17:03:07.633Z"
+      "translatedAt": "2026-09-23T20:26:29.528Z"
     },
     {
       "id": "nba-9030912569e5",
@@ -45,11 +45,11 @@
       "category": "미국 현지 읽을거리",
       "readingMinutes": 4,
       "bodyVerified": true,
-      "bodyChars": 1217,
+      "bodyChars": 1218,
       "sourceWordCount": 337,
       "translationType": "full",
       "pipelineVersion": "reader-v6",
-      "translatedAt": "2026-09-23T17:03:20.390Z"
+      "translatedAt": "2026-09-23T20:26:38.652Z"
     },
     {
       "id": "nba-edecd7b0906a",
@@ -66,7 +66,7 @@
       "sourceWordCount": 498,
       "translationType": "full",
       "pipelineVersion": "reader-v6",
-      "translatedAt": "2026-09-23T17:03:18.344Z"
+      "translatedAt": "2026-09-23T20:26:35.069Z"
     }
   ],
   "message": "NBA.com의 최신 일반 기사 중 제목과 본문 전체 자동 번역이 완료된 기사만 제공합니다.",
@@ -74,5 +74,5 @@
   "translationPolicy": "newest_valid_article_full_translation_keep_previous_on_failure",
   "pipelineVersion": "reader-v6",
   "selectedCount": 4,
-  "updatedAt": "2026-09-23T17:03:20.391Z"
+  "updatedAt": "2026-09-23T20:26:38.653Z"
 }
