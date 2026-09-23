@@ -43,7 +43,37 @@
       "sourceLink": "https://www.nba.com/players/transactions"
     },
     {
-      "id": "waive-2026-09-22-3",
+      "id": "signing-2026-09-22-3",
+      "type": "Signing",
+      "typeKo": "계약",
+      "date": "2026-09-22T00:00:00",
+      "dateKo": "9월 22일",
+      "title": "계약 · 9월 22일",
+      "descriptionKo": "토론토 랩터스가 포워드 Kawhi Leonard와 베테랑 연장계약을 체결했습니다.",
+      "descriptions": [
+        "Toronto Raptors re-signed forward Kawhi Leonard to a Veteran Extension."
+      ],
+      "source": "NBA.com",
+      "sourceLink": "https://www.nba.com/players/transactions"
+    },
+    {
+      "id": "trade-2026-09-22-4",
+      "type": "Trade",
+      "typeKo": "트레이드",
+      "date": "2026-09-22T00:00:00",
+      "dateKo": "9월 22일",
+      "title": "트레이드 · 9월 22일",
+      "descriptionKo": "애틀랜타 호크스가 샬럿 호네츠로부터 포워드 Dorian Finney-Smith을 받았습니다. 샬럿 호네츠가 애틀랜타 호크스로부터 가드 Ryan Nembhard을 받았습니다. 샬럿 호네츠가 애틀랜타 호크스로부터 가드 Buddy Hield을 받았습니다.",
+      "descriptions": [
+        "Atlanta Hawks received forward Dorian Finney-Smith from Charlotte Hornets.",
+        "Charlotte Hornets received guard Ryan Nembhard from Atlanta Hawks.",
+        "Charlotte Hornets received guard Buddy Hield from Atlanta Hawks."
+      ],
+      "source": "NBA.com",
+      "sourceLink": "https://www.nba.com/players/transactions"
+    },
+    {
+      "id": "waive-2026-09-22-5",
       "type": "Waive",
       "typeKo": "방출",
       "date": "2026-09-22T00:00:00",
@@ -57,7 +87,7 @@
       "sourceLink": "https://www.nba.com/players/transactions"
     },
     {
-      "id": "waive-2026-09-22-4",
+      "id": "waive-2026-09-22-6",
       "type": "Waive",
       "typeKo": "방출",
       "date": "2026-09-22T00:00:00",
@@ -71,7 +101,7 @@
       "sourceLink": "https://www.nba.com/players/transactions"
     },
     {
-      "id": "waive-2026-09-22-5",
+      "id": "waive-2026-09-22-7",
       "type": "Waive",
       "typeKo": "방출",
       "date": "2026-09-22T00:00:00",
@@ -85,7 +115,7 @@
       "sourceLink": "https://www.nba.com/players/transactions"
     },
     {
-      "id": "waive-2026-09-22-6",
+      "id": "waive-2026-09-22-8",
       "type": "Waive",
       "typeKo": "방출",
       "date": "2026-09-22T00:00:00",
@@ -99,7 +129,7 @@
       "sourceLink": "https://www.nba.com/players/transactions"
     },
     {
-      "id": "waive-2026-09-22-7",
+      "id": "waive-2026-09-22-9",
       "type": "Waive",
       "typeKo": "방출",
       "date": "2026-09-22T00:00:00",
@@ -113,7 +143,7 @@
       "sourceLink": "https://www.nba.com/players/transactions"
     },
     {
-      "id": "waive-2026-09-22-8",
+      "id": "waive-2026-09-22-10",
       "type": "Waive",
       "typeKo": "방출",
       "date": "2026-09-22T00:00:00",
@@ -127,7 +157,7 @@
       "sourceLink": "https://www.nba.com/players/transactions"
     },
     {
-      "id": "waive-2026-09-22-9",
+      "id": "waive-2026-09-22-11",
       "type": "Waive",
       "typeKo": "방출",
       "date": "2026-09-22T00:00:00",
@@ -141,7 +171,7 @@
       "sourceLink": "https://www.nba.com/players/transactions"
     },
     {
-      "id": "contractconverted-2026-09-21-10",
+      "id": "contractconverted-2026-09-21-12",
       "type": "ContractConverted",
       "typeKo": "ContractConverted",
       "date": "2026-09-21T00:00:00",
@@ -155,7 +185,7 @@
       "sourceLink": "https://www.nba.com/players/transactions"
     },
     {
-      "id": "signing-2026-09-21-11",
+      "id": "signing-2026-09-21-13",
       "type": "Signing",
       "typeKo": "계약",
       "date": "2026-09-21T00:00:00",
@@ -169,7 +199,7 @@
       "sourceLink": "https://www.nba.com/players/transactions"
     },
     {
-      "id": "signing-2026-09-21-12",
+      "id": "signing-2026-09-21-14",
       "type": "Signing",
       "typeKo": "계약",
       "date": "2026-09-21T00:00:00",
@@ -183,7 +213,7 @@
       "sourceLink": "https://www.nba.com/players/transactions"
     },
     {
-      "id": "waive-2026-09-21-13",
+      "id": "waive-2026-09-21-15",
       "type": "Waive",
       "typeKo": "방출",
       "date": "2026-09-21T00:00:00",
@@ -197,7 +227,7 @@
       "sourceLink": "https://www.nba.com/players/transactions"
     },
     {
-      "id": "waive-2026-09-21-14",
+      "id": "waive-2026-09-21-16",
       "type": "Waive",
       "typeKo": "방출",
       "date": "2026-09-21T00:00:00",
@@ -211,7 +241,7 @@
       "sourceLink": "https://www.nba.com/players/transactions"
     },
     {
-      "id": "waive-2026-09-21-15",
+      "id": "waive-2026-09-21-17",
       "type": "Waive",
       "typeKo": "방출",
       "date": "2026-09-21T00:00:00",
@@ -223,37 +253,9 @@
       ],
       "source": "NBA.com",
       "sourceLink": "https://www.nba.com/players/transactions"
-    },
-    {
-      "id": "waive-2026-09-21-16",
-      "type": "Waive",
-      "typeKo": "방출",
-      "date": "2026-09-21T00:00:00",
-      "dateKo": "9월 21일",
-      "title": "방출 · 9월 21일",
-      "descriptionKo": "인디애나 페이서스가 가드 Jalen Warley를 방출했습니다.",
-      "descriptions": [
-        "Indiana Pacers waived guard Jalen Warley."
-      ],
-      "source": "NBA.com",
-      "sourceLink": "https://www.nba.com/players/transactions"
-    },
-    {
-      "id": "waive-2026-09-21-17",
-      "type": "Waive",
-      "typeKo": "방출",
-      "date": "2026-09-21T00:00:00",
-      "dateKo": "9월 21일",
-      "title": "방출 · 9월 21일",
-      "descriptionKo": "뉴올리언스 펠리컨스가  Dominique Daniels, Jr.를 방출했습니다.",
-      "descriptions": [
-        "New Orleans Pelicans waived  Dominique Daniels, Jr.."
-      ],
-      "source": "NBA.com",
-      "sourceLink": "https://www.nba.com/players/transactions"
     }
   ],
   "message": "",
   "source": "NBA 공식 Player Movement 데이터",
-  "updatedAt": "2026-09-23T00:33:25.801Z"
+  "updatedAt": "2026-09-23T05:58:28.535Z"
 }
