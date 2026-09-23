@@ -1,7 +1,63 @@
 {
   "items": [
     {
-      "id": "awardonwaivers-2026-09-22-0",
+      "id": "waive-2026-09-23-0",
+      "type": "Waive",
+      "typeKo": "방출",
+      "date": "2026-09-23T00:00:00",
+      "dateKo": "9월 23일",
+      "title": "방출 · 9월 23일",
+      "descriptionKo": "덴버 너기츠가 가드 Boopie Miller를 방출했습니다.",
+      "descriptions": [
+        "Denver Nuggets waived guard Boopie Miller."
+      ],
+      "source": "NBA.com",
+      "sourceLink": "https://www.nba.com/players/transactions"
+    },
+    {
+      "id": "waive-2026-09-23-1",
+      "type": "Waive",
+      "typeKo": "방출",
+      "date": "2026-09-23T00:00:00",
+      "dateKo": "9월 23일",
+      "title": "방출 · 9월 23일",
+      "descriptionKo": "샌안토니오 스퍼스가 가드 Jayden Nunn를 방출했습니다.",
+      "descriptions": [
+        "San Antonio Spurs waived guard Jayden Nunn."
+      ],
+      "source": "NBA.com",
+      "sourceLink": "https://www.nba.com/players/transactions"
+    },
+    {
+      "id": "waive-2026-09-23-2",
+      "type": "Waive",
+      "typeKo": "방출",
+      "date": "2026-09-23T00:00:00",
+      "dateKo": "9월 23일",
+      "title": "방출 · 9월 23일",
+      "descriptionKo": "포틀랜드 트레일블레이저스가 가드 Mark Armstrong를 방출했습니다.",
+      "descriptions": [
+        "Portland Trail Blazers waived guard Mark Armstrong."
+      ],
+      "source": "NBA.com",
+      "sourceLink": "https://www.nba.com/players/transactions"
+    },
+    {
+      "id": "waive-2026-09-23-3",
+      "type": "Waive",
+      "typeKo": "방출",
+      "date": "2026-09-23T00:00:00",
+      "dateKo": "9월 23일",
+      "title": "방출 · 9월 23일",
+      "descriptionKo": "포틀랜드 트레일블레이저스가 센터 Samson Johnson를 방출했습니다.",
+      "descriptions": [
+        "Portland Trail Blazers waived center Samson Johnson."
+      ],
+      "source": "NBA.com",
+      "sourceLink": "https://www.nba.com/players/transactions"
+    },
+    {
+      "id": "awardonwaivers-2026-09-22-4",
       "type": "AwardOnWaivers",
       "typeKo": "AwardOnWaivers",
       "date": "2026-09-22T00:00:00",
@@ -15,7 +71,7 @@
       "sourceLink": "https://www.nba.com/players/transactions"
     },
     {
-      "id": "signing-2026-09-22-1",
+      "id": "signing-2026-09-22-5",
       "type": "Signing",
       "typeKo": "계약",
       "date": "2026-09-22T00:00:00",
@@ -29,7 +85,7 @@
       "sourceLink": "https://www.nba.com/players/transactions"
     },
     {
-      "id": "signing-2026-09-22-2",
+      "id": "signing-2026-09-22-6",
       "type": "Signing",
       "typeKo": "계약",
       "date": "2026-09-22T00:00:00",
@@ -43,7 +99,7 @@
       "sourceLink": "https://www.nba.com/players/transactions"
     },
     {
-      "id": "signing-2026-09-22-3",
+      "id": "signing-2026-09-22-7",
       "type": "Signing",
       "typeKo": "계약",
       "date": "2026-09-22T00:00:00",
@@ -57,7 +113,7 @@
       "sourceLink": "https://www.nba.com/players/transactions"
     },
     {
-      "id": "trade-2026-09-22-4",
+      "id": "trade-2026-09-22-8",
       "type": "Trade",
       "typeKo": "트레이드",
       "date": "2026-09-22T00:00:00",
@@ -73,7 +129,7 @@
       "sourceLink": "https://www.nba.com/players/transactions"
     },
     {
-      "id": "waive-2026-09-22-5",
+      "id": "waive-2026-09-22-9",
       "type": "Waive",
       "typeKo": "방출",
       "date": "2026-09-22T00:00:00",
@@ -87,7 +143,7 @@
       "sourceLink": "https://www.nba.com/players/transactions"
     },
     {
-      "id": "waive-2026-09-22-6",
+      "id": "waive-2026-09-22-10",
       "type": "Waive",
       "typeKo": "방출",
       "date": "2026-09-22T00:00:00",
@@ -101,7 +157,7 @@
       "sourceLink": "https://www.nba.com/players/transactions"
     },
     {
-      "id": "waive-2026-09-22-7",
+      "id": "waive-2026-09-22-11",
       "type": "Waive",
       "typeKo": "방출",
       "date": "2026-09-22T00:00:00",
@@ -115,7 +171,7 @@
       "sourceLink": "https://www.nba.com/players/transactions"
     },
     {
-      "id": "waive-2026-09-22-8",
+      "id": "waive-2026-09-22-12",
       "type": "Waive",
       "typeKo": "방출",
       "date": "2026-09-22T00:00:00",
@@ -129,7 +185,7 @@
       "sourceLink": "https://www.nba.com/players/transactions"
     },
     {
-      "id": "waive-2026-09-22-9",
+      "id": "waive-2026-09-22-13",
       "type": "Waive",
       "typeKo": "방출",
       "date": "2026-09-22T00:00:00",
@@ -143,7 +199,7 @@
       "sourceLink": "https://www.nba.com/players/transactions"
     },
     {
-      "id": "waive-2026-09-22-10",
+      "id": "waive-2026-09-22-14",
       "type": "Waive",
       "typeKo": "방출",
       "date": "2026-09-22T00:00:00",
@@ -157,7 +213,7 @@
       "sourceLink": "https://www.nba.com/players/transactions"
     },
     {
-      "id": "waive-2026-09-22-11",
+      "id": "waive-2026-09-22-15",
       "type": "Waive",
       "typeKo": "방출",
       "date": "2026-09-22T00:00:00",
@@ -171,7 +227,7 @@
       "sourceLink": "https://www.nba.com/players/transactions"
     },
     {
-      "id": "contractconverted-2026-09-21-12",
+      "id": "contractconverted-2026-09-21-16",
       "type": "ContractConverted",
       "typeKo": "ContractConverted",
       "date": "2026-09-21T00:00:00",
@@ -185,7 +241,7 @@
       "sourceLink": "https://www.nba.com/players/transactions"
     },
     {
-      "id": "signing-2026-09-21-13",
+      "id": "signing-2026-09-21-17",
       "type": "Signing",
       "typeKo": "계약",
       "date": "2026-09-21T00:00:00",
@@ -197,65 +253,9 @@
       ],
       "source": "NBA.com",
       "sourceLink": "https://www.nba.com/players/transactions"
-    },
-    {
-      "id": "signing-2026-09-21-14",
-      "type": "Signing",
-      "typeKo": "계약",
-      "date": "2026-09-21T00:00:00",
-      "dateKo": "9월 21일",
-      "title": "계약 · 9월 21일",
-      "descriptionKo": "골든스테이트 워리어스가  Graham Ike와 투웨이 계약을 체결했습니다.",
-      "descriptions": [
-        "Golden State Warriors signed  Graham Ike to a Two-Way Contract."
-      ],
-      "source": "NBA.com",
-      "sourceLink": "https://www.nba.com/players/transactions"
-    },
-    {
-      "id": "waive-2026-09-21-15",
-      "type": "Waive",
-      "typeKo": "방출",
-      "date": "2026-09-21T00:00:00",
-      "dateKo": "9월 21일",
-      "title": "방출 · 9월 21일",
-      "descriptionKo": "브루클린 네츠가 가드 DJ Rodman를 방출했습니다.",
-      "descriptions": [
-        "Brooklyn Nets waived guard DJ Rodman."
-      ],
-      "source": "NBA.com",
-      "sourceLink": "https://www.nba.com/players/transactions"
-    },
-    {
-      "id": "waive-2026-09-21-16",
-      "type": "Waive",
-      "typeKo": "방출",
-      "date": "2026-09-21T00:00:00",
-      "dateKo": "9월 21일",
-      "title": "방출 · 9월 21일",
-      "descriptionKo": "브루클린 네츠가 포워드 Aaron Scott를 방출했습니다.",
-      "descriptions": [
-        "Brooklyn Nets waived forward Aaron Scott."
-      ],
-      "source": "NBA.com",
-      "sourceLink": "https://www.nba.com/players/transactions"
-    },
-    {
-      "id": "waive-2026-09-21-17",
-      "type": "Waive",
-      "typeKo": "방출",
-      "date": "2026-09-21T00:00:00",
-      "dateKo": "9월 21일",
-      "title": "방출 · 9월 21일",
-      "descriptionKo": "인디애나 페이서스가 포워드 Kowacie Reeves Jr.를 방출했습니다.",
-      "descriptions": [
-        "Indiana Pacers waived forward Kowacie Reeves Jr.."
-      ],
-      "source": "NBA.com",
-      "sourceLink": "https://www.nba.com/players/transactions"
     }
   ],
   "message": "",
   "source": "NBA 공식 Player Movement 데이터",
-  "updatedAt": "2026-09-23T20:22:08.564Z"
+  "updatedAt": "2026-09-23T23:42:08.414Z"
 }
