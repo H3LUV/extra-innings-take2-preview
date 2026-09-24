@@ -4,6 +4,20 @@
   "dek": "직전 14일 대비 OPS 상승폭 상위 5명",
   "players": [
     {
+      "id": 682928,
+      "name": "CJ Abrams",
+      "team": "Washington Nationals",
+      "seasonPa": 642,
+      "recentPa": 42,
+      "previousPa": 53,
+      "recentAvg": 0.308,
+      "recentObp": 0.357,
+      "recentSlg": 0.641,
+      "recentOps": 0.998,
+      "previousOps": 0.378,
+      "opsDelta": 0.62
+    },
+    {
       "id": 671732,
       "name": "Lawrence Butler",
       "team": "Athletics",
@@ -35,7 +49,7 @@
       "id": 621566,
       "name": "Matt Olson",
       "team": "Atlanta Braves",
-      "seasonPa": 679,
+      "seasonPa": 681,
       "recentPa": 47,
       "previousPa": 53,
       "recentAvg": 0.311,
@@ -58,20 +72,6 @@
       "recentOps": 0.999,
       "previousOps": 0.501,
       "opsDelta": 0.498
-    },
-    {
-      "id": 677594,
-      "name": "Julio Rodríguez",
-      "team": "Seattle Mariners",
-      "seasonPa": 635,
-      "recentPa": 48,
-      "previousPa": 53,
-      "recentAvg": 0.326,
-      "recentObp": 0.396,
-      "recentSlg": 0.488,
-      "recentOps": 0.884,
-      "previousOps": 0.405,
-      "opsDelta": 0.479
     }
   ],
   "method": "시즌 180타석 이상, 최근·직전 14일 각각 28타석 이상, 최근 OPS 0.700 이상인 타자 대상. 원인이나 지속 가능성은 추론하지 않습니다.",
@@ -81,6 +81,6 @@
     "previousStart": "2026-08-27",
     "previousEnd": "2026-09-09"
   },
-  "updatedAt": "2026-09-23T18:57:28.098Z",
+  "updatedAt": "2026-09-24T00:09:32.657Z",
   "source": "MLB Stats API"
 }
