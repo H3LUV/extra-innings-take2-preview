@@ -4,6 +4,20 @@
   "dek": "직전 14일 대비 OPS 상승폭 상위 5명",
   "players": [
     {
+      "id": 571448,
+      "name": "Nolan Arenado",
+      "team": "Arizona Diamondbacks",
+      "seasonPa": 586,
+      "recentPa": 49,
+      "previousPa": 50,
+      "recentAvg": 0.435,
+      "recentObp": 0.469,
+      "recentSlg": 0.891,
+      "recentOps": 1.36,
+      "previousOps": 0.678,
+      "opsDelta": 0.682
+    },
+    {
       "id": 682928,
       "name": "CJ Abrams",
       "team": "Washington Nationals",
@@ -18,24 +32,10 @@
       "opsDelta": 0.647
     },
     {
-      "id": 571448,
-      "name": "Nolan Arenado",
-      "team": "Arizona Diamondbacks",
-      "seasonPa": 581,
-      "recentPa": 44,
-      "previousPa": 50,
-      "recentAvg": 0.415,
-      "recentObp": 0.455,
-      "recentSlg": 0.854,
-      "recentOps": 1.309,
-      "previousOps": 0.678,
-      "opsDelta": 0.6309999999999999
-    },
-    {
       "id": 700250,
       "name": "Ben Rice",
       "team": "New York Yankees",
-      "seasonPa": 654,
+      "seasonPa": 655,
       "recentPa": 50,
       "previousPa": 54,
       "recentAvg": 0.368,
@@ -49,7 +49,7 @@
       "id": 621566,
       "name": "Matt Olson",
       "team": "Atlanta Braves",
-      "seasonPa": 683,
+      "seasonPa": 685,
       "recentPa": 48,
       "previousPa": 53,
       "recentAvg": 0.326,
@@ -81,6 +81,6 @@
     "previousStart": "2026-08-28",
     "previousEnd": "2026-09-10"
   },
-  "updatedAt": "2026-09-24T18:59:59.374Z",
+  "updatedAt": "2026-09-25T00:11:17.741Z",
   "source": "MLB Stats API"
 }
