@@ -1,7 +1,21 @@
 {
   "items": [
     {
-      "id": "signing-2026-09-24-0",
+      "id": "signing-2026-09-25-0",
+      "type": "Signing",
+      "typeKo": "계약",
+      "date": "2026-09-25T00:00:00",
+      "dateKo": "9월 25일",
+      "title": "계약 · 9월 25일",
+      "descriptionKo": "댈러스 매버릭스가 포워드 Dwight Powell와 계약을 체결했습니다.",
+      "descriptions": [
+        "Dallas Mavericks re-signed forward Dwight Powell to a Contract."
+      ],
+      "source": "NBA.com",
+      "sourceLink": "https://www.nba.com/players/transactions"
+    },
+    {
+      "id": "signing-2026-09-24-1",
       "type": "Signing",
       "typeKo": "계약",
       "date": "2026-09-24T00:00:00",
@@ -15,7 +29,7 @@
       "sourceLink": "https://www.nba.com/players/transactions"
     },
     {
-      "id": "waive-2026-09-24-1",
+      "id": "waive-2026-09-24-2",
       "type": "Waive",
       "typeKo": "방출",
       "date": "2026-09-24T00:00:00",
@@ -29,7 +43,7 @@
       "sourceLink": "https://www.nba.com/players/transactions"
     },
     {
-      "id": "waive-2026-09-24-2",
+      "id": "waive-2026-09-24-3",
       "type": "Waive",
       "typeKo": "방출",
       "date": "2026-09-24T00:00:00",
@@ -43,7 +57,7 @@
       "sourceLink": "https://www.nba.com/players/transactions"
     },
     {
-      "id": "waive-2026-09-24-3",
+      "id": "waive-2026-09-24-4",
       "type": "Waive",
       "typeKo": "방출",
       "date": "2026-09-24T00:00:00",
@@ -57,7 +71,7 @@
       "sourceLink": "https://www.nba.com/players/transactions"
     },
     {
-      "id": "waive-2026-09-24-4",
+      "id": "waive-2026-09-24-5",
       "type": "Waive",
       "typeKo": "방출",
       "date": "2026-09-24T00:00:00",
@@ -71,7 +85,7 @@
       "sourceLink": "https://www.nba.com/players/transactions"
     },
     {
-      "id": "waive-2026-09-24-5",
+      "id": "waive-2026-09-24-6",
       "type": "Waive",
       "typeKo": "방출",
       "date": "2026-09-24T00:00:00",
@@ -85,7 +99,7 @@
       "sourceLink": "https://www.nba.com/players/transactions"
     },
     {
-      "id": "waive-2026-09-24-6",
+      "id": "waive-2026-09-24-7",
       "type": "Waive",
       "typeKo": "방출",
       "date": "2026-09-24T00:00:00",
@@ -99,7 +113,7 @@
       "sourceLink": "https://www.nba.com/players/transactions"
     },
     {
-      "id": "waive-2026-09-24-7",
+      "id": "waive-2026-09-24-8",
       "type": "Waive",
       "typeKo": "방출",
       "date": "2026-09-24T00:00:00",
@@ -113,7 +127,7 @@
       "sourceLink": "https://www.nba.com/players/transactions"
     },
     {
-      "id": "waive-2026-09-24-8",
+      "id": "waive-2026-09-24-9",
       "type": "Waive",
       "typeKo": "방출",
       "date": "2026-09-24T00:00:00",
@@ -127,7 +141,7 @@
       "sourceLink": "https://www.nba.com/players/transactions"
     },
     {
-      "id": "waive-2026-09-24-9",
+      "id": "waive-2026-09-24-10",
       "type": "Waive",
       "typeKo": "방출",
       "date": "2026-09-24T00:00:00",
@@ -141,7 +155,7 @@
       "sourceLink": "https://www.nba.com/players/transactions"
     },
     {
-      "id": "waive-2026-09-24-10",
+      "id": "waive-2026-09-24-11",
       "type": "Waive",
       "typeKo": "방출",
       "date": "2026-09-24T00:00:00",
@@ -155,7 +169,7 @@
       "sourceLink": "https://www.nba.com/players/transactions"
     },
     {
-      "id": "waive-2026-09-24-11",
+      "id": "waive-2026-09-24-12",
       "type": "Waive",
       "typeKo": "방출",
       "date": "2026-09-24T00:00:00",
@@ -169,7 +183,7 @@
       "sourceLink": "https://www.nba.com/players/transactions"
     },
     {
-      "id": "waive-2026-09-24-12",
+      "id": "waive-2026-09-24-13",
       "type": "Waive",
       "typeKo": "방출",
       "date": "2026-09-24T00:00:00",
@@ -183,57 +197,43 @@
       "sourceLink": "https://www.nba.com/players/transactions"
     },
     {
-      "id": "waive-2026-09-23-13",
+      "id": "waive-2026-09-24-14",
       "type": "Waive",
       "typeKo": "방출",
-      "date": "2026-09-23T00:00:00",
-      "dateKo": "9월 23일",
-      "title": "방출 · 9월 23일",
-      "descriptionKo": "덴버 너기츠가 가드 Boopie Miller를 방출했습니다.",
+      "date": "2026-09-24T00:00:00",
+      "dateKo": "9월 24일",
+      "title": "방출 · 9월 24일",
+      "descriptionKo": "피닉스 선스가 포워드 John Camden를 방출했습니다.",
       "descriptions": [
-        "Denver Nuggets waived guard Boopie Miller."
+        "Phoenix Suns waived forward John Camden."
       ],
       "source": "NBA.com",
       "sourceLink": "https://www.nba.com/players/transactions"
     },
     {
-      "id": "waive-2026-09-23-14",
+      "id": "waive-2026-09-24-15",
       "type": "Waive",
       "typeKo": "방출",
-      "date": "2026-09-23T00:00:00",
-      "dateKo": "9월 23일",
-      "title": "방출 · 9월 23일",
-      "descriptionKo": "샌안토니오 스퍼스가 가드 Jayden Nunn를 방출했습니다.",
+      "date": "2026-09-24T00:00:00",
+      "dateKo": "9월 24일",
+      "title": "방출 · 9월 24일",
+      "descriptionKo": "피닉스 선스가  Corey Camper를 방출했습니다.",
       "descriptions": [
-        "San Antonio Spurs waived guard Jayden Nunn."
+        "Phoenix Suns waived  Corey Camper."
       ],
       "source": "NBA.com",
       "sourceLink": "https://www.nba.com/players/transactions"
     },
     {
-      "id": "waive-2026-09-23-15",
+      "id": "waive-2026-09-24-16",
       "type": "Waive",
       "typeKo": "방출",
-      "date": "2026-09-23T00:00:00",
-      "dateKo": "9월 23일",
-      "title": "방출 · 9월 23일",
-      "descriptionKo": "포틀랜드 트레일블레이저스가 가드 Mark Armstrong를 방출했습니다.",
+      "date": "2026-09-24T00:00:00",
+      "dateKo": "9월 24일",
+      "title": "방출 · 9월 24일",
+      "descriptionKo": "피닉스 선스가  Samuel Hoiberg를 방출했습니다.",
       "descriptions": [
-        "Portland Trail Blazers waived guard Mark Armstrong."
-      ],
-      "source": "NBA.com",
-      "sourceLink": "https://www.nba.com/players/transactions"
-    },
-    {
-      "id": "waive-2026-09-23-16",
-      "type": "Waive",
-      "typeKo": "방출",
-      "date": "2026-09-23T00:00:00",
-      "dateKo": "9월 23일",
-      "title": "방출 · 9월 23일",
-      "descriptionKo": "포틀랜드 트레일블레이저스가 센터 Samson Johnson를 방출했습니다.",
-      "descriptions": [
-        "Portland Trail Blazers waived center Samson Johnson."
+        "Phoenix Suns waived  Samuel Hoiberg."
       ],
       "source": "NBA.com",
       "sourceLink": "https://www.nba.com/players/transactions"
@@ -245,9 +245,9 @@
       "date": "2026-09-23T00:00:00",
       "dateKo": "9월 23일",
       "title": "방출 · 9월 23일",
-      "descriptionKo": "올랜도 매직가 가드 Ace Baldwin를 방출했습니다.",
+      "descriptionKo": "덴버 너기츠가 가드 Boopie Miller를 방출했습니다.",
       "descriptions": [
-        "Orlando Magic waived guard Ace Baldwin."
+        "Denver Nuggets waived guard Boopie Miller."
       ],
       "source": "NBA.com",
       "sourceLink": "https://www.nba.com/players/transactions"
@@ -255,5 +255,5 @@
   ],
   "message": "",
   "source": "NBA 공식 Player Movement 데이터",
-  "updatedAt": "2026-09-25T13:47:55.983Z"
+  "updatedAt": "2026-09-25T18:36:57.716Z"
 }
