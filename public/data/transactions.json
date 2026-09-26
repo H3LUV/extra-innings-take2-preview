@@ -15,7 +15,91 @@
       "sourceLink": "https://www.nba.com/players/transactions"
     },
     {
-      "id": "signing-2026-09-24-1",
+      "id": "waive-2026-09-25-1",
+      "type": "Waive",
+      "typeKo": "방출",
+      "date": "2026-09-25T00:00:00",
+      "dateKo": "9월 25일",
+      "title": "방출 · 9월 25일",
+      "descriptionKo": "시카고 불스가  Houston Mallette를 방출했습니다.",
+      "descriptions": [
+        "Chicago Bulls waived  Houston Mallette."
+      ],
+      "source": "NBA.com",
+      "sourceLink": "https://www.nba.com/players/transactions"
+    },
+    {
+      "id": "waive-2026-09-25-2",
+      "type": "Waive",
+      "typeKo": "방출",
+      "date": "2026-09-25T00:00:00",
+      "dateKo": "9월 25일",
+      "title": "방출 · 9월 25일",
+      "descriptionKo": "디트로이트 피스턴스가 포워드 Romeo Weems를 방출했습니다.",
+      "descriptions": [
+        "Detroit Pistons waived forward Romeo Weems."
+      ],
+      "source": "NBA.com",
+      "sourceLink": "https://www.nba.com/players/transactions"
+    },
+    {
+      "id": "waive-2026-09-25-3",
+      "type": "Waive",
+      "typeKo": "방출",
+      "date": "2026-09-25T00:00:00",
+      "dateKo": "9월 25일",
+      "title": "방출 · 9월 25일",
+      "descriptionKo": "LA 클리퍼스가 센터 Jamarion Sharp를 방출했습니다.",
+      "descriptions": [
+        "LA Clippers waived center Jamarion Sharp."
+      ],
+      "source": "NBA.com",
+      "sourceLink": "https://www.nba.com/players/transactions"
+    },
+    {
+      "id": "waive-2026-09-25-4",
+      "type": "Waive",
+      "typeKo": "방출",
+      "date": "2026-09-25T00:00:00",
+      "dateKo": "9월 25일",
+      "title": "방출 · 9월 25일",
+      "descriptionKo": "멤피스 그리즐리스가 가드 D'Angelo Russell를 방출했습니다.",
+      "descriptions": [
+        "Memphis Grizzlies waived guard D'Angelo Russell."
+      ],
+      "source": "NBA.com",
+      "sourceLink": "https://www.nba.com/players/transactions"
+    },
+    {
+      "id": "waive-2026-09-25-5",
+      "type": "Waive",
+      "typeKo": "방출",
+      "date": "2026-09-25T00:00:00",
+      "dateKo": "9월 25일",
+      "title": "방출 · 9월 25일",
+      "descriptionKo": "새크라멘토 킹스가 포워드 Gabe Levin를 방출했습니다.",
+      "descriptions": [
+        "Sacramento Kings waived forward Gabe Levin."
+      ],
+      "source": "NBA.com",
+      "sourceLink": "https://www.nba.com/players/transactions"
+    },
+    {
+      "id": "waive-2026-09-25-6",
+      "type": "Waive",
+      "typeKo": "방출",
+      "date": "2026-09-25T00:00:00",
+      "dateKo": "9월 25일",
+      "title": "방출 · 9월 25일",
+      "descriptionKo": "새크라멘토 킹스가  Tyrone Marshall Jr.를 방출했습니다.",
+      "descriptions": [
+        "Sacramento Kings waived  Tyrone Marshall Jr.."
+      ],
+      "source": "NBA.com",
+      "sourceLink": "https://www.nba.com/players/transactions"
+    },
+    {
+      "id": "signing-2026-09-24-7",
       "type": "Signing",
       "typeKo": "계약",
       "date": "2026-09-24T00:00:00",
@@ -29,7 +113,7 @@
       "sourceLink": "https://www.nba.com/players/transactions"
     },
     {
-      "id": "waive-2026-09-24-2",
+      "id": "waive-2026-09-24-8",
       "type": "Waive",
       "typeKo": "방출",
       "date": "2026-09-24T00:00:00",
@@ -43,7 +127,7 @@
       "sourceLink": "https://www.nba.com/players/transactions"
     },
     {
-      "id": "waive-2026-09-24-3",
+      "id": "waive-2026-09-24-9",
       "type": "Waive",
       "typeKo": "방출",
       "date": "2026-09-24T00:00:00",
@@ -57,7 +141,7 @@
       "sourceLink": "https://www.nba.com/players/transactions"
     },
     {
-      "id": "waive-2026-09-24-4",
+      "id": "waive-2026-09-24-10",
       "type": "Waive",
       "typeKo": "방출",
       "date": "2026-09-24T00:00:00",
@@ -71,7 +155,7 @@
       "sourceLink": "https://www.nba.com/players/transactions"
     },
     {
-      "id": "waive-2026-09-24-5",
+      "id": "waive-2026-09-24-11",
       "type": "Waive",
       "typeKo": "방출",
       "date": "2026-09-24T00:00:00",
@@ -85,7 +169,7 @@
       "sourceLink": "https://www.nba.com/players/transactions"
     },
     {
-      "id": "waive-2026-09-24-6",
+      "id": "waive-2026-09-24-12",
       "type": "Waive",
       "typeKo": "방출",
       "date": "2026-09-24T00:00:00",
@@ -99,7 +183,7 @@
       "sourceLink": "https://www.nba.com/players/transactions"
     },
     {
-      "id": "waive-2026-09-24-7",
+      "id": "waive-2026-09-24-13",
       "type": "Waive",
       "typeKo": "방출",
       "date": "2026-09-24T00:00:00",
@@ -113,7 +197,7 @@
       "sourceLink": "https://www.nba.com/players/transactions"
     },
     {
-      "id": "waive-2026-09-24-8",
+      "id": "waive-2026-09-24-14",
       "type": "Waive",
       "typeKo": "방출",
       "date": "2026-09-24T00:00:00",
@@ -127,7 +211,7 @@
       "sourceLink": "https://www.nba.com/players/transactions"
     },
     {
-      "id": "waive-2026-09-24-9",
+      "id": "waive-2026-09-24-15",
       "type": "Waive",
       "typeKo": "방출",
       "date": "2026-09-24T00:00:00",
@@ -141,7 +225,7 @@
       "sourceLink": "https://www.nba.com/players/transactions"
     },
     {
-      "id": "waive-2026-09-24-10",
+      "id": "waive-2026-09-24-16",
       "type": "Waive",
       "typeKo": "방출",
       "date": "2026-09-24T00:00:00",
@@ -155,7 +239,7 @@
       "sourceLink": "https://www.nba.com/players/transactions"
     },
     {
-      "id": "waive-2026-09-24-11",
+      "id": "waive-2026-09-24-17",
       "type": "Waive",
       "typeKo": "방출",
       "date": "2026-09-24T00:00:00",
@@ -167,93 +251,9 @@
       ],
       "source": "NBA.com",
       "sourceLink": "https://www.nba.com/players/transactions"
-    },
-    {
-      "id": "waive-2026-09-24-12",
-      "type": "Waive",
-      "typeKo": "방출",
-      "date": "2026-09-24T00:00:00",
-      "dateKo": "9월 24일",
-      "title": "방출 · 9월 24일",
-      "descriptionKo": "유타 재즈가 센터 Ibrahima Diallo를 방출했습니다.",
-      "descriptions": [
-        "Utah Jazz waived center Ibrahima Diallo."
-      ],
-      "source": "NBA.com",
-      "sourceLink": "https://www.nba.com/players/transactions"
-    },
-    {
-      "id": "waive-2026-09-24-13",
-      "type": "Waive",
-      "typeKo": "방출",
-      "date": "2026-09-24T00:00:00",
-      "dateKo": "9월 24일",
-      "title": "방출 · 9월 24일",
-      "descriptionKo": "유타 재즈가 가드 Justin Harmon를 방출했습니다.",
-      "descriptions": [
-        "Utah Jazz waived guard Justin Harmon."
-      ],
-      "source": "NBA.com",
-      "sourceLink": "https://www.nba.com/players/transactions"
-    },
-    {
-      "id": "waive-2026-09-24-14",
-      "type": "Waive",
-      "typeKo": "방출",
-      "date": "2026-09-24T00:00:00",
-      "dateKo": "9월 24일",
-      "title": "방출 · 9월 24일",
-      "descriptionKo": "피닉스 선스가 포워드 John Camden를 방출했습니다.",
-      "descriptions": [
-        "Phoenix Suns waived forward John Camden."
-      ],
-      "source": "NBA.com",
-      "sourceLink": "https://www.nba.com/players/transactions"
-    },
-    {
-      "id": "waive-2026-09-24-15",
-      "type": "Waive",
-      "typeKo": "방출",
-      "date": "2026-09-24T00:00:00",
-      "dateKo": "9월 24일",
-      "title": "방출 · 9월 24일",
-      "descriptionKo": "피닉스 선스가  Corey Camper를 방출했습니다.",
-      "descriptions": [
-        "Phoenix Suns waived  Corey Camper."
-      ],
-      "source": "NBA.com",
-      "sourceLink": "https://www.nba.com/players/transactions"
-    },
-    {
-      "id": "waive-2026-09-24-16",
-      "type": "Waive",
-      "typeKo": "방출",
-      "date": "2026-09-24T00:00:00",
-      "dateKo": "9월 24일",
-      "title": "방출 · 9월 24일",
-      "descriptionKo": "피닉스 선스가  Samuel Hoiberg를 방출했습니다.",
-      "descriptions": [
-        "Phoenix Suns waived  Samuel Hoiberg."
-      ],
-      "source": "NBA.com",
-      "sourceLink": "https://www.nba.com/players/transactions"
-    },
-    {
-      "id": "waive-2026-09-23-17",
-      "type": "Waive",
-      "typeKo": "방출",
-      "date": "2026-09-23T00:00:00",
-      "dateKo": "9월 23일",
-      "title": "방출 · 9월 23일",
-      "descriptionKo": "덴버 너기츠가 가드 Boopie Miller를 방출했습니다.",
-      "descriptions": [
-        "Denver Nuggets waived guard Boopie Miller."
-      ],
-      "source": "NBA.com",
-      "sourceLink": "https://www.nba.com/players/transactions"
     }
   ],
   "message": "",
   "source": "NBA 공식 Player Movement 데이터",
-  "updatedAt": "2026-09-25T22:20:25.296Z"
+  "updatedAt": "2026-09-26T01:34:22.337Z"
 }
