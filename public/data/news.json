@@ -9,13 +9,13 @@
       "pubDate": "2026-09-25T00:44:22Z",
       "source": "NBA.com",
       "category": "미국 현지 읽을거리",
-      "readingMinutes": 6,
+      "readingMinutes": 5,
       "bodyVerified": true,
-      "bodyChars": 4100,
-      "sourceWordCount": 1236,
+      "bodyChars": 3985,
+      "sourceWordCount": 1203,
       "translationType": "full",
       "pipelineVersion": "reader-v6",
-      "translatedAt": "2026-09-28T06:58:35.513Z"
+      "translatedAt": "2026-09-28T15:32:55.813Z"
     },
     {
       "id": "nba-d5e05c69b8bd",
@@ -28,11 +28,11 @@
       "category": "미국 현지 읽을거리",
       "readingMinutes": 4,
       "bodyVerified": true,
-      "bodyChars": 2761,
+      "bodyChars": 2762,
       "sourceWordCount": 830,
       "translationType": "full",
       "pipelineVersion": "reader-v6",
-      "translatedAt": "2026-09-28T06:58:37.267Z"
+      "translatedAt": "2026-09-28T15:33:04.531Z"
     },
     {
       "id": "nba-384c3340094d",
@@ -45,11 +45,11 @@
       "category": "미국 현지 읽을거리",
       "readingMinutes": 4,
       "bodyVerified": true,
-      "bodyChars": 1008,
+      "bodyChars": 1007,
       "sourceWordCount": 297,
       "translationType": "full",
       "pipelineVersion": "reader-v6",
-      "translatedAt": "2026-09-28T06:58:43.746Z"
+      "translatedAt": "2026-09-28T15:33:33.047Z"
     },
     {
       "id": "nba-7ea05a992c57",
@@ -62,11 +62,11 @@
       "category": "미국 현지 읽을거리",
       "readingMinutes": 13,
       "bodyVerified": true,
-      "bodyChars": 9738,
+      "bodyChars": 9732,
       "sourceWordCount": 2900,
       "translationType": "full",
       "pipelineVersion": "reader-v6",
-      "translatedAt": "2026-09-28T06:58:42.440Z"
+      "translatedAt": "2026-09-28T15:33:29.167Z"
     }
   ],
   "message": "NBA.com의 최신 일반 기사 중 제목과 본문 전체 자동 번역이 완료된 기사만 제공합니다.",
@@ -74,5 +74,5 @@
   "translationPolicy": "newest_valid_article_full_translation_keep_previous_on_failure",
   "pipelineVersion": "reader-v6",
   "selectedCount": 4,
-  "updatedAt": "2026-09-28T06:58:43.749Z"
+  "updatedAt": "2026-09-28T15:33:33.048Z"
 }
