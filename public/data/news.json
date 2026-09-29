@@ -1,21 +1,21 @@
 {
   "items": [
     {
-      "id": "mlb-7864fee27198",
-      "articleFile": "./data/articles/mlb-7864fee27198.json",
-      "title": "Wilson will not return as Mariners' manager in 2027",
-      "titleKo": "윌슨은 2027년 매리너스의 감독으로 복귀하지 않을 것이다",
-      "link": "https://www.mlb.com/news/dan-wilson-won-t-return-mariners-manager-2027",
-      "pubDate": "2026-09-28T00:26:00Z",
+      "id": "mlb-f79c29fb7b5e",
+      "articleFile": "./data/articles/mlb-f79c29fb7b5e.json",
+      "title": "Unknown speedster could make MLB debut for Red Sox in playoffs ... to do 1 thing only",
+      "titleKo": "알려지지 않은 스피드스터는 플레이오프에서 레드삭스의 MLB 데뷔를 할 수 있습니다.",
+      "link": "https://www.mlb.com/news/braiden-ward-red-sox-al-wild-card-roster",
+      "pubDate": "2026-09-28T23:41:46.454Z",
       "source": "MLB.com",
       "category": "미국 현지 읽을거리",
-      "readingMinutes": 9,
+      "readingMinutes": 10,
       "bodyVerified": true,
-      "bodyChars": 6622,
-      "sourceWordCount": 1927,
+      "bodyChars": 7259,
+      "sourceWordCount": 2282,
       "translationType": "full",
       "pipelineVersion": "reader-v6",
-      "translatedAt": "2026-09-28T00:48:52.541Z"
+      "translatedAt": "2026-09-29T01:59:56.412Z"
     },
     {
       "id": "mlb-4db51483e651",
@@ -52,21 +52,21 @@
       "translatedAt": "2026-09-27T00:39:33.045Z"
     },
     {
-      "id": "mlb-765745e47ec1",
-      "articleFile": "./data/articles/mlb-765745e47ec1.json",
-      "title": "The Weakest Positions on the Remaining National League Contenders",
-      "titleKo": "남은 내셔널 리그 경쟁자의 가장 약한 위치",
-      "link": "https://blogs.fangraphs.com/the-weakest-positions-on-the-remaining-national-league-contenders/",
-      "pubDate": "2026-09-25T17:00:11+00:00",
-      "source": "FanGraphs",
+      "id": "mlb-7864fee27198",
+      "articleFile": "./data/articles/mlb-7864fee27198.json",
+      "title": "Wilson will not return as Mariners' manager in 2027",
+      "titleKo": "윌슨은 2027년 매리너스의 감독으로 복귀하지 않을 것이다",
+      "link": "https://www.mlb.com/news/dan-wilson-won-t-return-mariners-manager-2027",
+      "pubDate": "2026-09-28T00:26:00Z",
+      "source": "MLB.com",
       "category": "미국 현지 읽을거리",
-      "readingMinutes": 15,
+      "readingMinutes": 9,
       "bodyVerified": true,
-      "bodyChars": 10763,
-      "sourceWordCount": 3355,
+      "bodyChars": 6622,
+      "sourceWordCount": 1927,
       "translationType": "full",
       "pipelineVersion": "reader-v6",
-      "translatedAt": "2026-09-27T00:40:24.195Z"
+      "translatedAt": "2026-09-28T00:48:52.541Z"
     }
   ],
   "message": "미국 현지 기사 중 광고·회원가입 문구를 제거하고 제목과 본문 전체 자동 번역이 완료된 기사만 제공합니다.",
@@ -74,5 +74,5 @@
   "translationPolicy": "clean_full_translation_keep_previous_on_failure",
   "pipelineVersion": "reader-v6",
   "selectedCount": 4,
-  "updatedAt": "2026-09-28T00:52:09.256Z"
+  "updatedAt": "2026-09-29T02:03:56.121Z"
 }
