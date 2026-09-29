@@ -182,8 +182,8 @@
           }
         },
         "probable": {
-          "away": "",
-          "home": ""
+          "away": "Cristopher Sánchez",
+          "home": "Tyler Mahle"
         },
         "decisions": {
           "winner": "",
@@ -304,6 +304,6 @@
       }
     ]
   },
-  "updatedAt": "2026-09-29T01:22:41.555Z",
+  "updatedAt": "2026-09-29T13:28:51.630Z",
   "source": "MLB Stats API"
 }
