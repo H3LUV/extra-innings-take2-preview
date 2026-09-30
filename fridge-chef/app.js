@@ -1,7 +1,8 @@
 (() => {
-  const version = '20260930-ko-en-v4';
+  const version = '20260930-ko-en-complete-v5';
   const files = [
-    './app-i18n.js',
+    './app-language-dictionary.js',
+    './app-language-runtime.js',
     './app-core.js',
     './app-render.js',
     './app-ai-only.js',
@@ -36,7 +37,7 @@
     script.onerror = () => {
       const badge = document.querySelector('#statusBadge');
       const button = document.querySelector('#generateButton');
-      if (badge) badge.textContent = window.FridgeChefI18n?.t('사이트 로딩 오류') || '사이트 로딩 오류';
+      if (badge) badge.textContent = window.FridgeChefI18n?.t('사이트 로딩 오류') || 'Unable to load the app';
       if (button) button.disabled = true;
     };
     document.head.appendChild(script);
