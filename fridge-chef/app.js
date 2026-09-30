@@ -1,5 +1,8 @@
+// Shared hook assigned by the detailed-recipe and language modules.
+var shareRecipe;
+
 (() => {
-  const version = '20260930-ko-en-v5';
+  const version = '20260930-ko-en-v6';
   const files = [
     './app-i18n.js',
     './app-language.js',
