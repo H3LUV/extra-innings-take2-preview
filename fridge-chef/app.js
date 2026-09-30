@@ -1,5 +1,5 @@
 (() => {
-  const version = '20260930-ko-en-v1';
+  const version = '20260930-ko-en-v2';
   const files = [
     './app-i18n.js',
     './app-core.js',
