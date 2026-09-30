@@ -1,0 +1,48 @@
+name: Test Fridge Chef Languages
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main, fix/fridge-complete-english-20260930]
+    paths:
+      - 'fridge-chef/**'
+      - '.github/workflows/test-fridge-chef-i18n.yml'
+
+permissions:
+  contents: read
+
+concurrency:
+  group: fridge-language-tests-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  browser:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Check JavaScript syntax
+        run: |
+          node --check fridge-chef/app-i18n-complete.js
+          node --check fridge-chef/api/translate-text.js
+      - name: Install test browser
+        run: |
+          python -m pip install playwright==1.55.0
+          python -m playwright install --with-deps chromium
+      - name: Test actual app screens, language persistence and saved recipes
+        env:
+          TEST_OUTPUT: ${{ runner.temp }}/fridge-i18n-tests
+        run: python fridge-chef/tests/test_complete_i18n.py
+      - name: Upload test report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: fridge-language-tests
+          path: ${{ runner.temp }}/fridge-i18n-tests
+          retention-days: 7
