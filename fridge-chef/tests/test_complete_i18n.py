@@ -64,6 +64,11 @@ with sync_playwright() as p:
     def network(route):
         request = route.request
         url = urlparse(request.url)
+        # The external H3 intro is not part of localization. Mock its completion,
+        # not the app DOM or its labels; simply aborting leaves its overlay forever.
+        if url.hostname == 'cdn.jsdelivr.net' and url.path.endswith('/h3works-intro.js'):
+            route.fulfill(content_type='application/javascript',body="document.getElementById('h3LaunchSplash')?.remove();document.body.classList.remove('h3-intro-running');")
+            return
         if url.hostname != '127.0.0.1':
             route.abort(); return
         if url.path == '/api/status':
@@ -113,6 +118,7 @@ with sync_playwright() as p:
         assert not page.locator('body').inner_text().count('Translating…'), label
         assert not errors, errors
         checkpoints.append(label)
+        print('PASS',label,flush=True)
 
     try:
         page.goto(base+'/index.html?lang=en')
