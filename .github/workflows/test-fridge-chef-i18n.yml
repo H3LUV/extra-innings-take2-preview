@@ -39,6 +39,38 @@ jobs:
         env:
           TEST_OUTPUT: ${{ runner.temp }}/fridge-i18n-tests
         run: python fridge-chef/tests/test_complete_i18n.py
+      - name: Check deployed translation API once on this release
+        if: github.ref == 'refs/heads/main' && contains(github.event.head_commit.message, '[translation-smoke]')
+        env:
+          TEST_OUTPUT: ${{ runner.temp }}/fridge-i18n-tests
+        run: |
+          python - <<'PY'
+          import json, os, re, time
+          from pathlib import Path
+          from urllib.request import Request, urlopen
+          base = 'https://fridge-chef-ai-tan.vercel.app'
+          for attempt in range(18):
+              try:
+                  with urlopen(base+'/app.js?smoke='+str(time.time_ns()), timeout=10) as response:
+                      script = response.read().decode()
+                  if '20260930-ko-en-complete-v5' in script: break
+              except Exception:
+                  pass
+              time.sleep(5)
+          else:
+              raise RuntimeError('The new frontend has not reached the production domain.')
+          source = '냄비에 김치 200g과 물 400ml를 넣고 중불에서 5분 끓이세요.'
+          request = Request(base+'/api/translate-text', data=json.dumps({'language':'en','texts':[source]},ensure_ascii=False).encode(), headers={'Content-Type':'application/json','Origin':base}, method='POST')
+          started = time.monotonic()
+          with urlopen(request,timeout=40) as response:
+              data=json.load(response)
+          result=data['translations'][0]
+          assert not re.search(r'[\u1100-\u11ff\u3130-\u318f\uac00-\ud7af]',result), result
+          assert re.findall(r'\d+(?:[.,]\d+)?',result)==['200','400','5'], result
+          report={'passed':True,'type':'live-production-translation','english':result,'elapsedSeconds':round(time.monotonic()-started,2)}
+          Path(os.environ['TEST_OUTPUT'],'live-translation.json').write_text(json.dumps(report,indent=2))
+          print(json.dumps(report))
+          PY
       - name: Upload test report
         if: always()
         uses: actions/upload-artifact@v4
