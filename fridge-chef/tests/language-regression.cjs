@@ -39,9 +39,12 @@ let activePage;
       const errors = []; const requests = []; const translations = [];
       let failGeneration = false;
       page.on('pageerror', error => errors.push(error.message));
-      // The external intro normally removes this overlay. Mock completion, not a blank script
-      // that leaves its static overlay blocking every real click in the test.
-      await page.route('**/h3works-intro.js', route => route.fulfill({ contentType:'application/javascript', body:"document.getElementById('h3LaunchSplash')?.remove();document.body.classList.remove('h3-intro-running');" }));
+      // The external shared intro is not the subject of this test. Its stub must
+      // finish its lifecycle, not leave the static full-screen splash blocking clicks.
+      await page.route('**/h3works-intro.js', route => route.fulfill({ contentType:'application/javascript', body:`
+        document.querySelector('#h3LaunchSplash')?.remove();
+        document.body.classList.remove('h3-intro-running');
+      ` }));
       await page.route('**/api/status', route => route.fulfill({ json:{ aiEnabled:true } }));
       await page.route('**/api/hero-image*', route => route.fulfill({contentType:'image/svg+xml', body:'<svg xmlns="http://www.w3.org/2000/svg" width="640" height="640"/>'}));
       await page.route('**/api/translate-text', async route => {
@@ -135,9 +138,9 @@ let activePage;
     }
     console.log(JSON.stringify({passed:true,checks:report.length,report},null,2));
     fs.writeFileSync('language-qa-result.json',JSON.stringify({passed:true,checks:report.length,report},null,2));
-  } catch(error) {
-    fs.writeFileSync('language-qa-result.json', JSON.stringify({passed:false,checks:report.length,report,error:error.message},null,2));
-    if (activePage && !activePage.isClosed()) await activePage.screenshot({path:'language-qa-failure.png',fullPage:true}).catch(()=>{});
+  } catch (error) {
+    await activePage?.screenshot({path:'language-qa-failure.png',fullPage:true}).catch(()=>{});
+    fs.writeFileSync('language-qa-result.json',JSON.stringify({passed:false,checks:report.length,report,error:String(error)},null,2));
     throw error;
   } finally { await browser.close(); server.close(); }
 })().catch(error=>{console.error(error);server.close();process.exitCode=1;});
