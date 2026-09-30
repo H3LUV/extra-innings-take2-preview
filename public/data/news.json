@@ -1,6 +1,23 @@
 {
   "items": [
     {
+      "id": "mlb-95042712541f",
+      "articleFile": "./data/articles/mlb-95042712541f.json",
+      "title": "Ohtani 'feeling great physically,' will continue to hit during bye week ahead of NLDS",
+      "titleKo": "오타니 '신체적으로 기분 좋다', NLDS를 앞두고 바이주에도 계속 타격을 입을 것",
+      "link": "https://www.mlb.com/news/shohei-ohtani-feeling-better-as-dodgers-prepare-for-nlds",
+      "pubDate": "2026-09-30T00:48:53.991Z",
+      "source": "MLB.com",
+      "category": "미국 현지 읽을거리",
+      "readingMinutes": 10,
+      "bodyVerified": true,
+      "bodyChars": 7157,
+      "sourceWordCount": 2288,
+      "translationType": "full",
+      "pipelineVersion": "reader-v6",
+      "translatedAt": "2026-09-30T01:18:53.731Z"
+    },
+    {
       "id": "mlb-f79c29fb7b5e",
       "articleFile": "./data/articles/mlb-f79c29fb7b5e.json",
       "title": "Unknown speedster could make MLB debut for Red Sox in playoffs ... to do 1 thing only",
@@ -50,23 +67,6 @@
       "translationType": "full",
       "pipelineVersion": "reader-v6",
       "translatedAt": "2026-09-27T00:39:33.045Z"
-    },
-    {
-      "id": "mlb-7864fee27198",
-      "articleFile": "./data/articles/mlb-7864fee27198.json",
-      "title": "Wilson will not return as Mariners' manager in 2027",
-      "titleKo": "윌슨은 2027년 매리너스의 감독으로 복귀하지 않을 것이다",
-      "link": "https://www.mlb.com/news/dan-wilson-won-t-return-mariners-manager-2027",
-      "pubDate": "2026-09-28T00:26:00Z",
-      "source": "MLB.com",
-      "category": "미국 현지 읽을거리",
-      "readingMinutes": 9,
-      "bodyVerified": true,
-      "bodyChars": 6622,
-      "sourceWordCount": 1927,
-      "translationType": "full",
-      "pipelineVersion": "reader-v6",
-      "translatedAt": "2026-09-28T00:48:52.541Z"
     }
   ],
   "message": "미국 현지 기사 중 광고·회원가입 문구를 제거하고 제목과 본문 전체 자동 번역이 완료된 기사만 제공합니다.",
@@ -74,5 +74,5 @@
   "translationPolicy": "clean_full_translation_keep_previous_on_failure",
   "pipelineVersion": "reader-v6",
   "selectedCount": 4,
-  "updatedAt": "2026-09-29T02:03:56.121Z"
+  "updatedAt": "2026-09-30T01:22:28.587Z"
 }
