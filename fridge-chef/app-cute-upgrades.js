@@ -213,6 +213,17 @@
     });
   }
 
+  // Finish ingredient markup in the same render call, before the i18n wrapper runs.
+  // Deferring this to MutationObserver left freshly selected/category buttons in Korean.
+  if (typeof renderIngredientCloud === 'function') {
+    const originalRenderIngredientCloud = renderIngredientCloud;
+    renderIngredientCloud = function renderLocalizedIngredientCloud(...args) {
+      const result = originalRenderIngredientCloud.apply(this, args);
+      decorateIngredients();
+      return result;
+    };
+  }
+
   if (typeof renderResults === 'function') {
     const originalRenderResults = renderResults;
     renderResults = function cuteRenderResults(input, source) {
