@@ -83,7 +83,7 @@
     return copied;
   }
 
-  shareRecipe = async function shareDetailedRecipe(recipe) {
+  window.shareRecipe = async function shareDetailedRecipe(recipe) {
     if (!recipe) return;
 
     const siteUrl = `${location.origin}${location.pathname}`;
