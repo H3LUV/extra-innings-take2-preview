@@ -4,6 +4,8 @@
 // but its old DOM observer/init is intentionally NOT started.
 (() => {
   const dictionary = window.FridgeChefI18n;
+  // Legacy strict-mode modules assign this global before the detailed renderer is installed.
+  if (!('shareRecipe' in window)) window.shareRecipe = null;
   const KEY = 'fridgeChefLanguage';
   const CACHE_KEY = 'fridgeChefTranslationsV4';
   const hangul = /[\u1100-\u11ff\u3130-\u318f\uac00-\ud7af]/;
@@ -135,7 +137,6 @@
     if (running) return running;
     const items = [];
     let size = 0;
-    // Stale-locale work is not started; an in-flight result may only populate its own cache.
     for (const [key, item] of queue) {
       if (item.target !== language || cache.has(key)) { queue.delete(key); continue; }
       if (items.length >= 48 || size + item.source.length > 16000) break;
@@ -153,7 +154,7 @@
         });
         const data = await response.json();
         if (!response.ok || !Array.isArray(data.translations) || data.translations.length !== items.length) throw new Error('Translation incomplete');
-        data.translations.forEach((value, i) => {
+        data.translations.forEach(value => {
           if (typeof value !== 'string' || !value.trim() || (target === 'en' && hangul.test(value))) throw new Error('Translation language mismatch');
         });
         data.translations.forEach((value, i) => remember(items[i].source, target, value));
@@ -172,9 +173,10 @@
 
   const proseSelector = '#modalTitle,.recipe-body>h3,.recipe-body>p,.modal-title-wrap>p,.favorite-row h3,.steps-list h4,.step-row p,.ingredient-row,.tip-box,.safety-box,.step-meta';
   function needsRemote(source, node, rendered) {
-    if (language === 'en') return hangul.test(rendered);
     const parent = node.parentElement;
-    return parent?.closest('[data-fc-source-language="en"]') && parent.closest(proseSelector)
+    if (!parent || parent.closest('[hidden],[aria-hidden="true"]') || !parent.getClientRects().length) return false;
+    if (language === 'en') return hangul.test(rendered);
+    return parent.closest('[data-fc-source-language="en"]') && parent.closest(proseSelector)
       && !hangul.test(source) && /[A-Za-z]/.test(source) && !parent.closest('strong,.need');
   }
   function setNode(node, source) {
@@ -235,7 +237,7 @@
           const previous = saved[name];
           const source = previous && previous.rendered === current ? previous.source : current;
           const rendered = t(source);
-          if (language === 'en' && hangul.test(rendered)) requestTranslation(source, language);
+          if (language === 'en' && hangul.test(rendered) && element.getClientRects().length && !element.closest('[hidden],[aria-hidden="true"]')) requestTranslation(source, language);
           if (rendered !== current) element.setAttribute(name, rendered);
           saved[name] = { source, rendered };
         });
@@ -254,9 +256,7 @@
   });
   function applyLanguage(next) {
     language = next === 'en' ? 'en' : 'ko';
-    errors = false;
-    failed.clear();
-    queue.clear();
+    errors = false; failed.clear(); queue.clear();
     try { localStorage.setItem(KEY, language); } catch { /* Memory-only locale. */ }
     try {
       const url = new URL(location.href); url.searchParams.set('lang', language);
@@ -266,8 +266,7 @@
     document.title = label('냉털셰프 | 있는 재료로 근사한 한 끼', 'Fridge Chef | Cook with what you have');
     document.querySelectorAll('[data-fc-language]').forEach(button => {
       button.textContent = button.dataset.fcLanguage === 'en' ? 'English' : label('한국어', 'Korean');
-      button.setAttribute('aria-pressed', String(button.dataset.fcLanguage === language));
-      button.disabled = loading;
+      button.setAttribute('aria-pressed', String(button.dataset.fcLanguage === language)); button.disabled = loading;
     });
     document.querySelector('.fc-language-switch')?.setAttribute('aria-label', label('앱 언어', 'App language'));
     localize();
@@ -297,15 +296,12 @@
   }
   async function copyText(text) {
     if (navigator.clipboard?.writeText) return navigator.clipboard.writeText(text);
-    const area = document.createElement('textarea'); area.value = text;
-    area.style.cssText = 'position:fixed;opacity:0;pointer-events:none';
-    document.body.appendChild(area); area.select();
-    const copied = document.execCommand('copy'); area.remove();
+    const area = document.createElement('textarea'); area.value = text; area.style.cssText = 'position:fixed;opacity:0;pointer-events:none';
+    document.body.appendChild(area); area.select(); const copied = document.execCommand('copy'); area.remove();
     if (!copied) throw new Error('Clipboard unavailable');
   }
   async function localizedRecipe(recipe) {
     const target = language;
-    // Translate display strings only; identity, source keys, quantities and recipe structure are never regenerated.
     const strings = [];
     function collect(value) {
       if (typeof value === 'string') strings.push(value);
@@ -331,10 +327,8 @@
   }
   function init() {
     if (initialized) return;
-    initialized = true;
-    document.body.classList.add('fc-language-ready');
-    const switcher = document.createElement('div');
-    switcher.className = 'fc-language-switch'; switcher.setAttribute('role', 'group');
+    initialized = true; document.body.classList.add('fc-language-ready');
+    const switcher = document.createElement('div'); switcher.className = 'fc-language-switch'; switcher.setAttribute('role', 'group');
     switcher.innerHTML = '<button type="button" data-fc-language="ko">Korean</button><button type="button" data-fc-language="en">English</button>';
     switcher.addEventListener('click', event => {
       const button = event.target.closest('[data-fc-language]');
@@ -346,8 +340,7 @@
     notice.innerHTML = '<span></span> <button type="button"></button>';
     notice.querySelector('button').addEventListener('click', () => { failed.clear(); errors = false; localize(); });
     document.querySelector('.wizard-progress')?.after(notice);
-    elements.favoritesButton.setAttribute('aria-label', '저장한 레시피');
-    elements.favoritesButton.setAttribute('title', '저장한 레시피');
+    elements.favoritesButton.setAttribute('aria-label', '저장한 레시피'); elements.favoritesButton.setAttribute('title', '저장한 레시피');
     const originalData = getFormData;
     getFormData = () => ({ ...originalData(), language });
     const previousAdd = addCustomIngredient;
@@ -362,27 +355,24 @@
       localize();
     };
     elements.customIngredient.maxLength = 60;
-    elements.addIngredientButton.removeEventListener('click', previousAdd);
-    elements.addIngredientButton.addEventListener('click', addCustomIngredient);
+    elements.addIngredientButton.removeEventListener('click', previousAdd); elements.addIngredientButton.addEventListener('click', addCustomIngredient);
     const previousLoading = setLoading;
     setLoading = function setLocalizedLoading(value) {
       loading = Boolean(value); switcher.querySelectorAll('button').forEach(button => button.disabled = loading);
       const result = previousLoading(value); localize(); return result;
     };
     ['renderCategoryTabs','renderIngredientCloud','renderSelected','renderOptionButtons','updateWizardSelectionState','showWizardStep','renderResults','openRecipe','renderFavorites','renderAiError','showToast'].forEach(name => {
-      const previous = window[name];
-      if (typeof previous !== 'function') return;
+      const previous = window[name]; if (typeof previous !== 'function') return;
       window[name] = function localizedRender(...args) {
         const result = previous.apply(this, args);
         if (name === 'renderSelected') window.updateWizardSelectionState?.();
         localize(); return result;
       };
     });
-    const originalError = publicErrorMessage;
-    publicErrorMessage = message => t(originalError(message));
+    const originalError = publicErrorMessage; publicErrorMessage = message => t(originalError(message));
     shareRecipe = async function shareLocalizedRecipe(recipe) {
       if (!recipe) return;
-      const r = await localizedRecipe(recipe);
+      let r; try { r = await localizedRecipe(recipe); } catch { return; }
       const steps = (r.steps || []).map((step, i) => `${i + 1}. ${step.title}\n${[step.heat, step.duration].filter(Boolean).join(' · ')}\n${step.description}\n${t('완료 기준')}: ${step.checkpoint || ''}`).join('\n\n');
       const text = [`[${t('냉털셰프')}] ${r.title}`,r.subtitle,`${t(`${r.timeMinutes}분`)} · ${r.difficulty} · ${t(`${r.servings}인분`)}`,'',t('준비 재료'),r.ingredients.map(item => `- ${item.name}: ${item.amount}`).join('\n'),'',t('상세 조리 순서'),steps,'',`${t('셰프의 한 수')}: ${r.tip}`,`${t('보관:')} ${r.storage}`,`${t('주의:')} ${r.allergyNote}`].join('\n');
       const url = new URL(location.pathname, location.origin); url.searchParams.set('lang', language);
@@ -395,7 +385,7 @@
     };
     copyShoppingList = async function copyLocalizedShoppingList(recipe) {
       if (!recipe) return;
-      const r = await localizedRecipe(recipe);
+      let r; try { r = await localizedRecipe(recipe); } catch { return; }
       const extras = r.ingredients.filter(item => !item.owned);
       const text = `[${r.title} — ${label('장보기 목록', 'Shopping list')}]\n${extras.length ? extras.map(item => `- ${item.name}: ${item.amount}`).join('\n') : label('추가로 살 재료가 없습니다.', 'No additional ingredients needed.')}`;
       try { await copyText(text); showToast('장보기 목록을 복사했습니다.'); }
