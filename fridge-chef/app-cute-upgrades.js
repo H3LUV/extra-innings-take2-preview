@@ -134,9 +134,11 @@
   function decorateIngredients() {
     document.querySelectorAll('.ingredient-button').forEach((button) => {
       if (button.dataset.cuteDecorated === 'true') return;
-      const name = button.textContent.trim();
+      // The label may already be translated. Use the canonical key for the icon.
+      const name = button.dataset.ingredient || button.textContent.trim();
+      const label = window.FridgeChefI18n?.t(name) || name;
       const icon = ingredientEmoji[name] || '🥣';
-      button.innerHTML = `<span class="ingredient-icon" aria-hidden="true">${icon}</span><span>${escapeHtml(name)}</span>`;
+      button.innerHTML = `<span class="ingredient-icon" aria-hidden="true">${icon}</span><span>${escapeHtml(label)}</span>`;
       button.dataset.cuteDecorated = 'true';
     });
   }
