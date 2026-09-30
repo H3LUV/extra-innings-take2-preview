@@ -12,7 +12,7 @@ on:
       - 'fridge-chef/app-language-*.js'
       - 'fridge-chef/app.js'
       - 'fridge-chef/api/translate-ui.js'
-      - 'fridge-chef/tests/test-i18n.cjs'
+      - 'fridge-chef/tests/**'
       - '.github/workflows/test-fridge-chef-i18n.yml'
 
 permissions:
@@ -48,7 +48,7 @@ jobs:
           NODE_PATH: ${{ runner.temp }}/fridge-i18n/node_modules
         run: |
           set -o pipefail
-          node fridge-chef/tests/test-i18n.cjs fridge-chef 2>&1 | tee "$RUNNER_TEMP/fridge-language-test.log"
+          node -r ./fridge-chef/tests/i18n-diagnostics.cjs fridge-chef/tests/test-i18n.cjs fridge-chef 2>&1 | tee "$RUNNER_TEMP/fridge-language-test.log"
       - uses: actions/upload-artifact@v4
         if: always()
         with:
@@ -56,3 +56,13 @@ jobs:
           path: ${{ runner.temp }}/fridge-language-test.log
           if-no-files-found: ignore
           retention-days: 7
+      - uses: actions/upload-artifact@v4
+        if: failure()
+        with:
+          name: fridge-chef-language-test-fixture
+          path: |
+            fridge-chef/*.js
+            fridge-chef/*.css
+            fridge-chef/*.html
+            fridge-chef/tests/*.cjs
+          retention-days: 1
