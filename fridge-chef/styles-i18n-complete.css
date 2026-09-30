@@ -1,0 +1,5 @@
+/* Translation status only; system-bar and screen layout rules stay unchanged. */
+#fcTranslationNotice { position:fixed; left:12px; right:12px; bottom:12px; z-index:10000; display:flex; flex-wrap:wrap; gap:8px; align-items:center; justify-content:center; padding:12px 16px; border:1px solid #d6dfcc; border-radius:16px; background:#fffdf7; color:#344632; box-shadow:0 6px 24px #24372120; font-size:13px; line-height:1.5; }
+#fcTranslationNotice button { border:1px solid #37724a; border-radius:999px; background:#37724a; color:white; min-height:36px; padding:6px 12px; font:inherit; cursor:pointer; }
+html[lang="en"] .used-chip,html[lang="en"] .selected-chip { overflow-wrap:anywhere; max-width:100%; }
+html[lang="en"] .step-row p,html[lang="en"] .tip-box,html[lang="en"] .safety-box { word-break:normal; overflow-wrap:break-word; }
