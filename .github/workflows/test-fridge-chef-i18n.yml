@@ -1,0 +1,58 @@
+name: Test Fridge Chef Languages
+
+on:
+  workflow_dispatch:
+  pull_request:
+    paths:
+      - 'fridge-chef/**'
+      - '.github/workflows/test-fridge-chef-i18n.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'fridge-chef/app-language-*.js'
+      - 'fridge-chef/app.js'
+      - 'fridge-chef/api/translate-ui.js'
+      - 'fridge-chef/tests/test-i18n.cjs'
+      - '.github/workflows/test-fridge-chef-i18n.yml'
+
+permissions:
+  contents: read
+
+concurrency:
+  group: fridge-chef-language-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  language-regression:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          sparse-checkout: fridge-chef
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Validate language scripts
+        run: |
+          node --check fridge-chef/app-language-dictionary.js
+          node --check fridge-chef/app-language-runtime.js
+          node --check fridge-chef/api/translate-ui.js
+          node --check fridge-chef/tests/test-i18n.cjs
+      - name: Install isolated browser test tools
+        run: |
+          npm install --prefix "$RUNNER_TEMP/fridge-i18n" --no-audit --no-fund playwright@1.55.0
+          "$RUNNER_TEMP/fridge-i18n/node_modules/.bin/playwright" install --with-deps chromium
+      - name: Test real app UI with mocked API responses
+        env:
+          NODE_PATH: ${{ runner.temp }}/fridge-i18n/node_modules
+        run: |
+          set -o pipefail
+          node fridge-chef/tests/test-i18n.cjs fridge-chef 2>&1 | tee "$RUNNER_TEMP/fridge-language-test.log"
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: fridge-chef-language-test-log
+          path: ${{ runner.temp }}/fridge-language-test.log
+          if-no-files-found: ignore
+          retention-days: 7
