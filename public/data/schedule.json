@@ -80,7 +80,7 @@
       },
       {
         "id": 849851,
-        "status": "In Progress",
+        "status": "Final",
         "venue": "Yankee Stadium",
         "gameDate": "2026-09-30T00:00:00Z",
         "away": {
@@ -89,7 +89,7 @@
           "score": 0,
           "record": {
             "wins": 0,
-            "losses": 0,
+            "losses": 1,
             "ties": 0,
             "pct": ".000"
           }
@@ -97,12 +97,12 @@
         "home": {
           "id": 147,
           "name": "New York Yankees",
-          "score": 1,
+          "score": 9,
           "record": {
-            "wins": 0,
+            "wins": 1,
             "losses": 0,
             "ties": 0,
-            "pct": ".000"
+            "pct": "1.000"
           }
         },
         "probable": {
@@ -110,14 +110,14 @@
           "home": "Cam Schlittler"
         },
         "decisions": {
-          "winner": "",
-          "loser": "",
+          "winner": "Cam Schlittler",
+          "loser": "Payton Tolle",
           "save": ""
         }
       },
       {
         "id": 849843,
-        "status": "Pre-Game",
+        "status": "Final",
         "venue": "Petco Park",
         "gameDate": "2026-09-30T02:00:00Z",
         "away": {
@@ -126,7 +126,7 @@
           "score": 0,
           "record": {
             "wins": 0,
-            "losses": 0,
+            "losses": 1,
             "ties": 0,
             "pct": ".000"
           }
@@ -134,12 +134,12 @@
         "home": {
           "id": 135,
           "name": "San Diego Padres",
-          "score": 0,
+          "score": 8,
           "record": {
-            "wins": 0,
+            "wins": 1,
             "losses": 0,
             "ties": 0,
-            "pct": ".000"
+            "pct": "1.000"
           }
         },
         "probable": {
@@ -147,8 +147,8 @@
           "home": "Michael King"
         },
         "decisions": {
-          "winner": "",
-          "loser": "",
+          "winner": "Michael King",
+          "loser": "Matthew Boyd",
           "save": ""
         }
       }
@@ -219,7 +219,7 @@
           }
         },
         "probable": {
-          "away": "",
+          "away": "Sean Burke",
           "home": "Hunter Brown"
         },
         "decisions": {
@@ -239,7 +239,7 @@
           "score": null,
           "record": {
             "wins": 0,
-            "losses": 0,
+            "losses": 1,
             "ties": 0,
             "pct": ".000"
           }
@@ -249,10 +249,10 @@
           "name": "New York Yankees",
           "score": null,
           "record": {
-            "wins": 0,
+            "wins": 1,
             "losses": 0,
             "ties": 0,
-            "pct": ".000"
+            "pct": "1.000"
           }
         },
         "probable": {
@@ -276,7 +276,7 @@
           "score": null,
           "record": {
             "wins": 0,
-            "losses": 0,
+            "losses": 1,
             "ties": 0,
             "pct": ".000"
           }
@@ -286,15 +286,15 @@
           "name": "San Diego Padres",
           "score": null,
           "record": {
-            "wins": 0,
+            "wins": 1,
             "losses": 0,
             "ties": 0,
-            "pct": ".000"
+            "pct": "1.000"
           }
         },
         "probable": {
-          "away": "",
-          "home": ""
+          "away": "Kevin Gausman",
+          "home": "Nick Pivetta"
         },
         "decisions": {
           "winner": "",
@@ -389,7 +389,7 @@
           "score": null,
           "record": {
             "wins": 0,
-            "losses": 0,
+            "losses": 1,
             "ties": 0,
             "pct": ".000"
           }
@@ -399,10 +399,10 @@
           "name": "New York Yankees",
           "score": null,
           "record": {
-            "wins": 0,
+            "wins": 1,
             "losses": 0,
             "ties": 0,
-            "pct": ".000"
+            "pct": "1.000"
           }
         },
         "probable": {
@@ -426,7 +426,7 @@
           "score": null,
           "record": {
             "wins": 0,
-            "losses": 0,
+            "losses": 1,
             "ties": 0,
             "pct": ".000"
           }
@@ -436,10 +436,10 @@
           "name": "San Diego Padres",
           "score": null,
           "record": {
-            "wins": 0,
+            "wins": 1,
             "losses": 0,
             "ties": 0,
-            "pct": ".000"
+            "pct": "1.000"
           }
         },
         "probable": {
@@ -454,6 +454,6 @@
       }
     ]
   },
-  "updatedAt": "2026-09-30T00:56:09.016Z",
+  "updatedAt": "2026-09-30T13:05:56.694Z",
   "source": "MLB Stats API"
 }
