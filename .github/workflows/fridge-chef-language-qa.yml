@@ -4,6 +4,15 @@ on:
     paths:
       - 'fridge-chef/**'
       - '.github/workflows/fridge-chef-language-qa.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'fridge-chef/app-language.js'
+      - 'fridge-chef/app-i18n.js'
+      - 'fridge-chef/app.js'
+      - 'fridge-chef/api/translate-text.js'
+      - 'fridge-chef/tests/**'
+      - '.github/workflows/fridge-chef-language-qa.yml'
   workflow_dispatch:
 permissions:
   contents: read
@@ -38,4 +47,23 @@ jobs:
           path: |
             language-qa-result.json
             language-qa-*.png
+          if-no-files-found: ignore
+  live-translation:
+    if: github.ref == 'refs/heads/main'
+    needs: language-qa
+    runs-on: ubuntu-latest
+    timeout-minutes: 4
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Check production deployment and one English translation
+        run: node fridge-chef/tests/live-translation-smoke.cjs
+      - name: Save production check
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: fridge-chef-language-live
+          path: language-live-result.json
           if-no-files-found: ignore
