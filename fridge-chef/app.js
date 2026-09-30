@@ -1,7 +1,11 @@
+// Shared hook assigned by the detailed-recipe and language modules.
+var shareRecipe;
+
 (() => {
-  const version = '20260930-ko-en-v4';
+  const version = '20260930-ko-en-v6';
   const files = [
     './app-i18n.js',
+    './app-language.js',
     './app-core.js',
     './app-render.js',
     './app-ai-only.js',
@@ -29,7 +33,6 @@
       window.FridgeChefI18n?.init();
       return;
     }
-
     const script = document.createElement('script');
     script.src = `${files[index]}?v=${version}`;
     script.onload = () => loadNext(index + 1);
@@ -41,6 +44,5 @@
     };
     document.head.appendChild(script);
   };
-
   loadNext(0);
 })();
