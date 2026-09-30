@@ -1,7 +1,8 @@
 (() => {
-  const version = '20260930-ko-en-v4';
+  const version = '20260930-ko-en-complete-v5';
   const files = [
     './app-i18n.js',
+    './app-i18n-complete.js',
     './app-core.js',
     './app-render.js',
     './app-ai-only.js',
@@ -16,12 +17,14 @@
     './app-final-polish.js'
   ];
 
-  if (!document.querySelector('#fridgeChefLanguageStyles')) {
-    const stylesheet = document.createElement('link');
-    stylesheet.id = 'fridgeChefLanguageStyles';
-    stylesheet.rel = 'stylesheet';
-    stylesheet.href = `./styles-i18n.css?v=${version}`;
-    document.head.appendChild(stylesheet);
+  for (const [id, file] of [['fridgeChefLanguageStyles','styles-i18n.css'], ['fridgeChefCompleteLanguageStyles','styles-i18n-complete.css']]) {
+    if (!document.getElementById(id)) {
+      const stylesheet = document.createElement('link');
+      stylesheet.id = id;
+      stylesheet.rel = 'stylesheet';
+      stylesheet.href = `./${file}?v=${version}`;
+      document.head.appendChild(stylesheet);
+    }
   }
 
   const loadNext = (index) => {
