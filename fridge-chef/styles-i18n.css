@@ -1,0 +1,40 @@
+/* Android already handles system-bar insets; do not add another safe-area spacer. */
+body.wizard-ready.fc-language-ready { display:flex; flex-direction:column; height:100dvh; }
+body.wizard-ready.fc-language-ready .site-header { flex:0 0 auto; flex-wrap:wrap; height:auto; min-height:64px; gap:8px; padding-block:10px; }
+body.wizard-ready.fc-language-ready .wizard-progress { flex:0 0 auto; }
+body.wizard-ready.fc-language-ready main { flex:1 1 auto; height:auto; min-height:0; }
+.fc-language-ready .header-actions { flex-wrap:wrap; gap:8px; }
+.fc-language-switch { display:inline-flex; flex:0 0 auto; gap:2px; padding:3px; border:1px solid var(--line,#d5dfcf); border-radius:999px; background:#fffdf7; }
+.fc-language-switch button { min-height:40px; border:0; border-radius:999px; padding:0 10px; color:#466047; background:transparent; font:inherit; font-size:12px; font-weight:700; cursor:pointer; }
+.fc-language-switch button[aria-pressed="true"] { background:var(--green,#37724a); color:#fff; }
+.fc-language-switch button:focus-visible { outline:3px solid var(--orange,#e78c38); outline-offset:2px; }
+.fc-language-switch button:disabled { opacity:.55; cursor:wait; }
+.fc-original-language-note { flex-basis:100%; margin:8px 0 0; font-size:12px; line-height:1.6; color:#596758; }
+html[lang="en"] .home-final-copy h1,html[lang="en"] .home-v2-copy h1 { font-size:clamp(30px,4.8vw,58px); line-height:1.14; letter-spacing:-.035em; }
+html[lang="en"] .home-final-description,html[lang="en"] .wizard-stage-heading p { word-break:normal; overflow-wrap:break-word; }
+html[lang="en"] .wizard-stage-heading h2 { line-height:1.2; }
+html[lang="en"] .home-final-features strong { font-size:12px; line-height:1.3; }
+html[lang="en"] .home-final-features small { font-size:10px; line-height:1.4; }
+html[lang="en"] .ingredient-button { overflow-wrap:anywhere; }
+html[lang="en"] .recipe-body h3,html[lang="en"] #modalTitle { overflow-wrap:anywhere; word-break:normal; line-height:1.25; }
+html[lang="en"] .choice-button,html[lang="en"] .pill-choice { white-space:normal; overflow-wrap:break-word; }
+html[lang="en"] .wizard-results-toolbar { flex-wrap:wrap; gap:8px; }
+html[lang="en"] .wizard-results-back { font-size:12px; }
+@media(max-width:640px) {
+.fc-language-ready .site-header .brand { gap:6px; }
+.fc-language-ready .site-header .brand strong { font-size:18px; white-space:nowrap; }
+.fc-language-ready .site-header .brand small,.fc-language-ready #statusBadge { display:none; }
+.fc-language-ready .header-actions { margin-left:auto; gap:4px; }
+.fc-language-ready #homeResetButton { padding:0; width:36px; min-width:36px; min-height:40px; justify-content:center; }
+.fc-language-ready #homeResetButton b { display:none; }
+.fc-language-ready #favoritesButton { padding:0 7px; min-height:40px; font-size:0; gap:4px; }
+.fc-language-ready #favoritesButton span { font-size:19px; }
+.fc-language-ready #favoritesButton b { font-size:11px; }
+.fc-language-switch { padding:2px; }
+.fc-language-switch button { padding:0 7px; font-size:11px; }
+html[lang="en"] .wizard-step-button { font-size:10px; }
+html[lang="en"] .wizard-stage-heading h2 { font-size:28px; }
+html[lang="en"] .wizard-next-button { font-size:12px; }
+html[lang="en"] .wizard-preference-actions .generate-button .button-copy b { font-size:15px; }
+html[lang="en"] .wizard-preference-actions .generate-button .button-copy small { font-size:10px; }
+}
