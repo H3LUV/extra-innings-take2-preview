@@ -15,7 +15,8 @@
 
   function inferDishName(recipe) {
     const explicit = String(recipe?.dishName || '').trim();
-    if (explicit) return explicit.slice(0, 24);
+    if (explicit) return explicit.slice(0, recipe?.language === 'en' ? 72 : 24);
+    if (recipe?.language === 'en') return 'Fridge-to-table meal';
 
     const ingredients = Array.isArray(recipe?.usedIngredients) ? recipe.usedIngredients : [];
     const source = `${recipe?.originalTitle || ''} ${recipe?.title || ''} ${recipe?.subtitle || ''}`.replace(/\s+/g, ' ');
@@ -42,6 +43,9 @@
     const dishName = inferDishName(recipe);
     const current = String(recipe?.title || '').replace(/\s+/g, ' ').trim();
 
+    if (recipe?.language === 'en') {
+      return current.includes(dishName) ? current : `${current.slice(0, 120 - dishName.length - 1)} ${dishName}`.trim();
+    }
     if (current.includes(dishName)) return current.slice(0, 36);
 
     const original = String(recipe?.originalTitle || '').replace(/\s+/g, ' ').trim();
