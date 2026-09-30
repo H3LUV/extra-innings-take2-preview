@@ -27,6 +27,7 @@ const koToEn = {
   '새로운 부위의 돼지고기':'A different cut of pork'
 };
 const report = [];
+let activePage;
 (async () => {
   await new Promise(resolve => server.listen(0, '127.0.0.1', resolve));
   const base = `http://127.0.0.1:${server.address().port}`;
@@ -34,11 +35,13 @@ const report = [];
   try {
     for (const width of [390, 768]) {
       const context = await browser.newContext({ viewport: { width, height: 844 } });
-      const page = await context.newPage();
+      const page = await context.newPage(); activePage = page;
       const errors = []; const requests = []; const translations = [];
       let failGeneration = false;
       page.on('pageerror', error => errors.push(error.message));
-      await page.route('**/h3works-intro.js', route => route.fulfill({ contentType:'application/javascript', body:'' }));
+      // The external intro normally removes this overlay. Mock completion, not a blank script
+      // that leaves its static overlay blocking every real click in the test.
+      await page.route('**/h3works-intro.js', route => route.fulfill({ contentType:'application/javascript', body:"document.getElementById('h3LaunchSplash')?.remove();document.body.classList.remove('h3-intro-running');" }));
       await page.route('**/api/status', route => route.fulfill({ json:{ aiEnabled:true } }));
       await page.route('**/api/hero-image*', route => route.fulfill({contentType:'image/svg+xml', body:'<svg xmlns="http://www.w3.org/2000/svg" width="640" height="640"/>'}));
       await page.route('**/api/translate-text', async route => {
@@ -128,9 +131,13 @@ const report = [];
       assert.equal(await page.evaluate(()=>state.recipes[0].steps[0].description),'김치 200g을 3cm 크기로 썰어 냄비에 담으세요.');
       assert.equal(await page.evaluate(()=>state.recipes[0].ingredients[0].amount),'200g');
       await page.click('#modalClose'); await page.screenshot({path:`language-qa-${width}.png`,fullPage:true});
-      await context.close();
+      await context.close(); activePage = null;
     }
     console.log(JSON.stringify({passed:true,checks:report.length,report},null,2));
     fs.writeFileSync('language-qa-result.json',JSON.stringify({passed:true,checks:report.length,report},null,2));
+  } catch(error) {
+    fs.writeFileSync('language-qa-result.json', JSON.stringify({passed:false,checks:report.length,report,error:error.message},null,2));
+    if (activePage && !activePage.isClosed()) await activePage.screenshot({path:'language-qa-failure.png',fullPage:true}).catch(()=>{});
+    throw error;
   } finally { await browser.close(); server.close(); }
 })().catch(error=>{console.error(error);server.close();process.exitCode=1;});
