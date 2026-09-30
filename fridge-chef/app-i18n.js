@@ -1,6 +1,6 @@
 'use strict';
 
-// Localize UI labels independently of canonical form values and saved recipe content.
+// Translate presentation only. Canonical option values and saved recipe prose stay intact.
 (() => {
   const storageKey = 'fridgeChefLanguage';
   const translations = {
@@ -15,7 +15,14 @@
     '냉장고 털어': 'Open your fridge,', '맛있는 요리 완성!': 'discover your next meal!',
     '오늘은 뭘 만들까?': 'What shall we cook?', '오늘은 냉장고 안에서 찾아볼까요?': 'What’s waiting in your fridge?',
     '있는 재료를 고르고 취향을 알려주세요. 오늘 먹기 좋은 맞춤 레시피 세 가지를 차근차근 준비합니다.': 'Choose your ingredients and preferences. We’ll prepare three recipes with clear, step-by-step instructions.',
+    '있는 재료를 고르고 취향을 알려주세요. 오늘 먹기 좋은 레시피 세 가지를 보기 좋게 준비합니다.': 'Choose your ingredients and preferences. We’ll prepare three recipes for your next meal.',
     '있는 재료를 최대 5개 고르고, 원하는 맛과 조리시간을 알려주세요. 어떤 요리인지 한눈에 알 수 있는 자세한 레시피 세 가지를 준비합니다.': 'Choose up to five ingredients, your preferred flavors and cooking time. Get three clearly named recipes with detailed instructions.',
+    '오늘도 냉장고 앞에서 멈췄다면': 'Wondering what to cook?', '있는 재료로,': 'With what you have,', '근사한 한 끼.': 'make a delicious meal.',
+    '재료를 최대 5개 고르고 원하는 요리 스타일을 선택하세요. 냉장고의 애매한 잔여물이 오늘 저녁의 주인공으로 승진합니다.': 'Choose up to five ingredients and a cuisine. Turn your leftovers into tonight’s dinner.',
+    '최대 재료': 'Ingredients max.', '고민할 이유': 'Reasons to worry', '요리 재료 일러스트': 'Cooking ingredients illustration',
+    '냉장고 구조대': 'Fridge rescue', '오늘 뭐 먹지?': 'What’s for dinner?',
+    '01 · 재료 조합': '01 · INGREDIENTS', '오늘 가진 재료를 알려주세요': 'Tell us what ingredients you have',
+    '최대 5개까지 선택할 수 있습니다. 기본 양념은 셰프가 눈치껏 챙깁니다.': 'Choose up to five ingredients. We’ll suggest the basic seasonings.',
     '재료 고르기': 'Pick ingredients', '취향 맞추기': 'Set preferences', '레시피 완성': 'Get recipes',
     '최대 5개 선택': 'Up to 5 ingredients', '맛·시간 설정': 'Flavor & time', '맛과 시간 설정': 'Flavor & time',
     '자세한 3가지': '3 detailed recipes', '레시피 시작하기': 'Let’s get cooking', '냉장고 열어보기': 'Open my fridge',
@@ -25,11 +32,14 @@
     '냉장고 안을 살펴보는 냉털셰프': 'Fridge Chef looking inside the fridge',
     '열린 냉장고 안의 재료를 살펴보는 귀여운 냉털셰프': 'A little chef looking at ingredients in an open fridge',
     '냉장고를 살펴보는 냉털셰프': 'Fridge Chef checking the fridge',
+    '냉장고 속 재료를 꺼내는 귀여운 냉털셰프': 'A little chef checking the ingredients',
+    '냉장고에서 당근을 꺼내는 귀여운 냉털셰프': 'A little chef at the fridge',
+    '냉장고 속 재료를 살펴보는 냉털셰프': 'Fridge Chef looking inside the fridge',
     '냉장고 속 재료를 골라주세요': 'What’s in your fridge?',
     '최대 5개까지 선택할 수 있습니다. 직접 입력도 가능합니다.': 'Choose up to five ingredients, or add your own.',
     '최대 5개까지 선택하거나 직접 입력할 수 있습니다.': 'Choose up to five ingredients, or add your own.',
     '구체적인 재료를 넣으면 더 정확한 레시피를 제공합니다.': 'Be specific about ingredients for more accurate recipes.',
-    '예시) 신라면, 목살, 칵테일새우, 먹다 남은 후라이드치킨': 'Examples: Shin Ramyun, pork neck, cooked cocktail shrimp, leftover fried chicken',
+    '예시) 신라면, 목살, 칵테일새우, 먹다 남은 후라이드치킨': 'Examples: Shin Ramyun, pork neck, cocktail shrimp, leftover fried chicken',
     '재료 선택': 'Choose ingredients', '아직 선택한 재료가 없어요': 'No ingredients selected yet',
     '재료 직접 입력 (예: 애호박)': 'Add an ingredient (e.g. zucchini)', '추가': 'Add', '재료 분류': 'Ingredient categories',
     '인기': 'Popular', '육류': 'Meat', '해산물': 'Seafood', '채소': 'Vegetables', '탄수화물': 'Carbs', '기타': 'Other',
@@ -62,8 +72,10 @@
     '← 메인': '← Home', '← 재료': '← Ingredients', '취향 선택으로': 'Next: preferences',
     '재료를 1개 이상 골라주세요.': 'Choose at least one ingredient.',
     '← 재료 다시 선택하기': '← Change ingredients', '← 취향 다시 고르기': '← Edit preferences',
+    '재료 다시 선택하기': 'Change ingredients', '취향 다시 고르기': 'Edit preferences',
     '02 · 오늘의 추천': '02 · YOUR RECIPES', '이 조합이라면 이렇게 먹어보세요': 'Here’s what you can cook',
-    '다른 조합 다시 받기 ↻': 'Try another combination ↻', '맞춤 레시피': 'Personalized recipes', '맞춤 추천': 'For you',
+    '다른 조합 다시 받기 ↻': 'Try another combination ↻', '다른 조합 다시 받기': 'Try another combination',
+    '맞춤 레시피': 'Personalized recipes', '맞춤 추천': 'For you',
     '재료의 운명을 재배치하는 중...': 'Finding delicious ways to use your ingredients…',
     '냉털셰프가 조합을 고민 중이에요': 'Fridge Chef is working on your recipes',
     '맛있는 아이디어를 볶고 있습니다': 'Cooking up some tasty ideas', '재료와 취향에 따라 잠시 시간이 걸릴 수 있어요.': 'This may take a moment, depending on your choices.',
@@ -71,8 +83,9 @@
     '추가 필요': 'To buy', '셰프의 한 수': 'Chef’s tips', '조리 순서': 'Directions', '상세 조리 순서': 'Step-by-step directions',
     '완료 기준': 'Ready when', '보관:': 'Storage:', '주의:': 'Safety:', '내 레시피에 저장': 'Save recipe',
     '저장 취소': 'Remove from saved', '장보기 목록 복사': 'Copy shopping list', '레시피 공유하기': 'Share recipe',
-    '보기 ↗': 'View ↗', '아직 저장한 레시피가 없습니다.': 'No saved recipes yet.', '마음에 드는 요리에 하트를 눌러보세요.': 'Tap the heart on a recipe to save it.',
+    '보기 ↗': 'View ↗', '보기': 'View', '아직 저장한 레시피가 없습니다.': 'No saved recipes yet.', '마음에 드는 요리에 하트를 눌러보세요.': 'Tap the heart on a recipe to save it.',
     '내 레시피에 저장했습니다.': 'Recipe saved.', '저장한 레시피에서 삭제했습니다.': 'Recipe removed from saved.',
+    '저장한 레시피에서 삭제했습니다. 이별은 늘 이렇게 간단하군요.': 'Recipe removed from saved.',
     '레시피를 공유했습니다.': 'Recipe shared.', '레시피 내용을 복사했습니다.': 'Recipe copied.', '공유 기능을 사용할 수 없습니다.': 'Sharing is unavailable.',
     '장보기 목록을 복사했습니다.': 'Shopping list copied.', '복사 권한이 없어 목록을 복사하지 못했습니다.': 'Unable to copy. Please check clipboard permissions.',
     '재료는 최대 5개까지 선택할 수 있어요.': 'You can select up to five ingredients.',
@@ -90,11 +103,15 @@
     '레시피 생성 서비스가 연결되지 않았습니다. 잠시 후 다시 시도해 주세요.': 'The recipe service is unavailable. Please try again shortly.',
     '레시피 응답 형식이 올바르지 않습니다.': 'The recipe response was incomplete. Please try again.',
     '레시피 생성 시간이 초과되었습니다. 다시 시도해 주세요.': 'The request timed out. Please try again.',
+    '레시피 생성 시간이 초과되었습니다. 잠시 후 다시 시도해 주세요.': 'The request timed out. Please try again shortly.',
     '레시피 생성에 실패했습니다. 잠시 후 다시 시도해 주세요.': 'Unable to create recipes. Please try again shortly.',
     '레시피 서비스 설정이 완료되지 않았습니다.': 'The recipe service is not configured yet.',
     '알 수 없는 오류가 발생했습니다.': 'An unexpected error occurred.',
     '불 사용 안 함': 'No heat', '약불': 'Low heat', '중약불': 'Medium-low heat', '중불': 'Medium heat',
-    '중강불': 'Medium-high heat', '강불': 'High heat', '불 세기 확인': 'Check heat level', '상태를 보며 조절': 'Adjust as needed'
+    '중강불': 'Medium-high heat', '강불': 'High heat', '불 세기 확인': 'Check heat level', '상태를 보며 조절': 'Adjust as needed',
+    '냉장고를 비우면': 'Empty your fridge,', '식탁은 더 풍성해집니다.': 'fill your table.',
+    '불필요한 장보기를 줄이고, 잊혀가던 식재료를 먼저 사용하세요. 거창한 철학 같지만 사실은 양파가 썩기 전에 먹자는 이야기입니다.': 'Shop less and use the ingredients you already have before they go to waste.',
+    '추천 레시피는 조리 환경에 따라 달라질 수 있습니다. 알레르기와 식품 안전은 직접 확인해 주세요.': 'Results may vary with your cooking setup. Always check allergens and food safety.'
   };
   let language = 'ko';
   try { language = localStorage.getItem(storageKey) === 'en' ? 'en' : 'ko'; } catch { /* Memory-only mode. */ }
@@ -106,66 +123,105 @@
   let observer;
   const originals = new WeakMap();
   const attributes = new WeakMap();
+  const observedAttributes = ['placeholder', 'aria-label', 'alt', 'title'];
+
+  function translatePlain(plain) {
+    if (Object.prototype.hasOwnProperty.call(translations, plain)) return translations[plain];
+    const patterns = [
+      [/^취향 선택으로\s*·\s*(\d+)개$/, (_, n) => `Next: preferences · ${n}`],
+      [/^(\d+)개 재료를 골랐습니다\.$/, (_, n) => `${n} ingredient${n === '1' ? '' : 's'} selected.`],
+      [/^재료 일치\s*(\d+)%$/, (_, n) => `${n}% ingredient match`],
+      [/^내 재료\s*(\d+)개 활용$/, (_, n) => `Uses ${n} of your ingredients`],
+      [/^(\d+)분 이내$/, (_, n) => `Up to ${n} min`],
+      [/^(\d+)(?:인분|명)$/, (_, n) => `${n} serving${n === '1' ? '' : 's'}`],
+      [/^(\d+)단계$/, (_, n) => `${n} steps`],
+      [/^최대\s*(\d+)개$/, (_, n) => `Up to ${n}`],
+      [/^레시피 생성 실패\s*\((\d+)\)$/, (_, code) => `Recipe generation failed (${code})`]
+    ];
+    for (const [pattern, format] of patterns) {
+      if (pattern.test(plain)) return plain.replace(pattern, format);
+    }
+    // Durations are UI metadata, not prose. Handle ranges and minutes/seconds together.
+    if (/^(?:\d+(?:\.\d+)?(?:\s*[~–-]\s*\d+(?:\.\d+)?)?\s*(?:시간|분|초)\s*)+(?:휴지|휴식|조리|식히기)?$/.test(plain)) {
+      return plain.replace(/(\d)\s*시간/g, '$1 hr').replace(/(\d)\s*분/g, '$1 min')
+        .replace(/(\d)\s*초/g, '$1 sec').replace(/휴지|휴식/g, 'rest')
+        .replace(/조리/g, 'cooking').replace(/식히기/g, 'cooling');
+    }
+    // Mixed-language metadata (e.g. "Korean · 재료 일치 100%") needs field-wise translation.
+    if (/\s[·|]\s/.test(plain)) return plain.split(/(\s+[·|]\s+)/).map((part, index) => index % 2 ? part : translatePlain(part)).join('');
+    // Decorations may be attached with or without a space: ⏱2~3분, 🌶️ 매운맛, 보기 ↗.
+    const decorated = plain.match(/^([^\p{L}\p{N}]*)([\s\S]*?[\p{L}\p{N}%.)])([^\p{L}\p{N}]*)$/u);
+    if (decorated && (decorated[1] || decorated[3])) {
+      const inner = decorated[2].trim();
+      const translated = translatePlain(inner);
+      if (translated !== inner) return `${decorated[1]}${translated}${decorated[3]}`;
+    }
+    return plain;
+  }
 
   function t(value, lang = language) {
     const text = String(value ?? '');
     if (lang !== 'en') return text;
-    const plain = text.trim();
-    let result = translations[plain];
-    if (result === undefined) {
-      const patterns = [
-        [/^취향 선택으로 · (\d+)개$/, (_, n) => `Next: preferences · ${n}`],
-        [/^(\d+)개 재료를 골랐습니다\.$/, (_, n) => `${n} ingredient${n === '1' ? '' : 's'} selected.`],
-        [/^재료 일치 (\d+)%$/, (_, n) => `${n}% ingredient match`],
-        [/^내 재료 (\d+)개 활용$/, (_, n) => `Uses ${n} of your ingredients`],
-        [/^(\d+)분 이내$/, (_, n) => `Up to ${n} min`],
-        [/^(◷\s*)?(\d+)분$/, (_, icon, n) => `${icon || ''}${n} min`],
-        [/^(\d+)(?:인분|명)$/, (_, n) => `${n} serving${n === '1' ? '' : 's'}`],
-        [/^(\d+)단계$/, (_, n) => `${n} steps`],
-        [/^([가-힣]+) · 재료 일치 (\d+)%$/, (_, cuisine, n) => `${t(cuisine, lang)} · ${n}% ingredient match`],
-        [/^(\d+)분 · ([가-힣]+) · (\d+)인분$/, (_, n, cuisine, count) => `${n} min · ${t(cuisine, lang)} · ${count} servings`],
-        [/^(🔥 |• )(.+)$/, (_, icon, rest) => `${icon}${t(rest, lang)}`],
-        [/^레시피 생성 실패 \((\d+)\)$/, (_, code) => `Recipe generation failed (${code})`]
-      ];
-      for (const [pattern, format] of patterns) {
-        if (pattern.test(plain)) { result = plain.replace(pattern, format); break; }
-      }
-    }
-    if (result === undefined) return text;
-    return text.replace(plain, result);
+    const trimmed = text.trim();
+    const plain = trimmed.normalize('NFC').replace(/\s+/g, ' ');
+    const translated = translatePlain(plain);
+    return translated === plain ? text : text.replace(trimmed, translated);
   }
 
-  // Generated prose and user-entered names are not translated by a UI dictionary.
+  // Do not rewrite user-entered names or generated/saved instructions with a UI dictionary.
   function isRecipeContent(node) {
     const parent = node.parentElement;
     if (!parent) return true;
-    if (parent.closest('[data-i18n-keep],script,style,textarea,.fc-language-switch')) return true;
+    if (parent.closest('[data-i18n-keep],script,style,textarea,.fc-language-switch,[contenteditable="true"]')) return true;
+    if (parent.closest('.ingredient-button:not([data-cute-decorated="true"])')) return true;
     if (parent.closest('#modalTitle,.recipe-body > h3,.recipe-body > p,.modal-title-wrap > p,.favorite-row h3,.steps-list h4,.ingredient-row em')) return true;
     if (parent.closest('.step-row p') && !parent.closest('strong')) return true;
     if (parent.closest('.tip-box,.safety-box') && !parent.closest('strong')) return true;
     return false;
   }
 
+  function updateTextNode(node, source) {
+    let rendered = t(source);
+    if (language === 'en' && source.trim() === '보통' && node.parentElement.closest('#saltyOptions')) rendered = source.replace('보통', 'Regular');
+    if (rendered !== node.nodeValue) node.nodeValue = rendered;
+    originals.set(node, { source, rendered });
+  }
+
+  function localizeControls() {
+    // Read stable data keys, never the already-translated label, when controls are rebuilt.
+    document.querySelectorAll('[data-category],[data-state-key][data-value],[data-wizard-jump]').forEach(control => {
+      const source = control.dataset.category || control.dataset.value || ({ 1:'메인', 2:'재료', 3:'취향', 4:'레시피' })[control.dataset.wizardJump];
+      if (!source) return;
+      const node = [...control.childNodes].find(child => child.nodeType === Node.TEXT_NODE && child.nodeValue.trim());
+      if (node) updateTextNode(node, source);
+    });
+    document.querySelectorAll('[data-ingredient][data-cute-decorated="true"],[data-remove]').forEach(control => {
+      const source = control.dataset.ingredient || control.dataset.remove;
+      const label = control.querySelector('span:not(.ingredient-icon)') || control;
+      const node = [...label.childNodes].find(child => child.nodeType === Node.TEXT_NODE && child.nodeValue.trim());
+      if (node) updateTextNode(node, source);
+    });
+  }
+
   function localize() {
-    if (observer) observer.disconnect();
+    if (!document.body) return;
+    observer?.disconnect();
     try {
-      // An option without a value otherwise changes form semantics on translation.
+      // Freeze option values before translating labels so request payloads remain canonical.
       document.querySelectorAll('select option:not([value])').forEach(option => option.value = option.textContent);
+      localizeControls();
       const walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT);
       let node;
       while ((node = walker.nextNode())) {
         if (!node.nodeValue.trim() || isRecipeContent(node)) continue;
         const previous = originals.get(node);
         const source = previous && node.nodeValue === previous.rendered ? previous.source : node.nodeValue;
-        let rendered = t(source);
-        if (language === 'en' && source.trim() === '보통' && node.parentElement.closest('#saltyOptions')) rendered = source.replace('보통', 'Regular');
-        if (rendered !== node.nodeValue) node.nodeValue = rendered;
-        originals.set(node, { source, rendered });
+        updateTextNode(node, source);
       }
       document.querySelectorAll('[placeholder],[aria-label],img[alt],[title]').forEach(element => {
         if (element.closest('.fc-language-switch,[data-i18n-keep]')) return;
         const saved = attributes.get(element) || {};
-        for (const name of ['placeholder', 'aria-label', 'alt', 'title']) {
+        for (const name of observedAttributes) {
           if (!element.hasAttribute(name)) continue;
           const current = element.getAttribute(name);
           const last = saved[name];
@@ -177,7 +233,7 @@
         attributes.set(element, saved);
       });
     } finally {
-      observer?.observe(document.body, { childList: true, characterData: true, subtree: true });
+      observer?.observe(document.body, { childList: true, characterData: true, subtree: true, attributes: true, attributeFilter: observedAttributes });
     }
   }
 
@@ -186,15 +242,17 @@
   }
 
   function addOriginalLanguageNote(container, recipes) {
-    container?.querySelector('.fc-original-language-note')?.remove();
-    if (!container || !recipes?.some(recipe => recipeLanguage(recipe) !== language)) return;
-    const note = document.createElement('p');
+    if (!container) return;
+    const existing = container.querySelector('.fc-original-language-note');
+    if (!recipes?.some(recipe => recipeLanguage(recipe) !== language)) { existing?.remove(); return; }
+    const note = existing || document.createElement('p');
     note.className = 'fc-original-language-note';
     note.dataset.i18nKeep = 'true';
-    note.textContent = language === 'en'
+    const text = language === 'en'
       ? 'Existing recipes keep their original language. Newly created recipes will be in English.'
       : '기존 레시피는 작성된 언어로 유지됩니다. 새로 만드는 레시피는 한국어로 제공됩니다.';
-    container.appendChild(note);
+    if (note.textContent !== text) note.textContent = text;
+    if (!existing) container.appendChild(note);
   }
 
   function refreshRecipeLabels() {
@@ -206,7 +264,7 @@
         const ingredient = recipe.ingredients?.find(item => item.inputName === inputName);
         if (ingredient && recipeLanguage(recipe) === 'en') {
           chip.dataset.i18nKeep = 'true';
-          chip.textContent = ingredient.name;
+          if (chip.textContent !== ingredient.name) chip.textContent = ingredient.name;
         }
       });
     });
@@ -216,11 +274,19 @@
       const recipe = findRecipe(id);
       addOriginalLanguageNote(elements.modalContent.querySelector('.modal-title-wrap'), recipe ? [recipe] : []);
     }
+    addOriginalLanguageNote(elements.favoritesList, state.favorites);
   }
 
   function applyLanguage(lang, persist = true) {
     language = lang === 'en' ? 'en' : 'ko';
-    if (persist) { try { localStorage.setItem(storageKey, language); } catch { /* Keep the session usable. */ } }
+    if (persist) {
+      try { localStorage.setItem(storageKey, language); } catch { /* Memory-only mode. */ }
+      try {
+        const url = new URL(location.href);
+        url.searchParams.set('lang', language);
+        history.replaceState(history.state, '', url);
+      } catch { /* file:// and restricted history are supported. */ }
+    }
     document.documentElement.lang = language;
     document.title = language === 'en' ? 'Fridge Chef | Cook with what you have' : '냉털셰프 | 있는 재료로 근사한 한 끼';
     document.querySelectorAll('[data-fc-language]').forEach(button => {
@@ -255,8 +321,7 @@
     switcher.innerHTML = '<button type="button" lang="ko" data-fc-language="ko">한국어</button><button type="button" lang="en" data-fc-language="en">English</button>';
     switcher.addEventListener('click', event => {
       const button = event.target.closest('[data-fc-language]');
-      if (!button || loading) return;
-      applyLanguage(button.dataset.fcLanguage);
+      if (button && !loading) applyLanguage(button.dataset.fcLanguage);
     });
     actions?.appendChild(switcher);
     elements.favoritesButton.setAttribute('aria-label', '저장한 레시피');
@@ -265,7 +330,6 @@
 
     const originalGetFormData = getFormData;
     getFormData = () => ({ ...originalGetFormData(), language });
-
     const previousAdd = addCustomIngredient;
     addCustomIngredient = function addLocalizedIngredient() {
       const raw = elements.customIngredient.value.trim().replace(/\s+/g, ' ').slice(0, 60);
@@ -285,24 +349,24 @@
       loading = Boolean(value);
       switcher.querySelectorAll('button').forEach(button => button.disabled = loading);
       previousLoading(value);
-    };
-
-    const previousResults = renderResults;
-    renderResults = function renderLocalizedResults(input, source) {
-      previousResults(input, source);
-      refreshRecipeLabels();
       localize();
     };
-    const previousOpen = openRecipe;
-    openRecipe = function openLocalizedRecipe(id) {
-      previousOpen(id);
-      refreshRecipeLabels();
-      localize();
-    };
+    // Renderers rebuild controls after a click or screen transition. Translate immediately,
+    // and keep the observer for later async loaders, toast changes and accessibility labels.
+    const renderers = ['renderCategoryTabs', 'renderIngredientCloud', 'renderSelected', 'renderOptionButtons', 'updateWizardSelectionState', 'showWizardStep', 'renderResults', 'openRecipe', 'renderFavorites', 'renderAiError', 'showToast'];
+    renderers.forEach(name => {
+      const previous = window[name];
+      if (typeof previous !== 'function') return;
+      window[name] = function localizedRender(...args) {
+        const result = previous.apply(this, args);
+        if (name === 'renderResults' || name === 'openRecipe' || name === 'renderFavorites') refreshRecipeLabels();
+        localize();
+        return result;
+      };
+    });
     const previousPublicError = publicErrorMessage;
     publicErrorMessage = function localizedError(message) {
-      const cleaned = previousPublicError(message);
-      const translated = t(cleaned);
+      const translated = t(previousPublicError(message));
       return language === 'en' && /[가-힣]/.test(translated)
         ? 'The recipe service is temporarily unavailable. Please try again shortly.' : translated;
     };
@@ -311,11 +375,11 @@
       if (!recipe) return;
       const lang = recipeLanguage(recipe);
       const label = value => t(value, lang);
-      const steps = recipe.steps.map((step, i) => `${i + 1}. ${step.title}\n${[label(step.heat), step.duration].filter(Boolean).join(' · ')}\n${step.description}${step.checkpoint ? `\n${label('완료 기준')}: ${step.checkpoint}` : ''}`).join('\n\n');
+      const steps = (recipe.steps || []).map((step, i) => `${i + 1}. ${step.title}\n${[label(step.heat), label(step.duration)].filter(Boolean).join(' · ')}\n${step.description}${step.checkpoint ? `\n${label('완료 기준')}: ${step.checkpoint}` : ''}`).join('\n\n');
       const text = [
         `[${label('냉털셰프')}] ${recipe.title}`, recipe.subtitle,
         `${label(`${recipe.timeMinutes}분`)} · ${label(recipe.difficulty)} · ${label(`${recipe.servings}인분`)}`,
-        '', label('준비 재료'), recipe.ingredients.map(item => `- ${item.name}: ${item.amount}`).join('\n'),
+        '', label('준비 재료'), (recipe.ingredients || []).map(item => `- ${item.name}: ${item.amount}`).join('\n'),
         '', label('상세 조리 순서'), steps,
         '', `${label('셰프의 한 수')}: ${recipe.tip}`, `${label('보관:')} ${recipe.storage}`, `${label('주의:')} ${recipe.allergyNote}`
       ].join('\n');
@@ -328,10 +392,9 @@
       try { await copyText(`${text}\n\n${url.href}`); showToast('레시피 내용을 복사했습니다.'); }
       catch { showToast('공유 기능을 사용할 수 없습니다.'); }
     };
-
     copyShoppingList = async function copyLocalizedShoppingList(recipe) {
       if (!recipe) return;
-      const extra = recipe.ingredients.filter(item => !item.owned);
+      const extra = (recipe.ingredients || []).filter(item => !item.owned);
       const heading = language === 'en' ? 'Shopping list' : '장보기 목록';
       const empty = language === 'en' ? 'No additional ingredients needed.' : '추가로 살 재료가 없습니다.';
       const text = `[${recipe.title} — ${heading}]\n${extra.length ? extra.map(item => `- ${item.name}: ${item.amount}`).join('\n') : empty}`;
