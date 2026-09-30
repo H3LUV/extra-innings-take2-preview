@@ -173,7 +173,6 @@
     const parent = node.parentElement;
     if (!parent) return true;
     if (parent.closest('[data-i18n-keep],script,style,textarea,.fc-language-switch,[contenteditable="true"]')) return true;
-    if (parent.closest('.ingredient-button:not([data-cute-decorated="true"])')) return true;
     if (parent.closest('#modalTitle,.recipe-body > h3,.recipe-body > p,.modal-title-wrap > p,.favorite-row h3,.steps-list h4,.ingredient-row em')) return true;
     if (parent.closest('.step-row p') && !parent.closest('strong')) return true;
     if (parent.closest('.tip-box,.safety-box') && !parent.closest('strong')) return true;
@@ -195,7 +194,8 @@
       const node = [...control.childNodes].find(child => child.nodeType === Node.TEXT_NODE && child.nodeValue.trim());
       if (node) updateTextNode(node, source);
     });
-    document.querySelectorAll('[data-ingredient][data-cute-decorated="true"],[data-remove]').forEach(control => {
+    document.querySelectorAll('[data-ingredient],[data-remove]').forEach(control => {
+      // Raw buttons also need translation; decoration may run after this render.
       const source = control.dataset.ingredient || control.dataset.remove;
       const label = control.querySelector('span:not(.ingredient-icon)') || control;
       const node = [...label.childNodes].find(child => child.nodeType === Node.TEXT_NODE && child.nodeValue.trim());
@@ -359,6 +359,8 @@
       if (typeof previous !== 'function') return;
       window[name] = function localizedRender(...args) {
         const result = previous.apply(this, args);
+        // Do not wait for the selected-count observer to refresh the next-step labels.
+        if (name === 'renderSelected') window.updateWizardSelectionState?.();
         if (name === 'renderResults' || name === 'openRecipe' || name === 'renderFavorites') refreshRecipeLabels();
         localize();
         return result;
