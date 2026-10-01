@@ -1,7 +1,77 @@
 {
   "items": [
     {
-      "id": "signing-2026-09-30-0",
+      "id": "signing-2026-10-01-0",
+      "type": "Signing",
+      "typeKo": "계약",
+      "date": "2026-10-01T00:00:00",
+      "dateKo": "10월 1일",
+      "title": "계약 · 10월 1일",
+      "descriptionKo": "토론토 랩터스가 가드 Jamal Shead와 베테랑 연장계약을 체결했습니다.",
+      "descriptions": [
+        "Toronto Raptors re-signed guard Jamal Shead to a Veteran Extension."
+      ],
+      "source": "NBA.com",
+      "sourceLink": "https://www.nba.com/players/transactions"
+    },
+    {
+      "id": "waive-2026-10-01-1",
+      "type": "Waive",
+      "typeKo": "방출",
+      "date": "2026-10-01T00:00:00",
+      "dateKo": "10월 1일",
+      "title": "방출 · 10월 1일",
+      "descriptionKo": "시카고 불스가 가드 Peter Suder를 방출했습니다.",
+      "descriptions": [
+        "Chicago Bulls waived guard Peter Suder."
+      ],
+      "source": "NBA.com",
+      "sourceLink": "https://www.nba.com/players/transactions"
+    },
+    {
+      "id": "waive-2026-10-01-2",
+      "type": "Waive",
+      "typeKo": "방출",
+      "date": "2026-10-01T00:00:00",
+      "dateKo": "10월 1일",
+      "title": "방출 · 10월 1일",
+      "descriptionKo": "시카고 불스가  Marquel Sutton를 방출했습니다.",
+      "descriptions": [
+        "Chicago Bulls waived  Marquel Sutton."
+      ],
+      "source": "NBA.com",
+      "sourceLink": "https://www.nba.com/players/transactions"
+    },
+    {
+      "id": "waive-2026-10-01-3",
+      "type": "Waive",
+      "typeKo": "방출",
+      "date": "2026-10-01T00:00:00",
+      "dateKo": "10월 1일",
+      "title": "방출 · 10월 1일",
+      "descriptionKo": "휴스턴 로키츠가 센터 Rafael Castro를 방출했습니다.",
+      "descriptions": [
+        "Houston Rockets waived center Rafael Castro."
+      ],
+      "source": "NBA.com",
+      "sourceLink": "https://www.nba.com/players/transactions"
+    },
+    {
+      "id": "waive-2026-10-01-4",
+      "type": "Waive",
+      "typeKo": "방출",
+      "date": "2026-10-01T00:00:00",
+      "dateKo": "10월 1일",
+      "title": "방출 · 10월 1일",
+      "descriptionKo": "유타 재즈가 가드 Jaelen House를 방출했습니다.",
+      "descriptions": [
+        "Utah Jazz waived guard Jaelen House."
+      ],
+      "source": "NBA.com",
+      "sourceLink": "https://www.nba.com/players/transactions"
+    },
+    {
+      "id": "signing-2026-09-30-5",
       "type": "Signing",
       "typeKo": "계약",
       "date": "2026-09-30T00:00:00",
@@ -15,7 +85,7 @@
       "sourceLink": "https://www.nba.com/players/transactions"
     },
     {
-      "id": "signing-2026-09-30-1",
+      "id": "signing-2026-09-30-6",
       "type": "Signing",
       "typeKo": "계약",
       "date": "2026-09-30T00:00:00",
@@ -29,7 +99,7 @@
       "sourceLink": "https://www.nba.com/players/transactions"
     },
     {
-      "id": "waive-2026-09-30-2",
+      "id": "waive-2026-09-30-7",
       "type": "Waive",
       "typeKo": "방출",
       "date": "2026-09-30T00:00:00",
@@ -43,7 +113,7 @@
       "sourceLink": "https://www.nba.com/players/transactions"
     },
     {
-      "id": "waive-2026-09-30-3",
+      "id": "waive-2026-09-30-8",
       "type": "Waive",
       "typeKo": "방출",
       "date": "2026-09-30T00:00:00",
@@ -57,7 +127,7 @@
       "sourceLink": "https://www.nba.com/players/transactions"
     },
     {
-      "id": "waive-2026-09-30-4",
+      "id": "waive-2026-09-30-9",
       "type": "Waive",
       "typeKo": "방출",
       "date": "2026-09-30T00:00:00",
@@ -71,7 +141,7 @@
       "sourceLink": "https://www.nba.com/players/transactions"
     },
     {
-      "id": "waive-2026-09-30-5",
+      "id": "waive-2026-09-30-10",
       "type": "Waive",
       "typeKo": "방출",
       "date": "2026-09-30T00:00:00",
@@ -85,7 +155,7 @@
       "sourceLink": "https://www.nba.com/players/transactions"
     },
     {
-      "id": "waive-2026-09-30-6",
+      "id": "waive-2026-09-30-11",
       "type": "Waive",
       "typeKo": "방출",
       "date": "2026-09-30T00:00:00",
@@ -99,7 +169,7 @@
       "sourceLink": "https://www.nba.com/players/transactions"
     },
     {
-      "id": "signing-2026-09-28-7",
+      "id": "signing-2026-09-28-12",
       "type": "Signing",
       "typeKo": "계약",
       "date": "2026-09-28T00:00:00",
@@ -113,7 +183,7 @@
       "sourceLink": "https://www.nba.com/players/transactions"
     },
     {
-      "id": "waive-2026-09-28-8",
+      "id": "waive-2026-09-28-13",
       "type": "Waive",
       "typeKo": "방출",
       "date": "2026-09-28T00:00:00",
@@ -127,7 +197,7 @@
       "sourceLink": "https://www.nba.com/players/transactions"
     },
     {
-      "id": "waive-2026-09-28-9",
+      "id": "waive-2026-09-28-14",
       "type": "Waive",
       "typeKo": "방출",
       "date": "2026-09-28T00:00:00",
@@ -141,7 +211,7 @@
       "sourceLink": "https://www.nba.com/players/transactions"
     },
     {
-      "id": "trade-2026-09-27-10",
+      "id": "trade-2026-09-27-15",
       "type": "Trade",
       "typeKo": "트레이드",
       "date": "2026-09-27T00:00:00",
@@ -156,7 +226,7 @@
       "sourceLink": "https://www.nba.com/players/transactions"
     },
     {
-      "id": "waive-2026-09-27-11",
+      "id": "waive-2026-09-27-16",
       "type": "Waive",
       "typeKo": "방출",
       "date": "2026-09-27T00:00:00",
@@ -170,7 +240,7 @@
       "sourceLink": "https://www.nba.com/players/transactions"
     },
     {
-      "id": "waive-2026-09-27-12",
+      "id": "waive-2026-09-27-17",
       "type": "Waive",
       "typeKo": "방출",
       "date": "2026-09-27T00:00:00",
@@ -182,79 +252,9 @@
       ],
       "source": "NBA.com",
       "sourceLink": "https://www.nba.com/players/transactions"
-    },
-    {
-      "id": "waive-2026-09-27-13",
-      "type": "Waive",
-      "typeKo": "방출",
-      "date": "2026-09-27T00:00:00",
-      "dateKo": "9월 27일",
-      "title": "방출 · 9월 27일",
-      "descriptionKo": "디트로이트 피스턴스가 가드 Bryson Warren를 방출했습니다.",
-      "descriptions": [
-        "Detroit Pistons waived guard Bryson Warren."
-      ],
-      "source": "NBA.com",
-      "sourceLink": "https://www.nba.com/players/transactions"
-    },
-    {
-      "id": "waive-2026-09-27-14",
-      "type": "Waive",
-      "typeKo": "방출",
-      "date": "2026-09-27T00:00:00",
-      "dateKo": "9월 27일",
-      "title": "방출 · 9월 27일",
-      "descriptionKo": "골든스테이트 워리어스가 가드 Nicholas Boyd를 방출했습니다.",
-      "descriptions": [
-        "Golden State Warriors waived guard Nicholas Boyd."
-      ],
-      "source": "NBA.com",
-      "sourceLink": "https://www.nba.com/players/transactions"
-    },
-    {
-      "id": "waive-2026-09-27-15",
-      "type": "Waive",
-      "typeKo": "방출",
-      "date": "2026-09-27T00:00:00",
-      "dateKo": "9월 27일",
-      "title": "방출 · 9월 27일",
-      "descriptionKo": "워싱턴 위저즈가 포워드 KeShawn Murphy를 방출했습니다.",
-      "descriptions": [
-        "Washington Wizards waived forward KeShawn Murphy."
-      ],
-      "source": "NBA.com",
-      "sourceLink": "https://www.nba.com/players/transactions"
-    },
-    {
-      "id": "waive-2026-09-27-16",
-      "type": "Waive",
-      "typeKo": "방출",
-      "date": "2026-09-27T00:00:00",
-      "dateKo": "9월 27일",
-      "title": "방출 · 9월 27일",
-      "descriptionKo": "LA 레이커스가 가드 Meechie Johnson를 방출했습니다.",
-      "descriptions": [
-        "Los Angeles Lakers waived guard Meechie Johnson."
-      ],
-      "source": "NBA.com",
-      "sourceLink": "https://www.nba.com/players/transactions"
-    },
-    {
-      "id": "waive-2026-09-27-17",
-      "type": "Waive",
-      "typeKo": "방출",
-      "date": "2026-09-27T00:00:00",
-      "dateKo": "9월 27일",
-      "title": "방출 · 9월 27일",
-      "descriptionKo": "LA 레이커스가  Chase Ross를 방출했습니다.",
-      "descriptions": [
-        "Los Angeles Lakers waived  Chase Ross."
-      ],
-      "source": "NBA.com",
-      "sourceLink": "https://www.nba.com/players/transactions"
     }
   ],
   "message": "",
   "source": "NBA 공식 Player Movement 데이터",
-  "updatedAt": "2026-10-01T18:54:49.201Z"
+  "updatedAt": "2026-10-01T23:13:03.459Z"
 }
