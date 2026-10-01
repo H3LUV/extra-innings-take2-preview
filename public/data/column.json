@@ -4,46 +4,60 @@
   "dek": "직전 14일 대비 OPS 상승폭 상위 5명",
   "players": [
     {
-      "id": 808959,
-      "name": "Munetaka Murakami",
-      "team": "Chicago White Sox",
-      "seasonPa": 553,
-      "recentPa": 45,
-      "previousPa": 52,
-      "recentAvg": 0.263,
-      "recentObp": 0.378,
-      "recentSlg": 0.684,
-      "recentOps": 1.062,
-      "previousOps": 0.458,
-      "opsDelta": 0.6040000000000001
-    },
-    {
-      "id": 572233,
-      "name": "Christian Walker",
-      "team": "Houston Astros",
-      "seasonPa": 635,
-      "recentPa": 39,
-      "previousPa": 44,
-      "recentAvg": 0.294,
-      "recentObp": 0.359,
-      "recentSlg": 0.676,
-      "recentOps": 1.035,
-      "previousOps": 0.471,
-      "opsDelta": 0.564
-    },
-    {
       "id": 701807,
       "name": "Carson Benge",
       "team": "New York Mets",
       "seasonPa": 654,
-      "recentPa": 45,
-      "previousPa": 55,
-      "recentAvg": 0.45,
-      "recentObp": 0.511,
-      "recentSlg": 0.675,
-      "recentOps": 1.186,
-      "previousOps": 0.624,
-      "opsDelta": 0.5619999999999999
+      "recentPa": 41,
+      "previousPa": 59,
+      "recentAvg": 0.472,
+      "recentObp": 0.537,
+      "recentSlg": 0.722,
+      "recentOps": 1.259,
+      "previousOps": 0.615,
+      "opsDelta": 0.6439999999999999
+    },
+    {
+      "id": 681082,
+      "name": "Bryson Stott",
+      "team": "Philadelphia Phillies",
+      "seasonPa": 608,
+      "recentPa": 37,
+      "previousPa": 45,
+      "recentAvg": 0.355,
+      "recentObp": 0.459,
+      "recentSlg": 0.581,
+      "recentOps": 1.04,
+      "previousOps": 0.504,
+      "opsDelta": 0.536
+    },
+    {
+      "id": 807712,
+      "name": "Luke Keaschall",
+      "team": "Minnesota Twins",
+      "seasonPa": 620,
+      "recentPa": 35,
+      "previousPa": 58,
+      "recentAvg": 0.345,
+      "recentObp": 0.429,
+      "recentSlg": 0.759,
+      "recentOps": 1.188,
+      "previousOps": 0.692,
+      "opsDelta": 0.496
+    },
+    {
+      "id": 668709,
+      "name": "JJ Bleday",
+      "team": "Cincinnati Reds",
+      "seasonPa": 545,
+      "recentPa": 33,
+      "previousPa": 45,
+      "recentAvg": 0.267,
+      "recentObp": 0.333,
+      "recentSlg": 0.5,
+      "recentOps": 0.833,
+      "previousOps": 0.372,
+      "opsDelta": 0.46099999999999997
     },
     {
       "id": 672695,
@@ -58,29 +72,15 @@
       "recentOps": 1.13,
       "previousOps": 0.677,
       "opsDelta": 0.45299999999999985
-    },
-    {
-      "id": 608070,
-      "name": "José Ramírez",
-      "team": "Cleveland Guardians",
-      "seasonPa": 544,
-      "recentPa": 38,
-      "previousPa": 52,
-      "recentAvg": 0.294,
-      "recentObp": 0.342,
-      "recentSlg": 0.412,
-      "recentOps": 0.754,
-      "previousOps": 0.353,
-      "opsDelta": 0.401
     }
   ],
   "method": "시즌 180타석 이상, 최근·직전 14일 각각 28타석 이상, 최근 OPS 0.700 이상인 타자 대상. 원인이나 지속 가능성은 추론하지 않습니다.",
   "range": {
-    "recentStart": "2026-09-17",
-    "recentEnd": "2026-09-30",
-    "previousStart": "2026-09-03",
-    "previousEnd": "2026-09-16"
+    "recentStart": "2026-09-18",
+    "recentEnd": "2026-10-01",
+    "previousStart": "2026-09-04",
+    "previousEnd": "2026-09-17"
   },
-  "updatedAt": "2026-10-01T00:58:46.310Z",
+  "updatedAt": "2026-10-01T20:11:13.272Z",
   "source": "MLB Stats API"
 }
