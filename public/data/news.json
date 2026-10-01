@@ -1,6 +1,23 @@
 {
   "items": [
     {
+      "id": "mlb-1617027e64b2",
+      "articleFile": "./data/articles/mlb-1617027e64b2.json",
+      "title": "4 big takeaways after Phillies even thrilling NL Wild Card Series",
+      "titleKo": "필리스의 스릴 넘치는 NL 와일드카드 시리즈 이후 4가지 중요한 시사점",
+      "link": "https://www.mlb.com/news/key-takeaways-from-phillies-extra-innings-win-over-braves-in-game-2-of-nl-wild-card-series",
+      "pubDate": "2026-10-01T01:10:04.019Z",
+      "source": "MLB.com",
+      "category": "미국 현지 읽을거리",
+      "readingMinutes": 10,
+      "bodyVerified": true,
+      "bodyChars": 7622,
+      "sourceWordCount": 2236,
+      "translationType": "full",
+      "pipelineVersion": "reader-v6",
+      "translatedAt": "2026-10-01T01:18:48.349Z"
+    },
+    {
       "id": "mlb-95042712541f",
       "articleFile": "./data/articles/mlb-95042712541f.json",
       "title": "Ohtani 'feeling great physically,' will continue to hit during bye week ahead of NLDS",
@@ -50,23 +67,6 @@
       "translationType": "full",
       "pipelineVersion": "reader-v6",
       "translatedAt": "2026-09-26T00:38:55.678Z"
-    },
-    {
-      "id": "mlb-1fe78bf2d614",
-      "articleFile": "./data/articles/mlb-1fe78bf2d614.json",
-      "title": "FanGraphs Weekly Mailbag: September 26, 2026",
-      "titleKo": "팬그래프 주간 메일백: 2026년 9월 26일",
-      "link": "https://blogs.fangraphs.com/fangraphs-weekly-mailbag-september-26-2026/",
-      "pubDate": "2026-09-26T13:00:33+00:00",
-      "source": "FanGraphs",
-      "category": "미국 현지 읽을거리",
-      "readingMinutes": 11,
-      "bodyVerified": true,
-      "bodyChars": 7912,
-      "sourceWordCount": 2507,
-      "translationType": "full",
-      "pipelineVersion": "reader-v6",
-      "translatedAt": "2026-09-27T00:39:33.045Z"
     }
   ],
   "message": "미국 현지 기사 중 광고·회원가입 문구를 제거하고 제목과 본문 전체 자동 번역이 완료된 기사만 제공합니다.",
@@ -74,5 +74,5 @@
   "translationPolicy": "clean_full_translation_keep_previous_on_failure",
   "pipelineVersion": "reader-v6",
   "selectedCount": 4,
-  "updatedAt": "2026-09-30T01:22:28.587Z"
+  "updatedAt": "2026-10-01T01:22:46.381Z"
 }
