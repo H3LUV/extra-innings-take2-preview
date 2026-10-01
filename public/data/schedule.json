@@ -1,184 +1,34 @@
 {
-  "start": "2026-09-29",
-  "end": "2026-10-01",
-  "defaultDate": "2026-09-30",
+  "start": "2026-09-30",
+  "end": "2026-10-02",
+  "defaultDate": "2026-10-01",
   "byDate": {
-    "2026-09-30": [
-      {
-        "id": 849845,
-        "status": "Final",
-        "venue": "Truist Park",
-        "gameDate": "2026-09-29T18:00:00Z",
-        "away": {
-          "id": 143,
-          "name": "Philadelphia Phillies",
-          "score": 3,
-          "record": {
-            "wins": 0,
-            "losses": 1,
-            "ties": 0,
-            "pct": ".000"
-          }
-        },
-        "home": {
-          "id": 144,
-          "name": "Atlanta Braves",
-          "score": 5,
-          "record": {
-            "wins": 1,
-            "losses": 0,
-            "ties": 0,
-            "pct": "1.000"
-          }
-        },
-        "probable": {
-          "away": "Jesús Luzardo",
-          "home": "Chris Sale"
-        },
-        "decisions": {
-          "winner": "Dylan Lee",
-          "loser": "Jhoan Duran",
-          "save": "Raisel Iglesias"
-        }
-      },
-      {
-        "id": 849849,
-        "status": "Final",
-        "venue": "Daikin Park",
-        "gameDate": "2026-09-29T21:00:00Z",
-        "away": {
-          "id": 145,
-          "name": "Chicago White Sox",
-          "score": 6,
-          "record": {
-            "wins": 1,
-            "losses": 0,
-            "ties": 0,
-            "pct": "1.000"
-          }
-        },
-        "home": {
-          "id": 117,
-          "name": "Houston Astros",
-          "score": 3,
-          "record": {
-            "wins": 0,
-            "losses": 1,
-            "ties": 0,
-            "pct": ".000"
-          }
-        },
-        "probable": {
-          "away": "Hagen Smith",
-          "home": "AJ Blubaugh"
-        },
-        "decisions": {
-          "winner": "Jordan Hicks",
-          "loser": "AJ Blubaugh",
-          "save": ""
-        }
-      },
-      {
-        "id": 849851,
-        "status": "Final",
-        "venue": "Yankee Stadium",
-        "gameDate": "2026-09-30T00:00:00Z",
-        "away": {
-          "id": 111,
-          "name": "Boston Red Sox",
-          "score": 0,
-          "record": {
-            "wins": 0,
-            "losses": 1,
-            "ties": 0,
-            "pct": ".000"
-          }
-        },
-        "home": {
-          "id": 147,
-          "name": "New York Yankees",
-          "score": 9,
-          "record": {
-            "wins": 1,
-            "losses": 0,
-            "ties": 0,
-            "pct": "1.000"
-          }
-        },
-        "probable": {
-          "away": "Payton Tolle",
-          "home": "Cam Schlittler"
-        },
-        "decisions": {
-          "winner": "Cam Schlittler",
-          "loser": "Payton Tolle",
-          "save": ""
-        }
-      },
-      {
-        "id": 849843,
-        "status": "Final",
-        "venue": "Petco Park",
-        "gameDate": "2026-09-30T02:00:00Z",
-        "away": {
-          "id": 112,
-          "name": "Chicago Cubs",
-          "score": 0,
-          "record": {
-            "wins": 0,
-            "losses": 1,
-            "ties": 0,
-            "pct": ".000"
-          }
-        },
-        "home": {
-          "id": 135,
-          "name": "San Diego Padres",
-          "score": 8,
-          "record": {
-            "wins": 1,
-            "losses": 0,
-            "ties": 0,
-            "pct": "1.000"
-          }
-        },
-        "probable": {
-          "away": "Matthew Boyd",
-          "home": "Michael King"
-        },
-        "decisions": {
-          "winner": "Michael King",
-          "loser": "Matthew Boyd",
-          "save": ""
-        }
-      }
-    ],
     "2026-10-01": [
       {
         "id": 849841,
-        "status": "Scheduled",
+        "status": "Final",
         "venue": "Truist Park",
         "gameDate": "2026-09-30T18:00:00Z",
         "away": {
           "id": 143,
           "name": "Philadelphia Phillies",
-          "score": null,
+          "score": 4,
           "record": {
-            "wins": 0,
+            "wins": 1,
             "losses": 1,
             "ties": 0,
-            "pct": ".000"
+            "pct": ".500"
           }
         },
         "home": {
           "id": 144,
           "name": "Atlanta Braves",
-          "score": null,
+          "score": 3,
           "record": {
             "wins": 1,
-            "losses": 0,
+            "losses": 1,
             "ties": 0,
-            "pct": "1.000"
+            "pct": ".500"
           }
         },
         "probable": {
@@ -186,22 +36,22 @@
           "home": "Tyler Mahle"
         },
         "decisions": {
-          "winner": "",
-          "loser": "",
+          "winner": "Andrew Painter",
+          "loser": "Didier Fuentes",
           "save": ""
         }
       },
       {
         "id": 849846,
-        "status": "Scheduled",
+        "status": "Final",
         "venue": "Daikin Park",
         "gameDate": "2026-09-30T21:00:00Z",
         "away": {
           "id": 145,
           "name": "Chicago White Sox",
-          "score": null,
+          "score": 7,
           "record": {
-            "wins": 1,
+            "wins": 2,
             "losses": 0,
             "ties": 0,
             "pct": "1.000"
@@ -210,10 +60,10 @@
         "home": {
           "id": 117,
           "name": "Houston Astros",
-          "score": null,
+          "score": 3,
           "record": {
             "wins": 0,
-            "losses": 1,
+            "losses": 2,
             "ties": 0,
             "pct": ".000"
           }
@@ -223,20 +73,20 @@
           "home": "Hunter Brown"
         },
         "decisions": {
-          "winner": "",
-          "loser": "",
+          "winner": "Anthony Kay",
+          "loser": "Hunter Brown",
           "save": ""
         }
       },
       {
         "id": 849848,
-        "status": "Scheduled",
+        "status": "In Progress",
         "venue": "Yankee Stadium",
         "gameDate": "2026-10-01T00:00:00Z",
         "away": {
           "id": 111,
           "name": "Boston Red Sox",
-          "score": null,
+          "score": 0,
           "record": {
             "wins": 0,
             "losses": 1,
@@ -247,7 +97,7 @@
         "home": {
           "id": 147,
           "name": "New York Yankees",
-          "score": null,
+          "score": 0,
           "record": {
             "wins": 1,
             "losses": 0,
@@ -267,13 +117,13 @@
       },
       {
         "id": 849842,
-        "status": "Scheduled",
+        "status": "Pre-Game",
         "venue": "Petco Park",
         "gameDate": "2026-10-01T02:00:00Z",
         "away": {
           "id": 112,
           "name": "Chicago Cubs",
-          "score": null,
+          "score": 0,
           "record": {
             "wins": 0,
             "losses": 1,
@@ -284,7 +134,7 @@
         "home": {
           "id": 135,
           "name": "San Diego Padres",
-          "score": null,
+          "score": 0,
           "record": {
             "wins": 1,
             "losses": 0,
@@ -314,10 +164,10 @@
           "name": "Philadelphia Phillies",
           "score": null,
           "record": {
-            "wins": 0,
+            "wins": 1,
             "losses": 1,
             "ties": 0,
-            "pct": ".000"
+            "pct": ".500"
           }
         },
         "home": {
@@ -326,46 +176,9 @@
           "score": null,
           "record": {
             "wins": 1,
-            "losses": 0,
-            "ties": 0,
-            "pct": "1.000"
-          }
-        },
-        "probable": {
-          "away": "",
-          "home": ""
-        },
-        "decisions": {
-          "winner": "",
-          "loser": "",
-          "save": ""
-        }
-      },
-      {
-        "id": 849850,
-        "status": "Scheduled",
-        "venue": "Daikin Park",
-        "gameDate": "2026-10-01T21:00:00Z",
-        "away": {
-          "id": 145,
-          "name": "Chicago White Sox",
-          "score": null,
-          "record": {
-            "wins": 1,
-            "losses": 0,
-            "ties": 0,
-            "pct": "1.000"
-          }
-        },
-        "home": {
-          "id": 117,
-          "name": "Houston Astros",
-          "score": null,
-          "record": {
-            "wins": 0,
             "losses": 1,
             "ties": 0,
-            "pct": ".000"
+            "pct": ".500"
           }
         },
         "probable": {
@@ -454,6 +267,6 @@
       }
     ]
   },
-  "updatedAt": "2026-09-30T13:21:46.765Z",
+  "updatedAt": "2026-10-01T00:58:46.527Z",
   "source": "MLB Stats API"
 }
