@@ -6,29 +6,29 @@
     "2026-10-02": [
       {
         "id": 849844,
-        "status": "In Progress",
+        "status": "Final",
         "venue": "Truist Park",
         "gameDate": "2026-10-02T00:00:00Z",
         "away": {
           "id": 143,
           "name": "Philadelphia Phillies",
-          "score": 0,
+          "score": 2,
           "record": {
             "wins": 1,
-            "losses": 1,
+            "losses": 2,
             "ties": 0,
-            "pct": ".500"
+            "pct": ".333"
           }
         },
         "home": {
           "id": 144,
           "name": "Atlanta Braves",
-          "score": 3,
+          "score": 6,
           "record": {
-            "wins": 1,
+            "wins": 2,
             "losses": 1,
             "ties": 0,
-            "pct": ".500"
+            "pct": ".667"
           }
         },
         "probable": {
@@ -36,8 +36,8 @@
           "home": "Ray Kerr"
         },
         "decisions": {
-          "winner": "",
-          "loser": "",
+          "winner": "Grant Holmes",
+          "loser": "Aaron Nola",
           "save": ""
         }
       }
@@ -86,8 +86,8 @@
         "venue": "UNIQLO Field at Dodger Stadium",
         "gameDate": "2026-10-03T20:00:00Z",
         "away": {
-          "id": 5532,
-          "name": "ATL/PHI",
+          "id": 144,
+          "name": "Atlanta Braves",
           "score": null,
           "record": {
             "wins": 0,
@@ -193,6 +193,6 @@
       }
     ]
   },
-  "updatedAt": "2026-10-02T01:13:14.936Z",
+  "updatedAt": "2026-10-02T13:16:53.143Z",
   "source": "MLB Stats API"
 }
