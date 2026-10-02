@@ -1,7 +1,22 @@
 {
   "league": "NBA",
-  "status": "offseason",
-  "games": [],
-  "message": "오늘 예정된 NBA 경기가 없습니다.",
-  "updatedAt": "2026-10-02T08:37:18.149Z"
+  "status": "active",
+  "games": [
+    {
+      "id": "401902644",
+      "gameDate": "2026-10-03T23:00Z",
+      "status": "10/3 - 7:00 PM EDT",
+      "venue": "Videotron Centre",
+      "away": {
+        "name": "Miami Heat",
+        "score": "0"
+      },
+      "home": {
+        "name": "Toronto Raptors",
+        "score": "0"
+      }
+    }
+  ],
+  "message": "",
+  "updatedAt": "2026-10-02T15:49:17.867Z"
 }
