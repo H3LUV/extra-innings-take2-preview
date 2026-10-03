@@ -1,38 +1,55 @@
 {
   "items": [
     {
-      "id": "nba-6fb5bc481165",
-      "articleFile": "./data/articles/nba-6fb5bc481165.json",
-      "title": "5 takeaways: Stephen Curry embraces new season at Warriors Media Day",
-      "titleKo": "5가지 시사점: 스테판 커리, 워리어스 미디어 데이에서 새 시즌 맞이",
-      "link": "https://www.nba.com/news/5-takeaways-warriors-media-day-2026",
-      "pubDate": "2026-09-29T00:24:30Z",
+      "id": "nba-738581112fda",
+      "articleFile": "./data/articles/nba-738581112fda.json",
+      "title": "Pistons, Jalen Duren agree on 5-year, $200 million rookie scale extension",
+      "titleKo": "피스톤즈, 잘렌 듀렌과 5년 2억 달러 규모의 루키 규모 연장에 합의",
+      "link": "https://www.nba.com/news/pistons-jalen-duren-rookie-extension",
+      "pubDate": "2026-10-02T02:36:42Z",
       "source": "NBA.com",
       "category": "미국 현지 읽을거리",
-      "readingMinutes": 11,
+      "readingMinutes": 4,
       "bodyVerified": true,
-      "bodyChars": 7343,
-      "sourceWordCount": 2491,
+      "bodyChars": 1571,
+      "sourceWordCount": 456,
       "translationType": "full",
       "pipelineVersion": "reader-v6",
-      "translatedAt": "2026-10-03T00:34:45.463Z"
+      "translatedAt": "2026-10-03T06:37:28.960Z"
     },
     {
-      "id": "nba-cc8df1a70aac",
-      "articleFile": "./data/articles/nba-cc8df1a70aac.json",
-      "title": "5 takeaways: Defense, depth headline Hawks Media Day",
-      "titleKo": "5가지 시사점: 방어, 심도 헤드라인 Hawks Media Day",
-      "link": "https://www.nba.com/news/5-takeaways-atlanta-hawks-media-day-2026",
-      "pubDate": "2026-09-28T22:36:04Z",
+      "id": "nba-3319d8c1c32a",
+      "articleFile": "./data/articles/nba-3319d8c1c32a.json",
+      "title": "10 teams hungry for a return to the postseason",
+      "titleKo": "포스트시즌 복귀를 갈망하는 10개 팀",
+      "link": "https://www.nba.com/news/10-teams-looking-to-return-to-postseason",
+      "pubDate": "2026-09-30T22:38:32Z",
       "source": "NBA.com",
       "category": "미국 현지 읽을거리",
-      "readingMinutes": 6,
+      "readingMinutes": 5,
       "bodyVerified": true,
-      "bodyChars": 4136,
-      "sourceWordCount": 1295,
+      "bodyChars": 4343,
+      "sourceWordCount": 1193,
       "translationType": "full",
       "pipelineVersion": "reader-v6",
-      "translatedAt": "2026-10-03T00:34:40.945Z"
+      "translatedAt": "2026-10-03T06:37:40.227Z"
+    },
+    {
+      "id": "nba-7050328129b6",
+      "articleFile": "./data/articles/nba-7050328129b6.json",
+      "title": "Klay Thompson has plenty of motivation entering 1st season with Heat",
+      "titleKo": "클레이 탐슨(Klay Thompson)은 히트와 함께 첫 시즌에 돌입할 의욕이 넘칩니다.",
+      "link": "https://www.nba.com/news/miami-heat-klay-thompson-motivated-media-day",
+      "pubDate": "2026-09-29T19:46:52Z",
+      "source": "NBA.com",
+      "category": "미국 현지 읽을거리",
+      "readingMinutes": 4,
+      "bodyVerified": true,
+      "bodyChars": 2472,
+      "sourceWordCount": 750,
+      "translationType": "full",
+      "pipelineVersion": "reader-v6",
+      "translatedAt": "2026-10-03T06:37:48.242Z"
     },
     {
       "id": "nba-d00e004a06cb",
@@ -45,28 +62,11 @@
       "category": "미국 현지 읽을거리",
       "readingMinutes": 6,
       "bodyVerified": true,
-      "bodyChars": 4442,
+      "bodyChars": 4447,
       "sourceWordCount": 1328,
       "translationType": "full",
       "pipelineVersion": "reader-v6",
-      "translatedAt": "2026-10-03T00:34:35.443Z"
-    },
-    {
-      "id": "nba-d3760c57df72",
-      "articleFile": "./data/articles/nba-d3760c57df72.json",
-      "title": "5 takeaways: LeBron James starts new chapter at Sixers Media Day",
-      "titleKo": "5가지 시사점: LeBron James가 Sixers Media Day에서 새로운 장을 시작합니다",
-      "link": "https://www.nba.com/news/5-takeaways-sixers-lebron-media-day-2026",
-      "pubDate": "2026-09-28T19:23:22Z",
-      "source": "NBA.com",
-      "category": "미국 현지 읽을거리",
-      "readingMinutes": 7,
-      "bodyVerified": true,
-      "bodyChars": 4412,
-      "sourceWordCount": 1496,
-      "translationType": "full",
-      "pipelineVersion": "reader-v6",
-      "translatedAt": "2026-10-03T00:34:37.902Z"
+      "translatedAt": "2026-10-03T06:38:01.248Z"
     }
   ],
   "message": "NBA.com의 최신 일반 기사 중 제목과 본문 전체 자동 번역이 완료된 기사만 제공합니다.",
@@ -74,5 +74,5 @@
   "translationPolicy": "newest_valid_article_full_translation_keep_previous_on_failure",
   "pipelineVersion": "reader-v6",
   "selectedCount": 4,
-  "updatedAt": "2026-10-03T00:34:45.464Z"
+  "updatedAt": "2026-10-03T06:38:01.249Z"
 }
