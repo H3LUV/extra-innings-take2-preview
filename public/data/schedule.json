@@ -1,47 +1,8 @@
 {
-  "start": "2026-10-01",
-  "end": "2026-10-03",
-  "defaultDate": "2026-10-02",
+  "start": "2026-10-02",
+  "end": "2026-10-04",
+  "defaultDate": "2026-10-03",
   "byDate": {
-    "2026-10-02": [
-      {
-        "id": 849844,
-        "status": "Final",
-        "venue": "Truist Park",
-        "gameDate": "2026-10-02T00:00:00Z",
-        "away": {
-          "id": 143,
-          "name": "Philadelphia Phillies",
-          "score": 2,
-          "record": {
-            "wins": 1,
-            "losses": 2,
-            "ties": 0,
-            "pct": ".333"
-          }
-        },
-        "home": {
-          "id": 144,
-          "name": "Atlanta Braves",
-          "score": 6,
-          "record": {
-            "wins": 2,
-            "losses": 1,
-            "ties": 0,
-            "pct": ".667"
-          }
-        },
-        "probable": {
-          "away": "Aaron Nola",
-          "home": "Ray Kerr"
-        },
-        "decisions": {
-          "winner": "Grant Holmes",
-          "loser": "Aaron Nola",
-          "save": ""
-        }
-      }
-    ],
     "2026-10-04": [
       {
         "id": 849829,
@@ -71,7 +32,7 @@
           }
         },
         "probable": {
-          "away": "",
+          "away": "Hagen Smith",
           "home": "Parker Messick"
         },
         "decisions": {
@@ -109,7 +70,7 @@
         },
         "probable": {
           "away": "",
-          "home": ""
+          "home": "Tarik Skubal"
         },
         "decisions": {
           "winner": "",
@@ -145,7 +106,7 @@
           }
         },
         "probable": {
-          "away": "",
+          "away": "Gerrit Cole",
           "home": "Drew Rasmussen"
         },
         "decisions": {
@@ -182,8 +143,84 @@
           }
         },
         "probable": {
-          "away": "",
+          "away": "Robbie Ray",
           "home": "Jacob Misiorowski"
+        },
+        "decisions": {
+          "winner": "",
+          "loser": "",
+          "save": ""
+        }
+      }
+    ],
+    "2026-10-05": [
+      {
+        "id": 849825,
+        "status": "Scheduled",
+        "venue": "American Family Field",
+        "gameDate": "2026-10-04T20:00:00Z",
+        "away": {
+          "id": 135,
+          "name": "San Diego Padres",
+          "score": null,
+          "record": {
+            "wins": 0,
+            "losses": 0,
+            "ties": 0,
+            "pct": ".000"
+          }
+        },
+        "home": {
+          "id": 158,
+          "name": "Milwaukee Brewers",
+          "score": null,
+          "record": {
+            "wins": 0,
+            "losses": 0,
+            "ties": 0,
+            "pct": ".000"
+          }
+        },
+        "probable": {
+          "away": "Michael King",
+          "home": "Logan Henderson"
+        },
+        "decisions": {
+          "winner": "",
+          "loser": "",
+          "save": ""
+        }
+      },
+      {
+        "id": 849823,
+        "status": "Scheduled",
+        "venue": "UNIQLO Field at Dodger Stadium",
+        "gameDate": "2026-10-05T00:00:00Z",
+        "away": {
+          "id": 144,
+          "name": "Atlanta Braves",
+          "score": null,
+          "record": {
+            "wins": 0,
+            "losses": 0,
+            "ties": 0,
+            "pct": ".000"
+          }
+        },
+        "home": {
+          "id": 119,
+          "name": "Los Angeles Dodgers",
+          "score": null,
+          "record": {
+            "wins": 0,
+            "losses": 0,
+            "ties": 0,
+            "pct": ".000"
+          }
+        },
+        "probable": {
+          "away": "",
+          "home": ""
         },
         "decisions": {
           "winner": "",
@@ -193,6 +230,6 @@
       }
     ]
   },
-  "updatedAt": "2026-10-02T13:37:10.384Z",
+  "updatedAt": "2026-10-03T00:51:46.387Z",
   "source": "MLB Stats API"
 }
