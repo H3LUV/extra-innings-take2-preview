@@ -3,20 +3,34 @@
   "status": "active",
   "games": [
     {
-      "id": "401902644",
-      "gameDate": "2026-10-03T23:00Z",
-      "status": "10/3 - 7:00 PM EDT",
-      "venue": "Videotron Centre",
+      "id": "401914127",
+      "gameDate": "2026-10-04T23:00Z",
+      "status": "10/4 - 7:00 PM EDT",
+      "venue": "CU Events Center",
       "away": {
-        "name": "Miami Heat",
+        "name": "Utah Jazz",
         "score": "0"
       },
       "home": {
-        "name": "Toronto Raptors",
+        "name": "Denver Nuggets",
+        "score": "0"
+      }
+    },
+    {
+      "id": "401918010",
+      "gameDate": "2026-10-04T23:00Z",
+      "status": "10/4 - 7:00 PM EDT",
+      "venue": "Stan Sheriff Center",
+      "away": {
+        "name": "Golden State Warriors",
+        "score": "0"
+      },
+      "home": {
+        "name": "LA Clippers",
         "score": "0"
       }
     }
   ],
   "message": "",
-  "updatedAt": "2026-10-03T12:34:04.907Z"
+  "updatedAt": "2026-10-03T17:17:11.690Z"
 }
