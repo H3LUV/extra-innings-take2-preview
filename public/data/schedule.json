@@ -80,7 +80,7 @@
       },
       {
         "id": 849835,
-        "status": "In Progress",
+        "status": "Final",
         "venue": "Tropicana Field",
         "gameDate": "2026-10-03T22:30:00Z",
         "away": {
@@ -89,7 +89,7 @@
           "score": 0,
           "record": {
             "wins": 0,
-            "losses": 0,
+            "losses": 1,
             "ties": 0,
             "pct": ".000"
           }
@@ -99,10 +99,10 @@
           "name": "Tampa Bay Rays",
           "score": 1,
           "record": {
-            "wins": 0,
+            "wins": 1,
             "losses": 0,
             "ties": 0,
-            "pct": ".000"
+            "pct": "1.000"
           }
         },
         "probable": {
@@ -110,23 +110,23 @@
           "home": "Drew Rasmussen"
         },
         "decisions": {
-          "winner": "",
-          "loser": "",
-          "save": ""
+          "winner": "Drew Rasmussen",
+          "loser": "Gerrit Cole",
+          "save": "Bryan Baker"
         }
       },
       {
         "id": 849830,
-        "status": "Warmup",
+        "status": "Final",
         "venue": "American Family Field",
         "gameDate": "2026-10-04T00:30:00Z",
         "away": {
           "id": 135,
           "name": "San Diego Padres",
-          "score": 0,
+          "score": 2,
           "record": {
             "wins": 0,
-            "losses": 0,
+            "losses": 1,
             "ties": 0,
             "pct": ".000"
           }
@@ -134,12 +134,12 @@
         "home": {
           "id": 158,
           "name": "Milwaukee Brewers",
-          "score": 0,
+          "score": 3,
           "record": {
-            "wins": 0,
+            "wins": 1,
             "losses": 0,
             "ties": 0,
-            "pct": ".000"
+            "pct": "1.000"
           }
         },
         "probable": {
@@ -147,9 +147,9 @@
           "home": "Jacob Misiorowski"
         },
         "decisions": {
-          "winner": "",
-          "loser": "",
-          "save": ""
+          "winner": "DL Hall",
+          "loser": "Adrian Morejon",
+          "save": "Trevor Megill"
         }
       }
     ],
@@ -165,7 +165,7 @@
           "score": null,
           "record": {
             "wins": 0,
-            "losses": 0,
+            "losses": 1,
             "ties": 0,
             "pct": ".000"
           }
@@ -175,10 +175,10 @@
           "name": "Milwaukee Brewers",
           "score": null,
           "record": {
-            "wins": 0,
+            "wins": 1,
             "losses": 0,
             "ties": 0,
-            "pct": ".000"
+            "pct": "1.000"
           }
         },
         "probable": {
@@ -278,7 +278,7 @@
           "score": null,
           "record": {
             "wins": 0,
-            "losses": 0,
+            "losses": 1,
             "ties": 0,
             "pct": ".000"
           }
@@ -288,15 +288,15 @@
           "name": "Tampa Bay Rays",
           "score": null,
           "record": {
-            "wins": 0,
+            "wins": 1,
             "losses": 0,
             "ties": 0,
-            "pct": ".000"
+            "pct": "1.000"
           }
         },
         "probable": {
           "away": "Cam Schlittler",
-          "home": ""
+          "home": "Freddy Peralta"
         },
         "decisions": {
           "winner": "",
@@ -306,6 +306,6 @@
       }
     ]
   },
-  "updatedAt": "2026-10-04T00:16:49.258Z",
+  "updatedAt": "2026-10-04T12:54:15.301Z",
   "source": "MLB Stats API"
 }
