@@ -3,34 +3,76 @@
   "status": "active",
   "games": [
     {
-      "id": "401914127",
-      "gameDate": "2026-10-04T23:00Z",
-      "status": "10/4 - 7:00 PM EDT",
-      "venue": "CU Events Center",
+      "id": "401898388",
+      "gameDate": "2026-10-05T23:00Z",
+      "status": "10/5 - 7:00 PM EDT",
+      "venue": "State Farm Arena",
       "away": {
-        "name": "Utah Jazz",
+        "name": "Memphis Grizzlies",
         "score": "0"
       },
       "home": {
-        "name": "Denver Nuggets",
+        "name": "Atlanta Hawks",
         "score": "0"
       }
     },
     {
-      "id": "401918010",
-      "gameDate": "2026-10-04T23:00Z",
-      "status": "10/4 - 7:00 PM EDT",
-      "venue": "Stan Sheriff Center",
+      "id": "401908947",
+      "gameDate": "2026-10-05T23:00Z",
+      "status": "10/5 - 7:00 PM EDT",
+      "venue": "Little Caesars Arena",
       "away": {
-        "name": "Golden State Warriors",
+        "name": "Phoenix Suns",
         "score": "0"
       },
       "home": {
-        "name": "LA Clippers",
+        "name": "Detroit Pistons",
+        "score": "0"
+      }
+    },
+    {
+      "id": "401914101",
+      "gameDate": "2026-10-05T23:00Z",
+      "status": "10/5 - 7:00 PM EDT",
+      "venue": "Xfinity Mobile Arena",
+      "away": {
+        "name": "New York Knicks",
+        "score": "0"
+      },
+      "home": {
+        "name": "Philadelphia 76ers",
+        "score": "0"
+      }
+    },
+    {
+      "id": "401914102",
+      "gameDate": "2026-10-06T00:00Z",
+      "status": "10/5 - 8:00 PM EDT",
+      "venue": "Fiserv Forum",
+      "away": {
+        "name": "Minnesota Timberwolves",
+        "score": "0"
+      },
+      "home": {
+        "name": "Milwaukee Bucks",
+        "score": "0"
+      }
+    },
+    {
+      "id": "401898716",
+      "gameDate": "2026-10-06T02:00Z",
+      "status": "10/5 - 10:00 PM EDT",
+      "venue": "Golden 1 Center",
+      "away": {
+        "name": "Los Angeles Lakers",
+        "score": "0"
+      },
+      "home": {
+        "name": "Sacramento Kings",
         "score": "0"
       }
     }
   ],
   "message": "",
-  "updatedAt": "2026-10-04T12:21:42.830Z"
+  "updatedAt": "2026-10-04T17:34:32.511Z"
 }
