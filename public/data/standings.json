@@ -7,49 +7,49 @@
       "teams": [
         {
           "seed": 1,
+          "name": "Miami Heat",
+          "w": "1",
+          "l": "0",
+          "gb": "-"
+        },
+        {
+          "seed": 2,
           "name": "Atlanta Hawks",
           "w": "0",
           "l": "0",
           "gb": "-"
         },
         {
-          "seed": 2,
+          "seed": 3,
           "name": "Boston Celtics",
           "w": "0",
           "l": "0",
           "gb": "-"
         },
         {
-          "seed": 3,
+          "seed": 4,
           "name": "Chicago Bulls",
           "w": "0",
           "l": "0",
           "gb": "-"
         },
         {
-          "seed": 4,
+          "seed": 5,
           "name": "Cleveland Cavaliers",
           "w": "0",
           "l": "0",
           "gb": "-"
         },
         {
-          "seed": 5,
+          "seed": 6,
           "name": "Detroit Pistons",
           "w": "0",
           "l": "0",
           "gb": "-"
         },
         {
-          "seed": 6,
-          "name": "Indiana Pacers",
-          "w": "0",
-          "l": "0",
-          "gb": "-"
-        },
-        {
           "seed": 7,
-          "name": "Miami Heat",
+          "name": "Indiana Pacers",
           "w": "0",
           "l": "0",
           "gb": "-"
@@ -98,16 +98,16 @@
         },
         {
           "seed": 14,
-          "name": "Toronto Raptors",
+          "name": "Charlotte Hornets",
           "w": "0",
           "l": "0",
           "gb": "-"
         },
         {
           "seed": 15,
-          "name": "Charlotte Hornets",
+          "name": "Toronto Raptors",
           "w": "0",
-          "l": "0",
+          "l": "1",
           "gb": "-"
         }
       ]
@@ -224,5 +224,5 @@
     }
   ],
   "message": "",
-  "updatedAt": "2026-10-03T23:47:10.361Z"
+  "updatedAt": "2026-10-04T05:53:21.121Z"
 }
