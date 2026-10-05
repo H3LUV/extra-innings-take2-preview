@@ -11,11 +11,11 @@
       "category": "미국 현지 읽을거리",
       "readingMinutes": 4,
       "bodyVerified": true,
-      "bodyChars": 1572,
+      "bodyChars": 1568,
       "sourceWordCount": 456,
       "translationType": "full",
       "pipelineVersion": "reader-v6",
-      "translatedAt": "2026-10-05T07:07:20.989Z"
+      "translatedAt": "2026-10-05T16:05:05.212Z"
     },
     {
       "id": "nba-3319d8c1c32a",
@@ -28,11 +28,11 @@
       "category": "미국 현지 읽을거리",
       "readingMinutes": 5,
       "bodyVerified": true,
-      "bodyChars": 4352,
+      "bodyChars": 4340,
       "sourceWordCount": 1193,
       "translationType": "full",
       "pipelineVersion": "reader-v6",
-      "translatedAt": "2026-10-05T07:07:23.327Z"
+      "translatedAt": "2026-10-05T16:05:16.208Z"
     },
     {
       "id": "nba-7050328129b6",
@@ -45,28 +45,28 @@
       "category": "미국 현지 읽을거리",
       "readingMinutes": 4,
       "bodyVerified": true,
-      "bodyChars": 2473,
+      "bodyChars": 2474,
       "sourceWordCount": 750,
       "translationType": "full",
       "pipelineVersion": "reader-v6",
-      "translatedAt": "2026-10-05T07:07:25.350Z"
+      "translatedAt": "2026-10-05T16:05:23.585Z"
     },
     {
       "id": "nba-d00e004a06cb",
       "articleFile": "./data/articles/nba-d00e004a06cb.json",
       "title": "5 takeaways: Knicks begin NBA title defense at Media Day",
-      "titleKo": "5가지 시사점: 닉스가 미디어 데이에서 NBA 타이틀 방어를 시작했습니다.",
+      "titleKo": "5가지 시사점: 닉스, 미디어 데이에서 NBA 타이틀 방어 시작",
       "link": "https://www.nba.com/news/5-takeaways-new-york-knicks-media-day-2026",
       "pubDate": "2026-09-28T21:58:14Z",
       "source": "NBA.com",
       "category": "미국 현지 읽을거리",
       "readingMinutes": 6,
       "bodyVerified": true,
-      "bodyChars": 4450,
+      "bodyChars": 4445,
       "sourceWordCount": 1328,
       "translationType": "full",
       "pipelineVersion": "reader-v6",
-      "translatedAt": "2026-10-05T07:07:27.640Z"
+      "translatedAt": "2026-10-05T16:05:35.085Z"
     }
   ],
   "message": "NBA.com의 최신 일반 기사 중 제목과 본문 전체 자동 번역이 완료된 기사만 제공합니다.",
@@ -74,5 +74,5 @@
   "translationPolicy": "newest_valid_article_full_translation_keep_previous_on_failure",
   "pipelineVersion": "reader-v6",
   "selectedCount": 4,
-  "updatedAt": "2026-10-05T07:07:27.641Z"
+  "updatedAt": "2026-10-05T16:05:35.086Z"
 }

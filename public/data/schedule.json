@@ -3,76 +3,62 @@
   "status": "active",
   "games": [
     {
-      "id": "401898388",
-      "gameDate": "2026-10-05T23:00Z",
-      "status": "10/5 - 7:00 PM EDT",
-      "venue": "State Farm Arena",
+      "id": "401901820",
+      "gameDate": "2026-10-06T23:00Z",
+      "status": "10/6 - 7:00 PM EDT",
+      "venue": "Spectrum Center",
       "away": {
-        "name": "Memphis Grizzlies",
+        "name": "Brooklyn Nets",
         "score": "0"
       },
       "home": {
-        "name": "Atlanta Hawks",
+        "name": "Charlotte Hornets",
         "score": "0"
       }
     },
     {
-      "id": "401908947",
-      "gameDate": "2026-10-05T23:00Z",
-      "status": "10/5 - 7:00 PM EDT",
-      "venue": "Little Caesars Arena",
+      "id": "401898389",
+      "gameDate": "2026-10-07T00:00Z",
+      "status": "10/6 - 8:00 PM EDT",
+      "venue": "BOK Center",
       "away": {
-        "name": "Phoenix Suns",
+        "name": "New Orleans Pelicans",
         "score": "0"
       },
       "home": {
-        "name": "Detroit Pistons",
+        "name": "Oklahoma City Thunder",
         "score": "0"
       }
     },
     {
-      "id": "401914101",
-      "gameDate": "2026-10-05T23:00Z",
-      "status": "10/5 - 7:00 PM EDT",
-      "venue": "Xfinity Mobile Arena",
+      "id": "401914128",
+      "gameDate": "2026-10-07T01:00Z",
+      "status": "10/6 - 9:00 PM EDT",
+      "venue": "Delta Center",
       "away": {
-        "name": "New York Knicks",
+        "name": "Denver Nuggets",
         "score": "0"
       },
       "home": {
-        "name": "Philadelphia 76ers",
+        "name": "Utah Jazz",
         "score": "0"
       }
     },
     {
-      "id": "401914102",
-      "gameDate": "2026-10-06T00:00Z",
-      "status": "10/5 - 8:00 PM EDT",
-      "venue": "Fiserv Forum",
-      "away": {
-        "name": "Minnesota Timberwolves",
-        "score": "0"
-      },
-      "home": {
-        "name": "Milwaukee Bucks",
-        "score": "0"
-      }
-    },
-    {
-      "id": "401898716",
-      "gameDate": "2026-10-06T02:00Z",
-      "status": "10/5 - 10:00 PM EDT",
-      "venue": "Golden 1 Center",
+      "id": "401898390",
+      "gameDate": "2026-10-07T02:00Z",
+      "status": "10/6 - 10:00 PM EDT",
+      "venue": "Chase Center",
       "away": {
         "name": "Los Angeles Lakers",
         "score": "0"
       },
       "home": {
-        "name": "Sacramento Kings",
+        "name": "Golden State Warriors",
         "score": "0"
       }
     }
   ],
   "message": "",
-  "updatedAt": "2026-10-05T07:02:48.291Z"
+  "updatedAt": "2026-10-05T16:00:07.776Z"
 }
