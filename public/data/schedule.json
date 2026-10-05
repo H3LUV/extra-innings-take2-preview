@@ -1,171 +1,21 @@
 {
-  "start": "2026-10-03",
-  "end": "2026-10-05",
-  "defaultDate": "2026-10-04",
+  "start": "2026-10-04",
+  "end": "2026-10-06",
+  "defaultDate": "2026-10-05",
   "byDate": {
-    "2026-10-04": [
-      {
-        "id": 849829,
-        "status": "Final",
-        "venue": "Progressive Field",
-        "gameDate": "2026-10-03T17:00:00Z",
-        "away": {
-          "id": 145,
-          "name": "Chicago White Sox",
-          "score": 3,
-          "record": {
-            "wins": 1,
-            "losses": 0,
-            "ties": 0,
-            "pct": "1.000"
-          }
-        },
-        "home": {
-          "id": 114,
-          "name": "Cleveland Guardians",
-          "score": 0,
-          "record": {
-            "wins": 0,
-            "losses": 1,
-            "ties": 0,
-            "pct": ".000"
-          }
-        },
-        "probable": {
-          "away": "Hagen Smith",
-          "home": "Parker Messick"
-        },
-        "decisions": {
-          "winner": "Bryan Hudson",
-          "loser": "Parker Messick",
-          "save": "Grant Taylor"
-        }
-      },
-      {
-        "id": 849828,
-        "status": "Final",
-        "venue": "UNIQLO Field at Dodger Stadium",
-        "gameDate": "2026-10-03T20:00:00Z",
-        "away": {
-          "id": 144,
-          "name": "Atlanta Braves",
-          "score": 3,
-          "record": {
-            "wins": 0,
-            "losses": 1,
-            "ties": 0,
-            "pct": ".000"
-          }
-        },
-        "home": {
-          "id": 119,
-          "name": "Los Angeles Dodgers",
-          "score": 5,
-          "record": {
-            "wins": 1,
-            "losses": 0,
-            "ties": 0,
-            "pct": "1.000"
-          }
-        },
-        "probable": {
-          "away": "Dylan Dodd",
-          "home": "Tarik Skubal"
-        },
-        "decisions": {
-          "winner": "Tarik Skubal",
-          "loser": "Victor Mederos",
-          "save": "Evan Phillips"
-        }
-      },
-      {
-        "id": 849835,
-        "status": "Final",
-        "venue": "Tropicana Field",
-        "gameDate": "2026-10-03T22:30:00Z",
-        "away": {
-          "id": 147,
-          "name": "New York Yankees",
-          "score": 0,
-          "record": {
-            "wins": 0,
-            "losses": 1,
-            "ties": 0,
-            "pct": ".000"
-          }
-        },
-        "home": {
-          "id": 139,
-          "name": "Tampa Bay Rays",
-          "score": 1,
-          "record": {
-            "wins": 1,
-            "losses": 0,
-            "ties": 0,
-            "pct": "1.000"
-          }
-        },
-        "probable": {
-          "away": "Gerrit Cole",
-          "home": "Drew Rasmussen"
-        },
-        "decisions": {
-          "winner": "Drew Rasmussen",
-          "loser": "Gerrit Cole",
-          "save": "Bryan Baker"
-        }
-      },
-      {
-        "id": 849830,
-        "status": "Final",
-        "venue": "American Family Field",
-        "gameDate": "2026-10-04T00:30:00Z",
-        "away": {
-          "id": 135,
-          "name": "San Diego Padres",
-          "score": 2,
-          "record": {
-            "wins": 0,
-            "losses": 1,
-            "ties": 0,
-            "pct": ".000"
-          }
-        },
-        "home": {
-          "id": 158,
-          "name": "Milwaukee Brewers",
-          "score": 3,
-          "record": {
-            "wins": 1,
-            "losses": 0,
-            "ties": 0,
-            "pct": "1.000"
-          }
-        },
-        "probable": {
-          "away": "Robbie Ray",
-          "home": "Jacob Misiorowski"
-        },
-        "decisions": {
-          "winner": "DL Hall",
-          "loser": "Adrian Morejon",
-          "save": "Trevor Megill"
-        }
-      }
-    ],
     "2026-10-05": [
       {
         "id": 849825,
-        "status": "Scheduled",
+        "status": "Final",
         "venue": "American Family Field",
         "gameDate": "2026-10-04T20:00:00Z",
         "away": {
           "id": 135,
           "name": "San Diego Padres",
-          "score": null,
+          "score": 3,
           "record": {
             "wins": 0,
-            "losses": 1,
+            "losses": 2,
             "ties": 0,
             "pct": ".000"
           }
@@ -173,9 +23,9 @@
         "home": {
           "id": 158,
           "name": "Milwaukee Brewers",
-          "score": null,
+          "score": 4,
           "record": {
-            "wins": 1,
+            "wins": 2,
             "losses": 0,
             "ties": 0,
             "pct": "1.000"
@@ -186,20 +36,20 @@
           "home": "Logan Henderson"
         },
         "decisions": {
-          "winner": "",
-          "loser": "",
+          "winner": "Trevor Megill",
+          "loser": "Mason Miller",
           "save": ""
         }
       },
       {
         "id": 849823,
-        "status": "Scheduled",
+        "status": "In Progress",
         "venue": "UNIQLO Field at Dodger Stadium",
         "gameDate": "2026-10-05T00:00:00Z",
         "away": {
           "id": 144,
           "name": "Atlanta Braves",
-          "score": null,
+          "score": 1,
           "record": {
             "wins": 0,
             "losses": 1,
@@ -210,7 +60,7 @@
         "home": {
           "id": 119,
           "name": "Los Angeles Dodgers",
-          "score": null,
+          "score": 0,
           "record": {
             "wins": 1,
             "losses": 0,
@@ -219,7 +69,7 @@
           }
         },
         "probable": {
-          "away": "",
+          "away": "Ray Kerr",
           "home": "Blake Snell"
         },
         "decisions": {
@@ -258,7 +108,7 @@
           }
         },
         "probable": {
-          "away": "",
+          "away": "Anthony Kay",
           "home": "Gavin Williams"
         },
         "decisions": {
@@ -304,8 +154,84 @@
           "save": ""
         }
       }
+    ],
+    "2026-10-07": [
+      {
+        "id": 849819,
+        "status": "Scheduled",
+        "venue": "Truist Park",
+        "gameDate": "2026-10-06T22:00:00Z",
+        "away": {
+          "id": 119,
+          "name": "Los Angeles Dodgers",
+          "score": null,
+          "record": {
+            "wins": 1,
+            "losses": 0,
+            "ties": 0,
+            "pct": "1.000"
+          }
+        },
+        "home": {
+          "id": 144,
+          "name": "Atlanta Braves",
+          "score": null,
+          "record": {
+            "wins": 0,
+            "losses": 1,
+            "ties": 0,
+            "pct": ".000"
+          }
+        },
+        "probable": {
+          "away": "Yoshinobu Yamamoto",
+          "home": "Chris Sale"
+        },
+        "decisions": {
+          "winner": "",
+          "loser": "",
+          "save": ""
+        }
+      },
+      {
+        "id": 849826,
+        "status": "Scheduled",
+        "venue": "Petco Park",
+        "gameDate": "2026-10-07T01:30:00Z",
+        "away": {
+          "id": 158,
+          "name": "Milwaukee Brewers",
+          "score": null,
+          "record": {
+            "wins": 2,
+            "losses": 0,
+            "ties": 0,
+            "pct": "1.000"
+          }
+        },
+        "home": {
+          "id": 135,
+          "name": "San Diego Padres",
+          "score": null,
+          "record": {
+            "wins": 0,
+            "losses": 2,
+            "ties": 0,
+            "pct": ".000"
+          }
+        },
+        "probable": {
+          "away": "Dustin May",
+          "home": "Nick Pivetta"
+        },
+        "decisions": {
+          "winner": "",
+          "loser": "",
+          "save": ""
+        }
+      }
     ]
   },
-  "updatedAt": "2026-10-04T13:03:21.569Z",
+  "updatedAt": "2026-10-05T00:21:31.485Z",
   "source": "MLB Stats API"
 }
