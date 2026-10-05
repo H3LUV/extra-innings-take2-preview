@@ -9,13 +9,13 @@
       "team": "New York Mets",
       "seasonPa": 654,
       "recentPa": 28,
-      "previousPa": 60,
+      "previousPa": 55,
       "recentAvg": 0.44,
       "recentObp": 0.5,
       "recentSlg": 0.68,
       "recentOps": 1.18,
-      "previousOps": 0.834,
-      "opsDelta": 0.346
+      "previousOps": 0.85,
+      "opsDelta": 0.32999999999999996
     },
     {
       "id": 672695,
@@ -23,13 +23,13 @@
       "team": "Arizona Diamondbacks",
       "seasonPa": 680,
       "recentPa": 29,
-      "previousPa": 53,
+      "previousPa": 48,
       "recentAvg": 0.391,
       "recentObp": 0.517,
       "recentSlg": 0.609,
       "recentOps": 1.126,
-      "previousOps": 0.793,
-      "opsDelta": 0.33299999999999985
+      "previousOps": 0.808,
+      "opsDelta": 0.31799999999999984
     },
     {
       "id": 670623,
@@ -51,13 +51,13 @@
       "team": "Los Angeles Angels",
       "seasonPa": 704,
       "recentPa": 29,
-      "previousPa": 59,
+      "previousPa": 54,
       "recentAvg": 0.286,
       "recentObp": 0.483,
       "recentSlg": 0.524,
       "recentOps": 1.007,
-      "previousOps": 0.852,
-      "opsDelta": 0.15499999999999992
+      "previousOps": 0.912,
+      "opsDelta": 0.09499999999999986
     },
     {
       "id": 686527,
@@ -76,11 +76,11 @@
   ],
   "method": "시즌 180타석 이상, 최근·직전 14일 각각 28타석 이상, 최근 OPS 0.700 이상인 타자 대상. 원인이나 지속 가능성은 추론하지 않습니다.",
   "range": {
-    "recentStart": "2026-09-21",
-    "recentEnd": "2026-10-04",
-    "previousStart": "2026-09-07",
-    "previousEnd": "2026-09-20"
+    "recentStart": "2026-09-22",
+    "recentEnd": "2026-10-05",
+    "previousStart": "2026-09-08",
+    "previousEnd": "2026-09-21"
   },
-  "updatedAt": "2026-10-05T00:21:31.167Z",
+  "updatedAt": "2026-10-05T21:52:28.627Z",
   "source": "MLB Stats API"
 }
