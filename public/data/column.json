@@ -2,85 +2,14 @@
   "type": "rebound-list",
   "title": "최근 14일 반등 선수",
   "dek": "직전 14일 대비 OPS 상승폭 상위 5명",
-  "players": [
-    {
-      "id": 701807,
-      "name": "Carson Benge",
-      "team": "New York Mets",
-      "seasonPa": 654,
-      "recentPa": 28,
-      "previousPa": 55,
-      "recentAvg": 0.44,
-      "recentObp": 0.5,
-      "recentSlg": 0.68,
-      "recentOps": 1.18,
-      "previousOps": 0.85,
-      "opsDelta": 0.32999999999999996
-    },
-    {
-      "id": 672695,
-      "name": "Geraldo Perdomo",
-      "team": "Arizona Diamondbacks",
-      "seasonPa": 680,
-      "recentPa": 29,
-      "previousPa": 48,
-      "recentAvg": 0.391,
-      "recentObp": 0.517,
-      "recentSlg": 0.609,
-      "recentOps": 1.126,
-      "previousOps": 0.808,
-      "opsDelta": 0.31799999999999984
-    },
-    {
-      "id": 670623,
-      "name": "Isaac Paredes",
-      "team": "Houston Astros",
-      "seasonPa": 659,
-      "recentPa": 28,
-      "previousPa": 49,
-      "recentAvg": 0.304,
-      "recentObp": 0.393,
-      "recentSlg": 0.739,
-      "recentOps": 1.132,
-      "previousOps": 0.962,
-      "opsDelta": 0.16999999999999993
-    },
-    {
-      "id": 687263,
-      "name": "Zach Neto",
-      "team": "Los Angeles Angels",
-      "seasonPa": 704,
-      "recentPa": 29,
-      "previousPa": 54,
-      "recentAvg": 0.286,
-      "recentObp": 0.483,
-      "recentSlg": 0.524,
-      "recentOps": 1.007,
-      "previousOps": 0.912,
-      "opsDelta": 0.09499999999999986
-    },
-    {
-      "id": 686527,
-      "name": "Dominic Canzone",
-      "team": "Seattle Mariners",
-      "seasonPa": 533,
-      "recentPa": 28,
-      "previousPa": 53,
-      "recentAvg": 0.32,
-      "recentObp": 0.393,
-      "recentSlg": 0.48,
-      "recentOps": 0.873,
-      "previousOps": 0.93,
-      "opsDelta": -0.05700000000000005
-    }
-  ],
+  "players": [],
   "method": "시즌 180타석 이상, 최근·직전 14일 각각 28타석 이상, 최근 OPS 0.700 이상인 타자 대상. 원인이나 지속 가능성은 추론하지 않습니다.",
   "range": {
-    "recentStart": "2026-09-22",
-    "recentEnd": "2026-10-05",
-    "previousStart": "2026-09-08",
-    "previousEnd": "2026-09-21"
+    "recentStart": "2026-09-23",
+    "recentEnd": "2026-10-06",
+    "previousStart": "2026-09-09",
+    "previousEnd": "2026-09-22"
   },
-  "updatedAt": "2026-10-06T02:00:03.064Z",
+  "updatedAt": "2026-10-06T20:02:38.311Z",
   "source": "MLB Stats API"
 }
