@@ -43,16 +43,16 @@
       },
       {
         "id": 849839,
-        "status": "In Progress",
+        "status": "Final",
         "venue": "Tropicana Field",
         "gameDate": "2026-10-06T00:00:00Z",
         "away": {
           "id": 147,
           "name": "New York Yankees",
-          "score": 1,
+          "score": 2,
           "record": {
             "wins": 0,
-            "losses": 1,
+            "losses": 2,
             "ties": 0,
             "pct": ".000"
           }
@@ -60,9 +60,9 @@
         "home": {
           "id": 139,
           "name": "Tampa Bay Rays",
-          "score": 3,
+          "score": 5,
           "record": {
-            "wins": 1,
+            "wins": 2,
             "losses": 0,
             "ties": 0,
             "pct": "1.000"
@@ -73,9 +73,9 @@
           "home": "Freddy Peralta"
         },
         "decisions": {
-          "winner": "",
-          "loser": "",
-          "save": ""
+          "winner": "Cam Booser",
+          "loser": "Cam Schlittler",
+          "save": "Bryan Baker"
         }
       }
     ],
@@ -240,7 +240,7 @@
           "name": "Tampa Bay Rays",
           "score": null,
           "record": {
-            "wins": 1,
+            "wins": 2,
             "losses": 0,
             "ties": 0,
             "pct": "1.000"
@@ -252,13 +252,13 @@
           "score": null,
           "record": {
             "wins": 0,
-            "losses": 1,
+            "losses": 2,
             "ties": 0,
             "pct": ".000"
           }
         },
         "probable": {
-          "away": "",
+          "away": "Nick Martinez",
           "home": "Max Fried"
         },
         "decisions": {
@@ -306,6 +306,6 @@
       }
     ]
   },
-  "updatedAt": "2026-10-06T02:00:03.322Z",
+  "updatedAt": "2026-10-06T13:42:51.327Z",
   "source": "MLB Stats API"
 }
