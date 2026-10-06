@@ -3,26 +3,40 @@
   "status": "active",
   "games": [
     {
-      "id": "401901820",
-      "gameDate": "2026-10-06T23:00Z",
-      "status": "10/6 - 7:00 PM EDT",
-      "venue": "Spectrum Center",
+      "id": "401914123",
+      "gameDate": "2026-10-07T23:00Z",
+      "status": "10/7 - 7:00 PM EDT",
+      "venue": "Hilton Coliseum",
       "away": {
-        "name": "Brooklyn Nets",
+        "name": "Minnesota Timberwolves",
         "score": "0"
       },
       "home": {
-        "name": "Charlotte Hornets",
+        "name": "Indiana Pacers",
         "score": "0"
       }
     },
     {
-      "id": "401898389",
-      "gameDate": "2026-10-07T00:00Z",
-      "status": "10/6 - 8:00 PM EDT",
-      "venue": "BOK Center",
+      "id": "401898391",
+      "gameDate": "2026-10-08T00:00Z",
+      "status": "10/7 - 8:00 PM EDT",
+      "venue": "FedExForum",
       "away": {
-        "name": "New Orleans Pelicans",
+        "name": "Orlando Magic",
+        "score": "0"
+      },
+      "home": {
+        "name": "Memphis Grizzlies",
+        "score": "0"
+      }
+    },
+    {
+      "id": "401908620",
+      "gameDate": "2026-10-08T00:00Z",
+      "status": "10/7 - 8:00 PM EDT",
+      "venue": "Paycom Center",
+      "away": {
+        "name": "Milwaukee Bucks",
         "score": "0"
       },
       "home": {
@@ -31,34 +45,34 @@
       }
     },
     {
-      "id": "401914128",
-      "gameDate": "2026-10-07T01:00Z",
-      "status": "10/6 - 9:00 PM EDT",
-      "venue": "Delta Center",
+      "id": "401908939",
+      "gameDate": "2026-10-08T00:00Z",
+      "status": "10/7 - 8:00 PM EDT",
+      "venue": "United Center",
       "away": {
-        "name": "Denver Nuggets",
+        "name": "Phoenix Suns",
         "score": "0"
       },
       "home": {
-        "name": "Utah Jazz",
+        "name": "Chicago Bulls",
         "score": "0"
       }
     },
     {
-      "id": "401898390",
-      "gameDate": "2026-10-07T02:00Z",
-      "status": "10/6 - 10:00 PM EDT",
-      "venue": "Chase Center",
+      "id": "401914129",
+      "gameDate": "2026-10-08T02:00Z",
+      "status": "10/7 - 10:00 PM EDT",
+      "venue": "Moda Center",
       "away": {
-        "name": "Los Angeles Lakers",
+        "name": "Golden State Warriors",
         "score": "0"
       },
       "home": {
-        "name": "Golden State Warriors",
+        "name": "Portland Trail Blazers",
         "score": "0"
       }
     }
   ],
   "message": "",
-  "updatedAt": "2026-10-06T10:17:45.503Z"
+  "updatedAt": "2026-10-06T17:10:56.626Z"
 }
