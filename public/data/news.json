@@ -1,6 +1,40 @@
 {
   "items": [
     {
+      "id": "mlb-cc8c153f0623",
+      "articleFile": "./data/articles/mlb-cc8c153f0623.json",
+      "title": "Members Only Game Thread: ALDS - Oct 5, 2026",
+      "titleKo": "회원 전용 게임 스레드: ALDS - 2026년 10월 5일",
+      "link": "https://blogs.fangraphs.com/members-only-game-thread-alds-oct-5-2026/",
+      "pubDate": "2026-10-05T20:30:34+00:00",
+      "source": "FanGraphs",
+      "category": "미국 현지 읽을거리",
+      "readingMinutes": 4,
+      "bodyVerified": true,
+      "bodyChars": 3358,
+      "sourceWordCount": 946,
+      "translationType": "full",
+      "pipelineVersion": "reader-v6",
+      "translatedAt": "2026-10-06T02:19:42.966Z"
+    },
+    {
+      "id": "mlb-0e3ece1cce4f",
+      "articleFile": "./data/articles/mlb-0e3ece1cce4f.json",
+      "title": "No Past, No Future: Atlanta’s Chris Sale Strategy, Examined",
+      "titleKo": "과거도 없고 미래도 없다: 애틀랜타의 크리스 세일 전략 조사",
+      "link": "https://blogs.fangraphs.com/no-past-no-future-atlantas-chris-sale-strategy-examined/",
+      "pubDate": "2026-10-05T18:55:47+00:00",
+      "source": "FanGraphs",
+      "category": "미국 현지 읽을거리",
+      "readingMinutes": 7,
+      "bodyVerified": true,
+      "bodyChars": 4351,
+      "sourceWordCount": 1433,
+      "translationType": "full",
+      "pipelineVersion": "reader-v6",
+      "translatedAt": "2026-10-06T02:20:00.345Z"
+    },
+    {
       "id": "mlb-c305690d3ad2",
       "articleFile": "./data/articles/mlb-c305690d3ad2.json",
       "title": "The Brewers and Padres Made the Entire Game Out of High-Leverage Innings",
@@ -33,40 +67,6 @@
       "translationType": "full",
       "pipelineVersion": "reader-v6",
       "translatedAt": "2026-10-05T00:58:36.182Z"
-    },
-    {
-      "id": "mlb-b4af17695729",
-      "articleFile": "./data/articles/mlb-b4af17695729.json",
-      "title": "Drew Rasmussen Does Very Rude Things to the Yankees in ALDS Game 1",
-      "titleKo": "Drew Rasmussen은 ALDS 게임 1에서 양키스에게 매우 무례한 행동을 했습니다.",
-      "link": "https://blogs.fangraphs.com/drew-rasmussen-does-very-rude-things-to-the-yankees-in-alds-game-1/",
-      "pubDate": "2026-10-04T05:20:50+00:00",
-      "source": "FanGraphs",
-      "category": "미국 현지 읽을거리",
-      "readingMinutes": 8,
-      "bodyVerified": true,
-      "bodyChars": 5572,
-      "sourceWordCount": 1721,
-      "translationType": "full",
-      "pipelineVersion": "reader-v6",
-      "translatedAt": "2026-10-05T00:58:59.146Z"
-    },
-    {
-      "id": "mlb-f566e409e21c",
-      "articleFile": "./data/articles/mlb-f566e409e21c.json",
-      "title": "Skubal Shoves, Teoscar Slugs: Dodgers Out-Homer Braves in NLDS Game 1",
-      "titleKo": "Skubal Shoves, Teoscar Slugs: NLDS 게임 1의 다저스 아웃홈 브레이브스",
-      "link": "https://blogs.fangraphs.com/skubal-shoves-teoscar-slugs-dodgers-out-homer-braves-in-nlds-game-1/",
-      "pubDate": "2026-10-04T00:50:57+00:00",
-      "source": "FanGraphs",
-      "category": "미국 현지 읽을거리",
-      "readingMinutes": 4,
-      "bodyVerified": true,
-      "bodyChars": 2617,
-      "sourceWordCount": 769,
-      "translationType": "full",
-      "pipelineVersion": "reader-v6",
-      "translatedAt": "2026-10-05T00:59:15.026Z"
     }
   ],
   "message": "미국 현지 기사 중 광고·회원가입 문구를 제거하고 제목과 본문 전체 자동 번역이 완료된 기사만 제공합니다.",
@@ -74,5 +74,5 @@
   "translationPolicy": "clean_full_translation_keep_previous_on_failure",
   "pipelineVersion": "reader-v6",
   "selectedCount": 4,
-  "updatedAt": "2026-10-05T00:59:15.027Z"
+  "updatedAt": "2026-10-06T02:20:38.988Z"
 }
