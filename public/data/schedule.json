@@ -6,15 +6,15 @@
     "2026-10-06": [
       {
         "id": 849834,
-        "status": "Scheduled",
+        "status": "Final",
         "venue": "Progressive Field",
         "gameDate": "2026-10-05T21:00:00Z",
         "away": {
           "id": 145,
           "name": "Chicago White Sox",
-          "score": null,
+          "score": 4,
           "record": {
-            "wins": 1,
+            "wins": 2,
             "losses": 0,
             "ties": 0,
             "pct": "1.000"
@@ -23,10 +23,10 @@
         "home": {
           "id": 114,
           "name": "Cleveland Guardians",
-          "score": null,
+          "score": 3,
           "record": {
             "wins": 0,
-            "losses": 1,
+            "losses": 2,
             "ties": 0,
             "pct": ".000"
           }
@@ -36,20 +36,20 @@
           "home": "Gavin Williams"
         },
         "decisions": {
-          "winner": "",
-          "loser": "",
-          "save": ""
+          "winner": "Sean Burke",
+          "loser": "Erik Sabrowski",
+          "save": "Grant Taylor"
         }
       },
       {
         "id": 849839,
-        "status": "Scheduled",
+        "status": "In Progress",
         "venue": "Tropicana Field",
         "gameDate": "2026-10-06T00:00:00Z",
         "away": {
           "id": 147,
           "name": "New York Yankees",
-          "score": null,
+          "score": 1,
           "record": {
             "wins": 0,
             "losses": 1,
@@ -60,7 +60,7 @@
         "home": {
           "id": 139,
           "name": "Tampa Bay Rays",
-          "score": null,
+          "score": 3,
           "record": {
             "wins": 1,
             "losses": 0,
@@ -167,7 +167,7 @@
           "score": null,
           "record": {
             "wins": 0,
-            "losses": 1,
+            "losses": 2,
             "ties": 0,
             "pct": ".000"
           }
@@ -177,7 +177,7 @@
           "name": "Chicago White Sox",
           "score": null,
           "record": {
-            "wins": 1,
+            "wins": 2,
             "losses": 0,
             "ties": 0,
             "pct": "1.000"
@@ -259,7 +259,7 @@
         },
         "probable": {
           "away": "",
-          "home": ""
+          "home": "Max Fried"
         },
         "decisions": {
           "winner": "",
@@ -306,6 +306,6 @@
       }
     ]
   },
-  "updatedAt": "2026-10-05T15:35:35.899Z",
+  "updatedAt": "2026-10-06T02:00:03.322Z",
   "source": "MLB Stats API"
 }
