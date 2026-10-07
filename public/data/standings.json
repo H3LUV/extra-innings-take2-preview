@@ -28,35 +28,35 @@
         },
         {
           "seed": 4,
+          "name": "Brooklyn Nets",
+          "w": "1",
+          "l": "0",
+          "gb": "-"
+        },
+        {
+          "seed": 5,
           "name": "Boston Celtics",
           "w": "0",
           "l": "0",
           "gb": "-"
         },
         {
-          "seed": 5,
+          "seed": 6,
           "name": "Chicago Bulls",
           "w": "0",
           "l": "0",
           "gb": "-"
         },
         {
-          "seed": 6,
+          "seed": 7,
           "name": "Cleveland Cavaliers",
           "w": "0",
           "l": "0",
           "gb": "-"
         },
         {
-          "seed": 7,
-          "name": "Indiana Pacers",
-          "w": "0",
-          "l": "0",
-          "gb": "-"
-        },
-        {
           "seed": 8,
-          "name": "Brooklyn Nets",
+          "name": "Indiana Pacers",
           "w": "0",
           "l": "0",
           "gb": "-"
@@ -77,35 +77,35 @@
         },
         {
           "seed": 11,
-          "name": "Charlotte Hornets",
-          "w": "0",
-          "l": "0",
-          "gb": "-"
-        },
-        {
-          "seed": 12,
           "name": "Atlanta Hawks",
           "w": "0",
           "l": "1",
           "gb": "-"
         },
         {
-          "seed": 13,
+          "seed": 12,
           "name": "Milwaukee Bucks",
           "w": "0",
           "l": "1",
           "gb": "-"
         },
         {
-          "seed": 14,
+          "seed": 13,
           "name": "New York Knicks",
           "w": "0",
           "l": "1",
           "gb": "-"
         },
         {
-          "seed": 15,
+          "seed": 14,
           "name": "Toronto Raptors",
+          "w": "0",
+          "l": "1",
+          "gb": "-"
+        },
+        {
+          "seed": 15,
+          "name": "Charlotte Hornets",
           "w": "0",
           "l": "1",
           "gb": "-"
@@ -117,98 +117,98 @@
       "teams": [
         {
           "seed": 1,
-          "name": "Los Angeles Lakers",
-          "w": "1",
-          "l": "0",
-          "gb": "-"
-        },
-        {
-          "seed": 2,
           "name": "Minnesota Timberwolves",
           "w": "1",
           "l": "0",
           "gb": "-"
         },
         {
-          "seed": 3,
-          "name": "Utah Jazz",
-          "w": "1",
-          "l": "0",
-          "gb": "-"
-        },
-        {
-          "seed": 4,
+          "seed": 2,
           "name": "Memphis Grizzlies",
           "w": "1",
           "l": "0",
           "gb": "-"
         },
         {
-          "seed": 5,
+          "seed": 3,
           "name": "LA Clippers",
           "w": "1",
           "l": "0",
           "gb": "-"
         },
         {
-          "seed": 6,
+          "seed": 4,
           "name": "New Orleans Pelicans",
-          "w": "0",
+          "w": "1",
           "l": "0",
           "gb": "-"
         },
         {
+          "seed": 5,
+          "name": "Golden State Warriors",
+          "w": "1",
+          "l": "1",
+          "gb": "-"
+        },
+        {
+          "seed": 6,
+          "name": "Utah Jazz",
+          "w": "1",
+          "l": "1",
+          "gb": "-"
+        },
+        {
           "seed": 7,
+          "name": "Denver Nuggets",
+          "w": "1",
+          "l": "1",
+          "gb": "-"
+        },
+        {
+          "seed": 8,
+          "name": "Los Angeles Lakers",
+          "w": "1",
+          "l": "1",
+          "gb": "-"
+        },
+        {
+          "seed": 9,
           "name": "Dallas Mavericks",
           "w": "0",
           "l": "0",
           "gb": "-"
         },
         {
-          "seed": 8,
+          "seed": 10,
           "name": "Houston Rockets",
           "w": "0",
           "l": "0",
           "gb": "-"
         },
         {
-          "seed": 9,
+          "seed": 11,
           "name": "Portland Trail Blazers",
           "w": "0",
           "l": "0",
           "gb": "-"
         },
         {
-          "seed": 10,
+          "seed": 12,
           "name": "San Antonio Spurs",
           "w": "0",
           "l": "0",
           "gb": "-"
         },
         {
-          "seed": 11,
-          "name": "Oklahoma City Thunder",
-          "w": "0",
-          "l": "0",
-          "gb": "-"
-        },
-        {
-          "seed": 12,
+          "seed": 13,
           "name": "Phoenix Suns",
           "w": "0",
           "l": "1",
           "gb": "-"
         },
         {
-          "seed": 13,
-          "name": "Golden State Warriors",
-          "w": "0",
-          "l": "1",
-          "gb": "-"
-        },
-        {
           "seed": 14,
-          "name": "Denver Nuggets",
+          "name": "Oklahoma City Thunder",
           "w": "0",
           "l": "1",
           "gb": "-"
@@ -224,5 +224,5 @@
     }
   ],
   "message": "",
-  "updatedAt": "2026-10-07T01:32:07.596Z"
+  "updatedAt": "2026-10-07T08:39:00.555Z"
 }
