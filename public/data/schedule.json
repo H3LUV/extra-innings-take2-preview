@@ -1,110 +1,34 @@
 {
-  "start": "2026-10-05",
-  "end": "2026-10-07",
-  "defaultDate": "2026-10-06",
+  "start": "2026-10-06",
+  "end": "2026-10-08",
+  "defaultDate": "2026-10-07",
   "byDate": {
-    "2026-10-06": [
-      {
-        "id": 849834,
-        "status": "Final",
-        "venue": "Progressive Field",
-        "gameDate": "2026-10-05T21:00:00Z",
-        "away": {
-          "id": 145,
-          "name": "Chicago White Sox",
-          "score": 4,
-          "record": {
-            "wins": 2,
-            "losses": 0,
-            "ties": 0,
-            "pct": "1.000"
-          }
-        },
-        "home": {
-          "id": 114,
-          "name": "Cleveland Guardians",
-          "score": 3,
-          "record": {
-            "wins": 0,
-            "losses": 2,
-            "ties": 0,
-            "pct": ".000"
-          }
-        },
-        "probable": {
-          "away": "Anthony Kay",
-          "home": "Gavin Williams"
-        },
-        "decisions": {
-          "winner": "Sean Burke",
-          "loser": "Erik Sabrowski",
-          "save": "Grant Taylor"
-        }
-      },
-      {
-        "id": 849839,
-        "status": "Final",
-        "venue": "Tropicana Field",
-        "gameDate": "2026-10-06T00:00:00Z",
-        "away": {
-          "id": 147,
-          "name": "New York Yankees",
-          "score": 2,
-          "record": {
-            "wins": 0,
-            "losses": 2,
-            "ties": 0,
-            "pct": ".000"
-          }
-        },
-        "home": {
-          "id": 139,
-          "name": "Tampa Bay Rays",
-          "score": 5,
-          "record": {
-            "wins": 2,
-            "losses": 0,
-            "ties": 0,
-            "pct": "1.000"
-          }
-        },
-        "probable": {
-          "away": "Cam Schlittler",
-          "home": "Freddy Peralta"
-        },
-        "decisions": {
-          "winner": "Cam Booser",
-          "loser": "Cam Schlittler",
-          "save": "Bryan Baker"
-        }
-      }
-    ],
     "2026-10-07": [
       {
         "id": 849819,
-        "status": "Scheduled",
+        "status": "Game Over",
         "venue": "Truist Park",
         "gameDate": "2026-10-06T22:00:00Z",
         "away": {
           "id": 119,
           "name": "Los Angeles Dodgers",
-          "score": null,
+          "score": 3,
           "record": {
-            "wins": 1,
+            "wins": 2,
             "losses": 1,
             "ties": 0,
-            "pct": ".500"
+            "pct": ".667"
           }
         },
         "home": {
           "id": 144,
           "name": "Atlanta Braves",
-          "score": null,
+          "score": 1,
           "record": {
             "wins": 1,
-            "losses": 1,
+            "losses": 2,
             "ties": 0,
-            "pct": ".500"
+            "pct": ".333"
           }
         },
         "probable": {
@@ -112,20 +36,20 @@
           "home": "Chris Sale"
         },
         "decisions": {
-          "winner": "",
-          "loser": "",
-          "save": ""
+          "winner": "Yoshinobu Yamamoto",
+          "loser": "Chris Sale",
+          "save": "Edwin Díaz"
         }
       },
       {
         "id": 849826,
-        "status": "Scheduled",
+        "status": "Pre-Game",
         "venue": "Petco Park",
         "gameDate": "2026-10-07T01:30:00Z",
         "away": {
           "id": 158,
           "name": "Milwaukee Brewers",
-          "score": null,
+          "score": 0,
           "record": {
             "wins": 2,
             "losses": 0,
@@ -136,7 +60,7 @@
         "home": {
           "id": 135,
           "name": "San Diego Padres",
-          "score": null,
+          "score": 0,
           "record": {
             "wins": 0,
             "losses": 2,
@@ -184,8 +108,8 @@
           }
         },
         "probable": {
-          "away": "",
-          "home": ""
+          "away": "Daniel Espino",
+          "home": "Sean Newcomb"
         },
         "decisions": {
           "winner": "",
@@ -203,10 +127,10 @@
           "name": "Los Angeles Dodgers",
           "score": null,
           "record": {
-            "wins": 1,
+            "wins": 2,
             "losses": 1,
             "ties": 0,
-            "pct": ".500"
+            "pct": ".667"
           }
         },
         "home": {
@@ -215,14 +139,14 @@
           "score": null,
           "record": {
             "wins": 1,
-            "losses": 1,
+            "losses": 2,
             "ties": 0,
-            "pct": ".500"
+            "pct": ".333"
           }
         },
         "probable": {
-          "away": "",
-          "home": ""
+          "away": "Tyler Glasnow",
+          "home": "Tyler Mahle"
         },
         "decisions": {
           "winner": "",
@@ -304,8 +228,84 @@
           "save": ""
         }
       }
+    ],
+    "2026-10-09": [
+      {
+        "id": 849832,
+        "status": "Scheduled",
+        "venue": "Rate Field",
+        "gameDate": "2026-10-08T21:00:00Z",
+        "away": {
+          "id": 114,
+          "name": "Cleveland Guardians",
+          "score": null,
+          "record": {
+            "wins": 0,
+            "losses": 2,
+            "ties": 0,
+            "pct": ".000"
+          }
+        },
+        "home": {
+          "id": 145,
+          "name": "Chicago White Sox",
+          "score": null,
+          "record": {
+            "wins": 2,
+            "losses": 0,
+            "ties": 0,
+            "pct": "1.000"
+          }
+        },
+        "probable": {
+          "away": "",
+          "home": ""
+        },
+        "decisions": {
+          "winner": "",
+          "loser": "",
+          "save": ""
+        }
+      },
+      {
+        "id": 849837,
+        "status": "Scheduled",
+        "venue": "Yankee Stadium",
+        "gameDate": "2026-10-09T00:00:00Z",
+        "away": {
+          "id": 139,
+          "name": "Tampa Bay Rays",
+          "score": null,
+          "record": {
+            "wins": 2,
+            "losses": 0,
+            "ties": 0,
+            "pct": "1.000"
+          }
+        },
+        "home": {
+          "id": 147,
+          "name": "New York Yankees",
+          "score": null,
+          "record": {
+            "wins": 0,
+            "losses": 2,
+            "ties": 0,
+            "pct": ".000"
+          }
+        },
+        "probable": {
+          "away": "",
+          "home": "Carlos Rodón"
+        },
+        "decisions": {
+          "winner": "",
+          "loser": "",
+          "save": ""
+        }
+      }
     ]
   },
-  "updatedAt": "2026-10-06T13:57:02.722Z",
+  "updatedAt": "2026-10-07T01:09:46.063Z",
   "source": "MLB Stats API"
 }
