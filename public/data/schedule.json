@@ -3,76 +3,90 @@
   "status": "active",
   "games": [
     {
-      "id": "401914123",
-      "gameDate": "2026-10-07T23:00Z",
-      "status": "10/7 - 7:00 PM EDT",
-      "venue": "Hilton Coliseum",
+      "id": "401898392",
+      "gameDate": "2026-10-08T23:00Z",
+      "status": "10/8 - 7:00 PM EDT",
+      "venue": "Rocket Arena",
       "away": {
-        "name": "Minnesota Timberwolves",
+        "name": "Boston Celtics",
         "score": "0"
       },
       "home": {
-        "name": "Indiana Pacers",
+        "name": "Cleveland Cavaliers",
         "score": "0"
       }
     },
     {
-      "id": "401898391",
-      "gameDate": "2026-10-08T00:00Z",
-      "status": "10/7 - 8:00 PM EDT",
-      "venue": "FedExForum",
+      "id": "401898393",
+      "gameDate": "2026-10-08T23:30Z",
+      "status": "10/8 - 7:30 PM EDT",
+      "venue": "Kaseya Center",
       "away": {
-        "name": "Orlando Magic",
+        "name": "New Orleans Pelicans",
         "score": "0"
       },
       "home": {
-        "name": "Memphis Grizzlies",
+        "name": "Miami Heat",
         "score": "0"
       }
     },
     {
-      "id": "401908620",
-      "gameDate": "2026-10-08T00:00Z",
-      "status": "10/7 - 8:00 PM EDT",
-      "venue": "Paycom Center",
+      "id": "401901823",
+      "gameDate": "2026-10-08T23:30Z",
+      "status": "10/8 - 7:30 PM EDT",
+      "venue": "Barclays Center",
       "away": {
-        "name": "Milwaukee Bucks",
+        "name": "Philadelphia 76ers",
         "score": "0"
       },
       "home": {
-        "name": "Oklahoma City Thunder",
+        "name": "Brooklyn Nets",
         "score": "0"
       }
     },
     {
-      "id": "401908939",
-      "gameDate": "2026-10-08T00:00Z",
-      "status": "10/7 - 8:00 PM EDT",
-      "venue": "United Center",
+      "id": "401906508",
+      "gameDate": "2026-10-08T23:30Z",
+      "status": "10/8 - 7:30 PM EDT",
+      "venue": "Madison Square Garden",
       "away": {
-        "name": "Phoenix Suns",
+        "name": "Washington Wizards",
         "score": "0"
       },
       "home": {
-        "name": "Chicago Bulls",
+        "name": "New York Knicks",
         "score": "0"
       }
     },
     {
-      "id": "401914129",
-      "gameDate": "2026-10-08T02:00Z",
-      "status": "10/7 - 10:00 PM EDT",
-      "venue": "Moda Center",
+      "id": "401898394",
+      "gameDate": "2026-10-09T00:00Z",
+      "status": "10/8 - 8:00 PM EDT",
+      "venue": "Frost Bank Center",
       "away": {
-        "name": "Golden State Warriors",
+        "name": "Atlanta Hawks",
         "score": "0"
       },
       "home": {
-        "name": "Portland Trail Blazers",
+        "name": "San Antonio Spurs",
+        "score": "0"
+      }
+    },
+    {
+      "id": "401898717",
+      "gameDate": "2026-10-09T02:30Z",
+      "status": "10/8 - 10:30 PM EDT",
+      "venue": "crypto.com Arena",
+      "away": {
+        "name": "Sacramento Kings",
+        "score": "0"
+      },
+      "home": {
+        "name": "Los Angeles Lakers",
         "score": "0"
       }
     }
   ],
   "message": "",
-  "updatedAt": "2026-10-07T08:39:00.555Z"
+  "updatedAt": "2026-10-07T16:28:25.022Z"
 }
