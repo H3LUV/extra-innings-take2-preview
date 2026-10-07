@@ -6,7 +6,7 @@
     "2026-10-07": [
       {
         "id": 849819,
-        "status": "Game Over",
+        "status": "Final",
         "venue": "Truist Park",
         "gameDate": "2026-10-06T22:00:00Z",
         "away": {
@@ -43,29 +43,29 @@
       },
       {
         "id": 849826,
-        "status": "Pre-Game",
+        "status": "Final",
         "venue": "Petco Park",
         "gameDate": "2026-10-07T01:30:00Z",
         "away": {
           "id": 158,
           "name": "Milwaukee Brewers",
-          "score": 0,
+          "score": 3,
           "record": {
             "wins": 2,
-            "losses": 0,
+            "losses": 1,
             "ties": 0,
-            "pct": "1.000"
+            "pct": ".667"
           }
         },
         "home": {
           "id": 135,
           "name": "San Diego Padres",
-          "score": 0,
+          "score": 4,
           "record": {
-            "wins": 0,
+            "wins": 1,
             "losses": 2,
             "ties": 0,
-            "pct": ".000"
+            "pct": ".333"
           }
         },
         "probable": {
@@ -73,9 +73,9 @@
           "home": "Nick Pivetta"
         },
         "decisions": {
-          "winner": "",
-          "loser": "",
-          "save": ""
+          "winner": "Yuki Matsui",
+          "loser": "JoJo Romero",
+          "save": "Michael King"
         }
       }
     ],
@@ -202,9 +202,9 @@
           "score": null,
           "record": {
             "wins": 2,
-            "losses": 0,
+            "losses": 1,
             "ties": 0,
-            "pct": "1.000"
+            "pct": ".667"
           }
         },
         "home": {
@@ -212,15 +212,15 @@
           "name": "San Diego Padres",
           "score": null,
           "record": {
-            "wins": 0,
+            "wins": 1,
             "losses": 2,
             "ties": 0,
-            "pct": ".000"
+            "pct": ".333"
           }
         },
         "probable": {
           "away": "",
-          "home": ""
+          "home": "Walker Buehler"
         },
         "decisions": {
           "winner": "",
@@ -306,6 +306,6 @@
       }
     ]
   },
-  "updatedAt": "2026-10-07T01:09:46.063Z",
+  "updatedAt": "2026-10-07T14:01:22.192Z",
   "source": "MLB Stats API"
 }
