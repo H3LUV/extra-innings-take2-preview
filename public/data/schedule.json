@@ -3,90 +3,34 @@
   "status": "active",
   "games": [
     {
-      "id": "401898392",
-      "gameDate": "2026-10-08T23:00Z",
-      "status": "10/8 - 7:00 PM EDT",
-      "venue": "Rocket Arena",
+      "id": "401898395",
+      "gameDate": "2026-10-09T12:00Z",
+      "status": "10/9 - 8:00 AM EDT",
+      "venue": "Venetian Arena",
       "away": {
-        "name": "Boston Celtics",
+        "name": "Houston Rockets",
         "score": "0"
       },
       "home": {
-        "name": "Cleveland Cavaliers",
+        "name": "Dallas Mavericks",
         "score": "0"
       }
     },
     {
-      "id": "401898393",
-      "gameDate": "2026-10-08T23:30Z",
-      "status": "10/8 - 7:30 PM EDT",
-      "venue": "Kaseya Center",
+      "id": "401908940",
+      "gameDate": "2026-10-10T00:00Z",
+      "status": "10/9 - 8:00 PM EDT",
+      "venue": "United Center",
       "away": {
-        "name": "New Orleans Pelicans",
+        "name": "Memphis Grizzlies",
         "score": "0"
       },
       "home": {
-        "name": "Miami Heat",
-        "score": "0"
-      }
-    },
-    {
-      "id": "401901823",
-      "gameDate": "2026-10-08T23:30Z",
-      "status": "10/8 - 7:30 PM EDT",
-      "venue": "Barclays Center",
-      "away": {
-        "name": "Philadelphia 76ers",
-        "score": "0"
-      },
-      "home": {
-        "name": "Brooklyn Nets",
-        "score": "0"
-      }
-    },
-    {
-      "id": "401906508",
-      "gameDate": "2026-10-08T23:30Z",
-      "status": "10/8 - 7:30 PM EDT",
-      "venue": "Madison Square Garden",
-      "away": {
-        "name": "Washington Wizards",
-        "score": "0"
-      },
-      "home": {
-        "name": "New York Knicks",
-        "score": "0"
-      }
-    },
-    {
-      "id": "401898394",
-      "gameDate": "2026-10-09T00:00Z",
-      "status": "10/8 - 8:00 PM EDT",
-      "venue": "Frost Bank Center",
-      "away": {
-        "name": "Atlanta Hawks",
-        "score": "0"
-      },
-      "home": {
-        "name": "San Antonio Spurs",
-        "score": "0"
-      }
-    },
-    {
-      "id": "401898717",
-      "gameDate": "2026-10-09T02:30Z",
-      "status": "10/8 - 10:30 PM EDT",
-      "venue": "crypto.com Arena",
-      "away": {
-        "name": "Sacramento Kings",
-        "score": "0"
-      },
-      "home": {
-        "name": "Los Angeles Lakers",
+        "name": "Chicago Bulls",
         "score": "0"
       }
     }
   ],
   "message": "",
-  "updatedAt": "2026-10-08T08:58:05.103Z"
+  "updatedAt": "2026-10-08T16:28:33.019Z"
 }

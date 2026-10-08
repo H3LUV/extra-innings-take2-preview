@@ -1,21 +1,21 @@
 {
   "items": [
     {
-      "id": "nba-b113cac10c24",
-      "articleFile": "./data/articles/nba-b113cac10c24.json",
-      "title": "The Athletic: JJ Redick believes the Lakers will be a ‘championship-level’ team. Is he right?",
-      "titleKo": "The Athletic: JJ Redick은 레이커스가 '챔피언십 수준' 팀이 될 것이라고 믿습니다. 그 사람 맞나요?",
-      "link": "https://www.nba.com/news/jj-redick-lakers-championship-case-2026-27",
-      "pubDate": "2026-10-07T16:36:21Z",
+      "id": "nba-d7b8f31ffe7f",
+      "articleFile": "./data/articles/nba-d7b8f31ffe7f.json",
+      "title": "Starting 5: Comeback players return, NBA China Games preview",
+      "titleKo": "스타팅 5: 복귀 선수 복귀, NBA 중국 게임 미리보기",
+      "link": "https://www.nba.com/news/starting-5-october-8-2026",
+      "pubDate": "2026-10-08T14:11:13Z",
       "source": "NBA.com",
       "category": "미국 현지 읽을거리",
-      "readingMinutes": 7,
+      "readingMinutes": 10,
       "bodyVerified": true,
-      "bodyChars": 4718,
-      "sourceWordCount": 1473,
+      "bodyChars": 8220,
+      "sourceWordCount": 2116,
       "translationType": "full",
       "pipelineVersion": "reader-v6",
-      "translatedAt": "2026-10-08T09:03:26.824Z"
+      "translatedAt": "2026-10-08T16:34:29.744Z"
     },
     {
       "id": "nba-d45dc6422d50",
@@ -28,11 +28,11 @@
       "category": "미국 현지 읽을거리",
       "readingMinutes": 4,
       "bodyVerified": true,
-      "bodyChars": 735,
+      "bodyChars": 737,
       "sourceWordCount": 242,
       "translationType": "full",
       "pipelineVersion": "reader-v6",
-      "translatedAt": "2026-10-08T09:03:07.187Z"
+      "translatedAt": "2026-10-08T16:33:57.124Z"
     },
     {
       "id": "nba-886a4f0ee8b5",
@@ -45,11 +45,11 @@
       "category": "미국 현지 읽을거리",
       "readingMinutes": 7,
       "bodyVerified": true,
-      "bodyChars": 4234,
+      "bodyChars": 4239,
       "sourceWordCount": 1432,
       "translationType": "full",
       "pipelineVersion": "reader-v6",
-      "translatedAt": "2026-10-08T09:03:05.837Z"
+      "translatedAt": "2026-10-08T16:33:50.881Z"
     },
     {
       "id": "nba-8606da5fc1c4",
@@ -62,11 +62,11 @@
       "category": "미국 현지 읽을거리",
       "readingMinutes": 5,
       "bodyVerified": true,
-      "bodyChars": 3580,
-      "sourceWordCount": 1150,
+      "bodyChars": 3489,
+      "sourceWordCount": 1117,
       "translationType": "full",
       "pipelineVersion": "reader-v6",
-      "translatedAt": "2026-10-08T09:03:09.841Z"
+      "translatedAt": "2026-10-08T16:34:08.676Z"
     }
   ],
   "message": "NBA.com의 최신 일반 기사 중 제목과 본문 전체 자동 번역이 완료된 기사만 제공합니다.",
@@ -74,5 +74,5 @@
   "translationPolicy": "newest_valid_article_full_translation_keep_previous_on_failure",
   "pipelineVersion": "reader-v6",
   "selectedCount": 4,
-  "updatedAt": "2026-10-08T09:03:26.825Z"
+  "updatedAt": "2026-10-08T16:34:29.745Z"
 }
