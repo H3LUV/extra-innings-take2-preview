@@ -7,7 +7,7 @@
       "teams": [
         {
           "seed": 1,
-          "name": "Detroit Pistons",
+          "name": "Brooklyn Nets",
           "w": "1",
           "l": "0",
           "gb": "-"
@@ -28,35 +28,35 @@
         },
         {
           "seed": 4,
-          "name": "Brooklyn Nets",
+          "name": "Indiana Pacers",
           "w": "1",
           "l": "0",
           "gb": "-"
         },
         {
           "seed": 5,
+          "name": "Detroit Pistons",
+          "w": "1",
+          "l": "0",
+          "gb": "-"
+        },
+        {
+          "seed": 6,
           "name": "Boston Celtics",
           "w": "0",
           "l": "0",
           "gb": "-"
         },
         {
-          "seed": 6,
+          "seed": 7,
           "name": "Chicago Bulls",
           "w": "0",
           "l": "0",
           "gb": "-"
         },
         {
-          "seed": 7,
-          "name": "Cleveland Cavaliers",
-          "w": "0",
-          "l": "0",
-          "gb": "-"
-        },
-        {
           "seed": 8,
-          "name": "Indiana Pacers",
+          "name": "Cleveland Cavaliers",
           "w": "0",
           "l": "0",
           "gb": "-"
@@ -117,30 +117,30 @@
       "teams": [
         {
           "seed": 1,
-          "name": "Minnesota Timberwolves",
-          "w": "1",
-          "l": "0",
-          "gb": "-"
-        },
-        {
-          "seed": 2,
           "name": "Memphis Grizzlies",
           "w": "1",
           "l": "0",
           "gb": "-"
         },
         {
-          "seed": 3,
+          "seed": 2,
           "name": "LA Clippers",
           "w": "1",
           "l": "0",
           "gb": "-"
         },
         {
-          "seed": 4,
+          "seed": 3,
           "name": "New Orleans Pelicans",
           "w": "1",
           "l": "0",
+          "gb": "-"
+        },
+        {
+          "seed": 4,
+          "name": "Utah Jazz",
+          "w": "1",
+          "l": "1",
           "gb": "-"
         },
         {
@@ -152,7 +152,7 @@
         },
         {
           "seed": 6,
-          "name": "Utah Jazz",
+          "name": "Minnesota Timberwolves",
           "w": "1",
           "l": "1",
           "gb": "-"
@@ -224,5 +224,5 @@
     }
   ],
   "message": "",
-  "updatedAt": "2026-10-07T21:58:27.324Z"
+  "updatedAt": "2026-10-08T01:55:36.396Z"
 }
