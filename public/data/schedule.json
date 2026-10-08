@@ -80,15 +80,15 @@
       },
       {
         "id": 849838,
-        "status": "In Progress",
+        "status": "Final",
         "venue": "Yankee Stadium",
         "gameDate": "2026-10-08T00:00:00Z",
         "away": {
           "id": 139,
           "name": "Tampa Bay Rays",
-          "score": 2,
+          "score": 4,
           "record": {
-            "wins": 2,
+            "wins": 3,
             "losses": 0,
             "ties": 0,
             "pct": "1.000"
@@ -97,10 +97,10 @@
         "home": {
           "id": 147,
           "name": "New York Yankees",
-          "score": 1,
+          "score": 3,
           "record": {
             "wins": 0,
-            "losses": 2,
+            "losses": 3,
             "ties": 0,
             "pct": ".000"
           }
@@ -110,36 +110,36 @@
           "home": "Max Fried"
         },
         "decisions": {
-          "winner": "",
-          "loser": "",
-          "save": ""
+          "winner": "Ian Seymour",
+          "loser": "Max Fried",
+          "save": "Bryan Baker"
         }
       },
       {
         "id": 849827,
-        "status": "Pre-Game",
+        "status": "Final",
         "venue": "Petco Park",
         "gameDate": "2026-10-08T02:00:00Z",
         "away": {
           "id": 158,
           "name": "Milwaukee Brewers",
-          "score": 0,
+          "score": 3,
           "record": {
-            "wins": 2,
+            "wins": 3,
             "losses": 1,
             "ties": 0,
-            "pct": ".667"
+            "pct": ".750"
           }
         },
         "home": {
           "id": 135,
           "name": "San Diego Padres",
-          "score": 0,
+          "score": 1,
           "record": {
             "wins": 1,
-            "losses": 2,
+            "losses": 3,
             "ties": 0,
-            "pct": ".333"
+            "pct": ".250"
           }
         },
         "probable": {
@@ -147,9 +147,9 @@
           "home": "Walker Buehler"
         },
         "decisions": {
-          "winner": "",
-          "loser": "",
-          "save": ""
+          "winner": "Aaron Ashby",
+          "loser": "Robbie Ray",
+          "save": "Trevor Megill"
         }
       }
     ],
@@ -158,7 +158,7 @@
         "id": 849832,
         "status": "Scheduled",
         "venue": "Rate Field",
-        "gameDate": "2026-10-08T21:00:00Z",
+        "gameDate": "2026-10-09T00:00:00Z",
         "away": {
           "id": 114,
           "name": "Cleveland Guardians",
@@ -183,83 +183,7 @@
         },
         "probable": {
           "away": "Parker Messick",
-          "home": ""
-        },
-        "decisions": {
-          "winner": "",
-          "loser": "",
-          "save": ""
-        }
-      },
-      {
-        "id": 849837,
-        "status": "Scheduled",
-        "venue": "Yankee Stadium",
-        "gameDate": "2026-10-09T00:00:00Z",
-        "away": {
-          "id": 139,
-          "name": "Tampa Bay Rays",
-          "score": null,
-          "record": {
-            "wins": 2,
-            "losses": 0,
-            "ties": 0,
-            "pct": "1.000"
-          }
-        },
-        "home": {
-          "id": 147,
-          "name": "New York Yankees",
-          "score": null,
-          "record": {
-            "wins": 0,
-            "losses": 2,
-            "ties": 0,
-            "pct": ".000"
-          }
-        },
-        "probable": {
-          "away": "Drew Rasmussen",
-          "home": "Carlos Rodón"
-        },
-        "decisions": {
-          "winner": "",
-          "loser": "",
-          "save": ""
-        }
-      }
-    ],
-    "2026-10-10": [
-      {
-        "id": 849824,
-        "status": "Scheduled",
-        "venue": "American Family Field",
-        "gameDate": "2026-10-10T00:00:00Z",
-        "away": {
-          "id": 135,
-          "name": "San Diego Padres",
-          "score": null,
-          "record": {
-            "wins": 1,
-            "losses": 2,
-            "ties": 0,
-            "pct": ".333"
-          }
-        },
-        "home": {
-          "id": 158,
-          "name": "Milwaukee Brewers",
-          "score": null,
-          "record": {
-            "wins": 2,
-            "losses": 1,
-            "ties": 0,
-            "pct": ".667"
-          }
-        },
-        "probable": {
-          "away": "",
-          "home": "Jacob Misiorowski"
+          "home": "Hagen Smith"
         },
         "decisions": {
           "winner": "",
@@ -269,6 +193,6 @@
       }
     ]
   },
-  "updatedAt": "2026-10-08T01:27:47.762Z",
+  "updatedAt": "2026-10-08T14:07:44.231Z",
   "source": "MLB Stats API"
 }
