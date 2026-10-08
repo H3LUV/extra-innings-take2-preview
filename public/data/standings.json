@@ -35,56 +35,56 @@
         },
         {
           "seed": 5,
-          "name": "Detroit Pistons",
+          "name": "Chicago Bulls",
           "w": "1",
           "l": "0",
           "gb": "-"
         },
         {
           "seed": 6,
+          "name": "Orlando Magic",
+          "w": "1",
+          "l": "0",
+          "gb": "-"
+        },
+        {
+          "seed": 7,
+          "name": "Detroit Pistons",
+          "w": "1",
+          "l": "0",
+          "gb": "-"
+        },
+        {
+          "seed": 8,
+          "name": "Milwaukee Bucks",
+          "w": "1",
+          "l": "1",
+          "gb": "-"
+        },
+        {
+          "seed": 9,
           "name": "Boston Celtics",
           "w": "0",
           "l": "0",
           "gb": "-"
         },
         {
-          "seed": 7,
-          "name": "Chicago Bulls",
-          "w": "0",
-          "l": "0",
-          "gb": "-"
-        },
-        {
-          "seed": 8,
+          "seed": 10,
           "name": "Cleveland Cavaliers",
           "w": "0",
           "l": "0",
           "gb": "-"
         },
         {
-          "seed": 9,
-          "name": "Orlando Magic",
-          "w": "0",
-          "l": "0",
-          "gb": "-"
-        },
-        {
-          "seed": 10,
+          "seed": 11,
           "name": "Washington Wizards",
           "w": "0",
           "l": "0",
           "gb": "-"
         },
         {
-          "seed": 11,
-          "name": "Atlanta Hawks",
-          "w": "0",
-          "l": "1",
-          "gb": "-"
-        },
-        {
           "seed": 12,
-          "name": "Milwaukee Bucks",
+          "name": "Atlanta Hawks",
           "w": "0",
           "l": "1",
           "gb": "-"
@@ -117,42 +117,42 @@
       "teams": [
         {
           "seed": 1,
-          "name": "Memphis Grizzlies",
-          "w": "1",
-          "l": "0",
-          "gb": "-"
-        },
-        {
-          "seed": 2,
-          "name": "LA Clippers",
-          "w": "1",
-          "l": "0",
-          "gb": "-"
-        },
-        {
-          "seed": 3,
           "name": "New Orleans Pelicans",
           "w": "1",
           "l": "0",
           "gb": "-"
         },
         {
+          "seed": 2,
+          "name": "Portland Trail Blazers",
+          "w": "1",
+          "l": "0",
+          "gb": "-"
+        },
+        {
+          "seed": 3,
+          "name": "LA Clippers",
+          "w": "1",
+          "l": "0",
+          "gb": "-"
+        },
+        {
           "seed": 4,
-          "name": "Utah Jazz",
+          "name": "Minnesota Timberwolves",
           "w": "1",
           "l": "1",
           "gb": "-"
         },
         {
           "seed": 5,
-          "name": "Golden State Warriors",
+          "name": "Memphis Grizzlies",
           "w": "1",
           "l": "1",
           "gb": "-"
         },
         {
           "seed": 6,
-          "name": "Minnesota Timberwolves",
+          "name": "Utah Jazz",
           "w": "1",
           "l": "1",
           "gb": "-"
@@ -173,21 +173,21 @@
         },
         {
           "seed": 9,
+          "name": "Golden State Warriors",
+          "w": "1",
+          "l": "2",
+          "gb": "-"
+        },
+        {
+          "seed": 10,
           "name": "Dallas Mavericks",
           "w": "0",
           "l": "0",
           "gb": "-"
         },
         {
-          "seed": 10,
-          "name": "Houston Rockets",
-          "w": "0",
-          "l": "0",
-          "gb": "-"
-        },
-        {
           "seed": 11,
-          "name": "Portland Trail Blazers",
+          "name": "Houston Rockets",
           "w": "0",
           "l": "0",
           "gb": "-"
@@ -201,7 +201,7 @@
         },
         {
           "seed": 13,
-          "name": "Phoenix Suns",
+          "name": "Sacramento Kings",
           "w": "0",
           "l": "1",
           "gb": "-"
@@ -210,19 +210,19 @@
           "seed": 14,
           "name": "Oklahoma City Thunder",
           "w": "0",
-          "l": "1",
+          "l": "2",
           "gb": "-"
         },
         {
           "seed": 15,
-          "name": "Sacramento Kings",
+          "name": "Phoenix Suns",
           "w": "0",
-          "l": "1",
+          "l": "2",
           "gb": "-"
         }
       ]
     }
   ],
   "message": "",
-  "updatedAt": "2026-10-08T01:55:36.396Z"
+  "updatedAt": "2026-10-08T08:58:05.103Z"
 }
