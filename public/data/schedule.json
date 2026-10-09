@@ -1,168 +1,18 @@
 {
-  "start": "2026-10-07",
-  "end": "2026-10-09",
-  "defaultDate": "2026-10-08",
+  "start": "2026-10-08",
+  "end": "2026-10-10",
+  "defaultDate": "2026-10-09",
   "byDate": {
-    "2026-10-08": [
-      {
-        "id": 849833,
-        "status": "Final",
-        "venue": "Rate Field",
-        "gameDate": "2026-10-07T20:00:00Z",
-        "away": {
-          "id": 114,
-          "name": "Cleveland Guardians",
-          "score": 9,
-          "record": {
-            "wins": 1,
-            "losses": 2,
-            "ties": 0,
-            "pct": ".333"
-          }
-        },
-        "home": {
-          "id": 145,
-          "name": "Chicago White Sox",
-          "score": 3,
-          "record": {
-            "wins": 2,
-            "losses": 1,
-            "ties": 0,
-            "pct": ".667"
-          }
-        },
-        "probable": {
-          "away": "Daniel Espino",
-          "home": "Sean Newcomb"
-        },
-        "decisions": {
-          "winner": "Foster Griffin",
-          "loser": "Bryan Hudson",
-          "save": ""
-        }
-      },
-      {
-        "id": 849822,
-        "status": "Final",
-        "venue": "Truist Park",
-        "gameDate": "2026-10-07T22:00:00Z",
-        "away": {
-          "id": 119,
-          "name": "Los Angeles Dodgers",
-          "score": 4,
-          "record": {
-            "wins": 3,
-            "losses": 1,
-            "ties": 0,
-            "pct": ".750"
-          }
-        },
-        "home": {
-          "id": 144,
-          "name": "Atlanta Braves",
-          "score": 1,
-          "record": {
-            "wins": 1,
-            "losses": 3,
-            "ties": 0,
-            "pct": ".250"
-          }
-        },
-        "probable": {
-          "away": "Tyler Glasnow",
-          "home": "Tyler Mahle"
-        },
-        "decisions": {
-          "winner": "Edgardo Henriquez",
-          "loser": "Tyler Mahle",
-          "save": "Edwin Díaz"
-        }
-      },
-      {
-        "id": 849838,
-        "status": "Final",
-        "venue": "Yankee Stadium",
-        "gameDate": "2026-10-08T00:00:00Z",
-        "away": {
-          "id": 139,
-          "name": "Tampa Bay Rays",
-          "score": 4,
-          "record": {
-            "wins": 3,
-            "losses": 0,
-            "ties": 0,
-            "pct": "1.000"
-          }
-        },
-        "home": {
-          "id": 147,
-          "name": "New York Yankees",
-          "score": 3,
-          "record": {
-            "wins": 0,
-            "losses": 3,
-            "ties": 0,
-            "pct": ".000"
-          }
-        },
-        "probable": {
-          "away": "Nick Martinez",
-          "home": "Max Fried"
-        },
-        "decisions": {
-          "winner": "Ian Seymour",
-          "loser": "Max Fried",
-          "save": "Bryan Baker"
-        }
-      },
-      {
-        "id": 849827,
-        "status": "Final",
-        "venue": "Petco Park",
-        "gameDate": "2026-10-08T02:00:00Z",
-        "away": {
-          "id": 158,
-          "name": "Milwaukee Brewers",
-          "score": 3,
-          "record": {
-            "wins": 3,
-            "losses": 1,
-            "ties": 0,
-            "pct": ".750"
-          }
-        },
-        "home": {
-          "id": 135,
-          "name": "San Diego Padres",
-          "score": 1,
-          "record": {
-            "wins": 1,
-            "losses": 3,
-            "ties": 0,
-            "pct": ".250"
-          }
-        },
-        "probable": {
-          "away": "Robert Gasser",
-          "home": "Walker Buehler"
-        },
-        "decisions": {
-          "winner": "Aaron Ashby",
-          "loser": "Robbie Ray",
-          "save": "Trevor Megill"
-        }
-      }
-    ],
     "2026-10-09": [
       {
         "id": 849832,
-        "status": "Scheduled",
+        "status": "In Progress",
         "venue": "Rate Field",
         "gameDate": "2026-10-09T00:00:00Z",
         "away": {
           "id": 114,
           "name": "Cleveland Guardians",
-          "score": null,
+          "score": 0,
           "record": {
             "wins": 1,
             "losses": 2,
@@ -173,7 +23,7 @@
         "home": {
           "id": 145,
           "name": "Chicago White Sox",
-          "score": null,
+          "score": 2,
           "record": {
             "wins": 2,
             "losses": 1,
@@ -191,8 +41,47 @@
           "save": ""
         }
       }
+    ],
+    "2026-10-11": [
+      {
+        "id": 849831,
+        "status": "Scheduled",
+        "venue": "Progressive Field",
+        "gameDate": "2026-10-11T00:00:00Z",
+        "away": {
+          "id": 145,
+          "name": "Chicago White Sox",
+          "score": null,
+          "record": {
+            "wins": 2,
+            "losses": 1,
+            "ties": 0,
+            "pct": ".667"
+          }
+        },
+        "home": {
+          "id": 114,
+          "name": "Cleveland Guardians",
+          "score": null,
+          "record": {
+            "wins": 1,
+            "losses": 2,
+            "ties": 0,
+            "pct": ".333"
+          }
+        },
+        "probable": {
+          "away": "",
+          "home": ""
+        },
+        "decisions": {
+          "winner": "",
+          "loser": "",
+          "save": ""
+        }
+      }
     ]
   },
-  "updatedAt": "2026-10-08T14:23:49.969Z",
+  "updatedAt": "2026-10-09T01:36:21.005Z",
   "source": "MLB Stats API"
 }
