@@ -1,6 +1,23 @@
 {
   "items": [
     {
+      "id": "mlb-d02608bddeb9",
+      "articleFile": "./data/articles/mlb-d02608bddeb9.json",
+      "title": "Dodgers return to NLCS as Pages delivers clutch October moment",
+      "titleKo": "다저스는 페이지가 10월의 결정적인 순간을 제공하면서 NLCS로 돌아왔습니다.",
+      "link": "https://www.mlb.com/news/dodgers-win-nlds-2026",
+      "pubDate": "2026-10-08T01:36:00Z",
+      "source": "MLB.com",
+      "category": "미국 현지 읽을거리",
+      "readingMinutes": 9,
+      "bodyVerified": true,
+      "bodyChars": 6539,
+      "sourceWordCount": 1912,
+      "translationType": "full",
+      "pipelineVersion": "reader-v6",
+      "translatedAt": "2026-10-08T01:58:28.627Z"
+    },
+    {
       "id": "mlb-8862cf064c9c",
       "articleFile": "./data/articles/mlb-8862cf064c9c.json",
       "title": "Ramírez, Adell Down Sox, Extend ALDS",
@@ -35,23 +52,6 @@
       "translatedAt": "2026-10-08T01:58:16.237Z"
     },
     {
-      "id": "mlb-d02608bddeb9",
-      "articleFile": "./data/articles/mlb-d02608bddeb9.json",
-      "title": "Dodgers return to NLCS as Pages delivers clutch October moment",
-      "titleKo": "다저스는 페이지가 10월의 결정적인 순간을 제공하면서 NLCS로 돌아왔습니다.",
-      "link": "https://www.mlb.com/news/dodgers-win-nlds-2026",
-      "pubDate": "2026-10-08T01:36:00Z",
-      "source": "MLB.com",
-      "category": "미국 현지 읽을거리",
-      "readingMinutes": 9,
-      "bodyVerified": true,
-      "bodyChars": 6539,
-      "sourceWordCount": 1912,
-      "translationType": "full",
-      "pipelineVersion": "reader-v6",
-      "translatedAt": "2026-10-08T01:58:28.627Z"
-    },
-    {
       "id": "mlb-cc8c153f0623",
       "articleFile": "./data/articles/mlb-cc8c153f0623.json",
       "title": "Members Only Game Thread: ALDS - Oct 5, 2026",
@@ -74,5 +74,5 @@
   "translationPolicy": "clean_full_translation_keep_previous_on_failure",
   "pipelineVersion": "reader-v6",
   "selectedCount": 4,
-  "updatedAt": "2026-10-08T02:02:31.128Z"
+  "updatedAt": "2026-10-09T02:13:10.071Z"
 }
