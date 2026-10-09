@@ -8,106 +8,106 @@
         {
           "seed": 1,
           "name": "Brooklyn Nets",
-          "w": "1",
+          "w": "2",
           "l": "0",
           "gb": "-"
         },
         {
           "seed": 2,
           "name": "Miami Heat",
-          "w": "1",
+          "w": "2",
           "l": "0",
           "gb": "-"
         },
         {
           "seed": 3,
-          "name": "Philadelphia 76ers",
-          "w": "1",
-          "l": "0",
-          "gb": "-"
-        },
-        {
-          "seed": 4,
           "name": "Indiana Pacers",
           "w": "1",
           "l": "0",
           "gb": "-"
         },
         {
-          "seed": 5,
-          "name": "Chicago Bulls",
-          "w": "1",
-          "l": "0",
-          "gb": "-"
-        },
-        {
-          "seed": 6,
-          "name": "Orlando Magic",
-          "w": "1",
-          "l": "0",
-          "gb": "-"
-        },
-        {
-          "seed": 7,
+          "seed": 4,
           "name": "Detroit Pistons",
           "w": "1",
           "l": "0",
           "gb": "-"
         },
         {
+          "seed": 5,
+          "name": "Boston Celtics",
+          "w": "1",
+          "l": "0",
+          "gb": "-"
+        },
+        {
+          "seed": 6,
+          "name": "Chicago Bulls",
+          "w": "1",
+          "l": "0",
+          "gb": "-"
+        },
+        {
+          "seed": 7,
+          "name": "Orlando Magic",
+          "w": "1",
+          "l": "0",
+          "gb": "-"
+        },
+        {
           "seed": 8,
+          "name": "Washington Wizards",
+          "w": "1",
+          "l": "0",
+          "gb": "-"
+        },
+        {
+          "seed": 9,
           "name": "Milwaukee Bucks",
           "w": "1",
           "l": "1",
           "gb": "-"
         },
         {
-          "seed": 9,
-          "name": "Boston Celtics",
-          "w": "0",
-          "l": "0",
-          "gb": "-"
-        },
-        {
           "seed": 10,
-          "name": "Cleveland Cavaliers",
-          "w": "0",
-          "l": "0",
+          "name": "Philadelphia 76ers",
+          "w": "1",
+          "l": "1",
           "gb": "-"
         },
         {
           "seed": 11,
-          "name": "Washington Wizards",
-          "w": "0",
-          "l": "0",
-          "gb": "-"
-        },
-        {
-          "seed": 12,
           "name": "Atlanta Hawks",
           "w": "0",
           "l": "1",
           "gb": "-"
         },
         {
-          "seed": 13,
-          "name": "New York Knicks",
+          "seed": 12,
+          "name": "Cleveland Cavaliers",
           "w": "0",
           "l": "1",
           "gb": "-"
         },
         {
-          "seed": 14,
+          "seed": 13,
           "name": "Toronto Raptors",
           "w": "0",
           "l": "1",
           "gb": "-"
         },
         {
-          "seed": 15,
+          "seed": 14,
           "name": "Charlotte Hornets",
           "w": "0",
           "l": "1",
+          "gb": "-"
+        },
+        {
+          "seed": 15,
+          "name": "New York Knicks",
+          "w": "0",
+          "l": "2",
           "gb": "-"
         }
       ]
@@ -117,23 +117,23 @@
       "teams": [
         {
           "seed": 1,
-          "name": "New Orleans Pelicans",
-          "w": "1",
-          "l": "0",
-          "gb": "-"
-        },
-        {
-          "seed": 2,
           "name": "Portland Trail Blazers",
           "w": "1",
           "l": "0",
           "gb": "-"
         },
         {
-          "seed": 3,
+          "seed": 2,
           "name": "LA Clippers",
           "w": "1",
           "l": "0",
+          "gb": "-"
+        },
+        {
+          "seed": 3,
+          "name": "Memphis Grizzlies",
+          "w": "1",
+          "l": "1",
           "gb": "-"
         },
         {
@@ -145,7 +145,7 @@
         },
         {
           "seed": 5,
-          "name": "Memphis Grizzlies",
+          "name": "New Orleans Pelicans",
           "w": "1",
           "l": "1",
           "gb": "-"
@@ -224,5 +224,5 @@
     }
   ],
   "message": "",
-  "updatedAt": "2026-10-08T22:04:49.830Z"
+  "updatedAt": "2026-10-09T02:10:00.354Z"
 }
