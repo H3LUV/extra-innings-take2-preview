@@ -117,29 +117,29 @@
       "teams": [
         {
           "seed": 1,
-          "name": "Portland Trail Blazers",
+          "name": "Houston Rockets",
           "w": "1",
           "l": "0",
           "gb": "-"
         },
         {
           "seed": 2,
-          "name": "LA Clippers",
+          "name": "Portland Trail Blazers",
           "w": "1",
           "l": "0",
           "gb": "-"
         },
         {
           "seed": 3,
-          "name": "Los Angeles Lakers",
-          "w": "2",
-          "l": "1",
+          "name": "LA Clippers",
+          "w": "1",
+          "l": "0",
           "gb": "-"
         },
         {
           "seed": 4,
-          "name": "Memphis Grizzlies",
-          "w": "1",
+          "name": "Los Angeles Lakers",
+          "w": "2",
           "l": "1",
           "gb": "-"
         },
@@ -152,14 +152,14 @@
         },
         {
           "seed": 6,
-          "name": "New Orleans Pelicans",
+          "name": "Memphis Grizzlies",
           "w": "1",
           "l": "1",
           "gb": "-"
         },
         {
           "seed": 7,
-          "name": "Utah Jazz",
+          "name": "New Orleans Pelicans",
           "w": "1",
           "l": "1",
           "gb": "-"
@@ -173,28 +173,28 @@
         },
         {
           "seed": 9,
+          "name": "Utah Jazz",
+          "w": "1",
+          "l": "1",
+          "gb": "-"
+        },
+        {
+          "seed": 10,
           "name": "Golden State Warriors",
           "w": "1",
           "l": "2",
           "gb": "-"
         },
         {
-          "seed": 10,
-          "name": "Dallas Mavericks",
-          "w": "0",
-          "l": "0",
-          "gb": "-"
-        },
-        {
           "seed": 11,
-          "name": "Houston Rockets",
+          "name": "San Antonio Spurs",
           "w": "0",
-          "l": "0",
+          "l": "1",
           "gb": "-"
         },
         {
           "seed": 12,
-          "name": "San Antonio Spurs",
+          "name": "Dallas Mavericks",
           "w": "0",
           "l": "1",
           "gb": "-"
@@ -224,5 +224,5 @@
     }
   ],
   "message": "",
-  "updatedAt": "2026-10-09T09:04:30.294Z"
+  "updatedAt": "2026-10-09T16:12:47.911Z"
 }
