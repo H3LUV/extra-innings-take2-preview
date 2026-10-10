@@ -42,23 +42,23 @@
         },
         {
           "seed": 6,
-          "name": "Chicago Bulls",
-          "w": "1",
-          "l": "0",
-          "gb": "-"
-        },
-        {
-          "seed": 7,
           "name": "Orlando Magic",
           "w": "1",
           "l": "0",
           "gb": "-"
         },
         {
-          "seed": 8,
+          "seed": 7,
           "name": "Washington Wizards",
           "w": "1",
           "l": "0",
+          "gb": "-"
+        },
+        {
+          "seed": 8,
+          "name": "Chicago Bulls",
+          "w": "1",
+          "l": "1",
           "gb": "-"
         },
         {
@@ -138,21 +138,21 @@
         },
         {
           "seed": 4,
-          "name": "Los Angeles Lakers",
+          "name": "Memphis Grizzlies",
           "w": "2",
           "l": "1",
           "gb": "-"
         },
         {
           "seed": 5,
-          "name": "Minnesota Timberwolves",
-          "w": "1",
+          "name": "Los Angeles Lakers",
+          "w": "2",
           "l": "1",
           "gb": "-"
         },
         {
           "seed": 6,
-          "name": "Memphis Grizzlies",
+          "name": "Minnesota Timberwolves",
           "w": "1",
           "l": "1",
           "gb": "-"
@@ -166,14 +166,14 @@
         },
         {
           "seed": 8,
-          "name": "Denver Nuggets",
+          "name": "Utah Jazz",
           "w": "1",
           "l": "1",
           "gb": "-"
         },
         {
           "seed": 9,
-          "name": "Utah Jazz",
+          "name": "Denver Nuggets",
           "w": "1",
           "l": "1",
           "gb": "-"
@@ -224,5 +224,5 @@
     }
   ],
   "message": "",
-  "updatedAt": "2026-10-10T00:51:27.448Z"
+  "updatedAt": "2026-10-10T07:07:38.212Z"
 }
