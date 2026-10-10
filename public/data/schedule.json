@@ -3,104 +3,62 @@
   "status": "active",
   "games": [
     {
-      "id": "401902645",
-      "gameDate": "2026-10-10T22:30Z",
-      "status": "10/10 - 6:30 PM EDT",
-      "venue": "Rogers Arena",
+      "id": "401898400",
+      "gameDate": "2026-10-11T10:00Z",
+      "status": "10/11 - 6:00 AM EDT",
+      "venue": "Venetian Arena",
       "away": {
-        "name": "LA Clippers",
+        "name": "Dallas Mavericks",
         "score": "0"
       },
       "home": {
-        "name": "Toronto Raptors",
+        "name": "Houston Rockets",
         "score": "0"
       }
     },
     {
-      "id": "401898396",
-      "gameDate": "2026-10-10T23:00Z",
-      "status": "10/10 - 7:00 PM EDT",
-      "venue": "Gainbridge Fieldhouse",
+      "id": "401898401",
+      "gameDate": "2026-10-11T22:30Z",
+      "status": "10/11 - 6:30 PM EDT",
+      "venue": "Rocket Arena",
       "away": {
-        "name": "Atlanta Hawks",
+        "name": "Orlando Magic",
         "score": "0"
       },
       "home": {
-        "name": "Indiana Pacers",
+        "name": "Cleveland Cavaliers",
         "score": "0"
       }
     },
     {
-      "id": "401906510",
-      "gameDate": "2026-10-10T23:00Z",
-      "status": "10/10 - 7:00 PM EDT",
-      "venue": "Capital One Arena",
+      "id": "401901821",
+      "gameDate": "2026-10-11T23:00Z",
+      "status": "10/11 - 7:00 PM EDT",
+      "venue": "Spectrum Center",
       "away": {
-        "name": "Detroit Pistons",
+        "name": "Milwaukee Bucks",
         "score": "0"
       },
       "home": {
-        "name": "Washington Wizards",
+        "name": "Charlotte Hornets",
         "score": "0"
       }
     },
     {
-      "id": "401898397",
-      "gameDate": "2026-10-11T00:00Z",
-      "status": "10/10 - 8:00 PM EDT",
-      "venue": "Kaseya Center",
+      "id": "401908941",
+      "gameDate": "2026-10-12T01:00Z",
+      "status": "10/11 - 9:00 PM EDT",
+      "venue": "Ball Arena",
       "away": {
-        "name": "Minnesota Timberwolves",
+        "name": "Chicago Bulls",
         "score": "0"
       },
       "home": {
-        "name": "Miami Heat",
-        "score": "0"
-      }
-    },
-    {
-      "id": "401898398",
-      "gameDate": "2026-10-11T00:00Z",
-      "status": "10/10 - 8:00 PM EDT",
-      "venue": "TD Garden",
-      "away": {
-        "name": "Philadelphia 76ers",
-        "score": "0"
-      },
-      "home": {
-        "name": "Boston Celtics",
-        "score": "0"
-      }
-    },
-    {
-      "id": "401898399",
-      "gameDate": "2026-10-11T00:30Z",
-      "status": "10/10 - 8:30 PM EDT",
-      "venue": "Chase Center",
-      "away": {
-        "name": "Sacramento Kings",
-        "score": "0"
-      },
-      "home": {
-        "name": "Golden State Warriors",
-        "score": "0"
-      }
-    },
-    {
-      "id": "401898720",
-      "gameDate": "2026-10-11T02:30Z",
-      "status": "10/10 - 10:30 PM EDT",
-      "venue": "Mortgage Matchup Center",
-      "away": {
-        "name": "San Antonio Spurs",
-        "score": "0"
-      },
-      "home": {
-        "name": "Phoenix Suns",
+        "name": "Denver Nuggets",
         "score": "0"
       }
     }
   ],
   "message": "",
-  "updatedAt": "2026-10-10T13:41:56.435Z"
+  "updatedAt": "2026-10-10T18:35:51.169Z"
 }
