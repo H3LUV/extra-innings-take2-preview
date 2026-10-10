@@ -2,15 +2,6 @@ name: Deploy Today NBA to Cloudflare
 
 on:
   workflow_dispatch:
-  push:
-    branches:
-      - today-nba-cloudflare
-    paths:
-      - public/**
-      - scripts/**
-      - package.json
-      - wrangler.jsonc
-      - .github/workflows/today-mlb-deploy.yml
 
 permissions:
   contents: read
