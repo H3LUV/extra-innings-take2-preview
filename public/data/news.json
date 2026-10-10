@@ -1,6 +1,23 @@
 {
   "items": [
     {
+      "id": "mlb-2f1b6bcf8254",
+      "articleFile": "./data/articles/mlb-2f1b6bcf8254.json",
+      "title": "Restored faith in Díaz gives Roberts another leverage weapon entering NLCS",
+      "titleKo": "Díaz에 대한 회복된 믿음은 Roberts에게 NLCS에 진입하는 또 다른 레버리지 무기를 제공합니다.",
+      "link": "https://www.mlb.com/news/dodgers-bullpen-options-for-nlcs-vs-brewers",
+      "pubDate": "2026-10-10T01:25:16.118Z",
+      "source": "MLB.com",
+      "category": "미국 현지 읽을거리",
+      "readingMinutes": 10,
+      "bodyVerified": true,
+      "bodyChars": 7855,
+      "sourceWordCount": 2268,
+      "translationType": "full",
+      "pipelineVersion": "reader-v6",
+      "translatedAt": "2026-10-10T01:46:19.780Z"
+    },
+    {
       "id": "mlb-d02608bddeb9",
       "articleFile": "./data/articles/mlb-d02608bddeb9.json",
       "title": "Dodgers return to NLCS as Pages delivers clutch October moment",
@@ -50,23 +67,6 @@
       "translationType": "full",
       "pipelineVersion": "reader-v6",
       "translatedAt": "2026-10-08T01:58:16.237Z"
-    },
-    {
-      "id": "mlb-cc8c153f0623",
-      "articleFile": "./data/articles/mlb-cc8c153f0623.json",
-      "title": "Members Only Game Thread: ALDS - Oct 5, 2026",
-      "titleKo": "회원 전용 게임 스레드: ALDS - 2026년 10월 5일",
-      "link": "https://blogs.fangraphs.com/members-only-game-thread-alds-oct-5-2026/",
-      "pubDate": "2026-10-05T20:30:34+00:00",
-      "source": "FanGraphs",
-      "category": "미국 현지 읽을거리",
-      "readingMinutes": 4,
-      "bodyVerified": true,
-      "bodyChars": 3358,
-      "sourceWordCount": 946,
-      "translationType": "full",
-      "pipelineVersion": "reader-v6",
-      "translatedAt": "2026-10-06T02:19:42.966Z"
     }
   ],
   "message": "미국 현지 기사 중 광고·회원가입 문구를 제거하고 제목과 본문 전체 자동 번역이 완료된 기사만 제공합니다.",
@@ -74,5 +74,5 @@
   "translationPolicy": "clean_full_translation_keep_previous_on_failure",
   "pipelineVersion": "reader-v6",
   "selectedCount": 4,
-  "updatedAt": "2026-10-09T02:13:10.071Z"
+  "updatedAt": "2026-10-10T01:50:55.066Z"
 }
