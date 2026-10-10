@@ -1,47 +1,8 @@
 {
-  "start": "2026-10-08",
-  "end": "2026-10-10",
-  "defaultDate": "2026-10-09",
+  "start": "2026-10-09",
+  "end": "2026-10-11",
+  "defaultDate": "2026-10-10",
   "byDate": {
-    "2026-10-09": [
-      {
-        "id": 849832,
-        "status": "Final",
-        "venue": "Rate Field",
-        "gameDate": "2026-10-09T00:00:00Z",
-        "away": {
-          "id": 114,
-          "name": "Cleveland Guardians",
-          "score": 9,
-          "record": {
-            "wins": 2,
-            "losses": 2,
-            "ties": 0,
-            "pct": ".500"
-          }
-        },
-        "home": {
-          "id": 145,
-          "name": "Chicago White Sox",
-          "score": 5,
-          "record": {
-            "wins": 2,
-            "losses": 2,
-            "ties": 0,
-            "pct": ".500"
-          }
-        },
-        "probable": {
-          "away": "Parker Messick",
-          "home": "Hagen Smith"
-        },
-        "decisions": {
-          "winner": "Erik Sabrowski",
-          "loser": "Anthony Kay",
-          "save": ""
-        }
-      }
-    ],
     "2026-10-11": [
       {
         "id": 849831,
@@ -71,7 +32,46 @@
           }
         },
         "probable": {
-          "away": "",
+          "away": "Sean Burke",
+          "home": "Gavin Williams"
+        },
+        "decisions": {
+          "winner": "",
+          "loser": "",
+          "save": ""
+        }
+      }
+    ],
+    "2026-10-12": [
+      {
+        "id": 849809,
+        "status": "Scheduled",
+        "venue": "American Family Field",
+        "gameDate": "2026-10-12T00:00:00Z",
+        "away": {
+          "id": 119,
+          "name": "Los Angeles Dodgers",
+          "score": null,
+          "record": {
+            "wins": 0,
+            "losses": 0,
+            "ties": 0,
+            "pct": ".000"
+          }
+        },
+        "home": {
+          "id": 158,
+          "name": "Milwaukee Brewers",
+          "score": null,
+          "record": {
+            "wins": 0,
+            "losses": 0,
+            "ties": 0,
+            "pct": ".000"
+          }
+        },
+        "probable": {
+          "away": "Tarik Skubal",
           "home": ""
         },
         "decisions": {
@@ -82,6 +82,6 @@
       }
     ]
   },
-  "updatedAt": "2026-10-09T14:09:32.694Z",
+  "updatedAt": "2026-10-10T01:25:27.023Z",
   "source": "MLB Stats API"
 }
