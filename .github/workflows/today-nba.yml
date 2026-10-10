@@ -1,14 +1,8 @@
-# Today NBA hourly update with MLB-style Korean full article translations - clean reader v12 - deploy Don Nelson tribute column
+# Today NBA is archived/offline. Manual-only workflow retained for recovery.
 name: Update and deploy Today NBA
 
 on:
   workflow_dispatch:
-  push:
-    branches: [main]
-    paths:
-      - .github/workflows/today-nba.yml
-  schedule:
-    - cron: '17 * * * *'
 
 permissions:
   contents: write
@@ -96,4 +90,4 @@ jobs:
       - name: Publish deployment marker
         env:
           CLOUDFLARE_ACCOUNT_ID: 135ede9cb7c0a586c4facd63f5810921
-        run: npx wrangler@4 pages deploy public --project-name today-nba --branch today-nba-cloudflare
+        run: npx wrangler@4 pages deploy public --project-name=today-nba --branch=today-nba-cloudflare
