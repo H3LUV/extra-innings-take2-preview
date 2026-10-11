@@ -6,7 +6,7 @@
     "2026-10-11": [
       {
         "id": 849831,
-        "status": "In Progress",
+        "status": "Final",
         "venue": "Progressive Field",
         "gameDate": "2026-10-11T00:00:00Z",
         "away": {
@@ -15,20 +15,20 @@
           "score": 0,
           "record": {
             "wins": 2,
-            "losses": 2,
+            "losses": 3,
             "ties": 0,
-            "pct": ".500"
+            "pct": ".400"
           }
         },
         "home": {
           "id": 114,
           "name": "Cleveland Guardians",
-          "score": 0,
+          "score": 2,
           "record": {
-            "wins": 2,
+            "wins": 3,
             "losses": 2,
             "ties": 0,
-            "pct": ".500"
+            "pct": ".600"
           }
         },
         "probable": {
@@ -36,9 +36,9 @@
           "home": "Gavin Williams"
         },
         "decisions": {
-          "winner": "",
-          "loser": "",
-          "save": ""
+          "winner": "Gavin Williams",
+          "loser": "Sean Burke",
+          "save": "Cade Smith"
         }
       }
     ],
@@ -125,8 +125,8 @@
         "venue": "Tropicana Field",
         "gameDate": "2026-10-13T00:00:00Z",
         "away": {
-          "id": 5521,
-          "name": "CLE/CWS",
+          "id": 114,
+          "name": "Cleveland Guardians",
           "score": null,
           "record": {
             "wins": 0,
@@ -158,6 +158,6 @@
       }
     ]
   },
-  "updatedAt": "2026-10-11T00:36:32.505Z",
+  "updatedAt": "2026-10-11T13:36:10.708Z",
   "source": "MLB Stats API"
 }
