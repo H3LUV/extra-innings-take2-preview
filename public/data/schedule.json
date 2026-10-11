@@ -1,18 +1,18 @@
 {
-  "start": "2026-10-09",
-  "end": "2026-10-11",
-  "defaultDate": "2026-10-10",
+  "start": "2026-10-10",
+  "end": "2026-10-12",
+  "defaultDate": "2026-10-11",
   "byDate": {
     "2026-10-11": [
       {
         "id": 849831,
-        "status": "Scheduled",
+        "status": "In Progress",
         "venue": "Progressive Field",
         "gameDate": "2026-10-11T00:00:00Z",
         "away": {
           "id": 145,
           "name": "Chicago White Sox",
-          "score": null,
+          "score": 0,
           "record": {
             "wins": 2,
             "losses": 2,
@@ -23,7 +23,7 @@
         "home": {
           "id": 114,
           "name": "Cleveland Guardians",
-          "score": null,
+          "score": 0,
           "record": {
             "wins": 2,
             "losses": 2,
@@ -72,6 +72,82 @@
         },
         "probable": {
           "away": "Tarik Skubal",
+          "home": "Jacob Misiorowski"
+        },
+        "decisions": {
+          "winner": "",
+          "loser": "",
+          "save": ""
+        }
+      }
+    ],
+    "2026-10-13": [
+      {
+        "id": 849812,
+        "status": "Scheduled",
+        "venue": "American Family Field",
+        "gameDate": "2026-10-12T21:00:00Z",
+        "away": {
+          "id": 119,
+          "name": "Los Angeles Dodgers",
+          "score": null,
+          "record": {
+            "wins": 0,
+            "losses": 0,
+            "ties": 0,
+            "pct": ".000"
+          }
+        },
+        "home": {
+          "id": 158,
+          "name": "Milwaukee Brewers",
+          "score": null,
+          "record": {
+            "wins": 0,
+            "losses": 0,
+            "ties": 0,
+            "pct": ".000"
+          }
+        },
+        "probable": {
+          "away": "Yoshinobu Yamamoto",
+          "home": ""
+        },
+        "decisions": {
+          "winner": "",
+          "loser": "",
+          "save": ""
+        }
+      },
+      {
+        "id": 849820,
+        "status": "Scheduled",
+        "venue": "Tropicana Field",
+        "gameDate": "2026-10-13T00:00:00Z",
+        "away": {
+          "id": 5521,
+          "name": "CLE/CWS",
+          "score": null,
+          "record": {
+            "wins": 0,
+            "losses": 0,
+            "ties": 0,
+            "pct": ".000"
+          }
+        },
+        "home": {
+          "id": 139,
+          "name": "Tampa Bay Rays",
+          "score": null,
+          "record": {
+            "wins": 0,
+            "losses": 0,
+            "ties": 0,
+            "pct": ".000"
+          }
+        },
+        "probable": {
+          "away": "",
           "home": ""
         },
         "decisions": {
@@ -82,6 +158,6 @@
       }
     ]
   },
-  "updatedAt": "2026-10-10T13:18:31.725Z",
+  "updatedAt": "2026-10-11T00:36:32.505Z",
   "source": "MLB Stats API"
 }
