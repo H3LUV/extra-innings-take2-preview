@@ -1,57 +1,18 @@
 {
-  "start": "2026-10-10",
-  "end": "2026-10-12",
-  "defaultDate": "2026-10-11",
+  "start": "2026-10-11",
+  "end": "2026-10-13",
+  "defaultDate": "2026-10-12",
   "byDate": {
-    "2026-10-11": [
-      {
-        "id": 849831,
-        "status": "Final",
-        "venue": "Progressive Field",
-        "gameDate": "2026-10-11T00:00:00Z",
-        "away": {
-          "id": 145,
-          "name": "Chicago White Sox",
-          "score": 0,
-          "record": {
-            "wins": 2,
-            "losses": 3,
-            "ties": 0,
-            "pct": ".400"
-          }
-        },
-        "home": {
-          "id": 114,
-          "name": "Cleveland Guardians",
-          "score": 2,
-          "record": {
-            "wins": 3,
-            "losses": 2,
-            "ties": 0,
-            "pct": ".600"
-          }
-        },
-        "probable": {
-          "away": "Sean Burke",
-          "home": "Gavin Williams"
-        },
-        "decisions": {
-          "winner": "Gavin Williams",
-          "loser": "Sean Burke",
-          "save": "Cade Smith"
-        }
-      }
-    ],
     "2026-10-12": [
       {
         "id": 849809,
-        "status": "Scheduled",
+        "status": "In Progress",
         "venue": "American Family Field",
         "gameDate": "2026-10-12T00:00:00Z",
         "away": {
           "id": 119,
           "name": "Los Angeles Dodgers",
-          "score": null,
+          "score": 1,
           "record": {
             "wins": 0,
             "losses": 0,
@@ -62,7 +23,7 @@
         "home": {
           "id": 158,
           "name": "Milwaukee Brewers",
-          "score": null,
+          "score": 0,
           "record": {
             "wins": 0,
             "losses": 0,
@@ -111,7 +72,7 @@
         },
         "probable": {
           "away": "Yoshinobu Yamamoto",
-          "home": ""
+          "home": "Logan Henderson"
         },
         "decisions": {
           "winner": "",
@@ -147,6 +108,45 @@
           }
         },
         "probable": {
+          "away": "Foster Griffin",
+          "home": "Drew Rasmussen"
+        },
+        "decisions": {
+          "winner": "",
+          "loser": "",
+          "save": ""
+        }
+      }
+    ],
+    "2026-10-14": [
+      {
+        "id": 849813,
+        "status": "Scheduled",
+        "venue": "Tropicana Field",
+        "gameDate": "2026-10-14T00:00:00Z",
+        "away": {
+          "id": 114,
+          "name": "Cleveland Guardians",
+          "score": null,
+          "record": {
+            "wins": 0,
+            "losses": 0,
+            "ties": 0,
+            "pct": ".000"
+          }
+        },
+        "home": {
+          "id": 139,
+          "name": "Tampa Bay Rays",
+          "score": null,
+          "record": {
+            "wins": 0,
+            "losses": 0,
+            "ties": 0,
+            "pct": ".000"
+          }
+        },
+        "probable": {
           "away": "",
           "home": ""
         },
@@ -158,6 +158,6 @@
       }
     ]
   },
-  "updatedAt": "2026-10-11T13:47:23.388Z",
+  "updatedAt": "2026-10-12T00:53:05.590Z",
   "source": "MLB Stats API"
 }
