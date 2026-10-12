@@ -1,47 +1,8 @@
 {
-  "start": "2026-10-11",
-  "end": "2026-10-13",
-  "defaultDate": "2026-10-12",
+  "start": "2026-10-12",
+  "end": "2026-10-14",
+  "defaultDate": "2026-10-13",
   "byDate": {
-    "2026-10-12": [
-      {
-        "id": 849809,
-        "status": "In Progress",
-        "venue": "American Family Field",
-        "gameDate": "2026-10-12T00:00:00Z",
-        "away": {
-          "id": 119,
-          "name": "Los Angeles Dodgers",
-          "score": 1,
-          "record": {
-            "wins": 0,
-            "losses": 0,
-            "ties": 0,
-            "pct": ".000"
-          }
-        },
-        "home": {
-          "id": 158,
-          "name": "Milwaukee Brewers",
-          "score": 0,
-          "record": {
-            "wins": 0,
-            "losses": 0,
-            "ties": 0,
-            "pct": ".000"
-          }
-        },
-        "probable": {
-          "away": "Tarik Skubal",
-          "home": "Jacob Misiorowski"
-        },
-        "decisions": {
-          "winner": "",
-          "loser": "",
-          "save": ""
-        }
-      }
-    ],
     "2026-10-13": [
       {
         "id": 849812,
@@ -54,7 +15,7 @@
           "score": null,
           "record": {
             "wins": 0,
-            "losses": 0,
+            "losses": 1,
             "ties": 0,
             "pct": ".000"
           }
@@ -64,10 +25,10 @@
           "name": "Milwaukee Brewers",
           "score": null,
           "record": {
-            "wins": 0,
+            "wins": 1,
             "losses": 0,
             "ties": 0,
-            "pct": ".000"
+            "pct": "1.000"
           }
         },
         "probable": {
@@ -156,8 +117,47 @@
           "save": ""
         }
       }
+    ],
+    "2026-10-15": [
+      {
+        "id": 849811,
+        "status": "Scheduled",
+        "venue": "UNIQLO Field at Dodger Stadium",
+        "gameDate": "2026-10-15T00:00:00Z",
+        "away": {
+          "id": 158,
+          "name": "Milwaukee Brewers",
+          "score": null,
+          "record": {
+            "wins": 1,
+            "losses": 0,
+            "ties": 0,
+            "pct": "1.000"
+          }
+        },
+        "home": {
+          "id": 119,
+          "name": "Los Angeles Dodgers",
+          "score": null,
+          "record": {
+            "wins": 0,
+            "losses": 1,
+            "ties": 0,
+            "pct": ".000"
+          }
+        },
+        "probable": {
+          "away": "Robert Gasser",
+          "home": ""
+        },
+        "decisions": {
+          "winner": "",
+          "loser": "",
+          "save": ""
+        }
+      }
     ]
   },
-  "updatedAt": "2026-10-12T00:53:05.590Z",
+  "updatedAt": "2026-10-12T16:13:04.889Z",
   "source": "MLB Stats API"
 }
