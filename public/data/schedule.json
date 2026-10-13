@@ -43,18 +43,18 @@
       },
       {
         "id": 849820,
-        "status": "In Progress",
+        "status": "Final",
         "venue": "Tropicana Field",
         "gameDate": "2026-10-13T00:00:00Z",
         "away": {
           "id": 114,
           "name": "Cleveland Guardians",
-          "score": 4,
+          "score": 7,
           "record": {
-            "wins": 0,
+            "wins": 1,
             "losses": 0,
             "ties": 0,
-            "pct": ".000"
+            "pct": "1.000"
           }
         },
         "home": {
@@ -63,7 +63,7 @@
           "score": 3,
           "record": {
             "wins": 0,
-            "losses": 0,
+            "losses": 1,
             "ties": 0,
             "pct": ".000"
           }
@@ -73,8 +73,8 @@
           "home": "Drew Rasmussen"
         },
         "decisions": {
-          "winner": "",
-          "loser": "",
+          "winner": "Hunter Gaddis",
+          "loser": "Tyler Wells",
           "save": ""
         }
       }
@@ -90,10 +90,10 @@
           "name": "Cleveland Guardians",
           "score": null,
           "record": {
-            "wins": 0,
+            "wins": 1,
             "losses": 0,
             "ties": 0,
-            "pct": ".000"
+            "pct": "1.000"
           }
         },
         "home": {
@@ -102,7 +102,7 @@
           "score": null,
           "record": {
             "wins": 0,
-            "losses": 0,
+            "losses": 1,
             "ties": 0,
             "pct": ".000"
           }
@@ -158,6 +158,6 @@
       }
     ]
   },
-  "updatedAt": "2026-10-13T02:47:20.952Z",
+  "updatedAt": "2026-10-13T14:38:47.718Z",
   "source": "MLB Stats API"
 }
