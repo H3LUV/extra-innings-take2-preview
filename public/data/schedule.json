@@ -6,16 +6,16 @@
     "2026-10-13": [
       {
         "id": 849812,
-        "status": "Scheduled",
+        "status": "Final",
         "venue": "American Family Field",
         "gameDate": "2026-10-12T21:00:00Z",
         "away": {
           "id": 119,
           "name": "Los Angeles Dodgers",
-          "score": null,
+          "score": 4,
           "record": {
             "wins": 0,
-            "losses": 1,
+            "losses": 2,
             "ties": 0,
             "pct": ".000"
           }
@@ -23,9 +23,9 @@
         "home": {
           "id": 158,
           "name": "Milwaukee Brewers",
-          "score": null,
+          "score": 7,
           "record": {
-            "wins": 1,
+            "wins": 2,
             "losses": 0,
             "ties": 0,
             "pct": "1.000"
@@ -36,20 +36,20 @@
           "home": "Logan Henderson"
         },
         "decisions": {
-          "winner": "",
-          "loser": "",
-          "save": ""
+          "winner": "JoJo Romero",
+          "loser": "Brock Stewart",
+          "save": "Aaron Ashby"
         }
       },
       {
         "id": 849820,
-        "status": "Scheduled",
+        "status": "In Progress",
         "venue": "Tropicana Field",
         "gameDate": "2026-10-13T00:00:00Z",
         "away": {
           "id": 114,
           "name": "Cleveland Guardians",
-          "score": null,
+          "score": 4,
           "record": {
             "wins": 0,
             "losses": 0,
@@ -60,7 +60,7 @@
         "home": {
           "id": 139,
           "name": "Tampa Bay Rays",
-          "score": null,
+          "score": 3,
           "record": {
             "wins": 0,
             "losses": 0,
@@ -108,8 +108,8 @@
           }
         },
         "probable": {
-          "away": "",
-          "home": ""
+          "away": "Parker Messick",
+          "home": "Freddy Peralta"
         },
         "decisions": {
           "winner": "",
@@ -129,7 +129,7 @@
           "name": "Milwaukee Brewers",
           "score": null,
           "record": {
-            "wins": 1,
+            "wins": 2,
             "losses": 0,
             "ties": 0,
             "pct": "1.000"
@@ -141,7 +141,7 @@
           "score": null,
           "record": {
             "wins": 0,
-            "losses": 1,
+            "losses": 2,
             "ties": 0,
             "pct": ".000"
           }
@@ -158,6 +158,6 @@
       }
     ]
   },
-  "updatedAt": "2026-10-12T16:31:22.546Z",
+  "updatedAt": "2026-10-13T02:47:20.952Z",
   "source": "MLB Stats API"
 }
