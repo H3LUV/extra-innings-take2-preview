@@ -6,29 +6,29 @@
     "2026-10-14": [
       {
         "id": 849813,
-        "status": "In Progress",
+        "status": "Final",
         "venue": "Tropicana Field",
         "gameDate": "2026-10-14T00:00:00Z",
         "away": {
           "id": 114,
           "name": "Cleveland Guardians",
-          "score": 0,
+          "score": 1,
           "record": {
             "wins": 1,
-            "losses": 0,
+            "losses": 1,
             "ties": 0,
-            "pct": "1.000"
+            "pct": ".500"
           }
         },
         "home": {
           "id": 139,
           "name": "Tampa Bay Rays",
-          "score": 0,
+          "score": 3,
           "record": {
-            "wins": 0,
+            "wins": 1,
             "losses": 1,
             "ties": 0,
-            "pct": ".000"
+            "pct": ".500"
           }
         },
         "probable": {
@@ -36,9 +36,9 @@
           "home": "Freddy Peralta"
         },
         "decisions": {
-          "winner": "",
-          "loser": "",
-          "save": ""
+          "winner": "Freddy Peralta",
+          "loser": "Parker Messick",
+          "save": "Bryan Baker"
         }
       }
     ],
@@ -92,10 +92,10 @@
           "name": "Tampa Bay Rays",
           "score": null,
           "record": {
-            "wins": 0,
+            "wins": 1,
             "losses": 1,
             "ties": 0,
-            "pct": ".000"
+            "pct": ".500"
           }
         },
         "home": {
@@ -104,13 +104,13 @@
           "score": null,
           "record": {
             "wins": 1,
-            "losses": 0,
+            "losses": 1,
             "ties": 0,
-            "pct": "1.000"
+            "pct": ".500"
           }
         },
         "probable": {
-          "away": "",
+          "away": "Griffin Jax",
           "home": ""
         },
         "decisions": {
@@ -158,6 +158,6 @@
       }
     ]
   },
-  "updatedAt": "2026-10-14T00:47:33.825Z",
+  "updatedAt": "2026-10-14T12:30:51.695Z",
   "source": "MLB Stats API"
 }
