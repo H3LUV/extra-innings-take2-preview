@@ -1,57 +1,18 @@
 {
-  "start": "2026-10-13",
-  "end": "2026-10-15",
-  "defaultDate": "2026-10-14",
+  "start": "2026-10-14",
+  "end": "2026-10-16",
+  "defaultDate": "2026-10-15",
   "byDate": {
-    "2026-10-14": [
-      {
-        "id": 849813,
-        "status": "Final",
-        "venue": "Tropicana Field",
-        "gameDate": "2026-10-14T00:00:00Z",
-        "away": {
-          "id": 114,
-          "name": "Cleveland Guardians",
-          "score": 1,
-          "record": {
-            "wins": 1,
-            "losses": 1,
-            "ties": 0,
-            "pct": ".500"
-          }
-        },
-        "home": {
-          "id": 139,
-          "name": "Tampa Bay Rays",
-          "score": 3,
-          "record": {
-            "wins": 1,
-            "losses": 1,
-            "ties": 0,
-            "pct": ".500"
-          }
-        },
-        "probable": {
-          "away": "Parker Messick",
-          "home": "Freddy Peralta"
-        },
-        "decisions": {
-          "winner": "Freddy Peralta",
-          "loser": "Parker Messick",
-          "save": "Bryan Baker"
-        }
-      }
-    ],
     "2026-10-15": [
       {
         "id": 849811,
-        "status": "Scheduled",
+        "status": "In Progress",
         "venue": "UNIQLO Field at Dodger Stadium",
         "gameDate": "2026-10-15T00:00:00Z",
         "away": {
           "id": 158,
           "name": "Milwaukee Brewers",
-          "score": null,
+          "score": 1,
           "record": {
             "wins": 2,
             "losses": 0,
@@ -62,7 +23,7 @@
         "home": {
           "id": 119,
           "name": "Los Angeles Dodgers",
-          "score": null,
+          "score": 0,
           "record": {
             "wins": 0,
             "losses": 2,
@@ -86,7 +47,7 @@
         "id": 849818,
         "status": "Scheduled",
         "venue": "Progressive Field",
-        "gameDate": "2026-10-15T22:00:00Z",
+        "gameDate": "2026-10-15T17:00:00Z",
         "away": {
           "id": 139,
           "name": "Tampa Bay Rays",
@@ -111,7 +72,7 @@
         },
         "probable": {
           "away": "Griffin Jax",
-          "home": ""
+          "home": "Gavin Williams"
         },
         "decisions": {
           "winner": "",
@@ -123,7 +84,83 @@
         "id": 849810,
         "status": "Scheduled",
         "venue": "UNIQLO Field at Dodger Stadium",
-        "gameDate": "2026-10-16T01:00:00Z",
+        "gameDate": "2026-10-16T00:00:00Z",
+        "away": {
+          "id": 158,
+          "name": "Milwaukee Brewers",
+          "score": null,
+          "record": {
+            "wins": 2,
+            "losses": 0,
+            "ties": 0,
+            "pct": "1.000"
+          }
+        },
+        "home": {
+          "id": 119,
+          "name": "Los Angeles Dodgers",
+          "score": null,
+          "record": {
+            "wins": 0,
+            "losses": 2,
+            "ties": 0,
+            "pct": ".000"
+          }
+        },
+        "probable": {
+          "away": "",
+          "home": "Tyler Glasnow"
+        },
+        "decisions": {
+          "winner": "",
+          "loser": "",
+          "save": ""
+        }
+      }
+    ],
+    "2026-10-17": [
+      {
+        "id": 849817,
+        "status": "Scheduled",
+        "venue": "Progressive Field",
+        "gameDate": "2026-10-16T22:00:00Z",
+        "away": {
+          "id": 139,
+          "name": "Tampa Bay Rays",
+          "score": null,
+          "record": {
+            "wins": 1,
+            "losses": 1,
+            "ties": 0,
+            "pct": ".500"
+          }
+        },
+        "home": {
+          "id": 114,
+          "name": "Cleveland Guardians",
+          "score": null,
+          "record": {
+            "wins": 1,
+            "losses": 1,
+            "ties": 0,
+            "pct": ".500"
+          }
+        },
+        "probable": {
+          "away": "",
+          "home": ""
+        },
+        "decisions": {
+          "winner": "",
+          "loser": "",
+          "save": ""
+        }
+      },
+      {
+        "id": 849808,
+        "status": "Scheduled",
+        "venue": "UNIQLO Field at Dodger Stadium",
+        "gameDate": "2026-10-17T01:00:00Z",
         "away": {
           "id": 158,
           "name": "Milwaukee Brewers",
@@ -158,6 +195,6 @@
       }
     ]
   },
-  "updatedAt": "2026-10-14T12:40:19.093Z",
+  "updatedAt": "2026-10-15T00:13:16.427Z",
   "source": "MLB Stats API"
 }
