@@ -6,15 +6,15 @@
     "2026-10-15": [
       {
         "id": 849811,
-        "status": "In Progress",
+        "status": "Final",
         "venue": "UNIQLO Field at Dodger Stadium",
         "gameDate": "2026-10-15T00:00:00Z",
         "away": {
           "id": 158,
           "name": "Milwaukee Brewers",
-          "score": 1,
+          "score": 6,
           "record": {
-            "wins": 2,
+            "wins": 3,
             "losses": 0,
             "ties": 0,
             "pct": "1.000"
@@ -23,10 +23,10 @@
         "home": {
           "id": 119,
           "name": "Los Angeles Dodgers",
-          "score": 0,
+          "score": 2,
           "record": {
             "wins": 0,
-            "losses": 2,
+            "losses": 3,
             "ties": 0,
             "pct": ".000"
           }
@@ -36,9 +36,9 @@
           "home": "Blake Snell"
         },
         "decisions": {
-          "winner": "",
-          "loser": "",
-          "save": ""
+          "winner": "DL Hall",
+          "loser": "Blake Snell",
+          "save": "Trevor Megill"
         }
       }
     ],
@@ -90,7 +90,7 @@
           "name": "Milwaukee Brewers",
           "score": null,
           "record": {
-            "wins": 2,
+            "wins": 3,
             "losses": 0,
             "ties": 0,
             "pct": "1.000"
@@ -102,7 +102,7 @@
           "score": null,
           "record": {
             "wins": 0,
-            "losses": 2,
+            "losses": 3,
             "ties": 0,
             "pct": ".000"
           }
@@ -166,7 +166,7 @@
           "name": "Milwaukee Brewers",
           "score": null,
           "record": {
-            "wins": 2,
+            "wins": 3,
             "losses": 0,
             "ties": 0,
             "pct": "1.000"
@@ -178,7 +178,7 @@
           "score": null,
           "record": {
             "wins": 0,
-            "losses": 2,
+            "losses": 3,
             "ties": 0,
             "pct": ".000"
           }
@@ -195,6 +195,6 @@
       }
     ]
   },
-  "updatedAt": "2026-10-15T00:13:16.427Z",
+  "updatedAt": "2026-10-15T12:12:49.767Z",
   "source": "MLB Stats API"
 }
