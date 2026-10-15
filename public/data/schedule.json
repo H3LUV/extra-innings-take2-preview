@@ -1,73 +1,34 @@
 {
-  "start": "2026-10-14",
-  "end": "2026-10-16",
-  "defaultDate": "2026-10-15",
+  "start": "2026-10-15",
+  "end": "2026-10-17",
+  "defaultDate": "2026-10-16",
   "byDate": {
-    "2026-10-15": [
-      {
-        "id": 849811,
-        "status": "Final",
-        "venue": "UNIQLO Field at Dodger Stadium",
-        "gameDate": "2026-10-15T00:00:00Z",
-        "away": {
-          "id": 158,
-          "name": "Milwaukee Brewers",
-          "score": 6,
-          "record": {
-            "wins": 3,
-            "losses": 0,
-            "ties": 0,
-            "pct": "1.000"
-          }
-        },
-        "home": {
-          "id": 119,
-          "name": "Los Angeles Dodgers",
-          "score": 2,
-          "record": {
-            "wins": 0,
-            "losses": 3,
-            "ties": 0,
-            "pct": ".000"
-          }
-        },
-        "probable": {
-          "away": "Robert Gasser",
-          "home": "Blake Snell"
-        },
-        "decisions": {
-          "winner": "DL Hall",
-          "loser": "Blake Snell",
-          "save": "Trevor Megill"
-        }
-      }
-    ],
     "2026-10-16": [
       {
         "id": 849818,
-        "status": "Scheduled",
+        "status": "Final",
         "venue": "Progressive Field",
         "gameDate": "2026-10-15T17:00:00Z",
         "away": {
           "id": 139,
           "name": "Tampa Bay Rays",
-          "score": null,
+          "score": 2,
           "record": {
             "wins": 1,
-            "losses": 1,
+            "losses": 2,
             "ties": 0,
-            "pct": ".500"
+            "pct": ".333"
           }
         },
         "home": {
           "id": 114,
           "name": "Cleveland Guardians",
-          "score": null,
+          "score": 3,
           "record": {
-            "wins": 1,
+            "wins": 2,
             "losses": 1,
             "ties": 0,
-            "pct": ".500"
+            "pct": ".667"
           }
         },
         "probable": {
@@ -75,20 +36,20 @@
           "home": "Gavin Williams"
         },
         "decisions": {
-          "winner": "",
-          "loser": "",
-          "save": ""
+          "winner": "Gavin Williams",
+          "loser": "Griffin Jax",
+          "save": "Cade Smith"
         }
       },
       {
         "id": 849810,
-        "status": "Scheduled",
+        "status": "Warmup",
         "venue": "UNIQLO Field at Dodger Stadium",
         "gameDate": "2026-10-16T00:00:00Z",
         "away": {
           "id": 158,
           "name": "Milwaukee Brewers",
-          "score": null,
+          "score": 0,
           "record": {
             "wins": 3,
             "losses": 0,
@@ -99,7 +60,7 @@
         "home": {
           "id": 119,
           "name": "Los Angeles Dodgers",
-          "score": null,
+          "score": 0,
           "record": {
             "wins": 0,
             "losses": 3,
@@ -108,7 +69,7 @@
           }
         },
         "probable": {
-          "away": "",
+          "away": "Shane Drohan",
           "home": "Tyler Glasnow"
         },
         "decisions": {
@@ -130,9 +91,9 @@
           "score": null,
           "record": {
             "wins": 1,
-            "losses": 1,
+            "losses": 2,
             "ties": 0,
-            "pct": ".500"
+            "pct": ".333"
           }
         },
         "home": {
@@ -140,14 +101,14 @@
           "name": "Cleveland Guardians",
           "score": null,
           "record": {
-            "wins": 1,
+            "wins": 2,
             "losses": 1,
             "ties": 0,
-            "pct": ".500"
+            "pct": ".667"
           }
         },
         "probable": {
-          "away": "",
+          "away": "Nick Martinez",
           "home": ""
         },
         "decisions": {
@@ -193,8 +154,47 @@
           "save": ""
         }
       }
+    ],
+    "2026-10-18": [
+      {
+        "id": 849816,
+        "status": "Scheduled",
+        "venue": "Progressive Field",
+        "gameDate": "2026-10-18T00:00:00Z",
+        "away": {
+          "id": 139,
+          "name": "Tampa Bay Rays",
+          "score": null,
+          "record": {
+            "wins": 1,
+            "losses": 2,
+            "ties": 0,
+            "pct": ".333"
+          }
+        },
+        "home": {
+          "id": 114,
+          "name": "Cleveland Guardians",
+          "score": null,
+          "record": {
+            "wins": 2,
+            "losses": 1,
+            "ties": 0,
+            "pct": ".667"
+          }
+        },
+        "probable": {
+          "away": "",
+          "home": ""
+        },
+        "decisions": {
+          "winner": "",
+          "loser": "",
+          "save": ""
+        }
+      }
     ]
   },
-  "updatedAt": "2026-10-15T12:28:44.984Z",
+  "updatedAt": "2026-10-15T23:59:29.788Z",
   "source": "MLB Stats API"
 }
