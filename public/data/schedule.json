@@ -43,15 +43,15 @@
       },
       {
         "id": 849810,
-        "status": "Warmup",
+        "status": "Final",
         "venue": "UNIQLO Field at Dodger Stadium",
         "gameDate": "2026-10-16T00:00:00Z",
         "away": {
           "id": 158,
           "name": "Milwaukee Brewers",
-          "score": 0,
+          "score": 6,
           "record": {
-            "wins": 3,
+            "wins": 4,
             "losses": 0,
             "ties": 0,
             "pct": "1.000"
@@ -60,10 +60,10 @@
         "home": {
           "id": 119,
           "name": "Los Angeles Dodgers",
-          "score": 0,
+          "score": 4,
           "record": {
             "wins": 0,
-            "losses": 3,
+            "losses": 4,
             "ties": 0,
             "pct": ".000"
           }
@@ -73,9 +73,9 @@
           "home": "Tyler Glasnow"
         },
         "decisions": {
-          "winner": "",
-          "loser": "",
-          "save": ""
+          "winner": "JoJo Romero",
+          "loser": "Tanner Scott",
+          "save": "Aaron Ashby"
         }
       }
     ],
@@ -84,7 +84,7 @@
         "id": 849817,
         "status": "Scheduled",
         "venue": "Progressive Field",
-        "gameDate": "2026-10-16T22:00:00Z",
+        "gameDate": "2026-10-17T00:00:00Z",
         "away": {
           "id": 139,
           "name": "Tampa Bay Rays",
@@ -109,43 +109,6 @@
         },
         "probable": {
           "away": "Nick Martinez",
-          "home": ""
-        },
-        "decisions": {
-          "winner": "",
-          "loser": "",
-          "save": ""
-        }
-      },
-      {
-        "id": 849808,
-        "status": "Scheduled",
-        "venue": "UNIQLO Field at Dodger Stadium",
-        "gameDate": "2026-10-17T01:00:00Z",
-        "away": {
-          "id": 158,
-          "name": "Milwaukee Brewers",
-          "score": null,
-          "record": {
-            "wins": 3,
-            "losses": 0,
-            "ties": 0,
-            "pct": "1.000"
-          }
-        },
-        "home": {
-          "id": 119,
-          "name": "Los Angeles Dodgers",
-          "score": null,
-          "record": {
-            "wins": 0,
-            "losses": 3,
-            "ties": 0,
-            "pct": ".000"
-          }
-        },
-        "probable": {
-          "away": "",
           "home": ""
         },
         "decisions": {
@@ -195,6 +158,6 @@
       }
     ]
   },
-  "updatedAt": "2026-10-15T23:59:29.788Z",
+  "updatedAt": "2026-10-16T11:57:54.984Z",
   "source": "MLB Stats API"
 }
