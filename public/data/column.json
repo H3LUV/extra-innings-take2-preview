@@ -5,11 +5,11 @@
   "players": [],
   "method": "시즌 180타석 이상, 최근·직전 14일 각각 28타석 이상, 최근 OPS 0.700 이상인 타자 대상. 원인이나 지속 가능성은 추론하지 않습니다.",
   "range": {
-    "recentStart": "2026-10-03",
-    "recentEnd": "2026-10-16",
-    "previousStart": "2026-09-19",
-    "previousEnd": "2026-10-02"
+    "recentStart": "2026-10-04",
+    "recentEnd": "2026-10-17",
+    "previousStart": "2026-09-20",
+    "previousEnd": "2026-10-03"
   },
-  "updatedAt": "2026-10-17T00:05:03.072Z",
+  "updatedAt": "2026-10-17T17:47:14.046Z",
   "source": "MLB Stats API"
 }
