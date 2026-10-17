@@ -1,94 +1,18 @@
 {
-  "start": "2026-10-15",
-  "end": "2026-10-17",
-  "defaultDate": "2026-10-16",
+  "start": "2026-10-16",
+  "end": "2026-10-18",
+  "defaultDate": "2026-10-17",
   "byDate": {
-    "2026-10-16": [
-      {
-        "id": 849818,
-        "status": "Final",
-        "venue": "Progressive Field",
-        "gameDate": "2026-10-15T17:00:00Z",
-        "away": {
-          "id": 139,
-          "name": "Tampa Bay Rays",
-          "score": 2,
-          "record": {
-            "wins": 1,
-            "losses": 2,
-            "ties": 0,
-            "pct": ".333"
-          }
-        },
-        "home": {
-          "id": 114,
-          "name": "Cleveland Guardians",
-          "score": 3,
-          "record": {
-            "wins": 2,
-            "losses": 1,
-            "ties": 0,
-            "pct": ".667"
-          }
-        },
-        "probable": {
-          "away": "Griffin Jax",
-          "home": "Gavin Williams"
-        },
-        "decisions": {
-          "winner": "Gavin Williams",
-          "loser": "Griffin Jax",
-          "save": "Cade Smith"
-        }
-      },
-      {
-        "id": 849810,
-        "status": "Final",
-        "venue": "UNIQLO Field at Dodger Stadium",
-        "gameDate": "2026-10-16T00:00:00Z",
-        "away": {
-          "id": 158,
-          "name": "Milwaukee Brewers",
-          "score": 6,
-          "record": {
-            "wins": 4,
-            "losses": 0,
-            "ties": 0,
-            "pct": "1.000"
-          }
-        },
-        "home": {
-          "id": 119,
-          "name": "Los Angeles Dodgers",
-          "score": 4,
-          "record": {
-            "wins": 0,
-            "losses": 4,
-            "ties": 0,
-            "pct": ".000"
-          }
-        },
-        "probable": {
-          "away": "Shane Drohan",
-          "home": "Tyler Glasnow"
-        },
-        "decisions": {
-          "winner": "JoJo Romero",
-          "loser": "Tanner Scott",
-          "save": "Aaron Ashby"
-        }
-      }
-    ],
     "2026-10-17": [
       {
         "id": 849817,
-        "status": "Scheduled",
+        "status": "Delayed Start",
         "venue": "Progressive Field",
         "gameDate": "2026-10-17T00:00:00Z",
         "away": {
           "id": 139,
           "name": "Tampa Bay Rays",
-          "score": null,
+          "score": 0,
           "record": {
             "wins": 1,
             "losses": 2,
@@ -99,7 +23,7 @@
         "home": {
           "id": 114,
           "name": "Cleveland Guardians",
-          "score": null,
+          "score": 0,
           "record": {
             "wins": 2,
             "losses": 1,
@@ -109,7 +33,7 @@
         },
         "probable": {
           "away": "Nick Martinez",
-          "home": ""
+          "home": "Shawn Armstrong"
         },
         "decisions": {
           "winner": "",
@@ -158,6 +82,6 @@
       }
     ]
   },
-  "updatedAt": "2026-10-16T12:06:50.599Z",
+  "updatedAt": "2026-10-17T00:05:03.285Z",
   "source": "MLB Stats API"
 }
