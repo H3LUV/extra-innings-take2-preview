@@ -1,57 +1,18 @@
 {
-  "start": "2026-10-16",
-  "end": "2026-10-18",
-  "defaultDate": "2026-10-17",
+  "start": "2026-10-17",
+  "end": "2026-10-19",
+  "defaultDate": "2026-10-18",
   "byDate": {
-    "2026-10-17": [
-      {
-        "id": 849817,
-        "status": "Postponed",
-        "venue": "Progressive Field",
-        "gameDate": "2026-10-17T00:00:00Z",
-        "away": {
-          "id": 139,
-          "name": "Tampa Bay Rays",
-          "score": null,
-          "record": {
-            "wins": 1,
-            "losses": 2,
-            "ties": 0,
-            "pct": ".333"
-          }
-        },
-        "home": {
-          "id": 114,
-          "name": "Cleveland Guardians",
-          "score": null,
-          "record": {
-            "wins": 2,
-            "losses": 1,
-            "ties": 0,
-            "pct": ".667"
-          }
-        },
-        "probable": {
-          "away": "Nick Martinez",
-          "home": "Shawn Armstrong"
-        },
-        "decisions": {
-          "winner": "",
-          "loser": "",
-          "save": ""
-        }
-      }
-    ],
     "2026-10-18": [
       {
         "id": 849816,
-        "status": "Scheduled",
+        "status": "Pre-Game",
         "venue": "Progressive Field",
-        "gameDate": "2026-10-18T00:00:00Z",
+        "gameDate": "2026-10-18T00:08:00Z",
         "away": {
           "id": 139,
           "name": "Tampa Bay Rays",
-          "score": null,
+          "score": 0,
           "record": {
             "wins": 1,
             "losses": 2,
@@ -62,7 +23,7 @@
         "home": {
           "id": 114,
           "name": "Cleveland Guardians",
-          "score": null,
+          "score": 0,
           "record": {
             "wins": 2,
             "losses": 1,
@@ -84,13 +45,13 @@
     "2026-10-19": [
       {
         "id": 849817,
-        "status": "Scheduled",
+        "status": "Delayed Start",
         "venue": "Progressive Field",
-        "gameDate": "2026-10-18T21:00:00Z",
+        "gameDate": "2026-10-18T21:08:00Z",
         "away": {
           "id": 139,
           "name": "Tampa Bay Rays",
-          "score": null,
+          "score": 0,
           "record": {
             "wins": 1,
             "losses": 2,
@@ -101,7 +62,7 @@
         "home": {
           "id": 114,
           "name": "Cleveland Guardians",
-          "score": null,
+          "score": 0,
           "record": {
             "wins": 2,
             "losses": 1,
@@ -119,8 +80,47 @@
           "save": ""
         }
       }
+    ],
+    "2026-10-20": [
+      {
+        "id": 849815,
+        "status": "Scheduled",
+        "venue": "Tropicana Field",
+        "gameDate": "2026-10-20T00:08:00Z",
+        "away": {
+          "id": 114,
+          "name": "Cleveland Guardians",
+          "score": null,
+          "record": {
+            "wins": 2,
+            "losses": 1,
+            "ties": 0,
+            "pct": ".667"
+          }
+        },
+        "home": {
+          "id": 139,
+          "name": "Tampa Bay Rays",
+          "score": null,
+          "record": {
+            "wins": 1,
+            "losses": 2,
+            "ties": 0,
+            "pct": ".333"
+          }
+        },
+        "probable": {
+          "away": "",
+          "home": ""
+        },
+        "decisions": {
+          "winner": "",
+          "loser": "",
+          "save": ""
+        }
+      }
     ]
   },
-  "updatedAt": "2026-10-17T11:24:27.643Z",
+  "updatedAt": "2026-10-17T23:40:54.580Z",
   "source": "MLB Stats API"
 }
