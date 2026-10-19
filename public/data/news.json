@@ -1,6 +1,40 @@
 {
   "items": [
     {
+      "id": "mlb-330a314b770b",
+      "articleFile": "./data/articles/mlb-330a314b770b.json",
+      "title": "Members-Only Game Thread: ALCS – Oct 18, 2026",
+      "titleKo": "회원 전용 게임 스레드: ALCS - 2026년 10월 18일",
+      "link": "https://blogs.fangraphs.com/members-only-game-thread-alcs-oct-18-2026/",
+      "pubDate": "2026-10-18T20:30:52+00:00",
+      "source": "FanGraphs",
+      "category": "미국 현지 읽을거리",
+      "readingMinutes": 4,
+      "bodyVerified": true,
+      "bodyChars": 1119,
+      "sourceWordCount": 300,
+      "translationType": "full",
+      "pipelineVersion": "reader-v6",
+      "translatedAt": "2026-10-19T00:13:02.617Z"
+    },
+    {
+      "id": "mlb-72387c74c81c",
+      "articleFile": "./data/articles/mlb-72387c74c81c.json",
+      "title": "Sunday Notes: NYY Prospect Dax Kilby is Debuting New Mechanics in the Desert",
+      "titleKo": "일요일 참고 사항: NYY 유망주 Dax Kilby가 사막에서 새로운 기계를 선보입니다.",
+      "link": "https://blogs.fangraphs.com/sunday-notes-nyy-prospect-dax-kilby-is-debuting-new-mechanics-in-the-desert/",
+      "pubDate": "2026-10-18T12:03:01+00:00",
+      "source": "FanGraphs",
+      "category": "미국 현지 읽을거리",
+      "readingMinutes": 12,
+      "bodyVerified": true,
+      "bodyChars": 8957,
+      "sourceWordCount": 2656,
+      "translationType": "full",
+      "pipelineVersion": "reader-v6",
+      "translatedAt": "2026-10-19T00:13:34.283Z"
+    },
+    {
       "id": "mlb-e0cfc1d5d4b4",
       "articleFile": "./data/articles/mlb-e0cfc1d5d4b4.json",
       "title": "Members-Only Game Thread: ALCS – Oct 17, 2026",
@@ -33,40 +67,6 @@
       "translationType": "full",
       "pipelineVersion": "reader-v6",
       "translatedAt": "2026-10-17T00:31:11.342Z"
-    },
-    {
-      "id": "mlb-47d44055bef4",
-      "articleFile": "./data/articles/mlb-47d44055bef4.json",
-      "title": "Members-Only Game Thread: ALCS – Oct 13, 2026",
-      "titleKo": "회원 전용 게임 스레드: ALCS - 2026년 10월 13일",
-      "link": "https://blogs.fangraphs.com/members-only-game-thread-alcs-oct-13-2026/",
-      "pubDate": "2026-10-13T23:30:24+00:00",
-      "source": "FanGraphs",
-      "category": "미국 현지 읽을거리",
-      "readingMinutes": 4,
-      "bodyVerified": true,
-      "bodyChars": 959,
-      "sourceWordCount": 248,
-      "translationType": "full",
-      "pipelineVersion": "reader-v6",
-      "translatedAt": "2026-10-14T01:14:14.515Z"
-    },
-    {
-      "id": "mlb-2f1b6bcf8254",
-      "articleFile": "./data/articles/mlb-2f1b6bcf8254.json",
-      "title": "Restored faith in Díaz gives Roberts another leverage weapon entering NLCS",
-      "titleKo": "Díaz에 대한 회복된 믿음은 Roberts에게 NLCS에 진입하는 또 다른 레버리지 무기를 제공합니다.",
-      "link": "https://www.mlb.com/news/dodgers-bullpen-options-for-nlcs-vs-brewers",
-      "pubDate": "2026-10-10T01:25:16.118Z",
-      "source": "MLB.com",
-      "category": "미국 현지 읽을거리",
-      "readingMinutes": 10,
-      "bodyVerified": true,
-      "bodyChars": 7855,
-      "sourceWordCount": 2268,
-      "translationType": "full",
-      "pipelineVersion": "reader-v6",
-      "translatedAt": "2026-10-10T01:46:19.780Z"
     }
   ],
   "message": "미국 현지 기사 중 광고·회원가입 문구를 제거하고 제목과 본문 전체 자동 번역이 완료된 기사만 제공합니다.",
@@ -74,5 +74,5 @@
   "translationPolicy": "clean_full_translation_keep_previous_on_failure",
   "pipelineVersion": "reader-v6",
   "selectedCount": 4,
-  "updatedAt": "2026-10-18T00:04:02.854Z"
+  "updatedAt": "2026-10-19T00:13:46.380Z"
 }
