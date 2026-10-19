@@ -6,7 +6,7 @@
     "2026-10-19": [
       {
         "id": 849817,
-        "status": "In Progress",
+        "status": "Final",
         "venue": "Progressive Field",
         "gameDate": "2026-10-18T21:08:00Z",
         "away": {
@@ -14,10 +14,10 @@
           "name": "Tampa Bay Rays",
           "score": 3,
           "record": {
-            "wins": 2,
+            "wins": 3,
             "losses": 2,
             "ties": 0,
-            "pct": ".500"
+            "pct": ".600"
           }
         },
         "home": {
@@ -26,9 +26,9 @@
           "score": 1,
           "record": {
             "wins": 2,
-            "losses": 2,
+            "losses": 3,
             "ties": 0,
-            "pct": ".500"
+            "pct": ".400"
           }
         },
         "probable": {
@@ -36,9 +36,9 @@
           "home": "Parker Messick"
         },
         "decisions": {
-          "winner": "",
-          "loser": "",
-          "save": ""
+          "winner": "Drew Rasmussen",
+          "loser": "Parker Messick",
+          "save": "Bryan Baker"
         }
       }
     ],
@@ -54,9 +54,9 @@
           "score": null,
           "record": {
             "wins": 2,
-            "losses": 2,
+            "losses": 3,
             "ties": 0,
-            "pct": ".500"
+            "pct": ".400"
           }
         },
         "home": {
@@ -64,15 +64,15 @@
           "name": "Tampa Bay Rays",
           "score": null,
           "record": {
-            "wins": 2,
+            "wins": 3,
             "losses": 2,
             "ties": 0,
-            "pct": ".500"
+            "pct": ".600"
           }
         },
         "probable": {
           "away": "",
-          "home": ""
+          "home": "Freddy Peralta"
         },
         "decisions": {
           "winner": "",
@@ -93,9 +93,9 @@
           "score": null,
           "record": {
             "wins": 2,
-            "losses": 2,
+            "losses": 3,
             "ties": 0,
-            "pct": ".500"
+            "pct": ".400"
           }
         },
         "home": {
@@ -103,10 +103,10 @@
           "name": "Tampa Bay Rays",
           "score": null,
           "record": {
-            "wins": 2,
+            "wins": 3,
             "losses": 2,
             "ties": 0,
-            "pct": ".500"
+            "pct": ".600"
           }
         },
         "probable": {
@@ -121,6 +121,6 @@
       }
     ]
   },
-  "updatedAt": "2026-10-18T23:50:05.713Z",
+  "updatedAt": "2026-10-19T14:06:50.088Z",
   "source": "MLB Stats API"
 }
