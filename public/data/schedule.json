@@ -1,57 +1,18 @@
 {
-  "start": "2026-10-18",
-  "end": "2026-10-20",
-  "defaultDate": "2026-10-19",
+  "start": "2026-10-19",
+  "end": "2026-10-21",
+  "defaultDate": "2026-10-20",
   "byDate": {
-    "2026-10-19": [
-      {
-        "id": 849817,
-        "status": "Final",
-        "venue": "Progressive Field",
-        "gameDate": "2026-10-18T21:08:00Z",
-        "away": {
-          "id": 139,
-          "name": "Tampa Bay Rays",
-          "score": 3,
-          "record": {
-            "wins": 3,
-            "losses": 2,
-            "ties": 0,
-            "pct": ".600"
-          }
-        },
-        "home": {
-          "id": 114,
-          "name": "Cleveland Guardians",
-          "score": 1,
-          "record": {
-            "wins": 2,
-            "losses": 3,
-            "ties": 0,
-            "pct": ".400"
-          }
-        },
-        "probable": {
-          "away": "Drew Rasmussen",
-          "home": "Parker Messick"
-        },
-        "decisions": {
-          "winner": "Drew Rasmussen",
-          "loser": "Parker Messick",
-          "save": "Bryan Baker"
-        }
-      }
-    ],
     "2026-10-20": [
       {
         "id": 849815,
-        "status": "Scheduled",
+        "status": "In Progress",
         "venue": "Tropicana Field",
         "gameDate": "2026-10-20T00:08:00Z",
         "away": {
           "id": 114,
           "name": "Cleveland Guardians",
-          "score": null,
+          "score": 0,
           "record": {
             "wins": 2,
             "losses": 3,
@@ -62,7 +23,7 @@
         "home": {
           "id": 139,
           "name": "Tampa Bay Rays",
-          "score": null,
+          "score": 2,
           "record": {
             "wins": 3,
             "losses": 2,
@@ -71,7 +32,7 @@
           }
         },
         "probable": {
-          "away": "",
+          "away": "Shawn Armstrong",
           "home": "Freddy Peralta"
         },
         "decisions": {
@@ -121,6 +82,6 @@
       }
     ]
   },
-  "updatedAt": "2026-10-19T14:22:52.252Z",
+  "updatedAt": "2026-10-20T00:51:26.019Z",
   "source": "MLB Stats API"
 }
