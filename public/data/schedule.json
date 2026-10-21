@@ -1,48 +1,8 @@
 {
-  "start": "2026-10-19",
-  "end": "2026-10-21",
-  "defaultDate": "2026-10-20",
-  "byDate": {
-    "2026-10-20": [
-      {
-        "id": 849815,
-        "status": "Final",
-        "venue": "Tropicana Field",
-        "gameDate": "2026-10-20T00:08:00Z",
-        "away": {
-          "id": 114,
-          "name": "Cleveland Guardians",
-          "score": 3,
-          "record": {
-            "wins": 2,
-            "losses": 4,
-            "ties": 0,
-            "pct": ".333"
-          }
-        },
-        "home": {
-          "id": 139,
-          "name": "Tampa Bay Rays",
-          "score": 7,
-          "record": {
-            "wins": 4,
-            "losses": 2,
-            "ties": 0,
-            "pct": ".667"
-          }
-        },
-        "probable": {
-          "away": "Shawn Armstrong",
-          "home": "Freddy Peralta"
-        },
-        "decisions": {
-          "winner": "Freddy Peralta",
-          "loser": "Shawn Armstrong",
-          "save": ""
-        }
-      }
-    ]
-  },
-  "updatedAt": "2026-10-20T12:33:19.849Z",
+  "start": "2026-10-20",
+  "end": "2026-10-22",
+  "defaultDate": "2026-10-21",
+  "byDate": {},
+  "updatedAt": "2026-10-21T00:17:33.431Z",
   "source": "MLB Stats API"
 }
