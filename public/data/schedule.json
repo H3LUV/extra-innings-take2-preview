@@ -1,8 +1,48 @@
 {
-  "start": "2026-10-20",
-  "end": "2026-10-22",
-  "defaultDate": "2026-10-21",
-  "byDate": {},
-  "updatedAt": "2026-10-21T12:44:12.383Z",
+  "start": "2026-10-21",
+  "end": "2026-10-23",
+  "defaultDate": "2026-10-22",
+  "byDate": {
+    "2026-10-24": [
+      {
+        "id": 849805,
+        "status": "Scheduled",
+        "venue": "American Family Field",
+        "gameDate": "2026-10-24T00:00:00Z",
+        "away": {
+          "id": 139,
+          "name": "Tampa Bay Rays",
+          "score": null,
+          "record": {
+            "wins": 0,
+            "losses": 0,
+            "ties": 0,
+            "pct": ".000"
+          }
+        },
+        "home": {
+          "id": 158,
+          "name": "Milwaukee Brewers",
+          "score": null,
+          "record": {
+            "wins": 0,
+            "losses": 0,
+            "ties": 0,
+            "pct": ".000"
+          }
+        },
+        "probable": {
+          "away": "",
+          "home": "Jacob Misiorowski"
+        },
+        "decisions": {
+          "winner": "",
+          "loser": "",
+          "save": ""
+        }
+      }
+    ]
+  },
+  "updatedAt": "2026-10-22T00:20:33.971Z",
   "source": "MLB Stats API"
 }
