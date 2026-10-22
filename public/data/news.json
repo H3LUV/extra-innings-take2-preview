@@ -1,6 +1,40 @@
 {
   "items": [
     {
+      "id": "mlb-df863aafb020",
+      "articleFile": "./data/articles/mlb-df863aafb020.json",
+      "title": "Angels decline Suzuki's option, will seek new manager, permanent GM",
+      "titleKo": "엔젤스는 스즈키의 선택을 거절하고 새로운 감독, 영구 GM을 찾을 것입니다",
+      "link": "https://www.mlb.com/news/angels-decline-manager-kurt-suzuki-contract-option",
+      "pubDate": "2026-10-22T00:04:00Z",
+      "source": "MLB.com",
+      "category": "미국 현지 읽을거리",
+      "readingMinutes": 14,
+      "bodyVerified": true,
+      "bodyChars": 10080,
+      "sourceWordCount": 3024,
+      "translationType": "full",
+      "pipelineVersion": "reader-v6",
+      "translatedAt": "2026-10-22T00:42:36.036Z"
+    },
+    {
+      "id": "mlb-ebb3894cf103",
+      "articleFile": "./data/articles/mlb-ebb3894cf103.json",
+      "title": "The Rays didn't even mean to scout him ... now he's integral to this World Series run",
+      "titleKo": "레이스는 그를 스카우트할 생각조차 하지 않았습니다. 이제 그는 이번 월드 시리즈의 핵심 선수입니다.",
+      "link": "https://www.mlb.com/news/jonathan-aranda-journey-to-major-leagues",
+      "pubDate": "2026-10-22T00:00:07.343Z",
+      "source": "MLB.com",
+      "category": "미국 현지 읽을거리",
+      "readingMinutes": 12,
+      "bodyVerified": true,
+      "bodyChars": 8633,
+      "sourceWordCount": 2679,
+      "translationType": "full",
+      "pipelineVersion": "reader-v6",
+      "translatedAt": "2026-10-22T00:42:52.280Z"
+    },
+    {
       "id": "mlb-c20d944ee22e",
       "articleFile": "./data/articles/mlb-c20d944ee22e.json",
       "title": "Savvy trades, sharp scouting key to construction of this year's World Series rosters",
@@ -33,40 +67,6 @@
       "translationType": "full",
       "pipelineVersion": "reader-v6",
       "translatedAt": "2026-10-21T00:38:56.695Z"
-    },
-    {
-      "id": "mlb-39d942bd8cd8",
-      "articleFile": "./data/articles/mlb-39d942bd8cd8.json",
-      "title": "Members-Only Game Thread: ALCS – Oct 19, 2026",
-      "titleKo": "회원 전용 게임 스레드: ALCS - 2026년 10월 19일",
-      "link": "https://blogs.fangraphs.com/members-only-game-thread-alcs-oct-19-2026/",
-      "pubDate": "2026-10-19T23:30:40+00:00",
-      "source": "FanGraphs",
-      "category": "미국 현지 읽을거리",
-      "readingMinutes": 4,
-      "bodyVerified": true,
-      "bodyChars": 1079,
-      "sourceWordCount": 290,
-      "translationType": "full",
-      "pipelineVersion": "reader-v6",
-      "translatedAt": "2026-10-20T01:05:59.816Z"
-    },
-    {
-      "id": "mlb-330a314b770b",
-      "articleFile": "./data/articles/mlb-330a314b770b.json",
-      "title": "Members-Only Game Thread: ALCS – Oct 18, 2026",
-      "titleKo": "회원 전용 게임 스레드: ALCS - 2026년 10월 18일",
-      "link": "https://blogs.fangraphs.com/members-only-game-thread-alcs-oct-18-2026/",
-      "pubDate": "2026-10-18T20:30:52+00:00",
-      "source": "FanGraphs",
-      "category": "미국 현지 읽을거리",
-      "readingMinutes": 4,
-      "bodyVerified": true,
-      "bodyChars": 1119,
-      "sourceWordCount": 300,
-      "translationType": "full",
-      "pipelineVersion": "reader-v6",
-      "translatedAt": "2026-10-19T00:13:02.617Z"
     }
   ],
   "message": "미국 현지 기사 중 광고·회원가입 문구를 제거하고 제목과 본문 전체 자동 번역이 완료된 기사만 제공합니다.",
@@ -74,5 +74,5 @@
   "translationPolicy": "clean_full_translation_keep_previous_on_failure",
   "pipelineVersion": "reader-v6",
   "selectedCount": 4,
-  "updatedAt": "2026-10-21T00:39:48.504Z"
+  "updatedAt": "2026-10-22T00:45:58.483Z"
 }
