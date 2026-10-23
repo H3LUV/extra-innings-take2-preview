@@ -1,7 +1,7 @@
 {
-  "start": "2026-10-21",
-  "end": "2026-10-23",
-  "defaultDate": "2026-10-22",
+  "start": "2026-10-22",
+  "end": "2026-10-24",
+  "defaultDate": "2026-10-23",
   "byDate": {
     "2026-10-24": [
       {
@@ -32,8 +32,47 @@
           }
         },
         "probable": {
-          "away": "",
+          "away": "Nick Martinez",
           "home": "Jacob Misiorowski"
+        },
+        "decisions": {
+          "winner": "",
+          "loser": "",
+          "save": ""
+        }
+      }
+    ],
+    "2026-10-25": [
+      {
+        "id": 849802,
+        "status": "Scheduled",
+        "venue": "American Family Field",
+        "gameDate": "2026-10-25T00:00:00Z",
+        "away": {
+          "id": 139,
+          "name": "Tampa Bay Rays",
+          "score": null,
+          "record": {
+            "wins": 0,
+            "losses": 0,
+            "ties": 0,
+            "pct": ".000"
+          }
+        },
+        "home": {
+          "id": 158,
+          "name": "Milwaukee Brewers",
+          "score": null,
+          "record": {
+            "wins": 0,
+            "losses": 0,
+            "ties": 0,
+            "pct": ".000"
+          }
+        },
+        "probable": {
+          "away": "Drew Rasmussen",
+          "home": "Logan Henderson"
         },
         "decisions": {
           "winner": "",
@@ -43,6 +82,6 @@
       }
     ]
   },
-  "updatedAt": "2026-10-22T12:48:06.143Z",
+  "updatedAt": "2026-10-23T00:18:28.302Z",
   "source": "MLB Stats API"
 }
