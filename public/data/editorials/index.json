@@ -1,6 +1,14 @@
 {
   "items": [
     {
+      "slug": "2026-misiorowski-velocity-without-whiffs",
+      "title": "105마일은 왜 아웃카운트가 되지 못했나",
+      "dek": "구속은 그대로였는데 포심 헛스윙률은 40%에서 16%로 무너졌다. 미시오로스키의 포스트시즌이 보여준 건 속도와 지배력이 같은 말이 아니라는 사실이다",
+      "author": "H3러브의 지시를 받은 누군가",
+      "publishedAt": "2026-10-23T19:30:00+09:00",
+      "url": "./columns/2026-misiorowski-velocity-without-whiffs/"
+    },
+    {
       "slug": "2026-altuve-3000-hits-longevity",
       "title": "3,000안타는 타율의 기록이 아니다",
       "dek": "2,500안타에 도달한 호세 알투베. 남은 500개보다 더 어려운 것은 37세 이후에도 매일 타석을 보장받는 일이다",
@@ -194,5 +202,5 @@
       "url": "./columns/2026-trade-deadline-review/"
     }
   ],
-  "updatedAt": "2026-10-23T00:41:42.729Z"
+  "updatedAt": "2026-10-23T10:30:00.000Z"
 }
