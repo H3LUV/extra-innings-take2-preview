@@ -6,16 +6,16 @@
     "2026-10-24": [
       {
         "id": 849805,
-        "status": "Warmup",
+        "status": "Final",
         "venue": "American Family Field",
         "gameDate": "2026-10-24T00:00:00Z",
         "away": {
           "id": 139,
           "name": "Tampa Bay Rays",
-          "score": 0,
+          "score": 2,
           "record": {
             "wins": 0,
-            "losses": 0,
+            "losses": 1,
             "ties": 0,
             "pct": ".000"
           }
@@ -23,12 +23,12 @@
         "home": {
           "id": 158,
           "name": "Milwaukee Brewers",
-          "score": 0,
+          "score": 3,
           "record": {
-            "wins": 0,
+            "wins": 1,
             "losses": 0,
             "ties": 0,
-            "pct": ".000"
+            "pct": "1.000"
           }
         },
         "probable": {
@@ -36,9 +36,9 @@
           "home": "Jacob Misiorowski"
         },
         "decisions": {
-          "winner": "",
-          "loser": "",
-          "save": ""
+          "winner": "Jacob Misiorowski",
+          "loser": "Nick Martinez",
+          "save": "Trevor Megill"
         }
       }
     ],
@@ -54,7 +54,7 @@
           "score": null,
           "record": {
             "wins": 0,
-            "losses": 0,
+            "losses": 1,
             "ties": 0,
             "pct": ".000"
           }
@@ -64,10 +64,10 @@
           "name": "Milwaukee Brewers",
           "score": null,
           "record": {
-            "wins": 0,
+            "wins": 1,
             "losses": 0,
             "ties": 0,
-            "pct": ".000"
+            "pct": "1.000"
           }
         },
         "probable": {
@@ -82,6 +82,6 @@
       }
     ]
   },
-  "updatedAt": "2026-10-24T00:10:16.081Z",
+  "updatedAt": "2026-10-24T11:41:00.556Z",
   "source": "MLB Stats API"
 }
