@@ -1,40 +1,6 @@
 {
   "items": [
     {
-      "id": "mlb-e701e4aca93d",
-      "articleFile": "./data/articles/mlb-e701e4aca93d.json",
-      "title": "Meet the true X-factors in this World Series: The roofs",
-      "titleKo": "이번 월드 시리즈에서 진정한 X 팩터를 만나보세요: The Roofs",
-      "link": "https://www.mlb.com/news/ground-rules-for-roofs-rays-brewers-world-series",
-      "pubDate": "2026-10-23T00:16:34.717Z",
-      "source": "MLB.com",
-      "category": "미국 현지 읽을거리",
-      "readingMinutes": 5,
-      "bodyVerified": true,
-      "bodyChars": 3413,
-      "sourceWordCount": 1128,
-      "translationType": "full",
-      "pipelineVersion": "reader-v6",
-      "translatedAt": "2026-10-23T00:41:55.115Z"
-    },
-    {
-      "id": "mlb-d3b07f262d44",
-      "articleFile": "./data/articles/mlb-d3b07f262d44.json",
-      "title": "How the former Top 100 prospects in this year's World Series stack up",
-      "titleKo": "올해 월드 시리즈의 이전 Top 100 유망주 순위는 어떻게 되나요?",
-      "link": "https://www.mlb.com/news/2026-world-series-players-ranked-as-prospects",
-      "pubDate": "2026-10-22T23:40:00Z",
-      "source": "MLB.com",
-      "category": "미국 현지 읽을거리",
-      "readingMinutes": 11,
-      "bodyVerified": true,
-      "bodyChars": 8449,
-      "sourceWordCount": 2402,
-      "translationType": "full",
-      "pipelineVersion": "reader-v6",
-      "translatedAt": "2026-10-23T00:42:17.652Z"
-    },
-    {
       "id": "mlb-451395504d3a",
       "articleFile": "./data/articles/mlb-451395504d3a.json",
       "title": "Rays-Brewers World Series Game 1 FAQ (Fri., 8 ET on FOX)",
@@ -52,21 +18,55 @@
       "translatedAt": "2026-10-23T00:42:47.293Z"
     },
     {
-      "id": "mlb-f3d09ae6dc31",
-      "articleFile": "./data/articles/mlb-f3d09ae6dc31.json",
-      "title": "Ribs, brat rangoon and, of course, beer: Brewers bringing 'flair' with World Series menu",
-      "titleKo": "갈비, 브래트 랑군 그리고 물론 맥주: 브루어스가 월드 시리즈 메뉴에 '재능'을 더하다",
-      "link": "https://www.mlb.com/news/brewers-unveil-special-ballpark-menu-for-world-series",
-      "pubDate": "2026-10-22T23:01:32.759Z",
+      "id": "mlb-75addaed0b4e",
+      "articleFile": "./data/articles/mlb-75addaed0b4e.json",
+      "title": "Junior Caminero's batting practice sessions are becoming a demolition derby",
+      "titleKo": "주니어 카미네로의 타격 연습 세션이 철거 더비로 변하고 있다",
+      "link": "https://www.mlb.com/news/junior-caminero-damages-american-family-field-videoboard-before-world-series-game-1",
+      "pubDate": "2026-10-23T23:41:00Z",
       "source": "MLB.com",
       "category": "미국 현지 읽을거리",
-      "readingMinutes": 10,
+      "readingMinutes": 9,
       "bodyVerified": true,
-      "bodyChars": 7966,
-      "sourceWordCount": 2138,
+      "bodyChars": 6652,
+      "sourceWordCount": 2046,
       "translationType": "full",
       "pipelineVersion": "reader-v6",
-      "translatedAt": "2026-10-23T00:43:07.003Z"
+      "translatedAt": "2026-10-24T00:44:21.024Z"
+    },
+    {
+      "id": "mlb-931d5caf9724",
+      "articleFile": "./data/articles/mlb-931d5caf9724.json",
+      "title": "Members-Only Game Thread: World Series – Oct 23, 2026",
+      "titleKo": "회원 전용 게임 스레드: 월드 시리즈 – 2026년 10월 23일",
+      "link": "https://blogs.fangraphs.com/members-only-game-thread-world-series-oct-23-2026/",
+      "pubDate": "2026-10-23T23:30:32+00:00",
+      "source": "FanGraphs",
+      "category": "미국 현지 읽을거리",
+      "readingMinutes": 4,
+      "bodyVerified": true,
+      "bodyChars": 1097,
+      "sourceWordCount": 295,
+      "translationType": "full",
+      "pipelineVersion": "reader-v6",
+      "translatedAt": "2026-10-24T00:44:41.544Z"
+    },
+    {
+      "id": "mlb-d3b07f262d44",
+      "articleFile": "./data/articles/mlb-d3b07f262d44.json",
+      "title": "How the former Top 100 prospects in this year's World Series stack up",
+      "titleKo": "올해 월드 시리즈의 이전 Top 100 유망주 순위는 어떻게 되나요?",
+      "link": "https://www.mlb.com/news/2026-world-series-players-ranked-as-prospects",
+      "pubDate": "2026-10-22T23:40:00Z",
+      "source": "MLB.com",
+      "category": "미국 현지 읽을거리",
+      "readingMinutes": 11,
+      "bodyVerified": true,
+      "bodyChars": 8449,
+      "sourceWordCount": 2402,
+      "translationType": "full",
+      "pipelineVersion": "reader-v6",
+      "translatedAt": "2026-10-23T00:42:17.652Z"
     }
   ],
   "message": "미국 현지 기사 중 광고·회원가입 문구를 제거하고 제목과 본문 전체 자동 번역이 완료된 기사만 제공합니다.",
@@ -74,5 +74,5 @@
   "translationPolicy": "clean_full_translation_keep_previous_on_failure",
   "pipelineVersion": "reader-v6",
   "selectedCount": 4,
-  "updatedAt": "2026-10-23T00:43:07.004Z"
+  "updatedAt": "2026-10-24T00:46:48.912Z"
 }
