@@ -1,47 +1,8 @@
 {
-  "start": "2026-10-24",
-  "end": "2026-10-26",
-  "defaultDate": "2026-10-25",
+  "start": "2026-10-25",
+  "end": "2026-10-27",
+  "defaultDate": "2026-10-26",
   "byDate": {
-    "2026-10-25": [
-      {
-        "id": 849802,
-        "status": "Final",
-        "venue": "American Family Field",
-        "gameDate": "2026-10-25T00:00:00Z",
-        "away": {
-          "id": 139,
-          "name": "Tampa Bay Rays",
-          "score": 4,
-          "record": {
-            "wins": 0,
-            "losses": 2,
-            "ties": 0,
-            "pct": ".000"
-          }
-        },
-        "home": {
-          "id": 158,
-          "name": "Milwaukee Brewers",
-          "score": 5,
-          "record": {
-            "wins": 2,
-            "losses": 0,
-            "ties": 0,
-            "pct": "1.000"
-          }
-        },
-        "probable": {
-          "away": "Drew Rasmussen",
-          "home": "Logan Henderson"
-        },
-        "decisions": {
-          "winner": "Abner Uribe",
-          "loser": "Tyler Wells",
-          "save": "Aaron Ashby"
-        }
-      }
-    ],
     "2026-10-27": [
       {
         "id": 849804,
@@ -80,8 +41,47 @@
           "save": ""
         }
       }
+    ],
+    "2026-10-28": [
+      {
+        "id": 849803,
+        "status": "Scheduled",
+        "venue": "Tropicana Field",
+        "gameDate": "2026-10-28T00:00:00Z",
+        "away": {
+          "id": 158,
+          "name": "Milwaukee Brewers",
+          "score": null,
+          "record": {
+            "wins": 2,
+            "losses": 0,
+            "ties": 0,
+            "pct": "1.000"
+          }
+        },
+        "home": {
+          "id": 139,
+          "name": "Tampa Bay Rays",
+          "score": null,
+          "record": {
+            "wins": 0,
+            "losses": 2,
+            "ties": 0,
+            "pct": ".000"
+          }
+        },
+        "probable": {
+          "away": "",
+          "home": ""
+        },
+        "decisions": {
+          "winner": "",
+          "loser": "",
+          "save": ""
+        }
+      }
     ]
   },
-  "updatedAt": "2026-10-25T12:21:48.465Z",
+  "updatedAt": "2026-10-25T23:41:49.259Z",
   "source": "MLB Stats API"
 }
