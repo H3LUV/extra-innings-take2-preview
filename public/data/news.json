@@ -1,21 +1,38 @@
 {
   "items": [
     {
-      "id": "mlb-451395504d3a",
-      "articleFile": "./data/articles/mlb-451395504d3a.json",
-      "title": "Rays-Brewers World Series Game 1 FAQ (Fri., 8 ET on FOX)",
-      "titleKo": "레이스-브루어스 월드 시리즈 게임 1 FAQ(금, 8 ET, FOX)",
-      "link": "https://www.mlb.com/news/rays-brewers-world-series-game-1-starting-lineups-and-pitching-matchup",
-      "pubDate": "2026-10-22T23:13:00Z",
+      "id": "mlb-b0dbbd4af9fa",
+      "articleFile": "./data/articles/mlb-b0dbbd4af9fa.json",
+      "title": "Jennie Finch Empowerment Award recipients take center stage at World Series",
+      "titleKo": "Jennie Finch Empowerment Award 수상자, 월드 시리즈의 중심 무대에 서다",
+      "link": "https://www.mlb.com/news/jennie-finch-empowerment-award-recipients-honored-at-2026-world-series",
+      "pubDate": "2026-10-25T00:06:15.202Z",
       "source": "MLB.com",
       "category": "미국 현지 읽을거리",
-      "readingMinutes": 13,
+      "readingMinutes": 11,
       "bodyVerified": true,
-      "bodyChars": 9612,
-      "sourceWordCount": 2879,
+      "bodyChars": 7879,
+      "sourceWordCount": 2399,
       "translationType": "full",
       "pipelineVersion": "reader-v6",
-      "translatedAt": "2026-10-23T00:42:47.293Z"
+      "translatedAt": "2026-10-25T00:21:19.860Z"
+    },
+    {
+      "id": "mlb-aa97dd9a6d2d",
+      "articleFile": "./data/articles/mlb-aa97dd9a6d2d.json",
+      "title": "LIVE on FOX/FOX One: Rays-Brewers World Series Game 2",
+      "titleKo": "FOX/FOX One 생중계: 레이스-브루어스 월드 시리즈 게임 2",
+      "link": "https://www.mlb.com/news/rays-brewers-world-series-game-2-starting-lineups-and-pitching-matchup",
+      "pubDate": "2026-10-24T23:58:00Z",
+      "source": "MLB.com",
+      "category": "미국 현지 읽을거리",
+      "readingMinutes": 12,
+      "bodyVerified": true,
+      "bodyChars": 8255,
+      "sourceWordCount": 2577,
+      "translationType": "full",
+      "pipelineVersion": "reader-v6",
+      "translatedAt": "2026-10-25T00:21:38.666Z"
     },
     {
       "id": "mlb-75addaed0b4e",
@@ -50,23 +67,6 @@
       "translationType": "full",
       "pipelineVersion": "reader-v6",
       "translatedAt": "2026-10-24T00:44:41.544Z"
-    },
-    {
-      "id": "mlb-d3b07f262d44",
-      "articleFile": "./data/articles/mlb-d3b07f262d44.json",
-      "title": "How the former Top 100 prospects in this year's World Series stack up",
-      "titleKo": "올해 월드 시리즈의 이전 Top 100 유망주 순위는 어떻게 되나요?",
-      "link": "https://www.mlb.com/news/2026-world-series-players-ranked-as-prospects",
-      "pubDate": "2026-10-22T23:40:00Z",
-      "source": "MLB.com",
-      "category": "미국 현지 읽을거리",
-      "readingMinutes": 11,
-      "bodyVerified": true,
-      "bodyChars": 8449,
-      "sourceWordCount": 2402,
-      "translationType": "full",
-      "pipelineVersion": "reader-v6",
-      "translatedAt": "2026-10-23T00:42:17.652Z"
     }
   ],
   "message": "미국 현지 기사 중 광고·회원가입 문구를 제거하고 제목과 본문 전체 자동 번역이 완료된 기사만 제공합니다.",
@@ -74,5 +74,5 @@
   "translationPolicy": "clean_full_translation_keep_previous_on_failure",
   "pipelineVersion": "reader-v6",
   "selectedCount": 4,
-  "updatedAt": "2026-10-24T00:46:48.912Z"
+  "updatedAt": "2026-10-25T00:23:54.883Z"
 }
