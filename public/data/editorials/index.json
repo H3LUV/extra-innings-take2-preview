@@ -1,6 +1,14 @@
 {
   "items": [
     {
+      "slug": "2026-aaron-ashby-fireman-value",
+      "title": "세이브보다 비싼 아웃이 있다",
+      "dek": "15⅔이닝 무실점의 애런 애시비. 밀워키가 9회 전담 마무리 대신 가장 어려운 아웃카운트를 맡기는 투수에게 더 큰 가치를 부여하는 이유",
+      "author": "H3러브의 지시를 받은 누군가",
+      "publishedAt": "2026-10-25T19:30:00+09:00",
+      "url": "./columns/2026-aaron-ashby-fireman-value/"
+    },
+    {
       "slug": "2026-misiorowski-velocity-without-whiffs",
       "title": "105마일은 왜 아웃카운트가 되지 못했나",
       "dek": "구속은 그대로였는데 포심 헛스윙률은 40%에서 16%로 무너졌다. 미시오로스키의 포스트시즌이 보여준 건 속도와 지배력이 같은 말이 아니라는 사실이다",
@@ -202,5 +210,5 @@
       "url": "./columns/2026-trade-deadline-review/"
     }
   ],
-  "updatedAt": "2026-10-25T00:20:50.056Z"
+  "updatedAt": "2026-10-25T10:30:00.000Z"
 }
