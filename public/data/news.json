@@ -1,6 +1,40 @@
 {
   "items": [
     {
+      "id": "mlb-b54813d9c72e",
+      "articleFile": "./data/articles/mlb-b54813d9c72e.json",
+      "title": "The Brewers, the Rays, and the Pumping of Tires",
+      "titleKo": "브루어스, 가오리, 그리고 타이어 펌핑",
+      "link": "https://blogs.fangraphs.com/the-brewers-the-rays-and-the-pumping-of-tires/",
+      "pubDate": "2026-10-25T17:30:35+00:00",
+      "source": "FanGraphs",
+      "category": "미국 현지 읽을거리",
+      "readingMinutes": 4,
+      "bodyVerified": true,
+      "bodyChars": 2457,
+      "sourceWordCount": 775,
+      "translationType": "full",
+      "pipelineVersion": "reader-v6",
+      "translatedAt": "2026-10-26T00:24:38.440Z"
+    },
+    {
+      "id": "mlb-810f7ed00cb3",
+      "articleFile": "./data/articles/mlb-810f7ed00cb3.json",
+      "title": "There Is No Defending Some of the Defense We Saw in Game 2 of the World Series",
+      "titleKo": "월드 시리즈 2차전에서 우리가 본 수비 중 일부를 수비할 수는 없습니다.",
+      "link": "https://blogs.fangraphs.com/there-is-no-defending-some-of-the-defense-we-saw-in-game-2-of-the-world-series/",
+      "pubDate": "2026-10-25T16:35:30+00:00",
+      "source": "FanGraphs",
+      "category": "미국 현지 읽을거리",
+      "readingMinutes": 4,
+      "bodyVerified": true,
+      "bodyChars": 3118,
+      "sourceWordCount": 969,
+      "translationType": "full",
+      "pipelineVersion": "reader-v6",
+      "translatedAt": "2026-10-26T00:24:55.082Z"
+    },
+    {
       "id": "mlb-b0dbbd4af9fa",
       "articleFile": "./data/articles/mlb-b0dbbd4af9fa.json",
       "title": "Jennie Finch Empowerment Award recipients take center stage at World Series",
@@ -16,40 +50,6 @@
       "translationType": "full",
       "pipelineVersion": "reader-v6",
       "translatedAt": "2026-10-25T00:21:19.860Z"
-    },
-    {
-      "id": "mlb-aa97dd9a6d2d",
-      "articleFile": "./data/articles/mlb-aa97dd9a6d2d.json",
-      "title": "LIVE on FOX/FOX One: Rays-Brewers World Series Game 2",
-      "titleKo": "FOX/FOX One 생중계: 레이스-브루어스 월드 시리즈 게임 2",
-      "link": "https://www.mlb.com/news/rays-brewers-world-series-game-2-starting-lineups-and-pitching-matchup",
-      "pubDate": "2026-10-24T23:58:00Z",
-      "source": "MLB.com",
-      "category": "미국 현지 읽을거리",
-      "readingMinutes": 12,
-      "bodyVerified": true,
-      "bodyChars": 8255,
-      "sourceWordCount": 2577,
-      "translationType": "full",
-      "pipelineVersion": "reader-v6",
-      "translatedAt": "2026-10-25T00:21:38.666Z"
-    },
-    {
-      "id": "mlb-75addaed0b4e",
-      "articleFile": "./data/articles/mlb-75addaed0b4e.json",
-      "title": "Junior Caminero's batting practice sessions are becoming a demolition derby",
-      "titleKo": "주니어 카미네로의 타격 연습 세션이 철거 더비로 변하고 있다",
-      "link": "https://www.mlb.com/news/junior-caminero-damages-american-family-field-videoboard-before-world-series-game-1",
-      "pubDate": "2026-10-23T23:41:00Z",
-      "source": "MLB.com",
-      "category": "미국 현지 읽을거리",
-      "readingMinutes": 9,
-      "bodyVerified": true,
-      "bodyChars": 6652,
-      "sourceWordCount": 2046,
-      "translationType": "full",
-      "pipelineVersion": "reader-v6",
-      "translatedAt": "2026-10-24T00:44:21.024Z"
     },
     {
       "id": "mlb-931d5caf9724",
@@ -74,5 +74,5 @@
   "translationPolicy": "clean_full_translation_keep_previous_on_failure",
   "pipelineVersion": "reader-v6",
   "selectedCount": 4,
-  "updatedAt": "2026-10-25T00:23:54.883Z"
+  "updatedAt": "2026-10-26T00:27:41.365Z"
 }
