@@ -6,29 +6,29 @@
     "2026-10-28": [
       {
         "id": 849803,
-        "status": "In Progress",
+        "status": "Final",
         "venue": "Tropicana Field",
         "gameDate": "2026-10-28T00:00:00Z",
         "away": {
           "id": 158,
           "name": "Milwaukee Brewers",
-          "score": 0,
+          "score": 3,
           "record": {
             "wins": 3,
-            "losses": 0,
+            "losses": 1,
             "ties": 0,
-            "pct": "1.000"
+            "pct": ".750"
           }
         },
         "home": {
           "id": 139,
           "name": "Tampa Bay Rays",
-          "score": 1,
+          "score": 4,
           "record": {
-            "wins": 0,
+            "wins": 1,
             "losses": 3,
             "ties": 0,
-            "pct": ".000"
+            "pct": ".250"
           }
         },
         "probable": {
@@ -36,8 +36,8 @@
           "home": "Griffin Jax"
         },
         "decisions": {
-          "winner": "",
-          "loser": "",
+          "winner": "Ian Seymour",
+          "loser": "Shane Drohan",
           "save": ""
         }
       }
@@ -54,9 +54,9 @@
           "score": null,
           "record": {
             "wins": 3,
-            "losses": 0,
+            "losses": 1,
             "ties": 0,
-            "pct": "1.000"
+            "pct": ".750"
           }
         },
         "home": {
@@ -64,14 +64,14 @@
           "name": "Tampa Bay Rays",
           "score": null,
           "record": {
-            "wins": 0,
+            "wins": 1,
             "losses": 3,
             "ties": 0,
-            "pct": ".000"
+            "pct": ".250"
           }
         },
         "probable": {
-          "away": "",
+          "away": "Jacob Misiorowski",
           "home": ""
         },
         "decisions": {
@@ -82,6 +82,6 @@
       }
     ]
   },
-  "updatedAt": "2026-10-28T00:51:19.439Z",
+  "updatedAt": "2026-10-28T13:38:12.152Z",
   "source": "MLB Stats API"
 }
