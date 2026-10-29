@@ -1,6 +1,23 @@
 {
   "items": [
     {
+      "id": "mlb-2da393c65896",
+      "articleFile": "./data/articles/mlb-2da393c65896.json",
+      "title": "Rasmussen, on 3 days’ rest, gets Rays into middle innings in Game 5",
+      "titleKo": "라스무센, 3일 휴식 후 레이스 5차전 중간 이닝 진출",
+      "link": "https://www.mlb.com/news/drew-rasmussen-2026-world-series-game-5-start",
+      "pubDate": "2026-10-29T01:35:00Z",
+      "source": "MLB.com",
+      "category": "미국 현지 읽을거리",
+      "readingMinutes": 5,
+      "bodyVerified": true,
+      "bodyChars": 2983,
+      "sourceWordCount": 1007,
+      "translationType": "full",
+      "pipelineVersion": "reader-v6",
+      "translatedAt": "2026-10-29T01:49:04.686Z"
+    },
+    {
       "id": "mlb-d32861114d22",
       "articleFile": "./data/articles/mlb-d32861114d22.json",
       "title": "Members-Only Game Thread: World Series – Oct 27, 2026",
@@ -50,23 +67,6 @@
       "translationType": "full",
       "pipelineVersion": "reader-v6",
       "translatedAt": "2026-10-28T01:25:19.289Z"
-    },
-    {
-      "id": "mlb-618cab3293ee",
-      "articleFile": "./data/articles/mlb-618cab3293ee.json",
-      "title": "Simpson's speed actually costs him SB -- then enables SPECTACULAR catch",
-      "titleKo": "Simpson의 속도는 실제로 그에게 SB 비용을 발생시킵니다. 그런 다음 SPECTACULAR 캐치를 가능하게 합니다.",
-      "link": "https://www.mlb.com/news/chandler-simpson-makes-great-running-catch-in-2026-world-series-game-3",
-      "pubDate": "2026-10-27T01:11:41.77Z",
-      "source": "MLB.com",
-      "category": "미국 현지 읽을거리",
-      "readingMinutes": 9,
-      "bodyVerified": true,
-      "bodyChars": 6301,
-      "sourceWordCount": 1906,
-      "translationType": "full",
-      "pipelineVersion": "reader-v6",
-      "translatedAt": "2026-10-27T01:30:01.303Z"
     }
   ],
   "message": "미국 현지 기사 중 광고·회원가입 문구를 제거하고 제목과 본문 전체 자동 번역이 완료된 기사만 제공합니다.",
@@ -74,5 +74,5 @@
   "translationPolicy": "clean_full_translation_keep_previous_on_failure",
   "pipelineVersion": "reader-v6",
   "selectedCount": 4,
-  "updatedAt": "2026-10-28T01:26:08.676Z"
+  "updatedAt": "2026-10-29T01:52:26.395Z"
 }
