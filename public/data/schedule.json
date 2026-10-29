@@ -6,29 +6,29 @@
     "2026-10-29": [
       {
         "id": 849799,
-        "status": "In Progress",
+        "status": "Final",
         "venue": "Tropicana Field",
         "gameDate": "2026-10-29T00:00:00Z",
         "away": {
           "id": 158,
           "name": "Milwaukee Brewers",
-          "score": 1,
+          "score": 4,
           "record": {
-            "wins": 3,
+            "wins": 4,
             "losses": 1,
             "ties": 0,
-            "pct": ".750"
+            "pct": ".800"
           }
         },
         "home": {
           "id": 139,
           "name": "Tampa Bay Rays",
-          "score": 0,
+          "score": 1,
           "record": {
             "wins": 1,
-            "losses": 3,
+            "losses": 4,
             "ties": 0,
-            "pct": ".250"
+            "pct": ".200"
           }
         },
         "probable": {
@@ -36,52 +36,13 @@
           "home": "Drew Rasmussen"
         },
         "decisions": {
-          "winner": "",
-          "loser": "",
-          "save": ""
-        }
-      }
-    ],
-    "2026-10-31": [
-      {
-        "id": 849801,
-        "status": "Scheduled",
-        "venue": "American Family Field",
-        "gameDate": "2026-10-31T00:00:00Z",
-        "away": {
-          "id": 139,
-          "name": "Tampa Bay Rays",
-          "score": null,
-          "record": {
-            "wins": 1,
-            "losses": 3,
-            "ties": 0,
-            "pct": ".250"
-          }
-        },
-        "home": {
-          "id": 158,
-          "name": "Milwaukee Brewers",
-          "score": null,
-          "record": {
-            "wins": 3,
-            "losses": 1,
-            "ties": 0,
-            "pct": ".750"
-          }
-        },
-        "probable": {
-          "away": "",
-          "home": ""
-        },
-        "decisions": {
-          "winner": "",
-          "loser": "",
+          "winner": "Jacob Misiorowski",
+          "loser": "Drew Rasmussen",
           "save": ""
         }
       }
     ]
   },
-  "updatedAt": "2026-10-29T01:27:50.936Z",
+  "updatedAt": "2026-10-29T13:47:47.505Z",
   "source": "MLB Stats API"
 }
