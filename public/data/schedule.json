@@ -1,48 +1,8 @@
 {
-  "start": "2026-10-28",
-  "end": "2026-10-30",
-  "defaultDate": "2026-10-29",
-  "byDate": {
-    "2026-10-29": [
-      {
-        "id": 849799,
-        "status": "Final",
-        "venue": "Tropicana Field",
-        "gameDate": "2026-10-29T00:00:00Z",
-        "away": {
-          "id": 158,
-          "name": "Milwaukee Brewers",
-          "score": 4,
-          "record": {
-            "wins": 4,
-            "losses": 1,
-            "ties": 0,
-            "pct": ".800"
-          }
-        },
-        "home": {
-          "id": 139,
-          "name": "Tampa Bay Rays",
-          "score": 1,
-          "record": {
-            "wins": 1,
-            "losses": 4,
-            "ties": 0,
-            "pct": ".200"
-          }
-        },
-        "probable": {
-          "away": "Jacob Misiorowski",
-          "home": "Drew Rasmussen"
-        },
-        "decisions": {
-          "winner": "Jacob Misiorowski",
-          "loser": "Drew Rasmussen",
-          "save": ""
-        }
-      }
-    ]
-  },
-  "updatedAt": "2026-10-29T13:57:00.578Z",
+  "start": "2026-10-29",
+  "end": "2026-10-31",
+  "defaultDate": "2026-10-30",
+  "byDate": {},
+  "updatedAt": "2026-10-30T01:28:55.844Z",
   "source": "MLB Stats API"
 }
