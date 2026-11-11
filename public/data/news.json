@@ -1,6 +1,23 @@
 {
   "items": [
     {
+      "id": "mlb-ceac89adf497",
+      "articleFile": "./data/articles/mlb-ceac89adf497.json",
+      "title": "Fried has surgery to remove bone spur from pitching elbow",
+      "titleKo": "프리드, 투수 팔꿈치 뼈 박차 제거 수술",
+      "link": "https://www.mlb.com/news/max-fried-elbow-surgery-to-be-ready-for-spring-training",
+      "pubDate": "2026-11-11T01:39:44.654Z",
+      "source": "MLB.com",
+      "category": "미국 현지 읽을거리",
+      "readingMinutes": 7,
+      "bodyVerified": true,
+      "bodyChars": 4900,
+      "sourceWordCount": 1475,
+      "translationType": "full",
+      "pipelineVersion": "reader-v6",
+      "translatedAt": "2026-11-11T01:57:04.035Z"
+    },
+    {
       "id": "mlb-dd68a9453c01",
       "articleFile": "./data/articles/mlb-dd68a9453c01.json",
       "title": "Watch LIVE: '26 AFL Fall Stars Game",
@@ -50,23 +67,6 @@
       "translationType": "full",
       "pipelineVersion": "reader-v6",
       "translatedAt": "2026-11-09T01:45:26.222Z"
-    },
-    {
-      "id": "mlb-5d2f24dedf76",
-      "articleFile": "./data/articles/mlb-5d2f24dedf76.json",
-      "title": "Breaking down the AFL Home Run Derby participants",
-      "titleKo": "AFL 홈런 더비 참가자 분석",
-      "link": "https://www.mlb.com/news/2026-arizona-fall-league-home-run-derby",
-      "pubDate": "2026-11-07T23:05:00Z",
-      "source": "MLB.com",
-      "category": "미국 현지 읽을거리",
-      "readingMinutes": 10,
-      "bodyVerified": true,
-      "bodyChars": 7106,
-      "sourceWordCount": 2135,
-      "translationType": "full",
-      "pipelineVersion": "reader-v6",
-      "translatedAt": "2026-11-08T01:27:53.192Z"
     }
   ],
   "message": "미국 현지 기사 중 광고·회원가입 문구를 제거하고 제목과 본문 전체 자동 번역이 완료된 기사만 제공합니다.",
@@ -74,5 +74,5 @@
   "translationPolicy": "clean_full_translation_keep_previous_on_failure",
   "pipelineVersion": "reader-v6",
   "selectedCount": 4,
-  "updatedAt": "2026-11-10T04:11:40.248Z"
+  "updatedAt": "2026-11-11T01:59:50.894Z"
 }
