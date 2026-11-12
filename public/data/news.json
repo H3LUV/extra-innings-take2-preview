@@ -1,6 +1,23 @@
 {
   "items": [
     {
+      "id": "mlb-bce9fab25bda",
+      "articleFile": "./data/articles/mlb-bce9fab25bda.json",
+      "title": "Varland named 1st BBWAA AL Reliever of the Year",
+      "titleKo": "Varland는 올해의 첫 번째 BBWAA AL 구원투수로 선정되었습니다.",
+      "link": "https://www.mlb.com/news/louis-varland-wins-bbwaa-al-reliever-of-the-year-award",
+      "pubDate": "2026-11-12T02:26:11.89Z",
+      "source": "MLB.com",
+      "category": "미국 현지 읽을거리",
+      "readingMinutes": 4,
+      "bodyVerified": true,
+      "bodyChars": 2432,
+      "sourceWordCount": 729,
+      "translationType": "full",
+      "pipelineVersion": "reader-v6",
+      "translatedAt": "2026-11-12T03:01:58.697Z"
+    },
+    {
       "id": "mlb-ceac89adf497",
       "articleFile": "./data/articles/mlb-ceac89adf497.json",
       "title": "Fried has surgery to remove bone spur from pitching elbow",
@@ -50,23 +67,6 @@
       "translationType": "full",
       "pipelineVersion": "reader-v6",
       "translatedAt": "2026-11-09T01:45:17.261Z"
-    },
-    {
-      "id": "mlb-da6f46eb8cc1",
-      "articleFile": "./data/articles/mlb-da6f46eb8cc1.json",
-      "title": "Could the Yankees’ rotation be even better in 2027?",
-      "titleKo": "2027년에는 양키스의 로테이션이 더 좋아질 수 있을까?",
-      "link": "https://www.mlb.com/news/yankees-2027-rotation-outlook",
-      "pubDate": "2026-11-08T23:47:04.954Z",
-      "source": "MLB.com",
-      "category": "미국 현지 읽을거리",
-      "readingMinutes": 6,
-      "bodyVerified": true,
-      "bodyChars": 5284,
-      "sourceWordCount": 1407,
-      "translationType": "full",
-      "pipelineVersion": "reader-v6",
-      "translatedAt": "2026-11-09T01:45:26.222Z"
     }
   ],
   "message": "미국 현지 기사 중 광고·회원가입 문구를 제거하고 제목과 본문 전체 자동 번역이 완료된 기사만 제공합니다.",
@@ -74,5 +74,5 @@
   "translationPolicy": "clean_full_translation_keep_previous_on_failure",
   "pipelineVersion": "reader-v6",
   "selectedCount": 4,
-  "updatedAt": "2026-11-11T01:59:50.894Z"
+  "updatedAt": "2026-11-12T03:05:55.422Z"
 }
