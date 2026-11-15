@@ -1,38 +1,38 @@
 {
   "items": [
     {
-      "id": "mlb-cd92ffdcb771",
-      "articleFile": "./data/articles/mlb-cd92ffdcb771.json",
-      "title": "Watch LIVE: Top prospects in Arizona Fall League semifinals",
-      "titleKo": "실시간 시청: 애리조나 가을 리그 준결승 최고의 유망주",
-      "link": "https://www.mlb.com/news/watch-arizona-fall-league-playoffs-2026",
-      "pubDate": "2026-11-14T01:39:00Z",
+      "id": "mlb-3408dcd174f0",
+      "articleFile": "./data/articles/mlb-3408dcd174f0.json",
+      "title": "O’s talk to D-backs about Marte; no deal imminent (source)",
+      "titleKo": "O가 D-backs에게 Marte에 관해 이야기한 내용; 임박한 거래 없음 (출처)",
+      "link": "https://www.mlb.com/news/orioles-interest-in-ketel-marte-trade-with-diamondbacks",
+      "pubDate": "2026-11-15T01:24:10.57Z",
       "source": "MLB.com",
       "category": "미국 현지 읽을거리",
-      "readingMinutes": 14,
+      "readingMinutes": 7,
       "bodyVerified": true,
-      "bodyChars": 10572,
-      "sourceWordCount": 3018,
+      "bodyChars": 5213,
+      "sourceWordCount": 1444,
       "translationType": "full",
       "pipelineVersion": "reader-v6",
-      "translatedAt": "2026-11-14T02:27:46.910Z"
+      "translatedAt": "2026-11-15T01:57:07.733Z"
     },
     {
-      "id": "mlb-11947295d6eb",
-      "articleFile": "./data/articles/mlb-11947295d6eb.json",
-      "title": "Marsh to resume baseball activities after October wrist surgery",
-      "titleKo": "마시, 10월 손목 수술 후 야구 활동 재개",
-      "link": "https://www.mlb.com/news/brandon-marsh-had-minor-wrist-surgery-after-season",
-      "pubDate": "2026-11-14T01:08:45.483Z",
+      "id": "mlb-bb8479db36d9",
+      "articleFile": "./data/articles/mlb-bb8479db36d9.json",
+      "title": "LIVE: Watch top prospects face off for Fall League championship",
+      "titleKo": "라이브: 가을 리그 챔피언십을 위한 최고의 유망주 대결을 시청하세요",
+      "link": "https://www.mlb.com/news/2026-arizona-fall-league-championship-game",
+      "pubDate": "2026-11-15T00:53:00Z",
       "source": "MLB.com",
       "category": "미국 현지 읽을거리",
-      "readingMinutes": 6,
+      "readingMinutes": 7,
       "bodyVerified": true,
-      "bodyChars": 4541,
-      "sourceWordCount": 1324,
+      "bodyChars": 5210,
+      "sourceWordCount": 1444,
       "translationType": "full",
       "pipelineVersion": "reader-v6",
-      "translatedAt": "2026-11-14T02:27:51.132Z"
+      "translatedAt": "2026-11-15T01:57:25.180Z"
     },
     {
       "id": "mlb-d2529a2c8e93",
@@ -52,21 +52,21 @@
       "translatedAt": "2026-11-13T02:38:59.641Z"
     },
     {
-      "id": "mlb-bfb2b99d5b8b",
-      "articleFile": "./data/articles/mlb-bfb2b99d5b8b.json",
-      "title": "Back Healthy, Blue Jays Prospect Jake Bloss Is Looking To Regain His Top-100 Form",
-      "titleKo": "건강하게 돌아왔으며 블루제이스 유망주 Jake Bloss가 상위 100위권 회복을 노리고 있습니다.",
-      "link": "https://blogs.fangraphs.com/back-healthy-blue-jays-prospect-jake-bloss-is-looking-to-regain-his-top-100-form/",
-      "pubDate": "2026-11-12T16:00:06+00:00",
-      "source": "FanGraphs",
+      "id": "mlb-cd92ffdcb771",
+      "articleFile": "./data/articles/mlb-cd92ffdcb771.json",
+      "title": "Watch LIVE: Top prospects in Arizona Fall League semifinals",
+      "titleKo": "실시간 시청: 애리조나 가을 리그 준결승 최고의 유망주",
+      "link": "https://www.mlb.com/news/watch-arizona-fall-league-playoffs-2026",
+      "pubDate": "2026-11-14T01:39:00Z",
+      "source": "MLB.com",
       "category": "미국 현지 읽을거리",
-      "readingMinutes": 5,
+      "readingMinutes": 14,
       "bodyVerified": true,
-      "bodyChars": 3304,
-      "sourceWordCount": 1029,
+      "bodyChars": 10572,
+      "sourceWordCount": 3018,
       "translationType": "full",
       "pipelineVersion": "reader-v6",
-      "translatedAt": "2026-11-13T02:39:15.766Z"
+      "translatedAt": "2026-11-14T02:27:46.910Z"
     }
   ],
   "message": "미국 현지 기사 중 광고·회원가입 문구를 제거하고 제목과 본문 전체 자동 번역이 완료된 기사만 제공합니다.",
@@ -74,5 +74,5 @@
   "translationPolicy": "clean_full_translation_keep_previous_on_failure",
   "pipelineVersion": "reader-v6",
   "selectedCount": 4,
-  "updatedAt": "2026-11-14T02:32:03.294Z"
+  "updatedAt": "2026-11-15T02:01:26.497Z"
 }
