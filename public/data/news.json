@@ -1,21 +1,21 @@
 {
   "items": [
     {
-      "id": "mlb-3408dcd174f0",
-      "articleFile": "./data/articles/mlb-3408dcd174f0.json",
-      "title": "O’s talk to D-backs about Marte; no deal imminent (source)",
-      "titleKo": "O가 D-backs에게 Marte에 관해 이야기한 내용; 임박한 거래 없음 (출처)",
-      "link": "https://www.mlb.com/news/orioles-interest-in-ketel-marte-trade-with-diamondbacks",
-      "pubDate": "2026-11-15T01:24:10.57Z",
-      "source": "MLB.com",
+      "id": "mlb-107490402acd",
+      "articleFile": "./data/articles/mlb-107490402acd.json",
+      "title": "Sunday Notes: Brandon Gomes Comps River Ryan; Randy Flores Lets the Cat Out of the Bag",
+      "titleKo": "일요일 메모: Brandon Gomes Comps River Ryan; 랜디 플로레스(Randy Flores)는 고양이를 가방에서 꺼내게 해준다",
+      "link": "https://blogs.fangraphs.com/sunday-notes-brandon-gomes-comps-river-ryan-randy-flores-lets-the-cat-out-of-the-bag/",
+      "pubDate": "2026-11-15T12:29:25+00:00",
+      "source": "FanGraphs",
       "category": "미국 현지 읽을거리",
-      "readingMinutes": 7,
+      "readingMinutes": 12,
       "bodyVerified": true,
-      "bodyChars": 5213,
-      "sourceWordCount": 1444,
+      "bodyChars": 9852,
+      "sourceWordCount": 2736,
       "translationType": "full",
       "pipelineVersion": "reader-v6",
-      "translatedAt": "2026-11-15T01:57:07.733Z"
+      "translatedAt": "2026-11-16T02:11:29.301Z"
     },
     {
       "id": "mlb-bb8479db36d9",
@@ -35,38 +35,38 @@
       "translatedAt": "2026-11-15T01:57:25.180Z"
     },
     {
-      "id": "mlb-d2529a2c8e93",
-      "articleFile": "./data/articles/mlb-d2529a2c8e93.json",
-      "title": "Dan Szymborski FanGraphs Chat – 11/12/26",
-      "titleKo": "Dan Szymborski 팬그래프 채팅 – 11/12/26",
-      "link": "https://blogs.fangraphs.com/dan-szymborski-fangraphs-chat-11-12-26/",
-      "pubDate": "2026-11-12T16:40:58+00:00",
-      "source": "FanGraphs",
-      "category": "미국 현지 읽을거리",
-      "readingMinutes": 14,
-      "bodyVerified": true,
-      "bodyChars": 11077,
-      "sourceWordCount": 3109,
-      "translationType": "full",
-      "pipelineVersion": "reader-v6",
-      "translatedAt": "2026-11-13T02:38:59.641Z"
-    },
-    {
-      "id": "mlb-cd92ffdcb771",
-      "articleFile": "./data/articles/mlb-cd92ffdcb771.json",
-      "title": "Watch LIVE: Top prospects in Arizona Fall League semifinals",
-      "titleKo": "실시간 시청: 애리조나 가을 리그 준결승 최고의 유망주",
-      "link": "https://www.mlb.com/news/watch-arizona-fall-league-playoffs-2026",
-      "pubDate": "2026-11-14T01:39:00Z",
+      "id": "mlb-3408dcd174f0",
+      "articleFile": "./data/articles/mlb-3408dcd174f0.json",
+      "title": "O’s talk to D-backs about Marte; no deal imminent (source)",
+      "titleKo": "O가 D-backs에게 Marte에 관해 이야기한 내용; 임박한 거래 없음 (출처)",
+      "link": "https://www.mlb.com/news/orioles-interest-in-ketel-marte-trade-with-diamondbacks",
+      "pubDate": "2026-11-15T01:24:10.57Z",
       "source": "MLB.com",
       "category": "미국 현지 읽을거리",
-      "readingMinutes": 14,
+      "readingMinutes": 7,
       "bodyVerified": true,
-      "bodyChars": 10572,
-      "sourceWordCount": 3018,
+      "bodyChars": 5213,
+      "sourceWordCount": 1444,
       "translationType": "full",
       "pipelineVersion": "reader-v6",
-      "translatedAt": "2026-11-14T02:27:46.910Z"
+      "translatedAt": "2026-11-15T01:57:07.733Z"
+    },
+    {
+      "id": "mlb-58864b90faf3",
+      "articleFile": "./data/articles/mlb-58864b90faf3.json",
+      "title": "FanGraphs Weekly Mailbag: November 14, 2026",
+      "titleKo": "팬그래프 주간 메일백: 2026년 11월 14일",
+      "link": "https://blogs.fangraphs.com/fangraphs-weekly-mailbag-november-14-2026/",
+      "pubDate": "2026-11-14T14:00:30+00:00",
+      "source": "FanGraphs",
+      "category": "미국 현지 읽을거리",
+      "readingMinutes": 8,
+      "bodyVerified": true,
+      "bodyChars": 5943,
+      "sourceWordCount": 1773,
+      "translationType": "full",
+      "pipelineVersion": "reader-v6",
+      "translatedAt": "2026-11-16T02:11:51.457Z"
     }
   ],
   "message": "미국 현지 기사 중 광고·회원가입 문구를 제거하고 제목과 본문 전체 자동 번역이 완료된 기사만 제공합니다.",
@@ -74,5 +74,5 @@
   "translationPolicy": "clean_full_translation_keep_previous_on_failure",
   "pipelineVersion": "reader-v6",
   "selectedCount": 4,
-  "updatedAt": "2026-11-15T02:01:26.497Z"
+  "updatedAt": "2026-11-16T02:11:51.458Z"
 }
