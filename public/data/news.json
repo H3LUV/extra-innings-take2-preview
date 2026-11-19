@@ -1,21 +1,38 @@
 {
   "items": [
     {
-      "id": "mlb-4487d2dd1f57",
-      "articleFile": "./data/articles/mlb-4487d2dd1f57.json",
-      "title": "Here's the 2026 All-Arizona Fall League Team",
-      "titleKo": "2026년 애리조나 가을 리그 팀은 다음과 같습니다.",
-      "link": "https://www.mlb.com/news/all-arizona-fall-league-team-2026",
-      "pubDate": "2026-11-18T03:00:00Z",
+      "id": "mlb-d1f7978079e7",
+      "articleFile": "./data/articles/mlb-d1f7978079e7.json",
+      "title": "This winter's most buzzworthy trade candidates, around the diamond",
+      "titleKo": "올 겨울 가장 주목받는 무역 후보, 다이아몬드 주변",
+      "link": "https://www.mlb.com/news/trade-candidates-2027-mlb-offseason-every-position",
+      "pubDate": "2026-11-19T03:02:13.407Z",
       "source": "MLB.com",
       "category": "미국 현지 읽을거리",
       "readingMinutes": 16,
       "bodyVerified": true,
-      "bodyChars": 12159,
-      "sourceWordCount": 3499,
+      "bodyChars": 10759,
+      "sourceWordCount": 3540,
       "translationType": "full",
       "pipelineVersion": "reader-v6",
-      "translatedAt": "2026-11-18T03:43:20.082Z"
+      "translatedAt": "2026-11-19T03:31:55.338Z"
+    },
+    {
+      "id": "mlb-a8de099bd5f7",
+      "articleFile": "./data/articles/mlb-a8de099bd5f7.json",
+      "title": "After challenging rookie campaign, Canady excited for 2nd season in AUSL",
+      "titleKo": "신인 캠페인에 도전한 후 Canady는 AUSL의 두 번째 시즌을 기대하고 있습니다.",
+      "link": "https://www.mlb.com/news/nijaree-canady-excited-for-second-season-in-ausl",
+      "pubDate": "2026-11-19T03:01:26.241Z",
+      "source": "MLB.com",
+      "category": "미국 현지 읽을거리",
+      "readingMinutes": 16,
+      "bodyVerified": true,
+      "bodyChars": 11750,
+      "sourceWordCount": 3487,
+      "translationType": "full",
+      "pipelineVersion": "reader-v6",
+      "translatedAt": "2026-11-19T03:32:25.676Z"
     },
     {
       "id": "mlb-7eebe8401157",
@@ -33,23 +50,6 @@
       "translationType": "full",
       "pipelineVersion": "reader-v6",
       "translatedAt": "2026-11-18T03:43:26.493Z"
-    },
-    {
-      "id": "mlb-9bf86d216afd",
-      "articleFile": "./data/articles/mlb-9bf86d216afd.json",
-      "title": "These ranked prospects got 40-man roster spots",
-      "titleKo": "이 순위 유망주들은 40인 명단에 이름을 올렸습니다.",
-      "link": "https://www.mlb.com/news/rule-5-draft-prospects-protected-on-40-man-roster-2026",
-      "pubDate": "2026-11-18T02:15:00Z",
-      "source": "MLB.com",
-      "category": "미국 현지 읽을거리",
-      "readingMinutes": 13,
-      "bodyVerified": true,
-      "bodyChars": 10838,
-      "sourceWordCount": 2898,
-      "translationType": "full",
-      "pipelineVersion": "reader-v6",
-      "translatedAt": "2026-11-18T03:43:50.343Z"
     },
     {
       "id": "mlb-f45480fbd2eb",
@@ -74,5 +74,5 @@
   "translationPolicy": "clean_full_translation_keep_previous_on_failure",
   "pipelineVersion": "reader-v6",
   "selectedCount": 4,
-  "updatedAt": "2026-11-18T03:44:17.004Z"
+  "updatedAt": "2026-11-19T03:36:03.189Z"
 }
