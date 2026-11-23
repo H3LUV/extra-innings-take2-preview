@@ -1,6 +1,23 @@
 {
   "items": [
     {
+      "id": "mlb-46eba71d8506",
+      "articleFile": "./data/articles/mlb-46eba71d8506.json",
+      "title": "Examining Dodgers' rotation options after not re-signing Skubal",
+      "titleKo": "Skubal과 재계약하지 않은 후 다저스의 로테이션 옵션 검토",
+      "link": "https://www.mlb.com/news/dodgers-rotation-plans-without-tarik-skubal",
+      "pubDate": "2026-11-23T02:31:27.102Z",
+      "source": "MLB.com",
+      "category": "미국 현지 읽을거리",
+      "readingMinutes": 6,
+      "bodyVerified": true,
+      "bodyChars": 4188,
+      "sourceWordCount": 1321,
+      "translationType": "full",
+      "pipelineVersion": "reader-v6",
+      "translatedAt": "2026-11-23T02:48:25.616Z"
+    },
+    {
       "id": "mlb-3769d3307a36",
       "articleFile": "./data/articles/mlb-3769d3307a36.json",
       "title": "Skubal changed after entering Dodgers pitching lab — here’s how",
@@ -50,23 +67,6 @@
       "translationType": "full",
       "pipelineVersion": "reader-v6",
       "translatedAt": "2026-11-22T02:17:04.693Z"
-    },
-    {
-      "id": "mlb-6d33c47d74c8",
-      "articleFile": "./data/articles/mlb-6d33c47d74c8.json",
-      "title": "Dodgers acquire INF Royce Lewis from Twins",
-      "titleKo": "다저스는 트윈스로부터 INF 로이스 루이스를 영입합니다.",
-      "link": "https://www.mlb.com/news/royce-lewis-dodgers-twins-trade",
-      "pubDate": "2026-11-21T02:31:00Z",
-      "source": "MLB.com",
-      "category": "미국 현지 읽을거리",
-      "readingMinutes": 12,
-      "bodyVerified": true,
-      "bodyChars": 9355,
-      "sourceWordCount": 2613,
-      "translationType": "full",
-      "pipelineVersion": "reader-v6",
-      "translatedAt": "2026-11-21T03:14:10.895Z"
     }
   ],
   "message": "미국 현지 기사 중 광고·회원가입 문구를 제거하고 제목과 본문 전체 자동 번역이 완료된 기사만 제공합니다.",
@@ -74,5 +74,5 @@
   "translationPolicy": "clean_full_translation_keep_previous_on_failure",
   "pipelineVersion": "reader-v6",
   "selectedCount": 4,
-  "updatedAt": "2026-11-22T02:18:41.279Z"
+  "updatedAt": "2026-11-23T02:51:16.611Z"
 }
