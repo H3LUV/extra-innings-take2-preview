@@ -1,38 +1,38 @@
 {
   "items": [
     {
-      "id": "mlb-46eba71d8506",
-      "articleFile": "./data/articles/mlb-46eba71d8506.json",
-      "title": "Examining Dodgers' rotation options after not re-signing Skubal",
-      "titleKo": "Skubal과 재계약하지 않은 후 다저스의 로테이션 옵션 검토",
-      "link": "https://www.mlb.com/news/dodgers-rotation-plans-without-tarik-skubal",
-      "pubDate": "2026-11-23T02:31:27.102Z",
+      "id": "mlb-9e5e00ca6529",
+      "articleFile": "./data/articles/mlb-9e5e00ca6529.json",
+      "title": "Cubs reach multiyear deal with lefty Rogers as rotation revamp begins (source)",
+      "titleKo": "컵스는 로테이션 개편이 시작되면서 좌완 로저스와 다년 계약을 체결했습니다(출처)",
+      "link": "https://www.mlb.com/news/trevor-rogers-cubs-contract",
+      "pubDate": "2026-11-24T05:09:00Z",
       "source": "MLB.com",
       "category": "미국 현지 읽을거리",
-      "readingMinutes": 6,
+      "readingMinutes": 8,
       "bodyVerified": true,
-      "bodyChars": 4188,
-      "sourceWordCount": 1321,
+      "bodyChars": 5303,
+      "sourceWordCount": 1695,
       "translationType": "full",
       "pipelineVersion": "reader-v6",
-      "translatedAt": "2026-11-23T02:48:25.616Z"
+      "translatedAt": "2026-11-24T06:05:41.424Z"
     },
     {
-      "id": "mlb-3769d3307a36",
-      "articleFile": "./data/articles/mlb-3769d3307a36.json",
-      "title": "Skubal changed after entering Dodgers pitching lab — here’s how",
-      "titleKo": "다저스 투수 연구소에 입사한 후 Skubal이 달라졌습니다. 방법은 다음과 같습니다.",
-      "link": "https://www.mlb.com/news/tarik-skubal-changes-after-dodgers-trade",
-      "pubDate": "2026-11-22T01:04:00Z",
+      "id": "mlb-f4f786e4d730",
+      "articleFile": "./data/articles/mlb-f4f786e4d730.json",
+      "title": "From 8 hand surgeries to a slam and a no-no, meet the teen inspired by Jim Abbott",
+      "titleKo": "8번의 손 수술부터 슬램과 노노까지, Jim Abbott에게서 영감을 받은 10대를 만나보세요",
+      "link": "https://www.mlb.com/news/carmine-pagano-inspired-by-jim-abbott-fused-hand",
+      "pubDate": "2026-11-24T05:00:00.283Z",
       "source": "MLB.com",
       "category": "미국 현지 읽을거리",
-      "readingMinutes": 5,
+      "readingMinutes": 10,
       "bodyVerified": true,
-      "bodyChars": 3600,
-      "sourceWordCount": 1169,
+      "bodyChars": 6647,
+      "sourceWordCount": 2116,
       "translationType": "full",
       "pipelineVersion": "reader-v6",
-      "translatedAt": "2026-11-22T02:15:59.651Z"
+      "translatedAt": "2026-11-24T06:05:55.454Z"
     },
     {
       "id": "mlb-e8ae8c35ea0d",
@@ -52,21 +52,21 @@
       "translatedAt": "2026-11-22T02:16:28.358Z"
     },
     {
-      "id": "mlb-0bd4660f931e",
-      "articleFile": "./data/articles/mlb-0bd4660f931e.json",
-      "title": "Might LA deal Teo to give De Paula a longer look in '27?",
-      "titleKo": "LA가 Teo와 계약하여 2027년에 De Paula에게 더 긴 모습을 보여 줄 수도 있을까요?",
-      "link": "https://www.mlb.com/news/josue-de-paula-arrival-creates-left-field-question-for-dodgers-with-teoscar-hernandez",
-      "pubDate": "2026-11-21T23:34:13.957Z",
+      "id": "mlb-46eba71d8506",
+      "articleFile": "./data/articles/mlb-46eba71d8506.json",
+      "title": "Examining Dodgers' rotation options after not re-signing Skubal",
+      "titleKo": "Skubal과 재계약하지 않은 후 다저스의 로테이션 옵션 검토",
+      "link": "https://www.mlb.com/news/dodgers-rotation-plans-without-tarik-skubal",
+      "pubDate": "2026-11-23T02:31:27.102Z",
       "source": "MLB.com",
       "category": "미국 현지 읽을거리",
-      "readingMinutes": 12,
+      "readingMinutes": 6,
       "bodyVerified": true,
-      "bodyChars": 9140,
-      "sourceWordCount": 2708,
+      "bodyChars": 4188,
+      "sourceWordCount": 1321,
       "translationType": "full",
       "pipelineVersion": "reader-v6",
-      "translatedAt": "2026-11-22T02:17:04.693Z"
+      "translatedAt": "2026-11-23T02:48:25.616Z"
     }
   ],
   "message": "미국 현지 기사 중 광고·회원가입 문구를 제거하고 제목과 본문 전체 자동 번역이 완료된 기사만 제공합니다.",
@@ -74,5 +74,5 @@
   "translationPolicy": "clean_full_translation_keep_previous_on_failure",
   "pipelineVersion": "reader-v6",
   "selectedCount": 4,
-  "updatedAt": "2026-11-23T02:51:16.611Z"
+  "updatedAt": "2026-11-24T06:09:32.925Z"
 }
