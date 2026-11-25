@@ -1,8 +1,8 @@
 {
-  "start": "2026-11-24",
-  "end": "2026-11-26",
-  "defaultDate": "2026-11-25",
+  "start": "2026-11-25",
+  "end": "2026-11-27",
+  "defaultDate": "2026-11-26",
   "byDate": {},
-  "updatedAt": "2026-11-25T04:43:38.172Z",
+  "updatedAt": "2026-11-25T17:40:18.407Z",
   "source": "MLB Stats API"
 }
