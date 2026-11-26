@@ -1,55 +1,38 @@
 {
   "items": [
     {
-      "id": "mlb-e67bc86acf78",
-      "articleFile": "./data/articles/mlb-e67bc86acf78.json",
-      "title": "Mariners bringing back old friend Carlos Santana on Minor League deal (source)",
-      "titleKo": "마이너리그 계약으로 오랜 친구 카를로스 산타나를 다시 데려오는 매리너스(출처)",
-      "link": "https://www.mlb.com/news/carlos-santana-mariners-minor-league-deal",
-      "pubDate": "2026-11-25T04:02:38.312Z",
+      "id": "mlb-ba1e7b7e6bef",
+      "articleFile": "./data/articles/mlb-ba1e7b7e6bef.json",
+      "title": "Twins add righty reliever Ginkel on 2-year deal (source)",
+      "titleKo": "트윈스, 2년 계약으로 우완 구원투수 진켈 추가(출처)",
+      "link": "https://www.mlb.com/news/kevin-ginkel-twins-deal",
+      "pubDate": "2026-11-26T03:29:33.722Z",
       "source": "MLB.com",
       "category": "미국 현지 읽을거리",
       "readingMinutes": 5,
       "bodyVerified": true,
-      "bodyChars": 3650,
-      "sourceWordCount": 1141,
+      "bodyChars": 4235,
+      "sourceWordCount": 1066,
       "translationType": "full",
       "pipelineVersion": "reader-v6",
-      "translatedAt": "2026-11-25T04:53:58.215Z"
+      "translatedAt": "2026-11-26T04:10:06.905Z"
     },
     {
-      "id": "mlb-0a6ca9f6258b",
-      "articleFile": "./data/articles/mlb-0a6ca9f6258b.json",
-      "title": "Small ball is having a moment. Will more teams take note?",
-      "titleKo": "작은 공이 잠시 시간을 보내고 있습니다. 더 많은 팀이 주목하게 될까요?",
-      "link": "https://www.mlb.com/news/small-ball-moment-brewers-2026-championship",
-      "pubDate": "2026-11-25T03:25:06.832Z",
+      "id": "mlb-9edb0f7d6ef1",
+      "articleFile": "./data/articles/mlb-9edb0f7d6ef1.json",
+      "title": "Rockies continue to bolster starting pitching, add Peterson, Sandoval (sources)",
+      "titleKo": "로키스는 계속해서 선발 투수를 강화하고 Peterson, Sandoval을 추가합니다 (출처)",
+      "link": "https://www.mlb.com/news/david-peterson-rockies-deal",
+      "pubDate": "2026-11-26T03:09:00Z",
       "source": "MLB.com",
       "category": "미국 현지 읽을거리",
-      "readingMinutes": 11,
+      "readingMinutes": 10,
       "bodyVerified": true,
-      "bodyChars": 7391,
-      "sourceWordCount": 2393,
+      "bodyChars": 7670,
+      "sourceWordCount": 2121,
       "translationType": "full",
       "pipelineVersion": "reader-v6",
-      "translatedAt": "2026-11-25T04:54:13.592Z"
-    },
-    {
-      "id": "mlb-538248554373",
-      "articleFile": "./data/articles/mlb-538248554373.json",
-      "title": "Let's build a lineup of MLB's best 25-and-under stars",
-      "titleKo": "MLB 최고의 25세 이하 스타 라인업을 구축하자",
-      "link": "https://www.mlb.com/news/best-players-in-mlb-25-and-under-heading-into-2027",
-      "pubDate": "2026-11-25T03:22:41.19Z",
-      "source": "MLB.com",
-      "category": "미국 현지 읽을거리",
-      "readingMinutes": 7,
-      "bodyVerified": true,
-      "bodyChars": 5200,
-      "sourceWordCount": 1623,
-      "translationType": "full",
-      "pipelineVersion": "reader-v6",
-      "translatedAt": "2026-11-25T04:54:23.968Z"
+      "translatedAt": "2026-11-26T04:10:35.936Z"
     },
     {
       "id": "mlb-70cf1e2ae082",
@@ -67,6 +50,23 @@
       "translationType": "full",
       "pipelineVersion": "reader-v6",
       "translatedAt": "2026-11-25T04:54:39.241Z"
+    },
+    {
+      "id": "mlb-0a6ca9f6258b",
+      "articleFile": "./data/articles/mlb-0a6ca9f6258b.json",
+      "title": "Small ball is having a moment. Will more teams take note?",
+      "titleKo": "작은 공이 잠시 시간을 보내고 있습니다. 더 많은 팀이 주목하게 될까요?",
+      "link": "https://www.mlb.com/news/small-ball-moment-brewers-2026-championship",
+      "pubDate": "2026-11-25T03:25:06.832Z",
+      "source": "MLB.com",
+      "category": "미국 현지 읽을거리",
+      "readingMinutes": 11,
+      "bodyVerified": true,
+      "bodyChars": 7391,
+      "sourceWordCount": 2393,
+      "translationType": "full",
+      "pipelineVersion": "reader-v6",
+      "translatedAt": "2026-11-25T04:54:13.592Z"
     }
   ],
   "message": "미국 현지 기사 중 광고·회원가입 문구를 제거하고 제목과 본문 전체 자동 번역이 완료된 기사만 제공합니다.",
@@ -74,5 +74,5 @@
   "translationPolicy": "clean_full_translation_keep_previous_on_failure",
   "pipelineVersion": "reader-v6",
   "selectedCount": 4,
-  "updatedAt": "2026-11-25T04:54:39.242Z"
+  "updatedAt": "2026-11-26T04:13:10.198Z"
 }
