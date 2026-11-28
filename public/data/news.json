@@ -1,6 +1,23 @@
 {
   "items": [
     {
+      "id": "mlb-f70859c8ecac",
+      "articleFile": "./data/articles/mlb-f70859c8ecac.json",
+      "title": "Casas makes GRAND long-awaited return to game action with LIDOM slam",
+      "titleKo": "Casas는 LIDOM 슬램으로 GRAND를 게임 액션으로 복귀시킵니다.",
+      "link": "https://www.mlb.com/news/triston-casas-hits-grand-slam-in-dominican-winter-league",
+      "pubDate": "2026-11-28T03:33:12.083Z",
+      "source": "MLB.com",
+      "category": "미국 현지 읽을거리",
+      "readingMinutes": 7,
+      "bodyVerified": true,
+      "bodyChars": 5112,
+      "sourceWordCount": 1430,
+      "translationType": "full",
+      "pipelineVersion": "reader-v6",
+      "translatedAt": "2026-11-28T03:55:01.162Z"
+    },
+    {
       "id": "mlb-1e67a951e88f",
       "articleFile": "./data/articles/mlb-1e67a951e88f.json",
       "title": "Hot Stove Rumors: Arozarena, Suzuki, Morejon, Blue Jays, Orioles",
@@ -50,23 +67,6 @@
       "translationType": "full",
       "pipelineVersion": "reader-v6",
       "translatedAt": "2026-11-27T04:17:55.332Z"
-    },
-    {
-      "id": "mlb-ba1e7b7e6bef",
-      "articleFile": "./data/articles/mlb-ba1e7b7e6bef.json",
-      "title": "Twins add righty reliever Ginkel on 2-year deal (source)",
-      "titleKo": "트윈스, 2년 계약으로 우완 구원투수 진켈 추가(출처)",
-      "link": "https://www.mlb.com/news/kevin-ginkel-twins-deal",
-      "pubDate": "2026-11-26T03:29:33.722Z",
-      "source": "MLB.com",
-      "category": "미국 현지 읽을거리",
-      "readingMinutes": 5,
-      "bodyVerified": true,
-      "bodyChars": 4235,
-      "sourceWordCount": 1066,
-      "translationType": "full",
-      "pipelineVersion": "reader-v6",
-      "translatedAt": "2026-11-26T04:10:06.905Z"
     }
   ],
   "message": "미국 현지 기사 중 광고·회원가입 문구를 제거하고 제목과 본문 전체 자동 번역이 완료된 기사만 제공합니다.",
@@ -74,5 +74,5 @@
   "translationPolicy": "clean_full_translation_keep_previous_on_failure",
   "pipelineVersion": "reader-v6",
   "selectedCount": 4,
-  "updatedAt": "2026-11-27T04:18:51.314Z"
+  "updatedAt": "2026-11-28T03:57:21.608Z"
 }
